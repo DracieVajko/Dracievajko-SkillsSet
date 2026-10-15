@@ -1,4 +1,4 @@
-﻿# Package Verification
+# Package Verification
 
 Created/revised 2026-10-15.
 

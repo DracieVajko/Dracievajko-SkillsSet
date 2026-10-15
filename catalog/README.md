@@ -24,17 +24,17 @@ This directory contains the canonical structured catalog of all skills, prompts,
 | Original local skills (01-my-skills) | 1 |
 | Modified local skills (02-my-modified-skills) | 0 |
 | Unmodified third-party local skills (03-third-party-skills/agent-harnesses) | 17 |
-| Third-party link-only resources (03-third-party-skills/odysseus) | 158 |
-| Prompts and personas (04-system-prompts) | 17 |
+| Third-party link-only resources (03-third-party-skills/odysseus) | 165 |
+| Prompts and personas (04-system-prompts) | 18 |
 | Agent instructions (05-agent-instructions) | 10 modules + 9 profiles |
 | Unresolved inventory records | 24 |
 
 ## Reconciliation Summary
 
 - **Original catalog records**: 154
-- **Retained current records**: 17 (local) + 158 (link-only) = 175
+- **Retained current records**: 184 rows in `items.csv` (19 with local copies, 165 link-only)
 - **Merged records**: Multiple entries from same upstream repo consolidated
-- **Link-only records**: 158 (Odysseus branch)
+- **Link-only records**: 165 (Odysseus branch)
 - **Unresolved records**: 24 (planned/custom items)
 - **Exclusions**: None — all original records mapped
 

@@ -25,7 +25,7 @@ The intended identity is the Arcane-inspired name. Where source filenames combin
 |------|---------|-------------------|
 | general.md | General expert consultant behavior | SystemPrompts/Default/AI instructions general.txt |
 | coding.md | Concise coding assistant | SystemPrompts/Default/AI instructions coding.txt |
-| cad.md | 3D printing copywriter (VoxelScribe) | SystemPrompts/Default/AI instructions CAD desriptions.txt |
+| cults3d-listing.md | 3D-printing listing copywriter (VoxelScribe); bilingual Cults3D metadata | SystemPrompts/Default/AI instructions CAD desriptions.txt |
 | trading.md | Algorithmic trading (15yr forex experience) | SystemPrompts/Trader alghoritm instructions.txt |
 | repository-hygiene.md | Repository cleanup and Git hygiene | SystemPrompts/ULTIMATE REPOSITORY HYGIENE.md |
 
@@ -40,7 +40,7 @@ The intended identity is the Arcane-inspired name. Where source filenames combin
 ## Counts (from actual files)
 
 - Persona files: 10 (Jayce, Jayce-Expanded, Isha, Mel, Singed, Ekko, Caitlyn, Heimerdinger, Viktor, Jericho)
-- Core system prompts: 5 (general, coding, cad, trading, repository-hygiene)
+- Core system prompts: 5 (general, coding, cults3d-listing, trading, repository-hygiene)
 - Image prompts: 3 (upscale-basic, upscale-portrait, upscale-translate)
 - **Total prompt/persona files: 18**
 

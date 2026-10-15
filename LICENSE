@@ -1,13 +1,13 @@
-﻿# License
+# License
 
 ## Root Collection License
 
-This collection (Dracievajko-AI-Agent-Collection) as a curated archive â€” including its organization, catalog, documentation, templates, scripts, and original content â€” is licensed under the **MIT License**.
+This collection (Dracievajko-AI-Agent-Collection) as a curated archive — including its organization, catalog, documentation, templates, scripts, and original content — is licensed under the **MIT License**.
 
 ```
 MIT License
 
-Copyright (c) 2026 Jakub KoreÅˆ (DracieVajko / Dracievajko)
+Copyright (c) 2026 Jakub Koreň (DracieVajko / Dracievajko)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -45,7 +45,7 @@ The root MIT license applies **only** to:
 
 **Third-party skills and link-only references retain their original licenses.**
 
-This collection does **not** relicense third-party content. Each third-party skill in `03-third-party-skills/` includes a `SOURCE.md` documenting its upstream license claim (typically MIT as stated in frontmatter). These claims have not been independently verified against each upstream repository's LICENSE file.
+This collection does **not** relicense third-party content. Each third-party skill in `03-third-party-skills/` includes a `SOURCE.md` recording the upstream license and the evidence checked for it (an upstream root `LICENSE` file, a per-skill `LICENSE.txt`, or a license declared in the repository README). Where evidence is incomplete or an upstream source is uncertain, that item's `SOURCE.md` says so.
 
 Link-only references in `03-third-party-skills/odysseus/` grant no license rights through this collection. Users must comply with each upstream repository's license.
 
@@ -71,4 +71,4 @@ When redistributing this collection or portions thereof:
 
 ## Disclaimer
 
-The curator (Jakub KoreÅˆ / DracieVajko) makes no warranty regarding the license compliance of third-party content. Users are responsible for verifying upstream licenses before redistribution.
+The curator (Jakub Koreň / DracieVajko) makes no warranty regarding the license compliance of third-party content. Users are responsible for verifying upstream licenses before redistribution.

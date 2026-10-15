@@ -1,11 +1,11 @@
-﻿# Attribution and Source Information
+# Attribution and Source Information
 
 This document provides comprehensive attribution for all third-party content in this collection.
 
 ## Original Skills (01-my-skills)
 
 ### ticktick-tasks
-- **Author:** DracieVajko (Jakub KoreÅˆ / Dracievajko)
+- **Author:** DracieVajko (Jakub Koreň / Dracievajko)
 - **Repository:** https://github.com/DracieVajko/Dracievajko-SkillsSet
 - **File:** ticktick-tasks-skill/ticktick-tasks/SKILL.md
 - **License:** MIT
@@ -22,9 +22,9 @@ This document provides comprehensive attribution for all third-party content in 
 - **Original File:** skills/theme-factory/SKILL.md
 - **Raw URL:** https://raw.githubusercontent.com/anthropics/skills/main/skills/theme-factory/SKILL.md
 - **Branch:** main
-- **License:** MIT (claimed in frontmatter)
+- **License:** Apache-2.0 (per-skill `LICENSE.txt` verified upstream; see `SOURCE.md`)
 - **Local Changes:** Renamed from "theme-factory" to "applying-themes"
-- **Verification:** Catalog-derived, not HTTP-validated
+- **Verification:** HTTP-validated (HTTP 200, Markdown) on 2026-10-15; license evidence in `SOURCE.md`
 
 ### blender-geometry-nodes
 - **Original Author/Org:** Composio Community (composio-community)
@@ -32,9 +32,9 @@ This document provides comprehensive attribution for all third-party content in 
 - **Original File:** skills/blender-geometry-nodes/SKILL.md
 - **Raw URL:** https://raw.githubusercontent.com/composio-community/opencode-skills/master/skills/blender-geometry-nodes/SKILL.md
 - **Branch:** master
-- **License:** MIT (claimed in frontmatter)
+- **License:** MIT (declared in upstream repository README; no LICENSE file)
 - **Local Changes:** None
-- **Verification:** Catalog-derived, not HTTP-validated
+- **Verification:** HTTP-validated (HTTP 200, Markdown) on 2026-10-15; license evidence in `SOURCE.md`
 
 ### blender-hard-surface-modeling
 - **Original Author/Org:** Composio Community (composio-community)
@@ -42,9 +42,9 @@ This document provides comprehensive attribution for all third-party content in 
 - **Original File:** skills/blender-hard-surface-modeling/SKILL.md
 - **Raw URL:** https://raw.githubusercontent.com/composio-community/opencode-skills/master/skills/blender-hard-surface-modeling/SKILL.md
 - **Branch:** master
-- **License:** MIT (claimed in frontmatter)
+- **License:** MIT (declared in upstream repository README; no LICENSE file)
 - **Local Changes:** None
-- **Verification:** Catalog-derived, not HTTP-validated
+- **Verification:** HTTP-validated (HTTP 200, Markdown) on 2026-10-15; license evidence in `SOURCE.md`
 
 ### blender-python-integration
 - **Original Author/Org:** Composio Community (composio-community)
@@ -52,9 +52,9 @@ This document provides comprehensive attribution for all third-party content in 
 - **Original File:** skills/blender-python-integration/SKILL.md
 - **Raw URL:** https://raw.githubusercontent.com/composio-community/opencode-skills/master/skills/blender-python-integration/SKILL.md
 - **Branch:** master
-- **License:** MIT (claimed in frontmatter)
+- **License:** MIT (declared in upstream repository README; no LICENSE file)
 - **Local Changes:** None
-- **Verification:** Catalog-derived, not HTTP-validated
+- **Verification:** HTTP-validated (HTTP 200, Markdown) on 2026-10-15; license evidence in `SOURCE.md`
 
 ### blender-rigging-animation
 - **Original Author/Org:** Composio Community (composio-community)
@@ -62,9 +62,9 @@ This document provides comprehensive attribution for all third-party content in 
 - **Original File:** skills/blender-rigging-animation/SKILL.md
 - **Raw URL:** https://raw.githubusercontent.com/composio-community/opencode-skills/master/skills/blender-rigging-animation/SKILL.md
 - **Branch:** master
-- **License:** MIT (claimed in frontmatter)
+- **License:** MIT (declared in upstream repository README; no LICENSE file)
 - **Local Changes:** None
-- **Verification:** Catalog-derived, not HTTP-validated
+- **Verification:** HTTP-validated (HTTP 200, Markdown) on 2026-10-15; license evidence in `SOURCE.md`
 
 ### brainstorming
 - **Original Author/Org:** Obra (obra)
@@ -72,9 +72,9 @@ This document provides comprehensive attribution for all third-party content in 
 - **Original File:** skills/brainstorming/SKILL.md
 - **Raw URL:** https://raw.githubusercontent.com/obra/superpowers/main/skills/brainstorming/SKILL.md
 - **Branch:** main
-- **License:** MIT (claimed in frontmatter)
+- **License:** MIT (verified in upstream LICENSE file; see `SOURCE.md`)
 - **Local Changes:** None
-- **Verification:** Catalog-derived, not HTTP-validated
+- **Verification:** HTTP-validated (HTTP 200, Markdown) on 2026-10-15; license evidence in `SOURCE.md`
 
 ### building-mcp-servers
 - **Original Name:** mcp-builder
@@ -83,9 +83,9 @@ This document provides comprehensive attribution for all third-party content in 
 - **Original File:** skills/mcp-builder/SKILL.md
 - **Raw URL:** https://raw.githubusercontent.com/anthropics/skills/main/skills/mcp-builder/SKILL.md
 - **Branch:** main
-- **License:** MIT (claimed in frontmatter)
+- **License:** Apache-2.0 (per-skill `LICENSE.txt` verified upstream; see `SOURCE.md`)
 - **Local Changes:** Renamed from "mcp-builder" to "building-mcp-servers"
-- **Verification:** Catalog-derived, not HTTP-validated
+- **Verification:** HTTP-validated (HTTP 200, Markdown) on 2026-10-15; license evidence in `SOURCE.md`
 
 ### code-documenter
 - **Original Author/Org:** Jeff Allan (Jeffallan)
@@ -93,9 +93,9 @@ This document provides comprehensive attribution for all third-party content in 
 - **Original File:** skills/code-documenter/SKILL.md
 - **Raw URL:** https://raw.githubusercontent.com/Jeffallan/claude-skills/main/skills/code-documenter/SKILL.md
 - **Branch:** main
-- **License:** MIT (claimed in frontmatter)
+- **License:** MIT (verified in upstream LICENSE file; see `SOURCE.md`)
 - **Local Changes:** None
-- **Verification:** Catalog-derived, not HTTP-validated
+- **Verification:** HTTP-validated (HTTP 200, Markdown) on 2026-10-15; license evidence in `SOURCE.md`
 
 ### code-reviewer
 - **Original Author/Org:** Jeff Allan (Jeffallan)
@@ -103,9 +103,9 @@ This document provides comprehensive attribution for all third-party content in 
 - **Original File:** skills/code-reviewer/SKILL.md
 - **Raw URL:** https://raw.githubusercontent.com/Jeffallan/claude-skills/main/skills/code-reviewer/SKILL.md
 - **Branch:** main
-- **License:** MIT (claimed in frontmatter)
+- **License:** MIT (verified in upstream LICENSE file; see `SOURCE.md`)
 - **Local Changes:** None
-- **Verification:** Catalog-derived, not HTTP-validated
+- **Verification:** HTTP-validated (HTTP 200, Markdown) on 2026-10-15; license evidence in `SOURCE.md`
 
 ### context-engineering
 - **Original Author/Org:** Addy Osmani (addyosmani) / Obra (obra)
@@ -113,9 +113,9 @@ This document provides comprehensive attribution for all third-party content in 
 - **Original File:** skills/context-engineering/SKILL.md
 - **Raw URL:** https://raw.githubusercontent.com/addyosmani/agent-skills/main/skills/context-engineering/SKILL.md
 - **Branch:** main
-- **License:** MIT (claimed in frontmatter)
+- **License:** MIT (verified in upstream LICENSE file; see `SOURCE.md`)
 - **Local Changes:** None
-- **Verification:** Catalog-derived, not HTTP-validated
+- **Verification:** HTTP-validated (HTTP 200, Markdown) on 2026-10-15; license evidence in `SOURCE.md`
 - **Note:** Exists in both repositories
 
 ### creating-skills
@@ -125,9 +125,9 @@ This document provides comprehensive attribution for all third-party content in 
 - **Original File:** skills/skill-creator/SKILL.md
 - **Raw URL:** https://raw.githubusercontent.com/anthropics/skills/main/skills/skill-creator/SKILL.md
 - **Branch:** main
-- **License:** MIT (claimed in frontmatter)
+- **License:** Apache-2.0 (per-skill `LICENSE.txt` verified upstream; see `SOURCE.md`)
 - **Local Changes:** Renamed from "skill-creator" to "creating-skills"
-- **Verification:** Catalog-derived, not HTTP-validated
+- **Verification:** HTTP-validated (HTTP 200, Markdown) on 2026-10-15; license evidence in `SOURCE.md`
 
 ### debugging-wizard
 - **Original Author/Org:** Jeff Allan (Jeffallan)
@@ -135,9 +135,9 @@ This document provides comprehensive attribution for all third-party content in 
 - **Original File:** skills/debugging-wizard/SKILL.md
 - **Raw URL:** https://raw.githubusercontent.com/Jeffallan/claude-skills/main/skills/debugging-wizard/SKILL.md
 - **Branch:** main
-- **License:** MIT (claimed in frontmatter)
+- **License:** MIT (verified in upstream LICENSE file; see `SOURCE.md`)
 - **Local Changes:** None
-- **Verification:** Catalog-derived, not HTTP-validated
+- **Verification:** HTTP-validated (HTTP 200, Markdown) on 2026-10-15; license evidence in `SOURCE.md`
 
 ### fine-tuning-expert
 - **Original Author/Org:** Jeff Allan (Jeffallan)
@@ -145,9 +145,9 @@ This document provides comprehensive attribution for all third-party content in 
 - **Original File:** skills/fine-tuning-expert/SKILL.md
 - **Raw URL:** https://raw.githubusercontent.com/Jeffallan/claude-skills/main/skills/fine-tuning-expert/SKILL.md
 - **Branch:** main
-- **License:** MIT (claimed in frontmatter)
+- **License:** MIT (verified in upstream LICENSE file; see `SOURCE.md`)
 - **Local Changes:** None
-- **Verification:** Catalog-derived, not HTTP-validated
+- **Verification:** HTTP-validated (HTTP 200, Markdown) on 2026-10-15; license evidence in `SOURCE.md`
 
 ### frontend-design-systems
 - **Original Author/Org:** Composio Community (composio-community) / Addy Osmani (addyosmani)
@@ -155,9 +155,9 @@ This document provides comprehensive attribution for all third-party content in 
 - **Original File:** skills/frontend-design-systems/SKILL.md
 - **Raw URL:** https://raw.githubusercontent.com/composio-community/opencode-skills/master/skills/frontend-design-systems/SKILL.md
 - **Branch:** master
-- **License:** MIT (claimed in frontmatter)
+- **License:** MIT (declared in upstream repository README; no LICENSE file)
 - **Local Changes:** None
-- **Verification:** Catalog-derived, not HTTP-validated
+- **Verification:** HTTP-validated (HTTP 200, Markdown) on 2026-10-15; license evidence in `SOURCE.md`
 - **Note:** Exists in both repositories
 
 ### idea-to-plan
@@ -166,9 +166,9 @@ This document provides comprehensive attribution for all third-party content in 
 - **Original File:** skills/idea-to-plan/SKILL.md
 - **Raw URL:** https://raw.githubusercontent.com/composio-community/opencode-skills/master/skills/idea-to-plan/SKILL.md
 - **Branch:** master
-- **License:** MIT (claimed in frontmatter)
+- **License:** MIT (declared in upstream repository README; no LICENSE file)
 - **Local Changes:** None
-- **Verification:** Catalog-derived, not HTTP-validated
+- **Verification:** HTTP-validated (HTTP 200, Markdown) on 2026-10-15; license evidence in `SOURCE.md`
 
 ### using-superpowers
 - **Original Author/Org:** Obra (obra)
@@ -176,9 +176,9 @@ This document provides comprehensive attribution for all third-party content in 
 - **Original File:** skills/using-superpowers/SKILL.md
 - **Raw URL:** https://raw.githubusercontent.com/obra/superpowers/main/skills/using-superpowers/SKILL.md
 - **Branch:** main
-- **License:** MIT (claimed in frontmatter)
+- **License:** MIT (verified in upstream LICENSE file; see `SOURCE.md`)
 - **Local Changes:** None
-- **Verification:** Catalog-derived, not HTTP-validated
+- **Verification:** HTTP-validated (HTTP 200, Markdown) on 2026-10-15; license evidence in `SOURCE.md`
 
 ### wordpress-pro
 - **Original Author/Org:** Jeff Allan (Jeffallan)
@@ -186,17 +186,17 @@ This document provides comprehensive attribution for all third-party content in 
 - **Original File:** skills/wordpress-pro/SKILL.md
 - **Raw URL:** https://raw.githubusercontent.com/Jeffallan/claude-skills/main/skills/wordpress-pro/SKILL.md
 - **Branch:** main
-- **License:** MIT (claimed in frontmatter)
+- **License:** MIT (verified in upstream LICENSE file; see `SOURCE.md`)
 - **Local Changes:** None
-- **Verification:** Catalog-derived, not HTTP-validated
+- **Verification:** HTTP-validated (HTTP 200, Markdown) on 2026-10-15; license evidence in `SOURCE.md`
 
 ---
 
 ## Third-Party Link-Only Skills (03-third-party-skills/odysseus)
 
-The following skills are referenced by raw Markdown URL only in `skill-links.txt` (158 verified) and `unverified-links.txt` (12 unverified). They are not bundled locally.
+The following skills are referenced by raw Markdown URL only in `skill-links.txt` (142 URLs) and `unverified-links.txt` (12 URLs). They are not bundled locally.
 
-### Verified Sources (skill-links.txt)
+### HTTP-validated sources (skill-links.txt)
 
 | Skill | Source Repository | Raw URL Pattern |
 |-------|------------------|-----------------|
@@ -219,7 +219,7 @@ The following skills are referenced by raw Markdown URL only in `skill-links.txt
 | 26 skills | tjboudreaux/cc-thinking-skills | main/skills/<name>/SKILL.md |
 | banner-design | nextlevelbuilder/ui-ux-pro-max-skill | main/.claude/skills/banner-design/SKILL.md |
 
-### Unverified Sources (unverified-links.txt)
+### Unresolved sources (unverified-links.txt)
 
 | Skill | Source Repository | Branch/Path |
 |-------|------------------|-------------|
@@ -229,7 +229,7 @@ The following skills are referenced by raw Markdown URL only in `skill-links.txt
 
 ## System Prompts and Personas (04-system-prompts)
 
-The system prompts and personas below are maintained by DracieVajko (Jakub KoreÅˆ / Dracievajko). Ownership of the source prompt set is asserted by the curator; this collection does not independently prove original authorship of every phrase. Arcane-inspired display names were recovered from source filenames and content:
+The system prompts and personas below are maintained by DracieVajko (Jakub Koreň / Dracievajko). Ownership of the source prompt set is asserted by the curator; this collection does not independently prove original authorship of every phrase. Arcane-inspired display names were recovered from source filenames and content:
 
 | Display Name | Arcane Inspiration | Source File | Notes |
 |--------------|--------------------|-------------|-------|
@@ -242,9 +242,9 @@ The system prompts and personas below are maintained by DracieVajko (Jakub Kore�
 | Caitlyn | Caitlyn | Markus_Caithlyn_DecisionAdvisor.txt | Filename alias "Markus" + "Caithlyn" |
 | Heimerdinger | Heimerdinger | Orion_Heimerdinger_Researcher.txt | Filename alias "Orion" + "Heimerdinger" |
 | Viktor | Viktor | Victor_Thinker.txt | Filename spelling "Victor" |
-| Jericho | â€” | Jericho_PersonalChef.txt | Existing chosen persona name; no lore interpretation added |
+| Jericho | — | Jericho_PersonalChef.txt | Existing chosen persona name; no lore interpretation added |
 
-Core system prompts: general.md, coding.md, cad.md (VoxelScribe), trading.md, repository-hygiene.md
+Core system prompts: general.md, coding.md, cults3d-listing.md (VoxelScribe), trading.md, repository-hygiene.md
 
 Image prompts: upscale-basic.md, upscale-portrait.md, upscale-translate.md
 
@@ -259,7 +259,7 @@ All agent instruction modules and profiles are original work by DracieVajko, der
 ## License Notice
 
 - **Root collection license:** See `LICENSE`
-- **Third-party skills:** Each retains its original license. Most claim MIT in frontmatter, but this has not been independently verified against each upstream repository's LICENSE file.
+- **Third-party skills:** Each retains its original license. The applicable license and the evidence checked for it are recorded per item in each skill's `SOURCE.md` and summarized in `docs/VERIFICATION.md`. Where no upstream license file exists, that is stated instead of assumed.
 - **Original skills and prompts:** Licensed under the root collection license.
 - **Modified third-party skills:** None currently in collection.
 - **Link-only references:** No license granted by this collection; refer to upstream.
@@ -268,8 +268,9 @@ All agent instruction modules and profiles are original work by DracieVajko, der
 
 ## Verification Status
 
-- **Catalog-derived, not HTTP-validated:** Source repository and file path confirmed in catalog reconciliation; raw URL constructed from known pattern. HTTP validation not performed.
-- **Verified:** HTTP validation performed (none in this collection yet).
-- **Unverified:** Catalog indicates branch/path but HTTP validation not performed (OmniRoute skills).
+- **HTTP-validated:** raw URL fetched successfully (HTTP 200, Markdown) and content shape checked on 2026-10-15. Covers the 17 local third-party skills and the 154 link-only URLs. See `docs/VERIFICATION.md`.
+- **License evidence:** recorded per item — upstream root `LICENSE` file, per-skill `LICENSE.txt`, or a license declared in the repository README. See each `SOURCE.md`.
+- **Catalog-derived only:** repository and path taken from the catalog without an HTTP check. Not treated as validated.
+- **Unresolved:** branch or path uncertain (`unverified-links.txt`; OmniRoute skills pinned to a release branch).
 
-Do not treat catalog-derived URLs as HTTP-validated.
+Do not treat catalog-derived or unresolved URLs as HTTP-validated.

@@ -1,7 +1,7 @@
-﻿---
+---
 name: applying-themes
 description: Use when a visual artifact needs a consistent color and type system applied
-  â€” slide decks, reports, HTML pages, dashboards, PDFs, docs â€” or when asked to "theme
+  — slide decks, reports, HTML pages, dashboards, PDFs, docs — or when asked to "theme
   this", "restyle with a palette", "make these slides look consistent", "pick colors
   and fonts", or to build a custom theme from a brand or a description. Provides 10
   contrast-verified themes with semantic tokens and a checker script.
@@ -33,17 +33,17 @@ base  surface  line  ink  ink-2  ink-3  accent  accent-ink
 NO THEME APPLIED WITHOUT ITS CONTRAST VERIFIED
 ```
 
-A palette that looks good and fails 4.5:1 is unusable, and contrast is not eyeballable â€” mid-tone accents on mid-tone surfaces fail constantly while looking fine. Every bundled theme ships with a machine-checkable `contrast` block. Custom themes get the same treatment before use.
+A palette that looks good and fails 4.5:1 is unusable, and contrast is not eyeballable — mid-tone accents on mid-tone surfaces fail constantly while looking fine. Every bundled theme ships with a machine-checkable `contrast` block. Custom themes get the same treatment before use.
 
 ## Checklist
 
-1. **Present the themes** â€” the table below, with what each is for
-2. **Get an explicit choice** â€” do not assume one
-3. **Read the theme file** â€” `themes/<name>.md` is the source of truth
-4. **Verify contrast** â€” run the checker; for a custom theme this is mandatory
-5. **Emit the token block** â€” once, at the top of the artifact
-6. **Apply by token name** â€” no raw hex anywhere in components
-7. **Check the render** â€” look at the output, especially secondary text
+1. **Present the themes** — the table below, with what each is for
+2. **Get an explicit choice** — do not assume one
+3. **Read the theme file** — `themes/<name>.md` is the source of truth
+4. **Verify contrast** — run the checker; for a custom theme this is mandatory
+5. **Emit the token block** — once, at the top of the artifact
+6. **Apply by token name** — no raw hex anywhere in components
+7. **Check the render** — look at the output, especially secondary text
 
 ## The Themes
 
@@ -66,7 +66,7 @@ Each `themes/<name>.md` carries the full palette with roles, the contrast requir
 
 ## Presenting and Choosing
 
-Show the table, ask once, and wait. Do not apply a theme without an explicit choice â€” restyling an entire deck to the wrong palette wastes more time than the question costs.
+Show the table, ask once, and wait. Do not apply a theme without an explicit choice — restyling an entire deck to the wrong palette wastes more time than the question costs.
 
 If the user describes a need rather than naming a theme ("something serious for a board deck"), recommend two with one-line reasoning and let them pick.
 
@@ -103,7 +103,7 @@ h1, h2 { font-family: var(--font-display); }
 .btn   { background: var(--accent); color: var(--accent-ink); }
 ```
 
-**No raw hex outside `:root`.** Grep for `#` in your component styles before finishing â€” a stray hex is how themes stop being swappable.
+**No raw hex outside `:root`.** Grep for `#` in your component styles before finishing — a stray hex is how themes stop being swappable.
 
 ### Both Color Schemes
 
@@ -116,7 +116,7 @@ If the artifact must work in light and dark, pick a light theme and a dark theme
 :root[data-theme="light"] { /* forest-canopy tokens */ }
 ```
 
-Both the media query and the explicit attribute â€” a toggle that cannot override the OS preference in both directions is broken.
+Both the media query and the explicit attribute — a toggle that cannot override the OS preference in both directions is broken.
 
 ### PDF and Slides
 
@@ -136,7 +136,7 @@ pdfmetrics.registerFont(TTFont("Display", "../designing-canvas-art/canvas-fonts/
 pdfmetrics.registerFont(TTFont("Text",    "../designing-canvas-art/canvas-fonts/WorkSans-Regular.ttf"))
 ```
 
-`ink-3` is the token most likely to fail in print â€” many printers and projectors compress the light end. For slides projected in a lit room, use `ink-2` for anything the audience must read.
+`ink-3` is the token most likely to fail in print — many printers and projectors compress the light end. For slides projected in a lit room, use `ink-2` for anything the audience must read.
 
 ### React
 
@@ -154,16 +154,16 @@ For Tailwind, map the tokens into `theme.extend.colors` so the utility classes c
 
 When no bundled theme fits, construct one rather than picking colors ad hoc.
 
-1. **Name the direction** in two words and name a real-world reference. "Coastal Survey â€” 1970s nautical chart" produces a palette; "modern and clean" produces defaults.
-2. **Choose a hue strategy** â€” monochromatic, analogous, complementary, or neutral-plus-spot. Commit to one.
+1. **Name the direction** in two words and name a real-world reference. "Coastal Survey — 1970s nautical chart" produces a palette; "modern and clean" produces defaults.
+2. **Choose a hue strategy** — monochromatic, analogous, complementary, or neutral-plus-spot. Commit to one.
 3. **Build the neutrals by tinting**, never pure gray. Mix 4-8% of the accent into every neutral so the palette reads as one family.
-4. **Derive `ink` from the accent's hue** at very low chroma and very low lightness â€” this is what makes a palette feel designed rather than assembled.
+4. **Derive `ink` from the accent's hue** at very low chroma and very low lightness — this is what makes a palette feel designed rather than assembled.
 5. **Set the accent two ways** if needed: a bright value for fills, a darker value for text. One value rarely serves both.
 6. **Write the file** in `themes/` using an existing one as the template, including the `contrast` block.
 7. **Run the checker.** Adjust lightness until it passes. Do not ship a failing custom theme.
 8. **Show the user** the palette and one rendered sample before applying it to the whole artifact.
 
-For the underlying color theory â€” OKLCH construction, ramp generation, dark-mode rules â€” see `designing-frontend-interfaces/references/color-and-theme.md`.
+For the underlying color theory — OKLCH construction, ramp generation, dark-mode rules — see `designing-frontend-interfaces/references/color-and-theme.md`.
 
 ## Common Mistakes
 

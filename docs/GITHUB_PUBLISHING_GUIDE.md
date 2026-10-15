@@ -29,7 +29,7 @@ This guide covers publishing the Dracievajko AI Agent Collection to GitHub.
 ### 4. Licensing
 - [ ] Root `LICENSE` file (MIT for original content)
 - [ ] Third-party skills retain original licenses
-- [ ] `inventories/skills-catalog.json` has license info per skill
+- [ ] `catalog/skills-catalog.json` has license info per skill
 - [ ] No blanket license applied to third-party content
 
 ---
@@ -55,7 +55,7 @@ git commit -m "feat: initial release of Dracievajko AI Agent Collection
 - 9 personas (jayce, bruno, atlas, elias, adrian, orion, victor, marcus, jericho)
 - 10 agent rule modules + main AGENTS.md
 - 9 specialized agent profiles
-- System prompts (general, coding, cad, trading, repository hygiene)
+- System prompts (general, coding, cults3d-listing, trading, repository hygiene)
 - Odysseus direct link files (validated, all, unverified, by-category, presets)
 - Templates, presets, catalogs, documentation
 - Validation scripts and CI/CD workflow"
@@ -104,14 +104,14 @@ git push -u origin main
 2. Add `SKILL.md` with valid frontmatter
 3. Run `python scripts/validate-frontmatter.py`
 4. Run `python scripts/update-category-index.py`
-5. Update `inventories/skills-catalog.json` with provenance
+5. Update `catalog/skills-catalog.json` with provenance
 6. Submit PR
 
 ### Updating Third-Party Catalog
 1. Add new raw URL to `odysseus/skill-links-all.txt`
 2. If verified, also add to `odysseus/skill-links-validated.txt`
 3. Add to appropriate `odysseus/by-category/*.txt`
-4. Update `inventories/provenance-tracking.json`
+4. Update `catalog/provenance-tracking.json`
 5. Submit PR
 
 ### Validating Links
@@ -164,4 +164,4 @@ This repository contains:
 - **Third-party skills** (various MIT) — included with provenance, original licenses preserved
 - **Cataloged skills** (link-only) — no content copied, attribution only
 
-**Do not** apply the repository MIT license to third-party skill content. Each skill directory indicates its license in `SKILL.md` frontmatter and `inventories/skills-catalog.json`.
+**Do not** apply the repository MIT license to third-party skill content. Each skill directory indicates its license in `SKILL.md` frontmatter and `catalog/skills-catalog.json`.
