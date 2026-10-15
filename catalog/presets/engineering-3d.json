@@ -1,0 +1,46 @@
+{
+  "profile": "engineering-3d",
+  "auto_install": false,
+  "notes": "Select one primary workflow. Upstream content and dependencies are not bundled.",
+  "skills": [
+    {
+      "name": "blender-python-integration",
+      "category": "community",
+      "repository": "https://github.com/composio-community/opencode-skills",
+      "branch": "master",
+      "path": "skills/blender-python-integration/SKILL.md",
+      "github_file": "https://github.com/composio-community/opencode-skills/blob/master/skills/blender-python-integration/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/composio-community/opencode-skills/master/skills/blender-python-integration/SKILL.md",
+      "verification": "catalog-derived-not-http-validated",
+      "local_copy_included": false,
+      "id": "composio-community/opencode-skills:blender-python-integration",
+      "upstream_content_downloaded": false
+    },
+    {
+      "name": "blender-geometry-nodes",
+      "category": "community",
+      "repository": "https://github.com/composio-community/opencode-skills",
+      "branch": "master",
+      "path": "skills/blender-geometry-nodes/SKILL.md",
+      "github_file": "https://github.com/composio-community/opencode-skills/blob/master/skills/blender-geometry-nodes/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/composio-community/opencode-skills/master/skills/blender-geometry-nodes/SKILL.md",
+      "verification": "catalog-derived-not-http-validated",
+      "local_copy_included": false,
+      "id": "composio-community/opencode-skills:blender-geometry-nodes",
+      "upstream_content_downloaded": false
+    },
+    {
+      "name": "embedded-systems",
+      "category": "specialists",
+      "repository": "https://github.com/Jeffallan/claude-skills",
+      "branch": "main",
+      "path": "skills/embedded-systems/SKILL.md",
+      "github_file": "https://github.com/Jeffallan/claude-skills/blob/main/skills/embedded-systems/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Jeffallan/claude-skills/main/skills/embedded-systems/SKILL.md",
+      "verification": "catalog-derived-not-http-validated",
+      "local_copy_included": false,
+      "id": "Jeffallan/claude-skills:embedded-systems",
+      "upstream_content_downloaded": false
+    }
+  ]
+}

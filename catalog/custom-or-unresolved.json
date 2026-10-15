@@ -1,0 +1,210 @@
+[
+  {
+    "name": "beyond-vibe-coding-autonomous-development",
+    "origin": "custom-or-unverified",
+    "upstream_repository": null,
+    "upstream_skill_url": null,
+    "local_content_available": false,
+    "status": "needs-content-export"
+  },
+  {
+    "name": "generate-markdown-and-docx-documents",
+    "origin": "custom-or-unverified",
+    "upstream_repository": null,
+    "upstream_skill_url": null,
+    "local_content_available": false,
+    "status": "needs-content-export"
+  },
+  {
+    "name": "enable-wake-on-lan-and-auto-shutdown-on-network-loss-for-ras",
+    "origin": "custom-or-unverified",
+    "upstream_repository": null,
+    "upstream_skill_url": null,
+    "local_content_available": false,
+    "status": "needs-content-export"
+  },
+  {
+    "name": "create-individual-calendar-events-from-earnings-dates-list",
+    "origin": "custom-or-unverified",
+    "upstream_repository": null,
+    "upstream_skill_url": null,
+    "local_content_available": false,
+    "status": "needs-content-export"
+  },
+  {
+    "name": "fix-inconclusive-skills",
+    "origin": "custom-or-unverified",
+    "upstream_repository": null,
+    "upstream_skill_url": null,
+    "local_content_available": false,
+    "status": "needs-content-export"
+  },
+  {
+    "name": "smart-email-reading",
+    "origin": "custom-or-unverified",
+    "upstream_repository": null,
+    "upstream_skill_url": null,
+    "local_content_available": false,
+    "status": "needs-content-export"
+  },
+  {
+    "name": "stock-picking-by-common-stocks-uncommon-profits-4",
+    "origin": "custom-or-unverified",
+    "upstream_repository": null,
+    "upstream_skill_url": null,
+    "local_content_available": false,
+    "status": "needs-content-export"
+  },
+  {
+    "name": "ticktick-tasks",
+    "origin": "custom-or-unverified",
+    "upstream_repository": null,
+    "upstream_skill_url": null,
+    "local_content_available": false,
+    "status": "needs-content-export"
+  },
+  {
+    "name": "generate-findings-report-from-pipeline-logs",
+    "origin": "custom-or-unverified",
+    "upstream_repository": null,
+    "upstream_skill_url": null,
+    "local_content_available": false,
+    "status": "needs-content-export"
+  },
+  {
+    "name": "book-to-skill",
+    "origin": "custom-or-unverified",
+    "upstream_repository": null,
+    "upstream_skill_url": null,
+    "local_content_available": false,
+    "status": "needs-content-export"
+  },
+  {
+    "name": "common-sense-index-investing-bogle-4",
+    "origin": "custom-or-unverified",
+    "upstream_repository": null,
+    "upstream_skill_url": null,
+    "local_content_available": false,
+    "status": "needs-content-export"
+  },
+  {
+    "name": "create-professional-email-signature",
+    "origin": "custom-or-unverified",
+    "upstream_repository": null,
+    "upstream_skill_url": null,
+    "local_content_available": false,
+    "status": "needs-content-export"
+  },
+  {
+    "name": "detailed-source-rewrite-guide",
+    "origin": "custom-or-unverified",
+    "upstream_repository": null,
+    "upstream_skill_url": null,
+    "local_content_available": false,
+    "status": "needs-content-export"
+  },
+  {
+    "name": "document-editing-general",
+    "origin": "custom-or-unverified",
+    "upstream_repository": null,
+    "upstream_skill_url": null,
+    "local_content_available": false,
+    "status": "needs-content-export"
+  },
+  {
+    "name": "drawio-skill",
+    "origin": "custom-or-unverified",
+    "upstream_repository": null,
+    "upstream_skill_url": null,
+    "local_content_available": false,
+    "status": "needs-content-export"
+  },
+  {
+    "name": "firecrawl-deep-research-4",
+    "origin": "custom-or-unverified",
+    "upstream_repository": null,
+    "upstream_skill_url": null,
+    "local_content_available": false,
+    "status": "needs-content-export"
+  },
+  {
+    "name": "generate-markdown-document-via-file-tool",
+    "origin": "custom-or-unverified",
+    "upstream_repository": null,
+    "upstream_skill_url": null,
+    "local_content_available": false,
+    "status": "needs-content-export"
+  },
+  {
+    "name": "github-code-documentation",
+    "origin": "custom-or-unverified",
+    "upstream_repository": null,
+    "upstream_skill_url": null,
+    "local_content_available": false,
+    "status": "needs-content-export"
+  },
+  {
+    "name": "import-ics-events-into-google-calendar",
+    "origin": "custom-or-unverified",
+    "upstream_repository": null,
+    "upstream_skill_url": null,
+    "local_content_available": false,
+    "status": "needs-content-export"
+  },
+  {
+    "name": "investing-from-darwin-4",
+    "origin": "custom-or-unverified",
+    "upstream_repository": null,
+    "upstream_skill_url": null,
+    "local_content_available": false,
+    "status": "needs-content-export"
+  },
+  {
+    "name": "penetration-testing-guide",
+    "origin": "custom-or-unverified",
+    "upstream_repository": null,
+    "upstream_skill_url": null,
+    "local_content_available": false,
+    "status": "needs-content-export"
+  },
+  {
+    "name": "save-long-opencode-prompts-as-markdown-documents",
+    "origin": "custom-or-unverified",
+    "upstream_repository": null,
+    "upstream_skill_url": null,
+    "local_content_available": false,
+    "status": "needs-content-export"
+  },
+  {
+    "name": "universal-listing-template",
+    "origin": "custom-or-unverified",
+    "upstream_repository": null,
+    "upstream_skill_url": null,
+    "local_content_available": false,
+    "status": "needs-content-export"
+  },
+  {
+    "name": "applying-themes",
+    "origin": "custom-or-unverified",
+    "upstream_repository": null,
+    "upstream_skill_url": null,
+    "local_content_available": false,
+    "status": "needs-content-export"
+  },
+  {
+    "name": "building-mcp-servers",
+    "origin": "custom-or-unverified",
+    "upstream_repository": null,
+    "upstream_skill_url": null,
+    "local_content_available": false,
+    "status": "needs-content-export"
+  },
+  {
+    "name": "creating-skills",
+    "origin": "custom-or-unverified",
+    "upstream_repository": null,
+    "upstream_skill_url": null,
+    "local_content_available": false,
+    "status": "needs-content-export"
+  }
+]

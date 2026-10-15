@@ -1,0 +1,74 @@
+﻿# License
+
+## Root Collection License
+
+This collection (Dracievajko-AI-Agent-Collection) as a curated archive â€” including its organization, catalog, documentation, templates, scripts, and original content â€” is licensed under the **MIT License**.
+
+```
+MIT License
+
+Copyright (c) 2026 Jakub KoreÅˆ (DracieVajko / Dracievajko)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+## Scope of Root License
+
+The root MIT license applies **only** to:
+- Collection structure and organization
+- Catalog files (catalog/*.json, catalog/*.csv, catalog/*.md)
+- Documentation (docs/*.md)
+- Templates (templates/*.md)
+- Scripts (scripts/*.py)
+- Root configuration files (README.md, AGENTS.md, ATTRIBUTION.md, .gitignore)
+- Original system prompts and personas (04-system-prompts/*.md)
+- Original agent instructions (05-agent-instructions/**)
+- Original skills (01-my-skills/**)
+
+## Third-Party Content
+
+**Third-party skills and link-only references retain their original licenses.**
+
+This collection does **not** relicense third-party content. Each third-party skill in `03-third-party-skills/` includes a `SOURCE.md` documenting its upstream license claim (typically MIT as stated in frontmatter). These claims have not been independently verified against each upstream repository's LICENSE file.
+
+Link-only references in `03-third-party-skills/odysseus/` grant no license rights through this collection. Users must comply with each upstream repository's license.
+
+## Modified Third-Party Skills
+
+Currently, there are **no modified third-party skills** in `02-my-modified-skills/`. If any are added in the future, they will include a `SOURCE.md` documenting:
+- Original source and license
+- Local modifications
+- Whether changes include translation
+- Applicable notices
+
+## No Blanket MIT Claim
+
+This collection does **not** claim that all content is MIT-licensed. The root MIT license covers only the curation and original content. Third-party licenses govern their respective content.
+
+## Attribution Requirements
+
+When redistributing this collection or portions thereof:
+1. Preserve this LICENSE file
+2. Preserve ATTRIBUTION.md
+3. Preserve SOURCE.md files in each third-party skill directory
+4. Do not remove or modify upstream copyright/license notices in SKILL.md frontmatter
+
+## Disclaimer
+
+The curator (Jakub KoreÅˆ / DracieVajko) makes no warranty regarding the license compliance of third-party content. Users are responsible for verifying upstream licenses before redistribution.

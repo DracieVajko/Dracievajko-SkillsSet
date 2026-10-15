@@ -1,0 +1,46 @@
+{
+  "profile": "planning",
+  "auto_install": false,
+  "notes": "Select one primary workflow. Upstream content and dependencies are not bundled.",
+  "skills": [
+    {
+      "name": "planning-and-task-breakdown",
+      "category": "coding",
+      "repository": "https://github.com/addyosmani/agent-skills",
+      "branch": "main",
+      "path": "skills/planning-and-task-breakdown/SKILL.md",
+      "github_file": "https://github.com/addyosmani/agent-skills/blob/main/skills/planning-and-task-breakdown/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/addyosmani/agent-skills/main/skills/planning-and-task-breakdown/SKILL.md",
+      "verification": "catalog-derived-not-http-validated",
+      "local_copy_included": false,
+      "id": "addyosmani/agent-skills:planning-and-task-breakdown",
+      "upstream_content_downloaded": false
+    },
+    {
+      "name": "wayfinder",
+      "category": "planning",
+      "repository": "https://github.com/mattpocock/skills",
+      "branch": "main",
+      "path": "skills/engineering/wayfinder/SKILL.md",
+      "github_file": "https://github.com/mattpocock/skills/blob/main/skills/engineering/wayfinder/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/mattpocock/skills/main/skills/engineering/wayfinder/SKILL.md",
+      "verification": "catalog-derived-not-http-validated",
+      "local_copy_included": false,
+      "id": "mattpocock/skills:wayfinder",
+      "upstream_content_downloaded": false
+    },
+    {
+      "name": "handoff",
+      "category": "learning",
+      "repository": "https://github.com/mattpocock/skills",
+      "branch": "main",
+      "path": "skills/productivity/handoff/SKILL.md",
+      "github_file": "https://github.com/mattpocock/skills/blob/main/skills/productivity/handoff/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/mattpocock/skills/main/skills/productivity/handoff/SKILL.md",
+      "verification": "catalog-derived-not-http-validated",
+      "local_copy_included": false,
+      "id": "mattpocock/skills:handoff",
+      "upstream_content_downloaded": false
+    }
+  ]
+}

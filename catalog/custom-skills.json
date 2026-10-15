@@ -1,0 +1,236 @@
+[
+  {
+    "name": "beyond-vibe-coding-autonomous-development",
+    "category": "development",
+    "description": "Practical skill for AI-era software development based on Addy Osmani's 'Beyond Vibe Coding' — covers intent-driven workflows, prompt engineering, the 70% problem, code review/refinement, AI prototyping, autonomous agents, and production-ready AI-assisted engineering.",
+    "origin": "odysseus",
+    "status": "planned",
+    "priority": "high",
+    "tags": ["ai-assisted-development", "prompt-engineering", "autonomous-agents", "code-review"]
+  },
+  {
+    "name": "generate-markdown-and-docx-documents",
+    "category": "writing-docs",
+    "description": "Create a new document from a user-provided outline and content, output both a Markdown file and a Word (DOCX) file (or their base-64 strings) for download.",
+    "origin": "odysseus",
+    "status": "planned",
+    "priority": "medium",
+    "tags": ["document-generation", "docx", "markdown", "templates"]
+  },
+  {
+    "name": "enable-wake-on-lan-and-auto-shutdown-on-network-loss-for-ras",
+    "category": "local-ai-infra",
+    "description": "Enable Wake-on-LAN and Auto-Shutdown on Network Loss for Raspberry Pi.",
+    "origin": "odysseus",
+    "status": "planned",
+    "priority": "low",
+    "tags": ["raspberry-pi", "wake-on-lan", "network-monitoring", "infrastructure"]
+  },
+  {
+    "name": "create-individual-calendar-events-from-earnings-dates-list",
+    "category": "productivity",
+    "description": "Create individual calendar events from earnings dates list.",
+    "origin": "odysseus",
+    "status": "planned",
+    "priority": "medium",
+    "tags": ["calendar", "earnings", "automation", "productivity"]
+  },
+  {
+    "name": "fix-inconclusive-skills",
+    "category": "development",
+    "description": "Fix Inconclusive Skills - resolve skills that have unclear or incomplete implementations.",
+    "origin": "odysseus",
+    "status": "planned",
+    "priority": "medium",
+    "tags": ["skill-maintenance", "quality-assurance"]
+  },
+  {
+    "name": "smart-email-reading",
+    "category": "productivity",
+    "description": "A skill to read, inspect, summarize, extract information from, or analyze emails, with special handling for HTML emails, newsletters, earnings reports, and structured data.",
+    "origin": "odysseus",
+    "status": "planned",
+    "priority": "high",
+    "tags": ["email", "summarization", "extraction", "newsletters", "earnings-reports"]
+  },
+  {
+    "name": "stock-picking-by-common-stocks-uncommon-profits-4",
+    "category": "investing",
+    "description": "Apply Philip Fisher's 'Common Stocks and Uncommon Profits' principles for stock selection - focus on qualitative factors, scuttlebutt method, and long-term growth investing.",
+    "origin": "odysseus",
+    "status": "planned",
+    "priority": "high",
+    "tags": ["investing", "philip-fisher", "growth-investing", "scuttlebutt", "qualitative-analysis"]
+  },
+  {
+    "name": "generate-findings-report-from-pipeline-logs",
+    "category": "development",
+    "description": "Generate findings report from CI/CD pipeline logs - extract errors, warnings, test failures, and create structured reports.",
+    "origin": "odysseus",
+    "status": "planned",
+    "priority": "medium",
+    "tags": ["ci-cd", "logs", "reporting", "pipeline", "automation"]
+  },
+  {
+    "name": "book-to-skill",
+    "category": "writing-docs",
+    "description": "Convert a book or article into a reusable skill using AI and web data - extract key concepts, create structured workflows, generate skill frontmatter.",
+    "origin": "odysseus",
+    "status": "planned",
+    "priority": "medium",
+    "tags": ["skill-creation", "book-summarization", "knowledge-extraction", "ai-assisted"]
+  },
+  {
+    "name": "common-sense-index-investing-bogle-4",
+    "category": "investing",
+    "description": "Apply John Bogle's index investing rules for low-cost funds, asset allocation, and long-term wealth building.",
+    "origin": "odysseus",
+    "status": "planned",
+    "priority": "high",
+    "tags": ["investing", "john-bogle", "index-funds", "asset-allocation", "passive-investing"]
+  },
+  {
+    "name": "create-professional-email-signature",
+    "category": "writing-docs",
+    "description": "Create a professional email signature using user-provided details. The signature includes name, job title, email, phone, company name, and address. Both text and HTML versions provided.",
+    "origin": "odysseus",
+    "status": "planned",
+    "priority": "low",
+    "tags": ["email", "signature", "professional", "html", "text"]
+  },
+  {
+    "name": "detailed-source-rewrite-guide",
+    "category": "writing-docs",
+    "description": "Rewrite a source document (e.g., article, research paper) into a structured guide using AI - preserve meaning, improve clarity, add structure.",
+    "origin": "odysseus",
+    "status": "planned",
+    "priority": "medium",
+    "tags": ["rewriting", "guides", "documents", "structure", "clarity"]
+  },
+  {
+    "name": "document-editing-general",
+    "category": "writing-docs",
+    "description": "General-purpose skill for creating, reading, editing, and managing documents (markdown, text, code, etc.) in the editor.",
+    "origin": "odysseus",
+    "status": "planned",
+    "priority": "medium",
+    "tags": ["documents", "editing", "markdown", "general-purpose"]
+  },
+  {
+    "name": "drawio-skill",
+    "category": "design",
+    "description": "Generate UML class diagrams, BPMN workflows, and Kubernetes architecture diagrams using Draw.io's web interface.",
+    "origin": "odysseus",
+    "status": "planned",
+    "priority": "medium",
+    "tags": ["diagrams", "uml", "bpmn", "kubernetes", "drawio", "architecture"]
+  },
+  {
+    "name": "firecrawl-deep-research-4",
+    "category": "research",
+    "description": "Guides the user through a structured research process to gather and organize information on a specified topic using Firecrawl.",
+    "origin": "odysseus",
+    "status": "planned",
+    "priority": "high",
+    "tags": ["research", "firecrawl", "web-scraping", "deep-research", "structured"]
+  },
+  {
+    "name": "generate-markdown-document-via-file-tool",
+    "category": "writing-docs",
+    "description": "Generate markdown document via file tool - create structured markdown files programmatically.",
+    "origin": "odysseus",
+    "status": "planned",
+    "priority": "low",
+    "tags": ["markdown", "file-generation", "automation"]
+  },
+  {
+    "name": "github-code-documentation",
+    "category": "development",
+    "description": "Skill for creating detailed descriptions and high-quality README.md files for scripts and programs intended for GitHub upload, push, and commit. Also includes coding and 'vibe-coding' rules to maximize efficiency and minimize errors.",
+    "origin": "odysseus",
+    "status": "planned",
+    "priority": "high",
+    "tags": ["github", "readme", "documentation", "coding-rules", "vibe-coding"]
+  },
+  {
+    "name": "import-ics-events-into-google-calendar",
+    "category": "productivity",
+    "description": "Import .ics events into Google Calendar - parse iCalendar files and create calendar events.",
+    "origin": "odysseus",
+    "status": "planned",
+    "priority": "medium",
+    "tags": ["calendar", "ics", "google-calendar", "import", "automation"]
+  },
+  {
+    "name": "investing-from-darwin-4",
+    "category": "investing",
+    "description": "Provide guidelines and questions to evaluate investments using Pulak Prasad's evolutionary investing principles for avoiding big losses.",
+    "origin": "odysseus",
+    "status": "planned",
+    "priority": "high",
+    "tags": ["investing", "pulak-prasad", "evolutionary-investing", "risk-management", "loss-avoidance"]
+  },
+  {
+    "name": "penetration-testing-guide",
+    "category": "development",
+    "description": "Penetration testing guide and methodology covering 5 phases: Recon, Scan, Gain Access, Escalate, and Report.",
+    "origin": "odysseus",
+    "status": "planned",
+    "priority": "medium",
+    "tags": ["pentesting", "security", "methodology", "recon", "vulnerability-assessment"]
+  },
+  {
+    "name": "save-long-opencode-prompts-as-markdown-documents",
+    "category": "writing-docs",
+    "description": "Save long OpenCode prompts as markdown documents for reuse and sharing.",
+    "origin": "odysseus",
+    "status": "planned",
+    "priority": "low",
+    "tags": ["opencode", "prompts", "markdown", "archival", "reuse"]
+  },
+  {
+    "name": "universal-listing-template",
+    "category": "writing-docs",
+    "description": "Generate structured lists (e.g., TODO lists, inventory, tables) using AI and browser automation.",
+    "origin": "odysseus",
+    "status": "planned",
+    "priority": "medium",
+    "tags": ["lists", "templates", "todo", "inventory", "tables", "automation"]
+  },
+  {
+    "name": "writing-great-skills",
+    "category": "development",
+    "description": "Reference for writing and editing skills well — the vocabulary and principles that make a skill predictable.",
+    "origin": "odysseus",
+    "status": "planned",
+    "priority": "medium",
+    "tags": ["skill-writing", "best-practices", "standards", "vocabulary"]
+  },
+  {
+    "name": "applying-themes",
+    "category": "design",
+    "description": "Use when a visual artifact needs a consistent color and type system applied — slide decks, reports, HTML pages, dashboards, PDFs, docs — or when asked to 'theme this', 'restyle with a palette', 'make these slides look consistent', 'pick colors and fonts', or to build a custom theme from a brand or a description. Provides 10 contrast-verified themes with semantic tokens and a checker script.",
+    "origin": "opencode",
+    "status": "active",
+    "priority": "done",
+    "tags": ["themes", "colors", "typography", "design-systems", "visual-consistency"]
+  },
+  {
+    "name": "building-mcp-servers",
+    "category": "development",
+    "description": "Use when a request explicitly involves building a Model Context Protocol (MCP) server, integrating external APIs via FastMCP or the MCP SDK, or creating MCP tools in Python or TypeScript.",
+    "origin": "opencode",
+    "status": "active",
+    "priority": "done",
+    "tags": ["mcp", "model-context-protocol", "fastmcp", "mcp-sdk", "api-integration"]
+  },
+  {
+    "name": "creating-skills",
+    "category": "development",
+    "description": "Use when creating new opencode skills, modifying existing skills, or measuring skill performance. Triggers include requests to create a skill from scratch, edit or optimize an existing skill, run evals to test a skill, benchmark skill performance with variance analysis, or optimize a skill's description for better triggering accuracy.",
+    "origin": "opencode",
+    "status": "active",
+    "priority": "done",
+    "tags": ["skill-creation", "skill-editing", "skill-optimization", "evals", "benchmarking"]
+  }
+]

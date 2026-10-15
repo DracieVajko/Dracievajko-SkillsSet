@@ -1,0 +1,200 @@
+[
+  {
+    "name": "using-superpowers",
+    "category": "core",
+    "source": "opencode",
+    "upstream_repository": "https://github.com/obra/superpowers",
+    "upstream_skill_url": "https://raw.githubusercontent.com/obra/superpowers/main/skills/using-superpowers/SKILL.md",
+    "authorship_status": "third-party",
+    "license": "MIT",
+    "local_modifications": false,
+    "verified": false
+  },
+  {
+    "name": "brainstorming",
+    "category": "core",
+    "source": "opencode",
+    "upstream_repository": "https://github.com/obra/superpowers",
+    "upstream_skill_url": "https://raw.githubusercontent.com/obra/superpowers/main/skills/brainstorming/SKILL.md",
+    "authorship_status": "third-party",
+    "license": "MIT",
+    "local_modifications": false,
+    "verified": false
+  },
+  {
+    "name": "idea-to-plan",
+    "category": "core",
+    "source": "opencode",
+    "upstream_repository": "https://github.com/composio-community/opencode-skills",
+    "upstream_skill_url": "https://raw.githubusercontent.com/composio-community/opencode-skills/master/skills/idea-to-plan/SKILL.md",
+    "authorship_status": "third-party",
+    "license": "MIT",
+    "local_modifications": false,
+    "verified": false
+  },
+  {
+    "name": "context-engineering",
+    "category": "core",
+    "source": "opencode",
+    "upstream_repository": "https://github.com/addyosmani/agent-skills",
+    "upstream_skill_url": "https://raw.githubusercontent.com/addyosmani/agent-skills/main/skills/context-engineering/SKILL.md",
+    "authorship_status": "third-party",
+    "license": "MIT",
+    "local_modifications": false,
+    "verified": false
+  },
+  {
+    "name": "building-mcp-servers",
+    "category": "development",
+    "source": "opencode",
+    "upstream_repository": "https://github.com/anthropics/skills",
+    "upstream_skill_url": "https://raw.githubusercontent.com/anthropics/skills/main/skills/mcp-builder/SKILL.md",
+    "authorship_status": "third-party",
+    "license": "MIT",
+    "local_modifications": false,
+    "verified": false
+  },
+  {
+    "name": "code-reviewer",
+    "category": "development",
+    "source": "opencode",
+    "upstream_repository": "https://github.com/Jeffallan/claude-skills",
+    "upstream_skill_url": "https://raw.githubusercontent.com/Jeffallan/claude-skills/main/skills/code-reviewer/SKILL.md",
+    "authorship_status": "third-party",
+    "license": "MIT",
+    "local_modifications": false,
+    "verified": false
+  },
+  {
+    "name": "debugging-wizard",
+    "category": "development",
+    "source": "opencode",
+    "upstream_repository": "https://github.com/Jeffallan/claude-skills",
+    "upstream_skill_url": "https://raw.githubusercontent.com/Jeffallan/claude-skills/main/skills/debugging-wizard/SKILL.md",
+    "authorship_status": "third-party",
+    "license": "MIT",
+    "local_modifications": false,
+    "verified": false
+  },
+  {
+    "name": "code-documenter",
+    "category": "development",
+    "source": "opencode",
+    "upstream_repository": "https://github.com/Jeffallan/claude-skills",
+    "upstream_skill_url": "https://raw.githubusercontent.com/Jeffallan/claude-skills/main/skills/code-documenter/SKILL.md",
+    "authorship_status": "third-party",
+    "license": "MIT",
+    "local_modifications": false,
+    "verified": false
+  },
+  {
+    "name": "creating-skills",
+    "category": "development",
+    "source": "opencode",
+    "upstream_repository": "https://github.com/anthropics/skills",
+    "upstream_skill_url": "https://raw.githubusercontent.com/anthropics/skills/main/skills/skill-creator/SKILL.md",
+    "authorship_status": "third-party",
+    "license": "MIT",
+    "local_modifications": false,
+    "verified": false
+  },
+  {
+    "name": "wordpress-pro",
+    "category": "development",
+    "source": "opencode",
+    "upstream_repository": "https://github.com/Jeffallan/claude-skills",
+    "upstream_skill_url": "https://raw.githubusercontent.com/Jeffallan/claude-skills/main/skills/wordpress-pro/SKILL.md",
+    "authorship_status": "third-party",
+    "license": "MIT",
+    "local_modifications": false,
+    "verified": false
+  },
+  {
+    "name": "applying-themes",
+    "category": "design",
+    "source": "opencode",
+    "upstream_repository": "https://github.com/anthropics/skills",
+    "upstream_skill_url": "https://raw.githubusercontent.com/anthropics/skills/main/skills/theme-factory/SKILL.md",
+    "authorship_status": "third-party",
+    "license": "MIT",
+    "local_modifications": false,
+    "verified": false
+  },
+  {
+    "name": "frontend-design-systems",
+    "category": "design",
+    "source": "opencode",
+    "upstream_repository": "https://github.com/composio-community/opencode-skills",
+    "upstream_skill_url": "https://raw.githubusercontent.com/composio-community/opencode-skills/master/skills/frontend-design-systems/SKILL.md",
+    "authorship_status": "third-party",
+    "license": "MIT",
+    "local_modifications": false,
+    "verified": false
+  },
+  {
+    "name": "fine-tuning-expert",
+    "category": "ai-ml",
+    "source": "opencode",
+    "upstream_repository": "https://github.com/Jeffallan/claude-skills",
+    "upstream_skill_url": "https://raw.githubusercontent.com/Jeffallan/claude-skills/main/skills/fine-tuning-expert/SKILL.md",
+    "authorship_status": "third-party",
+    "license": "MIT",
+    "local_modifications": false,
+    "verified": false
+  },
+  {
+    "name": "blender-geometry-nodes",
+    "category": "3d-blender",
+    "source": "opencode",
+    "upstream_repository": "https://github.com/composio-community/opencode-skills",
+    "upstream_skill_url": "https://raw.githubusercontent.com/composio-community/opencode-skills/master/skills/blender-geometry-nodes/SKILL.md",
+    "authorship_status": "third-party",
+    "license": "MIT",
+    "local_modifications": false,
+    "verified": false
+  },
+  {
+    "name": "blender-hard-surface-modeling",
+    "category": "3d-blender",
+    "source": "opencode",
+    "upstream_repository": "https://github.com/composio-community/opencode-skills",
+    "upstream_skill_url": "https://raw.githubusercontent.com/composio-community/opencode-skills/master/skills/blender-hard-surface-modeling/SKILL.md",
+    "authorship_status": "third-party",
+    "license": "MIT",
+    "local_modifications": false,
+    "verified": false
+  },
+  {
+    "name": "blender-python-integration",
+    "category": "3d-blender",
+    "source": "opencode",
+    "upstream_repository": "https://github.com/composio-community/opencode-skills",
+    "upstream_skill_url": "https://raw.githubusercontent.com/composio-community/opencode-skills/master/skills/blender-python-integration/SKILL.md",
+    "authorship_status": "third-party",
+    "license": "MIT",
+    "local_modifications": false,
+    "verified": false
+  },
+  {
+    "name": "blender-rigging-animation",
+    "category": "3d-blender",
+    "source": "opencode",
+    "upstream_repository": "https://github.com/composio-community/opencode-skills",
+    "upstream_skill_url": "https://raw.githubusercontent.com/composio-community/opencode-skills/master/skills/blender-rigging-animation/SKILL.md",
+    "authorship_status": "third-party",
+    "license": "MIT",
+    "local_modifications": false,
+    "verified": false
+  },
+  {
+    "name": "ticktick-tasks",
+    "category": "custom",
+    "source": "custom",
+    "upstream_repository": "https://github.com/DracieVajko/Dracievajko-SkillsSet",
+    "upstream_skill_url": "https://raw.githubusercontent.com/DracieVajko/Dracievajko-SkillsSet/main/ticktick-tasks-skill/ticktick-tasks/SKILL.md",
+    "authorship_status": "original",
+    "license": "MIT",
+    "local_modifications": false,
+    "verified": true
+  }
+]

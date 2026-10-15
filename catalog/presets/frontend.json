@@ -1,0 +1,72 @@
+{
+  "profile": "frontend",
+  "auto_install": false,
+  "notes": "Select one primary workflow. Upstream content and dependencies are not bundled.",
+  "skills": [
+    {
+      "name": "impeccable",
+      "category": "frontend",
+      "repository": "https://github.com/pbakaus/impeccable",
+      "branch": "main",
+      "path": ".agents/skills/impeccable/SKILL.md",
+      "github_file": "https://github.com/pbakaus/impeccable/blob/main/.agents/skills/impeccable/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/pbakaus/impeccable/main/.agents/skills/impeccable/SKILL.md",
+      "verification": "catalog-derived-not-http-validated",
+      "local_copy_included": false,
+      "id": "pbakaus/impeccable:impeccable",
+      "upstream_content_downloaded": false
+    },
+    {
+      "name": "make-interfaces-feel-better",
+      "category": "frontend",
+      "repository": "https://github.com/jakubkrehel/make-interfaces-feel-better",
+      "branch": "main",
+      "path": "skills/make-interfaces-feel-better/SKILL.md",
+      "github_file": "https://github.com/jakubkrehel/make-interfaces-feel-better/blob/main/skills/make-interfaces-feel-better/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/jakubkrehel/make-interfaces-feel-better/main/skills/make-interfaces-feel-better/SKILL.md",
+      "verification": "catalog-derived-not-http-validated",
+      "local_copy_included": false,
+      "id": "jakubkrehel/make-interfaces-feel-better:make-interfaces-feel-better",
+      "upstream_content_downloaded": false
+    },
+    {
+      "name": "transitions-dev",
+      "category": "frontend",
+      "repository": "https://github.com/Jakubantalik/transitions.dev",
+      "branch": "main",
+      "path": "skills/transitions-dev/SKILL.md",
+      "github_file": "https://github.com/Jakubantalik/transitions.dev/blob/main/skills/transitions-dev/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Jakubantalik/transitions.dev/main/skills/transitions-dev/SKILL.md",
+      "verification": "catalog-derived-not-http-validated",
+      "local_copy_included": false,
+      "id": "Jakubantalik/transitions.dev:transitions-dev",
+      "upstream_content_downloaded": false
+    },
+    {
+      "name": "transitions-polish",
+      "category": "frontend",
+      "repository": "https://github.com/Jakubantalik/transitions.dev",
+      "branch": "main",
+      "path": "skills/transitions-polish/SKILL.md",
+      "github_file": "https://github.com/Jakubantalik/transitions.dev/blob/main/skills/transitions-polish/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Jakubantalik/transitions.dev/main/skills/transitions-polish/SKILL.md",
+      "verification": "catalog-derived-not-http-validated",
+      "local_copy_included": false,
+      "id": "Jakubantalik/transitions.dev:transitions-polish",
+      "upstream_content_downloaded": false
+    },
+    {
+      "name": "playwright-skill",
+      "category": "browser",
+      "repository": "https://github.com/lackeyjb/playwright-skill",
+      "branch": "main",
+      "path": "skills/playwright-skill/SKILL.md",
+      "github_file": "https://github.com/lackeyjb/playwright-skill/blob/main/skills/playwright-skill/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/lackeyjb/playwright-skill/main/skills/playwright-skill/SKILL.md",
+      "verification": "catalog-derived-not-http-validated",
+      "local_copy_included": false,
+      "id": "lackeyjb/playwright-skill:playwright-skill",
+      "upstream_content_downloaded": false
+    }
+  ]
+}

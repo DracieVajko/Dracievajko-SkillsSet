@@ -1,0 +1,282 @@
+[
+  {
+    "name": "beyond-vibe-coding-autonomous-development",
+    "category": "development",
+    "source_type": "custom-or-unverified",
+    "upstream_repository": null,
+    "upstream_skill_url": null,
+    "local_content_available": false,
+    "status": "needs-content-export",
+    "notes": "From Odysseus skills list - described as 'Practical skill for AI-era software development based on Addy Osmani's Beyond Vibe Coding'"
+  },
+  {
+    "name": "generate-markdown-and-docx-documents",
+    "category": "writing-docs",
+    "source_type": "custom-or-unverified",
+    "upstream_repository": null,
+    "upstream_skill_url": null,
+    "local_content_available": false,
+    "status": "needs-content-export",
+    "notes": "From Odysseus skills list - 'Create a new document from a user-provided outline and content, output both Markdown and DOCX'"
+  },
+  {
+    "name": "enable-wake-on-lan-and-auto-shutdown-on-network-loss-for-ras",
+    "category": "local-ai-infra",
+    "source_type": "custom-or-unverified",
+    "upstream_repository": null,
+    "upstream_skill_url": null,
+    "local_content_available": false,
+    "status": "needs-content-export",
+    "notes": "From Odysseus skills list - Raspberry Pi Wake-on-LAN and auto-shutdown"
+  },
+  {
+    "name": "create-individual-calendar-events-from-earnings-dates-list",
+    "category": "productivity",
+    "source_type": "custom-or-unverified",
+    "upstream_repository": null,
+    "upstream_skill_url": null,
+    "local_content_available": false,
+    "status": "needs-content-export",
+    "notes": "From Odysseus skills list - Calendar automation from earnings dates"
+  },
+  {
+    "name": "fix-inconclusive-skills",
+    "category": "development",
+    "source_type": "custom-or-unverified",
+    "upstream_repository": null,
+    "upstream_skill_url": null,
+    "local_content_available": false,
+    "status": "needs-content-export",
+    "notes": "From Odysseus skills list - 'Fix Inconclusive Skills'"
+  },
+  {
+    "name": "smart-email-reading",
+    "category": "productivity",
+    "source_type": "custom-or-unverified",
+    "upstream_repository": null,
+    "upstream_skill_url": null,
+    "local_content_available": false,
+    "status": "needs-content-export",
+    "notes": "From Odysseus skills list - 'A skill to read, inspect, summarize, extract information from, or analyze emails'"
+  },
+  {
+    "name": "stock-picking-by-common-stocks-uncommon-profits-4",
+    "category": "investing",
+    "source_type": "custom-or-unverified",
+    "upstream_repository": null,
+    "upstream_skill_url": null,
+    "local_content_available": false,
+    "status": "needs-content-export",
+    "notes": "From Odysseus skills list - Based on Philip Fisher's investment principles"
+  },
+  {
+    "name": "generate-findings-report-from-pipeline-logs",
+    "category": "development",
+    "source_type": "custom-or-unverified",
+    "upstream_repository": null,
+    "upstream_skill_url": null,
+    "local_content_available": false,
+    "status": "needs-content-export",
+    "notes": "From Odysseus skills list - Pipeline log analysis"
+  },
+  {
+    "name": "book-to-skill",
+    "category": "writing-docs",
+    "source_type": "custom-or-unverified",
+    "upstream_repository": null,
+    "upstream_skill_url": null,
+    "local_content_available": false,
+    "status": "needs-content-export",
+    "notes": "From Odysseus skills list - 'Convert a book or article into a reusable skill using AI and web data'"
+  },
+  {
+    "name": "common-sense-index-investing-bogle-4",
+    "category": "investing",
+    "source_type": "custom-or-unverified",
+    "upstream_repository": null,
+    "upstream_skill_url": null,
+    "local_content_available": false,
+    "status": "needs-content-export",
+    "notes": "From Odysseus skills list - John Bogle index investing rules"
+  },
+  {
+    "name": "create-professional-email-signature",
+    "category": "writing-docs",
+    "source_type": "custom-or-unverified",
+    "upstream_repository": null,
+    "upstream_skill_url": null,
+    "local_content_available": false,
+    "status": "needs-content-export",
+    "notes": "From Odysseus skills list - Professional email signature generator"
+  },
+  {
+    "name": "detailed-source-rewrite-guide",
+    "category": "writing-docs",
+    "source_type": "custom-or-unverified",
+    "upstream_repository": null,
+    "upstream_skill_url": null,
+    "local_content_available": false,
+    "status": "needs-content-export",
+    "notes": "From Odysseus skills list - 'Rewrite a source document into a structured guide using AI'"
+  },
+  {
+    "name": "document-editing-general",
+    "category": "writing-docs",
+    "source_type": "custom-or-unverified",
+    "upstream_repository": null,
+    "upstream_skill_url": null,
+    "local_content_available": false,
+    "status": "needs-content-export",
+    notes": "From Odysseus skills list - General-purpose document editing skill"
+  },
+  {
+    "name": "drawio-skill",
+    "category": "design",
+    "source_type": "custom-or-unverified",
+    "upstream_repository": null,
+    "upstream_skill_url": null,
+    "local_content_available": false,
+    "status": "needs-content-export",
+    "notes": "From Odysseus skills list - 'Generate UML class diagrams, BPMN workflows, and Kubernetes architecture diagrams using Draw.io'"
+  },
+  {
+    "name": "firecrawl-deep-research-4",
+    "category": "research",
+    "source_type": "custom-or-unverified",
+    "upstream_repository": null,
+    "upstream_skill_url": null,
+    "local_content_available": false,
+    "status": "needs-content-export",
+    "notes": "From Odysseus skills list - 'Guides the user through a structured research process using Firecrawl'"
+  },
+  {
+    "name": "generate-markdown-document-via-file-tool",
+    "category": "writing-docs",
+    "source_type": "custom-or-unverified",
+    "upstream_repository": null,
+    "upstream_skill_url": null,
+    "local_content_available": false,
+    "status": "needs-content-export",
+    "notes": "From Odysseus skills list - Markdown document generation via file tool"
+  },
+  {
+    "name": "github-code-documentation",
+    "category": "development",
+    "source_type": "custom-or-unverified",
+    "upstream_repository": null,
+    "upstream_skill_url": null,
+    "local_content_available": false,
+    "status": "needs-content-export",
+    "notes": "From Odysseus skills list - 'Skill for creating detailed descriptions and high-quality README.md files for GitHub'"
+  },
+  {
+    "name": "import-ics-events-into-google-calendar",
+    "category": "productivity",
+    "source_type": "custom-or-unverified",
+    "upstream_repository": null,
+    "upstream_skill_url": null,
+    "local_content_available": false,
+    "status": "needs-content-export",
+    "notes": "From Odysseus skills list - ICS to Google Calendar import"
+  },
+  {
+    "name": "investing-from-darwin-4",
+    "category": "investing",
+    "source_type": "custom-or-unverified",
+    "upstream_repository": null,
+    "upstream_skill_url": null,
+    "local_content_available": false,
+    "status": "needs-content-export",
+    "notes": "From Odysseus skills list - 'Pulak Prasad's evolutionary investing principles for avoiding big losses'"
+  },
+  {
+    "name": "penetration-testing-guide",
+    "category": "development",
+    "source_type": "custom-or-unverified",
+    "upstream_repository": null,
+    "upstream_skill_url": null,
+    "local_content_available": false,
+    "status": "needs-content-export",
+    "notes": "From Odysseus skills list - '5 phases: Recon, Scan, Gain Access, Escalate, and Report'"
+  },
+  {
+    "name": "save-long-opencode-prompts-as-markdown-documents",
+    "category": "writing-docs",
+    "source_type": "custom-or-unverified",
+    "upstream_repository": null,
+    "upstream_skill_url": null,
+    "local_content_available": false,
+    "status": "needs-content-export",
+    "notes": "From Odysseus skills list - Archive long OpenCode prompts as Markdown"
+  },
+  {
+    "name": "universal-listing-template",
+    "category": "writing-docs",
+    "source_type": "custom-or-unverified",
+    "upstream_repository": null,
+    "upstream_skill_url": null,
+    "local_content_available": false,
+    "status": "needs-content-export",
+    "notes": "From Odysseus skills list - 'Generate structured lists (TODO, inventory, tables) using AI and browser automation'"
+  },
+  {
+    "name": "banner-design",
+    "category": "design",
+    "source_type": "third-party-candidate",
+    "upstream_repository": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+    "upstream_skill_url": "https://raw.githubusercontent.com/nextlevelbuilder/ui-ux-pro-max-skill/main/.claude/skills/banner-design/SKILL.md",
+    "local_content_available": false,
+    "status": "needs-verification",
+    "notes": "From Odysseus skill-links - candidate upstream identified but content not verified"
+  },
+  {
+    "name": "make-interfaces-feel-better",
+    "category": "design",
+    "source_type": "third-party-candidate",
+    "upstream_repository": "https://github.com/jakubkrehel/make-interfaces-feel-better",
+    "upstream_skill_url": "https://raw.githubusercontent.com/jakubkrehel/make-interfaces-feel-better/main/skills/make-interfaces-feel-better/SKILL.md",
+    "local_content_available": false,
+    "status": "needs-verification",
+    "notes": "From Odysseus skill-links - candidate upstream identified but content not verified"
+  },
+  {
+    "name": "transitions-dev",
+    "category": "design",
+    "source_type": "third-party-candidate",
+    "upstream_repository": "https://github.com/Jakubantalik/transitions.dev",
+    "upstream_skill_url": "https://raw.githubusercontent.com/Jakubantalik/transitions.dev/main/skills/transitions-dev/SKILL.md",
+    "local_content_available": false,
+    "status": "needs-verification",
+    "notes": "From Odysseus skill-links - candidate upstream identified but content not verified"
+  },
+  {
+    "name": "transitions-polish",
+    "category": "design",
+    "source_type": "third-party-candidate",
+    "upstream_repository": "https://github.com/Jakubantalik/transitions.dev",
+    "upstream_skill_url": "https://raw.githubusercontent.com/Jakubantalik/transitions.dev/main/skills/transitions-polish/SKILL.md",
+    "local_content_available": false,
+    "status": "needs-verification",
+    "notes": "From Odysseus skill-links - candidate upstream identified but content not verified"
+  },
+  {
+    "name": "agent-browser-6",
+    "category": "web-automation",
+    "source_type": "third-party-candidate",
+    "upstream_repository": "https://github.com/vercel-labs/agent-browser",
+    "upstream_skill_url": "https://raw.githubusercontent.com/vercel-labs/agent-browser/main/skills/agent-browser/SKILL.md",
+    "local_content_available": false,
+    "status": "needs-verification",
+    "notes": "From Odysseus skill-links - candidate upstream identified but content not verified"
+  },
+  {
+    "name": "pptx-6",
+    "category": "writing-docs",
+    "source_type": "third-party-candidate",
+    "upstream_repository": "https://github.com/anthropics/skills",
+    "upstream_skill_url": "https://raw.githubusercontent.com/anthropics/skills/main/skills/pptx/SKILL.md",
+    "local_content_available": false,
+    "status": "needs-verification",
+    "notes": "From Odysseus skill-links - candidate upstream identified but content not verified"
+  }
+]

@@ -1,0 +1,59 @@
+{
+  "profile": "local-ai-infra",
+  "auto_install": false,
+  "notes": "Select one primary workflow. Upstream content and dependencies are not bundled.",
+  "skills": [
+    {
+      "name": "source-driven-development",
+      "category": "coding",
+      "repository": "https://github.com/addyosmani/agent-skills",
+      "branch": "main",
+      "path": "skills/source-driven-development/SKILL.md",
+      "github_file": "https://github.com/addyosmani/agent-skills/blob/main/skills/source-driven-development/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/addyosmani/agent-skills/main/skills/source-driven-development/SKILL.md",
+      "verification": "catalog-derived-not-http-validated",
+      "local_copy_included": false,
+      "id": "addyosmani/agent-skills:source-driven-development",
+      "upstream_content_downloaded": false
+    },
+    {
+      "name": "observability-and-instrumentation",
+      "category": "coding",
+      "repository": "https://github.com/addyosmani/agent-skills",
+      "branch": "main",
+      "path": "skills/observability-and-instrumentation/SKILL.md",
+      "github_file": "https://github.com/addyosmani/agent-skills/blob/main/skills/observability-and-instrumentation/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/addyosmani/agent-skills/main/skills/observability-and-instrumentation/SKILL.md",
+      "verification": "catalog-derived-not-http-validated",
+      "local_copy_included": false,
+      "id": "addyosmani/agent-skills:observability-and-instrumentation",
+      "upstream_content_downloaded": false
+    },
+    {
+      "name": "mcp-builder",
+      "category": "documents",
+      "repository": "https://github.com/anthropics/skills",
+      "branch": "main",
+      "path": "skills/mcp-builder/SKILL.md",
+      "github_file": "https://github.com/anthropics/skills/blob/main/skills/mcp-builder/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/anthropics/skills/main/skills/mcp-builder/SKILL.md",
+      "verification": "catalog-derived-not-http-validated",
+      "local_copy_included": false,
+      "id": "anthropics/skills:mcp-builder",
+      "upstream_content_downloaded": false
+    },
+    {
+      "name": "rag-architect",
+      "category": "specialists",
+      "repository": "https://github.com/Jeffallan/claude-skills",
+      "branch": "main",
+      "path": "skills/rag-architect/SKILL.md",
+      "github_file": "https://github.com/Jeffallan/claude-skills/blob/main/skills/rag-architect/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/Jeffallan/claude-skills/main/skills/rag-architect/SKILL.md",
+      "verification": "catalog-derived-not-http-validated",
+      "local_copy_included": false,
+      "id": "Jeffallan/claude-skills:rag-architect",
+      "upstream_content_downloaded": false
+    }
+  ]
+}

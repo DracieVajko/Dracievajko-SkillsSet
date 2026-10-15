@@ -1,0 +1,46 @@
+{
+  "profile": "research-learning",
+  "auto_install": false,
+  "notes": "Select one primary workflow. Upstream content and dependencies are not bundled.",
+  "skills": [
+    {
+      "name": "research",
+      "category": "planning",
+      "repository": "https://github.com/mattpocock/skills",
+      "branch": "main",
+      "path": "skills/engineering/research/SKILL.md",
+      "github_file": "https://github.com/mattpocock/skills/blob/main/skills/engineering/research/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/mattpocock/skills/main/skills/engineering/research/SKILL.md",
+      "verification": "catalog-derived-not-http-validated",
+      "local_copy_included": false,
+      "id": "mattpocock/skills:research",
+      "upstream_content_downloaded": false
+    },
+    {
+      "name": "teach",
+      "category": "learning",
+      "repository": "https://github.com/mattpocock/skills",
+      "branch": "main",
+      "path": "skills/productivity/teach/SKILL.md",
+      "github_file": "https://github.com/mattpocock/skills/blob/main/skills/productivity/teach/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/mattpocock/skills/main/skills/productivity/teach/SKILL.md",
+      "verification": "catalog-derived-not-http-validated",
+      "local_copy_included": false,
+      "id": "mattpocock/skills:teach",
+      "upstream_content_downloaded": false
+    },
+    {
+      "name": "handoff",
+      "category": "learning",
+      "repository": "https://github.com/mattpocock/skills",
+      "branch": "main",
+      "path": "skills/productivity/handoff/SKILL.md",
+      "github_file": "https://github.com/mattpocock/skills/blob/main/skills/productivity/handoff/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/mattpocock/skills/main/skills/productivity/handoff/SKILL.md",
+      "verification": "catalog-derived-not-http-validated",
+      "local_copy_included": false,
+      "id": "mattpocock/skills:handoff",
+      "upstream_content_downloaded": false
+    }
+  ]
+}

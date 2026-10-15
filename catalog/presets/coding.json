@@ -1,0 +1,72 @@
+{
+  "profile": "coding",
+  "auto_install": false,
+  "notes": "Select one primary workflow. Upstream content and dependencies are not bundled.",
+  "skills": [
+    {
+      "name": "karpathy-guidelines",
+      "category": "coding",
+      "repository": "https://github.com/multica-ai/andrej-karpathy-skills",
+      "branch": "main",
+      "path": "skills/karpathy-guidelines/SKILL.md",
+      "github_file": "https://github.com/multica-ai/andrej-karpathy-skills/blob/main/skills/karpathy-guidelines/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/multica-ai/andrej-karpathy-skills/main/skills/karpathy-guidelines/SKILL.md",
+      "verification": "catalog-derived-not-http-validated",
+      "local_copy_included": false,
+      "id": "multica-ai/andrej-karpathy-skills:karpathy-guidelines",
+      "upstream_content_downloaded": false
+    },
+    {
+      "name": "debugging-and-error-recovery",
+      "category": "coding",
+      "repository": "https://github.com/addyosmani/agent-skills",
+      "branch": "main",
+      "path": "skills/debugging-and-error-recovery/SKILL.md",
+      "github_file": "https://github.com/addyosmani/agent-skills/blob/main/skills/debugging-and-error-recovery/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/addyosmani/agent-skills/main/skills/debugging-and-error-recovery/SKILL.md",
+      "verification": "catalog-derived-not-http-validated",
+      "local_copy_included": false,
+      "id": "addyosmani/agent-skills:debugging-and-error-recovery",
+      "upstream_content_downloaded": false
+    },
+    {
+      "name": "code-review-and-quality",
+      "category": "coding",
+      "repository": "https://github.com/addyosmani/agent-skills",
+      "branch": "main",
+      "path": "skills/code-review-and-quality/SKILL.md",
+      "github_file": "https://github.com/addyosmani/agent-skills/blob/main/skills/code-review-and-quality/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/addyosmani/agent-skills/main/skills/code-review-and-quality/SKILL.md",
+      "verification": "catalog-derived-not-http-validated",
+      "local_copy_included": false,
+      "id": "addyosmani/agent-skills:code-review-and-quality",
+      "upstream_content_downloaded": false
+    },
+    {
+      "name": "documentation-and-adrs",
+      "category": "coding",
+      "repository": "https://github.com/addyosmani/agent-skills",
+      "branch": "main",
+      "path": "skills/documentation-and-adrs/SKILL.md",
+      "github_file": "https://github.com/addyosmani/agent-skills/blob/main/skills/documentation-and-adrs/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/addyosmani/agent-skills/main/skills/documentation-and-adrs/SKILL.md",
+      "verification": "catalog-derived-not-http-validated",
+      "local_copy_included": false,
+      "id": "addyosmani/agent-skills:documentation-and-adrs",
+      "upstream_content_downloaded": false
+    },
+    {
+      "name": "handoff",
+      "category": "learning",
+      "repository": "https://github.com/mattpocock/skills",
+      "branch": "main",
+      "path": "skills/productivity/handoff/SKILL.md",
+      "github_file": "https://github.com/mattpocock/skills/blob/main/skills/productivity/handoff/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/mattpocock/skills/main/skills/productivity/handoff/SKILL.md",
+      "verification": "catalog-derived-not-http-validated",
+      "local_copy_included": false,
+      "id": "mattpocock/skills:handoff",
+      "upstream_content_downloaded": false
+    }
+  ]
+}

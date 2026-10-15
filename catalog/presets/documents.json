@@ -1,0 +1,72 @@
+{
+  "profile": "documents",
+  "auto_install": false,
+  "notes": "Select one primary workflow. Upstream content and dependencies are not bundled.",
+  "skills": [
+    {
+      "name": "doc-coauthoring",
+      "category": "documents",
+      "repository": "https://github.com/anthropics/skills",
+      "branch": "main",
+      "path": "skills/doc-coauthoring/SKILL.md",
+      "github_file": "https://github.com/anthropics/skills/blob/main/skills/doc-coauthoring/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/anthropics/skills/main/skills/doc-coauthoring/SKILL.md",
+      "verification": "catalog-derived-not-http-validated",
+      "local_copy_included": false,
+      "id": "anthropics/skills:doc-coauthoring",
+      "upstream_content_downloaded": false
+    },
+    {
+      "name": "docx",
+      "category": "documents",
+      "repository": "https://github.com/anthropics/skills",
+      "branch": "main",
+      "path": "skills/docx/SKILL.md",
+      "github_file": "https://github.com/anthropics/skills/blob/main/skills/docx/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/anthropics/skills/main/skills/docx/SKILL.md",
+      "verification": "catalog-derived-not-http-validated",
+      "local_copy_included": false,
+      "id": "anthropics/skills:docx",
+      "upstream_content_downloaded": false
+    },
+    {
+      "name": "pdf",
+      "category": "documents",
+      "repository": "https://github.com/anthropics/skills",
+      "branch": "main",
+      "path": "skills/pdf/SKILL.md",
+      "github_file": "https://github.com/anthropics/skills/blob/main/skills/pdf/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/anthropics/skills/main/skills/pdf/SKILL.md",
+      "verification": "catalog-derived-not-http-validated",
+      "local_copy_included": false,
+      "id": "anthropics/skills:pdf",
+      "upstream_content_downloaded": false
+    },
+    {
+      "name": "pptx",
+      "category": "documents",
+      "repository": "https://github.com/anthropics/skills",
+      "branch": "main",
+      "path": "skills/pptx/SKILL.md",
+      "github_file": "https://github.com/anthropics/skills/blob/main/skills/pptx/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/anthropics/skills/main/skills/pptx/SKILL.md",
+      "verification": "catalog-derived-not-http-validated",
+      "local_copy_included": false,
+      "id": "anthropics/skills:pptx",
+      "upstream_content_downloaded": false
+    },
+    {
+      "name": "xlsx",
+      "category": "documents",
+      "repository": "https://github.com/anthropics/skills",
+      "branch": "main",
+      "path": "skills/xlsx/SKILL.md",
+      "github_file": "https://github.com/anthropics/skills/blob/main/skills/xlsx/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/anthropics/skills/main/skills/xlsx/SKILL.md",
+      "verification": "catalog-derived-not-http-validated",
+      "local_copy_included": false,
+      "id": "anthropics/skills:xlsx",
+      "upstream_content_downloaded": false
+    }
+  ]
+}

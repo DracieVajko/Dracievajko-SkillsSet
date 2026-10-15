@@ -1,0 +1,46 @@
+{
+  "profile": "investing",
+  "auto_install": false,
+  "notes": "Select one primary workflow. Upstream content and dependencies are not bundled.",
+  "skills": [
+    {
+      "name": "thinking-probabilistic",
+      "category": "thinking",
+      "repository": "https://github.com/tjboudreaux/cc-thinking-skills",
+      "branch": "main",
+      "path": "skills/thinking-probabilistic/SKILL.md",
+      "github_file": "https://github.com/tjboudreaux/cc-thinking-skills/blob/main/skills/thinking-probabilistic/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/tjboudreaux/cc-thinking-skills/main/skills/thinking-probabilistic/SKILL.md",
+      "verification": "catalog-derived-not-http-validated",
+      "local_copy_included": false,
+      "id": "tjboudreaux/cc-thinking-skills:thinking-probabilistic",
+      "upstream_content_downloaded": false
+    },
+    {
+      "name": "thinking-margin-of-safety",
+      "category": "thinking",
+      "repository": "https://github.com/tjboudreaux/cc-thinking-skills",
+      "branch": "main",
+      "path": "skills/thinking-margin-of-safety/SKILL.md",
+      "github_file": "https://github.com/tjboudreaux/cc-thinking-skills/blob/main/skills/thinking-margin-of-safety/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/tjboudreaux/cc-thinking-skills/main/skills/thinking-margin-of-safety/SKILL.md",
+      "verification": "catalog-derived-not-http-validated",
+      "local_copy_included": false,
+      "id": "tjboudreaux/cc-thinking-skills:thinking-margin-of-safety",
+      "upstream_content_downloaded": false
+    },
+    {
+      "name": "thinking-circle-of-competence",
+      "category": "thinking",
+      "repository": "https://github.com/tjboudreaux/cc-thinking-skills",
+      "branch": "main",
+      "path": "skills/thinking-circle-of-competence/SKILL.md",
+      "github_file": "https://github.com/tjboudreaux/cc-thinking-skills/blob/main/skills/thinking-circle-of-competence/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/tjboudreaux/cc-thinking-skills/main/skills/thinking-circle-of-competence/SKILL.md",
+      "verification": "catalog-derived-not-http-validated",
+      "local_copy_included": false,
+      "id": "tjboudreaux/cc-thinking-skills:thinking-circle-of-competence",
+      "upstream_content_downloaded": false
+    }
+  ]
+}

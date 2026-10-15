@@ -1,0 +1,33 @@
+{
+  "profile": "debugging",
+  "auto_install": false,
+  "notes": "Select one primary workflow. Upstream content and dependencies are not bundled.",
+  "skills": [
+    {
+      "name": "debugging-and-error-recovery",
+      "category": "coding",
+      "repository": "https://github.com/addyosmani/agent-skills",
+      "branch": "main",
+      "path": "skills/debugging-and-error-recovery/SKILL.md",
+      "github_file": "https://github.com/addyosmani/agent-skills/blob/main/skills/debugging-and-error-recovery/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/addyosmani/agent-skills/main/skills/debugging-and-error-recovery/SKILL.md",
+      "verification": "catalog-derived-not-http-validated",
+      "local_copy_included": false,
+      "id": "addyosmani/agent-skills:debugging-and-error-recovery",
+      "upstream_content_downloaded": false
+    },
+    {
+      "name": "verification-before-completion",
+      "category": "workflow",
+      "repository": "https://github.com/obra/superpowers",
+      "branch": "main",
+      "path": "skills/verification-before-completion/SKILL.md",
+      "github_file": "https://github.com/obra/superpowers/blob/main/skills/verification-before-completion/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/obra/superpowers/main/skills/verification-before-completion/SKILL.md",
+      "verification": "catalog-derived-not-http-validated",
+      "local_copy_included": false,
+      "id": "obra/superpowers:verification-before-completion",
+      "upstream_content_downloaded": false
+    }
+  ]
+}
