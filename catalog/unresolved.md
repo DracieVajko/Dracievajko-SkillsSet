@@ -91,7 +91,7 @@ The following 17 skills have local copies with provenance metadata but have not 
 
 ## Link Verification Status
 
-The 142+ third-party skill URLs in `integrations/odysseus/` have **not been individually HTTP validated**. They were cataloged from the prior Odysseus collection and marked as "NEBOLI individuálne HTTP validované" (not individually HTTP validated).
+The third-party link-only URLs in `03-third-party-skills/odysseus/` (`skill-links.txt`, `unverified-links.txt`) were cataloged from the prior Odysseus collection. Their HTTP reachability was checked on 2026-10-15 — see that directory's README and `docs/VERIFICATION.md`.
 
 ## Licensing Uncertainties
 

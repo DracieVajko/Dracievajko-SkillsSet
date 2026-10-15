@@ -1,0 +1,13 @@
+# Local AI and Infrastructure Rules
+- Inventory actual hardware, OS, architecture, RAM, VRAM and service versions.
+- Distinguish host, container, VM, WSL and remote-machine networking.
+- Verify endpoint, protocol, model ID and tool support separately.
+- Inspect logs and health checks before changing configuration.
+- Estimate resources with stated assumptions; never invent benchmarks.
+- Prefer reversible changes and retain a rollback path.
+- Do not expose model, database or administrative ports publicly by default.
+- Keep credentials out of prompts, logs, repositories and shell history.
+- Preserve explicit provider restrictions for each project.
+- Do not silently switch between local and API inference.
+- Install only necessary dependencies and model assets.
+- Verify the service and a representative end-to-end request after changes.

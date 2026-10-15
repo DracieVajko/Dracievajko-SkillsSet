@@ -9,20 +9,20 @@ This guide covers publishing the Dracievajko AI Agent Collection to GitHub.
 - [ ] Verify no API keys, tokens, or credentials in any file
 - [ ] Check `.gitignore` excludes: `.env`, `*.key`, `*.pem`, `config.local.*`, `*.log`, `node_modules/`, `__pycache__/`
 - [ ] Verify no Tailscale IPs, local paths, or internal hostnames in public files
-- [ ] Sanitize `system-prompts/repository-hygiene.md` examples (already done)
+- [ ] Sanitize `04-system-prompts/repository-hygiene.md` examples (already done)
 
 ### 2. Content Review
 - [ ] All maintained documentation in English
-- [ ] Slovak originals preserved in `archive/slovak/`
+- [ ] Slovak originals (if any) are kept outside the public tree
 - [ ] All third-party skills have provenance headers
-- [ ] Link-only skills (142+) not copied — only cataloged
+- [ ] Link-only skills not copied — only cataloged
 - [ ] Custom skills marked as `original` authorship
 - [ ] No private/personal information in any file
 
 ### 3. Structure Validation
 - [ ] Run `python scripts/validate-frontmatter.py`
 - [ ] Run `python scripts/update-category-index.py`
-- [ ] Run `npx markdownlint-cli2 "skills/**/*.md" "docs/*.md" "README.md"`
+- [ ] Run `npx markdownlint-cli2 "**/*.md"`
 - [ ] Verify all skills have `SKILL.md`
 - [ ] Verify Odysseus link files: one raw URL per line, no headers
 
@@ -41,7 +41,7 @@ cd Dracievajko-AI-Agent-Collection
 
 # Initialize git
 git init
-git branch -M main
+git branch -M master
 
 # Add all files
 git add .
@@ -49,22 +49,22 @@ git add .
 # Initial commit
 git commit -m "feat: initial release of Dracievajko AI Agent Collection
 
-- 17 OpenCode skills (core, development, design, ai-ml, 3d-blender)
+- 17 third-party agent-harness skills (03-third-party-skills/agent-harnesses)
 - 1 custom skill (ticktick-tasks)
-- 142+ third-party skills cataloged (link-only)
-- 9 personas (jayce, bruno, atlas, elias, adrian, orion, victor, marcus, jericho)
-- 10 agent rule modules + main AGENTS.md
+- Third-party link-only skills cataloged (03-third-party-skills/odysseus)
+- 10 personas (Jayce, Jayce-Expanded, Isha, Mel, Singed, Ekko, Caitlyn, Heimerdinger, Viktor, Jericho)
+- 9 agent rule modules + main AGENTS.md
 - 9 specialized agent profiles
 - System prompts (general, coding, cults3d-listing, trading, repository hygiene)
-- Odysseus direct link files (validated, all, unverified, by-category, presets)
+- Odysseus link-only files (skill-links.txt, unverified-links.txt)
 - Templates, presets, catalogs, documentation
-- Validation scripts and CI/CD workflow"
+- Validation scripts"
 
 # Add remote
-git remote add origin https://github.com/DracieVajko/Dracievajko-AI-Agent-Collection.git
+git remote add origin https://github.com/DracieVajko/Dracievajko-SkillsSet.git
 
 # Push
-git push -u origin main
+git push -u origin master
 ```
 
 ---
@@ -79,7 +79,7 @@ git push -u origin main
 - [ ] Enable dependency graph and dependabot alerts
 
 ### 2. Branch Protection (Recommended)
-- [ ] Protect `main` branch
+- [ ] Protect the default branch (`master`)
 - [ ] Require PR reviews (1)
 - [ ] Require status checks: `validate`, `lint-markdown`, `validate-skill-structure`
 - [ ] Require branches up to date before merging
@@ -90,7 +90,7 @@ git push -u origin main
 - [ ] Include ZIP of public-ready tree in release assets
 
 ### 4. Community
-- [ ] Add `CONTRIBUTING.md` to root (already in `docs/`)
+- [ ] Add `CONTRIBUTING.md` to root
 - [ ] Add `CODE_OF_CONDUCT.md` (Contributor Covenant)
 - [ ] Add `SECURITY.md` for vulnerability reporting
 - [ ] Pin key issues/discussions
@@ -100,7 +100,7 @@ git push -u origin main
 ## Ongoing Maintenance
 
 ### Adding New Skills
-1. Create skill directory under appropriate `skills/category/`
+1. Create the skill directory under the appropriate collection path (`01-my-skills/` or `03-third-party-skills/`)
 2. Add `SKILL.md` with valid frontmatter
 3. Run `python scripts/validate-frontmatter.py`
 4. Run `python scripts/update-category-index.py`
@@ -108,9 +108,9 @@ git push -u origin main
 6. Submit PR
 
 ### Updating Third-Party Catalog
-1. Add new raw URL to `odysseus/skill-links-all.txt`
-2. If verified, also add to `odysseus/skill-links-validated.txt`
-3. Add to appropriate `odysseus/by-category/*.txt`
+1. Add new raw URL to `03-third-party-skills/odysseus/skill-links.txt`
+2. If branch/path stability is uncertain, add it to `03-third-party-skills/odysseus/unverified-links.txt`
+3. Add to the appropriate page under `catalog/categories/`
 4. Update `catalog/provenance-tracking.json`
 5. Submit PR
 
@@ -119,7 +119,7 @@ git push -u origin main
 # Check Odysseus links are valid raw URLs
 python -c "
 import re
-with open('odysseus/skill-links-all.txt') as f:
+with open('03-third-party-skills/odysseus/skill-links.txt') as f:
     for i, line in enumerate(f, 1):
         line = line.strip()
         if line and not line.startswith('https://raw.githubusercontent.com/'):
@@ -134,10 +134,10 @@ with open('odysseus/skill-links-all.txt') as f:
 ## ZIP Archive Creation
 
 ```bash
-# Create public-ready ZIP (excludes archive/, .git/, private files)
+# Create public-ready ZIP (excludes .git/, logs and caches)
 cd ..
 zip -r Dracievajko-AI-Agent-Collection.zip Dracievajko-AI-Agent-Collection \
-  -x "*/archive/*" "*/.git/*" "*/.github/*" "*.log" "*.tmp" \
+  -x "*/.git/*" "*.log" "*.tmp" \
   "*/node_modules/*" "*/__pycache__/*" "*.DS_Store" "Thumbs.db"
 
 # Verify
@@ -150,10 +150,10 @@ unzip -l Dracievajko-AI-Agent-Collection.zip | head -20
 
 Odysseus users need **direct raw URLs to SKILL.md files**. After publishing:
 
-1. Update `odysseus/skill-links-validated.txt` with actual raw URLs from your GitHub repo
-2. Format: `https://raw.githubusercontent.com/DracieVajko/Dracievajko-AI-Agent-Collection/main/skills/core/using-superpowers/SKILL.md`
+1. Update `03-third-party-skills/odysseus/skill-links.txt` with actual raw URLs from your GitHub repo
+2. Format: `https://raw.githubusercontent.com/DracieVajko/Dracievajko-SkillsSet/master/03-third-party-skills/agent-harnesses/using-superpowers/SKILL.md`
 3. Regenerate category and preset files
-4. Document that these are now verified working links
+4. Document the verification status of each link
 
 ---
 
@@ -161,7 +161,7 @@ Odysseus users need **direct raw URLs to SKILL.md files**. After publishing:
 
 This repository contains:
 - **Original content** (MIT) — system prompts, personas, custom skills, documentation
-- **Third-party skills** (various MIT) — included with provenance, original licenses preserved
+- **Third-party skills** (various licenses — MIT and Apache-2.0) — included with provenance, original licenses preserved
 - **Cataloged skills** (link-only) — no content copied, attribution only
 
 **Do not** apply the repository MIT license to third-party skill content. Each skill directory indicates its license in `SKILL.md` frontmatter and `catalog/skills-catalog.json`.

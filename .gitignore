@@ -109,3 +109,7 @@ catalog/verification-*.csv
 .local/
 *.local.md
 local-*.md
+
+# Exception: collection modules whose names start with "local-"
+!05-agent-instructions/modules/local-ai-infra.md
+!05-agent-instructions/profiles/local-ai-agent.md
