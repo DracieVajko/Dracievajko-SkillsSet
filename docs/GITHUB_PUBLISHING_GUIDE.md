@@ -81,7 +81,7 @@ git push -u origin master
 ### 2. Branch Protection (Recommended)
 - [ ] Protect the default branch (`master`)
 - [ ] Require PR reviews (1)
-- [ ] Require status checks: `validate`, `lint-markdown`, `validate-skill-structure`
+- [ ] Require status checks once CI is configured (no workflow is committed yet)
 - [ ] Require branches up to date before merging
 
 ### 3. Releases

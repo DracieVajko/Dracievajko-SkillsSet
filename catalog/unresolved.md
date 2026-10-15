@@ -97,18 +97,18 @@ The third-party link-only URLs in `03-third-party-skills/odysseus/` (`skill-link
 
 | Issue | Affected Items | Status |
 |-------|----------------|--------|
-| No explicit license file in some upstream repos | Several third-party skills | Need to check each upstream |
+| No explicit license file in some upstream repos | Several third-party skills | Evidence recorded per item (root `LICENSE`, README, or per-skill `LICENSE.txt`) |
 | Redistribution permission unclear for adapted skills | All third-party skills | Only link-only for cataloged skills |
-| MIT license assumed for most upstreams | 17 third-party skills | Should verify each |
+| Upstream licenses for local copies | 17 third-party skills | Recorded per item — MIT or Apache-2.0; see `docs/VERIFICATION.md` |
 
 ## Action Items
 
-- [ ] HTTP validate all Odysseus skill URLs
+- [x] HTTP validate all Odysseus skill URLs (2026-10-15 — 154/154 returned HTTP 200)
 - [ ] Content-compare local third-party skills against upstreams
 - [ ] Resolve 28 `needs-content-export` items (create content, find upstream, or remove from inventory)
-- [ ] Verify license files in all upstream repositories
+- [x] Verify license evidence for all upstream repositories (recorded per item in each `SOURCE.md`)
 - [ ] Confirm redistribution permission for adapted skills
 
 ---
 
-*Last updated: 2026-10-14*
+*Last updated: 2026-10-15*
