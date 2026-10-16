@@ -228,7 +228,7 @@
         "required_tools":  "MCP, python, git, mcp, scripts",
         "required_sidecar_files":  "none",
         "runtime_requirements":  "OpenCode skill tool + dependencies",
-        "compatibility_notes":  "Local copy present; upstream content not verified"
+        "compatibility_notes":  "Local copy present; upstream content not verified. Also referenced from composio-community/opencode-skills (see the other record for this local path)."
     },
     {
         "id":  "addyosmani/agent-skills:source-driven-development",
@@ -3063,7 +3063,7 @@
         "required_tools":  "MCP, python, git, mcp, scripts",
         "required_sidecar_files":  "none",
         "runtime_requirements":  "OpenCode skill tool + dependencies",
-        "compatibility_notes":  "Local copy present; upstream content not verified"
+        "compatibility_notes":  "Alternative upstream reference for the same local copy (not a second confirmed origin). The recorded upstream is addyosmani/agent-skills."
     },
     {
         "id":  "composio-community/opencode-skills:idea-to-plan",

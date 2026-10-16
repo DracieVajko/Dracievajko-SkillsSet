@@ -127,7 +127,7 @@
     "upstream_skill_url": null,
     "local_content_available": false,
     "status": "needs-content-export",
-    notes": "From Odysseus skills list - General-purpose document editing skill"
+    "notes": "From Odysseus skills list - General-purpose document editing skill"
   },
   {
     "name": "drawio-skill",

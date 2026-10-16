@@ -37,7 +37,7 @@ The root MIT license applies **only** to:
 - Templates (templates/*.md)
 - Scripts (scripts/*.py)
 - Root configuration files (README.md, AGENTS.md, ATTRIBUTION.md, .gitignore)
-- Original system prompts and personas (04-system-prompts/*.md)
+- Original system prompts and personas (04-system-prompts/**/*.md)
 - Original agent instructions (05-agent-instructions/**)
 - Original skills (01-my-skills/**)
 

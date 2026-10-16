@@ -229,7 +229,7 @@ The following skills are referenced by raw Markdown URL only in `skill-links.txt
 
 ## System Prompts and Personas (04-system-prompts)
 
-The system prompts and personas below are maintained by DracieVajko (Jakub Koreň / Dracievajko). Ownership of the source prompt set is asserted by the curator; this collection does not independently prove original authorship of every phrase. Arcane-inspired display names were recovered from source filenames and content:
+The system prompts and personas below are maintained by DracieVajko (Jakub Koreň / Dracievajko). Ownership of the source prompt set is asserted by the curator; this collection does not independently prove original authorship of every phrase. Arcane-inspired display names were recovered from source filenames and content. Persona files are in `04-system-prompts/personas/`, core system prompts in `04-system-prompts/core/`, and image prompts in `04-system-prompts/upscale/`:
 
 | Display Name | Arcane Inspiration | Source File | Notes |
 |--------------|--------------------|-------------|-------|
@@ -244,9 +244,9 @@ The system prompts and personas below are maintained by DracieVajko (Jakub Kore�
 | Viktor | Viktor | Victor_Thinker.txt | Filename spelling "Victor" |
 | Jericho | — | Jericho_PersonalChef.txt | Existing chosen persona name; no lore interpretation added |
 
-Core system prompts: general.md, coding.md, cults3d-listing.md (VoxelScribe), trading.md, repository-hygiene.md
+Core system prompts (`04-system-prompts/core/`): general.md, coding.md, cults3d-listing.md (VoxelScribe), trading.md, repository-hygiene.md
 
-Image prompts: upscale-basic.md, upscale-portrait.md, upscale-translate.md
+Image prompts (`04-system-prompts/upscale/`): upscale-basic.md, upscale-portrait.md, upscale-translate.md
 
 ---
 

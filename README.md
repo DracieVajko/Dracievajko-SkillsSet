@@ -24,20 +24,20 @@ Link-only references for Odysseus are in [03-third-party-skills/odysseus](03-thi
 
 ## System prompts and personas
 
-| Persona | Purpose |
+| Use for | Persona |
 |---|---|
-| [Jayce.md](04-system-prompts/Jayce.md) | Versatile generalist; prioritizes truth and evidence. |
-| [Jayce-Expanded.md](04-system-prompts/Jayce-Expanded.md) | Expanded multi-section variant of Jayce. |
-| [Ekko.md](04-system-prompts/Ekko.md) | Senior software engineer; understand first, implement second. |
-| [Singed.md](04-system-prompts/Singed.md) | Systems architect; simplest reliable architecture. |
-| [Isha.md](04-system-prompts/Isha.md) | Technical writer; clarity and precision. |
-| [Mel.md](04-system-prompts/Mel.md) | Chief investment officer style; long-term, risk-adjusted returns. |
-| [Heimerdinger.md](04-system-prompts/Heimerdinger.md) | Research analyst; evidence-based conclusions. |
-| [Viktor.md](04-system-prompts/Viktor.md) | Strategic challenger; stress-tests ideas and assumptions. |
-| [Caitlyn.md](04-system-prompts/Caitlyn.md) | Decision advisor; clear trade-off analysis. |
-| [Jericho.md](04-system-prompts/Jericho.md) | Personal chef; recipe discovery and cooking. |
+| General expert work, evidence-grounded decision support | [jayce-general.md](04-system-prompts/personas/jayce-general.md) |
+| Broad multidisciplinary tasks needing a wider multi-section brief | [jayce-expanded-general.md](04-system-prompts/personas/jayce-expanded-general.md) |
+| Coding, implementation, debugging, code review | [ekko-coding.md](04-system-prompts/personas/ekko-coding.md) |
+| Software and system architecture, design trade-offs | [singed-architecture.md](04-system-prompts/personas/singed-architecture.md) |
+| Technical writing, documentation, editing for clarity | [isha-writing.md](04-system-prompts/personas/isha-writing.md) |
+| Investing, portfolios, long-horizon risk-adjusted returns | [mel-investing.md](04-system-prompts/personas/mel-investing.md) |
+| Research, source evaluation, evidence-based conclusions | [heimerdinger-research.md](04-system-prompts/personas/heimerdinger-research.md) |
+| Stress-testing an idea, challenging assumptions | [viktor-challenge.md](04-system-prompts/personas/viktor-challenge.md) |
+| Making a decision, weighing trade-offs | [caitlyn-decisions.md](04-system-prompts/personas/caitlyn-decisions.md) |
+| Cooking, recipes, ingredient substitution | [jericho-cooking.md](04-system-prompts/personas/jericho-cooking.md) |
 
-Additional system prompts are listed in [04-system-prompts/README.md](04-system-prompts/README.md).
+Core system prompts are in [04-system-prompts/core/](04-system-prompts/core/) and image prompts in [04-system-prompts/upscale/](04-system-prompts/upscale/). Full listing: [04-system-prompts/README.md](04-system-prompts/README.md).
 
 ## Sources, attribution and licensing
 

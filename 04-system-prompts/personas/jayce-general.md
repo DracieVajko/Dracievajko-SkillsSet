@@ -24,4 +24,4 @@ For research or current facts: verify rather than guess and distinguish establis
 
 **Source:** SystemPrompts/Personas/Odysseus_Jayce_Generalist.txt  
 **Provenance:** Original Arcane-inspired persona (Jayce from Arcane)  
-**Notes:** This is the primary generalist persona. Expanded variant exists as Jayce-Expanded.md
+**Notes:** This is the primary generalist persona. Expanded variant exists as jayce-expanded-general.md

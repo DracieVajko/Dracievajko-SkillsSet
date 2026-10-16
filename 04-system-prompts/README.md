@@ -1,48 +1,34 @@
 # System Prompts and Personas
 
-This directory contains all system prompts and personas organized by purpose.
+System prompts and personas organized by purpose. Every file is a standalone prompt: use its content as a system message, or reference the file from your agent configuration.
 
-## Personas (Arcane-Inspired Names)
+| Directory | Contents | Count |
+|-----------|----------|-------|
+| [`core/`](core/README.md) | General-purpose system prompts | 5 |
+| [`personas/`](personas/README.md) | Task-specific personas (Arcane-inspired names) | 10 |
+| [`upscale/`](upscale/README.md) | Image generation and upscale prompts | 3 |
+|  | **Total** | **18** |
 
-The intended identity is the Arcane-inspired name. Where source filenames combined a personal alias with the Arcane-inspired name, the Arcane-inspired name is used as the display name.
+## Which persona is good for what
 
-| Name | Purpose | Source/Provenance | Notes |
-|------|---------|-------------------|-------|
-| Jayce.md | Versatile expert generalist — truth > agreement | SystemPrompts/Personas/Odysseus_Jayce_Generalist.txt | Primary generalist persona |
-| Jayce-Expanded.md | Multidisciplinary generalist — expanded multi-section variant | SystemPrompts/Personas/Odysseus_Jayce_Generalist_Expanded.txt | Meaningful expanded variant of Jayce, preserved |
-| Isha.md | Technical writer — clarity and precision | SystemPrompts/Personas/Elias_Isha_Writer.txt | Source filename combined alias "Elias" with Arcane-inspired "Isha" |
-| Mel.md | Chief Investment Officer — long-term risk-adjusted returns | SystemPrompts/Personas/Adrian_Mel_GeneralInvestor.txt | Source filename combined alias "Adrian" with Arcane-inspired "Mel" |
-| Singed.md | Systems architect — simplest reliable architecture | SystemPrompts/Personas/Atlas_Singed_SystemArchitect.txt | Source filename combined alias "Atlas" with Arcane-inspired "Singed" |
-| Ekko.md | Senior software engineer — understand first, implement second | SystemPrompts/Personas/Brono_Ekko_Coder.txt | Source filename combined alias "Brono"/"Bruno" with Arcane-inspired "Ekko" |
-| Caitlyn.md | Decision advisor — decisive trade-off analysis | SystemPrompts/Personas/Markus_Caithlyn_DecisionAdvisor.txt | Source filename combined alias "Markus"/"Marcus" with Arcane-inspired "Caithlyn" |
-| Heimerdinger.md | Research analyst — evidence-based conclusions | SystemPrompts/Personas/Orion_Heimerdinger_Researcher.txt | Source filename combined alias "Orion" with Arcane-inspired "Heimerdinger" |
-| Viktor.md | Strategic challenger — stress-test ideas | SystemPrompts/Personas/Victor_Thinker.txt | Content confirms Arcane-inspired thinker persona; filename spelling "Victor" |
-| Jericho.md | Personal chef — recipe discovery and cooking | SystemPrompts/Personas/Jericho_PersonalChef.txt | Existing chosen persona name; no lore interpretation added |
+| Use for | Persona | File |
+|---------|---------|------|
+| General expert work, evidence-grounded decision support | Jayce | [`personas/jayce-general.md`](personas/jayce-general.md) |
+| Broad multidisciplinary tasks needing a wider multi-section brief | Jayce (expanded) | [`personas/jayce-expanded-general.md`](personas/jayce-expanded-general.md) |
+| Coding, implementation, debugging, code review | Ekko | [`personas/ekko-coding.md`](personas/ekko-coding.md) |
+| Software and system architecture, design trade-offs | Singed | [`personas/singed-architecture.md`](personas/singed-architecture.md) |
+| Technical writing, documentation, editing for clarity | Isha | [`personas/isha-writing.md`](personas/isha-writing.md) |
+| Investing, portfolios, long-horizon risk-adjusted returns | Mel | [`personas/mel-investing.md`](personas/mel-investing.md) |
+| Research, source evaluation, evidence-based conclusions | Heimerdinger | [`personas/heimerdinger-research.md`](personas/heimerdinger-research.md) |
+| Stress-testing an idea, challenging assumptions | Viktor | [`personas/viktor-challenge.md`](personas/viktor-challenge.md) |
+| Making a decision, weighing trade-offs | Caitlyn | [`personas/caitlyn-decisions.md`](personas/caitlyn-decisions.md) |
+| Cooking, recipes, ingredient substitution | Jericho | [`personas/jericho-cooking.md`](personas/jericho-cooking.md) |
 
-## Core System Prompts
+Display names are the intended identity. Where a source filename combined a personal alias with the Arcane-inspired name, the Arcane-inspired name is used as the display name. Full provenance is in [`personas/README.md`](personas/README.md).
 
-| Name | Purpose | Source/Provenance |
-|------|---------|-------------------|
-| general.md | General expert consultant behavior | SystemPrompts/Default/AI instructions general.txt |
-| coding.md | Concise coding assistant | SystemPrompts/Default/AI instructions coding.txt |
-| cults3d-listing.md | 3D-printing listing copywriter (VoxelScribe); bilingual Cults3D metadata | SystemPrompts/Default/AI instructions CAD desriptions.txt |
-| trading.md | Algorithmic trading (15yr forex experience) | SystemPrompts/Trader alghoritm instructions.txt |
-| repository-hygiene.md | Repository cleanup and Git hygiene | SystemPrompts/ULTIMATE REPOSITORY HYGIENE.md |
+## Core system prompts and image prompts
 
-## Image Generation Prompts
-
-| Name | Purpose | Source/Provenance |
-|------|---------|-------------------|
-| upscale-basic.md | Portrait upscale with identity/background preservation | SystemPrompts/AI prompt upscale.txt |
-| upscale-portrait.md | Professional ID/CV headshot upscaling | SystemPrompts/AI prompt upscale and portrait photo.txt |
-| upscale-translate.md | 1:1 upscale with English→Slovak text translation | SystemPrompts/AI prompt upscale and translate.txt |
-
-## Counts (from actual files)
-
-- Persona files: 10 (Jayce, Jayce-Expanded, Isha, Mel, Singed, Ekko, Caitlyn, Heimerdinger, Viktor, Jericho)
-- Core system prompts: 5 (general, coding, cults3d-listing, trading, repository-hygiene)
-- Image prompts: 3 (upscale-basic, upscale-portrait, upscale-translate)
-- **Total prompt/persona files: 18**
+Not persona-specific: [`core/`](core/README.md) holds general behavioural presets (general, coding, cults3d-listing, trading, repository-hygiene) and [`upscale/`](upscale/README.md) holds the image upscaling prompts (upscale-basic, upscale-portrait, upscale-translate).
 
 ## Notes
 

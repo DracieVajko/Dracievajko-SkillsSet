@@ -9,7 +9,7 @@ This guide covers publishing the Dracievajko AI Agent Collection to GitHub.
 - [ ] Verify no API keys, tokens, or credentials in any file
 - [ ] Check `.gitignore` excludes: `.env`, `*.key`, `*.pem`, `config.local.*`, `*.log`, `node_modules/`, `__pycache__/`
 - [ ] Verify no Tailscale IPs, local paths, or internal hostnames in public files
-- [ ] Sanitize `04-system-prompts/repository-hygiene.md` examples (already done)
+- [ ] Sanitize `04-system-prompts/core/repository-hygiene.md` examples (already done)
 
 ### 2. Content Review
 - [ ] All maintained documentation in English
@@ -20,9 +20,11 @@ This guide covers publishing the Dracievajko AI Agent Collection to GitHub.
 - [ ] No private/personal information in any file
 
 ### 3. Structure Validation
+- [ ] Run `python scripts/test_skills_tooling.py` (same suite as CI job `test`)
 - [ ] Run `python scripts/validate-frontmatter.py`
 - [ ] Run `python scripts/update-category-index.py`
-- [ ] Run `npx markdownlint-cli2 "**/*.md"`
+- [ ] Verify the generated index is current: `python scripts/update-category-index.py --check`
+- [ ] Run `npx markdownlint-cli2 "**/*.md"` (optional, local only; not part of CI)
 - [ ] Verify all skills have `SKILL.md`
 - [ ] Verify Odysseus link files: one raw URL per line, no headers
 
@@ -81,7 +83,7 @@ git push -u origin master
 ### 2. Branch Protection (Recommended)
 - [ ] Protect the default branch (`master`)
 - [ ] Require PR reviews (1)
-- [ ] Require status checks once CI is configured (no workflow is committed yet)
+- [ ] Require status checks: `test`, `validate`, `category-index` (defined in `.github/workflows/skills-tooling.yml`)
 - [ ] Require branches up to date before merging
 
 ### 3. Releases

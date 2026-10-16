@@ -113,17 +113,17 @@ Skills are organized in `01-my-skills/`, `02-my-modified-skills/`, and `03-third
 
 ## Personas
 
-Specialized personas available in `04-system-prompts/`:
-- `Jayce.md` — Versatile expert, truth > agreement
-- `Jayce-Expanded.md` — Multidisciplinary generalist, expanded variant
-- `Ekko.md` — Senior software engineer, understand first
-- `Singed.md` — Systems architect, simplest reliable architecture
-- `Isha.md` — Technical writer, clarity and precision
-- `Mel.md` — CIO, long-term risk-adjusted returns
-- `Heimerdinger.md` — Research analyst, evidence-based conclusions
-- `Viktor.md` — Strategic challenger, stress-test ideas
-- `Caitlyn.md` — Decision advisor, decisive trade-off analysis
-- `Jericho.md` — Personal chef, recipe discovery and cooking
+Specialized personas available in `04-system-prompts/personas/` (file name encodes the intended use):
+- `jayce-general.md` — Versatile expert, truth > agreement
+- `jayce-expanded-general.md` — Multidisciplinary generalist, expanded variant
+- `ekko-coding.md` — Senior software engineer, understand first
+- `singed-architecture.md` — Systems architect, simplest reliable architecture
+- `isha-writing.md` — Technical writer, clarity and precision
+- `mel-investing.md` — CIO, long-term risk-adjusted returns
+- `heimerdinger-research.md` — Research analyst, evidence-based conclusions
+- `viktor-challenge.md` — Strategic challenger, stress-test ideas
+- `caitlyn-decisions.md` — Decision advisor, decisive trade-off analysis
+- `jericho-cooking.md` — Personal chef, recipe discovery and cooking
 
 ---
 
@@ -147,7 +147,7 @@ Specialized personas available in `04-system-prompts/`:
 
 ## System Prompts
 
-Additional system prompts available in `04-system-prompts/`:
+Additional system prompts available in `04-system-prompts/core/`:
 - `general.md` — General expert consultant behavior
 - `coding.md` — Concise coding assistant
 - `cults3d-listing.md` — 3D-printing listing copywriter (VoxelScribe)
