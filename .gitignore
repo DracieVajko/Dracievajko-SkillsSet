@@ -1,0 +1,108 @@
+# Dracievajko-SkillsSet .gitignore
+
+# Private backups and source archives (kept outside public tree)
+_backups/
+_source-backups/
+_private-review/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+*.code-workspace
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Environment and secrets
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.*
+secrets.*
+secret.*
+auth.*
+token.*
+
+# Logs
+*.log
+logs/
+log/
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.old
+*.orig
+*.rej
+*.dump
+*.trace
+*.prof
+*.coverage
+*.cache
+tmp/
+temp/
+temporary/
+scratch/
+
+# Build output
+dist/
+build/
+target/
+coverage/
+node_modules/
+.venv/
+venv/
+
+# Large files that shouldn't be committed
+*.gguf
+*.safetensors
+*.bin
+*.onnx
+*.pt
+*.pth
+*.ckpt
+model/
+models/
+*.db
+*.sqlite
+*.sqlite3
+
+# IDE-specific
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# Git metadata from sibling projects
+.git/
+
+# Verification outputs (generated)
+catalog/verification-*.json
+catalog/verification-*.csv
+
+# Local development
+.local/
+*.local.md
+local-*.md
+
+# Exception: collection modules whose names start with "local-"
+!instructions/modules/local-ai-infra.md
+!instructions/profiles/local-ai-agent.md

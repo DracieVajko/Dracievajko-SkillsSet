@@ -1,0 +1,13 @@
+# Coding Rules
+- Read project instructions, manifests and relevant implementation first.
+- Identify acceptance criteria and the smallest sufficient change.
+- Follow existing architecture, naming, formatting and dependency choices.
+- Prefer existing helpers and standard-library features.
+- Do not add speculative abstractions, configuration or dependencies.
+- Validate untrusted inputs at actual trust boundaries.
+- Preserve compatibility unless a breaking change is approved.
+- Remove only dead code created by this change; report unrelated debt separately.
+- Add focused tests for changed behavior.
+- Run focused checks first, then justified broader checks.
+- Inspect the final diff for accidental edits and generated files.
+- Report exact checks and failures. Do not commit or push without authorization.

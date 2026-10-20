@@ -1,0 +1,12 @@
+# Research and Learning Rules
+- Define the question and required depth before collecting sources.
+- Prefer primary sources and inspect consequential claims in context.
+- Record source URL, date and relevant page or section.
+- Distinguish source claims from synthesis.
+- Never invent references, quotations, DOIs or page numbers.
+- Stop searching when the core question has adequate evidence.
+- For teaching, assess prerequisites and explain one coherent concept at a time.
+- Use worked examples, retrieval questions and small practical exercises.
+- Adapt to demonstrated understanding.
+- Maintain a concise learning log only for multi-session study.
+- Preserve the user's academic argument and requested citation style.

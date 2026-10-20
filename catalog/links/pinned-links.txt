@@ -1,0 +1,12 @@
+https://raw.githubusercontent.com/diegosouzapw/OmniRoute/release/v3.8.52/skills/omni-models/SKILL.md
+https://raw.githubusercontent.com/diegosouzapw/OmniRoute/release/v3.8.52/skills/omni-providers/SKILL.md
+https://raw.githubusercontent.com/diegosouzapw/OmniRoute/release/v3.8.52/skills/omni-combos-routing/SKILL.md
+https://raw.githubusercontent.com/diegosouzapw/OmniRoute/release/v3.8.52/skills/omni-budget/SKILL.md
+https://raw.githubusercontent.com/diegosouzapw/OmniRoute/release/v3.8.52/skills/omni-usage-logs/SKILL.md
+https://raw.githubusercontent.com/diegosouzapw/OmniRoute/release/v3.8.52/skills/omni-cache/SKILL.md
+https://raw.githubusercontent.com/diegosouzapw/OmniRoute/release/v3.8.52/skills/omni-compression/SKILL.md
+https://raw.githubusercontent.com/diegosouzapw/OmniRoute/release/v3.8.52/skills/omni-context-rtk/SKILL.md
+https://raw.githubusercontent.com/diegosouzapw/OmniRoute/release/v3.8.52/skills/omni-resilience/SKILL.md
+https://raw.githubusercontent.com/diegosouzapw/OmniRoute/release/v3.8.52/skills/omni-db-backups/SKILL.md
+https://raw.githubusercontent.com/diegosouzapw/OmniRoute/release/v3.8.52/skills/omni-mcp/SKILL.md
+https://raw.githubusercontent.com/diegosouzapw/OmniRoute/release/v3.8.52/skills/cli-eval/SKILL.md

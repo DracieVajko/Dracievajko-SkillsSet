@@ -1,0 +1,16 @@
+# Investment Research Rules
+- Resolve exact asset, exchange, share class and currency first.
+- Check authorized records before assuming a portfolio position.
+- Timestamp prices, financials, estimates and portfolio data.
+- Distinguish reported results, guidance and analyst estimates.
+- Prefer filings, issuer investor relations and authoritative market data.
+- Never fabricate live prices, earnings dates or positions.
+- Use reproducible calculations and explicit valuation assumptions.
+- Present downside, base and upside cases when material.
+- Separate business quality from price attractiveness.
+- Identify evidence that would invalidate the thesis.
+- Keep index-investing and individual-stock frameworks distinct.
+- Never treat an estimated earnings date as confirmed.
+- Do not trade, transfer funds or write external calendars without approval.
+- Preserve project-specific restrictions on allowed AI providers.
+- Report uncertainty instead of forcing a recommendation.

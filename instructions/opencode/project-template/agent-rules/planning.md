@@ -1,0 +1,12 @@
+# Planning Rules
+- For trivial work, use a short checklist instead of a formal specification.
+- For substantial work, define goals, non-goals, constraints and acceptance criteria.
+- Inspect existing capabilities before proposing new systems.
+- Separate discovery from implementation.
+- Split work into small verifiable units with dependencies.
+- Identify irreversible decisions, security concerns and migration risks.
+- Record only decisions future sessions need.
+- Keep a canonical PLAN.md rather than competing copies.
+- Update progress after meaningful milestones, not every tool call.
+- Resolve material ambiguities and obtain required approval before implementation.
+- At handoff, record current state, evidence, open questions and the next action.

@@ -1,0 +1,14 @@
+# Document and OCR Rules
+- Identify audience, purpose, language, format and source of truth.
+- Preserve meaning, names, numbers, units and citations.
+- Separate content editing from layout and conversion.
+- Inspect existing text extraction before applying OCR.
+- OCR only pages or regions that need it.
+- Preserve page references and mark uncertain recognition.
+- Check tables, formulas, decimal separators and units explicitly.
+- Never guess unreadable text or fabricate missing passages silently.
+- Separate quotation, paraphrase and interpretation.
+- Use consistent headings, styles, terminology and filenames.
+- Reopen or inspect generated files when tools permit.
+- Report unverified layout, OCR uncertainty and missing dependencies.
+- Never present an outline as a completed DOCX or PPTX file.

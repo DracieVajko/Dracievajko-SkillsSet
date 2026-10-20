@@ -1,0 +1,14 @@
+# Frontend Rules
+- Establish audience, primary task, design system and supported devices.
+- Preserve incumbent identity during refinement; redesign only when requested.
+- Reuse components and tokens before creating alternatives.
+- Prioritize information hierarchy, readable typography and clear interaction states.
+- Include relevant loading, empty, error, success and disabled states.
+- Support keyboard use, visible focus and reduced-motion preferences.
+- Use semantic HTML and verify accessible names.
+- Choose the least complex animation approach suitable for the task.
+- Do not introduce an animation library for a trivial transition without justification.
+- Scope motion and clean up lifecycle effects.
+- Inspect desktop and mobile in a bounded review pass.
+- Fix observed issues in a batch, then perform one confirmation pass.
+- Never invent performance or accessibility scores.
