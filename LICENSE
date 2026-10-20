@@ -19,19 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----
-
-## Third-Party Content License Notice
-
-This repository contains third-party skills and content with their own licenses:
-
-| Content | License | Source |
-|---------|---------|--------|
-| OpenCode skills (17 skills) | MIT | obra/superpowers, Jeffallan/claude-skills, anthropics/skills, composio-community/opencode-skills, addyosmani/agent-skills |
-| Cataloged third-party skills (142+) | Various (mostly MIT) | Original repositories — **link only, no content copied** |
-| Custom skills (1) | MIT | DracieVajko/Dracievajko-SkillsSet |
-
-**Important:** The MIT license above applies only to original content created by DracieVajko (system prompts, personas, documentation, custom skills, validation scripts, configuration files). Third-party skill content retains its original license — see individual skill directories and `inventories/skills-catalog.json` for details.
-
-No blanket license is applied to third-party content. Link-only catalog entries do not imply license grant.

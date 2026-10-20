@@ -1,5 +1,8 @@
 # Dracievajko AI Agent Collection
 
+[![CI](https://github.com/DracieVajko/Dracievajko-SkillsSet/actions/workflows/skills-tooling.yml/badge.svg)](https://github.com/DracieVajko/Dracievajko-SkillsSet/actions/workflows/skills-tooling.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 A personal collection of agent skills, system prompts, personas, agent rules and
 supporting resources for OpenCode, Odysseus, VS Code and compatible agent
 frameworks.
