@@ -4,7 +4,7 @@ Canonical structured catalog of this collection.
 
 ## Contents
 
-- `items.json` - 156 records: 2 original skills and 154 external skills.
+- `items.json` - 157 records: 3 original skills and 154 external skills.
   Each record includes name, category, repository, upstream URL, authorship,
   license and verification status.
 - `links/` - authoritative plain URL lists for external skills.

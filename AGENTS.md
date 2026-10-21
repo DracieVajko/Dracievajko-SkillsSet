@@ -159,6 +159,6 @@ Additional system prompts available in `prompts/system/`:
 - `skills/original/` — Locally installed original skills
 - `skills/third-party/README.md` — External skills with purpose and link
 - `catalog/links/` — Authoritative external URL lists
-- `catalog/items.json` — Machine-readable catalog (2 original + 154 links)
+- `catalog/items.json` — Machine-readable catalog (3 original + 154 links)
 - `docs/SKILL_SPEC.md` — How to write skills
 - `docs/CATEGORY_INDEX.md` — Complete generated listing

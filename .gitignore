@@ -106,3 +106,4 @@ local-*.md
 # Exception: collection modules whose names start with "local-"
 !instructions/modules/local-ai-infra.md
 !instructions/profiles/local-ai-agent.md
+!instructions/opencode/project-template/agent-rules/local-ai-infra.md

@@ -7,6 +7,15 @@ A personal collection of agent skills, system prompts, personas, agent rules and
 supporting resources for OpenCode, Odysseus, VS Code and compatible agent
 frameworks.
 
+## Quick Navigation
+
+| Looking for | Where |
+|-------------|-------|
+| **My skills (3, original)** | [`skills/original/`](skills/original) - details in the [Original Skills](#original-skills) table below |
+| **Third-party skills (154, links only)** | [`skills/third-party/README.md`](skills/third-party/README.md) or the complete [category index](docs/CATEGORY_INDEX.md) |
+| **Machine-readable catalog** | [`catalog/items.json`](catalog/items.json) |
+| **Platform usage (OpenCode / Odysseus / VS Code)** | [Quick Start](#quick-start) below |
+
 ## What Is in the Repository
 
 - **3 original skills** - `ticktick-tasks`, `write-research-projects`, `pen-testing`
@@ -172,7 +181,7 @@ not use both in the same project.
 
 | File | Purpose |
 |------|---------|
-| [`catalog/items.json`](catalog/items.json) | 156 structured records: 2 original + 154 external links |
+| [`catalog/items.json`](catalog/items.json) | 157 structured records: 3 original + 154 external links |
 | [`catalog/links/skill-links.txt`](catalog/links/skill-links.txt) | 142 stable upstream URLs |
 | [`catalog/links/pinned-links.txt`](catalog/links/pinned-links.txt) | 12 pinned upstream URLs |
 | [`docs/CATEGORY_INDEX.md`](docs/CATEGORY_INDEX.md) | Generated human-readable skill index |

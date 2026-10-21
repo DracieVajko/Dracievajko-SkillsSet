@@ -11,7 +11,7 @@ This guide covers publishing the collection to GitHub.
 - [ ] No third-party skill code is bundled; external skills are links only.
 - [ ] No archives, backups or historical catalog views.
 - [ ] All maintained documentation is in English.
-- [ ] The catalog contains 2 original and 154 link-only records.
+- [ ] The catalog contains 3 original and 154 link-only records.
 
 ### Validation
 
