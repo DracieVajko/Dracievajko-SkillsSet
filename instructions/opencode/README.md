@@ -15,7 +15,7 @@ The files in `project-template/agent-rules/` are self-contained copies of
 
 ## Skills
 
-This repository bundles three original skills under `skills/original/`:
+This repository bundles four original skills under `skills/original/`:
 
 - [`ticktick-tasks`](../../skills/original/ticktick-tasks/SKILL.md) - manage
   TickTick tasks, projects, habits and focus via MCP
@@ -24,6 +24,9 @@ This repository bundles three original skills under `skills/original/`:
 - [`pen-testing`](../../skills/original/pen-testing/SKILL.md) - authorized
   penetration testing methodology: scope gate, recon, scan, controlled
   testing, blast radius, report
+- [`agent-operating-rules`](../../skills/original/agent-operating-rules/SKILL.md) -
+  evidence-first project workflow: consent-gated git, root-cause fixes,
+  verification, coverage checklists and test discipline
 
 External skills are links only; use the catalog and the generated index:
 

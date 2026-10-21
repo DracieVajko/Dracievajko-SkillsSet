@@ -82,7 +82,7 @@ Keep the report proportional to the task.
 
 ## Available Skills
 
-Only the three skills under `skills/original/` are installed locally. External
+Only the four skills under `skills/original/` are installed locally. External
 skills are links only; this repository does not bundle their instructions.
 
 ### Local Skills
@@ -91,6 +91,8 @@ skills are links only; this repository does not bundle their instructions.
   prompts in `prompts/system/`)
 - `pen-testing` — Authorized penetration testing methodology (scope, recon,
   scan, controlled testing, blast radius, report)
+- `agent-operating-rules` — Project working discipline: evidence-first,
+  consent-gated git, verification and checklists
 
 ### External Skills (Links Only)
 The collection references 154 upstream skills without copying their code.
@@ -131,6 +133,7 @@ Specialized personas available in `prompts/personas/`:
 | "Manage my TickTick tasks" | `ticktick-tasks` |
 | "Deep research", "write a thesis", "verify sources" | `write-research-projects` |
 | "Pen-test my lab", "security assessment" | `pen-testing` |
+| "How should we work here", "commit rules", "project workflow" | `agent-operating-rules` |
 | "Clean this repository", "prepare a commit" | `prompts/system/repository-hygiene.md` |
 
 Triggers for external skills require installing the upstream skill first. The
@@ -159,6 +162,6 @@ Additional system prompts available in `prompts/system/`:
 - `skills/original/` — Locally installed original skills
 - `skills/third-party/README.md` — External skills with purpose and link
 - `catalog/links/` — Authoritative external URL lists
-- `catalog/items.json` — Machine-readable catalog (3 original + 154 links)
+- `catalog/items.json` — Machine-readable catalog (4 original + 154 links)
 - `docs/SKILL_SPEC.md` — How to write skills
 - `docs/CATEGORY_INDEX.md` — Complete generated listing

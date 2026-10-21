@@ -4,7 +4,7 @@ Canonical structured catalog of this collection.
 
 ## Contents
 
-- `items.json` - 157 records: 3 original skills and 154 external skills.
+- `items.json` - 158 records: 4 original skills and 154 external skills.
   Each record includes name, category, repository, upstream URL, authorship,
   license and verification status.
 - `links/` - authoritative plain URL lists for external skills.
@@ -32,12 +32,12 @@ error. It never falls back to an empty collection.
 
 | Authorship | Count |
 |------------|-------|
-| `original` | 3 |
+| `original` | 4 |
 | `link-only` | 154 |
-| **Total** | **157** |
+| **Total** | **158** |
 
 The 154 link-only records cover the 142 stable links and 12 pinned links. The
-catalog contains only the three original skills and 154 external link-only
+catalog contains only the four original skills and 154 external link-only
 records; no third-party code is stored locally.
 
 ## Link Verification

@@ -11,14 +11,14 @@ frameworks.
 
 | Looking for | Where |
 |-------------|-------|
-| **My skills (3, original)** | [`skills/original/`](skills/original) - details in the [Original Skills](#original-skills) table below |
+| **My skills (4, original)** | [`skills/original/`](skills/original) - details in the [Original Skills](#original-skills) table below |
 | **Third-party skills (154, links only)** | [`skills/third-party/README.md`](skills/third-party/README.md) or the complete [category index](docs/CATEGORY_INDEX.md) |
 | **Machine-readable catalog** | [`catalog/items.json`](catalog/items.json) |
 | **Platform usage (OpenCode / Odysseus / VS Code)** | [Quick Start](#quick-start) below |
 
 ## What Is in the Repository
 
-- **3 original skills** - `ticktick-tasks`, `write-research-projects`, `pen-testing`
+- **4 original skills** - `ticktick-tasks`, `write-research-projects`, `pen-testing`, `agent-operating-rules`
 - **154 external skills** - links to original upstream files only; no third-party
   code is bundled
 - **7 system prompts**, **10 personas** and **3 image prompts**
@@ -36,7 +36,7 @@ historical catalog views in this repository.
 ├── .github/workflows/          # CI: tests, frontmatter validation, index check
 ├── catalog/
 │   ├── README.md
-│   ├── items.json              # 157 records: 3 original + 154 external links
+│   ├── items.json              # 158 records: 4 original + 154 external links
 │   └── links/
 │       ├── README.md
 │       ├── skill-links.txt     # 142 stable-branch links
@@ -58,7 +58,7 @@ historical catalog views in this repository.
 ├── scripts/                    # Validator, index generator, tests
 ├── skills/
 │   ├── README.md
-│   ├── original/               # 3 original skills
+│   ├── original/               # 4 original skills
 │   └── third-party/README.md   # External skills: name, purpose, link
 ├── AGENTS.md                   # Modular entry point
 ├── AGENTS-combined.md          # Single-file rules variant
@@ -118,6 +118,7 @@ cat catalog/links/pinned-links.txt
 | `ticktick-tasks` | Manage TickTick tasks, projects, tags, habits and focus via MCP | [`SKILL.md`](skills/original/ticktick-tasks/SKILL.md) |
 | `write-research-projects` | Deep research, academic writing, source verification and complex projects | [`SKILL.md`](skills/original/write-research-projects/SKILL.md) |
 | `pen-testing` | Authorized penetration testing methodology: scope, recon, scan, controlled testing, blast radius and report | [`SKILL.md`](skills/original/pen-testing/SKILL.md) |
+| `agent-operating-rules` | Evidence-first project workflow: consent-gated git, verification, coverage checklists and test discipline | [`SKILL.md`](skills/original/agent-operating-rules/SKILL.md) |
 
 The research skill has two companion system prompts:
 
@@ -180,7 +181,7 @@ not use both in the same project.
 
 | File | Purpose |
 |------|---------|
-| [`catalog/items.json`](catalog/items.json) | 157 structured records: 3 original + 154 external links |
+| [`catalog/items.json`](catalog/items.json) | 158 structured records: 4 original + 154 external links |
 | [`catalog/links/skill-links.txt`](catalog/links/skill-links.txt) | 142 stable upstream URLs |
 | [`catalog/links/pinned-links.txt`](catalog/links/pinned-links.txt) | 12 pinned upstream URLs |
 | [`docs/CATEGORY_INDEX.md`](docs/CATEGORY_INDEX.md) | Generated human-readable skill index |

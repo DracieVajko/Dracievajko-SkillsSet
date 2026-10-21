@@ -8,9 +8,9 @@ third-party skill code.
 
 | Status | Meaning | Count |
 |--------|---------|------:|
-| `original` | Authored and maintained in this repository | 3 |
+| `original` | Authored and maintained in this repository | 4 |
 | `link-only` | Upstream skill referenced by URL only; no content copied | 154 |
-| **Total** | | **157** |
+| **Total** | | **158** |
 
 ## Original Skills
 
@@ -19,6 +19,7 @@ third-party skill code.
 | `ticktick-tasks` | Manage TickTick tasks, projects, habits and focus via MCP | DracieVajko | MIT |
 | `write-research-projects` | Deep research, academic writing, source verification and complex projects | DracieVajko | MIT |
 | `pen-testing` | Authorized penetration testing methodology: scope gate, recon, scan, controlled testing, blast radius, report | DracieVajko | MIT |
+| `agent-operating-rules` | Evidence-first project workflow: consent-gated git, root-cause fixes, verification, coverage checklists and test discipline | DracieVajko | MIT |
 
 ## External Skills
 
@@ -76,4 +77,4 @@ redistribution permission for the linked file.
 
 ---
 
-*Last updated: 2026-10-20*
+*Last updated: 2026-10-21*

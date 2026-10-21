@@ -3,7 +3,7 @@
 This directory separates what this repository authors from what it
 references. Two kinds live here, always clearly labeled:
 
-- `original/` - skills authored and maintained in this repository (**3**)
+- `original/` - skills authored and maintained in this repository (**4**)
 - `third-party/` - upstream skills referenced by link only (**154**). No
   upstream code is bundled; see [`third-party/README.md`](third-party/README.md).
 
@@ -17,6 +17,7 @@ copy its folder into your agent's skill directory.
 | `ticktick-tasks` | Manage TickTick tasks, projects, habits and focus via MCP | [`SKILL.md`](original/ticktick-tasks/SKILL.md) |
 | `write-research-projects` | Deep research, academic writing, source verification and complex projects | [`SKILL.md`](original/write-research-projects/SKILL.md) |
 | `pen-testing` | Authorized penetration testing methodology: scope gate, recon, scan, controlled testing, blast radius, report | [`SKILL.md`](original/pen-testing/SKILL.md) |
+| `agent-operating-rules` | Evidence-first project workflow: consent-gated git, root-cause fixes, verification, coverage checklists and test discipline | [`SKILL.md`](original/agent-operating-rules/SKILL.md) |
 
 Install example (OpenCode):
 

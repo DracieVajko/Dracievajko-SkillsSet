@@ -3316,5 +3316,27 @@
         "runtime_requirements":  "OpenCode skill tool",
         "compatibility_notes":  "User-created skill, not in original 154",
         "description":  "Guide authorized penetration testing from scoping through recon, scanning, controlled testing and reporting. Refuses targets without written approval."
+    },
+    {
+        "id":  "original/agent-operating-rules",
+        "name":  "agent-operating-rules",
+        "category":  "custom",
+        "repository":  "https://github.com/DracieVajko/Dracievajko-SkillsSet",
+        "branch":  "master",
+        "path":  "skills/original/agent-operating-rules/SKILL.md",
+        "github_file":  "https://github.com/DracieVajko/Dracievajko-SkillsSet/blob/master/skills/original/agent-operating-rules/SKILL.md",
+        "raw_url":  "https://raw.githubusercontent.com/DracieVajko/Dracievajko-SkillsSet/master/skills/original/agent-operating-rules/SKILL.md",
+        "verification":  "verified",
+        "local_copy_included":  false,
+        "local_content_available":  true,
+        "local_skill_path":  "skills/original/agent-operating-rules/SKILL.md",
+        "authorship":  "original",
+        "license":  "MIT",
+        "redistribution_status":  "original",
+        "required_tools":  "none",
+        "required_sidecar_files":  "none",
+        "runtime_requirements":  "OpenCode skill tool",
+        "compatibility_notes":  "User-created skill, not in original 154",
+        "description":  "Apply the user's project operating rules: evidence-first work, root-cause fixes, consent-gated git, coverage checklists and test discipline."
     }
 ]
