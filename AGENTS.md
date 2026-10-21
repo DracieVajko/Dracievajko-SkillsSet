@@ -82,13 +82,15 @@ Keep the report proportional to the task.
 
 ## Available Skills
 
-Only the two skills under `skills/original/` are installed locally. External
+Only the three skills under `skills/original/` are installed locally. External
 skills are links only; this repository does not bundle their instructions.
 
 ### Local Skills
 - `ticktick-tasks` — Manage TickTick tasks, projects, habits via MCP
 - `write-research-projects` — Deep research and long-form writing (companion
   prompts in `prompts/system/`)
+- `pen-testing` — Authorized penetration testing methodology (scope, recon,
+  scan, controlled testing, blast radius, report)
 
 ### External Skills (Links Only)
 The collection references 154 upstream skills without copying their code.
@@ -128,6 +130,7 @@ Specialized personas available in `prompts/personas/`:
 |--------------|-----|
 | "Manage my TickTick tasks" | `ticktick-tasks` |
 | "Deep research", "write a thesis", "verify sources" | `write-research-projects` |
+| "Pen-test my lab", "security assessment" | `pen-testing` |
 | "Clean this repository", "prepare a commit" | `prompts/system/repository-hygiene.md` |
 
 Triggers for external skills require installing the upstream skill first. The

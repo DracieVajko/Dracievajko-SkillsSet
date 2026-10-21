@@ -9,7 +9,7 @@ frameworks.
 
 ## What Is in the Repository
 
-- **2 original skills** - `ticktick-tasks`, `write-research-projects`
+- **3 original skills** - `ticktick-tasks`, `write-research-projects`, `pen-testing`
 - **154 external skills** - links to original upstream files only; no third-party
   code is bundled
 - **7 system prompts**, **10 personas** and **3 image prompts**
@@ -27,7 +27,7 @@ historical catalog views in this repository.
 ├── .github/workflows/          # CI: tests, frontmatter validation, index check
 ├── catalog/
 │   ├── README.md
-│   ├── items.json              # 156 records: 2 original + 154 external links
+│   ├── items.json              # 157 records: 3 original + 154 external links
 │   └── links/
 │       ├── README.md
 │       ├── skill-links.txt     # 142 stable-branch links
@@ -50,7 +50,7 @@ historical catalog views in this repository.
 ├── scripts/                    # Validator, index generator, tests
 ├── skills/
 │   ├── README.md
-│   ├── original/               # 2 original skills
+│   ├── original/               # 3 original skills
 │   └── third-party/README.md   # External skills: name, purpose, link
 ├── AGENTS.md                   # Modular entry point
 ├── AGENTS-combined.md          # Single-file rules variant
@@ -109,6 +109,7 @@ cat catalog/links/pinned-links.txt
 |-------|---------|------|
 | `ticktick-tasks` | Manage TickTick tasks, projects, tags, habits and focus via MCP | [`SKILL.md`](skills/original/ticktick-tasks/SKILL.md) |
 | `write-research-projects` | Deep research, academic writing, source verification and complex projects | [`SKILL.md`](skills/original/write-research-projects/SKILL.md) |
+| `pen-testing` | Authorized penetration testing methodology: scope, recon, scan, controlled testing, blast radius and report | [`SKILL.md`](skills/original/pen-testing/SKILL.md) |
 
 The research skill has two companion system prompts:
 

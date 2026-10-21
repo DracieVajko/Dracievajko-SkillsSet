@@ -20,6 +20,7 @@ Discovered under `skills/original/`.
 
 | Skill | Category | Version | Path |
 |-------|----------|---------|------|
+| `pen-testing` | custom | 1.0.0 | [SKILL.md](../skills/original/pen-testing/SKILL.md) |
 | `ticktick-tasks` | custom | 1.0.0 | [SKILL.md](../skills/original/ticktick-tasks/SKILL.md) |
 | `write-research-projects` | writing-docs | 2.0.0 | [SKILL.md](../skills/original/write-research-projects/SKILL.md) |
 

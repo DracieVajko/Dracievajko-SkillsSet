@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- Original skill `pen-testing` - authorized penetration testing methodology
+
 ## [1.0.0] - 2026-10-20
 
 ### Added
