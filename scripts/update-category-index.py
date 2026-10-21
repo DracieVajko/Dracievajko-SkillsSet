@@ -186,24 +186,29 @@ def _render_local_section(root, root_name):
             name = folder
             category = '-'
             version = '-'
+            purpose = '-'
         else:
             name = frontmatter.get('name', folder)
             category = frontmatter.get('category', '-')
             version = frontmatter.get('version', '-')
-        rows.append((name, category, version, rel))
+            purpose = str(frontmatter.get('description') or '-').replace('\n', ' ').strip() or '-'
+        rows.append((name, category, version, purpose, rel))
 
-    rows.sort(key=lambda r: (str(r[0]), r[3]))
+    rows.sort(key=lambda r: (str(r[0]), r[4]))
 
     out = [f"## {title}", "", f"Discovered under `{root_name}/`.", ""]
     if not rows:
         out.append("*None.*")
         out.append("")
         return out
-    out.append("| Skill | Category | Version | Path |")
-    out.append("|-------|----------|---------|------|")
-    for name, category, version, rel in rows:
+    out.append("| Skill | Category | Version | What it is for | Path |")
+    out.append("|-------|----------|---------|----------------|------|")
+    for name, category, version, purpose, rel in rows:
         link = _link_from_docs(rel)
-        out.append(f"| `{_cell(name)}` | {_cell(category)} | {_cell(version)} | [SKILL.md]({link}) |")
+        out.append(
+            f"| `{_cell(name)}` | {_cell(category)} | {_cell(version)} | "
+            f"{_cell(purpose)} | [SKILL.md]({link}) |"
+        )
     out.append("")
     return out
 

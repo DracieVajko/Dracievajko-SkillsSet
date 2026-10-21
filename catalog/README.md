@@ -37,7 +37,7 @@ error. It never falls back to an empty collection.
 | **Total** | **157** |
 
 The 154 link-only records cover the 142 stable links and 12 pinned links. The
-catalog contains only the two original skills and 154 external link-only
+catalog contains only the three original skills and 154 external link-only
 records; no third-party code is stored locally.
 
 ## Link Verification

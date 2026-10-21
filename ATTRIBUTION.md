@@ -14,11 +14,11 @@ third-party skill code.
 
 ## Original Skills
 
-| Skill | Author | Repository | License |
-|-------|--------|------------|---------|
-| `ticktick-tasks` | DracieVajko | [Dracievajko-SkillsSet](https://github.com/DracieVajko/Dracievajko-SkillsSet) | MIT |
-| `write-research-projects` | DracieVajko | This collection | MIT |
-| `pen-testing` | DracieVajko | This collection | MIT |
+| Skill | What it is for | Author | License |
+|-------|----------------|--------|---------|
+| `ticktick-tasks` | Manage TickTick tasks, projects, habits and focus via MCP | DracieVajko | MIT |
+| `write-research-projects` | Deep research, academic writing, source verification and complex projects | DracieVajko | MIT |
+| `pen-testing` | Authorized penetration testing methodology: scope gate, recon, scan, controlled testing, blast radius, report | DracieVajko | MIT |
 
 ## External Skills
 

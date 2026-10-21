@@ -44,7 +44,6 @@ historical catalog views in this repository.
 ├── docs/
 │   ├── CATEGORY_INDEX.md       # Generated list of original + external skills
 │   ├── CONTRIBUTING.md
-│   ├── GITHUB_PUBLISHING_GUIDE.md
 │   ├── SAFETY-AND-LICENSES.md
 │   ├── SKILL_SPEC.md
 │   └── templates/              # Project, plan, decisions, handoff, sources

@@ -18,11 +18,11 @@ Authoritative source per section:
 
 Discovered under `skills/original/`.
 
-| Skill | Category | Version | Path |
-|-------|----------|---------|------|
-| `pen-testing` | custom | 1.0.0 | [SKILL.md](../skills/original/pen-testing/SKILL.md) |
-| `ticktick-tasks` | custom | 1.0.0 | [SKILL.md](../skills/original/ticktick-tasks/SKILL.md) |
-| `write-research-projects` | writing-docs | 2.0.0 | [SKILL.md](../skills/original/write-research-projects/SKILL.md) |
+| Skill | Category | Version | What it is for | Path |
+|-------|----------|---------|----------------|------|
+| `pen-testing` | custom | 1.0.0 | Guide authorized penetration testing from scoping through recon, scanning, controlled testing and reporting. Refuses targets without written approval. | [SKILL.md](../skills/original/pen-testing/SKILL.md) |
+| `ticktick-tasks` | custom | 1.0.0 | Manage TickTick tasks, projects, tags, habits, focus records, comments, and related productivity data through a connected TickTick MCP server. Use for creating, finding, editing, completing, moving, organizing, or safely deleting TickTick items. | [SKILL.md](../skills/original/ticktick-tasks/SKILL.md) |
+| `write-research-projects` | writing-docs | 2.0.0 | Use for deep research, bachelor-style academic writing, source verification, hardware/software design and build, presentations, and multi-AI workflows. | [SKILL.md](../skills/original/write-research-projects/SKILL.md) |
 
 ## External Skills (Links Only)
 

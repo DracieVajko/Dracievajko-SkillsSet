@@ -32,6 +32,7 @@ copied here, so licenses and provenance stay with the upstream owners.
 - Curated list with purpose and license: [`third-party/README.md`](third-party/README.md)
 - Complete generated list: [`docs/CATEGORY_INDEX.md`](../docs/CATEGORY_INDEX.md)
 - Raw URL lists: [`catalog/links/`](../catalog/links/)
+- Safety notes before installing external skills: [`docs/SAFETY-AND-LICENSES.md`](../docs/SAFETY-AND-LICENSES.md)
 
 A link is not a license grant; check the upstream license before reusing
 external content.
