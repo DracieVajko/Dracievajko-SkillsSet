@@ -32,9 +32,9 @@ error. It never falls back to an empty collection.
 
 | Authorship | Count |
 |------------|-------|
-| `original` | 2 |
+| `original` | 3 |
 | `link-only` | 154 |
-| **Total** | **156** |
+| **Total** | **157** |
 
 The 154 link-only records cover the 142 stable links and 12 pinned links. The
 catalog contains only the two original skills and 154 external link-only

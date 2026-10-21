@@ -8,9 +8,9 @@ third-party skill code.
 
 | Status | Meaning | Count |
 |--------|---------|------:|
-| `original` | Authored and maintained in this repository | 2 |
+| `original` | Authored and maintained in this repository | 3 |
 | `link-only` | Upstream skill referenced by URL only; no content copied | 154 |
-| **Total** | | **156** |
+| **Total** | | **157** |
 
 ## Original Skills
 
@@ -18,6 +18,7 @@ third-party skill code.
 |-------|--------|------------|---------|
 | `ticktick-tasks` | DracieVajko | [Dracievajko-SkillsSet](https://github.com/DracieVajko/Dracievajko-SkillsSet) | MIT |
 | `write-research-projects` | DracieVajko | This collection | MIT |
+| `pen-testing` | DracieVajko | This collection | MIT |
 
 ## External Skills
 
