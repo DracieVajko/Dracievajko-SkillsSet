@@ -8,6 +8,6 @@
 7. Change one causal factor at a time when practical.
 8. Implement the smallest root-cause fix.
 9. Add a regression test or equivalent reproducible verification.
-10. Remove temporary diagnostics and inspect for side effects.
+10. Remove temporary diagnostics and fix scripts; integrate the change into the canonical source file and inspect for side effects.
 After two unsuccessful speculative fixes, return to evidence gathering.
 Never hide failures by weakening tests, disabling validation or swallowing errors.

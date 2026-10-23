@@ -30,6 +30,7 @@ Goal: Leave the repository in a state where another competent developer can clon
 ### Temporary Patch Rule
 - Never blindly keep files like `fix.py`, `fix1.py`, `patch.py`, `debug_fix.py`, `working_version.py`, etc.
 - For every suspicious file: determine what problem it solves, whether behavior is already implemented, compare to canonical implementation, check which parts work, check for improvements/bug fixes, search for references, integrate valid fixes, update tests, remove temporary implementation
+- Prevent them: apply fixes directly to the canonical source file during work; a fix script is acceptable only as a disposable diagnostic and must be integrated and deleted in the same task
 
 ### Debug Code
 - Search for: `print()`, `console.log()`, `debugger`, `pdb`, `breakpoint()`, traceback dumps, temporary logging, verbose diagnostics, development-only endpoints, temporary flags, hardcoded test values, manual bypasses, disabled validation, commented-out code, TODO/FIXME hacks

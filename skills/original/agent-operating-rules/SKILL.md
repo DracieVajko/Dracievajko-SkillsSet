@@ -1,7 +1,7 @@
 ---
 name: agent-operating-rules
 description: "Apply the user's project operating rules: evidence-first work, root-cause fixes, consent-gated git, coverage checklists and test discipline."
-version: 1.0.0
+version: 1.1.0
 author: DracieVajko
 category: custom
 source_repository: https://github.com/DracieVajko/Dracievajko-SkillsSet
@@ -128,6 +128,21 @@ confirmation.
 7. **Git.** Apply the consent protocol; propose the commit, then push only
    after separate approval.
 
+## File and Change Hygiene
+
+- Apply every fix in the canonical source file or module. Never deliver
+  `fix1.py`, `patch_v2.py`, `main_fixed.py`, `working_version.py` or a parallel
+  copy as the solution.
+- Create temporary scripts and diagnostics only when necessary; keep them
+  outside the repository or in an ignored scratch path, and delete them plus
+  generated artifacts before reporting.
+- If a temporary script uncovered a reusable fix, integrate it into the proper
+  module, add or update a focused test, then remove the script.
+- Keep one canonical implementation. No parallel versions, dead copies, debug
+  leftovers, logs or dumps in the project root.
+- Before reporting or committing, inspect `git status` and the diff: only the
+  intended files, no temporary artifacts.
+
 ## Verification
 
 - Every change: build/compile -> targeted tests -> an end-to-end check where
@@ -207,6 +222,9 @@ Proposed next step: ...
 - Silently breaking a project rule or a previously agreed convention.
 - Asking five questions at once instead of one good one.
 - Copying employer or client-specific details into public files.
+- Delivering `fix1.py`, `main_fixed.py` or a parallel copy instead of changing
+  the real source file.
+- Leaving temporary scripts, logs or generated artifacts in the project root.
 
 ## Examples
 
@@ -244,3 +262,4 @@ refactors) still needs consent.
 | Version | Date | Changes |
 |---------|------|---------|
 | 1.0.0 | 2026-10-21 | Initial generalized release from real project practice |
+| 1.1.0 | 2026-10-23 | Added file and change hygiene: fixes go into canonical source modules, temporary scripts are removed, one implementation is kept |

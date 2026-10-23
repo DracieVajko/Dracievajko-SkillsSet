@@ -20,7 +20,7 @@ Discovered under `skills/original/`.
 
 | Skill | Category | Version | What it is for | Path |
 |-------|----------|---------|----------------|------|
-| `agent-operating-rules` | custom | 1.0.0 | Apply the user's project operating rules: evidence-first work, root-cause fixes, consent-gated git, coverage checklists and test discipline. | [SKILL.md](../skills/original/agent-operating-rules/SKILL.md) |
+| `agent-operating-rules` | custom | 1.1.0 | Apply the user's project operating rules: evidence-first work, root-cause fixes, consent-gated git, coverage checklists and test discipline. | [SKILL.md](../skills/original/agent-operating-rules/SKILL.md) |
 | `pen-testing` | custom | 1.0.0 | Guide authorized penetration testing from scoping through recon, scanning, controlled testing and reporting. Refuses targets without written approval. | [SKILL.md](../skills/original/pen-testing/SKILL.md) |
 | `ticktick-tasks` | custom | 1.0.0 | Manage TickTick tasks, projects, tags, habits, focus records, comments, and related productivity data through a connected TickTick MCP server. Use for creating, finding, editing, completing, moving, organizing, or safely deleting TickTick items. | [SKILL.md](../skills/original/ticktick-tasks/SKILL.md) |
 | `write-research-projects` | writing-docs | 2.0.0 | Use for deep research, bachelor-style academic writing, source verification, hardware/software design and build, presentations, and multi-AI workflows. | [SKILL.md](../skills/original/write-research-projects/SKILL.md) |

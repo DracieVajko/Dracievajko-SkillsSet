@@ -9,5 +9,7 @@
 - Remove only dead code created by this change; report unrelated debt separately.
 - Add focused tests for changed behavior.
 - Run focused checks first, then justified broader checks.
+- Integrate every fix into the canonical source module; never deliver `fix1.py`, `patch*.py`, `*_fixed.py` or `working_version.py` as the solution.
+- Keep temporary diagnostics outside the repository or in an ignored scratch path; delete them and generated artifacts before reporting.
 - Inspect the final diff for accidental edits and generated files.
 - Report exact checks and failures. Do not commit or push without authorization.
