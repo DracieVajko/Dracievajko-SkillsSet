@@ -11,18 +11,18 @@ frameworks.
 
 | Looking for | Where |
 |-------------|-------|
-| **My skills (4, original)** | [`skills/original/`](skills/original) - details in the [Original Skills](#original-skills) table below |
+| **My skills (5, original)** | [`skills/original/`](skills/original) - details in the [Original Skills](#original-skills) table below |
 | **Third-party skills (154, links only)** | [`skills/third-party/README.md`](skills/third-party/README.md) or the complete [category index](docs/CATEGORY_INDEX.md) |
 | **Machine-readable catalog** | [`catalog/items.json`](catalog/items.json) |
 | **Platform usage (OpenCode / Odysseus / VS Code)** | [Quick Start](#quick-start) below |
 
 ## What Is in the Repository
 
-- **4 original skills** - `ticktick-tasks`, `write-research-projects`, `pen-testing`, `agent-operating-rules`
+- **5 original skills** - `ticktick-tasks`, `write-research-projects`, `pen-testing`, `agent-operating-rules`, `repository-hygiene`
 - **154 external skills** - links to original upstream files only; no third-party
   code is bundled
 - **7 system prompts**, **10 personas** and **3 image prompts**
-- **9 modular rule files** and **9 specialized agent profiles**
+- **11 modular rule files** and **9 specialized agent profiles**
 - **OpenCode integration** - modular project template and single-file rules
 - **Catalog and tooling** - machine-readable metadata, link lists, validation and CI
 
@@ -33,14 +33,14 @@ historical catalog views in this repository.
 
 ```text
 .
-├── .github/workflows/          # CI: tests, frontmatter validation, index check
+├── .github/workflows/          # CI: tests, sync, frontmatter validation, index check
 ├── catalog/
 │   ├── README.md
-│   ├── items.json              # 158 records: 4 original + 154 external links
+│   ├── items.json              # 159 records: 5 original + 154 external links
 │   └── links/
 │       ├── README.md
-│       ├── skill-links.txt     # 142 stable-branch links
-│       └── pinned-links.txt    # 12 pinned release links
+│       ├── skill-links.txt     # 124 stable-branch links
+│       └── pinned-links.txt    # 30 pinned commit/release links
 ├── docs/
 │   ├── CATEGORY_INDEX.md       # Generated list of original + external skills
 │   ├── CONTRIBUTING.md
@@ -48,17 +48,17 @@ historical catalog views in this repository.
 │   ├── SKILL_SPEC.md
 │   └── templates/              # Project, plan, decisions, handoff, sources
 ├── instructions/
-│   ├── modules/                # 9 domain rule modules
+│   ├── modules/                # 11 domain rule modules
 │   ├── profiles/               # 9 specialized agent profiles
 │   └── opencode/               # OpenCode README + modular project template
 ├── prompts/
 │   ├── system/                 # 7 system prompts
 │   ├── personas/               # 10 personas
 │   └── image/                  # 3 image prompts
-├── scripts/                    # Validator, index generator, tests
+├── scripts/                    # Validator, sync check, index generator, link checker, installers, tests
 ├── skills/
 │   ├── README.md
-│   ├── original/               # 4 original skills
+│   ├── original/               # 5 original skills
 │   └── third-party/README.md   # External skills: name, purpose, link
 ├── AGENTS.md                   # Modular entry point
 ├── AGENTS-combined.md          # Single-file rules variant
@@ -71,14 +71,27 @@ historical catalog views in this repository.
 
 ### OpenCode
 
-Copy an original skill into a supported discovery directory:
+Install all original skills into the user-level OpenCode directory:
+
+```powershell
+# Windows
+.\scripts\install-skills.ps1
+```
+
+```bash
+# Linux / macOS
+./scripts/install-skills.sh
+```
+
+Both scripts back up an existing skill folder before replacing it. For a manual
+install, copy the folders you need:
 
 ```bash
 # Project-local
-cp -r skills/original/write-research-projects .agents/skills/
+cp -r skills/original/* .agents/skills/
 
 # User-level
-cp -r skills/original/write-research-projects ~/.config/opencode/skills/
+cp -r skills/original/* ~/.config/opencode/skills/
 ```
 
 For project rules, copy `instructions/opencode/project-template/` into the
@@ -93,7 +106,7 @@ open the original files:
 - [Curated list with purpose and license - `skills/third-party/README.md`](skills/third-party/README.md)
 - [Raw URL lists - `catalog/links/`](catalog/links/)
 
-All 154 URLs returned HTTP 200 on 2026-10-20. Availability does not imply
+All 154 URLs returned HTTP 200 on 2026-10-23. Availability does not imply
 license, security or runtime compatibility.
 
 ### Odysseus
@@ -119,6 +132,7 @@ cat catalog/links/pinned-links.txt
 | `write-research-projects` | Deep research, academic writing, source verification and complex projects | [`SKILL.md`](skills/original/write-research-projects/SKILL.md) |
 | `pen-testing` | Authorized penetration testing methodology: scope, recon, scan, controlled testing, blast radius and report | [`SKILL.md`](skills/original/pen-testing/SKILL.md) |
 | `agent-operating-rules` | Evidence-first project workflow: consent-gated git, verification, coverage checklists and test discipline | [`SKILL.md`](skills/original/agent-operating-rules/SKILL.md) |
+| `repository-hygiene` | Repository cleanup: classification, temporary files, generated artifacts, secrets and commit preparation | [`SKILL.md`](skills/original/repository-hygiene/SKILL.md) |
 
 The research skill has two companion system prompts:
 
@@ -129,8 +143,11 @@ The research skill has two companion system prompts:
 
 The collection references 154 upstream skills:
 
-- 142 stable-branch links in `catalog/links/skill-links.txt`
-- 12 pinned release links in `catalog/links/pinned-links.txt`
+- 124 stable-branch links in `catalog/links/skill-links.txt`
+- 30 pinned commit/release links in `catalog/links/pinned-links.txt`
+
+The 18 curated skill links are pinned to upstream commit SHAs; the 12 OmniRoute
+links remain pinned to its release branch.
 
 No upstream implementation is stored here. The 17 upstream skills that were
 previously bundled locally are now link-only; see
@@ -166,9 +183,9 @@ purpose, license and original link.
 
 ## Agent Rules and Profiles
 
-- `instructions/modules/` - nine domain rule files: coding, debugging, planning,
-  frontend, documents, research and learning, local AI infrastructure,
-  investing, and engineering/3D.
+- `instructions/modules/` - eleven domain rule files: coding, debugging,
+  planning, frontend, documents, research and learning, local AI
+  infrastructure, investing, engineering/3D, security, and testing.
 - `instructions/profiles/` - nine preconfigured profiles for specialized agents.
 - `instructions/opencode/` - OpenCode integration and a self-contained project
   template.
@@ -181,22 +198,27 @@ not use both in the same project.
 
 | File | Purpose |
 |------|---------|
-| [`catalog/items.json`](catalog/items.json) | 158 structured records: 4 original + 154 external links |
-| [`catalog/links/skill-links.txt`](catalog/links/skill-links.txt) | 142 stable upstream URLs |
-| [`catalog/links/pinned-links.txt`](catalog/links/pinned-links.txt) | 12 pinned upstream URLs |
+| [`catalog/items.json`](catalog/items.json) | 159 structured records: 5 original + 154 external links |
+| [`catalog/links/skill-links.txt`](catalog/links/skill-links.txt) | 124 stable upstream URLs |
+| [`catalog/links/pinned-links.txt`](catalog/links/pinned-links.txt) | 30 pinned upstream URLs |
 | [`docs/CATEGORY_INDEX.md`](docs/CATEGORY_INDEX.md) | Generated human-readable skill index |
 
 ## Validation
 
 ```bash
 python scripts/validate-frontmatter.py
+python scripts/check-sync.py
 python scripts/update-category-index.py
 python scripts/update-category-index.py --check
 python -m unittest discover -s scripts -p "test_*.py"
+
+# Optional: network check for external links
+python scripts/check-links.py
 ```
 
-CI runs the same checks on every push and pull request in
-`.github/workflows/skills-tooling.yml`.
+CI runs the validation, sync, index and test checks on every push and pull
+request in `.github/workflows/skills-tooling.yml`. A separate scheduled workflow
+checks external link availability.
 
 ## Licensing
 

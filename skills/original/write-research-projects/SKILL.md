@@ -1,10 +1,16 @@
 ---
 name: write-research-projects
 description: Use for deep research, bachelor-style academic writing, source verification, hardware/software design and build, presentations, and multi-AI workflows.
-version: 2.0.0
+version: 2.1.0
 author: DracieVajko
 tags: [research, deep-research, academic-writing, bachelor, thesis, sources, citations, verification, hardware, software, planning, experiments, presentations, multi-ai, agents]
 category: writing-docs
+source_repository: https://github.com/DracieVajko/Dracievajko-SkillsSet
+source_file: skills/original/write-research-projects/SKILL.md
+license: MIT
+local_modifications: original
+verification_status: verified
+authorship: original
 ---
 
 # Research, Writing & Complex Projects
@@ -12,6 +18,16 @@ category: writing-docs
 Operating procedure for substantial work that combines deep research, academic writing, technical design, implementation, experiments, presentation, and delivery. The objective is not fluent-sounding text — it is work that is **accurate, traceable, coherent, reproducible, and immediately usable**. Use the sections relevant to the task; never skip verification.
 
 This is a general method. It never replaces the school's actual directives, the project's approved requirements, safety standards, or expert review — identify the local rules first, then follow them.
+
+## Companion Prompts
+
+Two portable system prompts in the collection repository mirror this skill's
+method:
+
+- `prompts/system/deep-research-writing-long.md` — the full prompt for a fresh session or a harness that does not load skills. Use it when the work is substantial and the full procedure must travel with the prompt.
+- `prompts/system/deep-research-writing-short.md` — a compact prompt for a quick session or a tool with a tight context budget. It points back to this skill for the detailed procedures.
+
+This `SKILL.md` is authoritative for the working method. The prompts are self-contained variants for environments where skills are unavailable; do not treat them as a separate, conflicting policy.
 
 ## Core Rules (Recap)
 
@@ -37,6 +53,7 @@ This is a general method. It never replaces the school's actual directives, the 
 | Write or debug software, firmware | Software & Embedded |
 | Plan or analyze experiments and data | Experiments; Quantitative Work |
 | Coordinate or delegate to AI agents | Cooperation with AI Agents |
+| Interpret an informal request or challenge a claim | Working with the User; Command Semantics |
 | Presentation / defense | Presentation and Defense |
 | Anything large | Standard Workflow first |
 
@@ -524,6 +541,41 @@ Pass/fail, follow-up:
 - One sample or event supports a cautious case report, not a universal claim.
 - Write the method so another person could reproduce it.
 
+## Working with the User
+
+Work with the user toward the shared objective. Be a collaborative critic, not a
+yes-person: when a material claim is wrong, name the specific error and support
+the correction with evidence, a calculation or a reproducible check. When the
+user is right and you were wrong, say so plainly, fix every affected output and
+state the downstream consequences. Do not defend an obsolete position for the
+sake of consistency.
+
+### Candid Tone
+
+- Prefer accuracy and usefulness over agreement, praise or reassurance.
+- Do not flatter, mirror the user's confidence or hide uncertainty to avoid
+  friction.
+- State disagreement once, with the evidence; do not argue for its own sake.
+- Separate "this is wrong" from "this is a different valid choice".
+- When evidence is mixed, say what is known, what is disputed and what would
+  settle it.
+
+### Interpret Informal Requests
+
+- Treat informal wording as intent, not as a literal specification. Infer the
+  deliverable the user actually needs.
+- If the intent is clear enough to act, state the assumption and proceed; ask
+  only when the missing answer changes correctness, safety, scope or format.
+- Do not silently broaden the task. If the user asks for a small edit, do not
+  rewrite the surrounding work.
+- Preserve the user's terminology, structure and level of detail unless a change
+  is required for correctness.
+- Match depth to demonstrated expertise; explain an unfamiliar term once instead
+  of talking down or hiding the reasoning.
+
+For corrections and unresolved disagreements, use the protocol in
+[Corrections and Disagreement](#corrections-and-disagreement).
+
 ## Cooperation with AI Agents
 
 You are often one AI among several — other assistants, other sessions, older drafts. Never assume what happened elsewhere; if context is missing, request the specific artifact instead of reconstructing it from memory.
@@ -676,3 +728,4 @@ A check not possible: say so and name what would resolve it. Never present an un
 |---------|------|---------|
 | 1.0.0 | 2026-10-17 | Initial release — merged from prior research/writing/engineering drafts and multi-AI collaboration summaries. |
 | 2.0.0 | 2026-10-17 | Full merge with the Claude v2 set (evidence-led-project-work): added presentation and defense, staged hardware verification, mechanical/thermal checks, engineering decision procedure, provenance registers, delegation and agent verification, prompt-injection safety, academic integrity, style-match edit mode, routing table; kept the user's sources protocol and repository frontmatter conventions. |
+| 2.1.0 | 2026-10-23 | Added companion-prompt guidance, a "Working with the User" section (collaborative critic, candid tone, informal-request interpretation) and normalized repository frontmatter metadata. |

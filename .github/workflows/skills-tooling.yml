@@ -1,7 +1,8 @@
 # Validate the collection's skills tooling.
 #
 # Jobs (also the expected status-check names for branch protection):
-#   test            - focused regression tests for the two scripts
+#   test            - focused regression tests for the scripts
+#   sync            - module/template/profile/combined-copy synchronization
 #   validate        - SKILL.md frontmatter validation
 #   category-index  - docs/CATEGORY_INDEX.md freshness check
 #
@@ -29,6 +30,17 @@ jobs:
         run: python -m pip install --requirement scripts/requirements.txt
       - name: Run script regression tests
         run: python -m unittest discover -s scripts -p "test_*.py" -v
+
+  sync:
+    name: sync
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Check duplicated rule copies
+        run: python scripts/check-sync.py
 
   validate:
     name: validate

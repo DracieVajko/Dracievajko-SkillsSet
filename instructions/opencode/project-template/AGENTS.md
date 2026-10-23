@@ -36,6 +36,8 @@ Read the relevant module from agent-rules/ before specialized work:
 - local-ai-infra.md: models, Docker, networking and services
 - investing.md: securities, portfolios and earnings
 - engineering-3d.md: electronics, energy, CAD and Blender
+- security.md: secrets, auth, input handling, dependencies and agent permissions
+- testing.md: test strategy, regression tests, fixtures and CI
 Use a second module only when the task crosses domains.
 These paths are explicit reading instructions, not automatic file inclusions.
 

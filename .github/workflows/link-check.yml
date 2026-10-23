@@ -1,0 +1,28 @@
+# Check that the external skill links still resolve.
+#
+# This workflow is deliberately separate from skills-tooling.yml: network
+# availability is not a code-quality gate for every push or pull request.
+# It runs monthly and can be started manually.
+
+name: link-check
+
+on:
+  schedule:
+    - cron: '0 6 1 * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check-links:
+    name: check-links
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Check external URLs
+        run: python scripts/check-links.py --timeout 20 --workers 8

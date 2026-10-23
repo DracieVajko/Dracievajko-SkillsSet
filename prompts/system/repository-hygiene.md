@@ -2,6 +2,9 @@
 
 Abridged English reference for repository cleanup and Git hygiene.
 
+Companion skill: `skills/original/repository-hygiene/SKILL.md` is the executable
+short form. Keep the skill and this checklist aligned when either changes.
+
 ---
 
 ## Core Principle

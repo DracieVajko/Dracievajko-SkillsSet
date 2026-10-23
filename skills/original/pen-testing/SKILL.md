@@ -3,6 +3,7 @@ name: pen-testing
 description: Guide authorized penetration testing from scoping through recon, scanning, controlled testing and reporting. Refuses targets without written approval.
 version: 1.0.0
 author: DracieVajko
+tags: [security, penetration-testing, recon, reporting, authorization]
 category: custom
 source_repository: https://github.com/DracieVajko/Dracievajko-SkillsSet
 source_file: skills/original/pen-testing/SKILL.md

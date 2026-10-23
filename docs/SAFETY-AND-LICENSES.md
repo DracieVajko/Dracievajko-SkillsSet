@@ -4,7 +4,7 @@
   does not bundle third-party implementations.
 - Respect the license of every upstream project before copying or reusing its
   content. A link is not a license grant.
-- External links were checked for HTTP availability on 2026-10-20. Availability
+- External links were checked for HTTP availability on 2026-10-23. Availability
   is not a security audit, a license review or a compatibility test.
 - Before installing an external skill, review its instructions, scripts,
   permissions and network data transmission.

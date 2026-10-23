@@ -8,7 +8,6 @@ https://raw.githubusercontent.com/addyosmani/agent-skills/main/skills/constraint
 https://raw.githubusercontent.com/addyosmani/agent-skills/main/skills/planning-and-task-breakdown/SKILL.md
 https://raw.githubusercontent.com/addyosmani/agent-skills/main/skills/incremental-implementation/SKILL.md
 https://raw.githubusercontent.com/addyosmani/agent-skills/main/skills/test-driven-development/SKILL.md
-https://raw.githubusercontent.com/addyosmani/agent-skills/main/skills/context-engineering/SKILL.md
 https://raw.githubusercontent.com/addyosmani/agent-skills/main/skills/source-driven-development/SKILL.md
 https://raw.githubusercontent.com/addyosmani/agent-skills/main/skills/doubt-driven-development/SKILL.md
 https://raw.githubusercontent.com/addyosmani/agent-skills/main/skills/frontend-ui-engineering/SKILL.md
@@ -25,8 +24,6 @@ https://raw.githubusercontent.com/addyosmani/agent-skills/main/skills/deprecatio
 https://raw.githubusercontent.com/addyosmani/agent-skills/main/skills/documentation-and-adrs/SKILL.md
 https://raw.githubusercontent.com/addyosmani/agent-skills/main/skills/observability-and-instrumentation/SKILL.md
 https://raw.githubusercontent.com/addyosmani/agent-skills/main/skills/shipping-and-launch/SKILL.md
-https://raw.githubusercontent.com/obra/superpowers/main/skills/using-superpowers/SKILL.md
-https://raw.githubusercontent.com/obra/superpowers/main/skills/brainstorming/SKILL.md
 https://raw.githubusercontent.com/obra/superpowers/main/skills/writing-plans/SKILL.md
 https://raw.githubusercontent.com/obra/superpowers/main/skills/executing-plans/SKILL.md
 https://raw.githubusercontent.com/obra/superpowers/main/skills/test-driven-development/SKILL.md
@@ -40,11 +37,6 @@ https://raw.githubusercontent.com/obra/superpowers/main/skills/dispatching-paral
 https://raw.githubusercontent.com/obra/superpowers/main/skills/subagent-driven-development/SKILL.md
 https://raw.githubusercontent.com/obra/superpowers/main/skills/writing-skills/SKILL.md
 https://raw.githubusercontent.com/obra/superpowers/main/skills/diagnosing-superpowers/SKILL.md
-https://raw.githubusercontent.com/Jeffallan/claude-skills/main/skills/debugging-wizard/SKILL.md
-https://raw.githubusercontent.com/Jeffallan/claude-skills/main/skills/code-reviewer/SKILL.md
-https://raw.githubusercontent.com/Jeffallan/claude-skills/main/skills/code-documenter/SKILL.md
-https://raw.githubusercontent.com/Jeffallan/claude-skills/main/skills/fine-tuning-expert/SKILL.md
-https://raw.githubusercontent.com/Jeffallan/claude-skills/main/skills/wordpress-pro/SKILL.md
 https://raw.githubusercontent.com/Jeffallan/claude-skills/main/skills/python-pro/SKILL.md
 https://raw.githubusercontent.com/Jeffallan/claude-skills/main/skills/typescript-pro/SKILL.md
 https://raw.githubusercontent.com/Jeffallan/claude-skills/main/skills/fastapi-expert/SKILL.md
@@ -88,12 +80,9 @@ https://raw.githubusercontent.com/anthropics/skills/main/skills/docx/SKILL.md
 https://raw.githubusercontent.com/anthropics/skills/main/skills/pdf/SKILL.md
 https://raw.githubusercontent.com/anthropics/skills/main/skills/pptx/SKILL.md
 https://raw.githubusercontent.com/anthropics/skills/main/skills/xlsx/SKILL.md
-https://raw.githubusercontent.com/anthropics/skills/main/skills/theme-factory/SKILL.md
 https://raw.githubusercontent.com/anthropics/skills/main/skills/canvas-design/SKILL.md
 https://raw.githubusercontent.com/anthropics/skills/main/skills/frontend-design/SKILL.md
 https://raw.githubusercontent.com/anthropics/skills/main/skills/webapp-testing/SKILL.md
-https://raw.githubusercontent.com/anthropics/skills/main/skills/mcp-builder/SKILL.md
-https://raw.githubusercontent.com/anthropics/skills/main/skills/skill-creator/SKILL.md
 https://raw.githubusercontent.com/vercel-labs/agent-browser/main/skills/agent-browser/SKILL.md
 https://raw.githubusercontent.com/lackeyjb/playwright-skill/main/skills/playwright-skill/SKILL.md
 https://raw.githubusercontent.com/morluto/rea/main/.agents/skills/reverse-engineer-anything/SKILL.md
@@ -126,13 +115,6 @@ https://raw.githubusercontent.com/tjboudreaux/cc-thinking-skills/main/skills/thi
 https://raw.githubusercontent.com/tjboudreaux/cc-thinking-skills/main/skills/thinking-margin-of-safety/SKILL.md
 https://raw.githubusercontent.com/tjboudreaux/cc-thinking-skills/main/skills/thinking-theory-of-constraints/SKILL.md
 https://raw.githubusercontent.com/tjboudreaux/cc-thinking-skills/main/skills/thinking-ooda/SKILL.md
-https://raw.githubusercontent.com/composio-community/opencode-skills/master/skills/blender-geometry-nodes/SKILL.md
-https://raw.githubusercontent.com/composio-community/opencode-skills/master/skills/blender-hard-surface-modeling/SKILL.md
-https://raw.githubusercontent.com/composio-community/opencode-skills/master/skills/blender-python-integration/SKILL.md
-https://raw.githubusercontent.com/composio-community/opencode-skills/master/skills/blender-rigging-animation/SKILL.md
-https://raw.githubusercontent.com/composio-community/opencode-skills/master/skills/frontend-design-systems/SKILL.md
-https://raw.githubusercontent.com/composio-community/opencode-skills/master/skills/context-engineering/SKILL.md
-https://raw.githubusercontent.com/composio-community/opencode-skills/master/skills/idea-to-plan/SKILL.md
 https://raw.githubusercontent.com/composio-community/opencode-skills/master/skills/powerpoint-generation/SKILL.md
 https://raw.githubusercontent.com/composio-community/opencode-skills/master/skills/repo-context-packaging/SKILL.md
 https://raw.githubusercontent.com/composio-community/opencode-skills/master/skills/memory-management/SKILL.md

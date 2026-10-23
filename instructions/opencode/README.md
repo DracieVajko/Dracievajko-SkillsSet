@@ -11,11 +11,12 @@ Use [`AGENTS-combined.md`](../../AGENTS-combined.md) as the project `AGENTS.md`.
 Do not use it together with the full modular rule set.
 
 The files in `project-template/agent-rules/` are self-contained copies of
-`instructions/modules/`. Keep them in sync when the rules change.
+`instructions/modules/`. Keep them in sync when the rules change; the
+`scripts/check-sync.py` check fails on drift.
 
 ## Skills
 
-This repository bundles four original skills under `skills/original/`:
+This repository bundles five original skills under `skills/original/`:
 
 - [`ticktick-tasks`](../../skills/original/ticktick-tasks/SKILL.md) - manage
   TickTick tasks, projects, habits and focus via MCP
@@ -27,6 +28,9 @@ This repository bundles four original skills under `skills/original/`:
 - [`agent-operating-rules`](../../skills/original/agent-operating-rules/SKILL.md) -
   evidence-first project workflow: consent-gated git, root-cause fixes,
   verification, coverage checklists and test discipline
+- [`repository-hygiene`](../../skills/original/repository-hygiene/SKILL.md) -
+  repository cleanup, temporary files, generated artifacts and commit
+  preparation
 
 External skills are links only; use the catalog and the generated index:
 

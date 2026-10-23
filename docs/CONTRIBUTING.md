@@ -12,6 +12,7 @@ not bundle third-party skill code.
 
 ```bash
 python scripts/validate-frontmatter.py
+python scripts/check-sync.py
 python scripts/update-category-index.py
 python -m unittest discover -s scripts -p "test_*.py"
 ```
@@ -24,7 +25,7 @@ External skills are references only. Do not copy their code into this
 repository.
 
 1. Add the direct raw URL to `catalog/links/skill-links.txt` (stable branch) or
-   `catalog/links/pinned-links.txt` (pinned release branch).
+   `catalog/links/pinned-links.txt` (pinned commit or release branch).
 2. Add a matching record to `catalog/items.json` with `authorship: link-only`.
 3. Add the name, purpose, license and original link to
    `skills/third-party/README.md` when the skill is one of the curated entries.

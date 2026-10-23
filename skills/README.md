@@ -3,7 +3,7 @@
 This directory separates what this repository authors from what it
 references. Two kinds live here, always clearly labeled:
 
-- `original/` - skills authored and maintained in this repository (**4**)
+- `original/` - skills authored and maintained in this repository (**5**)
 - `third-party/` - upstream skills referenced by link only (**154**). No
   upstream code is bundled; see [`third-party/README.md`](third-party/README.md).
 
@@ -18,11 +18,21 @@ copy its folder into your agent's skill directory.
 | `write-research-projects` | Deep research, academic writing, source verification and complex projects | [`SKILL.md`](original/write-research-projects/SKILL.md) |
 | `pen-testing` | Authorized penetration testing methodology: scope gate, recon, scan, controlled testing, blast radius, report | [`SKILL.md`](original/pen-testing/SKILL.md) |
 | `agent-operating-rules` | Evidence-first project workflow: consent-gated git, root-cause fixes, verification, coverage checklists and test discipline | [`SKILL.md`](original/agent-operating-rules/SKILL.md) |
+| `repository-hygiene` | Repository cleanup: classification, temporary files, generated artifacts, secrets and commit preparation | [`SKILL.md`](original/repository-hygiene/SKILL.md) |
 
-Install example (OpenCode):
+Install all original skills (OpenCode):
+
+```powershell
+# Windows
+.\scripts\install-skills.ps1
+```
 
 ```bash
-cp -r skills/original/pen-testing ~/.config/opencode/skills/
+# Linux / macOS
+./scripts/install-skills.sh
+
+# Manual, one skill
+cp -r skills/original/repository-hygiene ~/.config/opencode/skills/
 ```
 
 ## Third-Party Skills (links only)

@@ -59,6 +59,8 @@ Use the simplest solution that fully satisfies the request.
 | `instructions/modules/local-ai-infra.md` | Models, Docker, networking, services, LM Studio, Ollama |
 | `instructions/modules/investing.md` | Securities, portfolios, earnings, financial analysis |
 | `instructions/modules/engineering-3d.md` | Electronics, energy, CAD, Blender, 3D printing |
+| `instructions/modules/security.md` | Secrets, auth, input handling, dependencies, agent permissions |
+| `instructions/modules/testing.md` | Test strategy, regression tests, fixtures, flaky tests, CI |
 
 Use a second module only when the task crosses domains.
 
@@ -82,8 +84,11 @@ Keep the report proportional to the task.
 
 ## Available Skills
 
-Only the four skills under `skills/original/` are installed locally. External
-skills are links only; this repository does not bundle their instructions.
+The repository contains five locally authored skills under `skills/original/`.
+Cloning the repository does not install them automatically. Copy the folders
+into the agent's skill directory, or run `scripts/install-skills.ps1` on Windows
+or `scripts/install-skills.sh` on Linux/macOS. External skills are links only;
+this repository does not bundle their instructions.
 
 ### Local Skills
 - `ticktick-tasks` — Manage TickTick tasks, projects, habits via MCP
@@ -93,6 +98,8 @@ skills are links only; this repository does not bundle their instructions.
   scan, controlled testing, blast radius, report)
 - `agent-operating-rules` — Project working discipline: evidence-first,
   consent-gated git, verification and checklists
+- `repository-hygiene` — Repository cleanup, temporary files and commit
+  preparation
 
 ### External Skills (Links Only)
 The collection references 154 upstream skills without copying their code.
@@ -124,6 +131,16 @@ Specialized personas available in `prompts/personas/`:
 - `marcus-advisor` — Decision advisor, decisive trade-off analysis
 - `jericho-chef` — Personal chef, recipe discovery and cooking
 
+### Personas vs Profiles
+
+| Artifact | What it is | Use it for |
+|----------|------------|------------|
+| `prompts/personas/` | Voice, role and conversational style | Chat modes, role definitions, tone |
+| `instructions/profiles/` | Complete rule bundle: core rules + one domain module | Configuring a specialized agent |
+
+Personas shape how the agent speaks. Profiles define how it works. They can be
+combined, but the profile's rules take precedence over persona style.
+
 ---
 
 ## Quick Reference: Local Skill Triggers
@@ -134,7 +151,7 @@ Specialized personas available in `prompts/personas/`:
 | "Deep research", "write a thesis", "verify sources" | `write-research-projects` |
 | "Pen-test my lab", "security assessment" | `pen-testing` |
 | "How should we work here", "commit rules", "project workflow" | `agent-operating-rules` |
-| "Clean this repository", "prepare a commit" | `prompts/system/repository-hygiene.md` |
+| "Clean this repository", "prepare a commit" | `repository-hygiene` (full checklist: `prompts/system/repository-hygiene.md`) |
 
 Triggers for external skills require installing the upstream skill first. The
 repository only provides the link.
@@ -159,9 +176,9 @@ Additional system prompts available in `prompts/system/`:
 - `AGENTS-combined.md` — Single-file alternative with all rules inlined
 - `instructions/modules/` — Domain-specific rule modules
 - `instructions/profiles/` — Pre-configured specialized agent profiles
-- `skills/original/` — Locally installed original skills
+- `skills/original/` — Locally authored original skills
 - `skills/third-party/README.md` — External skills with purpose and link
 - `catalog/links/` — Authoritative external URL lists
-- `catalog/items.json` — Machine-readable catalog (4 original + 154 links)
+- `catalog/items.json` — Machine-readable catalog (5 original + 154 links)
 - `docs/SKILL_SPEC.md` — How to write skills
 - `docs/CATEGORY_INDEX.md` — Complete generated listing

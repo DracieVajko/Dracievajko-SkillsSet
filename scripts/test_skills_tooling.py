@@ -4,6 +4,7 @@ Focused regression tests for the skills tooling:
 
     scripts/validate-frontmatter.py
     scripts/update-category-index.py
+    scripts/check-sync.py
 
 Uses only the Python standard library (unittest) and runs each script as a
 subprocess against a throwaway repository root, so the real repository is never
@@ -25,6 +26,7 @@ from pathlib import Path
 SCRIPTS = Path(__file__).resolve().parent
 VALIDATOR = SCRIPTS / 'validate-frontmatter.py'
 INDEXER = SCRIPTS / 'update-category-index.py'
+SYNC = SCRIPTS / 'check-sync.py'
 
 VALID_FRONTMATTER = """---
 name: {name}
@@ -63,6 +65,13 @@ class RepoFixture:
             encoding='utf-8', newline='\n')
         (links / 'pinned-links.txt').write_text(
             '\n'.join(pinned_links) + ('\n' if pinned_links else ''),
+            encoding='utf-8', newline='\n')
+
+    def write_items(self, items):
+        catalog = self.root / 'catalog'
+        catalog.mkdir(parents=True, exist_ok=True)
+        (catalog / 'items.json').write_text(
+            json.dumps(items, ensure_ascii=False, indent=4) + '\n',
             encoding='utf-8', newline='\n')
 
 
@@ -224,6 +233,20 @@ class IndexerTests(BaseTest):
         self.assertIn('### example/example-pinned (1)', content)
         self.assertNotIn('Category directory not found', content)
 
+    def test_external_descriptions_render_when_catalog_has_them(self):
+        url = 'https://raw.githubusercontent.com/example/example/main/skills/link-one/SKILL.md'
+        self.repo.write_items([
+            {
+                'authorship': 'link-only',
+                'name': 'link-one',
+                'raw_url': url,
+                'description': 'Curated description for the link.',
+            }
+        ])
+        run(INDEXER, self.repo.root)
+        content = self.index_path.read_text(encoding='utf-8')
+        self.assertIn('Curated description for the link.', content)
+
     def test_local_links_are_relative_to_docs(self):
         run(INDEXER, self.repo.root)
         content = self.index_path.read_text(encoding='utf-8')
@@ -297,9 +320,9 @@ class CatalogDataTests(unittest.TestCase):
     def test_items_authorship_partition(self):
         items = self.load('items.json')
         counts = Counter(i['authorship'] for i in items)
-        self.assertEqual(len(items), 158)
+        self.assertEqual(len(items), 159)
         self.assertEqual(counts['link-only'], 154)
-        self.assertEqual(counts['original'], 4)
+        self.assertEqual(counts['original'], 5)
         self.assertEqual(set(counts), {'link-only', 'original'})
 
     def test_link_file_counts(self):
@@ -307,8 +330,8 @@ class CatalogDataTests(unittest.TestCase):
                   if u.strip() and not u.strip().startswith('#')]
         pinned = [u for u in (self.links / 'pinned-links.txt').read_text(encoding='utf-8').splitlines()
                   if u.strip() and not u.strip().startswith('#')]
-        self.assertEqual(len(stable), 142)
-        self.assertEqual(len(pinned), 12)
+        self.assertEqual(len(stable), 124)
+        self.assertEqual(len(pinned), 30)
         self.assertEqual(len(stable) + len(pinned), 154)
 
     def test_catalog_link_urls_match_link_files(self):
@@ -324,7 +347,7 @@ class CatalogDataTests(unittest.TestCase):
     def test_original_catalog_paths_exist(self):
         items = self.load('items.json')
         originals = [i for i in items if i['authorship'] == 'original']
-        self.assertEqual(len(originals), 4)
+        self.assertEqual(len(originals), 5)
         for item in originals:
             path = self.repo / item['local_skill_path']
             self.assertTrue(path.is_file(), item['local_skill_path'])
@@ -347,6 +370,27 @@ class CatalogDataTests(unittest.TestCase):
         self.assertIn('Total: **154** references.', index)
         self.assertIn('## Original Local Skills', index)
         self.assertIn('## External Skills (Links Only)', index)
+
+
+class SyncScriptTests(unittest.TestCase):
+    def test_real_repository_is_synchronized(self):
+        repo = Path(__file__).resolve().parent.parent
+        result = run(SYNC, repo)
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        self.assertIn('OK:', result.stdout)
+
+    def test_detects_template_copy_drift(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            modules = root / 'instructions' / 'modules'
+            template = root / 'instructions' / 'opencode' / 'project-template' / 'agent-rules'
+            modules.mkdir(parents=True)
+            template.mkdir(parents=True)
+            (modules / 'coding.md').write_text('# Coding Rules\n- one\n', encoding='utf-8')
+            (template / 'coding.md').write_text('# Coding Rules\n- two\n', encoding='utf-8')
+            result = run(SYNC, root)
+            self.assertEqual(result.returncode, 1)
+            self.assertIn('Template copy differs', result.stdout)
 
 
 if __name__ == '__main__':

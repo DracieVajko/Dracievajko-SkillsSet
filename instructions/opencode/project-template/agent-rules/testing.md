@@ -1,0 +1,15 @@
+# Testing Rules
+- Define the behavior and acceptance criteria before choosing a test.
+- Use the cheapest test level that proves the claim: unit, integration, contract or end-to-end.
+- Test behavior and public contracts, not private implementation details.
+- Add a regression test for every bug fix; verify it fails without the fix when practical.
+- Keep tests deterministic: control time, randomness, network, filesystem and external services.
+- Use fixtures, factories and explicit setup; clean up state so test order does not matter.
+- Separate fast deterministic tests from slow, destructive or environment-dependent tests.
+- Run targeted tests first, then the broader suite justified by the change.
+- Never weaken assertions, skip tests or delete coverage to get a green result.
+- Cover failure paths, boundaries, invalid input, permissions, empty states and retries.
+- Measure coverage as a signal, not a target; missing assertions matter more than a percentage.
+- Treat flaky tests as defects; isolate the cause instead of retrying until they pass.
+- Run deterministic suites in CI; keep secrets and production data out of test fixtures.
+- Report pass/fail counts, skipped tests, known failures and anything not executed.

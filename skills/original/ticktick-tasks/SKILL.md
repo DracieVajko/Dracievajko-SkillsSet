@@ -1,11 +1,10 @@
 ---
 name: ticktick-tasks
-description: Manage TickTick tasks, projects, tags, habits, focus records, comments,
-  and related productivity data through a connected TickTick MCP server. Use for creating,
-  finding, editing, completing, moving, organizing, or safely deleting TickTick items.
-version: 1.0.0
+description: Manage TickTick tasks, projects, tags, habits, comments and focus through a connected MCP server.
+version: 1.1.0
 author: DracieVajko
-category: custom
+tags: [ticktick, tasks, productivity, mcp, habits]
+category: productivity
 source_repository: https://github.com/DracieVajko/Dracievajko-SkillsSet
 source_file: skills/original/ticktick-tasks/SKILL.md
 license: MIT
@@ -313,3 +312,10 @@ For multiple operations, summarize the number of successful changes and any fail
 Do not expose internal IDs unless they are useful to the user.
 
 If clarification is required, ask before making the mutation.
+
+## Version History
+
+| Version | Date | Changes |
+|---------|------|---------|
+| 1.0.0 | 2026-10-20 | Initial generalized TickTick MCP skill |
+| 1.1.0 | 2026-10-23 | Shortened the description to the repository style limit, added tags and version history, and aligned metadata |

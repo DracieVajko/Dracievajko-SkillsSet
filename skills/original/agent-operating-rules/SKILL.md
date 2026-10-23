@@ -1,8 +1,9 @@
 ---
 name: agent-operating-rules
 description: "Apply the user's project operating rules: evidence-first work, root-cause fixes, consent-gated git, coverage checklists and test discipline."
-version: 1.1.0
+version: 1.2.0
 author: DracieVajko
+tags: [project-rules, workflow, evidence, verification, git]
 category: custom
 source_repository: https://github.com/DracieVajko/Dracievajko-SkillsSet
 source_file: skills/original/agent-operating-rules/SKILL.md
@@ -50,6 +51,9 @@ sets the default process when no more specific rule exists.
    private paths in code, logs, reports or commits.
 8. **Language.** Reply in Slovak by default; switch only on an explicit
    request. Code comments follow the project's existing style.
+9. **Prefer editing existing files.** Create a new file only when it has a
+   distinct purpose and no canonical home; never solve a problem by adding a
+   parallel copy.
 
 ## Deep-Thinking Protocol
 
@@ -142,6 +146,44 @@ confirmation.
   leftovers, logs or dumps in the project root.
 - Before reporting or committing, inspect `git status` and the diff: only the
   intended files, no temporary artifacts.
+
+## Repository Hygiene
+
+Cleanup is classification before deletion, never blind deletion.
+
+- Read every suspicious file before deciding; preserve user work you do not
+  understand.
+- Classify each file as canonical source, documentation, test, committed
+  configuration, generated artifact, local-only file, temporary diagnostic,
+  secret, dead code or unknown.
+- Remove generated artifacts, caches, logs, model files, build output and local
+  runtime state from Git; add the correct patterns to `.gitignore`.
+- Never commit secrets. If one was exposed, remove it, replace it with a safe
+  example and tell the user to rotate it.
+- Keep one canonical implementation; delete parallel copies and dead
+  experiments after integrating anything useful.
+- Stage explicit paths, inspect the final diff and run the relevant checks
+  before reporting the repository as clean.
+- The full checklist lives in `prompts/system/repository-hygiene.md` in the
+  collection repository; the `repository-hygiene` skill is the executable short
+  form.
+
+## Durable State
+
+For multi-session or multi-agent work, keep state in files rather than in chat
+memory. Use the project's existing convention; when starting fresh, these files
+cover the minimum:
+
+| File | Purpose |
+|------|---------|
+| `PROJECT.md` | Goal, non-goals, constraints, stack, acceptance criteria and verification commands |
+| `PLAN.md` | Current tasks, dependencies, risks and rollback |
+| `DECISIONS.md` | Decisions, reasons, alternatives and when to revisit |
+| `HANDOFF.md` | Completed work, changed files, verification, blockers and next action |
+| `SOURCES.md` | Claims, sources, dates, locations and limitations |
+
+The collection repository's `docs/templates/` contains starting templates for
+these files. Keep them short and current; do not create competing copies.
 
 ## Verification
 
@@ -247,6 +289,16 @@ known failures -> report results -> stage approved paths, commit with the
 prepared proposal, push. Anything beyond tests and push (dependency updates,
 refactors) still needs consent.
 
+### Example 3: Bugfix without a parallel file
+
+User: "Fix the parser."
+
+Flow: inspect the canonical parser and its tests -> reproduce the failure ->
+edit the canonical source file -> add a focused regression test -> run the
+targeted test and the related suite -> delete any scratch script or generated
+output -> inspect `git status` and the diff. The result is two intended
+changes (source and test), not `parser_fixed.py` or `fix1.py`.
+
 ## Related Skills
 
 - `systematic-debugging` (external, link-only) - deeper hypothesis-driven
@@ -256,6 +308,8 @@ refactors) still needs consent.
   before any completion claim.
 - `write-research-projects` (local) - long-form work; this skill's process
   still applies.
+- `repository-hygiene` (local) - repository cleanup, temporary files and
+  commit preparation.
 
 ## Version History
 
@@ -263,3 +317,4 @@ refactors) still needs consent.
 |---------|------|---------|
 | 1.0.0 | 2026-10-21 | Initial generalized release from real project practice |
 | 1.1.0 | 2026-10-23 | Added file and change hygiene: fixes go into canonical source modules, temporary scripts are removed, one implementation is kept |
+| 1.2.0 | 2026-10-23 | Added repository hygiene, durable-state files, a no-parallel-file example and the rule to prefer editing existing files |
