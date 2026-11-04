@@ -100,6 +100,16 @@ this repository does not bundle their instructions.
   consent-gated git, verification and checklists
 - `repository-hygiene` — Repository cleanup, temporary files and commit
   preparation
+- `focus-my-energy` — Classify tasks by cognitive demand and recommend what to
+  work on now based on energy level
+- `generate-fresh-ideas` — Remix source material into 5 distinct creative
+  content angles
+- `get-more-perspectives` — Stress-test decisions across a 5-advisor panel
+  (Operator, Skeptic, Visionary, Customer, Finance)
+- `match-my-writing-style` — Draft/reply/rewrite in the user's authentic voice
+  from Gmail/Docs samples
+- `prep-for-meetings` — Pre-meeting brief and 30-second glance card from
+  Workspace sources
 
 ### External Skills (Links Only)
 The collection references 154 upstream skills without copying their code.
@@ -168,6 +178,8 @@ Additional system prompts available in `prompts/system/`:
 - `deep-research-writing-long.md` — Self-contained deep-research & long-form writing workflow
 - `deep-research-writing-short.md` — Short companion prompt (≤1500 chars) for the same workflow
 - `repository-hygiene.md` — Repository cleanup and Git hygiene
+- `combined-personas.md` — Dynamic multi-persona system prompt (Jayce coordinator
+  + Orion/Victor/Elias/Atlas/Adrian/Marcus) with evidence-first directives
 
 ---
 
