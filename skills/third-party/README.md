@@ -37,8 +37,8 @@ Skills from the Odysseus personal instance (excluding Jakub's own skills) that a
 | Upstream skill | Catalog alias | What it is for | License | Original |
 |----------------|---------------|----------------|---------|----------|
 | `action-evidence-synthesis` | - | Turn messages, meeting notes, and documents into sourced ... | - | [link](https://github.com/DracieVajko/odysseus/blob/main/data/skills/communication/action-evidence-synthesis/SKILL.md) |
-| `ads` | - | When the user wants help with paid advertising campaigns ... | - | [link](https://github.com/DracieVajko/odysseus/blob/main/data/skills/general/ads-3/SKILL.md) |
-| `ai-seo` | - | When the user wants to optimize content for AI search eng... | - | [link](https://github.com/DracieVajko/odysseus/blob/main/data/skills/general/ai-seo-3/SKILL.md) |
+| `ads` | - | When the user wants help with paid advertising campaigns ... | - | [link](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ads/SKILL.md) |
+| `ai-seo` | - | When the user wants to optimize content for AI search eng... | - | [link](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ai-seo/SKILL.md) |
 | `algorithmic-art` | - | Creating algorithmic art using p5.js with seeded randomne... | - | [link](https://github.com/DracieVajko/odysseus/blob/main/data/skills/general/algorithmic-art/SKILL.md) |
 | `analytics` | - | When the user wants to set up, improve, or audit analytic... | - | [link](https://github.com/DracieVajko/odysseus/blob/main/data/skills/general/analytics-2/SKILL.md) |
 | `artifact-completion` | - | Create requested artifacts early, iterate from concrete o... | - | [link](https://github.com/DracieVajko/odysseus/blob/main/data/skills/agent/artifact-completion/SKILL.md) |
@@ -47,20 +47,20 @@ Skills from the Odysseus personal instance (excluding Jakub's own skills) that a
 | `brand` | - | Manage brand voice, visual identity, messaging frameworks... | - | [link](https://github.com/DracieVajko/odysseus/blob/main/data/skills/documentation/brand/SKILL.md) |
 | `building-mcp-servers` | - | Use when building MCP (Model Context Protocol) servers to... | - | [link](https://github.com/DracieVajko/odysseus/blob/main/data/skills/general/building-mcp-servers/SKILL.md) |
 | `common-sense-index-investing-bogle` | - | Apply John Bogle index investing rules for low-cost funds... | - | [link](https://github.com/DracieVajko/odysseus/blob/main/data/skills/general/common-sense-index-investing-bogle/SKILL.md) |
-| `copywriting` | - | When the user wants to write, rewrite, or improve marketi... | - | [link](https://github.com/DracieVajko/odysseus/blob/main/data/skills/general/copywriting-3/SKILL.md) |
+| `copywriting` | - | When the user wants to write, rewrite, or improve marketi... | - | [link](https://github.com/coreyhaines31/marketingskills/blob/main/skills/copywriting/SKILL.md) |
 | `create-individual-calendar-events-from-earnings-dates-list` | - | Create individual calendar events from earnings dates list | - | [link](https://github.com/DracieVajko/odysseus/blob/main/data/skills/general/create-individual-calendar-events-from-earnings-dates-list/SKILL.md) |
 | `design` | - | Comprehensive design skill: brand identity, design tokens... | - | [link](https://github.com/DracieVajko/odysseus/blob/main/data/skills/general/design/SKILL.md) |
 | `design-system` | - | Token architecture, component specifications, and slide g... | - | [link](https://github.com/DracieVajko/odysseus/blob/main/data/skills/general/design-system/SKILL.md) |
 | `detailed-source-rewrite-guide` | - | Rewrite a source document (e.g., article, research paper)... | - | [link](https://github.com/DracieVajko/odysseus/blob/main/data/skills/writing/detailed-source-rewrite-guide/SKILL.md) |
 | `developer-docs` | - | Find, read, and apply authoritative developer documentati... | - | [link](https://github.com/DracieVajko/odysseus/blob/main/data/skills/dev/developer-docs/SKILL.md) |
 | `document-editing-general` | - | General-purpose skill for creating, reading, editing, and... | - | [link](https://github.com/DracieVajko/odysseus/blob/main/data/skills/dev/document-editing-general/SKILL.md) |
-| `drawio-skill` | - | Use when the user requests diagrams, flowcharts, architec... | - | [link](https://github.com/DracieVajko/odysseus/blob/main/data/skills/general/drawio-skill/SKILL.md) |
+| `drawio-skill` | - | Use when the user requests diagrams, flowcharts, architec... | - | [link](https://github.com/Agents365-ai/drawio-skill/blob/main/skills/drawio-skill/SKILL.md) |
 | `ds-note-formatter` | - | DS Note Formatter | - | [link](https://github.com/DracieVajko/odysseus/blob/main/data/skills/general/ds-note-formatter/SKILL.md) |
 | `enable-wake-on-lan-and-auto-shutdown-on-network-loss-for-ras` | - | Enable Wake‑on‑LAN and Auto‑Shutdown on Network Loss for ... | - | [link](https://github.com/DracieVajko/odysseus/blob/main/data/skills/raspberry-pi/enable-wake-on-lan-and-auto-shutdown-on-network-loss-for-ras/SKILL.md) |
 | `find-skills` | - | Helps users discover and install agent skills when they a... | - | [link](https://github.com/DracieVajko/odysseus/blob/main/data/skills/general/find-skills/SKILL.md) |
-| `firecrawl-deep-research` | - | | | - | [link](https://github.com/DracieVajko/odysseus/blob/main/data/skills/general/firecrawl-deep-research/SKILL.md) |
-| `firecrawl-market-research` | - | Extract market, financial, earnings, industry, and compan... | - | [link](https://github.com/DracieVajko/odysseus/blob/main/data/skills/imported/firecrawl-market-research/SKILL.md) |
-| `firecrawl-research-papers` | - | Find and synthesize research papers, whitepapers, PDFs, t... | - | [link](https://github.com/DracieVajko/odysseus/blob/main/data/skills/imported/firecrawl-research-papers-2/SKILL.md) |
+| `firecrawl-deep-research` | - | | | - | [link](https://github.com/firecrawl/firecrawl-claude-plugin/blob/main/skills/firecrawl-deep-research/SKILL.md) |
+| `firecrawl-market-research` | - | Extract market, financial, earnings, industry, and compan... | - | [link](https://github.com/firecrawl/firecrawl-claude-plugin/blob/main/skills/firecrawl-market-research/SKILL.md) |
+| `firecrawl-research-papers` | - | Find and synthesize research papers, whitepapers, PDFs, t... | - | [link](https://github.com/firecrawl/firecrawl-claude-plugin/blob/main/skills/firecrawl-research-papers/SKILL.md) |
 | `fix-inconclusive-skills` | - | Fix Inconclusive Skills | - | [link](https://github.com/DracieVajko/odysseus/blob/main/data/skills/general/fix-inconclusive-skills/SKILL.md) |
 | `generate-findings-report-from-pipeline-logs` | - | Generate findings report from pipeline logs | - | [link](https://github.com/DracieVajko/odysseus/blob/main/data/skills/general/generate-findings-report-from-pipeline-logs/SKILL.md) |
 | `generate-markdown-and-docx-documents` | - | Create a new document from a user‑provided outline and co... | - | [link](https://github.com/DracieVajko/odysseus/blob/main/data/skills/document-generation/generate-markdown-and-docx-documents/SKILL.md) |
@@ -70,7 +70,7 @@ Skills from the Odysseus personal instance (excluding Jakub's own skills) that a
 | `lark-markdown` | - | 飞书 Markdown：查看、创建、上传、编辑和比较 Markdown 文件。当用户需要创建或编辑 Markdow... | - | [link](https://github.com/DracieVajko/odysseus/blob/main/data/skills/general/lark-markdown/SKILL.md) |
 | `multimodal-evidence` | - | Extract and verify evidence from images, documents, and v... | - | [link](https://github.com/DracieVajko/odysseus/blob/main/data/skills/media/multimodal-evidence/SKILL.md) |
 | `odysseus` | - | Use when the user asks Claude Code to read or write Odyss... | - | [link](https://github.com/DracieVajko/odysseus/blob/main/data/skills/general/odysseus/SKILL.md) |
-| `penetration-testing-guide` | - | Penetration testing guide and methodology covering 5 phas... | - | [link](https://github.com/DracieVajko/odysseus/blob/main/data/skills/dev/penetration-testing-guide/SKILL.md) |
+| `penetration-testing-guide` | - | Penetration testing guide and methodology covering 5 phas... | - | [link](https://github.com/alirezarezvani/claude-skills/blob/main/engineering-team/skills/security-pen-testing/SKILL.md) |
 | `reviewable-external-draft` | - | Reconcile source evidence and prepare an accurate externa... | - | [link](https://github.com/DracieVajko/odysseus/blob/main/data/skills/communication/reviewable-external-draft/SKILL.md) |
 | `scheduling-coordination` | - | Coordinate availability, confirmations, calendar changes,... | - | [link](https://github.com/DracieVajko/odysseus/blob/main/data/skills/communication/scheduling-coordination/SKILL.md) |
 | `slides` | - | Create strategic HTML presentations with Chart.js, design... | - | [link](https://github.com/DracieVajko/odysseus/blob/main/data/skills/general/slides/SKILL.md) |
@@ -95,8 +95,8 @@ Skills from the Odysseus personal instance (excluding Jakub's own skills) that a
 | Upstream skill | Catalog alias | What it is for | License | Original |
 |----------------|---------------|----------------|---------|----------|
 | `action-evidence-synthesis` | - | Turn messages, meeting notes, and documents into sourced ... | - | [link](https://github.com/DracieVajko/odysseus/blob/main/data/skills/communication/action-evidence-synthesis/SKILL.md) |
-| `ads` | - | When the user wants help with paid advertising campaigns ... | - | [link](https://github.com/DracieVajko/odysseus/blob/main/data/skills/general/ads/SKILL.md) |
-| `ai-seo` | - | When the user wants to optimize content for AI search eng... | - | [link](https://github.com/DracieVajko/odysseus/blob/main/data/skills/general/ai-seo/SKILL.md) |
+| `ads` | - | When the user wants help with paid advertising campaigns ... | - | [link](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ads/SKILL.md) |
+| `ai-seo` | - | When the user wants to optimize content for AI search eng... | - | [link](https://github.com/coreyhaines31/marketingskills/blob/main/skills/ai-seo/SKILL.md) |
 | `algorithmic-art` | - | Creating algorithmic art using p5.js with seeded randomne... | - | [link](https://github.com/DracieVajko/odysseus/blob/main/data/skills/general/algorithmic-art/SKILL.md) |
 | `analytics` | - | When the user wants to set up, improve, or audit analytic... | - | [link](https://github.com/DracieVajko/odysseus/blob/main/data/skills/general/analytics/SKILL.md) |
 | `artifact-completion` | - | Create requested artifacts early, iterate from concrete o... | - | [link](https://github.com/DracieVajko/odysseus/blob/main/data/skills/agent/artifact-completion/SKILL.md) |
@@ -105,20 +105,20 @@ Skills from the Odysseus personal instance (excluding Jakub's own skills) that a
 | `brand` | - | Brand voice, visual identity, messaging frameworks, asset... | - | [link](https://github.com/DracieVajko/odysseus/blob/main/data/skills/general/brand/SKILL.md) |
 | `building-mcp-servers` | - | Use when building MCP (Model Context Protocol) servers to... | - | [link](https://github.com/DracieVajko/odysseus/blob/main/data/skills/general/building-mcp-servers/SKILL.md) |
 | `common-sense-index-investing-bogle` | - | Apply John Bogle index investing rules for low-cost funds... | - | [link](https://github.com/DracieVajko/odysseus/blob/main/data/skills/general/common-sense-index-investing-bogle/SKILL.md) |
-| `copywriting` | - | When the user wants to write, rewrite, or improve marketi... | - | [link](https://github.com/DracieVajko/odysseus/blob/main/data/skills/general/copywriting/SKILL.md) |
+| `copywriting` | - | When the user wants to write, rewrite, or improve marketi... | - | [link](https://github.com/coreyhaines31/marketingskills/blob/main/skills/copywriting/SKILL.md) |
 | `create-individual-calendar-events-from-earnings-dates-list` | - | Create individual calendar events from earnings dates list | - | [link](https://github.com/DracieVajko/odysseus/blob/main/data/skills/general/create-individual-calendar-events-from-earnings-dates-list/SKILL.md) |
 | `design` | - | Comprehensive design skill: brand identity, design tokens... | - | [link](https://github.com/DracieVajko/odysseus/blob/main/data/skills/general/design/SKILL.md) |
 | `design-system` | - | Token architecture, component specifications, and slide g... | - | [link](https://github.com/DracieVajko/odysseus/blob/main/data/skills/general/design-system/SKILL.md) |
 | `detailed-source-rewrite-guide` | - | Rewrite a source document (e.g., article, research paper)... | - | [link](https://github.com/DracieVajko/odysseus/blob/main/data/skills/writing/detailed-source-rewrite-guide/SKILL.md) |
 | `developer-docs` | - | Find, read, and apply authoritative developer documentati... | - | [link](https://github.com/DracieVajko/odysseus/blob/main/data/skills/dev/developer-docs/SKILL.md) |
 | `document-editing-general` | - | General-purpose skill for creating, reading, editing, and... | - | [link](https://github.com/DracieVajko/odysseus/blob/main/data/skills/dev/document-editing-general/SKILL.md) |
-| `drawio-skill` | - | Generate UML class diagrams, BPMN workflows, and Kubernet... | - | [link](https://github.com/DracieVajko/odysseus/blob/main/data/skills/dev/drawio-skill/SKILL.md) |
+| `drawio-skill` | - | Generate UML class diagrams, BPMN workflows, and Kubernet... | - | [link](https://github.com/Agents365-ai/drawio-skill/blob/main/skills/drawio-skill/SKILL.md) |
 | `ds-note-formatter` | - | DS Note Formatter | - | [link](https://github.com/DracieVajko/odysseus/blob/main/data/skills/general/ds-note-formatter/SKILL.md) |
 | `enable-wake-on-lan-and-auto-shutdown-on-network-loss-for-ras` | - | Enable Wake‑on‑LAN and Auto‑Shutdown on Network Loss for ... | - | [link](https://github.com/DracieVajko/odysseus/blob/main/data/skills/raspberry-pi/enable-wake-on-lan-and-auto-shutdown-on-network-loss-for-ras/SKILL.md) |
 | `find-skills` | - | Helps users discover and install agent skills when they a... | - | [link](https://github.com/DracieVajko/odysseus/blob/main/data/skills/general/find-skills/SKILL.md) |
-| `firecrawl-deep-research` | - | | | - | [link](https://github.com/DracieVajko/odysseus/blob/main/data/skills/general/firecrawl-deep-research/SKILL.md) |
-| `firecrawl-market-research` | - | Extract market, financial, earnings, industry, and compan... | - | [link](https://github.com/DracieVajko/odysseus/blob/main/data/skills/imported/firecrawl-market-research/SKILL.md) |
-| `firecrawl-research-papers` | - | Find and synthesize research papers, whitepapers, PDFs, t... | - | [link](https://github.com/DracieVajko/odysseus/blob/main/data/skills/imported/firecrawl-research-papers/SKILL.md) |
+| `firecrawl-deep-research` | - | | | - | [link](https://github.com/firecrawl/firecrawl-claude-plugin/blob/main/skills/firecrawl-deep-research/SKILL.md) |
+| `firecrawl-market-research` | - | Extract market, financial, earnings, industry, and compan... | - | [link](https://github.com/firecrawl/firecrawl-claude-plugin/blob/main/skills/firecrawl-market-research/SKILL.md) |
+| `firecrawl-research-papers` | - | Find and synthesize research papers, whitepapers, PDFs, t... | - | [link](https://github.com/firecrawl/firecrawl-claude-plugin/blob/main/skills/firecrawl-research-papers/SKILL.md) |
 | `fix-inconclusive-skills` | - | Fix Inconclusive Skills | - | [link](https://github.com/DracieVajko/odysseus/blob/main/data/skills/general/fix-inconclusive-skills/SKILL.md) |
 | `generate-findings-report-from-pipeline-logs` | - | Generate findings report from pipeline logs | - | [link](https://github.com/DracieVajko/odysseus/blob/main/data/skills/general/generate-findings-report-from-pipeline-logs/SKILL.md) |
 | `generate-markdown-and-docx-documents` | - | Create a new document from a user‑provided outline and co... | - | [link](https://github.com/DracieVajko/odysseus/blob/main/data/skills/document-generation/generate-markdown-and-docx-documents/SKILL.md) |
@@ -128,7 +128,7 @@ Skills from the Odysseus personal instance (excluding Jakub's own skills) that a
 | `lark-markdown` | - | 飞书 Markdown：查看、创建、上传、编辑和比较 Markdown 文件。当用户需要创建或编辑 Markdow... | - | [link](https://github.com/DracieVajko/odysseus/blob/main/data/skills/general/lark-markdown/SKILL.md) |
 | `multimodal-evidence` | - | Extract and verify evidence from images, documents, and v... | - | [link](https://github.com/DracieVajko/odysseus/blob/main/data/skills/media/multimodal-evidence/SKILL.md) |
 | `odysseus` | - | Use when the user asks Claude Code to read or write Odyss... | - | [link](https://github.com/DracieVajko/odysseus/blob/main/data/skills/general/odysseus/SKILL.md) |
-| `penetration-testing-guide` | - | Penetration testing guide and methodology covering 5 phas... | - | [link](https://github.com/DracieVajko/odysseus/blob/main/data/skills/dev/penetration-testing-guide/SKILL.md) |
+| `penetration-testing-guide` | - | Penetration testing guide and methodology covering 5 phas... | - | [link](https://github.com/alirezarezvani/claude-skills/blob/main/engineering-team/skills/security-pen-testing/SKILL.md) |
 | `reviewable-external-draft` | - | Reconcile source evidence and prepare an accurate externa... | - | [link](https://github.com/DracieVajko/odysseus/blob/main/data/skills/communication/reviewable-external-draft/SKILL.md) |
 | `scheduling-coordination` | - | Coordinate availability, confirmations, calendar changes,... | - | [link](https://github.com/DracieVajko/odysseus/blob/main/data/skills/communication/scheduling-coordination/SKILL.md) |
 | `slides` | - | Create strategic HTML presentations with Chart.js, design... | - | [link](https://github.com/DracieVajko/odysseus/blob/main/data/skills/general/slides/SKILL.md) |
