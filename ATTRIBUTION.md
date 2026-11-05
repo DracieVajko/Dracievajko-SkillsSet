@@ -8,9 +8,9 @@ third-party skill code.
 
 | Status | Meaning | Count |
 |--------|---------|------:|
-| `original` | Authored and maintained in this repository | 10 |
+| `original` | Authored and maintained in this repository | 25 |
 | `link-only` | Upstream skill referenced by URL only; no content copied | 188 |
-| **Total** | | **198** |
+| **Total** | | **213** |
 
 ## Original Skills
 
@@ -21,6 +21,21 @@ third-party skill code.
 | `pen-testing` | Authorized penetration testing methodology: scope gate, recon, scan, controlled testing, blast radius, report | DracieVajko | MIT |
 | `agent-operating-rules` | Evidence-first project workflow: consent-gated git, root-cause fixes, verification, coverage checklists and test discipline | DracieVajko | MIT |
 | `repository-hygiene` | Repository cleanup: classification, temporary files, generated artifacts, secrets and commit preparation | DracieVajko | MIT |
+| `beyond-vibe-coding-autonomous-development` | Practical skill for AI-era software development based on Addy Osmani's 'Beyond Vibe Coding' — intent-driven workflows, prompt engineering, the 70% problem, code review/refinement, AI prototyping, autonomous agents, and production-ready AI-assisted engineering. | DracieVajko | MIT |
+| `document-editing-general` | General-purpose skill for creating, reading, editing and managing documents (markdown, text, code, etc.) in an editor panel. | DracieVajko | MIT |
+| `github-code-documentation` | Skill for creating detailed descriptions and high-quality README.md files for scripts and programs intended for GitHub upload, push and commit. Includes coding and 'vibe-coding' rules to maximize efficiency and minimize errors. | DracieVajko | MIT |
+| `penetration-testing-guide` | Penetration testing guide and methodology covering 5 phases: Recon, Scan, Gain Access, Escalate and Report. | DracieVajko | MIT |
+| `generate-markdown-and-docx-documents` | Create a new document from a user-provided outline and content, output both a Markdown file and a Word (DOCX) file for download. | DracieVajko | MIT |
+| `create-individual-calendar-events-from-earnings-dates-list` | Create individual calendar events from an earnings dates list, one event per ticker with company name and reminder. | DracieVajko | MIT |
+| `ds-note-formatter` | Format content for Synology DS Note / Note Station so it pastes cleanly and preserves structure, readability and checklist usability. | DracieVajko | MIT |
+| `fix-inconclusive-skills` | Identify and fix skills marked as inconclusive due to missing tools or other issues. | DracieVajko | MIT |
+| `generate-findings-report-from-pipeline-logs` | Verify that all expected sections and data are present in generated files by comparing logs and output artifacts, and summarize discrepancies. | DracieVajko | MIT |
+| `testing-skills` | Test skills that enforce discipline, compliance and verification using pressure scenarios and rationalization tables. | DracieVajko | MIT |
+| `yfinance-ai` | World-class AI-powered Yahoo Finance integration: 56+ tools for stocks, crypto, forex, commodities and ETFs. | DracieVajko | MIT |
+| `book-to-skill` | Convert a book or article into a reusable skill using AI and web data. | DracieVajko | MIT |
+| `universal-listing-template` | Generate structured lists (TODO lists, inventory, tables) using AI and file operations. | DracieVajko | MIT |
+| `enable-wake-on-lan-and-auto-shutdown-on-network-loss-for-ras` | Enable Wake-on-LAN and auto-shutdown on network loss for Raspberry Pi. | DracieVajko | MIT |
+| `detailed-source-rewrite-guide` | Rewrite a source document (e.g., article, research paper) into a structured, step-by-step guide using AI. | DracieVajko | MIT |
 | `focus-my-energy` | Classify tasks by cognitive demand and recommend what to work on now based on energy level | DracieVajko | MIT |
 | `generate-fresh-ideas` | Remix source material into five distinct creative content angles | DracieVajko | MIT |
 | `get-more-perspectives` | Stress-test decisions across a five-advisor panel | DracieVajko | MIT |

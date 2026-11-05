@@ -320,9 +320,9 @@ class CatalogDataTests(unittest.TestCase):
     def test_items_authorship_partition(self):
         items = self.load('items.json')
         counts = Counter(i['authorship'] for i in items)
-        self.assertEqual(len(items), 198)
+        self.assertEqual(len(items), 213)
         self.assertEqual(counts['link-only'], 188)
-        self.assertEqual(counts['original'], 10)
+        self.assertEqual(counts['original'], 25)
         self.assertEqual(set(counts), {'link-only', 'original'})
 
     def test_link_file_counts(self):
@@ -347,7 +347,7 @@ class CatalogDataTests(unittest.TestCase):
     def test_original_catalog_paths_exist(self):
         items = self.load('items.json')
         originals = [i for i in items if i['authorship'] == 'original']
-        self.assertEqual(len(originals), 10)
+        self.assertEqual(len(originals), 25)
         for item in originals:
             path = self.repo / item['local_skill_path']
             self.assertTrue(path.is_file(), item['local_skill_path'])
