@@ -48,7 +48,7 @@ LINK_DIR = ('catalog', 'links')
 LINK_FILES = ('skill-links.txt', 'pinned-links.txt')
 ITEMS_RELPATH = ('catalog', 'items.json')
 INDEX_RELPATH = ('docs', 'CATEGORY_INDEX.md')
-VERIFIED_DATE = '2026-10-23'
+VERIFIED_DATE = '2026-11-05'
 
 
 # --- helpers ---------------------------------------------------------------

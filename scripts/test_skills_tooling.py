@@ -320,9 +320,9 @@ class CatalogDataTests(unittest.TestCase):
     def test_items_authorship_partition(self):
         items = self.load('items.json')
         counts = Counter(i['authorship'] for i in items)
-        self.assertEqual(len(items), 159)
-        self.assertEqual(counts['link-only'], 154)
-        self.assertEqual(counts['original'], 5)
+        self.assertEqual(len(items), 198)
+        self.assertEqual(counts['link-only'], 188)
+        self.assertEqual(counts['original'], 10)
         self.assertEqual(set(counts), {'link-only', 'original'})
 
     def test_link_file_counts(self):
@@ -330,9 +330,9 @@ class CatalogDataTests(unittest.TestCase):
                   if u.strip() and not u.strip().startswith('#')]
         pinned = [u for u in (self.links / 'pinned-links.txt').read_text(encoding='utf-8').splitlines()
                   if u.strip() and not u.strip().startswith('#')]
-        self.assertEqual(len(stable), 124)
-        self.assertEqual(len(pinned), 30)
-        self.assertEqual(len(stable) + len(pinned), 154)
+        self.assertEqual(len(stable), 157)
+        self.assertEqual(len(pinned), 31)
+        self.assertEqual(len(stable) + len(pinned), 188)
 
     def test_catalog_link_urls_match_link_files(self):
         items = self.load('items.json')
@@ -347,7 +347,7 @@ class CatalogDataTests(unittest.TestCase):
     def test_original_catalog_paths_exist(self):
         items = self.load('items.json')
         originals = [i for i in items if i['authorship'] == 'original']
-        self.assertEqual(len(originals), 5)
+        self.assertEqual(len(originals), 10)
         for item in originals:
             path = self.repo / item['local_skill_path']
             self.assertTrue(path.is_file(), item['local_skill_path'])
@@ -367,7 +367,7 @@ class CatalogDataTests(unittest.TestCase):
 
     def test_docs_index_has_expected_total(self):
         index = (self.repo / 'docs' / 'CATEGORY_INDEX.md').read_text(encoding='utf-8')
-        self.assertIn('Total: **154** references.', index)
+        self.assertIn('Total: **188** references.', index)
         self.assertIn('## Original Local Skills', index)
         self.assertIn('## External Skills (Links Only)', index)
 

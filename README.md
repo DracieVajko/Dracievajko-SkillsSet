@@ -12,14 +12,14 @@ frameworks.
 | Looking for | Where |
 |-------------|-------|
 | **My skills (5, original)** | [`skills/original/`](skills/original) - details in the [Original Skills](#original-skills) table below |
-| **Third-party skills (154, links only)** | [`skills/third-party/README.md`](skills/third-party/README.md) or the complete [category index](docs/CATEGORY_INDEX.md) |
+| **Third-party skills (188, links only)** | [`skills/third-party/README.md`](skills/third-party/README.md) or the complete [category index](docs/CATEGORY_INDEX.md) |
 | **Machine-readable catalog** | [`catalog/items.json`](catalog/items.json) |
 | **Platform usage (OpenCode / Odysseus / VS Code)** | [Quick Start](#quick-start) below |
 
 ## What Is in the Repository
 
-- **5 original skills** - `ticktick-tasks`, `write-research-projects`, `pen-testing`, `agent-operating-rules`, `repository-hygiene`
-- **154 external skills** - links to original upstream files only; no third-party
+- **10 original skills** - `ticktick-tasks`, `write-research-projects`, `pen-testing`, `agent-operating-rules`, `repository-hygiene`, `focus-my-energy`, `generate-fresh-ideas`, `get-more-perspectives`, `match-my-writing-style`, `prep-for-meetings`
+- **188 external skills** - links to original upstream files only; no third-party
   code is bundled
 - **7 system prompts**, **10 personas** and **3 image prompts**
 - **11 modular rule files** and **9 specialized agent profiles**
@@ -36,11 +36,11 @@ historical catalog views in this repository.
 ├── .github/workflows/          # CI: tests, sync, frontmatter validation, index check
 ├── catalog/
 │   ├── README.md
-│   ├── items.json              # 159 records: 5 original + 154 external links
+│   ├── items.json              # 198 records: 10 original + 188 external links
 │   └── links/
 │       ├── README.md
-│       ├── skill-links.txt     # 124 stable-branch links
-│       └── pinned-links.txt    # 30 pinned commit/release links
+│       ├── skill-links.txt     # 157 stable-branch links
+│       └── pinned-links.txt    # 31 pinned commit/release links
 ├── docs/
 │   ├── CATEGORY_INDEX.md       # Generated list of original + external skills
 │   ├── CONTRIBUTING.md
@@ -58,7 +58,7 @@ historical catalog views in this repository.
 ├── scripts/                    # Validator, sync check, index generator, link checker, installers, tests
 ├── skills/
 │   ├── README.md
-│   ├── original/               # 5 original skills
+│   ├── original/               # 10 original skills
 │   └── third-party/README.md   # External skills: name, purpose, link
 ├── AGENTS.md                   # Modular entry point
 ├── AGENTS-combined.md          # Single-file rules variant
@@ -106,7 +106,7 @@ open the original files:
 - [Curated list with purpose and license - `skills/third-party/README.md`](skills/third-party/README.md)
 - [Raw URL lists - `catalog/links/`](catalog/links/)
 
-All 154 URLs returned HTTP 200 on 2026-10-23. Availability does not imply
+All 188 URLs returned HTTP 200 on 2026-11-05. Availability does not imply
 license, security or runtime compatibility.
 
 ### Odysseus
@@ -133,6 +133,11 @@ cat catalog/links/pinned-links.txt
 | `pen-testing` | Authorized penetration testing methodology: scope, recon, scan, controlled testing, blast radius and report | [`SKILL.md`](skills/original/pen-testing/SKILL.md) |
 | `agent-operating-rules` | Evidence-first project workflow: consent-gated git, verification, coverage checklists and test discipline | [`SKILL.md`](skills/original/agent-operating-rules/SKILL.md) |
 | `repository-hygiene` | Repository cleanup: classification, temporary files, generated artifacts, secrets and commit preparation | [`SKILL.md`](skills/original/repository-hygiene/SKILL.md) |
+| `focus-my-energy` | Classify tasks by cognitive demand and recommend what to work on now based on energy level | [`SKILL.md`](skills/original/focus-my-energy/SKILL.md) |
+| `generate-fresh-ideas` | Remix source material into five distinct creative content angles | [`SKILL.md`](skills/original/generate-fresh-ideas/SKILL.md) |
+| `get-more-perspectives` | Stress-test decisions across a five-advisor panel | [`SKILL.md`](skills/original/get-more-perspectives/SKILL.md) |
+| `match-my-writing-style` | Draft, reply or rewrite in the user's authentic voice from Gmail/Docs samples | [`SKILL.md`](skills/original/match-my-writing-style/SKILL.md) |
+| `prep-for-meetings` | Pre-meeting brief and 30-second glance card from Workspace sources | [`SKILL.md`](skills/original/prep-for-meetings/SKILL.md) |
 
 The research skill has two companion system prompts:
 
@@ -141,12 +146,12 @@ The research skill has two companion system prompts:
 
 ## External Skills
 
-The collection references 154 upstream skills:
+The collection references 188 upstream skills:
 
-- 124 stable-branch links in `catalog/links/skill-links.txt`
-- 30 pinned commit/release links in `catalog/links/pinned-links.txt`
+- 157 stable-branch links in `catalog/links/skill-links.txt`
+- 31 pinned commit/release links in `catalog/links/pinned-links.txt`
 
-The 18 curated skill links are pinned to upstream commit SHAs; the 12 OmniRoute
+The 19 curated skill links are pinned to upstream commit SHAs; the 12 OmniRoute
 links remain pinned to its release branch.
 
 No upstream implementation is stored here. The 17 upstream skills that were
@@ -198,9 +203,9 @@ not use both in the same project.
 
 | File | Purpose |
 |------|---------|
-| [`catalog/items.json`](catalog/items.json) | 159 structured records: 5 original + 154 external links |
-| [`catalog/links/skill-links.txt`](catalog/links/skill-links.txt) | 124 stable upstream URLs |
-| [`catalog/links/pinned-links.txt`](catalog/links/pinned-links.txt) | 30 pinned upstream URLs |
+| [`catalog/items.json`](catalog/items.json) | 198 structured records: 10 original + 188 external links |
+| [`catalog/links/skill-links.txt`](catalog/links/skill-links.txt) | 157 stable upstream URLs |
+| [`catalog/links/pinned-links.txt`](catalog/links/pinned-links.txt) | 31 pinned upstream URLs |
 | [`docs/CATEGORY_INDEX.md`](docs/CATEGORY_INDEX.md) | Generated human-readable skill index |
 
 ## Validation

@@ -28,3 +28,4 @@ https://raw.githubusercontent.com/diegosouzapw/OmniRoute/release/v3.8.52/skills/
 https://raw.githubusercontent.com/diegosouzapw/OmniRoute/release/v3.8.52/skills/omni-db-backups/SKILL.md
 https://raw.githubusercontent.com/diegosouzapw/OmniRoute/release/v3.8.52/skills/omni-mcp/SKILL.md
 https://raw.githubusercontent.com/diegosouzapw/OmniRoute/release/v3.8.52/skills/cli-eval/SKILL.md
+https://raw.githubusercontent.com/mattpocock/skills/bc4cf903ff4855ce23199a8dd3bf98b3dbd7ad71/skills/productivity/writing-great-skills/SKILL.md

@@ -6,7 +6,7 @@ Check duplicated rule copies with `python scripts/check-sync.py`.
 
 Original skills are discovered on disk. External skills are links only;
 no third-party code is bundled. Link availability was verified on
-2026-10-23 - see `catalog/links/README.md`.
+2026-11-05 - see `catalog/links/README.md`.
 
 Authoritative source per section:
 
@@ -39,7 +39,11 @@ Third-party skills referenced by upstream URL only; no local copy is bundled. So
 
 Entries with a short description have curated metadata in `catalog/items.json`; entries without one are link-only.
 
-Total: **154** references.
+Total: **188** references.
+
+### Agents365-ai/drawio-skill (1)
+
+- [`drawio-skill`](https://raw.githubusercontent.com/Agents365-ai/drawio-skill/main/skills/drawio-skill/SKILL.md) — Create and edit draw.io/diagrams.net diagrams as editable `.drawio` files. Covers architecture, UML/ERD/sequence, BPMN, network, and swimlane views authored from a description or converted from code, IaC, SQL, and API schemas, plus sync, query, test, review, export, and publish of existing diagrams. Use when the user asks for draw.io/diagrams.net or an editable diagram; prefer Mermaid/PlantUML when diagrams-as-code is enough.
 
 ### DietrichGebert/ponytail (1)
 
@@ -100,8 +104,9 @@ Total: **154** references.
 - [`test-driven-development`](https://raw.githubusercontent.com/addyosmani/agent-skills/main/skills/test-driven-development/SKILL.md)
 - [`using-agent-skills`](https://raw.githubusercontent.com/addyosmani/agent-skills/main/skills/using-agent-skills/SKILL.md)
 
-### anthropics/skills (11)
+### anthropics/skills (12)
 
+- [`algorithmic-art`](https://raw.githubusercontent.com/anthropics/skills/main/skills/algorithmic-art/SKILL.md) — Creating algorithmic art using p5.js with seeded randomness and interactive parameter exploration. Use this when users request creating art using code, generative art, algorithmic art, flow fields, or particle systems. Create original algorithmic art rather than copying existing artists' work to avoid copyright violations.
 - [`canvas-design`](https://raw.githubusercontent.com/anthropics/skills/main/skills/canvas-design/SKILL.md)
 - [`doc-coauthoring`](https://raw.githubusercontent.com/anthropics/skills/main/skills/doc-coauthoring/SKILL.md)
 - [`docx`](https://raw.githubusercontent.com/anthropics/skills/main/skills/docx/SKILL.md)
@@ -130,6 +135,13 @@ Total: **154** references.
 - [`skill-improvement-opportunity-logger`](https://raw.githubusercontent.com/composio-community/opencode-skills/master/skills/skill-improvement-opportunity-logger/SKILL.md)
 - [`structured-project-execution`](https://raw.githubusercontent.com/composio-community/opencode-skills/master/skills/structured-project-execution/SKILL.md)
 
+### coreyhaines31/marketingskills (4)
+
+- [`ads`](https://raw.githubusercontent.com/coreyhaines31/marketingskills/main/skills/ads/SKILL.md) — When the user wants help with paid advertising campaigns on Google Ads, Meta (Facebook/Instagram), LinkedIn, Twitter/X, or other ad platforms. Also use when the user mentions 'PPC,' 'paid media,' 'ROAS,' 'CPA,' 'ad campaign,' 'retargeting,' 'audience targeting,' 'Google Ads,' 'Facebook ads,' 'LinkedIn ads,' 'ad budget,' 'cost per click,' 'ad spend,' 'should I run ads,' 'ABM,' 'account-based marketing,' 'B2B ads,' 'lead quality,' 'negative keywords,' 'Performance Max,' 'thought leader ads,' 'when should I kill an ad,' 'search terms report,' 'wasted spend,' or 'is this campaign working.' Use this for campaign strategy, audience targeting, bidding, and optimization. For bulk ad creative generation and iteration, see ad-creative. For landing page optimization, see cro. For outbound to target accounts, see cold-email. For pixels, CAPI, and tracking audits, see conversion-tracking. End every recommendation with facts, hypotheses, and missing data, and label unavailable inputs MISSING instead of estimating them.
+- [`ai-seo`](https://raw.githubusercontent.com/coreyhaines31/marketingskills/main/skills/ai-seo/SKILL.md) — When the user wants to optimize content for AI search engines, get cited by LLMs, or appear in AI-generated answers. Also use when the user mentions 'AI SEO,' 'AEO,' 'GEO,' 'LLMO,' 'answer engine optimization,' 'generative engine optimization,' 'LLM optimization,' 'AI Overviews,' 'optimize for ChatGPT,' 'optimize for Perplexity,' 'AI citations,' 'AI visibility,' 'zero-click search,' 'how do I show up in AI answers,' 'LLM mentions,' 'optimize for Claude/Gemini,' 'llms.txt,' 'llms-full.txt,' 'OKF,' 'Open Knowledge Format,' 'knowledge bundle,' 'agent-readable site,' 'agent readiness,' 'is my site agent-ready,' 'WebMCP,' 'do listicles still work for AI,' 'ChatGPT stopped citing comparison pages,' 'how do LLMs see our brand,' 'LinkedIn for AEO,' or 'AI citation format shift.' Use this whenever someone wants their content to be cited or surfaced by AI assistants and AI search engines. For traditional technical and on-page SEO audits, see seo-audit. For structured data implementation, see schema.
+- [`analytics`](https://raw.githubusercontent.com/coreyhaines31/marketingskills/main/skills/analytics/SKILL.md) — When the user wants to set up, improve, or audit analytics tracking and measurement. Also use when the user mentions "set up tracking," "GA4," "Google Analytics," "event tracking," "UTM parameters," "tag manager," "GTM," "analytics implementation," "tracking plan," "how do I measure this," "Mixpanel," "Segment," "are my events firing," or "analytics isn't working." Use this whenever someone asks how to know if something is working or wants to measure marketing results. For getting conversions into ad platforms (pixels, conversion tags, CAPI, server-side) and verifying they arrived, see conversion-tracking. For choosing attribution models, comparing multi-touch/MMM/incrementality, or reconciling conflicting numbers across tools, see attribution. For A/B test measurement, see ab-testing. Rate metrics divide matching closed windows — never full-period spend by partial-period results.
+- [`copywriting`](https://raw.githubusercontent.com/coreyhaines31/marketingskills/main/skills/copywriting/SKILL.md) — When the user wants to write, rewrite, or improve marketing copy for any page, including homepage, landing pages, pricing pages, feature pages, about pages, or product pages. Also use when the user says "write copy for," "improve this copy," "rewrite this page," "marketing copy," "headline help," "CTA copy," "value proposition," "tagline," "hero section copy," "this copy is weak," "this sounds like AI," "AI slop," "make it sound human," or "help me describe my product." Drafts never use AI tells like "it's not X, it's Y" reveals, "no X, no Y, no Z" lists, or sentences that trail into extra comma clauses. For email copy, see emails. For popup copy, see popups. For editing existing copy, see copy-editing. For the offer underneath the copy (bonuses, guarantees, value framing), see offers. Claims must be supportable, and a declined claim names the evidence that would unlock it. Diagnoses the input first (blank brief, real voice, or point edit) and changes only what it calls for.
+
 ### diegosouzapw/OmniRoute (12)
 
 - [`cli-eval`](https://raw.githubusercontent.com/diegosouzapw/OmniRoute/release/v3.8.52/skills/cli-eval/SKILL.md)
@@ -144,6 +156,16 @@ Total: **154** references.
 - [`omni-providers`](https://raw.githubusercontent.com/diegosouzapw/OmniRoute/release/v3.8.52/skills/omni-providers/SKILL.md)
 - [`omni-resilience`](https://raw.githubusercontent.com/diegosouzapw/OmniRoute/release/v3.8.52/skills/omni-resilience/SKILL.md)
 - [`omni-usage-logs`](https://raw.githubusercontent.com/diegosouzapw/OmniRoute/release/v3.8.52/skills/omni-usage-logs/SKILL.md)
+
+### firecrawl/firecrawl-workflows (3)
+
+- [`firecrawl-deep-research`](https://raw.githubusercontent.com/firecrawl/firecrawl-workflows/main/skills/firecrawl-deep-research/SKILL.md) — Produce an intensive, cited analytical report: executive summary, multi-angle findings, contrarian views, open questions, and full sources. Use only when the user needs rigorous synthesis of a complex topic (scientific, technical, policy, or market-analytical) that cannot be answered with a short search, and wants a formal written report, not a recommendation list. Do not use for product picks, top-N lists, quick lookups, or routine "find out about X" tasks. If the request does not clearly need this kind of report, do not use this skill. Do not use for a literature review over published papers. This skill collects evidence from the open web. A request for the literature on a biomedical, clinical, life-science, or other scientific topic — papers, studies, trials, preprints — belongs to firecrawl-research-papers, which queries Firecrawl's paper index (PubMed, bioRxiv, medRxiv, arXiv) instead of searching websites.
+- [`firecrawl-market-research`](https://raw.githubusercontent.com/firecrawl/firecrawl-workflows/main/skills/firecrawl-market-research/SKILL.md) — Research markets and companies with Firecrawl using current, cited figures: market size, growth, trends, financials and earnings. Use when the user asks for market research, an industry overview or a comparison of companies by the numbers, since these figures change faster than training data.
+- [`firecrawl-research-papers`](https://raw.githubusercontent.com/firecrawl/firecrawl-workflows/main/skills/firecrawl-research-papers/SKILL.md) — Find and synthesize research papers, whitepapers, PDFs, technical reports, and academic sources with Firecrawl Research, using semantic paper search, related-paper expansion, and in-body verification over Firecrawl's paper index — largely biomedical and life-science literature from PubMed, bioRxiv, and medRxiv, plus arXiv preprints in CS, physics, and math. Use when the user wants a literature review, systematic review, survey of studies, paper summary, research landscape, or sourced synthesis from scholarly and industry publications, including clinical, drug, gene, disease, epidemiology, and public-health topics. Prefer this over a general web-research workflow whenever the evidence base is published papers rather than web pages.
+
+### gadicc/yahoo-finance2 (1)
+
+- [`yahoo-finance2`](https://raw.githubusercontent.com/gadicc/yahoo-finance2/main/skills/yahoo-finance2/SKILL.md) — Use when building with the yahoo-finance2 TypeScript/Deno/npm library, using its Yahoo Finance data modules, CLI, or MCP server, or contributing to the yahoo-finance2 repository including modules, validation schemas, cached fixtures, and npm/JSR build output.
 
 ### greensock/gsap-skills (8)
 
@@ -164,7 +186,11 @@ Total: **154** references.
 
 - [`playwright-skill`](https://raw.githubusercontent.com/lackeyjb/playwright-skill/main/skills/playwright-skill/SKILL.md)
 
-### mattpocock/skills (16)
+### larksuite/cli (1)
+
+- [`lark-markdown`](https://raw.githubusercontent.com/larksuite/cli/main/skills/lark-markdown/SKILL.md) — 飞书 Markdown：查看、创建、上传、编辑和比较飞书中的原生 Markdown 文件。当用户要操作飞书 Markdown 文件，或比较其远端版本及本地草稿时使用。纯本地 Markdown 文件操作不触发本 skill。不负责将 Markdown 导入为飞书在线文档，也不负责文件搜索、权限、评论、移动、删除等云空间管理操作。
+
+### mattpocock/skills (17)
 
 - [`code-review`](https://raw.githubusercontent.com/mattpocock/skills/main/skills/engineering/code-review/SKILL.md)
 - [`codebase-design`](https://raw.githubusercontent.com/mattpocock/skills/main/skills/engineering/codebase-design/SKILL.md)
@@ -182,6 +208,7 @@ Total: **154** references.
 - [`to-tickets`](https://raw.githubusercontent.com/mattpocock/skills/main/skills/engineering/to-tickets/SKILL.md)
 - [`wayfinder`](https://raw.githubusercontent.com/mattpocock/skills/main/skills/engineering/wayfinder/SKILL.md)
 - [`writing-for-agents`](https://raw.githubusercontent.com/mattpocock/skills/main/skills/productivity/writing-for-agents/SKILL.md)
+- [`writing-great-skills`](https://raw.githubusercontent.com/mattpocock/skills/bc4cf903ff4855ce23199a8dd3bf98b3dbd7ad71/skills/productivity/writing-great-skills/SKILL.md) — Reference for writing and editing skills well — the vocabulary and principles that make a skill predictable.
 
 ### morluto/rea (1)
 
@@ -191,9 +218,13 @@ Total: **154** references.
 
 - [`karpathy-guidelines`](https://raw.githubusercontent.com/multica-ai/andrej-karpathy-skills/main/skills/karpathy-guidelines/SKILL.md)
 
-### nextlevelbuilder/ui-ux-pro-max-skill (1)
+### nextlevelbuilder/ui-ux-pro-max-skill (5)
 
 - [`banner-design`](https://raw.githubusercontent.com/nextlevelbuilder/ui-ux-pro-max-skill/main/.claude/skills/banner-design/SKILL.md)
+- [`brand`](https://raw.githubusercontent.com/nextlevelbuilder/ui-ux-pro-max-skill/main/.claude/skills/brand/SKILL.md) — Brand voice, visual identity, messaging frameworks, asset management, brand consistency. Activate for branded content, tone of voice, marketing assets, brand compliance, style guides.
+- [`design`](https://raw.githubusercontent.com/nextlevelbuilder/ui-ux-pro-max-skill/main/.claude/skills/design/SKILL.md) — Comprehensive design skill: brand identity, design tokens, UI styling, logo generation (55 styles, Gemini, Atlas Cloud, or MuAPI AI), corporate identity program (50 deliverables, CIP mockups), HTML presentations (Chart.js), banner design (22 styles, social/ads/web/print), icon design (15 styles, SVG, Gemini 3.1 Pro), social photos (HTML→screenshot, multi-platform). Actions: design logo, create CIP, generate mockups, build slides, design banner, generate icon, create social photos, social media images, brand identity, design system. Platforms: Facebook, Twitter, LinkedIn, YouTube, Instagram, Pinterest, TikTok, Threads, Google Ads.
+- [`design-system`](https://raw.githubusercontent.com/nextlevelbuilder/ui-ux-pro-max-skill/main/.claude/skills/design-system/SKILL.md) — Token architecture, component specifications, and slide generation. Three-layer tokens (primitive→semantic→component), CSS variables, spacing/typography scales, component specs, strategic slide creation. Use for design tokens, systematic design, brand-compliant presentations.
+- [`slides`](https://raw.githubusercontent.com/nextlevelbuilder/ui-ux-pro-max-skill/main/.claude/skills/slides/SKILL.md) — Create strategic HTML presentations with Chart.js, design tokens, responsive layouts, copywriting formulas, and contextual slide strategies.
 
 ### obra/superpowers (15)
 
@@ -213,9 +244,35 @@ Total: **154** references.
 - [`writing-plans`](https://raw.githubusercontent.com/obra/superpowers/main/skills/writing-plans/SKILL.md)
 - [`writing-skills`](https://raw.githubusercontent.com/obra/superpowers/main/skills/writing-skills/SKILL.md)
 
+### odysseus-dev/odysseus (13)
+
+- [`action-evidence-synthesis`](https://raw.githubusercontent.com/odysseus-dev/odysseus/main/resources/skills/communication/action-evidence-synthesis/SKILL.md) — Turn messages, meeting notes, and documents into sourced decisions, actions, dependencies, and risks
+- [`artifact-completion`](https://raw.githubusercontent.com/odysseus-dev/odysseus/main/resources/skills/agent/artifact-completion/SKILL.md) — Create requested artifacts early, iterate from concrete output, and verify final deliverables
+- [`developer-docs`](https://raw.githubusercontent.com/odysseus-dev/odysseus/main/resources/skills/dev/developer-docs/SKILL.md) — Find, read, and apply authoritative developer documentation during implementation
+- [`multimodal-evidence`](https://raw.githubusercontent.com/odysseus-dev/odysseus/main/resources/skills/media/multimodal-evidence/SKILL.md) — Extract and verify evidence from images, documents, and video without redundant inspection
+- [`odysseus`](https://raw.githubusercontent.com/odysseus-dev/odysseus/main/integrations/claude/skills/odysseus/SKILL.md) — Use when the user asks Claude Code to read or write Odysseus data (todos, email, calendar, memory, documents) or to launch/monitor/stop a Cookbook model-serve task through the scoped Claude Agent API. Requires ODYSSEUS_URL and ODYSSEUS_API_TOKEN.
+- [`reviewable-external-draft`](https://raw.githubusercontent.com/odysseus-dev/odysseus/main/resources/skills/communication/reviewable-external-draft/SKILL.md) — Reconcile source evidence and prepare an accurate external-facing draft without bypassing review
+- [`scheduling-coordination`](https://raw.githubusercontent.com/odysseus-dev/odysseus/main/resources/skills/communication/scheduling-coordination/SKILL.md) — Coordinate availability, confirmations, calendar changes, and participant notifications with read-back verification
+- [`support-triage-and-routing`](https://raw.githubusercontent.com/odysseus-dev/odysseus/main/resources/skills/communication/support-triage-and-routing/SKILL.md) — Prioritize support requests, identify owners, route internally, and prepare safe customer drafts
+- [`terminal-recovery`](https://raw.githubusercontent.com/odysseus-dev/odysseus/main/resources/skills/agent/terminal-recovery/SKILL.md) — Recover from failed terminal commands using evidence-driven diagnosis and bounded retries
+- [`test-driven-development`](https://raw.githubusercontent.com/odysseus-dev/odysseus/main/resources/skills/general/test-driven-development/SKILL.md) — Build or fix software with a focused red-green-refactor loop
+- [`tool-discovery`](https://raw.githubusercontent.com/odysseus-dev/odysseus/main/resources/skills/agent/tool-discovery/SKILL.md) — Discover the smallest capable tool set and confirm argument schemas before acting
+- [`verified-state-change`](https://raw.githubusercontent.com/odysseus-dev/odysseus/main/resources/skills/agent/verified-state-change/SKILL.md) — Make scoped state changes with target confirmation, minimal mutation, and read-back verification
+- [`web-research-fallback`](https://raw.githubusercontent.com/odysseus-dev/odysseus/main/resources/skills/research/web-research-fallback/SKILL.md) — Research current web information with source-first search and controlled browser fallback
+
 ### pbakaus/impeccable (1)
 
 - [`impeccable`](https://raw.githubusercontent.com/pbakaus/impeccable/main/.agents/skills/impeccable/SKILL.md)
+
+### shadcn/improve (1)
+
+- [`improve`](https://raw.githubusercontent.com/shadcn/improve/main/skills/improve/SKILL.md) — Survey any codebase as a senior advisor and produce prioritized, self-contained implementation plans for OTHER models/agents to execute. Strictly read-only on source code — never implements, fixes, or refactors anything itself. Use when asked to audit a codebase, find improvement opportunities (bugs, security, performance, test coverage, tech debt, migrations, DX), suggest features or where to take the project next (roadmap, product direction), or generate handoff plans for another agent to implement.
+
+### simbajigege/book2skills (3)
+
+- [`common-sense-index-investing-bogle`](https://raw.githubusercontent.com/simbajigege/book2skills/main/skills/common-sense-index-investing-bogle/SKILL.md) — Apply John Bogle index investing rules for low-cost funds, asset allocation, fees, taxes, ETFs, advisers, and buy-hold discipline.
+- [`investing-from-darwin`](https://raw.githubusercontent.com/simbajigege/book2skills/main/skills/investing-from-darwin/SKILL.md) — Apply Pulak Prasad evolutionary investing rules for avoiding big losses, buying resilient quality, rejecting fragile forecasts, and being very lazy.
+- [`stock-picking-by-common-stocks-uncommon-profits`](https://raw.githubusercontent.com/simbajigege/book2skills/main/skills/stock-picking-by-common-stocks-uncommon-profits/SKILL.md) — Apply Philip Fisher's growth stock investment framework from Common Stocks and Uncommon Profits. Use this skill whenever a user wants to evaluate whether a company is a worthy long-term growth investment, assess management quality, gather competitive intelligence via scuttlebutt, decide when to buy an outstanding stock at the right moment, or decide whether to hold or sell a current position. Covers the 15 Points checklist, management depth analysis, scuttlebutt intelligence gathering, entry timing, and hold/sell decision logic. Trigger phrases: "is X a growth stock", "Fisher framework", "15 points", "scuttlebutt", "should I buy X", "should I sell X", "management quality of X", "growth stock analysis".
 
 ### tjboudreaux/cc-thinking-skills (28)
 
@@ -251,6 +308,10 @@ Total: **154** references.
 ### vercel-labs/agent-browser (1)
 
 - [`agent-browser`](https://raw.githubusercontent.com/vercel-labs/agent-browser/main/skills/agent-browser/SKILL.md)
+
+### vercel-labs/skills (1)
+
+- [`find-skills`](https://raw.githubusercontent.com/vercel-labs/skills/main/skills/find-skills/SKILL.md) — Helps users discover and install agent skills when they ask questions like "how do I do X", "find a skill for X", "is there a skill that can...", or express interest in extending capabilities. This skill should be used when the user is looking for functionality that might exist as an installable skill.
 
 ---
 

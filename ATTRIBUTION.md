@@ -8,9 +8,9 @@ third-party skill code.
 
 | Status | Meaning | Count |
 |--------|---------|------:|
-| `original` | Authored and maintained in this repository | 5 |
-| `link-only` | Upstream skill referenced by URL only; no content copied | 154 |
-| **Total** | | **159** |
+| `original` | Authored and maintained in this repository | 10 |
+| `link-only` | Upstream skill referenced by URL only; no content copied | 188 |
+| **Total** | | **198** |
 
 ## Original Skills
 
@@ -21,10 +21,15 @@ third-party skill code.
 | `pen-testing` | Authorized penetration testing methodology: scope gate, recon, scan, controlled testing, blast radius, report | DracieVajko | MIT |
 | `agent-operating-rules` | Evidence-first project workflow: consent-gated git, root-cause fixes, verification, coverage checklists and test discipline | DracieVajko | MIT |
 | `repository-hygiene` | Repository cleanup: classification, temporary files, generated artifacts, secrets and commit preparation | DracieVajko | MIT |
+| `focus-my-energy` | Classify tasks by cognitive demand and recommend what to work on now based on energy level | DracieVajko | MIT |
+| `generate-fresh-ideas` | Remix source material into five distinct creative content angles | DracieVajko | MIT |
+| `get-more-perspectives` | Stress-test decisions across a five-advisor panel | DracieVajko | MIT |
+| `match-my-writing-style` | Draft, reply or rewrite in the user's authentic voice from Gmail/Docs samples | DracieVajko | MIT |
+| `prep-for-meetings` | Pre-meeting brief and 30-second glance card from Workspace sources | DracieVajko | MIT |
 
 ## External Skills
 
-All 154 external skills are link-only. The URL lists live in
+All 188 external skills are link-only. The URL lists live in
 [`catalog/links/`](catalog/links/), and the full human-readable index is
 [`docs/CATEGORY_INDEX.md`](docs/CATEGORY_INDEX.md).
 
@@ -54,7 +59,7 @@ upstream records because it exists in two repositories.
 
 ## Link Verification
 
-All 154 external URLs returned HTTP 200 on 2026-10-23. Verification covers URL
+All 188 external URLs returned HTTP 200 on 2026-11-05. Verification covers URL
 availability only. It does not verify upstream content, license, security or
 runtime compatibility.
 

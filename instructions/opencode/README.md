@@ -16,7 +16,7 @@ The files in `project-template/agent-rules/` are self-contained copies of
 
 ## Skills
 
-This repository bundles five original skills under `skills/original/`:
+This repository bundles ten original skills under `skills/original/`:
 
 - [`ticktick-tasks`](../../skills/original/ticktick-tasks/SKILL.md) - manage
   TickTick tasks, projects, habits and focus via MCP
@@ -31,6 +31,16 @@ This repository bundles five original skills under `skills/original/`:
 - [`repository-hygiene`](../../skills/original/repository-hygiene/SKILL.md) -
   repository cleanup, temporary files, generated artifacts and commit
   preparation
+- [`focus-my-energy`](../../skills/original/focus-my-energy/SKILL.md) - classify
+  tasks by cognitive demand and recommend what to work on now based on energy level
+- [`generate-fresh-ideas`](../../skills/original/generate-fresh-ideas/SKILL.md) -
+  remix source material into five distinct creative content angles
+- [`get-more-perspectives`](../../skills/original/get-more-perspectives/SKILL.md) -
+  stress-test decisions across a five-advisor panel
+- [`match-my-writing-style`](../../skills/original/match-my-writing-style/SKILL.md) -
+  draft, reply or rewrite in the user's authentic voice from Gmail/Docs samples
+- [`prep-for-meetings`](../../skills/original/prep-for-meetings/SKILL.md) -
+  pre-meeting brief and 30-second glance card from Workspace sources
 
 External skills are links only; use the catalog and the generated index:
 

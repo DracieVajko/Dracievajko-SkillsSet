@@ -84,7 +84,7 @@ Keep the report proportional to the task.
 
 ## Available Skills
 
-The repository contains five locally authored skills under `skills/original/`.
+The repository contains ten locally authored skills under `skills/original/`.
 Cloning the repository does not install them automatically. Copy the folders
 into the agent's skill directory, or run `scripts/install-skills.ps1` on Windows
 or `scripts/install-skills.sh` on Linux/macOS. External skills are links only;
@@ -112,7 +112,7 @@ this repository does not bundle their instructions.
   Workspace sources
 
 ### External Skills (Links Only)
-The collection references 154 upstream skills without copying their code.
+The collection references 188 upstream skills without copying their code.
 Examples include `using-superpowers`, `brainstorming`, `idea-to-plan`,
 `code-reviewer`, `debugging-wizard`, `theme-factory`, `mcp-builder`,
 `skill-creator` and the Blender workflows.
@@ -191,6 +191,6 @@ Additional system prompts available in `prompts/system/`:
 - `skills/original/` — Locally authored original skills
 - `skills/third-party/README.md` — External skills with purpose and link
 - `catalog/links/` — Authoritative external URL lists
-- `catalog/items.json` — Machine-readable catalog (5 original + 154 links)
+- `catalog/items.json` — Machine-readable catalog (10 original + 188 links)
 - `docs/SKILL_SPEC.md` — How to write skills
 - `docs/CATEGORY_INDEX.md` — Complete generated listing

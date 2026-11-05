@@ -4,12 +4,12 @@ Canonical structured catalog of this collection.
 
 ## Contents
 
-- `items.json` - 159 records: 5 original skills and 154 external skills.
+- `items.json` - 198 records: 10 original skills and 188 external skills.
   Each record includes name, category, repository, upstream URL, authorship,
   license and verification status.
 - `links/` - authoritative plain URL lists for external skills.
-  - `skill-links.txt` - 124 stable-branch links.
-  - `pinned-links.txt` - 30 pinned commit/release links.
+  - `skill-links.txt` - 157 stable-branch links.
+  - `pinned-links.txt` - 31 pinned commit/release links.
   - `README.md` - provenance and verification note.
 
 No third-party skill code is stored in this repository. External skills are
@@ -32,17 +32,17 @@ error. It never falls back to an empty collection.
 
 | Authorship | Count |
 |------------|-------|
-| `original` | 5 |
-| `link-only` | 154 |
-| **Total** | **159** |
+| `original` | 10 |
+| `link-only` | 188 |
+| **Total** | **198** |
 
-The 154 link-only records cover the stable and pinned link files. The catalog
-contains only the five original skills and 154 external link-only records; no
+The 188 link-only records cover the stable and pinned link files. The catalog
+contains only the ten original skills and 188 external link-only records; no
 third-party code is stored locally.
 
 ## Link Verification
 
-All 154 external URLs returned HTTP 200 on 2026-10-23. The check covers URL
+All 188 external URLs returned HTTP 200 on 2026-11-05. The check covers URL
 availability only. It does not verify upstream content, license, security or
 runtime compatibility.
 

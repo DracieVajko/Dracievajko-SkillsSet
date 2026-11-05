@@ -3,8 +3,8 @@
 This directory separates what this repository authors from what it
 references. Two kinds live here, always clearly labeled:
 
-- `original/` - skills authored and maintained in this repository (**5**)
-- `third-party/` - upstream skills referenced by link only (**154**). No
+- `original/` - skills authored and maintained in this repository (**10**)
+- `third-party/` - upstream skills referenced by link only (**188**). No
   upstream code is bundled; see [`third-party/README.md`](third-party/README.md).
 
 ## Original Skills (authored by DracieVajko)
@@ -19,6 +19,11 @@ copy its folder into your agent's skill directory.
 | `pen-testing` | Authorized penetration testing methodology: scope gate, recon, scan, controlled testing, blast radius, report | [`SKILL.md`](original/pen-testing/SKILL.md) |
 | `agent-operating-rules` | Evidence-first project workflow: consent-gated git, root-cause fixes, verification, coverage checklists and test discipline | [`SKILL.md`](original/agent-operating-rules/SKILL.md) |
 | `repository-hygiene` | Repository cleanup: classification, temporary files, generated artifacts, secrets and commit preparation | [`SKILL.md`](original/repository-hygiene/SKILL.md) |
+| `focus-my-energy` | Classify tasks by cognitive demand and recommend what to work on now based on energy level | [`SKILL.md`](original/focus-my-energy/SKILL.md) |
+| `generate-fresh-ideas` | Remix source material into five distinct creative content angles | [`SKILL.md`](original/generate-fresh-ideas/SKILL.md) |
+| `get-more-perspectives` | Stress-test decisions across a five-advisor panel | [`SKILL.md`](original/get-more-perspectives/SKILL.md) |
+| `match-my-writing-style` | Draft, reply or rewrite in the user's authentic voice from Gmail/Docs samples | [`SKILL.md`](original/match-my-writing-style/SKILL.md) |
+| `prep-for-meetings` | Pre-meeting brief and 30-second glance card from Workspace sources | [`SKILL.md`](original/prep-for-meetings/SKILL.md) |
 
 Install all original skills (OpenCode):
 
@@ -37,7 +42,7 @@ cp -r skills/original/repository-hygiene ~/.config/opencode/skills/
 
 ## Third-Party Skills (links only)
 
-154 upstream skills are referenced by URL only. Their content is never
+188 upstream skills are referenced by URL only. Their content is never
 copied here, so licenses and provenance stay with the upstream owners.
 
 - Curated list with purpose and license: [`third-party/README.md`](third-party/README.md)
