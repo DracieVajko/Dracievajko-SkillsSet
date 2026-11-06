@@ -12,14 +12,14 @@ frameworks.
 | Looking for | Where |
 |-------------|-------|
 | **My skills (5, original)** | [`skills/original/`](skills/original) - details in the [Original Skills](#original-skills) table below |
-| **Third-party skills (188, links only)** | [`skills/third-party/README.md`](skills/third-party/README.md) or the complete [category index](docs/CATEGORY_INDEX.md) |
+| **Third-party skills (199, links only)** | [`skills/third-party/README.md`](skills/third-party/README.md) or the complete [category index](docs/CATEGORY_INDEX.md) |
 | **Machine-readable catalog** | [`catalog/items.json`](catalog/items.json) |
 | **Platform usage (OpenCode / Odysseus / VS Code)** | [Quick Start](#quick-start) below |
 
 ## What Is in the Repository
 
 - **25 original skills** - `ticktick-tasks`, `write-research-projects`, `pen-testing`, `agent-operating-rules`, `repository-hygiene`, `focus-my-energy`, `generate-fresh-ideas`, `get-more-perspectives`, `match-my-writing-style`, `prep-for-meetings`, `beyond-vibe-coding-autonomous-development`, `document-editing-general`, `github-code-documentation`, `penetration-testing-guide`, `generate-markdown-and-docx-documents`, `create-individual-calendar-events-from-earnings-dates-list`, `ds-note-formatter`, `fix-inconclusive-skills`, `generate-findings-report-from-pipeline-logs`, `testing-skills`, `yfinance-ai`, `book-to-skill`, `universal-listing-template`, `enable-wake-on-lan-and-auto-shutdown-on-network-loss-for-ras`, `detailed-source-rewrite-guide`
-- **188 external skills** - links to original upstream files only; no third-party
+- **199 external skills** - links to original upstream files only; no third-party
   code is bundled
 - **7 system prompts**, **10 personas** and **3 image prompts**
 - **11 modular rule files** and **9 specialized agent profiles**
@@ -36,11 +36,11 @@ historical catalog views in this repository.
 ├── .github/workflows/          # CI: tests, sync, frontmatter validation, index check
 ├── catalog/
 │   ├── README.md
-│   ├── items.json              # 198 records: 10 original + 188 external links
+│   ├── items.json              # 224 records: 25 original + 199 external links
 │   └── links/
 │       ├── README.md
 │       ├── skill-links.txt     # 157 stable-branch links
-│       └── pinned-links.txt    # 31 pinned commit/release links
+│       └── pinned-links.txt    # 42 pinned commit/release links
 ├── docs/
 │   ├── CATEGORY_INDEX.md       # Generated list of original + external skills
 │   ├── CONTRIBUTING.md
@@ -106,8 +106,9 @@ open the original files:
 - [Curated list with purpose and license - `skills/third-party/README.md`](skills/third-party/README.md)
 - [Raw URL lists - `catalog/links/`](catalog/links/)
 
-All 188 URLs returned HTTP 200 on 2026-11-05. Availability does not imply
-license, security or runtime compatibility.
+All 199 URLs returned HTTP 200: 188 were verified on 2026-11-05 and the 11
+day-trader links on 2026-11-06. Availability does not imply license, security
+or runtime compatibility.
 
 ### Odysseus
 
@@ -161,12 +162,12 @@ The research skill has two companion system prompts:
 
 ## External Skills
 
-The collection references 188 upstream skills:
+The collection references 199 upstream skills:
 
 - 157 stable-branch links in `catalog/links/skill-links.txt`
-- 31 pinned commit/release links in `catalog/links/pinned-links.txt`
+- 42 pinned commit/release links in `catalog/links/pinned-links.txt`
 
-The 19 curated skill links are pinned to upstream commit SHAs; the 12 OmniRoute
+The 30 curated skill links are pinned to upstream commit SHAs; the 12 OmniRoute
 links remain pinned to its release branch.
 
 No upstream implementation is stored here. The 17 upstream skills that were
@@ -218,9 +219,9 @@ not use both in the same project.
 
 | File | Purpose |
 |------|---------|
-| [`catalog/items.json`](catalog/items.json) | 213 structured records: 25 original + 188 external links |
+| [`catalog/items.json`](catalog/items.json) | 224 structured records: 25 original + 199 external links |
 | [`catalog/links/skill-links.txt`](catalog/links/skill-links.txt) | 157 stable upstream URLs |
-| [`catalog/links/pinned-links.txt`](catalog/links/pinned-links.txt) | 31 pinned upstream URLs |
+| [`catalog/links/pinned-links.txt`](catalog/links/pinned-links.txt) | 42 pinned upstream URLs |
 | [`docs/CATEGORY_INDEX.md`](docs/CATEGORY_INDEX.md) | Generated human-readable skill index |
 
 ## Validation

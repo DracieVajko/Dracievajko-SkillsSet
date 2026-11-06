@@ -4,7 +4,7 @@ This directory separates what this repository authors from what it
 references. Two kinds live here, always clearly labeled:
 
 - `original/` - skills authored and maintained in this repository (**25**)
-- `third-party/` - upstream skills referenced by link only (**188**). No
+- `third-party/` - upstream skills referenced by link only (**199**). No
   upstream code is bundled; see [`third-party/README.md`](third-party/README.md).
 
 ## Original Skills (authored by DracieVajko)
@@ -57,7 +57,7 @@ cp -r skills/original/repository-hygiene ~/.config/opencode/skills/
 
 ## Third-Party Skills (links only)
 
-188 upstream skills are referenced by URL only. Their content is never
+199 upstream skills are referenced by URL only. Their content is never
 copied here, so licenses and provenance stay with the upstream owners.
 
 - Curated list with purpose and license: [`third-party/README.md`](third-party/README.md)

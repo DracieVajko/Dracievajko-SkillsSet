@@ -127,7 +127,7 @@ this repository does not bundle their instructions.
   Workspace sources
 
 ### External Skills (Links Only)
-The collection references 188 upstream skills without copying their code.
+The collection references 199 upstream skills without copying their code.
 Examples include `using-superpowers`, `brainstorming`, `idea-to-plan`,
 `code-reviewer`, `debugging-wizard`, `theme-factory`, `mcp-builder`,
 `skill-creator` and the Blender workflows.
@@ -206,6 +206,6 @@ Additional system prompts available in `prompts/system/`:
 - `skills/original/` — Locally authored original skills
 - `skills/third-party/README.md` — External skills with purpose and link
 - `catalog/links/` — Authoritative external URL lists
-- `catalog/items.json` — Machine-readable catalog (25 original + 188 links)
+- `catalog/items.json` — Machine-readable catalog (25 original + 199 links)
 - `docs/SKILL_SPEC.md` — How to write skills
 - `docs/CATEGORY_INDEX.md` — Complete generated listing

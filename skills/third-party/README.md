@@ -4,9 +4,10 @@ Third-party skills are not bundled in this repository. This page lists the
 upstream skills that are referenced by the collection: a curated table with
 purpose and license, followed by a direct link list grouped by repository.
 
-The catalog's complete list of 188 external skills is generated at
-[`docs/CATEGORY\_INDEX.md`](../../docs/CATEGORY_INDEX.md). All 188 catalog URLs
-returned HTTP 200 on 2026-11-05. The
+The catalog's complete list of 199 external skills is generated at
+[`docs/CATEGORY\_INDEX.md`](../../docs/CATEGORY_INDEX.md). All 199 catalog URLs
+returned HTTP 200: 188 were verified on 2026-11-05 and the 11 day-trader links
+on 2026-11-06. The
 [direct upstream link list](#direct-upstream-link-list) below adds the links
 supplied for this collection.
 
@@ -29,6 +30,17 @@ supplied for this collection.
 |`blender-hard-surface-modeling`|-|Clean topology, subdivision and bevel workflows|MIT|[link](https://github.com/composio-community/opencode-skills/blob/5076f6673e5bf8b1f46dc5e934d1e3dd37250e10/skills/blender-hard-surface-modeling/SKILL.md)|
 |`blender-python-integration`|-|Blender Python scripts and procedural scenes|MIT|[link](https://github.com/composio-community/opencode-skills/blob/5076f6673e5bf8b1f46dc5e934d1e3dd37250e10/skills/blender-python-integration/SKILL.md)|
 |`blender-rigging-animation`|-|Character rigging and animation in Blender|MIT|[link](https://github.com/composio-community/opencode-skills/blob/5076f6673e5bf8b1f46dc5e934d1e3dd37250e10/skills/blender-rigging-animation/SKILL.md)|
+|`trader-scanner`|-|Scan thousands of charts for opening-range breakouts, flags and oversold bounces|MIT|[link](https://github.com/Jakeschincariol/day-trader-skill/blob/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-scanner/SKILL.md)|
+|`trader-news`|-|Track breaking news, SEC 8-K filings and the day's move on watchlist stocks|MIT|[link](https://github.com/Jakeschincariol/day-trader-skill/blob/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-news/SKILL.md)|
+|`trader-entry`|-|Time entries bar by bar above the opening range or a set level|MIT|[link](https://github.com/Jakeschincariol/day-trader-skill/blob/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-entry/SKILL.md)|
+|`trader-exit`|-|Set the stop and target before entry|MIT|[link](https://github.com/Jakeschincariol/day-trader-skill/blob/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-exit/SKILL.md)|
+|`trader-timemachine`|-|Replay 10,000 sessions plus every past occurrence of the setup|MIT|[link](https://github.com/Jakeschincariol/day-trader-skill/blob/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-timemachine/SKILL.md)|
+|`trader-risk`|-|Check every order against limits and print PASS or BLOCK|MIT|[link](https://github.com/Jakeschincariol/day-trader-skill/blob/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-risk/SKILL.md)|
+|`trader-budget`|-|Size positions to budget and max loss per trade|MIT|[link](https://github.com/Jakeschincariol/day-trader-skill/blob/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-budget/SKILL.md)|
+|`trader-broker`|-|Send approved orders to a broker, paper trading by default|MIT|[link](https://github.com/Jakeschincariol/day-trader-skill/blob/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-broker/SKILL.md)|
+|`trader-alerts`|-|Ring on a price, stop, target or the opening bell|MIT|[link](https://github.com/Jakeschincariol/day-trader-skill/blob/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-alerts/SKILL.md)|
+|`trader-analyst`|-|Read SEC earnings facts and 8-K releases|MIT|[link](https://github.com/Jakeschincariol/day-trader-skill/blob/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-analyst/SKILL.md)|
+|`trader-pelosi`|-|Read House Clerk PTR congressional trade disclosures|MIT|[link](https://github.com/Jakeschincariol/day-trader-skill/blob/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-pelosi/SKILL.md)|
 
 
 The alias column preserves the names used by earlier catalog references; the
@@ -41,7 +53,8 @@ collection, grouped by repository. It includes entries that also appear in the
 curated table above. Local-only skills without a public `SKILL.md` are
 intentionally omitted.
 
-All 84 links were verified on 2026-11-05: every target returned HTTP 200 from
+All 95 links were verified: the original 84 on 2026-11-05 and the 11 day-trader
+links on 2026-11-06. Every target returned HTTP 200 from
 `raw.githubusercontent.com` and contains `SKILL.md` front matter. GitHub's web
 interface rate-limited some bulk checks with HTTP 429; the underlying files were
 confirmed through the raw URLs.
@@ -249,3 +262,19 @@ confirmed through the raw URLs.
 |`common-sense-index-investing-bogle`|[link](https://github.com/simbajigege/book2skills/blob/HEAD/skills/common-sense-index-investing-bogle/SKILL.md)|
 |`investing-from-darwin`|[link](https://github.com/simbajigege/book2skills/blob/HEAD/skills/investing-from-darwin/SKILL.md)|
 |`stock-picking-by-common-stocks-uncommon-profits`|[link](https://github.com/simbajigege/book2skills/blob/HEAD/skills/stock-picking-by-common-stocks-uncommon-profits/SKILL.md)|
+
+### Jakeschincariol/day-trader-skill (11)
+
+|Skill|Original|
+|-|-|
+|`trader-scanner`|[link](https://github.com/Jakeschincariol/day-trader-skill/blob/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-scanner/SKILL.md)|
+|`trader-news`|[link](https://github.com/Jakeschincariol/day-trader-skill/blob/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-news/SKILL.md)|
+|`trader-entry`|[link](https://github.com/Jakeschincariol/day-trader-skill/blob/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-entry/SKILL.md)|
+|`trader-exit`|[link](https://github.com/Jakeschincariol/day-trader-skill/blob/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-exit/SKILL.md)|
+|`trader-timemachine`|[link](https://github.com/Jakeschincariol/day-trader-skill/blob/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-timemachine/SKILL.md)|
+|`trader-risk`|[link](https://github.com/Jakeschincariol/day-trader-skill/blob/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-risk/SKILL.md)|
+|`trader-budget`|[link](https://github.com/Jakeschincariol/day-trader-skill/blob/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-budget/SKILL.md)|
+|`trader-broker`|[link](https://github.com/Jakeschincariol/day-trader-skill/blob/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-broker/SKILL.md)|
+|`trader-alerts`|[link](https://github.com/Jakeschincariol/day-trader-skill/blob/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-alerts/SKILL.md)|
+|`trader-analyst`|[link](https://github.com/Jakeschincariol/day-trader-skill/blob/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-analyst/SKILL.md)|
+|`trader-pelosi`|[link](https://github.com/Jakeschincariol/day-trader-skill/blob/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-pelosi/SKILL.md)|

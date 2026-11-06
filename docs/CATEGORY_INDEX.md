@@ -54,7 +54,7 @@ Third-party skills referenced by upstream URL only; no local copy is bundled. So
 
 Entries with a short description have curated metadata in `catalog/items.json`; entries without one are link-only.
 
-Total: **188** references.
+Total: **199** references.
 
 ### Agents365-ai/drawio-skill (1)
 
@@ -67,6 +67,20 @@ Total: **188** references.
 ### Graphify-Labs/graphify (1)
 
 - [`graphify`](https://raw.githubusercontent.com/Graphify-Labs/graphify/v8/graphify/skill.md)
+
+### Jakeschincariol/day-trader-skill (11)
+
+- [`trader-alerts`](https://raw.githubusercontent.com/Jakeschincariol/day-trader-skill/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-alerts/SKILL.md) — Price Alerts. Rings once when a price, stop, target or the NYSE opening bell hits.
+- [`trader-analyst`](https://raw.githubusercontent.com/Jakeschincariol/day-trader-skill/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-analyst/SKILL.md) — Earnings Analyst. Reads SEC EDGAR XBRL facts and 8-K earnings releases and summarizes quarter-over-quarter changes.
+- [`trader-broker`](https://raw.githubusercontent.com/Jakeschincariol/day-trader-skill/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-broker/SKILL.md) — Order Executor. Sends approved orders to Alpaca or Interactive Brokers, paper trading by default and only after explicit confirmation.
+- [`trader-budget`](https://raw.githubusercontent.com/Jakeschincariol/day-trader-skill/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-budget/SKILL.md) — Budget Manager. Sizes positions to budget and max loss per trade and writes one bracket order.
+- [`trader-entry`](https://raw.githubusercontent.com/Jakeschincariol/day-trader-skill/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-entry/SKILL.md) — Entry Timer. Watches a setup bar by bar and signals the first completed close above the opening range or a given level.
+- [`trader-exit`](https://raw.githubusercontent.com/Jakeschincariol/day-trader-skill/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-exit/SKILL.md) — Exit Planner. Sets the stop and target before entry and writes the trade plan for the rest of the workflow.
+- [`trader-news`](https://raw.githubusercontent.com/Jakeschincariol/day-trader-skill/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-news/SKILL.md) — News Monitor. Tracks breaking news on watchlist stocks, SEC 8-K filings and the day's move, tagged and in New York time.
+- [`trader-pelosi`](https://raw.githubusercontent.com/Jakeschincariol/day-trader-skill/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-pelosi/SKILL.md) — Pelosi Tracker. Reads House Clerk PTR filings and turns congressional stock-trade disclosures into rows and alerts.
+- [`trader-risk`](https://raw.githubusercontent.com/Jakeschincariol/day-trader-skill/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-risk/SKILL.md) — Risk Manager. Checks every order against account and trade limits and prints PASS or BLOCK before it can reach the broker.
+- [`trader-scanner`](https://raw.githubusercontent.com/Jakeschincariol/day-trader-skill/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-scanner/SKILL.md) — Chart Scanner. Scans thousands of charts for opening-range breakouts, flags and oversold bounces, and writes a watchlist.
+- [`trader-timemachine`](https://raw.githubusercontent.com/Jakeschincariol/day-trader-skill/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-timemachine/SKILL.md) — Time Machine. Replays the rest of the session 10,000 times plus every past occurrence of the setup to estimate the odds.
 
 ### Jakubantalik/transitions.dev (3)
 

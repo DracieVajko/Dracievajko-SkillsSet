@@ -9,8 +9,8 @@ third-party skill code.
 | Status | Meaning | Count |
 |--------|---------|------:|
 | `original` | Authored and maintained in this repository | 25 |
-| `link-only` | Upstream skill referenced by URL only; no content copied | 188 |
-| **Total** | | **213** |
+| `link-only` | Upstream skill referenced by URL only; no content copied | 199 |
+| **Total** | | **224** |
 
 ## Original Skills
 
@@ -44,7 +44,7 @@ third-party skill code.
 
 ## External Skills
 
-All 188 external skills are link-only. The URL lists live in
+All 199 external skills are link-only. The URL lists live in
 [`catalog/links/`](catalog/links/), and the full human-readable index is
 [`docs/CATEGORY_INDEX.md`](docs/CATEGORY_INDEX.md).
 
@@ -71,11 +71,23 @@ upstream records because it exists in two repositories.
 | `blender-hard-surface-modeling` | MIT | [link](https://github.com/composio-community/opencode-skills/blob/5076f6673e5bf8b1f46dc5e934d1e3dd37250e10/skills/blender-hard-surface-modeling/SKILL.md) |
 | `blender-python-integration` | MIT | [link](https://github.com/composio-community/opencode-skills/blob/5076f6673e5bf8b1f46dc5e934d1e3dd37250e10/skills/blender-python-integration/SKILL.md) |
 | `blender-rigging-animation` | MIT | [link](https://github.com/composio-community/opencode-skills/blob/5076f6673e5bf8b1f46dc5e934d1e3dd37250e10/skills/blender-rigging-animation/SKILL.md) |
+| `trader-scanner` | MIT | [link](https://github.com/Jakeschincariol/day-trader-skill/blob/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-scanner/SKILL.md) |
+| `trader-news` | MIT | [link](https://github.com/Jakeschincariol/day-trader-skill/blob/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-news/SKILL.md) |
+| `trader-entry` | MIT | [link](https://github.com/Jakeschincariol/day-trader-skill/blob/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-entry/SKILL.md) |
+| `trader-exit` | MIT | [link](https://github.com/Jakeschincariol/day-trader-skill/blob/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-exit/SKILL.md) |
+| `trader-timemachine` | MIT | [link](https://github.com/Jakeschincariol/day-trader-skill/blob/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-timemachine/SKILL.md) |
+| `trader-risk` | MIT | [link](https://github.com/Jakeschincariol/day-trader-skill/blob/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-risk/SKILL.md) |
+| `trader-budget` | MIT | [link](https://github.com/Jakeschincariol/day-trader-skill/blob/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-budget/SKILL.md) |
+| `trader-broker` | MIT | [link](https://github.com/Jakeschincariol/day-trader-skill/blob/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-broker/SKILL.md) |
+| `trader-alerts` | MIT | [link](https://github.com/Jakeschincariol/day-trader-skill/blob/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-alerts/SKILL.md) |
+| `trader-analyst` | MIT | [link](https://github.com/Jakeschincariol/day-trader-skill/blob/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-analyst/SKILL.md) |
+| `trader-pelosi` | MIT | [link](https://github.com/Jakeschincariol/day-trader-skill/blob/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-pelosi/SKILL.md) |
 
 ## Link Verification
 
-All 188 external URLs returned HTTP 200 on 2026-11-05. Verification covers URL
-availability only. It does not verify upstream content, license, security or
+All 199 external URLs returned HTTP 200: 188 were verified on 2026-11-05 and
+the 11 day-trader links on 2026-11-06. Verification covers URL availability
+only. It does not verify upstream content, license, security or
 runtime compatibility.
 
 ## License Summary
