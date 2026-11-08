@@ -4,8 +4,10 @@ This directory separates what this repository authors from what it
 references. Two kinds live here, always clearly labeled:
 
 - `original/` - skills authored and maintained in this repository (**25**)
-- `third-party/` - upstream skills referenced by link only (**199**). No
-  upstream code is bundled; see [`third-party/README.md`](third-party/README.md).
+- `third-party/` - upstream skills referenced by link only (**206**). No
+  upstream code is bundled except the seven reverse-engineering skills copied
+  from `zhaoxuya520/reverse-skill` and `morluto/rea` at your request; see
+  [`third-party/README.md`](third-party/README.md).
 
 ## Original Skills (authored by DracieVajko)
 
@@ -64,6 +66,15 @@ copied here, so licenses and provenance stay with the upstream owners.
 - Complete generated list: [`docs/CATEGORY_INDEX.md`](../docs/CATEGORY_INDEX.md)
 - Raw URL lists: [`catalog/links/`](../catalog/links/)
 - Safety notes before installing external skills: [`docs/SAFETY-AND-LICENSES.md`](../docs/SAFETY-AND-LICENSES.md)
+- Seven reverse-engineering skills copied from `zhaoxuya520/reverse-skill` and
+  `morluto/rea` at your request (content bundled, not link-only):
+  [`apk-reverse`](third-party/apk-reverse/SKILL.md),
+  [`binary-diff`](third-party/binary-diff/SKILL.md),
+  [`ghidra-reverse`](third-party/ghidra-reverse/SKILL.md),
+  [`js-reverse`](third-party/js-reverse/SKILL.md),
+  [`mobile-reverse`](third-party/mobile-reverse/SKILL.md),
+  [`reverse-engineering`](third-party/reverse-engineering/SKILL.md),
+  [`reverse-engineer-anything`](third-party/reverse-engineer-anything/SKILL.md).
 
 A link is not a license grant; check the upstream license before reusing
 external content.
