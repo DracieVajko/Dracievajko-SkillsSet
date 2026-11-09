@@ -1,15 +1,42 @@
-# External Skills (Links Only)
+# Third-Party Skills
 
-Third-party skills are not bundled in this repository. This page lists the
-upstream skills that are referenced by the collection: a curated table with
-purpose and license, followed by a direct link list grouped by repository.
+This page lists the upstream skills referenced by this collection. Two kinds
+live here, always clearly labeled:
 
-The catalog's complete list of 199 external skills is generated at
+- **Link-only skills** - upstream skills referenced by URL only; no content is
+  copied here. Their licenses and provenance stay with the upstream owners.
+  The curated table below (purpose and license) and the direct upstream link
+  list cover these link-only references.
+- **Bundled third-party skills** - seven reverse-engineering skills copied into
+  this repository at your request from `zhaoxuya520/reverse-skill` and
+  `morluto/rea`. Content is bundled, not link-only; see "Bundled third-party
+  skills (local copies)" below for names, locations and provenance.
+
+The catalog's complete list of 199 external link-only skills is generated at
 [`docs/CATEGORY\_INDEX.md`](../../docs/CATEGORY_INDEX.md). All 199 catalog URLs
 returned HTTP 200: 188 were verified on 2026-11-05 and the 11 day-trader links
 on 2026-11-06. The
 [direct upstream link list](#direct-upstream-link-list) below adds the links
 supplied for this collection.
+
+## Bundled third-party skills (local copies)
+
+The following seven reverse-engineering skills are copied into this repository
+(content bundled, not link-only) under `skills/third-party/`:
+
+| Skill | Source | Path |
+|-------|--------|------|
+| `apk-reverse` | `zhaoxuya520/reverse-skill` | [`apk-reverse/SKILL.md`](apk-reverse/SKILL.md) |
+| `binary-diff` | `zhaoxuya520/reverse-skill` | [`binary-diff/SKILL.md`](binary-diff/SKILL.md) |
+| `ghidra-reverse` | `zhaoxuya520/reverse-skill` | [`ghidra-reverse/SKILL.md`](ghidra-reverse/SKILL.md) |
+| `js-reverse` | `zhaoxuya520/reverse-skill` | [`js-reverse/SKILL.md`](js-reverse/SKILL.md) |
+| `mobile-reverse` | `zhaoxuya520/reverse-skill` | [`mobile-reverse/SKILL.md`](mobile-reverse/SKILL.md) |
+| `reverse-engineering` | `zhaoxuya520/reverse-skill` | [`reverse-engineering/SKILL.md`](reverse-engineering/SKILL.md) |
+| `reverse-engineer-anything` | `morluto/rea` | [`reverse-engineer-anything/SKILL.md`](reverse-engineer-anything/SKILL.md) |
+
+These bundled skills are tracked in [`skills/README.md`](../../README.md) and are
+the only local `SKILL.md` bodies permitted under `skills/third-party/`. Every
+other third-party skill in this page remains link-only.
 
 |Upstream skill|Catalog alias|What it is for|License|Original|
 |-|-|-|-|-|

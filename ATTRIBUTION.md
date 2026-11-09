@@ -1,16 +1,23 @@
 # Attribution and Licensing
 
 This is a personal curated collection of AI-agent resources. It contains
-original work and links to third-party work; it does not redistribute
-third-party skill code.
+original work, links to third-party work, and seven bundled third-party
+reverse-engineering skill copies kept under `skills/third-party/`.
 
 ## Authorship
+
+The machine-readable catalog (`catalog/items.json`) tracks:
 
 | Status | Meaning | Count |
 |--------|---------|------:|
 | `original` | Authored and maintained in this repository | 25 |
 | `link-only` | Upstream skill referenced by URL only; no content copied | 199 |
-| **Total** | | **224** |
+| **Catalog total** | | **224** |
+
+In addition to the catalog records, **7 reverse-engineering skills are bundled**
+as local copies under `skills/third-party/` (from `zhaoxuya520/reverse-skill`
+and `morluto/rea`). They are tracked by the skills tooling test and documented
+in `skills/third-party/README.md`, but are not link-only catalog records.
 
 ## Original Skills
 
@@ -44,11 +51,12 @@ third-party skill code.
 
 ## External Skills
 
-All 199 external skills are link-only. The URL lists live in
-[`catalog/links/`](catalog/links/), and the full human-readable index is
-[`docs/CATEGORY_INDEX.md`](docs/CATEGORY_INDEX.md).
+The 199 external skills in the catalog are link-only (referenced by URL; no
+content copied). The URL lists live in [`catalog/links/`](catalog/links/), and
+the full human-readable index is [`docs/CATEGORY_INDEX.md`](docs/CATEGORY_INDEX.md).
 
-The 17 upstream skills that were previously bundled locally are now link-only.
+Seven reverse-engineering skills are additionally bundled as local copies under
+`skills/third-party/` (from `zhaoxuya520/reverse-skill` and `morluto/rea`).
 The catalog keeps one record per upstream URL; `context-engineering` has two
 upstream records because it exists in two repositories.
 
@@ -104,9 +112,10 @@ redistribution permission for the linked file.
 ## Attribution Statement
 
 > This is a personal curated collection of AI-agent resources. Original work is
-> MIT licensed. Third-party skills are referenced by link only and remain the
-> property of their original authors. No third-party skill code is redistributed
-> in this repository.
+> MIT licensed. External (link-only) third-party skills remain the property of
+> their original authors and are not copied here. Seven reverse-engineering
+> skills are additionally bundled as local copies under `skills/third-party/`
+> with provenance recorded in `skills/third-party/README.md`.
 
 ---
 

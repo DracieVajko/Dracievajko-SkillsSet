@@ -12,8 +12,10 @@ Canonical structured catalog of this collection.
   - `pinned-links.txt` - 42 pinned commit/release links.
   - `README.md` - provenance and verification note.
 
-No third-party skill code is stored in this repository. External skills are
-listed by name and link only.
+External skills are listed by name and link only; their code is not stored
+here. Seven reverse-engineering skills are additionally bundled as local copies
+under `skills/third-party/` (from `zhaoxuya520/reverse-skill` and `morluto/rea`)
+and are tracked separately from the link catalog.
 
 ## Authority
 
@@ -37,8 +39,9 @@ error. It never falls back to an empty collection.
 | **Total** | **224** |
 
 The 199 link-only records cover the stable and pinned link files. The catalog
-contains only the 25 original skills and 199 external link-only records; no
-third-party code is stored locally.
+contains 224 records: 25 original and 199 external link-only. Seven
+reverse-engineering skills are additionally bundled as local copies under
+`skills/third-party/` and are tracked separately from the link catalog.
 
 ## Link Verification
 

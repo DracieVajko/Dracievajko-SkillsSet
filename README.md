@@ -12,22 +12,21 @@ frameworks.
 | Looking for | Where |
 |-------------|-------|
 | **My skills (5, original)** | [`skills/original/`](skills/original) - details in the [Original Skills](#original-skills) table below |
-| **Third-party skills (199, links only)** | [`skills/third-party/README.md`](skills/third-party/README.md) or the complete [category index](docs/CATEGORY_INDEX.md) |
+| **Third-party skills (206: 199 link-only + 7 bundled)** | [`skills/third-party/README.md`](skills/third-party/README.md) or the complete [category index](docs/CATEGORY_INDEX.md) |
 | **Machine-readable catalog** | [`catalog/items.json`](catalog/items.json) |
 | **Platform usage (OpenCode / Odysseus / VS Code)** | [Quick Start](#quick-start) below |
 
 ## What Is in the Repository
 
 - **25 original skills** - `ticktick-tasks`, `write-research-projects`, `pen-testing`, `agent-operating-rules`, `repository-hygiene`, `focus-my-energy`, `generate-fresh-ideas`, `get-more-perspectives`, `match-my-writing-style`, `prep-for-meetings`, `beyond-vibe-coding-autonomous-development`, `document-editing-general`, `github-code-documentation`, `penetration-testing-guide`, `generate-markdown-and-docx-documents`, `create-individual-calendar-events-from-earnings-dates-list`, `ds-note-formatter`, `fix-inconclusive-skills`, `generate-findings-report-from-pipeline-logs`, `testing-skills`, `yfinance-ai`, `book-to-skill`, `universal-listing-template`, `enable-wake-on-lan-and-auto-shutdown-on-network-loss-for-ras`, `detailed-source-rewrite-guide`
-- **199 external skills** - links to original upstream files only; no third-party
-  code is bundled
+- **199 external skills** - links to original upstream files only
+- **7 bundled third-party skills** - reverse-engineering skill copies from `zhaoxuya520/reverse-skill` and `morluto/rea`, kept under `skills/third-party/` (content bundled, not link-only)
 - **7 system prompts**, **10 personas** and **3 image prompts**
 - **11 modular rule files** and **9 specialized agent profiles**
 - **OpenCode integration** - modular project template and single-file rules
 - **Catalog and tooling** - machine-readable metadata, link lists, validation and CI
 
-There are no local copies of third-party skills, no archives, no backups and no
-historical catalog views in this repository.
+There are no archives, no backups and no historical catalog views in this repository.
 
 ## Repository Structure
 
@@ -170,10 +169,10 @@ The collection references 199 upstream skills:
 The 30 curated skill links are pinned to upstream commit SHAs; the 12 OmniRoute
 links remain pinned to its release branch.
 
-No upstream implementation is stored here. The 17 upstream skills that were
-previously bundled locally are now link-only; see
-[`skills/third-party/README.md`](skills/third-party/README.md) for their name,
-purpose, license and original link.
+Upstream implementations are referenced by URL. Seven reverse-engineering skills
+are additionally bundled as local content copies from `zhaoxuya520/reverse-skill`
+and `morluto/rea`; see [`skills/third-party/README.md`](skills/third-party/README.md)
+for their names, provenance and local paths.
 
 ## System Prompts
 

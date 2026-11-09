@@ -284,6 +284,21 @@ class IndexerAuthorityTests(BaseTest):
         self.assertEqual(index_path.stat().st_mtime_ns, mtime_before)
 
 
+# Bundled third-party skills explicitly approved in commit a34dd05
+# (copied from zhaoxuya520/reverse-skill and morluto/rea). These are the only
+# SKILL.md bodies allowed under skills/third-party/. Every other entry there
+# must remain an upstream link only.
+APPROVED_THIRD_PARTY_SKILLS = [
+    'apk-reverse/SKILL.md',
+    'binary-diff/SKILL.md',
+    'ghidra-reverse/SKILL.md',
+    'js-reverse/SKILL.md',
+    'mobile-reverse/SKILL.md',
+    'reverse-engineering/SKILL.md',
+    'reverse-engineer-anything/SKILL.md',
+]
+
+
 class CatalogDataTests(unittest.TestCase):
     """Guards the maintained catalog and link data in the real repository."""
 
@@ -354,9 +369,30 @@ class CatalogDataTests(unittest.TestCase):
 
     def test_no_third_party_skill_bodies(self):
         third_party = self.repo / 'skills' / 'third-party'
-        self.assertTrue((third_party / 'README.md').is_file())
-        self.assertEqual(list(third_party.rglob('SKILL.md')), [])
-        self.assertFalse((self.repo / 'skills' / 'adapted').exists())
+        self.assertTrue(third_party.is_dir(), 'skills/third-party/ is missing')
+        self.assertTrue((third_party / 'README.md').is_file(),
+                        'skills/third-party/README.md is missing')
+
+        # Collect every bundled SKILL.md body under skills/third-party/, normalized
+        # to forward-slash relative paths and deterministically sorted so the
+        # comparison is stable across Windows, Linux and macOS regardless of
+        # directory enumeration order or path-separator conventions.
+        found = sorted(
+            skill_md.relative_to(third_party).as_posix()
+            for skill_md in third_party.rglob('SKILL.md')
+            if skill_md.is_file()
+        )
+
+        expected = sorted(APPROVED_THIRD_PARTY_SKILLS)
+        self.assertEqual(
+            found, expected,
+            'skills/third-party/ must contain exactly the seven approved bundled '
+            'SKILL.md bodies and no others: %r' % expected,
+        )
+
+        # Repository policy has not changed: no skills/adapted/ directory.
+        self.assertFalse((self.repo / 'skills' / 'adapted').exists(),
+                         'skills/adapted/ must not exist')
 
     def test_no_link_record_has_a_local_skill_path(self):
         items = self.load('items.json')

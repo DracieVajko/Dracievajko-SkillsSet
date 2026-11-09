@@ -1,7 +1,8 @@
 # Safety and Licenses
 
-- This repository contains original material and links to external skills. It
-  does not bundle third-party implementations.
+- This repository contains original material and links to external skills. Seven
+  reverse-engineering skills are additionally bundled as local copies under
+  `skills/third-party/` (from `zhaoxuya520/reverse-skill` and `morluto/rea`).
 - Respect the license of every upstream project before copying or reusing its
   content. A link is not a license grant.
 - External links were checked for HTTP availability on 2026-10-23. Availability
