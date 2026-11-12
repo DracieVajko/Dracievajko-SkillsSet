@@ -181,31 +181,31 @@ the single-file `AGENTS-combined.md` - not both in the same project.
 
 | Skill | Purpose |
 |-------|---------|
-| [`ticktick-tasks](skills/original/ticktick-tasks/SKILL.md) | Manage TickTick tasks, projects, tags, habits and focus via MCP |
-| [`write-research-projects](skills/original/write-research-projects/SKILL.md) | Deep research, academic writing, source verification and complex projects |
-| [`pen-testing](skills/original/pen-testing/SKILL.md) | Authorized penetration testing methodology: scope, recon, scan, controlled testing, blast radius, report |
-| [`penetration-testing-guide](skills/original/penetration-testing-guide/SKILL.md) | Penetration testing guide and methodology covering 5 phases |
-| [`agent-operating-rules](skills/original/agent-operating-rules/SKILL.md) | Evidence-first project workflow: consent-gated git, verification, coverage checklists, test discipline |
-| [`repository-hygiene](skills/original/repository-hygiene/SKILL.md) | Repository cleanup: classification, temporary files, generated artifacts, secrets, commit preparation |
-| [`beyond-vibe-coding-autonomous-development](skills/original/beyond-vibe-coding-autonomous-development/SKILL.md) | Intent-driven AI-era software development: prompt engineering, the 70% problem, code review, autonomous agents |
-| [`document-editing-general](skills/original/document-editing-general/SKILL.md) | Create, read, edit and manage documents (markdown, text, code) in an editor panel |
-| [`github-code-documentation](skills/original/github-code-documentation/SKILL.md) | Detailed descriptions and high-quality READMEs for scripts and programs published to GitHub |
-| [`generate-markdown-and-docx-documents](skills/original/generate-markdown-and-docx-documents/SKILL.md) | Produce a Markdown file and a Word (DOCX) file from an outline |
-| [`detailed-source-rewrite-guide](skills/original/detailed-source-rewrite-guide/SKILL.md) | Rewrite an article or paper into a structured, step-by-step guide |
-| [`book-to-skill](skills/original/book-to-skill/SKILL.md) | Convert a book or article into a reusable skill |
-| [`ds-note-formatter](skills/original/ds-note-formatter/SKILL.md) | Format content for Synology DS Note / Note Station |
-| [`create-individual-calendar-events-from-earnings-dates-list](skills/original/create-individual-calendar-events-from-earnings-dates-list/SKILL.md) | One calendar event per ticker, with company name and reminder |
-| [`yfinance-ai](skills/original/yfinance-ai/SKILL.md) | Yahoo Finance integration: stocks, crypto, forex, commodities and ETFs |
-| [`enable-wake-on-lan-and-auto-shutdown-on-network-loss-for-ras](skills/original/enable-wake-on-lan-and-auto-shutdown-on-network-loss-for-ras/SKILL.md) | Wake-on-LAN and auto-shutdown on network loss for a Raspberry Pi |
-| [`fix-inconclusive-skills](skills/original/fix-inconclusive-skills/SKILL.md) | Find and fix skills marked as inconclusive because of missing tools |
-| [`generate-findings-report-from-pipeline-logs](skills/original/generate-findings-report-from-pipeline-logs/SKILL.md) | Verify that generated files contain every expected section, and summarize discrepancies |
-| [`testing-skills](skills/original/testing-skills/SKILL.md) | Test skills with pressure scenarios and rationalization tables |
-| [`universal-listing-template](skills/original/universal-listing-template/SKILL.md) | Generate structured lists, inventories and tables |
-| [`focus-my-energy](skills/original/focus-my-energy/SKILL.md) | Classify tasks by cognitive demand and recommend what to work on now |
-| [`generate-fresh-ideas](skills/original/generate-fresh-ideas/SKILL.md) | Remix source material into five distinct content angles |
-| [`get-more-perspectives](skills/original/get-more-perspectives/SKILL.md) | Stress-test a decision across a five-advisor panel |
-| [`match-my-writing-style](skills/original/match-my-writing-style/SKILL.md) | Draft, reply or rewrite in your own voice, learned from your samples |
-| [`prep-for-meetings](skills/original/prep-for-meetings/SKILL.md) | Pre-meeting brief and a 30-second glance card from your Workspace sources |
+| [`ticktick-tasks`](skills/original/ticktick-tasks/SKILL.md) | Manage TickTick tasks, projects, tags, habits and focus via MCP |
+| [`write-research-projects`](skills/original/write-research-projects/SKILL.md) | Deep research, academic writing, source verification and complex projects |
+| [`pen-testing`](skills/original/pen-testing/SKILL.md) | Authorized penetration testing methodology: scope, recon, scan, controlled testing, blast radius, report |
+| [`penetration-testing-guide`](skills/original/penetration-testing-guide/SKILL.md) | Penetration testing guide and methodology covering 5 phases |
+| [`agent-operating-rules`](skills/original/agent-operating-rules/SKILL.md) | Evidence-first project workflow: consent-gated git, verification, coverage checklists, test discipline |
+| [`repository-hygiene`](skills/original/repository-hygiene/SKILL.md) | Repository cleanup: classification, temporary files, generated artifacts, secrets, commit preparation |
+| [`beyond-vibe-coding-autonomous-development`](skills/original/beyond-vibe-coding-autonomous-development/SKILL.md) | Intent-driven AI-era software development: prompt engineering, the 70% problem, code review, autonomous agents |
+| [`document-editing-general`](skills/original/document-editing-general/SKILL.md) | Create, read, edit and manage documents (markdown, text, code) in an editor panel |
+| [`github-code-documentation`](skills/original/github-code-documentation/SKILL.md) | Detailed descriptions and high-quality READMEs for scripts and programs published to GitHub |
+| [`generate-markdown-and-docx-documents`](skills/original/generate-markdown-and-docx-documents/SKILL.md) | Produce a Markdown file and a Word (DOCX) file from an outline |
+| [`detailed-source-rewrite-guide`](skills/original/detailed-source-rewrite-guide/SKILL.md) | Rewrite an article or paper into a structured, step-by-step guide |
+| [`book-to-skill`](skills/original/book-to-skill/SKILL.md) | Convert a book or article into a reusable skill |
+| [`ds-note-formatter`](skills/original/ds-note-formatter/SKILL.md) | Format content for Synology DS Note / Note Station |
+| [`create-individual-calendar-events-from-earnings-dates-list`](skills/original/create-individual-calendar-events-from-earnings-dates-list/SKILL.md) | One calendar event per ticker, with company name and reminder |
+| [`yfinance-ai`](skills/original/yfinance-ai/SKILL.md) | Yahoo Finance integration: stocks, crypto, forex, commodities and ETFs |
+| [`enable-wake-on-lan-and-auto-shutdown-on-network-loss-for-ras`](skills/original/enable-wake-on-lan-and-auto-shutdown-on-network-loss-for-ras/SKILL.md) | Wake-on-LAN and auto-shutdown on network loss for a Raspberry Pi |
+| [`fix-inconclusive-skills`](skills/original/fix-inconclusive-skills/SKILL.md) | Find and fix skills marked as inconclusive because of missing tools |
+| [`generate-findings-report-from-pipeline-logs`](skills/original/generate-findings-report-from-pipeline-logs/SKILL.md) | Verify that generated files contain every expected section, and summarize discrepancies |
+| [`testing-skills`](skills/original/testing-skills/SKILL.md) | Test skills with pressure scenarios and rationalization tables |
+| [`universal-listing-template`](skills/original/universal-listing-template/SKILL.md) | Generate structured lists, inventories and tables |
+| [`focus-my-energy`](skills/original/focus-my-energy/SKILL.md) | Classify tasks by cognitive demand and recommend what to work on now |
+| [`generate-fresh-ideas`](skills/original/generate-fresh-ideas/SKILL.md) | Remix source material into five distinct content angles |
+| [`get-more-perspectives`](skills/original/get-more-perspectives/SKILL.md) | Stress-test a decision across a five-advisor panel |
+| [`match-my-writing-style`](skills/original/match-my-writing-style/SKILL.md) | Draft, reply or rewrite in your own voice, learned from your samples |
+| [`prep-for-meetings`](skills/original/prep-for-meetings/SKILL.md) | Pre-meeting brief and a 30-second glance card from your Workspace sources |
 
 ### Skills by Task
 
