@@ -19,7 +19,7 @@ The catalog's complete list of external link-only skills is generated at
 
 | What | Count | Where |
 |------|------:|-------|
-| External link-only skills | 199 | referenced by URL; no content copied |
+| External link-only skills | 204 | referenced by URL; no content copied |
 | Bundled third-party skills | 7 | `skills/third-party/` - local copies of upstream `SKILL.md` files |
 
 <!-- counts:end -->
@@ -322,3 +322,15 @@ confirmed through the raw URLs.
 |`trader-alerts`|[link](https://github.com/Jakeschincariol/day-trader-skill/blob/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-alerts/SKILL.md)|
 |`trader-analyst`|[link](https://github.com/Jakeschincariol/day-trader-skill/blob/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-analyst/SKILL.md)|
 |`trader-pelosi`|[link](https://github.com/Jakeschincariol/day-trader-skill/blob/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-pelosi/SKILL.md)|
+
+### imbad0202/academic-research-skills (5)
+
+|Skill|Original|
+|-|-|
+|deep-research|[link](https://github.com/imbad0202/academic-research-skills/blob/c67a7be53f23d9dbba4030bbcd6f5ccfeda3afa9/deep-research/SKILL.md)|
+|cademic-paper|[link](https://github.com/imbad0202/academic-research-skills/blob/c67a7be53f23d9dbba4030bbcd6f5ccfeda3afa9/academic-paper/SKILL.md)|
+|cademic-paper-reviewer|[link](https://github.com/imbad0202/academic-research-skills/blob/c67a7be53f23d9dbba4030bbcd6f5ccfeda3afa9/academic-paper-reviewer/SKILL.md)|
+|cademic-pipeline|[link](https://github.com/imbad0202/academic-research-skills/blob/c67a7be53f23d9dbba4030bbcd6f5ccfeda3afa9/academic-pipeline/SKILL.md)|
+|sr-screener|[link](https://github.com/imbad0202/academic-research-skills/blob/c67a7be53f23d9dbba4030bbcd6f5ccfeda3afa9/sr-screener/SKILL.md)|
+
+> Claude Code plugin (not OpenCode-native). Covers deep research, source verification, literature review, systematic review/meta-analysis, paper writing and peer review. Installed globally into OpenCode as a single deep-research skill folder bundling the repo so relative shared/ references resolve; other sub-skills remain reachable via that folder.
