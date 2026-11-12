@@ -26,6 +26,8 @@ Exit code 0 = no errors (warnings allowed).
 Exit code 1 = at least one validation error.
 """
 
+from __future__ import annotations
+
 import argparse
 import sys
 from collections import defaultdict
@@ -67,14 +69,14 @@ SKILL_LINES_DOC_LIMIT = 500        # documented guidance ("Keep SKILL.md under 5
 
 # --- discovery -------------------------------------------------------------
 
-def resolve_root(cli_root):
+def resolve_root(cli_root: str | None) -> Path:
     """Resolve the repository root, independent of the current directory."""
     if cli_root:
         return Path(cli_root).expanduser().resolve()
     return Path(__file__).resolve().parent.parent
 
 
-def iter_skill_files(root):
+def iter_skill_files(root: Path) -> tuple[list[Path], list[str]]:
     """Yield SKILL.md files under the configured roots, deterministically.
 
     Skips excluded directories and symlinks so discovery cannot escape the
@@ -99,7 +101,7 @@ def iter_skill_files(root):
 
 # --- validation ------------------------------------------------------------
 
-def parse_frontmatter(skill_md):
+def parse_frontmatter(skill_md: Path) -> tuple[dict | None, str, str | None]:
     """Read a SKILL.md and return (frontmatter, content, error_message)."""
     try:
         content = skill_md.read_text(encoding='utf-8')
@@ -123,7 +125,11 @@ def parse_frontmatter(skill_md):
     return frontmatter, content, None
 
 
-def validate_skill(skill_md, frontmatter, text):
+def validate_skill(
+    skill_md: Path,
+    frontmatter: dict,
+    text: str,
+) -> tuple[list[str], list[str]]:
     """Return (errors, warnings) for one skill."""
     errors = []
     warnings = []
@@ -178,7 +184,7 @@ def validate_skill(skill_md, frontmatter, text):
     return errors, warnings
 
 
-def check_name_collisions(records):
+def check_name_collisions(records: list[dict]) -> tuple[list[str], list[str]]:
     """Return (errors, warnings) for duplicate skill names.
 
     A record is a dict with keys: name, scope, path.
@@ -212,7 +218,7 @@ def check_name_collisions(records):
 
 # --- entry point -----------------------------------------------------------
 
-def main(argv=None):
+def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
         '--root', default=None,
@@ -266,7 +272,7 @@ def main(argv=None):
     return 0
 
 
-def _scope(root, skill_md):
+def _scope(root: Path, skill_md: Path) -> str:
     """Discovery scope = skill bucket under the repo root (e.g. skills/third-party)."""
     rel = skill_md.relative_to(root)
     root_name = rel.parts[0] if rel.parts else ''

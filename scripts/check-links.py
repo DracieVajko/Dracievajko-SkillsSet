@@ -61,6 +61,8 @@ def check_url(url: str, timeout: float) -> tuple[str, int | None, str]:
         headers={'User-Agent': USER_AGENT, 'Range': 'bytes=0-0'},
     )
     try:
+        # nosec B310 - the scheme is validated against ALLOWED_SCHEMES above,
+        # so only http and https URLs ever reach the network layer.
         with urllib.request.urlopen(request, timeout=timeout) as response:
             return url, response.status, ''
     except urllib.error.HTTPError as exc:

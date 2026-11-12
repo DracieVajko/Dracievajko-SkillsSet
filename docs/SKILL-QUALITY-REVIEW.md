@@ -14,7 +14,7 @@ What was actually run and observed:
 | Tooling tests | `python -m unittest discover -s scripts -p "test_*.py"` | 69 tests, OK (34 before the tooling work, 35 added) |
 | Markdown links | `python scripts/check-markdown-links.py` | OK: 0 broken relative links, 6 vendored upstream links not bundled |
 | External URLs | `python scripts/check-links.py` | 199 ok, 0 warnings, 0 failures on 2026-11-12 |
-| Code health | `desloppify scan --path .` | baseline captured; mechanical findings fixed, see [Tooling health](#tooling-health) |
+| Code health | `desloppify scan --path .` | objective score 51.4 → **55.4**; all T1 and T2 items cleared; the strict score (13.5) reflects only the mechanical detectors, because the 20 subjective dimensions are still unassessed |
 
 In addition, a section-coverage scan of all 25 `SKILL.md` files (heading census,
 calibrated by manual spot reads) informed the structural findings below.
@@ -38,6 +38,19 @@ of smell-level findings. Resolved in this branch:
 Two findings were accepted as false positives with an attestation: the
 `sys.exit()` calls are all directly under an `if __name__ == '__main__'`
 guard, and the duplicated link-file parsing is the cost of standalone tools.
+
+Two more items are deliberately left open:
+
+| Finding | Why it stays |
+|---------|-------------|
+| `B310` in `check-links.py` still reported after the `urlparse` guard | The static analyzer cannot see the scheme whitelist that runs before `urlopen`. The control is real and is also marked with `# nosec B310` and a justification comment, so the finding was suppressed with an attestation rather than left as open debt |
+| `test_script_units.py` reported as a large file (structural, T3) | It is a test module whose classes map one-to-one onto the tooling modules. Splitting it would scatter the fixtures without making the suite easier to run, so the finding is accepted rather than chased |
+
+The **test health** dimension stays low because the analyzer counts static
+imports: the new unit tests load the tooling through `importlib`, which it
+cannot follow. The modules are covered by direct function-level tests
+(`scripts/test_script_units.py`) as well as the subprocess-level tests
+(`scripts/test_skills_tooling.py`).
 
 ## Summary
 
