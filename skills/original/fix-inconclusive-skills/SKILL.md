@@ -4,7 +4,7 @@ description: "Identify and fix skills marked as inconclusive due to missing tool
 version: 1.0.0
 author: DracieVajko
 tags: [skill-management, tool-usage, systematic-review, problem-solving]
-category: dev
+category: development
 source_repository: https://github.com/DracieVajko/Dracievajko-SkillsSet
 source_file: skills/original/fix-inconclusive-skills/SKILL.md
 license: MIT

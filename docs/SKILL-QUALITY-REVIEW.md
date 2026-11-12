@@ -46,7 +46,7 @@ are used in frontmatter but were missing from both the validator's
 
 | In-use label | Skills | Notes |
 |--------------|--------|-------|
-| `dev` | `beyond-vibe-coding-autonomous-development`, `document-editing-general`, `fix-inconclusive-skills`, `generate-findings-report-from-pipeline-logs`, `github-code-documentation` (+ others caught by the same warning) | Legacy shorthand for the documented `development` |
+| `dev` | `beyond-vibe-coding-autonomous-development`, `document-editing-general`, `fix-inconclusive-skills`, `generate-findings-report-from-pipeline-logs`, `github-code-documentation` | Legacy shorthand for the documented `development` |
 | `documents` | `detailed-source-rewrite-guide`, `generate-markdown-and-docx-documents` | Mirrors `instructions/modules/documents.md` |
 | `knowledge` | `book-to-skill` | No module equivalent |
 | `engineering-3d` | `enable-wake-on-lan-and-auto-shutdown-on-network-loss-for-ras` | Mirrors `instructions/modules/engineering-3d.md` |

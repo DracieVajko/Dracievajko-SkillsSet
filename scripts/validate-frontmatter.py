@@ -51,10 +51,13 @@ EXCLUDE_DIR_NAMES = {
 REQUIRED_FIELDS = ('name', 'description')
 
 # Reasonable superset of categories used by SKILL.md files and the catalog.
+# Mirrors the documented table in docs/SKILL_SPEC.md; keep both lists aligned.
 KNOWN_CATEGORIES = {
     'core', 'development', 'design', 'ai-ml', '3d-blender',
-    'productivity', 'web-automation', 'thinking-frameworks', 'writing-docs',
-    'third-party', 'custom', 'investing', 'research', 'local-ai-infra',
+    'engineering-3d', 'productivity', 'web-automation',
+    'thinking-frameworks', 'writing-docs', 'documents', 'security',
+    'testing', 'knowledge', 'third-party', 'custom', 'investing',
+    'research', 'local-ai-infra',
 }
 
 DESCRIPTION_STYLE_ADVISORY = 160   # repository style

@@ -4,7 +4,7 @@ description: "Verify that all expected sections and data are present in generate
 version: 1.0.0
 author: DracieVajko
 tags: [log-analysis, report-generation, markdown, file-comparison, automation]
-category: dev
+category: development
 source_repository: https://github.com/DracieVajko/Dracievajko-SkillsSet
 source_file: skills/original/generate-findings-report-from-pipeline-logs/SKILL.md
 license: MIT

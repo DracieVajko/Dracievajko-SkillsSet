@@ -4222,7 +4222,7 @@
     {
         "id":  "original/beyond-vibe-coding-autonomous-development",
         "name":  "beyond-vibe-coding-autonomous-development",
-        "category":  "dev",
+        "category":  "development",
         "repository":  "https://github.com/DracieVajko/Dracievajko-SkillsSet",
         "branch":  "master",
         "path":  "skills/original/beyond-vibe-coding-autonomous-development/SKILL.md",
@@ -4244,7 +4244,7 @@
     {
         "id":  "original/document-editing-general",
         "name":  "document-editing-general",
-        "category":  "dev",
+        "category":  "development",
         "repository":  "https://github.com/DracieVajko/Dracievajko-SkillsSet",
         "branch":  "master",
         "path":  "skills/original/document-editing-general/SKILL.md",
@@ -4266,7 +4266,7 @@
     {
         "id":  "original/github-code-documentation",
         "name":  "github-code-documentation",
-        "category":  "dev",
+        "category":  "development",
         "repository":  "https://github.com/DracieVajko/Dracievajko-SkillsSet",
         "branch":  "master",
         "path":  "skills/original/github-code-documentation/SKILL.md",
@@ -4376,7 +4376,7 @@
     {
         "id":  "original/fix-inconclusive-skills",
         "name":  "fix-inconclusive-skills",
-        "category":  "dev",
+        "category":  "development",
         "repository":  "https://github.com/DracieVajko/Dracievajko-SkillsSet",
         "branch":  "master",
         "path":  "skills/original/fix-inconclusive-skills/SKILL.md",
@@ -4398,7 +4398,7 @@
     {
         "id":  "original/generate-findings-report-from-pipeline-logs",
         "name":  "generate-findings-report-from-pipeline-logs",
-        "category":  "dev",
+        "category":  "development",
         "repository":  "https://github.com/DracieVajko/Dracievajko-SkillsSet",
         "branch":  "master",
         "path":  "skills/original/generate-findings-report-from-pipeline-logs/SKILL.md",
