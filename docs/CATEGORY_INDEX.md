@@ -6,7 +6,7 @@ Check duplicated rule copies with `python scripts/check-sync.py`.
 
 Original skills are discovered on disk. External link skills are reported as upstream URLs only;
 bundled third-party skills are tracked under skills/third-party/. Link availability was verified on
-2026-11-05 - see `catalog/links/README.md`.
+2026-11-12 - see `catalog/links/README.md`.
 
 Authoritative source per section:
 
