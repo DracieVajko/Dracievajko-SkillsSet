@@ -3,6 +3,10 @@ name: mobile-reverse
 description: Use for authorized Android or iOS application reverse engineering and security testing, including APK or IPA analysis, runtime instrumentation, SSL pinning, and platform protection checks.
 ---
 
+> **Bundled third-party copy.** Upstream: [zhaoxuya520/reverse-skill](https://github.com/zhaoxuya520/reverse-skill) - MIT, Copyright (c) 2026 zhaoxuya520.
+> Vendored unchanged apart from this notice; the full license text is in
+> [docs/THIRD-PARTY-LICENSES.md](../../../docs/THIRD-PARTY-LICENSES.md).
+
 # Mobile Reverse Engineering
 
 ## ACTION REQUIRED（读完后立刻执行）

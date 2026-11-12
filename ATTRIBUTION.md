@@ -8,16 +8,23 @@ reverse-engineering skill copies kept under `skills/third-party/`.
 
 The machine-readable catalog (`catalog/items.json`) tracks:
 
-| Status | Meaning | Count |
-|--------|---------|------:|
-| `original` | Authored and maintained in this repository | 25 |
-| `link-only` | Upstream skill referenced by URL only; no content copied | 199 |
-| **Catalog total** | | **224** |
+<!-- counts:start -->
+
+| What | Count | Where |
+|------|------:|-------|
+| Catalog records with `authorship: original` | 25 |  |
+| Catalog records with `authorship: link-only` | 199 |  |
+| Catalog records | 224 | `catalog/items.json` |
+| Bundled third-party skills | 7 | `skills/third-party/` - local copies of upstream `SKILL.md` files |
+
+<!-- counts:end -->
 
 In addition to the catalog records, **7 reverse-engineering skills are bundled**
 as local copies under `skills/third-party/` (from `zhaoxuya520/reverse-skill`
 and `morluto/rea`). They are tracked by the skills tooling test and documented
 in `skills/third-party/README.md`, but are not link-only catalog records.
+Their upstream MIT notices are reproduced in
+[docs/THIRD-PARTY-LICENSES.md](docs/THIRD-PARTY-LICENSES.md).
 
 ## Original Skills
 
@@ -93,29 +100,37 @@ upstream records because it exists in two repositories.
 
 ## Link Verification
 
-All 199 external URLs returned HTTP 200: 188 were verified on 2026-11-05 and
-the 11 day-trader links on 2026-11-06. Verification covers URL availability
-only. It does not verify upstream content, license, security or
-runtime compatibility.
+All 199 external URLs returned HTTP 200 when checked on 2026-11-12.
+Verification covers URL availability only. It does not verify upstream
+content, license, security or runtime compatibility.
 
 ## License Summary
 
+The repository holds three distinct kinds of content. They are never the same
+category and never share a license.
+
 | Content | License | Applies To |
 |---------|---------|------------|
-| Original skills, system prompts, personas, rules, documentation and scripts | MIT | Material authored by DracieVajko |
-| External skills | Upstream licenses | Linked files only; no content copied |
+| Original skills, system prompts, personas, rules, documentation and scripts | MIT (© 2026 DracieVajko) | Material authored by DracieVajko |
+| External skills | Upstream licenses | 199 link-only records; referenced by URL, no content copied |
+| Bundled third-party skills | Upstream MIT licenses (© 2026 zhaoxuya520, © 2026 morluto) | 7 local copies under `skills/third-party/`; full text in [docs/THIRD-PARTY-LICENSES.md](docs/THIRD-PARTY-LICENSES.md) |
 
 The root [MIT license](LICENSE) applies only to original content. No blanket
 license is applied to external content. A link does not grant a license or
-redistribution permission for the linked file.
+redistribution permission for the linked file. A bundled copy is a
+redistribution, so the upstream copyright notice and license terms travel with
+it - see [docs/THIRD-PARTY-LICENSES.md](docs/THIRD-PARTY-LICENSES.md).
 
 ## Attribution Statement
 
 > This is a personal curated collection of AI-agent resources. Original work is
-> MIT licensed. External (link-only) third-party skills remain the property of
-> their original authors and are not copied here. Seven reverse-engineering
-> skills are additionally bundled as local copies under `skills/third-party/`
-> with provenance recorded in `skills/third-party/README.md`.
+> MIT licensed. Most external third-party skills remain the property of their
+> original authors and are referenced by URL only - no content is copied for
+> those. Separately, seven reverse-engineering skills are bundled as local
+> copies under `skills/third-party/`; their upstream MIT copyright notices and
+> license texts are reproduced in
+> [docs/THIRD-PARTY-LICENSES.md](docs/THIRD-PARTY-LICENSES.md), and their
+> provenance is recorded in `skills/third-party/README.md`.
 
 ---
 

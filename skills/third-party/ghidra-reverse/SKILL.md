@@ -3,6 +3,10 @@ name: ghidra-reverse
 description: Use for free/open reverse engineering with Ghidra (headless or GUI), including decompile, cross-refs, and optional Ghidra MCP workflows when IDA is unavailable.
 ---
 
+> **Bundled third-party copy.** Upstream: [zhaoxuya520/reverse-skill](https://github.com/zhaoxuya520/reverse-skill) - MIT, Copyright (c) 2026 zhaoxuya520.
+> Vendored unchanged apart from this notice; the full license text is in
+> [docs/THIRD-PARTY-LICENSES.md](../../../docs/THIRD-PARTY-LICENSES.md).
+
 # Ghidra Reverse Engineering
 
 ## ACTION REQUIRED（读完后立刻执行）

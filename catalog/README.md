@@ -32,22 +32,29 @@ error. It never falls back to an empty collection.
 
 ## Counts
 
-| Authorship | Count |
-|------------|-------|
-| `original` | 25 |
-| `link-only` | 199 |
-| **Total** | **224** |
+<!-- counts:start -->
 
-The 199 link-only records cover the stable and pinned link files. The catalog
-contains 224 records: 25 original and 199 external link-only. Seven
-reverse-engineering skills are additionally bundled as local copies under
-`skills/third-party/` and are tracked separately from the link catalog.
+| What | Count | Where |
+|------|------:|-------|
+| Catalog records | 224 | `catalog/items.json` |
+| Catalog records with `authorship: original` | 25 |  |
+| Catalog records with `authorship: link-only` | 199 |  |
+| Stable-branch links | 157 | `catalog/links/skill-links.txt` |
+| Pinned links | 42 | `catalog/links/pinned-links.txt` |
+| Bundled third-party skills | 7 | `skills/third-party/` - local copies of upstream `SKILL.md` files |
+
+<!-- counts:end -->
+
+The link-only records cover the stable and the pinned link files. The
+reverse-engineering skills that are bundled as local copies under
+`skills/third-party/` are tracked separately from the link catalog and are not
+part of the link-only count.
 
 ## Link Verification
 
-All 199 external URLs returned HTTP 200: 188 were verified on 2026-11-05 and
-the 11 day-trader links on 2026-11-06. The check covers URL availability only.
-It does not verify upstream content, license, security or runtime compatibility.
+All 199 external URLs returned HTTP 200 when checked on 2026-11-12. The check
+covers URL availability only. It does not verify upstream content, license,
+security or runtime compatibility.
 
 ## Adding an External Skill
 

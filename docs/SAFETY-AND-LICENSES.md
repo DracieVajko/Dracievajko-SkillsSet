@@ -5,7 +5,7 @@
   `skills/third-party/` (from `zhaoxuya520/reverse-skill` and `morluto/rea`).
 - Respect the license of every upstream project before copying or reusing its
   content. A link is not a license grant.
-- External links were checked for HTTP availability on 2026-10-23. Availability
+- External links were checked for HTTP availability on 2026-11-12. Availability
   is not a security audit, a license review or a compatibility test.
 - Before installing an external skill, review its instructions, scripts,
   permissions and network data transmission.

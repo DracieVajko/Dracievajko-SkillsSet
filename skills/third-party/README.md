@@ -12,10 +12,19 @@ live here, always clearly labeled:
   `morluto/rea`. Content is bundled, not link-only; see "Bundled third-party
   skills (local copies)" below for names, locations and provenance.
 
-The catalog's complete list of 199 external link-only skills is generated at
-[`docs/CATEGORY\_INDEX.md`](../../docs/CATEGORY_INDEX.md). All 199 catalog URLs
-returned HTTP 200: 188 were verified on 2026-11-05 and the 11 day-trader links
-on 2026-11-06. The
+The catalog's complete list of external link-only skills is generated at
+[`docs/CATEGORY\_INDEX.md`](../../docs/CATEGORY_INDEX.md).
+
+<!-- counts:start -->
+
+| What | Count | Where |
+|------|------:|-------|
+| External link-only skills | 199 | referenced by URL; no content copied |
+| Bundled third-party skills | 7 | `skills/third-party/` - local copies of upstream `SKILL.md` files |
+
+<!-- counts:end -->
+
+All catalog URLs returned HTTP 200 when checked on 2026-11-12. The
 [direct upstream link list](#direct-upstream-link-list) below adds the links
 supplied for this collection.
 
@@ -37,6 +46,15 @@ The following seven reverse-engineering skills are copied into this repository
 These bundled skills are tracked in [`skills/README.md`](../../README.md) and are
 the only local `SKILL.md` bodies permitted under `skills/third-party/`. Every
 other third-party skill in this page remains link-only.
+
+Each bundled skill ships with the companion files it links to inside its own
+directory (`references/` and sibling notes), so it works without a network
+round trip. A few upstream links point at sibling skills that are **not**
+bundled here (for example `dotnet-reverse`, `field-journal` and `ops/`); they
+are reported as warnings by `scripts/check-markdown-links.py` and can be
+fetched from the upstream repository. The upstream MIT notices for both
+projects are reproduced in
+[`docs/THIRD-PARTY-LICENSES.md`](../../docs/THIRD-PARTY-LICENSES.md).
 
 |Upstream skill|Catalog alias|What it is for|License|Original|
 |-|-|-|-|-|
@@ -80,8 +98,7 @@ collection, grouped by repository. It includes entries that also appear in the
 curated table above. Local-only skills without a public `SKILL.md` are
 intentionally omitted.
 
-All 95 links were verified: the original 84 on 2026-11-05 and the 11 day-trader
-links on 2026-11-06. Every target returned HTTP 200 from
+All 95 links were verified on 2026-11-12. Every target returned HTTP 200 from
 `raw.githubusercontent.com` and contains `SKILL.md` front matter. GitHub's web
 interface rate-limited some bulk checks with HTTP 429; the underlying files were
 confirmed through the raw URLs.

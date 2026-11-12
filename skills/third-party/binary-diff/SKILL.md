@@ -7,6 +7,10 @@ description: |
   触发关键词：符号迁移、bindiff、跨版本、PDB 缺失、函数偏移迁移、symbol migration、binary diff、版本对比。
 ---
 
+> **Bundled third-party copy.** Upstream: [zhaoxuya520/reverse-skill](https://github.com/zhaoxuya520/reverse-skill) - MIT, Copyright (c) 2026 zhaoxuya520.
+> Vendored unchanged apart from this notice; the full license text is in
+> [docs/THIRD-PARTY-LICENSES.md](../../../docs/THIRD-PARTY-LICENSES.md).
+
 # 跨版本符号迁移 (Binary Diff)
 
 ## ACTION REQUIRED（读完后立刻执行）
