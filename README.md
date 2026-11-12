@@ -11,9 +11,10 @@ frameworks.
 
 | Looking for | Where |
 |-------------|-------|
-| **My skills (5, original)** | [`skills/original/`](skills/original) - details in the [Original Skills](#original-skills) table below |
+| **My skills (25, original)** | [`skills/original/`](skills/original) - details in the [Original Skills](#original-skills) table below |
 | **Third-party skills (206: 199 link-only + 7 bundled)** | [`skills/third-party/README.md`](skills/third-party/README.md) or the complete [category index](docs/CATEGORY_INDEX.md) |
 | **Machine-readable catalog** | [`catalog/items.json`](catalog/items.json) |
+| **Support the project** | [GitHub Sponsors](https://github.com/sponsors/DracieVajko) - see [Funding](#funding) |
 | **Platform usage (OpenCode / Odysseus / VS Code)** | [Quick Start](#quick-start) below |
 
 ## What Is in the Repository
@@ -21,7 +22,7 @@ frameworks.
 - **25 original skills** - `ticktick-tasks`, `write-research-projects`, `pen-testing`, `agent-operating-rules`, `repository-hygiene`, `focus-my-energy`, `generate-fresh-ideas`, `get-more-perspectives`, `match-my-writing-style`, `prep-for-meetings`, `beyond-vibe-coding-autonomous-development`, `document-editing-general`, `github-code-documentation`, `penetration-testing-guide`, `generate-markdown-and-docx-documents`, `create-individual-calendar-events-from-earnings-dates-list`, `ds-note-formatter`, `fix-inconclusive-skills`, `generate-findings-report-from-pipeline-logs`, `testing-skills`, `yfinance-ai`, `book-to-skill`, `universal-listing-template`, `enable-wake-on-lan-and-auto-shutdown-on-network-loss-for-ras`, `detailed-source-rewrite-guide`
 - **199 external skills** - links to original upstream files only
 - **7 bundled third-party skills** - reverse-engineering skill copies from `zhaoxuya520/reverse-skill` and `morluto/rea`, kept under `skills/third-party/` (content bundled, not link-only)
-- **7 system prompts**, **10 personas** and **3 image prompts**
+- **8 system prompts**, **10 personas** and **3 image prompts**
 - **11 modular rule files** and **9 specialized agent profiles**
 - **OpenCode integration** - modular project template and single-file rules
 - **Catalog and tooling** - machine-readable metadata, link lists, validation and CI
@@ -159,6 +160,50 @@ The research skill has two companion system prompts:
 - [`deep-research-writing-long.md`](prompts/system/deep-research-writing-long.md) - self-contained long prompt
 - [`deep-research-writing-short.md`](prompts/system/deep-research-writing-short.md) - compact prompt (under 1500 characters)
 
+## Skills by Task
+
+Not every skill fits every job. This guide maps the collection's resources to
+common kinds of work. Only skills, personas, modules and profiles that exist in
+this repository are listed.
+
+| Area | Original skills | Personas, prompts and rules |
+|------|-----------------|----------------------------|
+| **Research** | `write-research-projects`, `detailed-source-rewrite-guide`, `book-to-skill`, `generate-findings-report-from-pipeline-logs` | `orion-researcher` persona; `deep-research-writing-long.md` / `-short.md` prompts; `research-learning` module; `research-agent` profile |
+| **Software engineering** | `beyond-vibe-coding-autonomous-development`, `github-code-documentation`, `document-editing-general`, `generate-markdown-and-docx-documents`, `enable-wake-on-lan-and-auto-shutdown-on-network-loss-for-ras`, `fix-inconclusive-skills` | `bruno-coder` persona; `coding`, `debugging`, `testing` modules; `coding-agent`, `debugging-agent` profiles |
+| **Architecture** | `get-more-perspectives` (trade-off stress tests) | `atlas-architect` persona; `planning` module; `planning-agent` profile |
+| **Critical thinking** | `get-more-perspectives`, `generate-fresh-ideas` | `victor-thinker` persona; `thinking-frameworks` external skill category |
+| **Writing** | `match-my-writing-style`, `detailed-source-rewrite-guide`, `ds-note-formatter`, `generate-markdown-and-docx-documents` | `elias-writer` persona |
+| **Decision-making** | `get-more-perspectives`, `focus-my-energy` | `marcus-advisor` persona |
+| **Financial analysis** | `yfinance-ai`, `create-individual-calendar-events-from-earnings-dates-list` | `adrian-investor` persona; `investing` module; `investing-agent` profile; day-trader external skills (link-only) |
+| **Security and penetration testing** | `pen-testing`, `penetration-testing-guide` | `security` module |
+| **Task management and productivity** | `ticktick-tasks`, `universal-listing-template`, `focus-my-energy`, `prep-for-meetings`, `match-my-writing-style`, `ds-note-formatter`, `create-individual-calendar-events-from-earnings-dates-list` | `jericho-chef` persona for cooking and meal planning |
+| **Repository upkeep** | `repository-hygiene`, `agent-operating-rules`, `testing-skills`, `fix-inconclusive-skills`, `generate-findings-report-from-pipeline-logs` | `repository-hygiene.md` system prompt |
+
+External (link-only) skills extend these areas - for example the `deep-research`
+and `web-research` links for research, `frontend-design-systems` for frontend
+work, or the day-trader suite for trading workflows. See
+[docs/CATEGORY_INDEX.md](docs/CATEGORY_INDEX.md) for the full external list.
+
+## Compatibility
+
+The collection is authored for OpenCode and portable to compatible agents:
+
+- **Original skills** use the `SKILL.md` frontmatter convention
+  (`name`, `description`, `version`, `author`, `category`). They load in
+  OpenCode and in any agent that reads `SKILL.md` files with this frontmatter.
+- **Bundled third-party skills** are local copies of upstream `SKILL.md` files
+  with provenance recorded; they behave like original files at load time.
+- **External skills** are URL references. They are platform-neutral, but they
+  are not tested by this repository and may target a specific harness.
+- **Personas, system prompts and rule modules** are plain Markdown. They work
+  as chat modes, custom instructions or rule files in most agent tools,
+  including VS Code extensions.
+- **Installation scripts** target OpenCode's user-level skill directory
+  (`~/.config/opencode/skills/`). Other agents need a manual copy step.
+
+Compatibility is documented per area, not per external skill: no claim is made
+that every external link runs in every harness.
+
 ## External Skills
 
 The collection references 199 upstream skills:
@@ -185,6 +230,7 @@ for their names, provenance and local paths.
 | [`deep-research-writing-long.md`](prompts/system/deep-research-writing-long.md) | Deep research, academic writing and complex projects |
 | [`deep-research-writing-short.md`](prompts/system/deep-research-writing-short.md) | Short companion prompt |
 | [`repository-hygiene.md`](prompts/system/repository-hygiene.md) | Repository cleanup and Git hygiene |
+| [`combined-personas.md`](prompts/system/combined-personas.md) | Dynamic multi-persona system prompt: Jayce coordinator plus specialist roles |
 
 ## Personas
 
@@ -250,6 +296,50 @@ with their upstream authors. See [ATTRIBUTION.md](ATTRIBUTION.md).
 
 See [docs/CONTRIBUTING.md](docs/CONTRIBUTING.md) for adding original skills or
 external links, and [docs/SKILL_SPEC.md](docs/SKILL_SPEC.md) for the skill format.
+The current quality priorities for existing skills are tracked in
+[docs/SKILL-QUALITY-REVIEW.md](docs/SKILL-QUALITY-REVIEW.md).
+
+## Funding
+
+This collection is maintained in spare time and offered for free under MIT.
+If it saves you time, you can support the work through
+[GitHub Sponsors](https://github.com/sponsors/DracieVajko) (see
+[.github/FUNDING.yml](.github/FUNDING.yml)).
+
+Contributions support:
+
+- Authoring new original skills
+- Maintaining existing skills and the catalog
+- Documentation, examples and guides
+- Testing, validation tooling and CI
+- Compatibility with current AI coding agents
+- Research methods and community contributions
+
+Realistic tiers:
+
+| Tier | Amount | What it means |
+|------|--------|---------------|
+| Tip | $2 (one-time) | A thank-you that helps cover hosting for the docs |
+| Supporter | $5 / month | Optional name credit in the README supporters list |
+| Sustainer | $15 / month | Recurring maintenance: link checks, catalog upkeep, documentation refreshes |
+| Patron | $50 / month | Priority triage of feature requests, and early public review drafts of new skills |
+
+There are no paywalled skills and no guaranteed access to commercial services
+or exclusive AI capabilities. Sponsorship speeds the work up; it does not gate
+content. All original material stays public under the repository MIT license.
+
+## Roadmap
+
+A living list, not a promise of dates. Inputs come from
+[docs/SKILL-QUALITY-REVIEW.md](docs/SKILL-QUALITY-REVIEW.md) and everyday use.
+
+- **Near term** - trim over-length skill descriptions for picker display,
+  align the skill heading vocabulary with `docs/SKILL_SPEC.md`, add version
+  history sections to older skills.
+- **Mid term** - installation examples for agents other than OpenCode, more
+  worked examples in the younger skills, expanded domain rule modules.
+- **Long term** - a smoother contribution flow for outside authors, per-area
+  skill bundles, and a steady maintenance cadence as funding allows.
 
 ## Related Repositories
 
