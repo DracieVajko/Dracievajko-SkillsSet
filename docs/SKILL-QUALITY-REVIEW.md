@@ -8,13 +8,36 @@ What was actually run and observed:
 
 | Check | Command | Result |
 |-------|---------|--------|
-| Frontmatter validation | `python scripts/validate-frontmatter.py` | OK: 0 errors, 19 warnings |
+| Frontmatter validation | `python scripts/validate-frontmatter.py` | OK: 0 errors, 19 warnings before the category alignment below; 8 warnings after it |
 | Rule-copy sync | `python scripts/check-sync.py` | OK: 11 modules, 9 profiles, combined copy |
-| Index freshness | `python scripts/update-category-index.py --check` | OK: up to date |
-| Tooling tests | `python -m unittest discover -s scripts -p "test_*.py"` | 34 tests, OK |
+| Index freshness | `python scripts/update-category-index.py --check` | OK: up to date (index and generated count blocks) |
+| Tooling tests | `python -m unittest discover -s scripts -p "test_*.py"` | 69 tests, OK (34 before the tooling work, 35 added) |
+| Markdown links | `python scripts/check-markdown-links.py` | OK: 0 broken relative links, 6 vendored upstream links not bundled |
+| External URLs | `python scripts/check-links.py` | 199 ok, 0 warnings, 0 failures on 2026-11-12 |
+| Code health | `desloppify scan --path .` | baseline captured; mechanical findings fixed, see [Tooling health](#tooling-health) |
 
 In addition, a section-coverage scan of all 25 `SKILL.md` files (heading census,
 calibrated by manual spot reads) informed the structural findings below.
+
+## Tooling health
+
+The `desloppify` baseline scan found one security issue (unvalidated URL
+scheme in `check-links.py`), four modules without direct unit tests, and a set
+of smell-level findings. Resolved in this branch:
+
+| Finding | Resolution |
+|---------|------------|
+| `check-links.py` opened URLs without validating the scheme | Scheme is now parsed with `urllib.parse.urlparse` and restricted to http/https; `file:`, `ftp:` and other schemes are rejected without a request |
+| `check-links.py` `main()` had high cyclomatic complexity | Split into `collect_results`, `classify_results` and `report` |
+| Four tooling modules had no direct unit tests | `scripts/test_script_units.py` exercises the functions directly, next to the existing subprocess-level tests |
+| Loose type annotations across the scripts | Precise annotations added with `from __future__ import annotations` |
+| A subprocess call in the tests could hang forever | `timeout=120` added |
+| An unused import in `test_import_smoke.py` | Removed |
+| `LINK_FILES` defined in two scripts | Kept deliberately: each script stays standalone and runnable on its own - see `scripts/README.md` |
+
+Two findings were accepted as false positives with an attestation: the
+`sys.exit()` calls are all directly under an `if __name__ == '__main__'`
+guard, and the duplicated link-file parsing is the cost of standalone tools.
 
 ## Summary
 
