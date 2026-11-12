@@ -2,7 +2,6 @@
 """Smoke tests that import the tooling modules so they are not flagged as untested."""
 
 import importlib.util
-import sys
 from pathlib import Path
 
 SCRIPTS = Path(__file__).resolve().parent
