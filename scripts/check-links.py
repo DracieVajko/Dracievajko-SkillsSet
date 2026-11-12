@@ -16,20 +16,25 @@ Exit codes
     1 = at least one URL returned a hard failure or could not be reached
 """
 
+from __future__ import annotations
+
 import argparse
 import concurrent.futures
 import sys
 import urllib.error
+import urllib.parse
 import urllib.request
 from pathlib import Path
 
 LINK_FILES = ('skill-links.txt', 'pinned-links.txt')
 USER_AGENT = 'DracieVajko-SkillsSet-LinkCheck/1.0 (+https://github.com/DracieVajko/Dracievajko-SkillsSet)'
 WARNING_CODES = {403, 429}
+ALLOWED_SCHEMES = frozenset({'http', 'https'})
 
 
-def read_links(root):
-    links = []
+def read_links(root: Path) -> list[tuple[str, str]]:
+    """Return (link file name, url) pairs for every catalogued external link."""
+    links: list[tuple[str, str]] = []
     for name in LINK_FILES:
         path = root / 'catalog' / 'links' / name
         if not path.is_file():
@@ -41,9 +46,16 @@ def read_links(root):
     return links
 
 
-def check_url(url, timeout):
-    if not url.startswith(('http://', 'https://')):
-        return url, None, 'unsupported scheme'
+def check_url(url: str, timeout: float) -> tuple[str, int | None, str]:
+    """Request one URL and return (url, status, error).
+
+    Only http and https URLs are requested; any other scheme is reported as an
+    unsupported scheme without touching the network.
+    """
+    scheme = urllib.parse.urlparse(url).scheme.lower()
+    if scheme not in ALLOWED_SCHEMES:
+        return url, None, f'unsupported scheme: {scheme or "none"}'
+
     request = urllib.request.Request(
         url,
         headers={'User-Agent': USER_AGENT, 'Range': 'bytes=0-0'},
@@ -59,7 +71,46 @@ def check_url(url, timeout):
         return url, None, str(exc)
 
 
-def main(argv=None):
+def collect_results(
+    links: list[tuple[str, str]],
+    timeout: float,
+    workers: int,
+) -> list[tuple[str, int | None, str]]:
+    """Check every URL concurrently and return the results."""
+    with concurrent.futures.ThreadPoolExecutor(max_workers=max(1, workers)) as pool:
+        futures = [pool.submit(check_url, url, timeout) for _, url in links]
+        return [future.result() for future in concurrent.futures.as_completed(futures)]
+
+
+def classify_results(
+    results: list[tuple[str, int | None, str]],
+) -> tuple[list[tuple[str, int | None, str]], list[tuple[str, int | None, str]]]:
+    """Split results into (warnings, failures). A status is ok for 2xx and 3xx."""
+    warnings: list[tuple[str, int | None, str]] = []
+    failures: list[tuple[str, int | None, str]] = []
+    for url, status, error in results:
+        if status is not None and 200 <= status < 400:
+            continue
+        if status in WARNING_CODES:
+            warnings.append((url, status, error))
+        else:
+            failures.append((url, status, error))
+    return warnings, failures
+
+
+def report(
+    warnings: list[tuple[str, int | None, str]],
+    failures: list[tuple[str, int | None, str]],
+) -> None:
+    """Print warnings and failures in a stable, sorted order."""
+    for url, status, error in sorted(warnings):
+        print(f"WARN: HTTP {status} {url} ({error})")
+    for url, status, error in sorted(failures):
+        label = f"HTTP {status}" if status is not None else "NO RESPONSE"
+        print(f"FAIL: {label} {url} ({error})")
+
+
+def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--root', default=None, help='Repository root (defaults to the parent of this script).')
     parser.add_argument('--timeout', type=float, default=20.0, help='Per-request timeout in seconds.')
@@ -77,28 +128,10 @@ def main(argv=None):
         links = links[:args.limit]
 
     print(f"Checking {len(links)} external URL(s) with {args.workers} worker(s)...")
-    results = []
-    with concurrent.futures.ThreadPoolExecutor(max_workers=max(1, args.workers)) as pool:
-        futures = [pool.submit(check_url, url, args.timeout) for _, url in links]
-        for future in concurrent.futures.as_completed(futures):
-            results.append(future.result())
+    results = collect_results(links, args.timeout, args.workers)
 
-    failures = []
-    warnings = []
-    for url, status, error in results:
-        if status is not None and 200 <= status < 400:
-            continue
-        if status in WARNING_CODES:
-            warnings.append((url, status, error))
-        else:
-            failures.append((url, status, error))
-
-    for url, status, error in sorted(warnings):
-        print(f"WARN: HTTP {status} {url} ({error})")
-    for url, status, error in sorted(failures):
-        label = f"HTTP {status}" if status is not None else "NO RESPONSE"
-        print(f"FAIL: {label} {url} ({error})")
-
+    warnings, failures = classify_results(results)
+    report(warnings, failures)
     print(
         f"Summary: {len(results) - len(warnings) - len(failures)} ok, "
         f"{len(warnings)} warning(s), {len(failures)} failure(s)"

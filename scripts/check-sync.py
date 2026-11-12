@@ -21,6 +21,8 @@ Exit codes
     1 = at least one mismatch, missing file or stale routing entry
 """
 
+from __future__ import annotations
+
 import argparse
 import sys
 from pathlib import Path
@@ -46,22 +48,22 @@ PROFILE_MODULES = {
 }
 
 
-def normalize(text):
+def normalize(text: str) -> str:
     return text.replace('\r\n', '\n').strip()
 
 
-def read_text(path):
+def read_text(path: Path) -> str:
     return normalize(path.read_text(encoding='utf-8'))
 
 
-def module_files(root):
+def module_files(root: Path) -> list[Path]:
     base = root / MODULES_REL
     if not base.is_dir():
         raise FileNotFoundError(f"Missing module directory: {base}")
     return sorted(path for path in base.glob('*.md') if path.is_file())
 
 
-def check_module_copies(root, errors):
+def check_module_copies(root: Path, errors: list[str]) -> list[Path]:
     modules = module_files(root)
     template_dir = root / TEMPLATE_REL
     if not template_dir.is_dir():
@@ -80,7 +82,7 @@ def check_module_copies(root, errors):
     return modules
 
 
-def check_profiles(root, errors):
+def check_profiles(root: Path, errors: list[str]) -> None:
     profiles_dir = root / PROFILES_REL
     for profile_name, module_name in PROFILE_MODULES.items():
         profile = profiles_dir / profile_name
@@ -95,7 +97,7 @@ def check_profiles(root, errors):
             errors.append(f"Profile does not embed module: {profile.relative_to(root)} <- {module.relative_to(root)}")
 
 
-def check_combined(root, errors, modules):
+def check_combined(root: Path, errors: list[str], modules: list[Path]) -> None:
     combined = root / COMBINED_REL
     if not combined.is_file():
         errors.append(f"Missing combined rule file: {COMBINED_REL}")
@@ -106,7 +108,7 @@ def check_combined(root, errors, modules):
             errors.append(f"AGENTS-combined.md is missing module: {module.relative_to(root)}")
 
 
-def check_routing(root, errors, modules):
+def check_routing(root: Path, errors: list[str], modules: list[Path]) -> None:
     agents = root / AGENTS_REL
     project_agents = root / PROJECT_AGENTS_REL
     agents_text = read_text(agents) if agents.is_file() else ''
@@ -123,7 +125,7 @@ def check_routing(root, errors, modules):
             errors.append(f"Project template routing is missing: {name}")
 
 
-def main(argv=None):
+def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
         '--root', default=None,

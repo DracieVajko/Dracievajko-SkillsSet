@@ -79,6 +79,7 @@ def run(script, root, *args):
     return subprocess.run(
         [sys.executable, str(script), '--root', str(root), *args],
         capture_output=True, text=True, encoding='utf-8', cwd=str(root),
+        timeout=120,
     )
 
 
@@ -366,6 +367,32 @@ class CatalogDataTests(unittest.TestCase):
         for item in originals:
             path = self.repo / item['local_skill_path']
             self.assertTrue(path.is_file(), item['local_skill_path'])
+
+    def test_original_catalog_records_match_skill_frontmatter(self):
+        """The catalog must not drift from the skills it describes."""
+        items = self.load('items.json')
+        originals = [i for i in items if i['authorship'] == 'original']
+        self.assertEqual(len(originals), 25)
+        for item in originals:
+            path = self.repo / item['local_skill_path']
+            frontmatter = self.read_frontmatter(path)
+            where = item['local_skill_path']
+            self.assertEqual(path.parent.name, frontmatter.get('name'), where)
+            self.assertEqual(item['name'], frontmatter.get('name'), where)
+            self.assertEqual(item['category'], frontmatter.get('category'), where)
+
+    @staticmethod
+    def read_frontmatter(path):
+        """Read the simple key/value frontmatter of a SKILL.md file."""
+        text = path.read_text(encoding='utf-8')
+        parts = text.split('---', 2)
+        data = {}
+        for line in parts[1].splitlines():
+            if ':' not in line:
+                continue
+            key, _, value = line.partition(':')
+            data[key.strip()] = value.strip().strip('"\'')
+        return data
 
     def test_no_third_party_skill_bodies(self):
         third_party = self.repo / 'skills' / 'third-party'

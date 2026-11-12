@@ -16,6 +16,7 @@ reverse-engineering skills are additionally bundled as local copies under
 python scripts/validate-frontmatter.py
 python scripts/check-sync.py
 python scripts/update-category-index.py
+python scripts/check-markdown-links.py
 python -m unittest discover -s scripts -p "test_*.py"
 ```
 
