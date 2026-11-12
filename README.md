@@ -62,7 +62,7 @@ by `scripts/update-category-index.py` - they are never maintained by hand.
 | Stable-branch links | 157 | `catalog/links/skill-links.txt` |
 | Pinned links | 42 | `catalog/links/pinned-links.txt` |
 | Catalog records | 224 | `catalog/items.json` |
-| System prompts | 8 | `prompts/system/` |
+| System prompts | 9 | `prompts/system/` |
 | Personas | 10 | `prompts/personas/` |
 | Image prompts | 3 | `prompts/image/` |
 | Instruction modules | 11 | `instructions/modules/` |
@@ -273,9 +273,10 @@ harness. Review an external skill before you install it.
 
 ## Prompts and personas
 
-System prompts in `prompts/system/` (including the compact
-`deep-research-writing-short.md`), chat personas in `prompts/personas/`, and
-image prompts in `prompts/image/`. All plain Markdown - copy them in.
+System prompts in `prompts/system/` - including `opendesign-ui-code-audit.md`
+for UI and code audits and the compact `deep-research-writing-short.md` -
+chat personas in `prompts/personas/`, and image prompts in `prompts/image/`.
+All plain Markdown - copy them in.
 
 | Persona | Role |
 |---------|------|
