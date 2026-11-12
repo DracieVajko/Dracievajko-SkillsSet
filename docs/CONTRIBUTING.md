@@ -7,7 +7,8 @@ reverse-engineering skills are additionally bundled as local copies under
 ## Add an Original Skill
 
 1. Create `skills/original/<skill-name>/SKILL.md`.
-2. Follow the [Skill Specification](SKILL_SPEC.md).
+2. Follow the [Skill Specification](SKILL_SPEC.md); start from the copy-ready
+   skeleton in [`templates/SKILL-TEMPLATE.md`](templates/SKILL-TEMPLATE.md).
 3. Use imperative language, explicit triggers and concrete examples.
 4. Validate and regenerate the index:
 

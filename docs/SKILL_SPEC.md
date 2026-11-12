@@ -22,7 +22,8 @@ in `catalog/links/`, `catalog/items.json` and `skills/third-party/README.md`.
 
 ## SKILL.md Format
 
-The `SKILL.md` file is the canonical definition. It uses frontmatter + Markdown:
+The `SKILL.md` file is the canonical definition. It uses frontmatter + Markdown.
+A ready-to-copy skeleton lives in [`templates/SKILL-TEMPLATE.md`](templates/SKILL-TEMPLATE.md).
 
 ```markdown
 ---
