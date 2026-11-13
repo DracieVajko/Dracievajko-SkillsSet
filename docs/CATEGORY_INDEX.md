@@ -45,7 +45,7 @@ Discovered under `skills/original/`.
 | `testing-skills` | testing | 1.0.0 | Test skills that enforce discipline, compliance and verification using pressure scenarios and rationalization tables. | [SKILL.md](../skills/original/testing-skills/SKILL.md) |
 | `ticktick-tasks` | productivity | 1.1.0 | Manage TickTick tasks, projects, tags, habits, comments and focus through a connected MCP server. | [SKILL.md](../skills/original/ticktick-tasks/SKILL.md) |
 | `universal-listing-template` | productivity | 1.0.0 | Generate structured lists (TODO lists, inventory, tables) using AI and file operations. | [SKILL.md](../skills/original/universal-listing-template/SKILL.md) |
-| `write-research-projects` | writing-docs | 2.1.0 | Use for deep research, bachelor-style academic writing, source verification, hardware/software design and build, presentations, and multi-AI workflows. | [SKILL.md](../skills/original/write-research-projects/SKILL.md) |
+| `write-research-projects` | writing-docs | 2.3.0 | Use for deep research, bachelor-style academic writing, source verification, hardware/software design and build, presentations, and multi-AI workflows. | [SKILL.md](../skills/original/write-research-projects/SKILL.md) |
 | `yfinance-ai` | investing | 3.0.4 | World-class AI-powered Yahoo Finance integration: 56+ tools for stocks, crypto, forex, commodities and ETFs. | [SKILL.md](../skills/original/yfinance-ai/SKILL.md) |
 
 ## External Skills (Links Only)
