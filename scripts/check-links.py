@@ -42,6 +42,8 @@ def read_links(root):
 
 
 def check_url(url, timeout):
+    if not url.startswith(('http://', 'https://')):
+        return url, None, 'unsupported scheme'
     request = urllib.request.Request(
         url,
         headers={'User-Agent': USER_AGENT, 'Range': 'bytes=0-0'},

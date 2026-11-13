@@ -4,16 +4,18 @@ Canonical structured catalog of this collection.
 
 ## Contents
 
-- `items.json` - 159 records: 5 original skills and 154 external skills.
+- `items.json` - 224 records: 25 original skills and 199 external skills.
   Each record includes name, category, repository, upstream URL, authorship,
   license and verification status.
 - `links/` - authoritative plain URL lists for external skills.
-  - `skill-links.txt` - 124 stable-branch links.
-  - `pinned-links.txt` - 30 pinned commit/release links.
+  - `skill-links.txt` - 157 stable-branch links.
+  - `pinned-links.txt` - 42 pinned commit/release links.
   - `README.md` - provenance and verification note.
 
-No third-party skill code is stored in this repository. External skills are
-listed by name and link only.
+External skills are listed by name and link only; their code is not stored
+here. Seven reverse-engineering skills are additionally bundled as local copies
+under `skills/third-party/` (from `zhaoxuya520/reverse-skill` and `morluto/rea`)
+and are tracked separately from the link catalog.
 
 ## Authority
 
@@ -32,19 +34,20 @@ error. It never falls back to an empty collection.
 
 | Authorship | Count |
 |------------|-------|
-| `original` | 5 |
-| `link-only` | 154 |
-| **Total** | **159** |
+| `original` | 25 |
+| `link-only` | 199 |
+| **Total** | **224** |
 
-The 154 link-only records cover the stable and pinned link files. The catalog
-contains only the five original skills and 154 external link-only records; no
-third-party code is stored locally.
+The 199 link-only records cover the stable and pinned link files. The catalog
+contains 224 records: 25 original and 199 external link-only. Seven
+reverse-engineering skills are additionally bundled as local copies under
+`skills/third-party/` and are tracked separately from the link catalog.
 
 ## Link Verification
 
-All 154 external URLs returned HTTP 200 on 2026-10-23. The check covers URL
-availability only. It does not verify upstream content, license, security or
-runtime compatibility.
+All 199 external URLs returned HTTP 200: 188 were verified on 2026-11-05 and
+the 11 day-trader links on 2026-11-06. The check covers URL availability only.
+It does not verify upstream content, license, security or runtime compatibility.
 
 ## Adding an External Skill
 

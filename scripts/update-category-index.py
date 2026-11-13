@@ -48,7 +48,7 @@ LINK_DIR = ('catalog', 'links')
 LINK_FILES = ('skill-links.txt', 'pinned-links.txt')
 ITEMS_RELPATH = ('catalog', 'items.json')
 INDEX_RELPATH = ('docs', 'CATEGORY_INDEX.md')
-VERIFIED_DATE = '2026-10-23'
+VERIFIED_DATE = '2026-11-05'
 
 
 # --- helpers ---------------------------------------------------------------
@@ -184,8 +184,8 @@ def generate(root):
     lines.append("Validate the tree with `python scripts/validate-frontmatter.py`.")
     lines.append("Check duplicated rule copies with `python scripts/check-sync.py`.")
     lines.append("")
-    lines.append("Original skills are discovered on disk. External skills are links only;")
-    lines.append("no third-party code is bundled. Link availability was verified on")
+    lines.append("Original skills are discovered on disk. External link skills are reported as upstream URLs only;")
+    lines.append("bundled third-party skills are tracked under skills/third-party/. Link availability was verified on")
     lines.append(f"{VERIFIED_DATE} - see `catalog/links/README.md`.")
     lines.append("")
     lines.append("Authoritative source per section:")

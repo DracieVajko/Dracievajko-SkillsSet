@@ -1,7 +1,8 @@
 # Contributing Guide
 
-This repository contains original skills and links to external skills. It does
-not bundle third-party skill code.
+This repository contains original skills and links to external skills. Seven
+reverse-engineering skills are additionally bundled as local copies under
+`skills/third-party/` (from `zhaoxuya520/reverse-skill` and `morluto/rea`).
 
 ## Add an Original Skill
 
@@ -21,8 +22,9 @@ python -m unittest discover -s scripts -p "test_*.py"
 
 ## Add an External Skill Link
 
-External skills are references only. Do not copy their code into this
-repository.
+External skills are references only (linked by URL). Do not copy their code into
+this repository unless the skill is one of the explicitly bundled third-party
+skills under `skills/third-party/`.
 
 1. Add the direct raw URL to `catalog/links/skill-links.txt` (stable branch) or
    `catalog/links/pinned-links.txt` (pinned commit or release branch).

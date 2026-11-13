@@ -284,6 +284,21 @@ class IndexerAuthorityTests(BaseTest):
         self.assertEqual(index_path.stat().st_mtime_ns, mtime_before)
 
 
+# Bundled third-party skills explicitly approved in commit a34dd05
+# (copied from zhaoxuya520/reverse-skill and morluto/rea). These are the only
+# SKILL.md bodies allowed under skills/third-party/. Every other entry there
+# must remain an upstream link only.
+APPROVED_THIRD_PARTY_SKILLS = [
+    'apk-reverse/SKILL.md',
+    'binary-diff/SKILL.md',
+    'ghidra-reverse/SKILL.md',
+    'js-reverse/SKILL.md',
+    'mobile-reverse/SKILL.md',
+    'reverse-engineering/SKILL.md',
+    'reverse-engineer-anything/SKILL.md',
+]
+
+
 class CatalogDataTests(unittest.TestCase):
     """Guards the maintained catalog and link data in the real repository."""
 
@@ -320,9 +335,9 @@ class CatalogDataTests(unittest.TestCase):
     def test_items_authorship_partition(self):
         items = self.load('items.json')
         counts = Counter(i['authorship'] for i in items)
-        self.assertEqual(len(items), 159)
-        self.assertEqual(counts['link-only'], 154)
-        self.assertEqual(counts['original'], 5)
+        self.assertEqual(len(items), 224)
+        self.assertEqual(counts['link-only'], 199)
+        self.assertEqual(counts['original'], 25)
         self.assertEqual(set(counts), {'link-only', 'original'})
 
     def test_link_file_counts(self):
@@ -330,9 +345,9 @@ class CatalogDataTests(unittest.TestCase):
                   if u.strip() and not u.strip().startswith('#')]
         pinned = [u for u in (self.links / 'pinned-links.txt').read_text(encoding='utf-8').splitlines()
                   if u.strip() and not u.strip().startswith('#')]
-        self.assertEqual(len(stable), 124)
-        self.assertEqual(len(pinned), 30)
-        self.assertEqual(len(stable) + len(pinned), 154)
+        self.assertEqual(len(stable), 157)
+        self.assertEqual(len(pinned), 42)
+        self.assertEqual(len(stable) + len(pinned), 199)
 
     def test_catalog_link_urls_match_link_files(self):
         items = self.load('items.json')
@@ -347,16 +362,37 @@ class CatalogDataTests(unittest.TestCase):
     def test_original_catalog_paths_exist(self):
         items = self.load('items.json')
         originals = [i for i in items if i['authorship'] == 'original']
-        self.assertEqual(len(originals), 5)
+        self.assertEqual(len(originals), 25)
         for item in originals:
             path = self.repo / item['local_skill_path']
             self.assertTrue(path.is_file(), item['local_skill_path'])
 
     def test_no_third_party_skill_bodies(self):
         third_party = self.repo / 'skills' / 'third-party'
-        self.assertTrue((third_party / 'README.md').is_file())
-        self.assertEqual(list(third_party.rglob('SKILL.md')), [])
-        self.assertFalse((self.repo / 'skills' / 'adapted').exists())
+        self.assertTrue(third_party.is_dir(), 'skills/third-party/ is missing')
+        self.assertTrue((third_party / 'README.md').is_file(),
+                        'skills/third-party/README.md is missing')
+
+        # Collect every bundled SKILL.md body under skills/third-party/, normalized
+        # to forward-slash relative paths and deterministically sorted so the
+        # comparison is stable across Windows, Linux and macOS regardless of
+        # directory enumeration order or path-separator conventions.
+        found = sorted(
+            skill_md.relative_to(third_party).as_posix()
+            for skill_md in third_party.rglob('SKILL.md')
+            if skill_md.is_file()
+        )
+
+        expected = sorted(APPROVED_THIRD_PARTY_SKILLS)
+        self.assertEqual(
+            found, expected,
+            'skills/third-party/ must contain exactly the seven approved bundled '
+            'SKILL.md bodies and no others: %r' % expected,
+        )
+
+        # Repository policy has not changed: no skills/adapted/ directory.
+        self.assertFalse((self.repo / 'skills' / 'adapted').exists(),
+                         'skills/adapted/ must not exist')
 
     def test_no_link_record_has_a_local_skill_path(self):
         items = self.load('items.json')
@@ -367,7 +403,7 @@ class CatalogDataTests(unittest.TestCase):
 
     def test_docs_index_has_expected_total(self):
         index = (self.repo / 'docs' / 'CATEGORY_INDEX.md').read_text(encoding='utf-8')
-        self.assertIn('Total: **154** references.', index)
+        self.assertIn('Total: **199** references.', index)
         self.assertIn('## Original Local Skills', index)
         self.assertIn('## External Skills (Links Only)', index)
 

@@ -1,16 +1,23 @@
 # Attribution and Licensing
 
 This is a personal curated collection of AI-agent resources. It contains
-original work and links to third-party work; it does not redistribute
-third-party skill code.
+original work, links to third-party work, and seven bundled third-party
+reverse-engineering skill copies kept under `skills/third-party/`.
 
 ## Authorship
 
+The machine-readable catalog (`catalog/items.json`) tracks:
+
 | Status | Meaning | Count |
 |--------|---------|------:|
-| `original` | Authored and maintained in this repository | 5 |
-| `link-only` | Upstream skill referenced by URL only; no content copied | 154 |
-| **Total** | | **159** |
+| `original` | Authored and maintained in this repository | 25 |
+| `link-only` | Upstream skill referenced by URL only; no content copied | 199 |
+| **Catalog total** | | **224** |
+
+In addition to the catalog records, **7 reverse-engineering skills are bundled**
+as local copies under `skills/third-party/` (from `zhaoxuya520/reverse-skill`
+and `morluto/rea`). They are tracked by the skills tooling test and documented
+in `skills/third-party/README.md`, but are not link-only catalog records.
 
 ## Original Skills
 
@@ -21,14 +28,35 @@ third-party skill code.
 | `pen-testing` | Authorized penetration testing methodology: scope gate, recon, scan, controlled testing, blast radius, report | DracieVajko | MIT |
 | `agent-operating-rules` | Evidence-first project workflow: consent-gated git, root-cause fixes, verification, coverage checklists and test discipline | DracieVajko | MIT |
 | `repository-hygiene` | Repository cleanup: classification, temporary files, generated artifacts, secrets and commit preparation | DracieVajko | MIT |
+| `beyond-vibe-coding-autonomous-development` | Practical skill for AI-era software development based on Addy Osmani's 'Beyond Vibe Coding' — intent-driven workflows, prompt engineering, the 70% problem, code review/refinement, AI prototyping, autonomous agents, and production-ready AI-assisted engineering. | DracieVajko | MIT |
+| `document-editing-general` | General-purpose skill for creating, reading, editing and managing documents (markdown, text, code, etc.) in an editor panel. | DracieVajko | MIT |
+| `github-code-documentation` | Skill for creating detailed descriptions and high-quality README.md files for scripts and programs intended for GitHub upload, push and commit. Includes coding and 'vibe-coding' rules to maximize efficiency and minimize errors. | DracieVajko | MIT |
+| `penetration-testing-guide` | Penetration testing guide and methodology covering 5 phases: Recon, Scan, Gain Access, Escalate and Report. | DracieVajko | MIT |
+| `generate-markdown-and-docx-documents` | Create a new document from a user-provided outline and content, output both a Markdown file and a Word (DOCX) file for download. | DracieVajko | MIT |
+| `create-individual-calendar-events-from-earnings-dates-list` | Create individual calendar events from an earnings dates list, one event per ticker with company name and reminder. | DracieVajko | MIT |
+| `ds-note-formatter` | Format content for Synology DS Note / Note Station so it pastes cleanly and preserves structure, readability and checklist usability. | DracieVajko | MIT |
+| `fix-inconclusive-skills` | Identify and fix skills marked as inconclusive due to missing tools or other issues. | DracieVajko | MIT |
+| `generate-findings-report-from-pipeline-logs` | Verify that all expected sections and data are present in generated files by comparing logs and output artifacts, and summarize discrepancies. | DracieVajko | MIT |
+| `testing-skills` | Test skills that enforce discipline, compliance and verification using pressure scenarios and rationalization tables. | DracieVajko | MIT |
+| `yfinance-ai` | World-class AI-powered Yahoo Finance integration: 56+ tools for stocks, crypto, forex, commodities and ETFs. | DracieVajko | MIT |
+| `book-to-skill` | Convert a book or article into a reusable skill using AI and web data. | DracieVajko | MIT |
+| `universal-listing-template` | Generate structured lists (TODO lists, inventory, tables) using AI and file operations. | DracieVajko | MIT |
+| `enable-wake-on-lan-and-auto-shutdown-on-network-loss-for-ras` | Enable Wake-on-LAN and auto-shutdown on network loss for Raspberry Pi. | DracieVajko | MIT |
+| `detailed-source-rewrite-guide` | Rewrite a source document (e.g., article, research paper) into a structured, step-by-step guide using AI. | DracieVajko | MIT |
+| `focus-my-energy` | Classify tasks by cognitive demand and recommend what to work on now based on energy level | DracieVajko | MIT |
+| `generate-fresh-ideas` | Remix source material into five distinct creative content angles | DracieVajko | MIT |
+| `get-more-perspectives` | Stress-test decisions across a five-advisor panel | DracieVajko | MIT |
+| `match-my-writing-style` | Draft, reply or rewrite in the user's authentic voice from Gmail/Docs samples | DracieVajko | MIT |
+| `prep-for-meetings` | Pre-meeting brief and 30-second glance card from Workspace sources | DracieVajko | MIT |
 
 ## External Skills
 
-All 154 external skills are link-only. The URL lists live in
-[`catalog/links/`](catalog/links/), and the full human-readable index is
-[`docs/CATEGORY_INDEX.md`](docs/CATEGORY_INDEX.md).
+The 199 external skills in the catalog are link-only (referenced by URL; no
+content copied). The URL lists live in [`catalog/links/`](catalog/links/), and
+the full human-readable index is [`docs/CATEGORY_INDEX.md`](docs/CATEGORY_INDEX.md).
 
-The 17 upstream skills that were previously bundled locally are now link-only.
+Seven reverse-engineering skills are additionally bundled as local copies under
+`skills/third-party/` (from `zhaoxuya520/reverse-skill` and `morluto/rea`).
 The catalog keeps one record per upstream URL; `context-engineering` has two
 upstream records because it exists in two repositories.
 
@@ -51,11 +79,23 @@ upstream records because it exists in two repositories.
 | `blender-hard-surface-modeling` | MIT | [link](https://github.com/composio-community/opencode-skills/blob/5076f6673e5bf8b1f46dc5e934d1e3dd37250e10/skills/blender-hard-surface-modeling/SKILL.md) |
 | `blender-python-integration` | MIT | [link](https://github.com/composio-community/opencode-skills/blob/5076f6673e5bf8b1f46dc5e934d1e3dd37250e10/skills/blender-python-integration/SKILL.md) |
 | `blender-rigging-animation` | MIT | [link](https://github.com/composio-community/opencode-skills/blob/5076f6673e5bf8b1f46dc5e934d1e3dd37250e10/skills/blender-rigging-animation/SKILL.md) |
+| `trader-scanner` | MIT | [link](https://github.com/Jakeschincariol/day-trader-skill/blob/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-scanner/SKILL.md) |
+| `trader-news` | MIT | [link](https://github.com/Jakeschincariol/day-trader-skill/blob/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-news/SKILL.md) |
+| `trader-entry` | MIT | [link](https://github.com/Jakeschincariol/day-trader-skill/blob/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-entry/SKILL.md) |
+| `trader-exit` | MIT | [link](https://github.com/Jakeschincariol/day-trader-skill/blob/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-exit/SKILL.md) |
+| `trader-timemachine` | MIT | [link](https://github.com/Jakeschincariol/day-trader-skill/blob/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-timemachine/SKILL.md) |
+| `trader-risk` | MIT | [link](https://github.com/Jakeschincariol/day-trader-skill/blob/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-risk/SKILL.md) |
+| `trader-budget` | MIT | [link](https://github.com/Jakeschincariol/day-trader-skill/blob/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-budget/SKILL.md) |
+| `trader-broker` | MIT | [link](https://github.com/Jakeschincariol/day-trader-skill/blob/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-broker/SKILL.md) |
+| `trader-alerts` | MIT | [link](https://github.com/Jakeschincariol/day-trader-skill/blob/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-alerts/SKILL.md) |
+| `trader-analyst` | MIT | [link](https://github.com/Jakeschincariol/day-trader-skill/blob/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-analyst/SKILL.md) |
+| `trader-pelosi` | MIT | [link](https://github.com/Jakeschincariol/day-trader-skill/blob/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-pelosi/SKILL.md) |
 
 ## Link Verification
 
-All 154 external URLs returned HTTP 200 on 2026-10-23. Verification covers URL
-availability only. It does not verify upstream content, license, security or
+All 199 external URLs returned HTTP 200: 188 were verified on 2026-11-05 and
+the 11 day-trader links on 2026-11-06. Verification covers URL availability
+only. It does not verify upstream content, license, security or
 runtime compatibility.
 
 ## License Summary
@@ -72,9 +112,10 @@ redistribution permission for the linked file.
 ## Attribution Statement
 
 > This is a personal curated collection of AI-agent resources. Original work is
-> MIT licensed. Third-party skills are referenced by link only and remain the
-> property of their original authors. No third-party skill code is redistributed
-> in this repository.
+> MIT licensed. External (link-only) third-party skills remain the property of
+> their original authors and are not copied here. Seven reverse-engineering
+> skills are additionally bundled as local copies under `skills/third-party/`
+> with provenance recorded in `skills/third-party/README.md`.
 
 ---
 

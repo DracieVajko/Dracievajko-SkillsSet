@@ -199,8 +199,10 @@ Before submitting a skill, verify:
 
 ## External Skills
 
-Do not copy third-party skill code into this repository. To add an external
-reference:
+External skills are references only and are not copied into this repository,
+except for seven reverse-engineering skills deliberately bundled under
+`skills/third-party/` (from `zhaoxuya520/reverse-skill` and `morluto/rea`).
+To add a regular external reference:
 
 1. Add the direct raw URL to `catalog/links/skill-links.txt` or
    `catalog/links/pinned-links.txt`.
