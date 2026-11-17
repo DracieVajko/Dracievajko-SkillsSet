@@ -13,8 +13,8 @@ The machine-readable catalog (`catalog/items.json`) tracks:
 | What | Count | Where |
 |------|------:|-------|
 | Catalog records with `authorship: original` | 25 |  |
-| Catalog records with `authorship: link-only` | 199 |  |
-| Catalog records | 224 | `catalog/items.json` |
+| Catalog records with `authorship: link-only` | 204 |  |
+| Catalog records | 229 | `catalog/items.json` |
 | Bundled third-party skills | 7 | `skills/third-party/` - local copies of upstream `SKILL.md` files |
 
 <!-- counts:end -->

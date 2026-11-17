@@ -36,11 +36,11 @@ error. It never falls back to an empty collection.
 
 | What | Count | Where |
 |------|------:|-------|
-| Catalog records | 224 | `catalog/items.json` |
+| Catalog records | 229 | `catalog/items.json` |
 | Catalog records with `authorship: original` | 25 |  |
-| Catalog records with `authorship: link-only` | 199 |  |
+| Catalog records with `authorship: link-only` | 204 |  |
 | Stable-branch links | 157 | `catalog/links/skill-links.txt` |
-| Pinned links | 42 | `catalog/links/pinned-links.txt` |
+| Pinned links | 47 | `catalog/links/pinned-links.txt` |
 | Bundled third-party skills | 7 | `skills/third-party/` - local copies of upstream `SKILL.md` files |
 
 <!-- counts:end -->

@@ -58,13 +58,13 @@ by `scripts/update-category-index.py` - they are never maintained by hand.
 |------|------:|-------|
 | Original skills | 25 | `skills/original/` - authored and maintained here |
 | Bundled third-party skills | 7 | `skills/third-party/` - local copies of upstream `SKILL.md` files |
-| External link-only skills | 199 | referenced by URL; no content copied |
+| External link-only skills | 204 | referenced by URL; no content copied |
 | Stable-branch links | 157 | `catalog/links/skill-links.txt` |
-| Pinned links | 42 | `catalog/links/pinned-links.txt` |
-| Catalog records | 224 | `catalog/items.json` |
+| Pinned links | 47 | `catalog/links/pinned-links.txt` |
+| Catalog records | 229 | `catalog/items.json` |
 | System prompts | 9 | `prompts/system/` |
 | Personas | 10 | `prompts/personas/` |
-| Image prompts | 3 | `prompts/image/` |
+| Image prompts | 4 | `prompts/image/` |
 | Instruction modules | 11 | `instructions/modules/` |
 | Agent profiles | 9 | `instructions/profiles/` |
 

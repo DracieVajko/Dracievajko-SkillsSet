@@ -1,4 +1,4 @@
-# Third-Party Skills
+﻿# Third-Party Skills
 
 This page lists the upstream skills referenced by this collection. Two kinds
 live here, always clearly labeled:
@@ -328,9 +328,9 @@ confirmed through the raw URLs.
 |Skill|Original|
 |-|-|
 |deep-research|[link](https://github.com/imbad0202/academic-research-skills/blob/c67a7be53f23d9dbba4030bbcd6f5ccfeda3afa9/deep-research/SKILL.md)|
-|cademic-paper|[link](https://github.com/imbad0202/academic-research-skills/blob/c67a7be53f23d9dbba4030bbcd6f5ccfeda3afa9/academic-paper/SKILL.md)|
-|cademic-paper-reviewer|[link](https://github.com/imbad0202/academic-research-skills/blob/c67a7be53f23d9dbba4030bbcd6f5ccfeda3afa9/academic-paper-reviewer/SKILL.md)|
-|cademic-pipeline|[link](https://github.com/imbad0202/academic-research-skills/blob/c67a7be53f23d9dbba4030bbcd6f5ccfeda3afa9/academic-pipeline/SKILL.md)|
+|academic-paper|[link](https://github.com/imbad0202/academic-research-skills/blob/c67a7be53f23d9dbba4030bbcd6f5ccfeda3afa9/academic-paper/SKILL.md)|
+|academic-paper-reviewer|[link](https://github.com/imbad0202/academic-research-skills/blob/c67a7be53f23d9dbba4030bbcd6f5ccfeda3afa9/academic-paper-reviewer/SKILL.md)|
+|academic-pipeline|[link](https://github.com/imbad0202/academic-research-skills/blob/c67a7be53f23d9dbba4030bbcd6f5ccfeda3afa9/academic-pipeline/SKILL.md)|
 |sr-screener|[link](https://github.com/imbad0202/academic-research-skills/blob/c67a7be53f23d9dbba4030bbcd6f5ccfeda3afa9/sr-screener/SKILL.md)|
 
 > Claude Code plugin (not OpenCode-native). Covers deep research, source verification, literature review, systematic review/meta-analysis, paper writing and peer review. Installed globally into OpenCode as a single deep-research skill folder bundling the repo so relative shared/ references resolve; other sub-skills remain reachable via that folder.
