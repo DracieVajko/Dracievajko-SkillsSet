@@ -178,3 +178,5 @@ https://raw.githubusercontent.com/NVlabs/Skill2Env/main/SkillHub/skills/pawel-hu
 https://raw.githubusercontent.com/nextlevelbuilder/ui-ux-pro-max-skill/main/cli/assets/skills/ui-styling/SKILL.md
 https://raw.githubusercontent.com/davila7/claude-code-templates/main/cli-tool/components/skills/utilities/web-artifacts-builder/SKILL.md
 https://raw.githubusercontent.com/langchain-ai/deepagents/main/libs/code/examples/skills/web-research/SKILL.md
+https://raw.githubusercontent.com/claude-office-skills/skills/main/meeting-notes/SKILL.md
+https://raw.githubusercontent.com/OSideMedia/higgsfield-ai-prompt-skill/main/SKILL.md

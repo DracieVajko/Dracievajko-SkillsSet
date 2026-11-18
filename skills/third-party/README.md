@@ -19,7 +19,7 @@ The catalog's complete list of external link-only skills is generated at
 
 | What | Count | Where |
 |------|------:|-------|
-| External link-only skills | 227 | referenced by URL; no content copied |
+| External link-only skills | 229 | referenced by URL; no content copied |
 | Bundled third-party skills | 7 | `skills/third-party/` - local copies of upstream `SKILL.md` files |
 
 <!-- counts:end -->

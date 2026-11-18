@@ -54,7 +54,7 @@ Third-party skills referenced by upstream URL only; no local copy is bundled. So
 
 Entries with a short description have curated metadata in `catalog/items.json`; entries without one are link-only.
 
-Total: **227** references.
+Total: **229** references.
 
 ### Agents365-ai/drawio-skill (1)
 
@@ -119,6 +119,10 @@ Total: **227** references.
 
 - [`summarize-meeting`](https://raw.githubusercontent.com/NVlabs/Skill2Env/main/SkillHub/skills/pawel-huryn/summarize-meeting/SKILL.md)
 
+### OSideMedia/higgsfield-ai-prompt-skill (1)
+
+- [`main`](https://raw.githubusercontent.com/OSideMedia/higgsfield-ai-prompt-skill/main/SKILL.md)
+
 ### addyosmani/agent-skills (25)
 
 - [`api-and-interface-design`](https://raw.githubusercontent.com/addyosmani/agent-skills/main/skills/api-and-interface-design/SKILL.md)
@@ -162,9 +166,10 @@ Total: **227** references.
 - [`webapp-testing`](https://raw.githubusercontent.com/anthropics/skills/main/skills/webapp-testing/SKILL.md)
 - [`xlsx`](https://raw.githubusercontent.com/anthropics/skills/main/skills/xlsx/SKILL.md)
 
-### claude-office-skills/skills (1)
+### claude-office-skills/skills (2)
 
 - [`dcf-valuation`](https://raw.githubusercontent.com/claude-office-skills/skills/main/dcf-valuation/SKILL.md)
+- [`meeting-notes`](https://raw.githubusercontent.com/claude-office-skills/skills/main/meeting-notes/SKILL.md)
 
 ### claw-opus/proactive-self-improving-agent (1)
 

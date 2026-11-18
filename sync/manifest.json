@@ -1679,12 +1679,12 @@
     {
       "name": "higgsfield",
       "root": "agents",
-      "authorship": "unknown",
+      "authorship": "third-party",
       "source": {
-        "type": "unresolved",
-        "repo": null,
-        "ref": null,
-        "path": null
+        "type": "github",
+        "repo": "OSideMedia/higgsfield-ai-prompt-skill",
+        "ref": "main",
+        "path": "SKILL.md"
       },
       "author": "",
       "license": "",
@@ -1891,12 +1891,12 @@
     {
       "name": "meeting-notes",
       "root": "agents",
-      "authorship": "unknown",
+      "authorship": "third-party",
       "source": {
-        "type": "unresolved",
-        "repo": null,
-        "ref": null,
-        "path": null
+        "type": "github",
+        "repo": "claude-office-skills/skills",
+        "ref": "main",
+        "path": "meeting-notes"
       },
       "author": "Claude Office Skills Contributors",
       "license": "MIT",

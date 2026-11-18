@@ -1,0 +1,20 @@
+{
+  "browser-automation": null,
+  "design-taste-frontend": null,
+  "desloppify": null,
+  "doc": null,
+  "editor-v1": null,
+  "gws-gmail": null,
+  "higgsfield": null,
+  "home-assistant": null,
+  "humanizer": null,
+  "knowledge-base": null,
+  "meal-plan": null,
+  "meeting-notes": {
+    "repo": "claude-office-skills/skills",
+    "path": "meeting-notes/SKILL.md"
+  },
+  "multi-agent-orchestration": null,
+  "orchestrate": null,
+  "spreadsheet": null
+}
