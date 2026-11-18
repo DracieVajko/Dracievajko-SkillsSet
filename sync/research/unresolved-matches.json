@@ -1,0 +1,212 @@
+{
+  "ai-vibe-slides": {
+    "repo": "ngduy-dev/odoo-coding-agent-playbook",
+    "path": ".agents/skills/slide/SKILL.md"
+  },
+  "android-adb-control": {
+    "repo": "robbin/android-adb-control",
+    "path": "SKILL.md"
+  },
+  "android-development": {
+    "repo": "dpconde/claude-android-skill",
+    "path": "SKILL.md"
+  },
+  "avoid-ai-design": {
+    "repo": "sunkaifei/FlyCms",
+    "path": ".agents/skills/avoid-ai-design/SKILL.md"
+  },
+  "browser-automation": {
+    "repo": null,
+    "path": null,
+    "candidates": [
+      "vibeeval/vibecosystem",
+      "coco-research/coco",
+      "diegosouzapw/awesome-omni-skills",
+      "diegosouzapw/awesome-omni-skills"
+    ]
+  },
+  "dcf-valuation": {
+    "repo": "claude-office-skills/skills",
+    "path": "dcf-valuation/SKILL.md"
+  },
+  "dependency-scan": {
+    "repo": "jwynia/agent-skills",
+    "path": "skills/tech/security/dependency-scan/SKILL.md"
+  },
+  "design-catalogue": {
+    "repo": "highlow12/Beaura",
+    "path": ".agents/skills/design-catalogue/SKILL.md"
+  },
+  "design-taste-frontend": {
+    "repo": null,
+    "path": null,
+    "candidates": [
+      "coco-research/coco",
+      "diegosouzapw/awesome-omni-skills",
+      "diegosouzapw/awesome-omni-skills",
+      "allinherog-star/ai-skills"
+    ]
+  },
+  "desloppify": {
+    "repo": null,
+    "path": null,
+    "candidates": [
+      "Git-on-my-level/codex-autorunner",
+      "peteromallet/desloppify",
+      "gobifrost/bifrost",
+      "gobifrost/bifrost"
+    ]
+  },
+  "doc": {
+    "repo": null,
+    "path": null,
+    "candidates": [
+      "browser-use/browser-harness-js",
+      "butterbase-ai/butterbase",
+      "DenisSergeevitch/repo-task-proof-loop",
+      "CatCatUncle/ruanzhu-kit"
+    ]
+  },
+  "editor-v1": {
+    "repo": null,
+    "path": null,
+    "candidates": [
+      "elementor/elementor",
+      "HenokCodez/Motion-Studio",
+      "BrettKinny/mft-editor",
+      "PhilRobinluo/ai-coevolution-skills"
+    ]
+  },
+  "gws-gmail": {
+    "repo": null,
+    "path": null,
+    "candidates": [
+      "majiayu000/claude-skill-registry",
+      "majiayu000/claude-skill-registry",
+      "majiayu000/claude-skill-registry",
+      "majiayu000/claude-skill-registry"
+    ]
+  },
+  "higgsfield": {
+    "repo": null,
+    "path": null,
+    "candidates": [
+      "majiayu000/claude-skill-registry",
+      "dmae97/omk",
+      "AKCodez/higgsfield-claude-skills",
+      "robonuggets/higgsfield-skill"
+    ]
+  },
+  "home-assistant": {
+    "repo": null,
+    "path": null,
+    "candidates": [
+      "mudler/LocalAI",
+      "home-assistant/home-assistant.io",
+      "home-assistant/home-assistant.io",
+      "Anil-matcha/awesome-muse-connectors"
+    ]
+  },
+  "humanizer": {
+    "repo": null,
+    "path": null,
+    "candidates": [
+      "op7418/Humanizer-zh",
+      "XBuilderLAB/cheat-on-content",
+      "NulightJens/humanizer-stack",
+      "SaltyPretz3l/jenny"
+    ]
+  },
+  "knowledge-base": {
+    "repo": null,
+    "path": null,
+    "candidates": [
+      "daymade/claude-code-skills",
+      "Xiangyu-CAS/xiaohongshu-ops-skill",
+      "chubbyguan/chubbyskills",
+      "Tencent/teamai-cli"
+    ]
+  },
+  "learn-codebase": {
+    "repo": "ktaletsk/learn-codebase",
+    "path": "SKILL.md"
+  },
+  "meal-plan": {
+    "repo": null,
+    "path": null,
+    "candidates": [
+      "majiayu000/claude-skill-registry",
+      "majiayu000/claude-skill-registry",
+      "majiayu000/claude-skill-registry",
+      "majiayu000/claude-skill-registry"
+    ]
+  },
+  "meeting-notes": {
+    "repo": null,
+    "path": null,
+    "candidates": [
+      "mergisi/awesome-openclaw-agents",
+      "composio-community/awesome-codex-skills",
+      "shiwenwen/hope-agent",
+      "majiayu000/claude-skill-registry"
+    ]
+  },
+  "minimax-docx": {
+    "repo": "lioensky/VCPToolBox",
+    "path": "Plugin/SkillBridge/SKILL/minimax-docx/SKILL.md"
+  },
+  "multi-agent-orchestration": {
+    "repo": null,
+    "path": null,
+    "candidates": [
+      "majiayu000/claude-skill-registry",
+      "majiayu000/claude-skill-registry",
+      "fengshao1227/ccg-workflow",
+      "Navinspire-ia/navin"
+    ]
+  },
+  "orchestrate": {
+    "repo": null,
+    "path": null,
+    "candidates": [
+      "img2threejs/img2threejs",
+      "agentsope/SkillAlchemy",
+      "Agent-Field/SWE-AF",
+      "ptn1411/skill"
+    ]
+  },
+  "proactive-self-improving-agent": {
+    "repo": "claw-opus/proactive-self-improving-agent",
+    "path": "SKILL.md"
+  },
+  "project-butler": {
+    "repo": "JamesShi96/project-butler",
+    "path": "SKILL.md"
+  },
+  "spreadsheet": {
+    "repo": null,
+    "path": null,
+    "candidates": [
+      "composio-community/awesome-codex-skills",
+      "nidhinjs/prompt-master",
+      "slavingia/skills",
+      "x-cmd/x-cmd"
+    ]
+  },
+  "summarize-meeting": {
+    "repo": "NVlabs/Skill2Env",
+    "path": "SkillHub/skills/pawel-huryn/summarize-meeting/SKILL.md"
+  },
+  "ui-styling": {
+    "repo": "nextlevelbuilder/ui-ux-pro-max-skill",
+    "path": "cli/assets/skills/ui-styling/SKILL.md"
+  },
+  "web-artifacts-builder": {
+    "repo": "davila7/claude-code-templates",
+    "path": "cli-tool/components/skills/utilities/web-artifacts-builder/SKILL.md"
+  },
+  "web-research": {
+    "repo": "langchain-ai/deepagents",
+    "path": "libs/code/examples/skills/web-research/SKILL.md"
+  }
+}
