@@ -1,0 +1,4006 @@
+{
+  "version": 1,
+  "generatedBy": "sync/build-collection.py",
+  "machines": [
+    "dracievajko",
+    "randall"
+  ],
+  "targets": {
+    "opencode": "~/.config/opencode/skills",
+    "agents": "~/.agents/skills",
+    "claude": "~/.claude/skills",
+    "pi": "~/.pi/agent/skills",
+    "cindy": "Cindy app: skills from ~/.agents/skills, plugins from sync/cindy-plugins.json"
+  },
+  "notes": [
+    "One collection for every computer. Machine snapshots in sync/machines/ are evidence, not separate collections.",
+    "install.method tells how a skill reaches a computer: repository-copy, git-sparse-checkout, or manual when the upstream is not verified.",
+    "harnesses lists every agent that sees the skill once it is installed in install.root.",
+    "cindyPlugins install from the Cindy marketplace on each machine and are then authorized there; sync/CINDY-INSTALL.md contains a ready-to-paste prompt that does it.",
+    "appManaged entries ship inside Cindy or Codex and are never copied between computers."
+  ],
+  "cindyPlugins": [
+    {
+      "id": "agent-desktop",
+      "namespace": null,
+      "purpose": "Read and drive the desktop GUI: click, type, snapshot windows, clipboard, notifications.",
+      "requiresAuthorization": false,
+      "install": {
+        "method": "cindy-marketplace",
+        "onTarget": "cindy"
+      },
+      "cindyOnly": true
+    },
+    {
+      "id": "cindy-art",
+      "namespace": null,
+      "purpose": "Image and art generation plugin; installed here but currently disabled.",
+      "requiresAuthorization": true,
+      "install": {
+        "method": "cindy-marketplace",
+        "onTarget": "cindy"
+      },
+      "cindyOnly": true
+    },
+    {
+      "id": "cindy-github",
+      "namespace": null,
+      "purpose": "GitHub issues, PRs, reviews, repositories, Actions, releases, search.",
+      "requiresAuthorization": true,
+      "install": {
+        "method": "cindy-marketplace",
+        "onTarget": "cindy"
+      },
+      "cindyOnly": true
+    },
+    {
+      "id": "cindy-mermaid",
+      "namespace": null,
+      "purpose": "Normalize Mermaid diagram source.",
+      "requiresAuthorization": false,
+      "install": {
+        "method": "cindy-marketplace",
+        "onTarget": "cindy"
+      },
+      "cindyOnly": true
+    },
+    {
+      "id": "cindy-web-search",
+      "namespace": null,
+      "purpose": "Web search and page fetch.",
+      "requiresAuthorization": true,
+      "install": {
+        "method": "cindy-marketplace",
+        "onTarget": "cindy"
+      },
+      "cindyOnly": true
+    },
+    {
+      "id": "compact-file-browser",
+      "namespace": null,
+      "purpose": "Left-panel project file browser.",
+      "requiresAuthorization": false,
+      "install": {
+        "method": "cindy-marketplace",
+        "onTarget": "cindy"
+      },
+      "cindyOnly": true
+    },
+    {
+      "id": "gh-market",
+      "namespace": null,
+      "purpose": "Search GitHub for Cindy plugins and skills, install .cindy packages.",
+      "requiresAuthorization": true,
+      "install": {
+        "method": "cindy-marketplace",
+        "onTarget": "cindy"
+      },
+      "cindyOnly": true
+    },
+    {
+      "id": "git-flow",
+      "namespace": null,
+      "purpose": "Local repository and branch panel, GitHub account switching.",
+      "requiresAuthorization": false,
+      "install": {
+        "method": "cindy-marketplace",
+        "onTarget": "cindy"
+      },
+      "cindyOnly": true
+    },
+    {
+      "id": "google-calendar",
+      "namespace": null,
+      "purpose": "Read and change calendar events.",
+      "requiresAuthorization": true,
+      "install": {
+        "method": "cindy-marketplace",
+        "onTarget": "cindy"
+      },
+      "cindyOnly": true
+    },
+    {
+      "id": "google-drive",
+      "namespace": null,
+      "purpose": "Search and manage Drive files, Docs and Slides.",
+      "requiresAuthorization": true,
+      "install": {
+        "method": "cindy-marketplace",
+        "onTarget": "cindy"
+      },
+      "cindyOnly": true
+    },
+    {
+      "id": "google-gmail",
+      "namespace": null,
+      "purpose": "Read mail, drafts and send through the draft card.",
+      "requiresAuthorization": true,
+      "install": {
+        "method": "cindy-marketplace",
+        "onTarget": "cindy"
+      },
+      "cindyOnly": true
+    },
+    {
+      "id": "my-browser",
+      "namespace": null,
+      "purpose": "Cindy Chrome: page translation and in-player subtitles.",
+      "requiresAuthorization": false,
+      "install": {
+        "method": "cindy-marketplace",
+        "onTarget": "cindy"
+      },
+      "cindyOnly": true
+    },
+    {
+      "id": "ntfy",
+      "namespace": null,
+      "purpose": "Push notifications through a personal ntfy server.",
+      "requiresAuthorization": true,
+      "install": {
+        "method": "cindy-marketplace",
+        "onTarget": "cindy"
+      },
+      "cindyOnly": true
+    },
+    {
+      "id": "opendesign-trial",
+      "namespace": null,
+      "purpose": "Create and revise HTML drafts with a local editor.",
+      "requiresAuthorization": false,
+      "install": {
+        "method": "cindy-marketplace",
+        "onTarget": "cindy"
+      },
+      "cindyOnly": true
+    },
+    {
+      "id": "ponytail",
+      "namespace": null,
+      "purpose": "Lazy-senior code review and anti-over-engineering rules.",
+      "requiresAuthorization": false,
+      "install": {
+        "method": "cindy-marketplace",
+        "onTarget": "cindy"
+      },
+      "cindyOnly": true
+    },
+    {
+      "id": "prompt-optimizer",
+      "namespace": null,
+      "purpose": "Rewrites prompts before they are sent; installed here but currently disabled.",
+      "requiresAuthorization": true,
+      "install": {
+        "method": "cindy-marketplace",
+        "onTarget": "cindy"
+      },
+      "cindyOnly": true
+    },
+    {
+      "id": "tuya-home",
+      "namespace": "local",
+      "purpose": "Tuya / Smart Life devices: lights, plugs, air conditioners, sensors.",
+      "requiresAuthorization": true,
+      "install": {
+        "method": "cindy-marketplace",
+        "onTarget": "cindy"
+      },
+      "cindyOnly": true
+    }
+  ],
+  "appManaged": {
+    "cindySkills": [
+      "cindy-plugin-creator",
+      "cindy-skill-creator",
+      "cindy-theme-creator",
+      "learn"
+    ],
+    "codexSkills": [
+      "imagegen",
+      "openai-docs",
+      "review-agent",
+      "skill-creator",
+      "skill-installer"
+    ]
+  },
+  "gaps": {
+    "dracievajko": [
+      "ai-vibe-slides",
+      "android-adb-control",
+      "android-development",
+      "api-and-interface-design",
+      "apk-reverse",
+      "avoid-ai-design",
+      "beyond-vibe-coding-autonomous-development",
+      "binary-diff",
+      "book-to-skill",
+      "browser-automation",
+      "code-review",
+      "create-individual-calendar-events-from-earnings-dates-list",
+      "dcf-valuation",
+      "deep-research",
+      "dependency-scan",
+      "design-catalogue",
+      "design-taste-frontend",
+      "desloppify",
+      "detailed-source-rewrite-guide",
+      "doc",
+      "document-editing-general",
+      "ds-note-formatter",
+      "editor-v1",
+      "enable-wake-on-lan-and-auto-shutdown-on-network-loss-for-ras",
+      "fix-inconclusive-skills",
+      "focus-my-energy",
+      "frontend-design",
+      "generate-findings-report-from-pipeline-logs",
+      "generate-fresh-ideas",
+      "generate-markdown-and-docx-documents",
+      "get-more-perspectives",
+      "ghidra-reverse",
+      "github-code-documentation",
+      "gws-gmail",
+      "higgsfield",
+      "home-assistant",
+      "humanizer",
+      "js-reverse",
+      "knowledge-base",
+      "learn-codebase",
+      "match-my-writing-style",
+      "meal-plan",
+      "meeting-notes",
+      "minimax-docx",
+      "mobile-reverse",
+      "multi-agent-orchestration",
+      "orchestrate",
+      "pdf",
+      "penetration-testing-guide",
+      "prep-for-meetings",
+      "proactive-self-improving-agent",
+      "project-butler",
+      "reverse-engineering",
+      "spreadsheet",
+      "summarize-meeting",
+      "systematic-debugging",
+      "testing-skills",
+      "trader-alerts",
+      "trader-analyst",
+      "trader-broker",
+      "trader-budget",
+      "trader-entry",
+      "trader-exit",
+      "trader-news",
+      "trader-pelosi",
+      "trader-risk",
+      "trader-scanner",
+      "trader-timemachine",
+      "ui-styling",
+      "universal-listing-template",
+      "web-artifacts-builder",
+      "web-research",
+      "webapp-testing",
+      "writing-plans",
+      "yfinance-ai"
+    ],
+    "randall": [
+      "gsap-core",
+      "gsap-frameworks",
+      "gsap-performance",
+      "gsap-plugins",
+      "gsap-react",
+      "gsap-scrolltrigger",
+      "gsap-timeline",
+      "gsap-utils",
+      "impeccable",
+      "make-interfaces-feel-better",
+      "playwright-skill",
+      "rea-analysis-optimization",
+      "rea-changelog-update",
+      "rea-ci-tests-audit",
+      "rea-tool-design",
+      "transitions-dev",
+      "transitions-polish"
+    ]
+  },
+  "skills": [
+    {
+      "name": "agent-operating-rules",
+      "authorship": "original",
+      "source": {
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/original/agent-operating-rules"
+      },
+      "install": {
+        "method": "repository-copy",
+        "root": "opencode",
+        "target": "~/.config/opencode/skills"
+      },
+      "harnesses": [
+        "opencode",
+        "agents",
+        "cindy",
+        "claude",
+        "pi"
+      ],
+      "machines": [
+        "dracievajko",
+        "randall"
+      ],
+      "sha256": {
+        "dracievajko": "d87f97d08e3e3a45ec992c2f5e86e7ea801c545300daa918d78b87fc0c0b5c2c",
+        "randall": "d87f97d08e3e3a45ec992c2f5e86e7ea801c545300daa918d78b87fc0c0b5c2c"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "ai-vibe-slides",
+      "authorship": "unknown",
+      "source": {
+        "type": "unresolved",
+        "repo": null,
+        "ref": null,
+        "path": null
+      },
+      "install": {
+        "method": "manual",
+        "root": "agents",
+        "target": "~/.agents/skills"
+      },
+      "harnesses": [
+        "agents",
+        "cindy",
+        "claude",
+        "pi",
+        "continue",
+        "qwen",
+        "roo"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "010019c3464c96c563d73aafba81fd569a9a70cf8adc8e81df6eb14204cd5d1f"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "android-adb-control",
+      "authorship": "unknown",
+      "source": {
+        "type": "unresolved",
+        "repo": null,
+        "ref": null,
+        "path": null
+      },
+      "install": {
+        "method": "manual",
+        "root": "agents",
+        "target": "~/.agents/skills"
+      },
+      "harnesses": [
+        "agents",
+        "cindy",
+        "claude",
+        "pi",
+        "continue",
+        "qwen",
+        "roo"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "83654d64401cc21490cf25a1c8a0b27997dd48551e0efe2e34dd4fec68d16470"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "android-development",
+      "authorship": "unknown",
+      "source": {
+        "type": "unresolved",
+        "repo": null,
+        "ref": null,
+        "path": null
+      },
+      "install": {
+        "method": "manual",
+        "root": "agents",
+        "target": "~/.agents/skills"
+      },
+      "harnesses": [
+        "agents",
+        "cindy",
+        "claude",
+        "pi",
+        "continue",
+        "qwen",
+        "roo"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "beb251137c931969bedc81a9748dcfd90381a3cf0e2f61ae15533e526cfb640a"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "api-and-interface-design",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "addyosmani/agent-skills",
+        "ref": "main",
+        "path": "skills/api-and-interface-design"
+      },
+      "install": {
+        "method": "git-sparse-checkout",
+        "root": "agents",
+        "target": "~/.agents/skills"
+      },
+      "harnesses": [
+        "agents",
+        "cindy",
+        "claude",
+        "pi",
+        "continue",
+        "qwen",
+        "roo"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "5dafd0c44a3aabf11cae5bcb34f6fcc24dfa5c01ba6e0d3176bce997f4d68bc8"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "apk-reverse",
+      "authorship": "third-party",
+      "source": {
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/third-party/apk-reverse"
+      },
+      "install": {
+        "method": "repository-copy",
+        "root": "opencode",
+        "target": "~/.config/opencode/skills"
+      },
+      "harnesses": [
+        "opencode",
+        "agents",
+        "cindy",
+        "claude",
+        "pi"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "eac6fa7ad136b539f0e31140258e65f4544ef93b37558655320817fbd8062dda"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "applying-themes",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "GenAI-Community-VITB/master-prompters",
+        "ref": "main",
+        "path": ".agents/skills/applying-themes"
+      },
+      "install": {
+        "method": "git-sparse-checkout",
+        "root": "opencode",
+        "target": "~/.config/opencode/skills"
+      },
+      "harnesses": [
+        "opencode",
+        "agents",
+        "cindy",
+        "claude",
+        "pi"
+      ],
+      "machines": [
+        "dracievajko",
+        "randall"
+      ],
+      "sha256": {
+        "dracievajko": "11cb6b69704faaaffb0e680bd1111b8a26150153aa842daa254d2df4edacadc3",
+        "randall": "11cb6b69704faaaffb0e680bd1111b8a26150153aa842daa254d2df4edacadc3"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "avoid-ai-design",
+      "authorship": "unknown",
+      "source": {
+        "type": "unresolved",
+        "repo": null,
+        "ref": null,
+        "path": null
+      },
+      "install": {
+        "method": "manual",
+        "root": "agents",
+        "target": "~/.agents/skills"
+      },
+      "harnesses": [
+        "agents",
+        "cindy",
+        "claude",
+        "pi",
+        "continue",
+        "qwen",
+        "roo"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "8261a426b62a08bef43069e47ad7ffbad1aa86cd3f51b76a84217d14ce9b92f4"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "beyond-vibe-coding-autonomous-development",
+      "authorship": "original",
+      "source": {
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/original/beyond-vibe-coding-autonomous-development"
+      },
+      "install": {
+        "method": "repository-copy",
+        "root": "opencode",
+        "target": "~/.config/opencode/skills"
+      },
+      "harnesses": [
+        "opencode",
+        "agents",
+        "cindy",
+        "claude",
+        "pi"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "c5e7c791d57872dccaaa9d3fee7faa0123579bb0e752b4085fa35d63de810e6f"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "binary-diff",
+      "authorship": "third-party",
+      "source": {
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/third-party/binary-diff"
+      },
+      "install": {
+        "method": "repository-copy",
+        "root": "opencode",
+        "target": "~/.config/opencode/skills"
+      },
+      "harnesses": [
+        "opencode",
+        "agents",
+        "cindy",
+        "claude",
+        "pi"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "62254d63c40bfb15f00d3a30821714657f6742e4e787d8e6ef8a7e98e2a950f6"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "blender-geometry-nodes",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "composio-community/opencode-skills",
+        "ref": "5076f6673e5bf8b1f46dc5e934d1e3dd37250e10",
+        "path": "skills/blender-geometry-nodes"
+      },
+      "install": {
+        "method": "git-sparse-checkout",
+        "root": "opencode",
+        "target": "~/.config/opencode/skills"
+      },
+      "harnesses": [
+        "opencode",
+        "agents",
+        "cindy",
+        "claude",
+        "pi"
+      ],
+      "machines": [
+        "dracievajko",
+        "randall"
+      ],
+      "sha256": {
+        "dracievajko": "f7b2985c9500a09cca38a0449cb5d7dadb4a9e84179b31ba9cd2c86601798a06",
+        "randall": "f7b2985c9500a09cca38a0449cb5d7dadb4a9e84179b31ba9cd2c86601798a06"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "blender-hard-surface-modeling",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "composio-community/opencode-skills",
+        "ref": "5076f6673e5bf8b1f46dc5e934d1e3dd37250e10",
+        "path": "skills/blender-hard-surface-modeling"
+      },
+      "install": {
+        "method": "git-sparse-checkout",
+        "root": "opencode",
+        "target": "~/.config/opencode/skills"
+      },
+      "harnesses": [
+        "opencode",
+        "agents",
+        "cindy",
+        "claude",
+        "pi"
+      ],
+      "machines": [
+        "dracievajko",
+        "randall"
+      ],
+      "sha256": {
+        "dracievajko": "999a27a361a6b9c06e81992e1cef114016ebebc752f69535fc2c7c5badfde233",
+        "randall": "999a27a361a6b9c06e81992e1cef114016ebebc752f69535fc2c7c5badfde233"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "blender-python-integration",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "composio-community/opencode-skills",
+        "ref": "5076f6673e5bf8b1f46dc5e934d1e3dd37250e10",
+        "path": "skills/blender-python-integration"
+      },
+      "install": {
+        "method": "git-sparse-checkout",
+        "root": "opencode",
+        "target": "~/.config/opencode/skills"
+      },
+      "harnesses": [
+        "opencode",
+        "agents",
+        "cindy",
+        "claude",
+        "pi"
+      ],
+      "machines": [
+        "dracievajko",
+        "randall"
+      ],
+      "sha256": {
+        "dracievajko": "5e4ec6af939397b1855e27b4f30e3ec5848454ba56250f89ddda5fbb75384a58",
+        "randall": "5e4ec6af939397b1855e27b4f30e3ec5848454ba56250f89ddda5fbb75384a58"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "blender-rigging-animation",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "composio-community/opencode-skills",
+        "ref": "5076f6673e5bf8b1f46dc5e934d1e3dd37250e10",
+        "path": "skills/blender-rigging-animation"
+      },
+      "install": {
+        "method": "git-sparse-checkout",
+        "root": "opencode",
+        "target": "~/.config/opencode/skills"
+      },
+      "harnesses": [
+        "opencode",
+        "agents",
+        "cindy",
+        "claude",
+        "pi"
+      ],
+      "machines": [
+        "dracievajko",
+        "randall"
+      ],
+      "sha256": {
+        "dracievajko": "2c5205691d5819890d6e208c331c39bc202fc6c1300a7a7599d2c78b66f89bcc",
+        "randall": "2c5205691d5819890d6e208c331c39bc202fc6c1300a7a7599d2c78b66f89bcc"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "book-to-skill",
+      "authorship": "original",
+      "source": {
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/original/book-to-skill"
+      },
+      "install": {
+        "method": "repository-copy",
+        "root": "opencode",
+        "target": "~/.config/opencode/skills"
+      },
+      "harnesses": [
+        "opencode",
+        "agents",
+        "cindy",
+        "claude",
+        "pi"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "75807d51ace1a189b207e5ce3a6decf92820d344acf4051937c607c525e73fdc"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "brainstorming",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "obra/superpowers",
+        "ref": "2ce8aa15d05bd57213e6f746f953aafb7ded7a8b",
+        "path": "skills/brainstorming"
+      },
+      "install": {
+        "method": "git-sparse-checkout",
+        "root": "opencode",
+        "target": "~/.config/opencode/skills"
+      },
+      "harnesses": [
+        "opencode",
+        "agents",
+        "cindy",
+        "claude",
+        "pi"
+      ],
+      "machines": [
+        "dracievajko",
+        "randall"
+      ],
+      "sha256": {
+        "dracievajko": "355bc853d3a8db157c6415c9197bef4ffc36d75bf17b1f3db4e8b6d32386e6f2",
+        "randall": "355bc853d3a8db157c6415c9197bef4ffc36d75bf17b1f3db4e8b6d32386e6f2"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "browser-automation",
+      "authorship": "unknown",
+      "source": {
+        "type": "unresolved",
+        "repo": null,
+        "ref": null,
+        "path": null
+      },
+      "install": {
+        "method": "manual",
+        "root": "agents",
+        "target": "~/.agents/skills"
+      },
+      "harnesses": [
+        "agents",
+        "cindy",
+        "claude",
+        "pi",
+        "continue",
+        "qwen",
+        "roo"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "9aa7c602a7004e53beb99c4399ec61773395d328b0faf64b968086d44b4c59b5"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "building-mcp-servers",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "GenAI-Community-VITB/master-prompters",
+        "ref": "main",
+        "path": ".agents/skills/building-mcp-servers"
+      },
+      "install": {
+        "method": "git-sparse-checkout",
+        "root": "opencode",
+        "target": "~/.config/opencode/skills"
+      },
+      "harnesses": [
+        "opencode",
+        "agents",
+        "cindy",
+        "claude",
+        "pi"
+      ],
+      "machines": [
+        "dracievajko",
+        "randall"
+      ],
+      "sha256": {
+        "dracievajko": "a4d715bfb7d018bbee063e84336c00e3eed03e2eb25dcc6f78da130aac29e5a4",
+        "randall": "a4d715bfb7d018bbee063e84336c00e3eed03e2eb25dcc6f78da130aac29e5a4"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "code-documenter",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "Jeffallan/claude-skills",
+        "ref": "02b05028ba6c93f7aed45314b15c0dd5abead9d6",
+        "path": "skills/code-documenter"
+      },
+      "install": {
+        "method": "git-sparse-checkout",
+        "root": "opencode",
+        "target": "~/.config/opencode/skills"
+      },
+      "harnesses": [
+        "opencode",
+        "agents",
+        "cindy",
+        "claude",
+        "pi"
+      ],
+      "machines": [
+        "dracievajko",
+        "randall"
+      ],
+      "sha256": {
+        "dracievajko": "db585719a890418d10d7764c7e8a36b9e1c3a28d6d6e1c2790d6de2753218cf8",
+        "randall": "db585719a890418d10d7764c7e8a36b9e1c3a28d6d6e1c2790d6de2753218cf8"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "code-review",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "mattpocock/skills",
+        "ref": "main",
+        "path": "skills/engineering/code-review"
+      },
+      "install": {
+        "method": "git-sparse-checkout",
+        "root": "agents",
+        "target": "~/.agents/skills"
+      },
+      "harnesses": [
+        "agents",
+        "cindy",
+        "claude",
+        "pi",
+        "continue",
+        "qwen",
+        "roo"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "47f4e52c21694def9c7c11cbfbf891ca35eac7a93e395797515be3c8a409ae50"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "code-reviewer",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "Jeffallan/claude-skills",
+        "ref": "02b05028ba6c93f7aed45314b15c0dd5abead9d6",
+        "path": "skills/code-reviewer"
+      },
+      "install": {
+        "method": "git-sparse-checkout",
+        "root": "opencode",
+        "target": "~/.config/opencode/skills"
+      },
+      "harnesses": [
+        "opencode",
+        "agents",
+        "cindy",
+        "claude",
+        "pi"
+      ],
+      "machines": [
+        "dracievajko",
+        "randall"
+      ],
+      "sha256": {
+        "dracievajko": "7ac164f0f22db9affdbd902da6fe4fe2af48eb637d41e646869fb8907094067a",
+        "randall": "7ac164f0f22db9affdbd902da6fe4fe2af48eb637d41e646869fb8907094067a"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "context-engineering",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "addyosmani/agent-skills",
+        "ref": "aeac41d4d005999432bb7312f7ff06383a91d59d",
+        "path": "skills/context-engineering"
+      },
+      "install": {
+        "method": "git-sparse-checkout",
+        "root": "opencode",
+        "target": "~/.config/opencode/skills"
+      },
+      "harnesses": [
+        "opencode",
+        "agents",
+        "cindy",
+        "claude",
+        "pi"
+      ],
+      "machines": [
+        "dracievajko",
+        "randall"
+      ],
+      "sha256": {
+        "dracievajko": "e20d990fb6f2f4a45ea3f75f9ed2fa64d40f5940940977ec8aca90a28a876836",
+        "randall": "e20d990fb6f2f4a45ea3f75f9ed2fa64d40f5940940977ec8aca90a28a876836"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "create-individual-calendar-events-from-earnings-dates-list",
+      "authorship": "original",
+      "source": {
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/original/create-individual-calendar-events-from-earnings-dates-list"
+      },
+      "install": {
+        "method": "repository-copy",
+        "root": "opencode",
+        "target": "~/.config/opencode/skills"
+      },
+      "harnesses": [
+        "opencode",
+        "agents",
+        "cindy",
+        "claude",
+        "pi"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "190a460c75c8065dd851b98ac1f409294e653dd8b08c767cb003a500b401c44a"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "creating-skills",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "GenAI-Community-VITB/master-prompters",
+        "ref": "main",
+        "path": ".agents/skills/creating-skills"
+      },
+      "install": {
+        "method": "git-sparse-checkout",
+        "root": "opencode",
+        "target": "~/.config/opencode/skills"
+      },
+      "harnesses": [
+        "opencode",
+        "agents",
+        "cindy",
+        "claude",
+        "pi"
+      ],
+      "machines": [
+        "dracievajko",
+        "randall"
+      ],
+      "sha256": {
+        "dracievajko": "71872dcdbe5269bcadffc7b631c3e2fbe8946f29b433140afe251ee48958152c",
+        "randall": "71872dcdbe5269bcadffc7b631c3e2fbe8946f29b433140afe251ee48958152c"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "dcf-valuation",
+      "authorship": "unknown",
+      "source": {
+        "type": "unresolved",
+        "repo": null,
+        "ref": null,
+        "path": null
+      },
+      "install": {
+        "method": "manual",
+        "root": "agents",
+        "target": "~/.agents/skills"
+      },
+      "harnesses": [
+        "agents",
+        "cindy",
+        "claude",
+        "pi",
+        "continue",
+        "qwen",
+        "roo"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "207ae6f7ea53515ddfad2dbe79346af90e778262fd173ae0a9ff12f257c758c6"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "debugging-wizard",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "Jeffallan/claude-skills",
+        "ref": "02b05028ba6c93f7aed45314b15c0dd5abead9d6",
+        "path": "skills/debugging-wizard"
+      },
+      "install": {
+        "method": "git-sparse-checkout",
+        "root": "opencode",
+        "target": "~/.config/opencode/skills"
+      },
+      "harnesses": [
+        "opencode",
+        "agents",
+        "cindy",
+        "claude",
+        "pi"
+      ],
+      "machines": [
+        "dracievajko",
+        "randall"
+      ],
+      "sha256": {
+        "dracievajko": "9bd8dbe72b51ab73c2907ceb6700e040867000acf2a42f610db114cd46891914",
+        "randall": "9bd8dbe72b51ab73c2907ceb6700e040867000acf2a42f610db114cd46891914"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "deep-agents-memory",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "langchain-ai/design-agent",
+        "ref": "main",
+        "path": ".agents/skills/deep-agents-memory"
+      },
+      "install": {
+        "method": "git-sparse-checkout",
+        "root": "agents",
+        "target": "~/.agents/skills"
+      },
+      "harnesses": [
+        "agents",
+        "cindy",
+        "claude",
+        "pi",
+        "continue",
+        "qwen",
+        "roo"
+      ],
+      "machines": [
+        "dracievajko",
+        "randall"
+      ],
+      "sha256": {
+        "dracievajko": "3549b750ca9625dc73e0c4bee87133f57fab374ba0202daa74a2d28c91cb3bf4",
+        "randall": "3549b750ca9625dc73e0c4bee87133f57fab374ba0202daa74a2d28c91cb3bf4"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "deep-research",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "imbad0202/academic-research-skills",
+        "ref": "c67a7be53f23d9dbba4030bbcd6f5ccfeda3afa9",
+        "path": "deep-research"
+      },
+      "install": {
+        "method": "git-sparse-checkout",
+        "root": "opencode",
+        "target": "~/.config/opencode/skills"
+      },
+      "harnesses": [
+        "opencode",
+        "agents",
+        "cindy",
+        "claude",
+        "pi"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "d4b056eab3bb520bf7a45aeb3cf16260b532e0d99cec414d9ed9085b1f470948"
+      },
+      "drift": false,
+      "needsNodeModules": true
+    },
+    {
+      "name": "dependency-scan",
+      "authorship": "unknown",
+      "source": {
+        "type": "unresolved",
+        "repo": null,
+        "ref": null,
+        "path": null
+      },
+      "install": {
+        "method": "manual",
+        "root": "agents",
+        "target": "~/.agents/skills"
+      },
+      "harnesses": [
+        "agents",
+        "cindy",
+        "claude",
+        "pi",
+        "continue",
+        "qwen",
+        "roo"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "4076824ca35e590c19524a51b28fa1c67ffc13e466d8a5d7549d5f6b9cbf0c95"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "design-catalogue",
+      "authorship": "unknown",
+      "source": {
+        "type": "unresolved",
+        "repo": null,
+        "ref": null,
+        "path": null
+      },
+      "install": {
+        "method": "manual",
+        "root": "agents",
+        "target": "~/.agents/skills"
+      },
+      "harnesses": [
+        "agents",
+        "cindy",
+        "claude",
+        "pi",
+        "continue",
+        "qwen",
+        "roo"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "d3827b3abd243dbb72ebb1dccc3aa51da6aaf30b71c891cfdee1ee50dfe2bde3"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "design-taste-frontend",
+      "authorship": "unknown",
+      "source": {
+        "type": "unresolved",
+        "repo": null,
+        "ref": null,
+        "path": null
+      },
+      "install": {
+        "method": "manual",
+        "root": "agents",
+        "target": "~/.agents/skills"
+      },
+      "harnesses": [
+        "agents",
+        "cindy",
+        "claude",
+        "pi",
+        "continue",
+        "qwen",
+        "roo"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "aa194351b246b8b4799099d4ed7b033d29eab6e6e3d58d8d2172978be7b3ec89"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "desloppify",
+      "authorship": "unknown",
+      "source": {
+        "type": "unresolved",
+        "repo": null,
+        "ref": null,
+        "path": null
+      },
+      "install": {
+        "method": "manual",
+        "root": "opencode",
+        "target": "~/.config/opencode/skills"
+      },
+      "harnesses": [
+        "opencode",
+        "agents",
+        "cindy",
+        "claude",
+        "pi"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "3f0e1e8437a0ba929347ec7106d5f39f8893ae319e57b91a5028b9cb1d001c2d"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "detailed-source-rewrite-guide",
+      "authorship": "original",
+      "source": {
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/original/detailed-source-rewrite-guide"
+      },
+      "install": {
+        "method": "repository-copy",
+        "root": "opencode",
+        "target": "~/.config/opencode/skills"
+      },
+      "harnesses": [
+        "opencode",
+        "agents",
+        "cindy",
+        "claude",
+        "pi"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "aded2e94722e29c589806cc7f777696b3de2a7f4028e8e37140c2edc7198c5e1"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "doc",
+      "authorship": "unknown",
+      "source": {
+        "type": "unresolved",
+        "repo": null,
+        "ref": null,
+        "path": null
+      },
+      "install": {
+        "method": "manual",
+        "root": "agents",
+        "target": "~/.agents/skills"
+      },
+      "harnesses": [
+        "agents",
+        "cindy",
+        "claude",
+        "pi",
+        "continue",
+        "qwen",
+        "roo"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "0a635585817d1ac96e8e512114d08258b70f9e54ce0052078a258291ac13a8ed"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "document-editing-general",
+      "authorship": "original",
+      "source": {
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/original/document-editing-general"
+      },
+      "install": {
+        "method": "repository-copy",
+        "root": "opencode",
+        "target": "~/.config/opencode/skills"
+      },
+      "harnesses": [
+        "opencode",
+        "agents",
+        "cindy",
+        "claude",
+        "pi"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "0ed41a46595044683ca0e7fd6061a80ff16c665aa34577d39119ee718c9f06be"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "ds-note-formatter",
+      "authorship": "original",
+      "source": {
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/original/ds-note-formatter"
+      },
+      "install": {
+        "method": "repository-copy",
+        "root": "opencode",
+        "target": "~/.config/opencode/skills"
+      },
+      "harnesses": [
+        "opencode",
+        "agents",
+        "cindy",
+        "claude",
+        "pi"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "16f3c54765d65ac0d1660ea881bf10e7c85bf8455a3f59da7de56cb7bad3f813"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "editor-v1",
+      "authorship": "unknown",
+      "source": {
+        "type": "unresolved",
+        "repo": null,
+        "ref": null,
+        "path": null
+      },
+      "install": {
+        "method": "manual",
+        "root": "opencode",
+        "target": "~/.config/opencode/skills"
+      },
+      "harnesses": [
+        "opencode",
+        "agents",
+        "cindy",
+        "claude",
+        "pi"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "72bb0c3102edb98d7f8ecedd492f8c9b4cc216a91360c6bf0061e588220a81a8"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "enable-wake-on-lan-and-auto-shutdown-on-network-loss-for-ras",
+      "authorship": "original",
+      "source": {
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/original/enable-wake-on-lan-and-auto-shutdown-on-network-loss-for-ras"
+      },
+      "install": {
+        "method": "repository-copy",
+        "root": "opencode",
+        "target": "~/.config/opencode/skills"
+      },
+      "harnesses": [
+        "opencode",
+        "agents",
+        "cindy",
+        "claude",
+        "pi"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "3c245247475b31e2f586ed09e5d79055426e61b5137dfcffbcc9a1324f6f06bc"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "fine-tuning-expert",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "Jeffallan/claude-skills",
+        "ref": "02b05028ba6c93f7aed45314b15c0dd5abead9d6",
+        "path": "skills/fine-tuning-expert"
+      },
+      "install": {
+        "method": "git-sparse-checkout",
+        "root": "opencode",
+        "target": "~/.config/opencode/skills"
+      },
+      "harnesses": [
+        "opencode",
+        "agents",
+        "cindy",
+        "claude",
+        "pi"
+      ],
+      "machines": [
+        "dracievajko",
+        "randall"
+      ],
+      "sha256": {
+        "dracievajko": "f686c7106b522f900980c1fb03cc474e0d3aad88c5944b1023cbdcd2d94a5b18",
+        "randall": "f686c7106b522f900980c1fb03cc474e0d3aad88c5944b1023cbdcd2d94a5b18"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "fix-inconclusive-skills",
+      "authorship": "original",
+      "source": {
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/original/fix-inconclusive-skills"
+      },
+      "install": {
+        "method": "repository-copy",
+        "root": "opencode",
+        "target": "~/.config/opencode/skills"
+      },
+      "harnesses": [
+        "opencode",
+        "agents",
+        "cindy",
+        "claude",
+        "pi"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "ac5aea74554c91b2b5ff5ed7a1be48d117d11a063bc32f9af99b8dc569440ad2"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "focus-my-energy",
+      "authorship": "original",
+      "source": {
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/original/focus-my-energy"
+      },
+      "install": {
+        "method": "repository-copy",
+        "root": "opencode",
+        "target": "~/.config/opencode/skills"
+      },
+      "harnesses": [
+        "opencode",
+        "agents",
+        "cindy",
+        "claude",
+        "pi"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "b06faa4ebced560eb3c29da9d3b6c30ce68e2f3e96fafd7b3646e6fa523e1c85"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "frontend-design",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "anthropics/skills",
+        "ref": "main",
+        "path": "skills/frontend-design"
+      },
+      "install": {
+        "method": "git-sparse-checkout",
+        "root": "agents",
+        "target": "~/.agents/skills"
+      },
+      "harnesses": [
+        "agents",
+        "cindy",
+        "claude",
+        "pi",
+        "continue",
+        "qwen",
+        "roo"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "d91970639e9f5c37682ac7ab60094d35f1c7c1f38d731bd56396563aee10c1d3"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "frontend-design-systems",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "composio-community/opencode-skills",
+        "ref": "5076f6673e5bf8b1f46dc5e934d1e3dd37250e10",
+        "path": "skills/frontend-design-systems"
+      },
+      "install": {
+        "method": "git-sparse-checkout",
+        "root": "opencode",
+        "target": "~/.config/opencode/skills"
+      },
+      "harnesses": [
+        "opencode",
+        "agents",
+        "cindy",
+        "claude",
+        "pi"
+      ],
+      "machines": [
+        "dracievajko",
+        "randall"
+      ],
+      "sha256": {
+        "dracievajko": "397fb10beffe6d4e835496c375cb6d43c20ca01ce902af22064fce6b3b6040ec",
+        "randall": "397fb10beffe6d4e835496c375cb6d43c20ca01ce902af22064fce6b3b6040ec"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "generate-findings-report-from-pipeline-logs",
+      "authorship": "original",
+      "source": {
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/original/generate-findings-report-from-pipeline-logs"
+      },
+      "install": {
+        "method": "repository-copy",
+        "root": "opencode",
+        "target": "~/.config/opencode/skills"
+      },
+      "harnesses": [
+        "opencode",
+        "agents",
+        "cindy",
+        "claude",
+        "pi"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "b5b03c99e3eb61a3299172e65b32401363d5499113aa04cd0584491244785c43"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "generate-fresh-ideas",
+      "authorship": "original",
+      "source": {
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/original/generate-fresh-ideas"
+      },
+      "install": {
+        "method": "repository-copy",
+        "root": "opencode",
+        "target": "~/.config/opencode/skills"
+      },
+      "harnesses": [
+        "opencode",
+        "agents",
+        "cindy",
+        "claude",
+        "pi"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "efe3ad5de56f11a015d56c85c1de5bb295eef18e5e33e6d0964ce037b144ab9a"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "generate-markdown-and-docx-documents",
+      "authorship": "original",
+      "source": {
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/original/generate-markdown-and-docx-documents"
+      },
+      "install": {
+        "method": "repository-copy",
+        "root": "opencode",
+        "target": "~/.config/opencode/skills"
+      },
+      "harnesses": [
+        "opencode",
+        "agents",
+        "cindy",
+        "claude",
+        "pi"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "e43e2f058fe58cf7afb20edfc93cf01f4502028b8816d50c4c6382a14d75aa19"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "get-more-perspectives",
+      "authorship": "original",
+      "source": {
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/original/get-more-perspectives"
+      },
+      "install": {
+        "method": "repository-copy",
+        "root": "opencode",
+        "target": "~/.config/opencode/skills"
+      },
+      "harnesses": [
+        "opencode",
+        "agents",
+        "cindy",
+        "claude",
+        "pi"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "089db2cadc653a8dba88f3b699e03f57f6de21d1f63be908457f8a5b215f4178"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "ghidra-reverse",
+      "authorship": "third-party",
+      "source": {
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/third-party/ghidra-reverse"
+      },
+      "install": {
+        "method": "repository-copy",
+        "root": "opencode",
+        "target": "~/.config/opencode/skills"
+      },
+      "harnesses": [
+        "opencode",
+        "agents",
+        "cindy",
+        "claude",
+        "pi"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "c2be0e5b30b609094e93430ae2529269d62ce04173bc76baa1ea1e6a851ba6f0"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "github-code-documentation",
+      "authorship": "original",
+      "source": {
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/original/github-code-documentation"
+      },
+      "install": {
+        "method": "repository-copy",
+        "root": "opencode",
+        "target": "~/.config/opencode/skills"
+      },
+      "harnesses": [
+        "opencode",
+        "agents",
+        "cindy",
+        "claude",
+        "pi"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "1cb9120ea575ea3b03019156fc5362110f30fecde09fda7397980123661d64d9"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "gsap-core",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "greensock/gsap-skills",
+        "ref": "main",
+        "path": "skills/gsap-core"
+      },
+      "install": {
+        "method": "git-sparse-checkout",
+        "root": "agents",
+        "target": "~/.agents/skills"
+      },
+      "harnesses": [
+        "agents",
+        "cindy",
+        "claude",
+        "pi",
+        "continue",
+        "qwen",
+        "roo"
+      ],
+      "machines": [
+        "dracievajko"
+      ],
+      "sha256": {
+        "dracievajko": "3887b47e050ab5afbe2a9a820f23d39fa02ab785e06a343be44c6f91d84d12b3"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "gsap-frameworks",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "greensock/gsap-skills",
+        "ref": "main",
+        "path": "skills/gsap-frameworks"
+      },
+      "install": {
+        "method": "git-sparse-checkout",
+        "root": "agents",
+        "target": "~/.agents/skills"
+      },
+      "harnesses": [
+        "agents",
+        "cindy",
+        "claude",
+        "pi",
+        "continue",
+        "qwen",
+        "roo"
+      ],
+      "machines": [
+        "dracievajko"
+      ],
+      "sha256": {
+        "dracievajko": "842d9d3659ec3ddc8abbdc524708f8facf81f468ac25d0577f48c759c4fa31e6"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "gsap-performance",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "greensock/gsap-skills",
+        "ref": "main",
+        "path": "skills/gsap-performance"
+      },
+      "install": {
+        "method": "git-sparse-checkout",
+        "root": "agents",
+        "target": "~/.agents/skills"
+      },
+      "harnesses": [
+        "agents",
+        "cindy",
+        "claude",
+        "pi",
+        "continue",
+        "qwen",
+        "roo"
+      ],
+      "machines": [
+        "dracievajko"
+      ],
+      "sha256": {
+        "dracievajko": "cb5408d6fba707aabcbfe3320317a14c1f8fca6070074e5261047930f50d441e"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "gsap-plugins",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "greensock/gsap-skills",
+        "ref": "main",
+        "path": "skills/gsap-plugins"
+      },
+      "install": {
+        "method": "git-sparse-checkout",
+        "root": "agents",
+        "target": "~/.agents/skills"
+      },
+      "harnesses": [
+        "agents",
+        "cindy",
+        "claude",
+        "pi",
+        "continue",
+        "qwen",
+        "roo"
+      ],
+      "machines": [
+        "dracievajko"
+      ],
+      "sha256": {
+        "dracievajko": "5838b856c74c07fbc9fa99b6dfd1eee34ea554c3e530c30e0d58014b707d70a4"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "gsap-react",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "greensock/gsap-skills",
+        "ref": "main",
+        "path": "skills/gsap-react"
+      },
+      "install": {
+        "method": "git-sparse-checkout",
+        "root": "agents",
+        "target": "~/.agents/skills"
+      },
+      "harnesses": [
+        "agents",
+        "cindy",
+        "claude",
+        "pi",
+        "continue",
+        "qwen",
+        "roo"
+      ],
+      "machines": [
+        "dracievajko"
+      ],
+      "sha256": {
+        "dracievajko": "88e2a5312b45e8cc7b3c496637ff5bc9af2ae9c925b555c8b235b34cbc989d74"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "gsap-scrolltrigger",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "greensock/gsap-skills",
+        "ref": "main",
+        "path": "skills/gsap-scrolltrigger"
+      },
+      "install": {
+        "method": "git-sparse-checkout",
+        "root": "agents",
+        "target": "~/.agents/skills"
+      },
+      "harnesses": [
+        "agents",
+        "cindy",
+        "claude",
+        "pi",
+        "continue",
+        "qwen",
+        "roo"
+      ],
+      "machines": [
+        "dracievajko"
+      ],
+      "sha256": {
+        "dracievajko": "9351b6666a4749c0740406ea363aaccb99a087ff45cc5e8b99a0f367facf3ef4"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "gsap-timeline",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "greensock/gsap-skills",
+        "ref": "main",
+        "path": "skills/gsap-timeline"
+      },
+      "install": {
+        "method": "git-sparse-checkout",
+        "root": "agents",
+        "target": "~/.agents/skills"
+      },
+      "harnesses": [
+        "agents",
+        "cindy",
+        "claude",
+        "pi",
+        "continue",
+        "qwen",
+        "roo"
+      ],
+      "machines": [
+        "dracievajko"
+      ],
+      "sha256": {
+        "dracievajko": "1a8b0f39cc4be3ed3d834b89672e4ae2f151b901dc3450bebf10bbc45379fe02"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "gsap-utils",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "greensock/gsap-skills",
+        "ref": "main",
+        "path": "skills/gsap-utils"
+      },
+      "install": {
+        "method": "git-sparse-checkout",
+        "root": "agents",
+        "target": "~/.agents/skills"
+      },
+      "harnesses": [
+        "agents",
+        "cindy",
+        "claude",
+        "pi",
+        "continue",
+        "qwen",
+        "roo"
+      ],
+      "machines": [
+        "dracievajko"
+      ],
+      "sha256": {
+        "dracievajko": "1927bcc4ea95b38203404ad5ea1d060b15c4a886c65ae53e885ff1793aabe0ba"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "gws-gmail",
+      "authorship": "unknown",
+      "source": {
+        "type": "unresolved",
+        "repo": null,
+        "ref": null,
+        "path": null
+      },
+      "install": {
+        "method": "manual",
+        "root": "agents",
+        "target": "~/.agents/skills"
+      },
+      "harnesses": [
+        "agents",
+        "cindy",
+        "claude",
+        "pi",
+        "continue",
+        "qwen",
+        "roo"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "d37f41ad13fd3467d430e60dfb985d7818ef6976bae40182f8e46a410b8caa16"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "higgsfield",
+      "authorship": "unknown",
+      "source": {
+        "type": "unresolved",
+        "repo": null,
+        "ref": null,
+        "path": null
+      },
+      "install": {
+        "method": "manual",
+        "root": "agents",
+        "target": "~/.agents/skills"
+      },
+      "harnesses": [
+        "agents",
+        "cindy",
+        "claude",
+        "pi",
+        "continue",
+        "qwen",
+        "roo"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "94c087914325afc760b95cb4b77747c2fd15f7eb37a72ecebf0149b938067510"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "home-assistant",
+      "authorship": "unknown",
+      "source": {
+        "type": "unresolved",
+        "repo": null,
+        "ref": null,
+        "path": null
+      },
+      "install": {
+        "method": "manual",
+        "root": "agents",
+        "target": "~/.agents/skills"
+      },
+      "harnesses": [
+        "agents",
+        "cindy",
+        "claude",
+        "pi",
+        "continue",
+        "qwen",
+        "roo"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "196163eceeca18eaac42c3a66b05117f09ef3d76d6e5b6a00dc5450d867d2aa0"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "humanizer",
+      "authorship": "unknown",
+      "source": {
+        "type": "unresolved",
+        "repo": null,
+        "ref": null,
+        "path": null
+      },
+      "install": {
+        "method": "manual",
+        "root": "agents",
+        "target": "~/.agents/skills"
+      },
+      "harnesses": [
+        "agents",
+        "cindy",
+        "claude",
+        "pi",
+        "continue",
+        "qwen",
+        "roo"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "0612f1dfb1672b0ea9b97e139bf1f06cabe98d8b27424fe8ff01e1fb4cc99cad"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "idea-to-plan",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "composio-community/opencode-skills",
+        "ref": "5076f6673e5bf8b1f46dc5e934d1e3dd37250e10",
+        "path": "skills/idea-to-plan"
+      },
+      "install": {
+        "method": "git-sparse-checkout",
+        "root": "opencode",
+        "target": "~/.config/opencode/skills"
+      },
+      "harnesses": [
+        "opencode",
+        "agents",
+        "cindy",
+        "claude",
+        "pi"
+      ],
+      "machines": [
+        "dracievajko",
+        "randall"
+      ],
+      "sha256": {
+        "dracievajko": "75c5f8b762f3370f37f6164d3b5bfbe21c09c4a259715bd2d3227275b0b5cb8e",
+        "randall": "75c5f8b762f3370f37f6164d3b5bfbe21c09c4a259715bd2d3227275b0b5cb8e"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "impeccable",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "pbakaus/impeccable",
+        "ref": "main",
+        "path": ".agents/skills/impeccable"
+      },
+      "install": {
+        "method": "git-sparse-checkout",
+        "root": "agents",
+        "target": "~/.agents/skills"
+      },
+      "harnesses": [
+        "agents",
+        "cindy",
+        "claude",
+        "pi",
+        "continue",
+        "qwen",
+        "roo"
+      ],
+      "machines": [
+        "dracievajko"
+      ],
+      "sha256": {
+        "dracievajko": "37680abf9a8e446619fcd33862718f483d197bf2652f966adca8dc54d2909b9d"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "js-reverse",
+      "authorship": "third-party",
+      "source": {
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/third-party/js-reverse"
+      },
+      "install": {
+        "method": "repository-copy",
+        "root": "opencode",
+        "target": "~/.config/opencode/skills"
+      },
+      "harnesses": [
+        "opencode",
+        "agents",
+        "cindy",
+        "claude",
+        "pi"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "ba6379bb85d2f9d80c9b418867d9c4be810f8681db1f74098264fbd04d118dc8"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "knowledge-base",
+      "authorship": "unknown",
+      "source": {
+        "type": "unresolved",
+        "repo": null,
+        "ref": null,
+        "path": null
+      },
+      "install": {
+        "method": "manual",
+        "root": "agents",
+        "target": "~/.agents/skills"
+      },
+      "harnesses": [
+        "agents",
+        "cindy",
+        "claude",
+        "pi",
+        "continue",
+        "qwen",
+        "roo"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "a0641152b0dc5dd204200aa3c282d609b7fc03d86eb701f804df18a859b675bc"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "learn-codebase",
+      "authorship": "unknown",
+      "source": {
+        "type": "unresolved",
+        "repo": null,
+        "ref": null,
+        "path": null
+      },
+      "install": {
+        "method": "manual",
+        "root": "agents",
+        "target": "~/.agents/skills"
+      },
+      "harnesses": [
+        "agents",
+        "cindy",
+        "claude",
+        "pi",
+        "continue",
+        "qwen",
+        "roo"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "94c5d9667ba8ae4a2a4c22d9a74b2bd36e89cb9f4167489816cb5799edf19554"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "make-interfaces-feel-better",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "jakubkrehel/make-interfaces-feel-better",
+        "ref": "main",
+        "path": "skills/make-interfaces-feel-better"
+      },
+      "install": {
+        "method": "git-sparse-checkout",
+        "root": "agents",
+        "target": "~/.agents/skills"
+      },
+      "harnesses": [
+        "agents",
+        "cindy",
+        "claude",
+        "pi",
+        "continue",
+        "qwen",
+        "roo"
+      ],
+      "machines": [
+        "dracievajko"
+      ],
+      "sha256": {
+        "dracievajko": "c1d508fa7bef8e47ee682b4f214c7a4ed1416b91d05a97285e555bad1c41a23e"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "match-my-writing-style",
+      "authorship": "original",
+      "source": {
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/original/match-my-writing-style"
+      },
+      "install": {
+        "method": "repository-copy",
+        "root": "opencode",
+        "target": "~/.config/opencode/skills"
+      },
+      "harnesses": [
+        "opencode",
+        "agents",
+        "cindy",
+        "claude",
+        "pi"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "0201bd6272ef07c5797499e8f58d64a57801c7475250476c4b791834a517443f"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "meal-plan",
+      "authorship": "unknown",
+      "source": {
+        "type": "unresolved",
+        "repo": null,
+        "ref": null,
+        "path": null
+      },
+      "install": {
+        "method": "manual",
+        "root": "agents",
+        "target": "~/.agents/skills"
+      },
+      "harnesses": [
+        "agents",
+        "cindy",
+        "claude",
+        "pi",
+        "continue",
+        "qwen",
+        "roo"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "5ab179beb45b5339fb45413b0f0c81a77a4f406e74cf36888552128d1a494b40"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "meeting-notes",
+      "authorship": "unknown",
+      "source": {
+        "type": "unresolved",
+        "repo": null,
+        "ref": null,
+        "path": null
+      },
+      "install": {
+        "method": "manual",
+        "root": "agents",
+        "target": "~/.agents/skills"
+      },
+      "harnesses": [
+        "agents",
+        "cindy",
+        "claude",
+        "pi",
+        "continue",
+        "qwen",
+        "roo"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "3a23090aa07a7ce102eae2b389efd71a73eef6d9f052a85b32b7f5f8202fbf9b"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "minimax-docx",
+      "authorship": "unknown",
+      "source": {
+        "type": "unresolved",
+        "repo": null,
+        "ref": null,
+        "path": null
+      },
+      "install": {
+        "method": "manual",
+        "root": "agents",
+        "target": "~/.agents/skills"
+      },
+      "harnesses": [
+        "agents",
+        "cindy",
+        "claude",
+        "pi",
+        "continue",
+        "qwen",
+        "roo"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "45c169630f30b8f034bc7d53edf73d592fbd82e82188beec7da3ca1996a97fb5"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "mobile-reverse",
+      "authorship": "third-party",
+      "source": {
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/third-party/mobile-reverse"
+      },
+      "install": {
+        "method": "repository-copy",
+        "root": "opencode",
+        "target": "~/.config/opencode/skills"
+      },
+      "harnesses": [
+        "opencode",
+        "agents",
+        "cindy",
+        "claude",
+        "pi"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "ff4727fc65acb2d98508ca6a68ae2df57239c2c755b2f0fa476571a12f5e2158"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "multi-agent-orchestration",
+      "authorship": "unknown",
+      "source": {
+        "type": "unresolved",
+        "repo": null,
+        "ref": null,
+        "path": null
+      },
+      "install": {
+        "method": "manual",
+        "root": "agents",
+        "target": "~/.agents/skills"
+      },
+      "harnesses": [
+        "agents",
+        "cindy",
+        "claude",
+        "pi",
+        "continue",
+        "qwen",
+        "roo"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "95de66280782b45552e3709b7892db822b3d6a23e0eb343bd8fc1e8289dc543d"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "orchestrate",
+      "authorship": "unknown",
+      "source": {
+        "type": "unresolved",
+        "repo": null,
+        "ref": null,
+        "path": null
+      },
+      "install": {
+        "method": "manual",
+        "root": "agents",
+        "target": "~/.agents/skills"
+      },
+      "harnesses": [
+        "agents",
+        "cindy",
+        "claude",
+        "pi",
+        "continue",
+        "qwen",
+        "roo"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "9469ad7432d6cdb165e3a5095fd972046ce39046dcc4f39907477e64d67e32c9"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "pdf",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "anthropics/skills",
+        "ref": "main",
+        "path": "skills/pdf"
+      },
+      "install": {
+        "method": "git-sparse-checkout",
+        "root": "agents",
+        "target": "~/.agents/skills"
+      },
+      "harnesses": [
+        "agents",
+        "cindy",
+        "claude",
+        "pi",
+        "continue",
+        "qwen",
+        "roo"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "d108cf2b36355ab37eb5962933f4d09785ec002f3105c506129320209306b9d2"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "pen-testing",
+      "authorship": "original",
+      "source": {
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/original/pen-testing"
+      },
+      "install": {
+        "method": "repository-copy",
+        "root": "opencode",
+        "target": "~/.config/opencode/skills"
+      },
+      "harnesses": [
+        "opencode",
+        "agents",
+        "cindy",
+        "claude",
+        "pi"
+      ],
+      "machines": [
+        "dracievajko",
+        "randall"
+      ],
+      "sha256": {
+        "dracievajko": "53689aec8067435f7615463f325c3b44ac9cc75d7e23fced7d7c247de386d386",
+        "randall": "53689aec8067435f7615463f325c3b44ac9cc75d7e23fced7d7c247de386d386"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "penetration-testing-guide",
+      "authorship": "original",
+      "source": {
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/original/penetration-testing-guide"
+      },
+      "install": {
+        "method": "repository-copy",
+        "root": "opencode",
+        "target": "~/.config/opencode/skills"
+      },
+      "harnesses": [
+        "opencode",
+        "agents",
+        "cindy",
+        "claude",
+        "pi"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "7675eb1b377fcccacc0a1de381f96743ec298b979255883c8d1733a348040d99"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "playwright-skill",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "lackeyjb/playwright-skill",
+        "ref": "main",
+        "path": "skills/playwright-skill"
+      },
+      "install": {
+        "method": "git-sparse-checkout",
+        "root": "opencode",
+        "target": "~/.config/opencode/skills"
+      },
+      "harnesses": [
+        "opencode",
+        "agents",
+        "cindy",
+        "claude",
+        "pi"
+      ],
+      "machines": [
+        "dracievajko"
+      ],
+      "sha256": {
+        "dracievajko": "6dc254f552392e1f5b8704434e982cd26375d04ebe815084d1b47af1ee2a971f"
+      },
+      "drift": false,
+      "needsNodeModules": true
+    },
+    {
+      "name": "prep-for-meetings",
+      "authorship": "original",
+      "source": {
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/original/prep-for-meetings"
+      },
+      "install": {
+        "method": "repository-copy",
+        "root": "opencode",
+        "target": "~/.config/opencode/skills"
+      },
+      "harnesses": [
+        "opencode",
+        "agents",
+        "cindy",
+        "claude",
+        "pi"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "36bcf3ad942c214a65fd0d4b12d938f51ffc33a560dc99555d6240022025f3e3"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "proactive-self-improving-agent",
+      "authorship": "unknown",
+      "source": {
+        "type": "unresolved",
+        "repo": null,
+        "ref": null,
+        "path": null
+      },
+      "install": {
+        "method": "manual",
+        "root": "agents",
+        "target": "~/.agents/skills"
+      },
+      "harnesses": [
+        "agents",
+        "cindy",
+        "claude",
+        "pi",
+        "continue",
+        "qwen",
+        "roo"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "8502c14ed668baaddc0e58fd2d0b9f1e944deb7d546732fea37e603cb53366c3"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "project-butler",
+      "authorship": "unknown",
+      "source": {
+        "type": "unresolved",
+        "repo": null,
+        "ref": null,
+        "path": null
+      },
+      "install": {
+        "method": "manual",
+        "root": "agents",
+        "target": "~/.agents/skills"
+      },
+      "harnesses": [
+        "agents",
+        "cindy",
+        "claude",
+        "pi",
+        "continue",
+        "qwen",
+        "roo"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "86ec318c8e329fff399225f148d0ce3b0e4c8247501c5ad23ac42293bc05d52a"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "rea-analysis-optimization",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "morluto/rea",
+        "ref": "main",
+        "path": ".agents/skills/rea-analysis-optimization"
+      },
+      "install": {
+        "method": "git-sparse-checkout",
+        "root": "opencode",
+        "target": "~/.config/opencode/skills"
+      },
+      "harnesses": [
+        "opencode",
+        "agents",
+        "cindy",
+        "claude",
+        "pi"
+      ],
+      "machines": [
+        "dracievajko"
+      ],
+      "sha256": {
+        "dracievajko": "e3d25af74fc3d8d0961569e5c4579ec67d683d49ccb81b45cb5de9e8561c349b"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "rea-changelog-update",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "morluto/rea",
+        "ref": "main",
+        "path": ".agents/skills/rea-changelog-update"
+      },
+      "install": {
+        "method": "git-sparse-checkout",
+        "root": "opencode",
+        "target": "~/.config/opencode/skills"
+      },
+      "harnesses": [
+        "opencode",
+        "agents",
+        "cindy",
+        "claude",
+        "pi"
+      ],
+      "machines": [
+        "dracievajko"
+      ],
+      "sha256": {
+        "dracievajko": "8e96ab7ae894201b80a1b36aca2f6baab4ded023bd4e5ae4828c3da12bf2163b"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "rea-ci-tests-audit",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "morluto/rea",
+        "ref": "main",
+        "path": ".agents/skills/rea-ci-tests-audit"
+      },
+      "install": {
+        "method": "git-sparse-checkout",
+        "root": "opencode",
+        "target": "~/.config/opencode/skills"
+      },
+      "harnesses": [
+        "opencode",
+        "agents",
+        "cindy",
+        "claude",
+        "pi"
+      ],
+      "machines": [
+        "dracievajko"
+      ],
+      "sha256": {
+        "dracievajko": "5a7d5a4306d94538c371c936bc4f543a7158d99ed1d7cc1d892a4050da2b7372"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "rea-tool-design",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "morluto/rea",
+        "ref": "main",
+        "path": ".agents/skills/rea-tool-design"
+      },
+      "install": {
+        "method": "git-sparse-checkout",
+        "root": "opencode",
+        "target": "~/.config/opencode/skills"
+      },
+      "harnesses": [
+        "opencode",
+        "agents",
+        "cindy",
+        "claude",
+        "pi"
+      ],
+      "machines": [
+        "dracievajko"
+      ],
+      "sha256": {
+        "dracievajko": "5a4d53468dcd126e68ece2bdcb81d5e2e355becbc3678301b1fd0573de1f5e07"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "repository-hygiene",
+      "authorship": "original",
+      "source": {
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/original/repository-hygiene"
+      },
+      "install": {
+        "method": "repository-copy",
+        "root": "opencode",
+        "target": "~/.config/opencode/skills"
+      },
+      "harnesses": [
+        "opencode",
+        "agents",
+        "cindy",
+        "claude",
+        "pi"
+      ],
+      "machines": [
+        "dracievajko",
+        "randall"
+      ],
+      "sha256": {
+        "dracievajko": "34b67dd3929e99149561083d3cdb0bf7ee5b02635ebfcdeaef01d667d6b93cc2",
+        "randall": "34b67dd3929e99149561083d3cdb0bf7ee5b02635ebfcdeaef01d667d6b93cc2"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "reverse-engineer-anything",
+      "authorship": "third-party",
+      "source": {
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/third-party/reverse-engineer-anything"
+      },
+      "install": {
+        "method": "repository-copy",
+        "root": "opencode",
+        "target": "~/.config/opencode/skills"
+      },
+      "harnesses": [
+        "opencode",
+        "agents",
+        "cindy",
+        "claude",
+        "pi"
+      ],
+      "machines": [
+        "dracievajko",
+        "randall"
+      ],
+      "sha256": {
+        "dracievajko": "bca2b4594eb3279db14578b9437741ebc6733f72fd1231bd33db77514034c1f9",
+        "randall": "8fdfbc899521299f38980dae3c4e09f1f12eb442c821bd9cda0beb04648986dd"
+      },
+      "drift": true,
+      "needsNodeModules": false
+    },
+    {
+      "name": "reverse-engineering",
+      "authorship": "third-party",
+      "source": {
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/third-party/reverse-engineering"
+      },
+      "install": {
+        "method": "repository-copy",
+        "root": "opencode",
+        "target": "~/.config/opencode/skills"
+      },
+      "harnesses": [
+        "opencode",
+        "agents",
+        "cindy",
+        "claude",
+        "pi"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "7128b8445c61d41917eb28eb56c24c8ca2a3518b8b5b46c83137bf5e0b4935af"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "skill-creator",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "anthropics/skills",
+        "ref": "dbd4588f9e1033efb41dad4bef2f7947c8993d44",
+        "path": "skills/skill-creator"
+      },
+      "install": {
+        "method": "git-sparse-checkout",
+        "root": "agents",
+        "target": "~/.agents/skills"
+      },
+      "harnesses": [
+        "agents",
+        "cindy",
+        "claude",
+        "pi",
+        "continue",
+        "qwen",
+        "roo"
+      ],
+      "machines": [
+        "dracievajko",
+        "randall"
+      ],
+      "sha256": {
+        "dracievajko": "a17383bfb1448637ac1f757ad891ddb9676fa30b0eff620200f0e1cbc0cc0d50",
+        "randall": "a17383bfb1448637ac1f757ad891ddb9676fa30b0eff620200f0e1cbc0cc0d50"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "spreadsheet",
+      "authorship": "unknown",
+      "source": {
+        "type": "unresolved",
+        "repo": null,
+        "ref": null,
+        "path": null
+      },
+      "install": {
+        "method": "manual",
+        "root": "agents",
+        "target": "~/.agents/skills"
+      },
+      "harnesses": [
+        "agents",
+        "cindy",
+        "claude",
+        "pi",
+        "continue",
+        "qwen",
+        "roo"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "36baea99e96c77c13d15d24f9d53cd072ccbc120e810bf4e68049edb5b0f1d65"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "summarize-meeting",
+      "authorship": "unknown",
+      "source": {
+        "type": "unresolved",
+        "repo": null,
+        "ref": null,
+        "path": null
+      },
+      "install": {
+        "method": "manual",
+        "root": "agents",
+        "target": "~/.agents/skills"
+      },
+      "harnesses": [
+        "agents",
+        "cindy",
+        "claude",
+        "pi",
+        "continue",
+        "qwen",
+        "roo"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "4deabdd7f99c692ee800a80a4eaf6a688fb8873cdaaaea44b7f472499205f8e7"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "systematic-debugging",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "obra/superpowers",
+        "ref": "main",
+        "path": "skills/systematic-debugging"
+      },
+      "install": {
+        "method": "git-sparse-checkout",
+        "root": "agents",
+        "target": "~/.agents/skills"
+      },
+      "harnesses": [
+        "agents",
+        "cindy",
+        "claude",
+        "pi",
+        "continue",
+        "qwen",
+        "roo"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "808fc5717aa88ad65efff312b11c186294d3e6ee301afb584e2f86599b137787"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "testing-skills",
+      "authorship": "original",
+      "source": {
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/original/testing-skills"
+      },
+      "install": {
+        "method": "repository-copy",
+        "root": "opencode",
+        "target": "~/.config/opencode/skills"
+      },
+      "harnesses": [
+        "opencode",
+        "agents",
+        "cindy",
+        "claude",
+        "pi"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "17bdcf6571c68530b78dc847cb34be719c98144fca15cd7ca37e6b4ec1b01712"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "ticktick-tasks",
+      "authorship": "original",
+      "source": {
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/original/ticktick-tasks"
+      },
+      "install": {
+        "method": "repository-copy",
+        "root": "opencode",
+        "target": "~/.config/opencode/skills"
+      },
+      "harnesses": [
+        "opencode",
+        "agents",
+        "cindy",
+        "claude",
+        "pi"
+      ],
+      "machines": [
+        "dracievajko",
+        "randall"
+      ],
+      "sha256": {
+        "dracievajko": "8342403073ff07bed7e66c42e4d8b7eeb72628bb250b34d06c48a3d72e433b40",
+        "randall": "8342403073ff07bed7e66c42e4d8b7eeb72628bb250b34d06c48a3d72e433b40"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "trader-alerts",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "Jakeschincariol/day-trader-skill",
+        "ref": "main",
+        "path": "trader-alerts"
+      },
+      "install": {
+        "method": "git-sparse-checkout",
+        "root": "agents",
+        "target": "~/.agents/skills"
+      },
+      "harnesses": [
+        "agents",
+        "cindy",
+        "claude",
+        "pi",
+        "continue",
+        "qwen",
+        "roo"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "48ba7c580fc64b48ee03b83a6206288641a97495c71dd78205c7f1c6e8b87d11"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "trader-analyst",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "Jakeschincariol/day-trader-skill",
+        "ref": "main",
+        "path": "trader-analyst"
+      },
+      "install": {
+        "method": "git-sparse-checkout",
+        "root": "agents",
+        "target": "~/.agents/skills"
+      },
+      "harnesses": [
+        "agents",
+        "cindy",
+        "claude",
+        "pi",
+        "continue",
+        "qwen",
+        "roo"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "884edfcfcfe0c8c3392093e5eb25da5f37a3fed89ec15f8a968e3c782c8eb8d3"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "trader-broker",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "Jakeschincariol/day-trader-skill",
+        "ref": "main",
+        "path": "trader-broker"
+      },
+      "install": {
+        "method": "git-sparse-checkout",
+        "root": "agents",
+        "target": "~/.agents/skills"
+      },
+      "harnesses": [
+        "agents",
+        "cindy",
+        "claude",
+        "pi",
+        "continue",
+        "qwen",
+        "roo"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "d1a34683814cce09c8074a978ac817c1e9f4e4790ad6804ad395c227d50b91b8"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "trader-budget",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "Jakeschincariol/day-trader-skill",
+        "ref": "main",
+        "path": "trader-budget"
+      },
+      "install": {
+        "method": "git-sparse-checkout",
+        "root": "agents",
+        "target": "~/.agents/skills"
+      },
+      "harnesses": [
+        "agents",
+        "cindy",
+        "claude",
+        "pi",
+        "continue",
+        "qwen",
+        "roo"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "ce404e7877013eccbcc757c9db6926a4974d40ed3471696b929e253a27b81112"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "trader-entry",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "Jakeschincariol/day-trader-skill",
+        "ref": "main",
+        "path": "trader-entry"
+      },
+      "install": {
+        "method": "git-sparse-checkout",
+        "root": "agents",
+        "target": "~/.agents/skills"
+      },
+      "harnesses": [
+        "agents",
+        "cindy",
+        "claude",
+        "pi",
+        "continue",
+        "qwen",
+        "roo"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "e61e10c703915a7dad118b38d0a61fd6457d34e320e36f48abcac5f6ede1a5af"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "trader-exit",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "Jakeschincariol/day-trader-skill",
+        "ref": "main",
+        "path": "trader-exit"
+      },
+      "install": {
+        "method": "git-sparse-checkout",
+        "root": "agents",
+        "target": "~/.agents/skills"
+      },
+      "harnesses": [
+        "agents",
+        "cindy",
+        "claude",
+        "pi",
+        "continue",
+        "qwen",
+        "roo"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "4bccdfff09c8414eee3a486e239bff9602b219d8439e9b0f8bce4743a5999841"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "trader-news",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "Jakeschincariol/day-trader-skill",
+        "ref": "main",
+        "path": "trader-news"
+      },
+      "install": {
+        "method": "git-sparse-checkout",
+        "root": "agents",
+        "target": "~/.agents/skills"
+      },
+      "harnesses": [
+        "agents",
+        "cindy",
+        "claude",
+        "pi",
+        "continue",
+        "qwen",
+        "roo"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "6a26283452c15ac9001c8f41633cab829abd2e6d6c7ccc95d7d26af39ec6319b"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "trader-pelosi",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "Jakeschincariol/day-trader-skill",
+        "ref": "main",
+        "path": "trader-pelosi"
+      },
+      "install": {
+        "method": "git-sparse-checkout",
+        "root": "agents",
+        "target": "~/.agents/skills"
+      },
+      "harnesses": [
+        "agents",
+        "cindy",
+        "claude",
+        "pi",
+        "continue",
+        "qwen",
+        "roo"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "960f2fb1c2a1921c3cbb70f837fd942a05b74a345e3ef05d0c90c7b2341f67bb"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "trader-risk",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "Jakeschincariol/day-trader-skill",
+        "ref": "main",
+        "path": "trader-risk"
+      },
+      "install": {
+        "method": "git-sparse-checkout",
+        "root": "agents",
+        "target": "~/.agents/skills"
+      },
+      "harnesses": [
+        "agents",
+        "cindy",
+        "claude",
+        "pi",
+        "continue",
+        "qwen",
+        "roo"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "e3671889e6b658ed769f3ccc2f117436ff54080c1378d5bfbbe29463da6c16d5"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "trader-scanner",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "Jakeschincariol/day-trader-skill",
+        "ref": "main",
+        "path": "trader-scanner"
+      },
+      "install": {
+        "method": "git-sparse-checkout",
+        "root": "agents",
+        "target": "~/.agents/skills"
+      },
+      "harnesses": [
+        "agents",
+        "cindy",
+        "claude",
+        "pi",
+        "continue",
+        "qwen",
+        "roo"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "8db022339f3ddd3a5f0574152040d154c484ef4c56f5dbc4a4d6c5768b8c92f7"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "trader-timemachine",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "Jakeschincariol/day-trader-skill",
+        "ref": "main",
+        "path": "trader-timemachine"
+      },
+      "install": {
+        "method": "git-sparse-checkout",
+        "root": "agents",
+        "target": "~/.agents/skills"
+      },
+      "harnesses": [
+        "agents",
+        "cindy",
+        "claude",
+        "pi",
+        "continue",
+        "qwen",
+        "roo"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "394e025b2584fee9e485c1c3ff5255ff8efefc816cad72c2a1b97e30107701dc"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "transitions-dev",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "Jakubantalik/transitions.dev",
+        "ref": "main",
+        "path": "skills/transitions-dev"
+      },
+      "install": {
+        "method": "git-sparse-checkout",
+        "root": "agents",
+        "target": "~/.agents/skills"
+      },
+      "harnesses": [
+        "agents",
+        "cindy",
+        "claude",
+        "pi",
+        "continue",
+        "qwen",
+        "roo"
+      ],
+      "machines": [
+        "dracievajko"
+      ],
+      "sha256": {
+        "dracievajko": "449428dcc2cc374c238358bf9efb7e8bfc6938e90819cf0c4a2d2df45b1a96d9"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "transitions-polish",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "Jakubantalik/transitions.dev",
+        "ref": "main",
+        "path": "skills/transitions-polish"
+      },
+      "install": {
+        "method": "git-sparse-checkout",
+        "root": "agents",
+        "target": "~/.agents/skills"
+      },
+      "harnesses": [
+        "agents",
+        "cindy",
+        "claude",
+        "pi",
+        "continue",
+        "qwen",
+        "roo"
+      ],
+      "machines": [
+        "dracievajko"
+      ],
+      "sha256": {
+        "dracievajko": "cd7ca4bb79acb72fa1951bb79f5251570e2ef9d290c0ddf9a83a097067226cfa"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "ui-styling",
+      "authorship": "unknown",
+      "source": {
+        "type": "unresolved",
+        "repo": null,
+        "ref": null,
+        "path": null
+      },
+      "install": {
+        "method": "manual",
+        "root": "agents",
+        "target": "~/.agents/skills"
+      },
+      "harnesses": [
+        "agents",
+        "cindy",
+        "claude",
+        "pi",
+        "continue",
+        "qwen",
+        "roo"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "625e302c60ee8f2e22d56cbe638c4a739e2657f566dae42689503ad517c30f1e"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "universal-listing-template",
+      "authorship": "original",
+      "source": {
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/original/universal-listing-template"
+      },
+      "install": {
+        "method": "repository-copy",
+        "root": "opencode",
+        "target": "~/.config/opencode/skills"
+      },
+      "harnesses": [
+        "opencode",
+        "agents",
+        "cindy",
+        "claude",
+        "pi"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "c35678c4b3c5f9c727e337ea2e8c7153440b73b0f74bc516bba9820cd18afd60"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "using-superpowers",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "obra/superpowers",
+        "ref": "2ce8aa15d05bd57213e6f746f953aafb7ded7a8b",
+        "path": "skills/using-superpowers"
+      },
+      "install": {
+        "method": "git-sparse-checkout",
+        "root": "opencode",
+        "target": "~/.config/opencode/skills"
+      },
+      "harnesses": [
+        "opencode",
+        "agents",
+        "cindy",
+        "claude",
+        "pi"
+      ],
+      "machines": [
+        "dracievajko",
+        "randall"
+      ],
+      "sha256": {
+        "dracievajko": "9c50c6d4cb4ade6103ad06d8f03ee49229d108df7046f9ae88ed510572acc6b9",
+        "randall": "9c50c6d4cb4ade6103ad06d8f03ee49229d108df7046f9ae88ed510572acc6b9"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "web-artifacts-builder",
+      "authorship": "unknown",
+      "source": {
+        "type": "unresolved",
+        "repo": null,
+        "ref": null,
+        "path": null
+      },
+      "install": {
+        "method": "manual",
+        "root": "agents",
+        "target": "~/.agents/skills"
+      },
+      "harnesses": [
+        "agents",
+        "cindy",
+        "claude",
+        "pi",
+        "continue",
+        "qwen",
+        "roo"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "81c5002c6643b0de7b8710b00e7a9038daa6fb9b68d59870ee6adb12da8d10f8"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "web-research",
+      "authorship": "unknown",
+      "source": {
+        "type": "unresolved",
+        "repo": null,
+        "ref": null,
+        "path": null
+      },
+      "install": {
+        "method": "manual",
+        "root": "agents",
+        "target": "~/.agents/skills"
+      },
+      "harnesses": [
+        "agents",
+        "cindy",
+        "claude",
+        "pi",
+        "continue",
+        "qwen",
+        "roo"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "7c2b1f1990370f7ce176fe3608a67028c72db11e337b4ba83b8fce6d927dfde3"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "webapp-testing",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "anthropics/skills",
+        "ref": "main",
+        "path": "skills/webapp-testing"
+      },
+      "install": {
+        "method": "git-sparse-checkout",
+        "root": "agents",
+        "target": "~/.agents/skills"
+      },
+      "harnesses": [
+        "agents",
+        "cindy",
+        "claude",
+        "pi",
+        "continue",
+        "qwen",
+        "roo"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "51b7349e77ec63b7744a6f63647e7566a0b4d2e301121cc10e8c2113af6556a2"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "wordpress-pro",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "Jeffallan/claude-skills",
+        "ref": "02b05028ba6c93f7aed45314b15c0dd5abead9d6",
+        "path": "skills/wordpress-pro"
+      },
+      "install": {
+        "method": "git-sparse-checkout",
+        "root": "opencode",
+        "target": "~/.config/opencode/skills"
+      },
+      "harnesses": [
+        "opencode",
+        "agents",
+        "cindy",
+        "claude",
+        "pi"
+      ],
+      "machines": [
+        "dracievajko",
+        "randall"
+      ],
+      "sha256": {
+        "dracievajko": "a351f1b36a91b4e671a0151125bba2136264efe995ed2fa5d9e02618aafb0aaf",
+        "randall": "a351f1b36a91b4e671a0151125bba2136264efe995ed2fa5d9e02618aafb0aaf"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "write-research-projects",
+      "authorship": "original",
+      "source": {
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/original/write-research-projects"
+      },
+      "install": {
+        "method": "repository-copy",
+        "root": "opencode",
+        "target": "~/.config/opencode/skills"
+      },
+      "harnesses": [
+        "opencode",
+        "agents",
+        "cindy",
+        "claude",
+        "pi"
+      ],
+      "machines": [
+        "dracievajko",
+        "randall"
+      ],
+      "sha256": {
+        "dracievajko": "0003c2683483591bffd59863de02dd56c8a8bf95bdd77143608272d3aafb5961",
+        "randall": "0003c2683483591bffd59863de02dd56c8a8bf95bdd77143608272d3aafb5961"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "writing-plans",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "obra/superpowers",
+        "ref": "main",
+        "path": "skills/writing-plans"
+      },
+      "install": {
+        "method": "git-sparse-checkout",
+        "root": "agents",
+        "target": "~/.agents/skills"
+      },
+      "harnesses": [
+        "agents",
+        "cindy",
+        "claude",
+        "pi",
+        "continue",
+        "qwen",
+        "roo"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "48508f44bbfd7d24b029fbf3a314f3cd14c9615599059366e922f47b8dc08cf2"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "yfinance-ai",
+      "authorship": "original",
+      "source": {
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/original/yfinance-ai"
+      },
+      "install": {
+        "method": "repository-copy",
+        "root": "opencode",
+        "target": "~/.config/opencode/skills"
+      },
+      "harnesses": [
+        "opencode",
+        "agents",
+        "cindy",
+        "claude",
+        "pi"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "1153d914abe8d637fb4942a4bc4498a33372bae77d7b2bec49c47454a737d1a8"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    }
+  ]
+}

@@ -12,6 +12,30 @@ junction.
 | `cindy-plugins.json` | Cindy plugins installed on the reference machine, with what each one needs to be authorized again. |
 | `unresolved.md` | Per-machine snapshot: installed skills whose upstream is not verified. They stay out of the catalog and out of `skills/original/` until the upstream is found. |
 | `generate-manifest.py` | Rebuilds `manifest.json`, `machines/<machineId>.json` and `unresolved.md` from the local machine plus `catalog/items.json`. |
+| `build-collection.py` | Rebuilds `collection.json` and `manifest-union.json` from every machine snapshot plus `cindy-plugins.json`. |
+
+## One collection, every computer
+
+`collection.json` is the single inventory: every skill and plugin any known
+computer has, with how it installs, which agents see it and which computers
+already have it. Machine snapshots stay as evidence; they are not separate
+collections.
+
+| File | Purpose |
+|------|---------|
+| `collection.json` | The unified collection: skills, install method, harnesses, per-machine presence, drift, gaps. |
+| `manifest-union.json` | The same collection in the schema `scripts/sync-skills.ps1` installs from, so one command covers every skill. |
+| `CINDY-INSTALL.md` | Ready-to-paste prompt that installs the skills, then the Cindy plugins, and reports what still needs the owner. |
+
+```powershell
+.\scripts\sync-skills.ps1 -Manifest sync\manifest-union.json -DryRun
+.\scripts\sync-skills.ps1 -Manifest sync\manifest-union.json
+python sync\build-collection.py
+```
+
+`gaps` in `collection.json` says what each computer is still missing, and
+`drift` flags skills whose copy differs between computers (compare before
+trusting either side).
 
 ## One snapshot per computer
 

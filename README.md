@@ -106,28 +106,38 @@ by `scripts/update-category-index.py` - they are never maintained by hand.
 
 ## Machine sync
 
-`sync/` records one machine's real installed layout so a second Windows PC can
-reproduce it without duplicating skill content:
+`sync/` holds one unified collection: every skill and plugin any of my
+computers has, described once, so any computer can be brought to the same
+state without duplicating skill content.
 
 | File | Purpose |
 |------|---------|
-| `sync/manifest.json` | Every installed skill, every harness root, app-managed skills, source, install root, SHA-256, authorship (`original`, `third-party`, `unknown`) and hash drift. |
-| `sync/cindy-plugins.json` | Optional Cindy plugins and what each needs to be authorized again. |
-| `sync/unresolved.md` | Installed skills whose upstream is not verified; they stay out of the catalog until it is. |
-| `sync/generate-manifest.py` | Rebuilds `manifest.json` from the local machine and `catalog/items.json`. |
-| `scripts/sync-skills.ps1` | Installs missing skills and recreates directory junctions on another Windows PC. |
-
-The manifest also inventories roots this repository does not manage, including
-skills that ship inside an app, so nothing installed on the machine silently
-falls out of scope. Those entries are listed, never copied.
+| `sync/collection.json` | **The collection**: every skill and plugin, how it installs, which agents see it, which computers have it, plus `gaps` and `drift`. |
+| `sync/manifest-union.json` | The same collection in the schema the installer reads, so one command installs every skill. |
+| `sync/cindy-plugins.json` | Cindy plugins, marked as marketplace installs, with what each needs to be authorized again. |
+| `sync/CINDY-INSTALL.md` | Ready-to-paste prompt: installs the skills, then the Cindy plugins, then reports what still needs me. |
+| `sync/machines/<machineId>.json` | Raw snapshot of one computer. Evidence, not a separate collection. |
+| `sync/unresolved.md` | Skills with no verified upstream; they stay out of `skills/original/` until one is found. |
+| `sync/generate-manifest.py` | Rebuilds this computer's snapshot (`manifest.json`, `machines/`, `unresolved.md`). |
+| `sync/build-collection.py` | Rebuilds `collection.json` and `manifest-union.json` from all snapshots. |
+| `scripts/sync-skills.ps1` | Installs missing skills and recreates directory junctions. |
 
 ```powershell
-.\scripts\sync-skills.ps1 -DryRun   # report only, touch nothing
-.\scripts\sync-skills.ps1           # install and link
+.\scripts\sync-skills.ps1 -DryRun                                   # this computer's snapshot
+.\scripts\sync-skills.ps1 -Manifest sync\manifest-union.json -DryRun  # the whole collection
+.\scripts\sync-skills.ps1 -Manifest sync\manifest-union.json          # install and link
+python sync\build-collection.py                                         # refresh the collection
 ```
 
 The script never overwrites an existing skill folder without `-Force`, and it
 reports upstream drift, unresolved skills and failures instead of guessing.
+Cindy plugins are installed from its marketplace (see `sync/CINDY-INSTALL.md`)
+and authorized per device; nothing per-device is stored here.
+
+The manifest also inventories roots this repository does not manage, including
+skills that ship inside an app, so nothing installed on a computer silently
+falls out of scope. Those entries are listed, never copied.
+
 Run git operations on one PC at a time: commit and push there, then `git pull`
 on the other.
 
@@ -195,11 +205,16 @@ is configured in the OpenCode config on each machine
 │   └── image/                   # 4 image prompts
 ├── scripts/                     # validators, index generator, link checkers, installers, sync, tests
 ├── sync/
-│   ├── manifest.json            # installed skills: source, root, hash, authorship
-│   ├── cindy-plugins.json       # optional Cindy plugins and what each needs to be authorized
-│   ├── unresolved.md            # installed skills with no verified upstream
-│   ├── generate-manifest.py     # rebuilds manifest.json from the local machine
-│   └── README.md                # reproduce this layout on another Windows PC
+│   ├── collection.json          # one unified collection of every skill and plugin
+│   ├── manifest-union.json      # the same collection, in the installer's schema
+│   ├── manifest.json            # this computer's snapshot: source, root, hash, authorship
+│   ├── machines/                # one raw snapshot per computer
+│   ├── cindy-plugins.json       # Cindy plugins and what each needs to be authorized
+│   ├── CINDY-INSTALL.md         # paste-into-Cindy prompt to install everything
+│   ├── unresolved.md            # skills with no verified upstream
+│   ├── generate-manifest.py     # rebuilds this computer's snapshot
+│   ├── build-collection.py      # rebuilds collection.json from every snapshot
+│   └── README.md                # reproduce the layout on another Windows PC
 ├── skills/
 │   ├── README.md
 │   ├── original/                # 25 original skills, one folder each
