@@ -5634,7 +5634,7 @@
         "required_tools":  "unknown",
         "required_sidecar_files":  "none",
         "runtime_requirements":  "N/A (link-only)",
-        "compatibility_notes":  "Link-only reference to the canonical desloppify repository. The installed copy is a newer build (skill version 7); the public data file may lag behind."
+        "compatibility_notes":  "Link-only reference to the canonical desloppify repository. The installed copy was aligned to the public desloppify/data/global/SKILL.md on 2026-11-18."
     },
     {
         "id":  "blader/humanizer:humanizer",
@@ -5642,7 +5642,7 @@
         "category":  "writing-docs",
         "repository":  "https://github.com/blader/humanizer",
         "branch":  "main",
-        "path":  "./SKILL.md",
+        "path":  "SKILL.md",
         "github_file":  "https://github.com/blader/humanizer/blob/main/SKILL.md",
         "raw_url":  "https://raw.githubusercontent.com/blader/humanizer/main/SKILL.md",
         "verification":  "http-200-verified",

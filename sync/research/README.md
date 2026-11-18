@@ -30,7 +30,7 @@ Exact hash match and a link-only catalog record:
 | `meal-plan` | `ianseddon/cookbook` |
 | `multi-agent-orchestration` | `qodex-ai/ai-agent-skills` |
 | `spreadsheet` | `jasonkneen/openclicky` (hash-verified copy) |
-| `desloppify` | `peteromallet/desloppify` (public data file may lag the installed v7 build) |
+| `desloppify` | `peteromallet/desloppify` (installed copy aligned to the public data file) |
 | `humanizer` | `blader/humanizer` (v4.0.0 installed) |
 
 `meeting-notes` (`claude-office-skills/skills`) and `higgsfield`
