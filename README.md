@@ -55,6 +55,7 @@ There are no archives, no backups and no historical catalog views in this reposi
 │   ├── personas/               # 10 personas
 │   └── image/                  # 3 image prompts
 ├── scripts/                    # Validator, sync check, index generator, link checker, installers, tests
+├── sync/                       # Machine layout manifest + Cindy plugin checklist (see sync/README.md)
 ├── skills/
 │   ├── README.md
 │   ├── original/               # 25 original skills

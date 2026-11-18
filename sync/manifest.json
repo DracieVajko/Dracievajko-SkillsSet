@@ -1,0 +1,669 @@
+{
+  "version": 1,
+  "generatedAt": "2026-11-18",
+  "sourceMachine": "DracieVajko (Windows, Cindy 0.1.139, Pi 1.5.2)",
+  "roots": {
+    "opencode": "~\\.config\\opencode\\skills",
+    "agents": "~\\.agents\\skills"
+  },
+  "notes": [
+    "Each skill is installed once, under roots[<root>].",
+    "mirrors[] lists Windows directory junctions that expose those folders under other agents' skill directories; create them, never copy.",
+    "source.type=repo installs from this repository, source.type=github uses git sparse-checkout, source.type=unresolved has no identified upstream and must be copied by hand.",
+    "node_modules is never copied; run npm install in skills with needsNodeModules=true.",
+    "cindyManagedSkills ship inside Cindy itself and are never copied between machines."
+  ],
+  "cindyManagedSkills": [
+    "cindy-plugin-creator",
+    "cindy-skill-creator",
+    "cindy-theme-creator",
+    "learn"
+  ],
+  "mirrors": [
+    {
+      "dir": "~\\.claude\\skills",
+      "only": [
+        "agent-operating-rules",
+        "applying-themes",
+        "blender-geometry-nodes",
+        "blender-hard-surface-modeling",
+        "blender-python-integration",
+        "blender-rigging-animation",
+        "brainstorming",
+        "building-mcp-servers",
+        "code-documenter",
+        "code-reviewer",
+        "context-engineering",
+        "creating-skills",
+        "debugging-wizard",
+        "deep-agents-memory",
+        "fine-tuning-expert",
+        "frontend-design-systems",
+        "gsap-core",
+        "gsap-frameworks",
+        "gsap-performance",
+        "gsap-plugins",
+        "gsap-react",
+        "gsap-scrolltrigger",
+        "gsap-timeline",
+        "gsap-utils",
+        "idea-to-plan",
+        "impeccable",
+        "make-interfaces-feel-better",
+        "pen-testing",
+        "playwright-skill",
+        "rea-analysis-optimization",
+        "rea-changelog-update",
+        "rea-ci-tests-audit",
+        "rea-tool-design",
+        "repository-hygiene",
+        "reverse-engineer-anything",
+        "skill-creator",
+        "ticktick-tasks",
+        "transitions-dev",
+        "transitions-polish",
+        "using-superpowers",
+        "wordpress-pro",
+        "write-research-projects"
+      ]
+    },
+    {
+      "dir": "~\\.pi\\agent\\skills",
+      "only": [
+        "gsap-core",
+        "gsap-frameworks",
+        "gsap-performance",
+        "gsap-plugins",
+        "gsap-react",
+        "gsap-scrolltrigger",
+        "gsap-timeline",
+        "gsap-utils",
+        "impeccable",
+        "make-interfaces-feel-better",
+        "transitions-dev",
+        "transitions-polish"
+      ]
+    },
+    {
+      "dir": "~\\.agents\\skills",
+      "only": [
+        "agent-operating-rules",
+        "applying-themes",
+        "blender-geometry-nodes",
+        "blender-hard-surface-modeling",
+        "blender-python-integration",
+        "blender-rigging-animation",
+        "brainstorming",
+        "building-mcp-servers",
+        "code-documenter",
+        "code-reviewer",
+        "context-engineering",
+        "creating-skills",
+        "debugging-wizard",
+        "fine-tuning-expert",
+        "frontend-design-systems",
+        "idea-to-plan",
+        "pen-testing",
+        "playwright-skill",
+        "rea-analysis-optimization",
+        "rea-changelog-update",
+        "rea-ci-tests-audit",
+        "rea-tool-design",
+        "repository-hygiene",
+        "reverse-engineer-anything",
+        "ticktick-tasks",
+        "using-superpowers",
+        "wordpress-pro",
+        "write-research-projects"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "name": "agent-operating-rules",
+      "root": "opencode",
+      "source": {
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/original/agent-operating-rules"
+      },
+      "sizeKB": 13,
+      "needsNodeModules": false,
+      "sha256": "d87f97d08e3e3a45ec992c2f5e86e7ea801c545300daa918d78b87fc0c0b5c2c"
+    },
+    {
+      "name": "applying-themes",
+      "root": "opencode",
+      "source": {
+        "type": "unresolved",
+        "repo": null,
+        "ref": null,
+        "path": null
+      },
+      "sizeKB": 9,
+      "needsNodeModules": false,
+      "sha256": "11cb6b69704faaaffb0e680bd1111b8a26150153aa842daa254d2df4edacadc3"
+    },
+    {
+      "name": "blender-geometry-nodes",
+      "root": "opencode",
+      "source": {
+        "type": "github",
+        "repo": "composio-community/opencode-skills",
+        "ref": "5076f6673e5bf8b1f46dc5e934d1e3dd37250e10",
+        "path": "skills/blender-geometry-nodes"
+      },
+      "sizeKB": 7,
+      "needsNodeModules": false,
+      "sha256": "f7b2985c9500a09cca38a0449cb5d7dadb4a9e84179b31ba9cd2c86601798a06"
+    },
+    {
+      "name": "blender-hard-surface-modeling",
+      "root": "opencode",
+      "source": {
+        "type": "github",
+        "repo": "composio-community/opencode-skills",
+        "ref": "5076f6673e5bf8b1f46dc5e934d1e3dd37250e10",
+        "path": "skills/blender-hard-surface-modeling"
+      },
+      "sizeKB": 7,
+      "needsNodeModules": false,
+      "sha256": "999a27a361a6b9c06e81992e1cef114016ebebc752f69535fc2c7c5badfde233"
+    },
+    {
+      "name": "blender-python-integration",
+      "root": "opencode",
+      "source": {
+        "type": "github",
+        "repo": "composio-community/opencode-skills",
+        "ref": "5076f6673e5bf8b1f46dc5e934d1e3dd37250e10",
+        "path": "skills/blender-python-integration"
+      },
+      "sizeKB": 7,
+      "needsNodeModules": false,
+      "sha256": "5e4ec6af939397b1855e27b4f30e3ec5848454ba56250f89ddda5fbb75384a58"
+    },
+    {
+      "name": "blender-rigging-animation",
+      "root": "opencode",
+      "source": {
+        "type": "github",
+        "repo": "composio-community/opencode-skills",
+        "ref": "5076f6673e5bf8b1f46dc5e934d1e3dd37250e10",
+        "path": "skills/blender-rigging-animation"
+      },
+      "sizeKB": 4,
+      "needsNodeModules": false,
+      "sha256": "2c5205691d5819890d6e208c331c39bc202fc6c1300a7a7599d2c78b66f89bcc"
+    },
+    {
+      "name": "brainstorming",
+      "root": "opencode",
+      "source": {
+        "type": "github",
+        "repo": "obra/superpowers",
+        "ref": "2ce8aa15d05bd57213e6f746f953aafb7ded7a8b",
+        "path": "skills/brainstorming"
+      },
+      "sizeKB": 11,
+      "needsNodeModules": false,
+      "sha256": "355bc853d3a8db157c6415c9197bef4ffc36d75bf17b1f3db4e8b6d32386e6f2"
+    },
+    {
+      "name": "building-mcp-servers",
+      "root": "opencode",
+      "source": {
+        "type": "unresolved",
+        "repo": null,
+        "ref": null,
+        "path": null
+      },
+      "sizeKB": 9,
+      "needsNodeModules": false,
+      "sha256": "a4d715bfb7d018bbee063e84336c00e3eed03e2eb25dcc6f78da130aac29e5a4"
+    },
+    {
+      "name": "code-documenter",
+      "root": "opencode",
+      "source": {
+        "type": "github",
+        "repo": "Jeffallan/claude-skills",
+        "ref": "02b05028ba6c93f7aed45314b15c0dd5abead9d6",
+        "path": "skills/code-documenter"
+      },
+      "sizeKB": 5,
+      "needsNodeModules": false,
+      "sha256": "db585719a890418d10d7764c7e8a36b9e1c3a28d6d6e1c2790d6de2753218cf8"
+    },
+    {
+      "name": "code-reviewer",
+      "root": "opencode",
+      "source": {
+        "type": "github",
+        "repo": "Jeffallan/claude-skills",
+        "ref": "02b05028ba6c93f7aed45314b15c0dd5abead9d6",
+        "path": "skills/code-reviewer"
+      },
+      "sizeKB": 5,
+      "needsNodeModules": false,
+      "sha256": "7ac164f0f22db9affdbd902da6fe4fe2af48eb637d41e646869fb8907094067a"
+    },
+    {
+      "name": "context-engineering",
+      "root": "opencode",
+      "source": {
+        "type": "github",
+        "repo": "addyosmani/agent-skills",
+        "ref": "aeac41d4d005999432bb7312f7ff06383a91d59d",
+        "path": "skills/context-engineering"
+      },
+      "sizeKB": 8,
+      "needsNodeModules": false,
+      "sha256": "e20d990fb6f2f4a45ea3f75f9ed2fa64d40f5940940977ec8aca90a28a876836"
+    },
+    {
+      "name": "creating-skills",
+      "root": "opencode",
+      "source": {
+        "type": "unresolved",
+        "repo": null,
+        "ref": null,
+        "path": null
+      },
+      "sizeKB": 41,
+      "needsNodeModules": false,
+      "sha256": "71872dcdbe5269bcadffc7b631c3e2fbe8946f29b433140afe251ee48958152c"
+    },
+    {
+      "name": "debugging-wizard",
+      "root": "opencode",
+      "source": {
+        "type": "github",
+        "repo": "Jeffallan/claude-skills",
+        "ref": "02b05028ba6c93f7aed45314b15c0dd5abead9d6",
+        "path": "skills/debugging-wizard"
+      },
+      "sizeKB": 4,
+      "needsNodeModules": false,
+      "sha256": "9bd8dbe72b51ab73c2907ceb6700e040867000acf2a42f610db114cd46891914"
+    },
+    {
+      "name": "fine-tuning-expert",
+      "root": "opencode",
+      "source": {
+        "type": "github",
+        "repo": "Jeffallan/claude-skills",
+        "ref": "02b05028ba6c93f7aed45314b15c0dd5abead9d6",
+        "path": "skills/fine-tuning-expert"
+      },
+      "sizeKB": 6,
+      "needsNodeModules": false,
+      "sha256": "f686c7106b522f900980c1fb03cc474e0d3aad88c5944b1023cbdcd2d94a5b18"
+    },
+    {
+      "name": "frontend-design-systems",
+      "root": "opencode",
+      "source": {
+        "type": "github",
+        "repo": "composio-community/opencode-skills",
+        "ref": "5076f6673e5bf8b1f46dc5e934d1e3dd37250e10",
+        "path": "skills/frontend-design-systems"
+      },
+      "sizeKB": 8,
+      "needsNodeModules": false,
+      "sha256": "397fb10beffe6d4e835496c375cb6d43c20ca01ce902af22064fce6b3b6040ec"
+    },
+    {
+      "name": "idea-to-plan",
+      "root": "opencode",
+      "source": {
+        "type": "github",
+        "repo": "composio-community/opencode-skills",
+        "ref": "5076f6673e5bf8b1f46dc5e934d1e3dd37250e10",
+        "path": "skills/idea-to-plan"
+      },
+      "sizeKB": 3,
+      "needsNodeModules": false,
+      "sha256": "75c5f8b762f3370f37f6164d3b5bfbe21c09c4a259715bd2d3227275b0b5cb8e"
+    },
+    {
+      "name": "pen-testing",
+      "root": "opencode",
+      "source": {
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/original/pen-testing"
+      },
+      "sizeKB": 14,
+      "needsNodeModules": false,
+      "sha256": "53689aec8067435f7615463f325c3b44ac9cc75d7e23fced7d7c247de386d386"
+    },
+    {
+      "name": "playwright-skill",
+      "root": "opencode",
+      "source": {
+        "type": "github",
+        "repo": "lackeyjb/playwright-skill",
+        "ref": "main",
+        "path": "skills/playwright-skill"
+      },
+      "sizeKB": 35,
+      "needsNodeModules": true,
+      "sha256": "6dc254f552392e1f5b8704434e982cd26375d04ebe815084d1b47af1ee2a971f"
+    },
+    {
+      "name": "rea-analysis-optimization",
+      "root": "opencode",
+      "source": {
+        "type": "github",
+        "repo": "morluto/rea",
+        "ref": "main",
+        "path": ".agents/skills/rea-analysis-optimization"
+      },
+      "sizeKB": 14,
+      "needsNodeModules": false,
+      "sha256": "e3d25af74fc3d8d0961569e5c4579ec67d683d49ccb81b45cb5de9e8561c349b"
+    },
+    {
+      "name": "rea-changelog-update",
+      "root": "opencode",
+      "source": {
+        "type": "github",
+        "repo": "morluto/rea",
+        "ref": "main",
+        "path": ".agents/skills/rea-changelog-update"
+      },
+      "sizeKB": 7,
+      "needsNodeModules": false,
+      "sha256": "8e96ab7ae894201b80a1b36aca2f6baab4ded023bd4e5ae4828c3da12bf2163b"
+    },
+    {
+      "name": "rea-ci-tests-audit",
+      "root": "opencode",
+      "source": {
+        "type": "github",
+        "repo": "morluto/rea",
+        "ref": "main",
+        "path": ".agents/skills/rea-ci-tests-audit"
+      },
+      "sizeKB": 11,
+      "needsNodeModules": false,
+      "sha256": "5a7d5a4306d94538c371c936bc4f543a7158d99ed1d7cc1d892a4050da2b7372"
+    },
+    {
+      "name": "rea-tool-design",
+      "root": "opencode",
+      "source": {
+        "type": "github",
+        "repo": "morluto/rea",
+        "ref": "main",
+        "path": ".agents/skills/rea-tool-design"
+      },
+      "sizeKB": 2,
+      "needsNodeModules": false,
+      "sha256": "5a4d53468dcd126e68ece2bdcb81d5e2e355becbc3678301b1fd0573de1f5e07"
+    },
+    {
+      "name": "repository-hygiene",
+      "root": "opencode",
+      "source": {
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/original/repository-hygiene"
+      },
+      "sizeKB": 7,
+      "needsNodeModules": false,
+      "sha256": "34b67dd3929e99149561083d3cdb0bf7ee5b02635ebfcdeaef01d667d6b93cc2"
+    },
+    {
+      "name": "reverse-engineer-anything",
+      "root": "opencode",
+      "source": {
+        "type": "github",
+        "repo": "morluto/rea",
+        "ref": "main",
+        "path": ".agents/skills/reverse-engineer-anything"
+      },
+      "sizeKB": 236,
+      "needsNodeModules": false,
+      "sha256": "bca2b4594eb3279db14578b9437741ebc6733f72fd1231bd33db77514034c1f9"
+    },
+    {
+      "name": "ticktick-tasks",
+      "root": "opencode",
+      "source": {
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/original/ticktick-tasks"
+      },
+      "sizeKB": 10,
+      "needsNodeModules": false,
+      "sha256": "8342403073ff07bed7e66c42e4d8b7eeb72628bb250b34d06c48a3d72e433b40"
+    },
+    {
+      "name": "using-superpowers",
+      "root": "opencode",
+      "source": {
+        "type": "github",
+        "repo": "obra/superpowers",
+        "ref": "2ce8aa15d05bd57213e6f746f953aafb7ded7a8b",
+        "path": "skills/using-superpowers"
+      },
+      "sizeKB": 5,
+      "needsNodeModules": false,
+      "sha256": "9c50c6d4cb4ade6103ad06d8f03ee49229d108df7046f9ae88ed510572acc6b9"
+    },
+    {
+      "name": "wordpress-pro",
+      "root": "opencode",
+      "source": {
+        "type": "github",
+        "repo": "Jeffallan/claude-skills",
+        "ref": "02b05028ba6c93f7aed45314b15c0dd5abead9d6",
+        "path": "skills/wordpress-pro"
+      },
+      "sizeKB": 6,
+      "needsNodeModules": false,
+      "sha256": "a351f1b36a91b4e671a0151125bba2136264efe995ed2fa5d9e02618aafb0aaf"
+    },
+    {
+      "name": "write-research-projects",
+      "root": "opencode",
+      "source": {
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/original/write-research-projects"
+      },
+      "sizeKB": 41,
+      "needsNodeModules": false,
+      "sha256": "0003c2683483591bffd59863de02dd56c8a8bf95bdd77143608272d3aafb5961"
+    },
+    {
+      "name": "deep-agents-memory",
+      "root": "agents",
+      "source": {
+        "type": "github",
+        "repo": "langchain-ai/design-agent",
+        "ref": "main",
+        "path": ".agents/skills/deep-agents-memory"
+      },
+      "sizeKB": 10,
+      "needsNodeModules": false,
+      "sha256": "3549b750ca9625dc73e0c4bee87133f57fab374ba0202daa74a2d28c91cb3bf4"
+    },
+    {
+      "name": "gsap-core",
+      "root": "agents",
+      "source": {
+        "type": "github",
+        "repo": "greensock/gsap-skills",
+        "ref": "main",
+        "path": "skills/gsap-core"
+      },
+      "sizeKB": 15,
+      "needsNodeModules": false,
+      "sha256": "3887b47e050ab5afbe2a9a820f23d39fa02ab785e06a343be44c6f91d84d12b3"
+    },
+    {
+      "name": "gsap-frameworks",
+      "root": "agents",
+      "source": {
+        "type": "github",
+        "repo": "greensock/gsap-skills",
+        "ref": "main",
+        "path": "skills/gsap-frameworks"
+      },
+      "sizeKB": 11,
+      "needsNodeModules": false,
+      "sha256": "842d9d3659ec3ddc8abbdc524708f8facf81f468ac25d0577f48c759c4fa31e6"
+    },
+    {
+      "name": "gsap-performance",
+      "root": "agents",
+      "source": {
+        "type": "github",
+        "repo": "greensock/gsap-skills",
+        "ref": "main",
+        "path": "skills/gsap-performance"
+      },
+      "sizeKB": 4,
+      "needsNodeModules": false,
+      "sha256": "cb5408d6fba707aabcbfe3320317a14c1f8fca6070074e5261047930f50d441e"
+    },
+    {
+      "name": "gsap-plugins",
+      "root": "agents",
+      "source": {
+        "type": "github",
+        "repo": "greensock/gsap-skills",
+        "ref": "main",
+        "path": "skills/gsap-plugins"
+      },
+      "sizeKB": 21,
+      "needsNodeModules": false,
+      "sha256": "5838b856c74c07fbc9fa99b6dfd1eee34ea554c3e530c30e0d58014b707d70a4"
+    },
+    {
+      "name": "gsap-react",
+      "root": "agents",
+      "source": {
+        "type": "github",
+        "repo": "greensock/gsap-skills",
+        "ref": "main",
+        "path": "skills/gsap-react"
+      },
+      "sizeKB": 7,
+      "needsNodeModules": false,
+      "sha256": "88e2a5312b45e8cc7b3c496637ff5bc9af2ae9c925b555c8b235b34cbc989d74"
+    },
+    {
+      "name": "gsap-scrolltrigger",
+      "root": "agents",
+      "source": {
+        "type": "github",
+        "repo": "greensock/gsap-skills",
+        "ref": "main",
+        "path": "skills/gsap-scrolltrigger"
+      },
+      "sizeKB": 18,
+      "needsNodeModules": false,
+      "sha256": "9351b6666a4749c0740406ea363aaccb99a087ff45cc5e8b99a0f367facf3ef4"
+    },
+    {
+      "name": "gsap-timeline",
+      "root": "agents",
+      "source": {
+        "type": "github",
+        "repo": "greensock/gsap-skills",
+        "ref": "main",
+        "path": "skills/gsap-timeline"
+      },
+      "sizeKB": 4,
+      "needsNodeModules": false,
+      "sha256": "1a8b0f39cc4be3ed3d834b89672e4ae2f151b901dc3450bebf10bbc45379fe02"
+    },
+    {
+      "name": "gsap-utils",
+      "root": "agents",
+      "source": {
+        "type": "github",
+        "repo": "greensock/gsap-skills",
+        "ref": "main",
+        "path": "skills/gsap-utils"
+      },
+      "sizeKB": 12,
+      "needsNodeModules": false,
+      "sha256": "1927bcc4ea95b38203404ad5ea1d060b15c4a886c65ae53e885ff1793aabe0ba"
+    },
+    {
+      "name": "impeccable",
+      "root": "agents",
+      "source": {
+        "type": "github",
+        "repo": "pbakaus/impeccable",
+        "ref": "main",
+        "path": ".agents/skills/impeccable"
+      },
+      "sizeKB": 2173,
+      "needsNodeModules": false,
+      "sha256": "37680abf9a8e446619fcd33862718f483d197bf2652f966adca8dc54d2909b9d"
+    },
+    {
+      "name": "make-interfaces-feel-better",
+      "root": "agents",
+      "source": {
+        "type": "github",
+        "repo": "jakubkrehel/make-interfaces-feel-better",
+        "ref": "main",
+        "path": "skills/make-interfaces-feel-better"
+      },
+      "sizeKB": 42,
+      "needsNodeModules": false,
+      "sha256": "c1d508fa7bef8e47ee682b4f214c7a4ed1416b91d05a97285e555bad1c41a23e"
+    },
+    {
+      "name": "skill-creator",
+      "root": "agents",
+      "source": {
+        "type": "github",
+        "repo": "anthropics/skills",
+        "ref": "dbd4588f9e1033efb41dad4bef2f7947c8993d44",
+        "path": "skills/skill-creator"
+      },
+      "sizeKB": 55,
+      "needsNodeModules": false,
+      "sha256": "a17383bfb1448637ac1f757ad891ddb9676fa30b0eff620200f0e1cbc0cc0d50"
+    },
+    {
+      "name": "transitions-dev",
+      "root": "agents",
+      "source": {
+        "type": "github",
+        "repo": "Jakubantalik/transitions.dev",
+        "ref": "main",
+        "path": "skills/transitions-dev"
+      },
+      "sizeKB": 183,
+      "needsNodeModules": false,
+      "sha256": "449428dcc2cc374c238358bf9efb7e8bfc6938e90819cf0c4a2d2df45b1a96d9"
+    },
+    {
+      "name": "transitions-polish",
+      "root": "agents",
+      "source": {
+        "type": "github",
+        "repo": "Jakubantalik/transitions.dev",
+        "ref": "main",
+        "path": "skills/transitions-polish"
+      },
+      "sizeKB": 18,
+      "needsNodeModules": false,
+      "sha256": "cd7ca4bb79acb72fa1951bb79f5251570e2ef9d290c0ddf9a83a097067226cfa"
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "version": 1,
+  "capturedAt": "2026-11-18",
+  "sourceMachine": "DracieVajko (Windows, Cindy 0.1.139)",
+  "notes": [
+    "Cindy plugins are installed per device from the marketplace; their folders and state live in the Cindy app data directory next to per-device secrets in safe-storage.",
+    "Never copy the plugin install folders between machines: install each id again in Cindy on the target machine, then authorize it there.",
+    "namespace null means the public marketplace; 'local' means a local development copy that has no marketplace release."
+  ],
+  "opencodePlugins": [
+    "superpowers@git+https://github.com/obra/superpowers"
+  ],
+  "plugins": [
+    {
+      "id": "agent-desktop",
+      "namespace": null,
+      "purpose": "Read and drive the desktop GUI: click, type, snapshot windows, clipboard, notifications.",
+      "setup": "none",
+      "credentials": "none"
+    },
+    {
+      "id": "cindy-github",
+      "namespace": null,
+      "purpose": "GitHub issues, PRs, reviews, repositories, Actions, releases, search.",
+      "setup": "uses the machine's GitHub login",
+      "credentials": "gh auth login, or a fallback PAT"
+    },
+    {
+      "id": "cindy-mermaid",
+      "namespace": null,
+      "purpose": "Normalize Mermaid diagram source.",
+      "setup": "none",
+      "credentials": "none"
+    },
+    {
+      "id": "cindy-web-search",
+      "namespace": null,
+      "purpose": "Web search and page fetch.",
+      "setup": "optional provider keys",
+      "credentials": "optional Brave/Tavily/DeepSeek keys; Cindy AI search works without them"
+    },
+    {
+      "id": "compact-file-browser",
+      "namespace": null,
+      "purpose": "Left-panel project file browser.",
+      "setup": "none",
+      "credentials": "none"
+    },
+    {
+      "id": "gh-market",
+      "namespace": null,
+      "purpose": "Search GitHub for Cindy plugins and skills, install .cindy packages.",
+      "setup": "optional",
+      "credentials": "optional GitHub PAT for rate limits"
+    },
+    {
+      "id": "git-flow",
+      "namespace": null,
+      "purpose": "Local repository and branch panel, GitHub account switching.",
+      "setup": "none",
+      "credentials": "none"
+    },
+    {
+      "id": "google-calendar",
+      "namespace": null,
+      "purpose": "Read and change calendar events.",
+      "setup": "connect a Google account",
+      "credentials": "OAuth, per device"
+    },
+    {
+      "id": "google-drive",
+      "namespace": null,
+      "purpose": "Search and manage Drive files, Docs and Slides.",
+      "setup": "connect a Google account",
+      "credentials": "OAuth, per device"
+    },
+    {
+      "id": "google-gmail",
+      "namespace": null,
+      "purpose": "Read mail, drafts and send through the draft card.",
+      "setup": "connect a Google account",
+      "credentials": "OAuth, per device"
+    },
+    {
+      "id": "my-browser",
+      "namespace": null,
+      "purpose": "Cindy Chrome: page translation and in-player subtitles.",
+      "setup": "install the Cindy Chrome extension on the target machine",
+      "credentials": "none"
+    },
+    {
+      "id": "ntfy",
+      "namespace": null,
+      "purpose": "Push notifications through a personal ntfy server.",
+      "setup": "connection required (not configured on the source machine)",
+      "credentials": "ntfy server URL and access token"
+    },
+    {
+      "id": "opendesign-trial",
+      "namespace": null,
+      "purpose": "Create and revise HTML drafts with a local editor.",
+      "setup": "none",
+      "credentials": "none"
+    },
+    {
+      "id": "ponytail",
+      "namespace": null,
+      "purpose": "Lazy-senior code review and anti-over-engineering rules.",
+      "setup": "none",
+      "credentials": "none"
+    },
+    {
+      "id": "tuya-home",
+      "namespace": "local",
+      "purpose": "Tuya / Smart Life devices: lights, plugs, air conditioners, sensors.",
+      "setup": "local development copy; install from its source folder on the target machine",
+      "credentials": "Tuya API key starting with sk-"
+    }
+  ]
+}
