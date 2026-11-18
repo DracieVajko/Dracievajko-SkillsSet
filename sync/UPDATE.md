@@ -22,6 +22,7 @@ Show the last three commit subjects so I can see which version I am installing.
 STEP 2 - reinstall every skill from the collection
   .\scripts\sync-skills.ps1 -Manifest sync\manifest.json -DryRun
   .\scripts\sync-skills.ps1 -Manifest sync\manifest.json -Force
+  python sync\prune-optional.py
 -Force is required: it replaces older local copies with the recorded versions.
 Before replacing a folder it copies the old one to
 %LOCALAPPDATA%\skills-sync\backups\<timestamp>\, and it deletes junctions as

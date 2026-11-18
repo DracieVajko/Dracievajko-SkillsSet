@@ -20,6 +20,7 @@
     "install.method tells how a skill reaches a computer: repository-copy, git-sparse-checkout, or manual when the upstream is not verified.",
     "harnesses lists every agent that sees the skill once it is installed in install.root.",
     "machines and gaps are coverage evidence: what was seen where and what a computer still needs. They are not separate collections.",
+    "enabled=false means the skill stays in the catalog and this collection but is not installed; sync/optional.json records why and can re-enable it.",
     "cindyPlugins install from the Cindy marketplace on each computer and are authorized there; sync/cindy-plugins.json lists what each one needs.",
     "opendesign-trial is the OpenDesign plugin; OpenDesign also uses prompts/system/opendesign-ui-code-audit.md.",
     "appManaged entries ship inside Cindy or Codex and are never copied."
@@ -294,25 +295,18 @@
       "book-to-skill",
       "browser-automation",
       "code-review",
-      "create-individual-calendar-events-from-earnings-dates-list",
       "dcf-valuation",
       "deep-research",
       "dependency-scan",
-      "design-catalogue",
       "design-taste-frontend",
       "desloppify",
       "detailed-source-rewrite-guide",
       "doc",
-      "document-editing-general",
       "ds-note-formatter",
       "editor-v1",
-      "enable-wake-on-lan-and-auto-shutdown-on-network-loss-for-ras",
-      "fix-inconclusive-skills",
       "focus-my-energy",
       "frontend-design",
-      "generate-findings-report-from-pipeline-logs",
       "generate-fresh-ideas",
-      "generate-markdown-and-docx-documents",
       "get-more-perspectives",
       "ghidra-reverse",
       "github-code-documentation",
@@ -328,16 +322,12 @@
       "meeting-notes",
       "minimax-docx",
       "mobile-reverse",
-      "multi-agent-orchestration",
       "orchestrate",
       "pdf",
-      "penetration-testing-guide",
       "prep-for-meetings",
       "proactive-self-improving-agent",
       "project-butler",
-      "reverse-engineering",
       "spreadsheet",
-      "summarize-meeting",
       "systematic-debugging",
       "testing-skills",
       "trader-alerts",
@@ -352,9 +342,7 @@
       "trader-scanner",
       "trader-timemachine",
       "ui-styling",
-      "universal-listing-template",
       "web-artifacts-builder",
-      "web-research",
       "webapp-testing",
       "writing-plans",
       "yfinance-ai"
@@ -364,6 +352,8 @@
   "skills": [
     {
       "name": "agent-operating-rules",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "original",
       "source": {
         "type": "repo",
@@ -399,6 +389,8 @@
     },
     {
       "name": "ai-vibe-slides",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -433,6 +425,8 @@
     },
     {
       "name": "android-adb-control",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -467,6 +461,8 @@
     },
     {
       "name": "android-development",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -501,6 +497,8 @@
     },
     {
       "name": "api-and-interface-design",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -535,6 +533,8 @@
     },
     {
       "name": "apk-reverse",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "repo",
@@ -568,6 +568,8 @@
     },
     {
       "name": "applying-themes",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -603,6 +605,8 @@
     },
     {
       "name": "avoid-ai-design",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -637,6 +641,8 @@
     },
     {
       "name": "beyond-vibe-coding-autonomous-development",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "original",
       "source": {
         "type": "repo",
@@ -670,6 +676,8 @@
     },
     {
       "name": "binary-diff",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "repo",
@@ -703,6 +711,8 @@
     },
     {
       "name": "blender-geometry-nodes",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -738,6 +748,8 @@
     },
     {
       "name": "blender-hard-surface-modeling",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -773,6 +785,8 @@
     },
     {
       "name": "blender-python-integration",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -808,6 +822,8 @@
     },
     {
       "name": "blender-rigging-animation",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -843,6 +859,8 @@
     },
     {
       "name": "book-to-skill",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "original",
       "source": {
         "type": "repo",
@@ -876,6 +894,8 @@
     },
     {
       "name": "brainstorming",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -911,6 +931,8 @@
     },
     {
       "name": "browser-automation",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -945,6 +967,8 @@
     },
     {
       "name": "building-mcp-servers",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -980,6 +1004,8 @@
     },
     {
       "name": "code-documenter",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -1015,6 +1041,8 @@
     },
     {
       "name": "code-review",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -1049,6 +1077,8 @@
     },
     {
       "name": "code-reviewer",
+      "enabled": false,
+      "disabledReason": "Overlaps code-review; code-review covers standards and spec.",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -1084,6 +1114,8 @@
     },
     {
       "name": "context-engineering",
+      "enabled": false,
+      "disabledReason": "Overlaps project-butler and agent-operating-rules.",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -1119,6 +1151,8 @@
     },
     {
       "name": "create-individual-calendar-events-from-earnings-dates-list",
+      "enabled": false,
+      "disabledReason": "Niche earnings-calendar utility; available again by removing it from this list.",
       "authorship": "original",
       "source": {
         "type": "repo",
@@ -1152,6 +1186,8 @@
     },
     {
       "name": "creating-skills",
+      "enabled": false,
+      "disabledReason": "Overlaps skill-creator; skill-creator is the platform-neutral one kept for Cindy, OpenCode and OpenDesign.",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -1187,6 +1223,8 @@
     },
     {
       "name": "dcf-valuation",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -1221,6 +1259,8 @@
     },
     {
       "name": "debugging-wizard",
+      "enabled": false,
+      "disabledReason": "Overlaps systematic-debugging; systematic-debugging is the process skill.",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -1256,6 +1296,8 @@
     },
     {
       "name": "deep-agents-memory",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -1292,6 +1334,8 @@
     },
     {
       "name": "deep-research",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -1325,6 +1369,8 @@
     },
     {
       "name": "dependency-scan",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -1359,6 +1405,8 @@
     },
     {
       "name": "design-catalogue",
+      "enabled": false,
+      "disabledReason": "Navigator for design skills that are already installed; it adds no design guidance of its own.",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -1393,6 +1441,8 @@
     },
     {
       "name": "design-taste-frontend",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -1427,6 +1477,8 @@
     },
     {
       "name": "desloppify",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -1460,6 +1512,8 @@
     },
     {
       "name": "detailed-source-rewrite-guide",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "original",
       "source": {
         "type": "repo",
@@ -1493,6 +1547,8 @@
     },
     {
       "name": "doc",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -1527,6 +1583,8 @@
     },
     {
       "name": "document-editing-general",
+      "enabled": false,
+      "disabledReason": "Generic document editor; doc and minimax-docx cover the formats that are used.",
       "authorship": "original",
       "source": {
         "type": "repo",
@@ -1560,6 +1618,8 @@
     },
     {
       "name": "ds-note-formatter",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "original",
       "source": {
         "type": "repo",
@@ -1593,6 +1653,8 @@
     },
     {
       "name": "editor-v1",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -1629,6 +1691,8 @@
     },
     {
       "name": "enable-wake-on-lan-and-auto-shutdown-on-network-loss-for-ras",
+      "enabled": false,
+      "disabledReason": "Niche Raspberry Pi utility, kept in the catalog for later.",
       "authorship": "original",
       "source": {
         "type": "repo",
@@ -1662,6 +1726,8 @@
     },
     {
       "name": "fine-tuning-expert",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -1697,6 +1763,8 @@
     },
     {
       "name": "fix-inconclusive-skills",
+      "enabled": false,
+      "disabledReason": "Niche maintenance utility, not used in normal work.",
       "authorship": "original",
       "source": {
         "type": "repo",
@@ -1730,6 +1798,8 @@
     },
     {
       "name": "focus-my-energy",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "original",
       "source": {
         "type": "repo",
@@ -1763,6 +1833,8 @@
     },
     {
       "name": "frontend-design",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -1797,6 +1869,8 @@
     },
     {
       "name": "frontend-design-systems",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -1832,6 +1906,8 @@
     },
     {
       "name": "generate-findings-report-from-pipeline-logs",
+      "enabled": false,
+      "disabledReason": "Niche pipeline-log report utility.",
       "authorship": "original",
       "source": {
         "type": "repo",
@@ -1865,6 +1941,8 @@
     },
     {
       "name": "generate-fresh-ideas",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "original",
       "source": {
         "type": "repo",
@@ -1898,6 +1976,8 @@
     },
     {
       "name": "generate-markdown-and-docx-documents",
+      "enabled": false,
+      "disabledReason": "Thin wrapper; doc and minimax-docx already cover Markdown and DOCX output.",
       "authorship": "original",
       "source": {
         "type": "repo",
@@ -1931,6 +2011,8 @@
     },
     {
       "name": "get-more-perspectives",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "original",
       "source": {
         "type": "repo",
@@ -1964,6 +2046,8 @@
     },
     {
       "name": "ghidra-reverse",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "repo",
@@ -1997,6 +2081,8 @@
     },
     {
       "name": "github-code-documentation",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "original",
       "source": {
         "type": "repo",
@@ -2030,6 +2116,8 @@
     },
     {
       "name": "gsap-core",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -2066,6 +2154,8 @@
     },
     {
       "name": "gsap-frameworks",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -2102,6 +2192,8 @@
     },
     {
       "name": "gsap-performance",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -2138,6 +2230,8 @@
     },
     {
       "name": "gsap-plugins",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -2174,6 +2268,8 @@
     },
     {
       "name": "gsap-react",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -2210,6 +2306,8 @@
     },
     {
       "name": "gsap-scrolltrigger",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -2246,6 +2344,8 @@
     },
     {
       "name": "gsap-timeline",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -2282,6 +2382,8 @@
     },
     {
       "name": "gsap-utils",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -2318,6 +2420,8 @@
     },
     {
       "name": "gws-gmail",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -2352,6 +2456,8 @@
     },
     {
       "name": "higgsfield",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -2386,6 +2492,8 @@
     },
     {
       "name": "home-assistant",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -2420,6 +2528,8 @@
     },
     {
       "name": "humanizer",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -2454,6 +2564,8 @@
     },
     {
       "name": "idea-to-plan",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -2489,6 +2601,8 @@
     },
     {
       "name": "impeccable",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -2525,6 +2639,8 @@
     },
     {
       "name": "js-reverse",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "repo",
@@ -2558,6 +2674,8 @@
     },
     {
       "name": "knowledge-base",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -2592,6 +2710,8 @@
     },
     {
       "name": "learn-codebase",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -2626,6 +2746,8 @@
     },
     {
       "name": "make-interfaces-feel-better",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -2662,6 +2784,8 @@
     },
     {
       "name": "match-my-writing-style",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "original",
       "source": {
         "type": "repo",
@@ -2695,6 +2819,8 @@
     },
     {
       "name": "meal-plan",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -2729,6 +2855,8 @@
     },
     {
       "name": "meeting-notes",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -2763,6 +2891,8 @@
     },
     {
       "name": "minimax-docx",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -2797,6 +2927,8 @@
     },
     {
       "name": "mobile-reverse",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "repo",
@@ -2830,6 +2962,8 @@
     },
     {
       "name": "multi-agent-orchestration",
+      "enabled": false,
+      "disabledReason": "Overlaps orchestrate; orchestrate is the operational coordinator.",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -2864,6 +2998,8 @@
     },
     {
       "name": "orchestrate",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -2899,6 +3035,8 @@
     },
     {
       "name": "pdf",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -2933,6 +3071,8 @@
     },
     {
       "name": "pen-testing",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "original",
       "source": {
         "type": "repo",
@@ -2968,6 +3108,8 @@
     },
     {
       "name": "penetration-testing-guide",
+      "enabled": false,
+      "disabledReason": "Overlaps pen-testing; pen-testing is the complete methodology.",
       "authorship": "original",
       "source": {
         "type": "repo",
@@ -3001,6 +3143,8 @@
     },
     {
       "name": "playwright-skill",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -3036,6 +3180,8 @@
     },
     {
       "name": "prep-for-meetings",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "original",
       "source": {
         "type": "repo",
@@ -3069,6 +3215,8 @@
     },
     {
       "name": "proactive-self-improving-agent",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -3103,6 +3251,8 @@
     },
     {
       "name": "project-butler",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -3137,6 +3287,8 @@
     },
     {
       "name": "rea-analysis-optimization",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -3172,6 +3324,8 @@
     },
     {
       "name": "rea-changelog-update",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -3207,6 +3361,8 @@
     },
     {
       "name": "rea-ci-tests-audit",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -3242,6 +3398,8 @@
     },
     {
       "name": "rea-tool-design",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -3277,6 +3435,8 @@
     },
     {
       "name": "repository-hygiene",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "original",
       "source": {
         "type": "repo",
@@ -3312,6 +3472,8 @@
     },
     {
       "name": "reverse-engineer-anything",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "repo",
@@ -3347,6 +3509,8 @@
     },
     {
       "name": "reverse-engineering",
+      "enabled": false,
+      "disabledReason": "Overlaps reverse-engineer-anything; the specialised RE skills stay enabled.",
       "authorship": "third-party",
       "source": {
         "type": "repo",
@@ -3380,6 +3544,8 @@
     },
     {
       "name": "skill-creator",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -3416,6 +3582,8 @@
     },
     {
       "name": "spreadsheet",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -3450,6 +3618,8 @@
     },
     {
       "name": "summarize-meeting",
+      "enabled": false,
+      "disabledReason": "Overlaps meeting-notes; meeting-notes is more detailed.",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -3484,6 +3654,8 @@
     },
     {
       "name": "systematic-debugging",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -3518,6 +3690,8 @@
     },
     {
       "name": "testing-skills",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "original",
       "source": {
         "type": "repo",
@@ -3551,6 +3725,8 @@
     },
     {
       "name": "ticktick-tasks",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "original",
       "source": {
         "type": "repo",
@@ -3586,6 +3762,8 @@
     },
     {
       "name": "trader-alerts",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -3620,6 +3798,8 @@
     },
     {
       "name": "trader-analyst",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -3654,6 +3834,8 @@
     },
     {
       "name": "trader-broker",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -3688,6 +3870,8 @@
     },
     {
       "name": "trader-budget",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -3722,6 +3906,8 @@
     },
     {
       "name": "trader-entry",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -3756,6 +3942,8 @@
     },
     {
       "name": "trader-exit",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -3790,6 +3978,8 @@
     },
     {
       "name": "trader-news",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -3824,6 +4014,8 @@
     },
     {
       "name": "trader-pelosi",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -3858,6 +4050,8 @@
     },
     {
       "name": "trader-risk",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -3892,6 +4086,8 @@
     },
     {
       "name": "trader-scanner",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -3926,6 +4122,8 @@
     },
     {
       "name": "trader-timemachine",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -3960,6 +4158,8 @@
     },
     {
       "name": "transitions-dev",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -3996,6 +4196,8 @@
     },
     {
       "name": "transitions-polish",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -4032,6 +4234,8 @@
     },
     {
       "name": "ui-styling",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -4066,6 +4270,8 @@
     },
     {
       "name": "universal-listing-template",
+      "enabled": false,
+      "disabledReason": "Generic list template; the model already handles ordinary lists and tables.",
       "authorship": "original",
       "source": {
         "type": "repo",
@@ -4099,6 +4305,8 @@
     },
     {
       "name": "using-superpowers",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -4134,6 +4342,8 @@
     },
     {
       "name": "web-artifacts-builder",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -4168,6 +4378,8 @@
     },
     {
       "name": "web-research",
+      "enabled": false,
+      "disabledReason": "Overlaps deep-research; deep-research is the full multi-agent pipeline.",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -4202,6 +4414,8 @@
     },
     {
       "name": "webapp-testing",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -4236,6 +4450,8 @@
     },
     {
       "name": "wordpress-pro",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -4271,6 +4487,8 @@
     },
     {
       "name": "write-research-projects",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "original",
       "source": {
         "type": "repo",
@@ -4306,6 +4524,8 @@
     },
     {
       "name": "writing-plans",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -4340,6 +4560,8 @@
     },
     {
       "name": "yfinance-ai",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "original",
       "source": {
         "type": "repo",

@@ -35,25 +35,25 @@
       "id": "opencode",
       "dir": "~\\.config\\opencode\\skills",
       "role": "install",
-      "skills": 117
+      "skills": 100
     },
     {
       "id": "agents",
       "dir": "~\\.agents\\skills",
       "role": "install",
-      "skills": 117
+      "skills": 100
     },
     {
       "id": "claude",
       "dir": "~\\.claude\\skills",
       "role": "mirror",
-      "skills": 117
+      "skills": 100
     },
     {
       "id": "qwen",
       "dir": "~\\.qwen\\skills",
       "role": "harness",
-      "skills": 117
+      "skills": 100
     },
     {
       "id": "cindy-managed",
@@ -93,32 +93,21 @@
         "building-mcp-servers",
         "code-documenter",
         "code-review",
-        "code-reviewer",
-        "context-engineering",
-        "create-individual-calendar-events-from-earnings-dates-list",
-        "creating-skills",
         "dcf-valuation",
-        "debugging-wizard",
         "deep-agents-memory",
         "deep-research",
         "dependency-scan",
-        "design-catalogue",
         "design-taste-frontend",
         "desloppify",
         "detailed-source-rewrite-guide",
         "doc",
-        "document-editing-general",
         "ds-note-formatter",
         "editor-v1",
-        "enable-wake-on-lan-and-auto-shutdown-on-network-loss-for-ras",
         "fine-tuning-expert",
-        "fix-inconclusive-skills",
         "focus-my-energy",
         "frontend-design",
         "frontend-design-systems",
-        "generate-findings-report-from-pipeline-logs",
         "generate-fresh-ideas",
-        "generate-markdown-and-docx-documents",
         "get-more-perspectives",
         "ghidra-reverse",
         "github-code-documentation",
@@ -145,11 +134,9 @@
         "meeting-notes",
         "minimax-docx",
         "mobile-reverse",
-        "multi-agent-orchestration",
         "orchestrate",
         "pdf",
         "pen-testing",
-        "penetration-testing-guide",
         "playwright-skill",
         "prep-for-meetings",
         "proactive-self-improving-agent",
@@ -160,10 +147,8 @@
         "rea-tool-design",
         "repository-hygiene",
         "reverse-engineer-anything",
-        "reverse-engineering",
         "skill-creator",
         "spreadsheet",
-        "summarize-meeting",
         "systematic-debugging",
         "testing-skills",
         "ticktick-tasks",
@@ -181,10 +166,8 @@
         "transitions-dev",
         "transitions-polish",
         "ui-styling",
-        "universal-listing-template",
         "using-superpowers",
         "web-artifacts-builder",
-        "web-research",
         "webapp-testing",
         "wordpress-pro",
         "write-research-projects",
@@ -205,7 +188,6 @@
         "dcf-valuation",
         "deep-agents-memory",
         "dependency-scan",
-        "design-catalogue",
         "design-taste-frontend",
         "doc",
         "editor-v1",
@@ -229,14 +211,12 @@
         "meal-plan",
         "meeting-notes",
         "minimax-docx",
-        "multi-agent-orchestration",
         "orchestrate",
         "pdf",
         "proactive-self-improving-agent",
         "project-butler",
         "skill-creator",
         "spreadsheet",
-        "summarize-meeting",
         "systematic-debugging",
         "trader-alerts",
         "trader-analyst",
@@ -253,7 +233,6 @@
         "transitions-polish",
         "ui-styling",
         "web-artifacts-builder",
-        "web-research",
         "webapp-testing",
         "writing-plans"
       ]
@@ -274,24 +253,14 @@
         "brainstorming",
         "building-mcp-servers",
         "code-documenter",
-        "code-reviewer",
-        "context-engineering",
-        "create-individual-calendar-events-from-earnings-dates-list",
-        "creating-skills",
-        "debugging-wizard",
         "deep-research",
         "desloppify",
         "detailed-source-rewrite-guide",
-        "document-editing-general",
         "ds-note-formatter",
-        "enable-wake-on-lan-and-auto-shutdown-on-network-loss-for-ras",
         "fine-tuning-expert",
-        "fix-inconclusive-skills",
         "focus-my-energy",
         "frontend-design-systems",
-        "generate-findings-report-from-pipeline-logs",
         "generate-fresh-ideas",
-        "generate-markdown-and-docx-documents",
         "get-more-perspectives",
         "ghidra-reverse",
         "github-code-documentation",
@@ -300,7 +269,6 @@
         "match-my-writing-style",
         "mobile-reverse",
         "pen-testing",
-        "penetration-testing-guide",
         "playwright-skill",
         "prep-for-meetings",
         "rea-analysis-optimization",
@@ -309,10 +277,8 @@
         "rea-tool-design",
         "repository-hygiene",
         "reverse-engineer-anything",
-        "reverse-engineering",
         "testing-skills",
         "ticktick-tasks",
-        "universal-listing-template",
         "using-superpowers",
         "wordpress-pro",
         "write-research-projects",
@@ -530,86 +496,6 @@
       "sha256": "c317493f9b94df59ccb48a6783492bcb48e7f1c3d5299ed44718bd568eb8cdb0"
     },
     {
-      "name": "code-reviewer",
-      "root": "opencode",
-      "authorship": "third-party",
-      "source": {
-        "type": "github",
-        "repo": "Jeffallan/claude-skills",
-        "ref": "02b05028ba6c93f7aed45314b15c0dd5abead9d6",
-        "path": "skills/code-reviewer"
-      },
-      "author": "",
-      "license": "MIT",
-      "sizeKB": 33,
-      "needsNodeModules": false,
-      "sha256": "f65c4468751bb509f4ff78b791dfbc664dfe6191d36d04626c92ed8c2174293b"
-    },
-    {
-      "name": "context-engineering",
-      "root": "opencode",
-      "authorship": "third-party",
-      "source": {
-        "type": "github",
-        "repo": "addyosmani/agent-skills",
-        "ref": "aeac41d4d005999432bb7312f7ff06383a91d59d",
-        "path": "skills/context-engineering"
-      },
-      "author": "",
-      "license": "",
-      "sizeKB": 15,
-      "needsNodeModules": false,
-      "sha256": "8b736cb9e55b82b265ab6ff78349c0e826e8a6df550deddf665b7fb3ff858b63"
-    },
-    {
-      "name": "create-individual-calendar-events-from-earnings-dates-list",
-      "root": "opencode",
-      "authorship": "original",
-      "source": {
-        "type": "repo",
-        "repo": "DracieVajko/Dracievajko-SkillsSet",
-        "ref": "master",
-        "path": "skills/original/create-individual-calendar-events-from-earnings-dates-list"
-      },
-      "author": "DracieVajko",
-      "license": "MIT",
-      "sizeKB": 2,
-      "needsNodeModules": false,
-      "sha256": "190a460c75c8065dd851b98ac1f409294e653dd8b08c767cb003a500b401c44a"
-    },
-    {
-      "name": "creating-skills",
-      "root": "opencode",
-      "authorship": "third-party",
-      "source": {
-        "type": "github",
-        "repo": "GenAI-Community-VITB/master-prompters",
-        "ref": "main",
-        "path": ".agents/skills/creating-skills"
-      },
-      "author": "",
-      "license": "",
-      "sizeKB": 271,
-      "needsNodeModules": false,
-      "sha256": "71872dcdbe5269bcadffc7b631c3e2fbe8946f29b433140afe251ee48958152c"
-    },
-    {
-      "name": "debugging-wizard",
-      "root": "opencode",
-      "authorship": "third-party",
-      "source": {
-        "type": "github",
-        "repo": "Jeffallan/claude-skills",
-        "ref": "02b05028ba6c93f7aed45314b15c0dd5abead9d6",
-        "path": "skills/debugging-wizard"
-      },
-      "author": "",
-      "license": "MIT",
-      "sizeKB": 30,
-      "needsNodeModules": false,
-      "sha256": "9dc712996f743d1b48e6f57aec344872fd81f6af547d753e5348d91c5b60c56c"
-    },
-    {
       "name": "deep-research",
       "root": "opencode",
       "authorship": "third-party",
@@ -658,22 +544,6 @@
       "sha256": "aded2e94722e29c589806cc7f777696b3de2a7f4028e8e37140c2edc7198c5e1"
     },
     {
-      "name": "document-editing-general",
-      "root": "opencode",
-      "authorship": "original",
-      "source": {
-        "type": "repo",
-        "repo": "DracieVajko/Dracievajko-SkillsSet",
-        "ref": "master",
-        "path": "skills/original/document-editing-general"
-      },
-      "author": "DracieVajko",
-      "license": "MIT",
-      "sizeKB": 2,
-      "needsNodeModules": false,
-      "sha256": "0ed41a46595044683ca0e7fd6061a80ff16c665aa34577d39119ee718c9f06be"
-    },
-    {
       "name": "ds-note-formatter",
       "root": "opencode",
       "authorship": "original",
@@ -690,22 +560,6 @@
       "sha256": "16f3c54765d65ac0d1660ea881bf10e7c85bf8455a3f59da7de56cb7bad3f813"
     },
     {
-      "name": "enable-wake-on-lan-and-auto-shutdown-on-network-loss-for-ras",
-      "root": "opencode",
-      "authorship": "original",
-      "source": {
-        "type": "repo",
-        "repo": "DracieVajko/Dracievajko-SkillsSet",
-        "ref": "master",
-        "path": "skills/original/enable-wake-on-lan-and-auto-shutdown-on-network-loss-for-ras"
-      },
-      "author": "DracieVajko",
-      "license": "MIT",
-      "sizeKB": 2,
-      "needsNodeModules": false,
-      "sha256": "3c245247475b31e2f586ed09e5d79055426e61b5137dfcffbcc9a1324f6f06bc"
-    },
-    {
       "name": "fine-tuning-expert",
       "root": "opencode",
       "authorship": "third-party",
@@ -720,22 +574,6 @@
       "sizeKB": 87,
       "needsNodeModules": false,
       "sha256": "87ad37743797487cd1c37c23229357fc98fadf1e07a13c57b81e0c133e9cf4c3"
-    },
-    {
-      "name": "fix-inconclusive-skills",
-      "root": "opencode",
-      "authorship": "original",
-      "source": {
-        "type": "repo",
-        "repo": "DracieVajko/Dracievajko-SkillsSet",
-        "ref": "master",
-        "path": "skills/original/fix-inconclusive-skills"
-      },
-      "author": "DracieVajko",
-      "license": "MIT",
-      "sizeKB": 1,
-      "needsNodeModules": false,
-      "sha256": "ac5aea74554c91b2b5ff5ed7a1be48d117d11a063bc32f9af99b8dc569440ad2"
     },
     {
       "name": "focus-my-energy",
@@ -770,22 +608,6 @@
       "sha256": "397fb10beffe6d4e835496c375cb6d43c20ca01ce902af22064fce6b3b6040ec"
     },
     {
-      "name": "generate-findings-report-from-pipeline-logs",
-      "root": "opencode",
-      "authorship": "original",
-      "source": {
-        "type": "repo",
-        "repo": "DracieVajko/Dracievajko-SkillsSet",
-        "ref": "master",
-        "path": "skills/original/generate-findings-report-from-pipeline-logs"
-      },
-      "author": "DracieVajko",
-      "license": "MIT",
-      "sizeKB": 2,
-      "needsNodeModules": false,
-      "sha256": "b5b03c99e3eb61a3299172e65b32401363d5499113aa04cd0584491244785c43"
-    },
-    {
       "name": "generate-fresh-ideas",
       "root": "opencode",
       "authorship": "original",
@@ -800,22 +622,6 @@
       "sizeKB": 15,
       "needsNodeModules": false,
       "sha256": "efe3ad5de56f11a015d56c85c1de5bb295eef18e5e33e6d0964ce037b144ab9a"
-    },
-    {
-      "name": "generate-markdown-and-docx-documents",
-      "root": "opencode",
-      "authorship": "original",
-      "source": {
-        "type": "repo",
-        "repo": "DracieVajko/Dracievajko-SkillsSet",
-        "ref": "master",
-        "path": "skills/original/generate-markdown-and-docx-documents"
-      },
-      "author": "DracieVajko",
-      "license": "MIT",
-      "sizeKB": 2,
-      "needsNodeModules": false,
-      "sha256": "e43e2f058fe58cf7afb20edfc93cf01f4502028b8816d50c4c6382a14d75aa19"
     },
     {
       "name": "get-more-perspectives",
@@ -946,22 +752,6 @@
       "sha256": "53689aec8067435f7615463f325c3b44ac9cc75d7e23fced7d7c247de386d386"
     },
     {
-      "name": "penetration-testing-guide",
-      "root": "opencode",
-      "authorship": "original",
-      "source": {
-        "type": "repo",
-        "repo": "DracieVajko/Dracievajko-SkillsSet",
-        "ref": "master",
-        "path": "skills/original/penetration-testing-guide"
-      },
-      "author": "DracieVajko",
-      "license": "MIT",
-      "sizeKB": 1,
-      "needsNodeModules": false,
-      "sha256": "7675eb1b377fcccacc0a1de381f96743ec298b979255883c8d1733a348040d99"
-    },
-    {
       "name": "playwright-skill",
       "root": "opencode",
       "authorship": "third-party",
@@ -1090,22 +880,6 @@
       "sha256": "90608de63f2650a57437e037c1afa7afb6ebf4c8b9fd976fdb72caff6df443dc"
     },
     {
-      "name": "reverse-engineering",
-      "root": "opencode",
-      "authorship": "third-party",
-      "source": {
-        "type": "repo",
-        "repo": "DracieVajko/Dracievajko-SkillsSet",
-        "ref": "master",
-        "path": "skills/third-party/reverse-engineering"
-      },
-      "author": "",
-      "license": "MIT",
-      "sizeKB": 16,
-      "needsNodeModules": false,
-      "sha256": "b7d6ce641620a2e3a62f422cb9d1c36428aff5dcc07f623b44f0e0d18f585450"
-    },
-    {
       "name": "testing-skills",
       "root": "opencode",
       "authorship": "original",
@@ -1136,22 +910,6 @@
       "sizeKB": 10,
       "needsNodeModules": false,
       "sha256": "8342403073ff07bed7e66c42e4d8b7eeb72628bb250b34d06c48a3d72e433b40"
-    },
-    {
-      "name": "universal-listing-template",
-      "root": "opencode",
-      "authorship": "original",
-      "source": {
-        "type": "repo",
-        "repo": "DracieVajko/Dracievajko-SkillsSet",
-        "ref": "master",
-        "path": "skills/original/universal-listing-template"
-      },
-      "author": "DracieVajko",
-      "license": "MIT",
-      "sizeKB": 1,
-      "needsNodeModules": false,
-      "sha256": "c35678c4b3c5f9c727e337ea2e8c7153440b73b0f74bc516bba9820cd18afd60"
     },
     {
       "name": "using-superpowers",
@@ -1376,22 +1134,6 @@
       "sizeKB": 7,
       "needsNodeModules": false,
       "sha256": "4076824ca35e590c19524a51b28fa1c67ffc13e466d8a5d7549d5f6b9cbf0c95"
-    },
-    {
-      "name": "design-catalogue",
-      "root": "agents",
-      "authorship": "third-party",
-      "source": {
-        "type": "github",
-        "repo": "highlow12/Beaura",
-        "ref": "main",
-        "path": ".agents/skills/design-catalogue"
-      },
-      "author": "",
-      "license": "",
-      "sizeKB": 30,
-      "needsNodeModules": false,
-      "sha256": "d3827b3abd243dbb72ebb1dccc3aa51da6aaf30b71c891cfdee1ee50dfe2bde3"
     },
     {
       "name": "design-taste-frontend",
@@ -1764,22 +1506,6 @@
       "sha256": "45c169630f30b8f034bc7d53edf73d592fbd82e82188beec7da3ca1996a97fb5"
     },
     {
-      "name": "multi-agent-orchestration",
-      "root": "agents",
-      "authorship": "third-party",
-      "source": {
-        "type": "github",
-        "repo": "qodex-ai/ai-agent-skills",
-        "ref": "main",
-        "path": "skills/multi-agent-orchestration"
-      },
-      "author": "",
-      "license": "",
-      "sizeKB": 75,
-      "needsNodeModules": false,
-      "sha256": "95de66280782b45552e3709b7892db822b3d6a23e0eb343bd8fc1e8289dc543d"
-    },
-    {
       "name": "orchestrate",
       "root": "agents",
       "authorship": "third-party",
@@ -1875,22 +1601,6 @@
       "sizeKB": 30,
       "needsNodeModules": false,
       "sha256": "36baea99e96c77c13d15d24f9d53cd072ccbc120e810bf4e68049edb5b0f1d65"
-    },
-    {
-      "name": "summarize-meeting",
-      "root": "agents",
-      "authorship": "third-party",
-      "source": {
-        "type": "github",
-        "repo": "NVlabs/Skill2Env",
-        "ref": "main",
-        "path": "SkillHub/skills/pawel-huryn/summarize-meeting"
-      },
-      "author": "",
-      "license": "",
-      "sizeKB": 3,
-      "needsNodeModules": false,
-      "sha256": "4deabdd7f99c692ee800a80a4eaf6a688fb8873cdaaaea44b7f472499205f8e7"
     },
     {
       "name": "systematic-debugging",
@@ -2147,22 +1857,6 @@
       "sizeKB": 45,
       "needsNodeModules": false,
       "sha256": "81c5002c6643b0de7b8710b00e7a9038daa6fb9b68d59870ee6adb12da8d10f8"
-    },
-    {
-      "name": "web-research",
-      "root": "agents",
-      "authorship": "third-party",
-      "source": {
-        "type": "github",
-        "repo": "langchain-ai/deepagents",
-        "ref": "main",
-        "path": "libs/code/examples/skills/web-research"
-      },
-      "author": "",
-      "license": "",
-      "sizeKB": 3,
-      "needsNodeModules": false,
-      "sha256": "7c2b1f1990370f7ce176fe3608a67028c72db11e337b4ba83b8fce6d927dfde3"
     },
     {
       "name": "webapp-testing",

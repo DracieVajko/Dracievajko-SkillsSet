@@ -69,8 +69,23 @@ $timestamp = Get-Date -Format 'yyyyMMdd-HHmmss'
 $installed = 0
 $removed = 0
 
+# Skills disabled in sync/optional.json are not installed by this script.
+$disabled = @{}
+$optionalPath = Join-Path $repoRoot 'sync\optional.json'
+if (Test-Path -LiteralPath $optionalPath -PathType Leaf) {
+    $optional = Get-Content -LiteralPath $optionalPath -Raw | ConvertFrom-Json
+    foreach ($entry in $optional.disabled) {
+        if ($entry.name) { $disabled[$entry.name] = $true }
+    }
+}
+
 foreach ($skill in $skills) {
     $destination = Join-Path $Target $skill.Name
+
+    if (-not $Uninstall -and $disabled.ContainsKey($skill.Name)) {
+        Write-Host "Skipped $($skill.Name) (disabled in sync/optional.json)"
+        continue
+    }
 
     if ($Uninstall) {
         if (Test-Path -LiteralPath $destination) {

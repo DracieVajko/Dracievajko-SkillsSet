@@ -530,9 +530,12 @@ class SyncCollectionTests(unittest.TestCase):
             )
 
     def test_manifest_and_collection_list_the_same_skills(self):
-        names = [skill['name'] for skill in self.collection['skills']]
-        self.assertEqual(names, [skill['name'] for skill in self.manifest['skills']])
-        self.assertEqual(len(names), len(set(names)), 'duplicate skill name in the collection')
+        enabled = [
+            skill['name'] for skill in self.collection['skills']
+            if skill.get('enabled', True)
+        ]
+        self.assertEqual(enabled, [skill['name'] for skill in self.manifest['skills']])
+        self.assertEqual(len(enabled), len(set(enabled)), 'duplicate skill name in the collection')
 
     def test_every_github_source_matches_the_catalog(self):
         for skill in self.collection['skills']:

@@ -36,6 +36,7 @@ COLLECTION = SYNC_DIR / "collection.json"
 MANIFEST = SYNC_DIR / "manifest.json"
 UNRESOLVED = SYNC_DIR / "unresolved.md"
 PLUGINS = SYNC_DIR / "cindy-plugins.json"
+OPTIONAL = SYNC_DIR / "optional.json"
 GENERATED_AT = "2026-11-18"
 
 # A skill installed in one of these roots is visible to these harnesses.
@@ -82,6 +83,21 @@ def load_existing() -> dict:
         return json.loads(COLLECTION.read_text(encoding="utf-8"))
     except (OSError, json.JSONDecodeError):
         return {}
+
+
+def load_optional() -> dict[str, str]:
+    """name -> reason for skills that stay in the catalog but are not installed."""
+    if not OPTIONAL.is_file():
+        return {}
+    try:
+        data = json.loads(OPTIONAL.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return {}
+    return {
+        entry["name"]: entry.get("reason", "")
+        for entry in data.get("disabled", [])
+        if entry.get("name")
+    }
 
 
 def repo_hash(source: dict) -> str:
@@ -222,6 +238,7 @@ def build() -> dict:
             item["source"] = catalog_source
 
     out_skills = []
+    disabled = load_optional()
     for name in sorted(skills):
         item = skills[name]
         source = item["source"]
@@ -229,6 +246,8 @@ def build() -> dict:
         out_skills.append(
             {
                 "name": name,
+                "enabled": name not in disabled,
+                "disabledReason": disabled.get(name, ""),
                 "authorship": item["authorship"],
                 "source": source,
                 "author": item["author"],
@@ -250,7 +269,11 @@ def build() -> dict:
 
     machine_ids = sorted(known_machines)
     gaps = {
-        machine: [s["name"] for s in out_skills if machine not in s["machines"]]
+        machine: [
+            s["name"]
+            for s in out_skills
+            if s["enabled"] and machine not in s["machines"]
+        ]
         for machine in machine_ids
     }
 
@@ -295,6 +318,8 @@ def build() -> dict:
             "install.root.",
             "machines and gaps are coverage evidence: what was seen where and what a "
             "computer still needs. They are not separate collections.",
+            "enabled=false means the skill stays in the catalog and this collection but "
+            "is not installed; sync/optional.json records why and can re-enable it.",
             "cindyPlugins install from the Cindy marketplace on each computer and are "
             "authorized there; sync/cindy-plugins.json lists what each one needs.",
             "opendesign-trial is the OpenDesign plugin; OpenDesign also uses "
@@ -357,6 +382,8 @@ def install_manifest(collection: dict) -> dict:
     union_skills = []
     hash_cache = load_hash_cache()
     for skill in collection["skills"]:
+        if not skill.get("enabled", True):
+            continue
         hashes = skill.get("sha256") or {}
         source = skill["source"]
         canonical = source.get("sha256") or repo_hash(source)
@@ -395,6 +422,8 @@ def install_manifest(collection: dict) -> dict:
         "notes": [
             "This is the one install manifest. Do not generate it per computer; run "
             "generate-manifest.py (evidence) and then build-collection.py (this file).",
+            "Skills disabled in sync/optional.json are not in this manifest and are not "
+            "installed; they stay in collection.json and the catalog.",
             "Every resolvable skill installs once in its root, then mirrors into the "
             "other roots as directory junctions.",
             "source.type=repo copies from this repository, github uses git "

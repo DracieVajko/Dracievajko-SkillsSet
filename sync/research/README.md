@@ -29,9 +29,13 @@ matched exactly and recorded as link-only. Raw search evidence is in
 
 ## Final state
 
-- 117 skills installed; **0 unresolved**.
-- `sync/verify-installed.py` reports `117 match, 0 differ, 0 missing`.
-- No local or cross-computer `drift`.
+- 117 skills in the collection: **100 enabled and installed**, 17 disabled by
+  `sync/optional.json` (overlaps or niche utilities; each entry has its reason).
+- `sync/verify-installed.py` reports `100 match, 0 differ, 0 missing`.
+- No unresolved skills and no local or cross-computer `drift`.
+- Disabled skills are moved to `~/.config/opencode/skills-disabled/` by
+  `sync/prune-optional.py`; remove a name from `sync/optional.json` and run the
+  installer to bring it back.
 - `editor-v1` is the one renamed install: the source is
   `workflow4-editor-v1`, installed as `editor-v1`; the catalog carries the
   patched hash and `rename_to`, so both computers produce the same file.

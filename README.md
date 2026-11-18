@@ -116,6 +116,8 @@ evidence file; the shared files are built from all of them.
 | `sync/collection.json` | **The collection**: every skill and plugin, how it installs, which agents see it, where it was seen, plus coverage gaps and hash drift. |
 | `sync/manifest.json` | The same collection in the schema the installer reads. This is the only install manifest, never a per-computer snapshot. |
 | `sync/cindy-plugins.json` | Plugins for Cindy, OpenCode and OpenDesign, with what each needs to be authorized again. |
+| `sync/optional.json` | Skills kept in the catalog but not installed; each entry says why and how to re-enable it. |
+| `sync/prune-optional.py` | Moves disabled skills out of every agent root into `~/.config/opencode/skills-disabled/`; nothing is deleted. |
 | `sync/CINDY-INSTALL.md` | Ready-to-paste prompt: installs the skills, then the plugins, then reports what still needs me. |
 | `sync/UPDATE.md` | Ready-to-paste prompt: updates a computer to the versions recorded in the collection. |
 | `sync/verify-installed.py` | Checks every installed skill against the recorded hash; `0 differ` is the success line. |
@@ -128,6 +130,7 @@ evidence file; the shared files are built from all of them.
 ```powershell
 .\scripts\sync-skills.ps1 -DryRun   # preview: what installs, what stays unresolved
 .\scripts\sync-skills.ps1           # install and link
+python sync\prune-optional.py       # move disabled skills out of every root
 python sync\generate-manifest.py    # record this computer as evidence
 python sync\build-collection.py     # refresh the shared collection
 ```

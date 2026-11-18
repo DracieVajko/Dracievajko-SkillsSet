@@ -17,6 +17,7 @@ STEP 1 - skills
 Run, in this order, and show the output:
   .\scripts\sync-skills.ps1 -DryRun
   .\scripts\sync-skills.ps1
+  python sync\prune-optional.py
 The first run is a preview. The second installs and links. Do not pass -Force
 unless an existing folder is genuinely wrong.
 
