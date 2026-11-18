@@ -6,7 +6,7 @@ interchangeable, and this page records the licensing position of each.
 | Content class | Where it lives | Licensing |
 |---------------|----------------|---------------|
 | **Original content** | `skills/original/`, `prompts/`, `instructions/`, `docs/`, `scripts/`, `catalog/` | MIT, © 2026 DracieVajko - see the root [LICENSE](../LICENSE) |
-| **External content referenced by URL** | `catalog/links/*.txt`, `catalog/items.json` (199 `link-only` records) | Upstream licenses apply. No content is copied into this repository. |
+| **External content referenced by URL** | `catalog/links/*.txt`, `catalog/items.json` (204 `link-only` records) | Upstream licenses apply. No content is copied into this repository. |
 | **Third-party content physically bundled** | `skills/third-party/` (7 `SKILL.md` copies) | Upstream MIT licenses, reproduced in full below |
 
 A link is not a license grant. A bundled copy is a redistribution, so the
@@ -29,16 +29,20 @@ maintainer's approval and remain the property of their upstream authors.
 | [`reverse-engineer-anything`](../skills/third-party/reverse-engineer-anything/SKILL.md) | [morluto/rea](https://github.com/morluto/rea) | MIT | © 2026 morluto |
 
 Each bundled file carries a short provenance notice directly under its
-frontmatter. No functional content was changed: the only difference from the
-upstream file is that notice line.
+frontmatter. No functional content was changed. Two skills previously
+shipped their companion notes as vendored copies; those copies were removed
+so that only the `SKILL.md` bodies are redistributed, and their companion
+links now point at the upstream files.
 
-The companion files that each bundled skill links to inside its own directory
-are bundled as well, so the vendored skill works without a network round trip:
+Companion notes are **linked, not bundled**. Twenty-six upstream files used to
+be vendored next to the two large reverse-engineering skills; they are now
+referenced by absolute GitHub URL, so no third-party prose beyond the seven
+`SKILL.md` bodies is redistributed here:
 
-| Bundled skill | Companion files bundled |
-|---------------|--------------------------|
-| `reverse-engineer-anything` | `references/` - 8 files |
-| `reverse-engineering` | 14 sibling files plus `references/` - 4 files |
+| Bundled skill | Companion files linked upstream |
+|---------------|----------------------------------|
+| `reverse-engineer-anything` | `references/` - 8 files under [morluto/rea](https://github.com/morluto/rea/tree/main/.agents/skills/reverse-engineer-anything/references) |
+| `reverse-engineering` | 14 sibling files plus `references/` - 4 files under [zhaoxuya520/reverse-skill](https://github.com/zhaoxuya520/reverse-skill/tree/main/skills/reverse-engineering) |
 
 A few upstream links point at **sibling skills that are not vendored here**
 (for example `dotnet-reverse`, `field-journal` and `ops/`). Those links are
@@ -100,7 +104,7 @@ SOFTWARE.
 
 ## External skills referenced by URL
 
-The other 199 external skills are **not copied** into this repository. They are
+The other 204 external skills are **not copied** into this repository. They are
 recorded in [`catalog/links/`](../catalog/links/) and
 [`catalog/items.json`](../catalog/items.json) with `authorship: link-only`, and
 their licenses stay with their upstream authors.

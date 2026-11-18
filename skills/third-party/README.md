@@ -47,9 +47,9 @@ These bundled skills are tracked in [`skills/README.md`](../../README.md) and ar
 the only local `SKILL.md` bodies permitted under `skills/third-party/`. Every
 other third-party skill in this page remains link-only.
 
-Each bundled skill ships with the companion files it links to inside its own
-directory (`references/` and sibling notes), so it works without a network
-round trip. A few upstream links point at sibling skills that are **not**
+Each bundled skill links its companion notes (`references/` and sibling files)
+to the upstream repository instead of shipping copies, so only the `SKILL.md`
+bodies are redistributed here. A few upstream links point at sibling skills that are **not**
 bundled here (for example `dotnet-reverse`, `field-journal` and `ops/`); they
 are reported as warnings by `scripts/check-markdown-links.py` and can be
 fetched from the upstream repository. The upstream MIT notices for both
