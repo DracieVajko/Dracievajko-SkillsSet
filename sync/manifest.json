@@ -2232,7 +2232,7 @@
       "license": "",
       "sizeKB": 0,
       "needsNodeModules": false,
-      "sha256": "00037acecabc85628542e9387d5c9d29e39cf83396cc365f077017a4670eedec",
+      "sha256": "90608de63f2650a57437e037c1afa7afb6ebf4c8b9fd976fdb72caff6df443dc",
       "machines": [
         "dracievajko",
         "randall"
