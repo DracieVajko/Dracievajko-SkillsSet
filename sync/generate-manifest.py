@@ -27,6 +27,7 @@ import sys
 from pathlib import Path
 
 REPO_NAME = "DracieVajko/Dracievajko-SkillsSet"
+REPO_AUTHOR = "DracieVajko"
 HOME = Path(os.path.expanduser("~"))
 
 # Install roots: real skill folders only; mirrors are detected, never scanned.
@@ -75,6 +76,25 @@ def sha256(path: Path) -> str:
     """Hash the file with line endings normalised, so CRLF and LF copies match."""
     raw = path.read_bytes().replace(bytes([13, 10]), bytes([10]))
     return hashlib.sha256(raw).hexdigest()
+
+
+def frontmatter_author(path: Path) -> str:
+    """Best-effort read of the frontmatter fields used for the authorship guard."""
+    try:
+        text = path.read_text(encoding="utf-8", errors="replace")[:2000]
+    except OSError:
+        return ""
+    m = re.search(r"^---\s*\n(.*?)\n---", text, re.S)
+    if not m:
+        return ""
+    block = m.group(1).replace("\r", "")
+    for key in ("author", "authorship"):
+        match = re.search(rf"^{key}\s*:\s*(.+)$", block, re.M)
+        if match:
+            value = match.group(1).strip().strip('"\'')
+            if key == "author":
+                return value
+    return ""
 
 
 def dir_size_kb(path: Path) -> int:
@@ -154,10 +174,25 @@ def main() -> int:
                 source = dict(catalog[name])
             else:
                 source = {"type": "unresolved", "repo": None, "ref": None, "path": None}
+            if source["type"] == "repo":
+                authorship = "original"
+            elif source["type"] == "github":
+                authorship = "third-party"
+            else:
+                authorship = "unknown"
+            author = frontmatter_author(entry / "SKILL.md")
+            if authorship != "original" and author == REPO_AUTHOR:
+                print(
+                    f"warning: {name} records author {REPO_AUTHOR} but its source is "
+                    f"{authorship}; keep it out of skills/original unless it is "
+                    f"the owner's own work",
+                    file=sys.stderr,
+                )
             skills.append(
                 {
                     "name": name,
                     "root": root_key,
+                    "authorship": authorship,
                     "source": source,
                     "sizeKB": dir_size_kb(entry),
                     "needsNodeModules": (entry / "package.json").is_file(),
@@ -210,6 +245,9 @@ def main() -> int:
             "source.type=repo installs from this repository, source.type=github uses "
             "git sparse-checkout, source.type=unresolved has no identified upstream "
             "and must be copied by hand.",
+            "authorship=original only for the owner's own skills (installed from "
+            "skills/original/); authorship=third-party and unknown skills are never "
+            "promoted into skills/original/ and keep their upstream author.",
             "node_modules is never copied; run npm install in skills with "
             "needsNodeModules=true.",
             "cindyManagedSkills ship inside Cindy itself and are never copied between "

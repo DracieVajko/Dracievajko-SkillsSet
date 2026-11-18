@@ -63,6 +63,27 @@ the manifest for completeness and are never copied between machines.
 * **Secrets and account authorizations** — GitHub login, Google OAuth, ntfy
   token and the Tuya API key are per machine.
 
+## Authorship
+
+Nothing here relabels skill ownership. The manifest records one of three
+values per skill:
+
+| `authorship` | Meaning | Where the content lives |
+|---|---|---|
+| `original` | Written by the repository owner | `skills/original/` in this repo |
+| `third-party` | Someone else's work, installed from upstream | Upstream repository; only a link/path in this repo |
+| `unknown` | Upstream not identified | Not in this repo at all |
+
+`third-party` and `unknown` skills are installed on a machine but are never
+promoted into `skills/original/`, and their frontmatter keeps the upstream
+author. `scripts/validate-frontmatter.py` enforces this in CI: a skill in
+`skills/original/` must have `author: DracieVajko` and `authorship: original`,
+and a skill in `skills/third-party/` may not claim either.
+
+When a skill's upstream is resolved later, add it to `catalog/items.json` as an
+external entry - that updates the manifest's `third-party` classification
+without copying anyone's content.
+
 ## Keeping the manifest honest
 
 ```powershell

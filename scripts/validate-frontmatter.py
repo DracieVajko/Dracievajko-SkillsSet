@@ -20,7 +20,12 @@ Name collisions are errors when they occur inside the same discovery scope
 where the same name may be a deliberate variant for a separate interface.
 
 This script validates frontmatter structure only. It does NOT verify
-provenance, licenses, upstream sources, URLs, or runtime behaviour.
+licenses, upstream sources, URLs, or runtime behaviour.
+
+The one provenance rule it does enforce: `skills/original/` may only contain
+the repository owner's own work (`author` = REPO_AUTHOR, `authorship` =
+original), and `skills/third-party/` may never claim that authorship. Third-
+party work stays third-party so it is never presented as original.
 
 Exit code 0 = no errors (warnings allowed).
 Exit code 1 = at least one validation error.
@@ -38,6 +43,14 @@ import yaml
 SKILL_ROOTS = [
     'skills/original',
 ]
+
+# Authorship guard. skills/ is split into "mine" and "not mine"; a skill may
+# only be in skills/original/ when it is the owner's own work.
+REPO_AUTHOR = 'DracieVajko'
+ORIGINAL_ROOT = 'skills/original'
+THIRD_PARTY_ROOT = 'skills/third-party'
+ORIGINAL_AUTHORSHIP = 'original'
+THIRD_PARTY_AUTHORSHIP = 'third-party'
 
 # Directories that must never be part of skill discovery.
 EXCLUDE_DIR_NAMES = {
@@ -207,6 +220,63 @@ def check_name_collisions(records):
     return errors, warnings
 
 
+def check_authorship(root):
+    """Return errors when a skill sits in the wrong authorship bucket.
+
+    skills/original/        must be author=REPO_AUTHOR, authorship=original
+    skills/third-party/     must not be author=REPO_AUTHOR, nor claim
+                            authorship=original
+    """
+    errors = []
+
+    original_root = root / ORIGINAL_ROOT
+    if original_root.is_dir():
+        for skill_md in sorted(original_root.rglob('SKILL.md')):
+            if any(part in EXCLUDE_DIR_NAMES for part in skill_md.parts):
+                continue
+            frontmatter, _text, error = parse_frontmatter(skill_md)
+            if error:
+                continue  # already reported by the structural pass
+            author = str(frontmatter.get('author') or '').strip()
+            authorship = str(frontmatter.get('authorship') or '').strip()
+            rel = skill_md.relative_to(root)
+            if author != REPO_AUTHOR:
+                errors.append(
+                    f"{rel}: skills/original/ is for the owner's own work, but "
+                    f"author is '{author or 'unset'}'; move it to "
+                    f"{THIRD_PARTY_ROOT}/"
+                )
+            if authorship != ORIGINAL_AUTHORSHIP:
+                errors.append(
+                    f"{rel}: expected authorship: {ORIGINAL_AUTHORSHIP} under "
+                    f"skills/original/ (found '{authorship or 'unset'}'); if this "
+                    f"skill is not the owner's work, move it to {THIRD_PARTY_ROOT}/"
+                )
+
+    third_party_root = root / THIRD_PARTY_ROOT
+    if third_party_root.is_dir():
+        for skill_md in sorted(third_party_root.rglob('SKILL.md')):
+            if any(part in EXCLUDE_DIR_NAMES for part in skill_md.parts):
+                continue
+            frontmatter, _text, error = parse_frontmatter(skill_md)
+            if error:
+                continue
+            author = str(frontmatter.get('author') or '').strip()
+            authorship = str(frontmatter.get('authorship') or '').strip()
+            rel = skill_md.relative_to(root)
+            if author == REPO_AUTHOR:
+                errors.append(
+                    f"{rel}: author is {REPO_AUTHOR} inside {THIRD_PARTY_ROOT}/; "
+                    f"the owner's own skills belong in {ORIGINAL_ROOT}/"
+                )
+            if authorship == ORIGINAL_AUTHORSHIP and author != REPO_AUTHOR:
+                errors.append(
+                    f"{rel}: authorship: {ORIGINAL_AUTHORSHIP} on third-party "
+                    f"content is not allowed; record the upstream author"
+                )
+    return errors
+
+
 # --- entry point -----------------------------------------------------------
 
 def main(argv=None):
@@ -248,6 +318,8 @@ def main(argv=None):
     collision_errors, collision_warnings = check_name_collisions(records)
     errors.extend(collision_errors)
     warnings.extend(collision_warnings)
+
+    errors.extend(check_authorship(root))
 
     print(f"Validated {len(skill_files)} skills under {root}")
     print(f"  roots: {', '.join(SKILL_ROOTS)}")

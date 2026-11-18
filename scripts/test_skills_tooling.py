@@ -32,7 +32,8 @@ VALID_FRONTMATTER = """---
 name: {name}
 description: Use when testing the skills tooling.
 version: 1.0.0
-author: tester
+author: DracieVajko
+authorship: original
 category: core
 ---
 
@@ -170,10 +171,51 @@ class ValidatorFrontmatterTests(BaseTest):
     def test_optional_metadata_is_warning_not_error(self):
         self.repo.write_skill(
             'skills/original/minimal',
-            text="---\nname: minimal\ndescription: Use when testing.\n---\n\n# minimal\n")
+            text="---\nname: minimal\ndescription: Use when testing.\n"
+                 "author: DracieVajko\nauthorship: original\n---\n\n# minimal\n")
         result = run(VALIDATOR, self.repo.root)
         self.assertEqual(result.returncode, 0, result.stdout)
         self.assertIn("Optional field 'version' not set", result.stdout)
+
+
+class ValidatorAuthorshipTests(BaseTest):
+    """skills/original/ is only for the owner's own work; never relabel others'."""
+
+    def test_third_party_author_in_original_root_fails(self):
+        self.repo.write_skill(
+            'skills/original/borrowed',
+            text="---\nname: borrowed\ndescription: Use when testing.\n"
+                 "author: SomeoneElse\nauthorship: third-party\n---\n\n# x\n")
+        result = run(VALIDATOR, self.repo.root)
+        self.assertEqual(result.returncode, 1)
+        self.assertIn("skills/original/ is for the owner's own work", result.stdout)
+
+    def test_missing_authorship_in_original_root_fails(self):
+        self.repo.write_skill(
+            'skills/original/unlabelled',
+            text="---\nname: unlabelled\ndescription: Use when testing.\n"
+                 "author: DracieVajko\n---\n\n# x\n")
+        result = run(VALIDATOR, self.repo.root)
+        self.assertEqual(result.returncode, 1)
+        self.assertIn("expected authorship: original", result.stdout)
+
+    def test_owner_author_in_third_party_root_fails(self):
+        self.repo.write_skill(
+            'skills/third-party/own-copy',
+            text="---\nname: own-copy\ndescription: Use when testing.\n"
+                 "author: DracieVajko\nauthorship: original\n---\n\n# x\n")
+        result = run(VALIDATOR, self.repo.root)
+        self.assertEqual(result.returncode, 1)
+        self.assertIn('inside skills/third-party/', result.stdout)
+
+    def test_upstream_third_party_skill_is_allowed(self):
+        self.repo.write_skill('skills/original/original-a')
+        self.repo.write_skill(
+            'skills/third-party/upstream',
+            text="---\nname: upstream\ndescription: Use when testing.\n"
+                 "license: MIT\n---\n\n# x\n")
+        result = run(VALIDATOR, self.repo.root)
+        self.assertEqual(result.returncode, 0, result.stdout)
 
 
 class ValidatorCollisionTests(BaseTest):

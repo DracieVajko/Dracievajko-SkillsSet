@@ -10,6 +10,7 @@
     "Each skill is installed once, under roots[<root>].",
     "mirrors[] lists Windows directory junctions that expose those folders under other agents' skill directories; create them, never copy.",
     "source.type=repo installs from this repository, source.type=github uses git sparse-checkout, source.type=unresolved has no identified upstream and must be copied by hand.",
+    "authorship=original only for the owner's own skills (installed from skills/original/); authorship=third-party and unknown skills are never promoted into skills/original/ and keep their upstream author.",
     "node_modules is never copied; run npm install in skills with needsNodeModules=true.",
     "cindyManagedSkills ship inside Cindy itself and are never copied between machines."
   ],
@@ -122,6 +123,7 @@
     {
       "name": "agent-operating-rules",
       "root": "opencode",
+      "authorship": "original",
       "source": {
         "type": "repo",
         "repo": "DracieVajko/Dracievajko-SkillsSet",
@@ -135,6 +137,7 @@
     {
       "name": "applying-themes",
       "root": "opencode",
+      "authorship": "unknown",
       "source": {
         "type": "unresolved",
         "repo": null,
@@ -148,6 +151,7 @@
     {
       "name": "blender-geometry-nodes",
       "root": "opencode",
+      "authorship": "third-party",
       "source": {
         "type": "github",
         "repo": "composio-community/opencode-skills",
@@ -161,6 +165,7 @@
     {
       "name": "blender-hard-surface-modeling",
       "root": "opencode",
+      "authorship": "third-party",
       "source": {
         "type": "github",
         "repo": "composio-community/opencode-skills",
@@ -174,6 +179,7 @@
     {
       "name": "blender-python-integration",
       "root": "opencode",
+      "authorship": "third-party",
       "source": {
         "type": "github",
         "repo": "composio-community/opencode-skills",
@@ -187,6 +193,7 @@
     {
       "name": "blender-rigging-animation",
       "root": "opencode",
+      "authorship": "third-party",
       "source": {
         "type": "github",
         "repo": "composio-community/opencode-skills",
@@ -200,6 +207,7 @@
     {
       "name": "brainstorming",
       "root": "opencode",
+      "authorship": "third-party",
       "source": {
         "type": "github",
         "repo": "obra/superpowers",
@@ -213,6 +221,7 @@
     {
       "name": "building-mcp-servers",
       "root": "opencode",
+      "authorship": "unknown",
       "source": {
         "type": "unresolved",
         "repo": null,
@@ -226,6 +235,7 @@
     {
       "name": "code-documenter",
       "root": "opencode",
+      "authorship": "third-party",
       "source": {
         "type": "github",
         "repo": "Jeffallan/claude-skills",
@@ -239,6 +249,7 @@
     {
       "name": "code-reviewer",
       "root": "opencode",
+      "authorship": "third-party",
       "source": {
         "type": "github",
         "repo": "Jeffallan/claude-skills",
@@ -252,6 +263,7 @@
     {
       "name": "context-engineering",
       "root": "opencode",
+      "authorship": "third-party",
       "source": {
         "type": "github",
         "repo": "addyosmani/agent-skills",
@@ -265,6 +277,7 @@
     {
       "name": "creating-skills",
       "root": "opencode",
+      "authorship": "unknown",
       "source": {
         "type": "unresolved",
         "repo": null,
@@ -278,6 +291,7 @@
     {
       "name": "debugging-wizard",
       "root": "opencode",
+      "authorship": "third-party",
       "source": {
         "type": "github",
         "repo": "Jeffallan/claude-skills",
@@ -291,6 +305,7 @@
     {
       "name": "fine-tuning-expert",
       "root": "opencode",
+      "authorship": "third-party",
       "source": {
         "type": "github",
         "repo": "Jeffallan/claude-skills",
@@ -304,6 +319,7 @@
     {
       "name": "frontend-design-systems",
       "root": "opencode",
+      "authorship": "third-party",
       "source": {
         "type": "github",
         "repo": "composio-community/opencode-skills",
@@ -317,6 +333,7 @@
     {
       "name": "idea-to-plan",
       "root": "opencode",
+      "authorship": "third-party",
       "source": {
         "type": "github",
         "repo": "composio-community/opencode-skills",
@@ -330,6 +347,7 @@
     {
       "name": "pen-testing",
       "root": "opencode",
+      "authorship": "original",
       "source": {
         "type": "repo",
         "repo": "DracieVajko/Dracievajko-SkillsSet",
@@ -343,6 +361,7 @@
     {
       "name": "playwright-skill",
       "root": "opencode",
+      "authorship": "third-party",
       "source": {
         "type": "github",
         "repo": "lackeyjb/playwright-skill",
@@ -356,6 +375,7 @@
     {
       "name": "rea-analysis-optimization",
       "root": "opencode",
+      "authorship": "third-party",
       "source": {
         "type": "github",
         "repo": "morluto/rea",
@@ -369,6 +389,7 @@
     {
       "name": "rea-changelog-update",
       "root": "opencode",
+      "authorship": "third-party",
       "source": {
         "type": "github",
         "repo": "morluto/rea",
@@ -382,6 +403,7 @@
     {
       "name": "rea-ci-tests-audit",
       "root": "opencode",
+      "authorship": "third-party",
       "source": {
         "type": "github",
         "repo": "morluto/rea",
@@ -395,6 +417,7 @@
     {
       "name": "rea-tool-design",
       "root": "opencode",
+      "authorship": "third-party",
       "source": {
         "type": "github",
         "repo": "morluto/rea",
@@ -408,6 +431,7 @@
     {
       "name": "repository-hygiene",
       "root": "opencode",
+      "authorship": "original",
       "source": {
         "type": "repo",
         "repo": "DracieVajko/Dracievajko-SkillsSet",
@@ -421,6 +445,7 @@
     {
       "name": "reverse-engineer-anything",
       "root": "opencode",
+      "authorship": "third-party",
       "source": {
         "type": "github",
         "repo": "morluto/rea",
@@ -434,6 +459,7 @@
     {
       "name": "ticktick-tasks",
       "root": "opencode",
+      "authorship": "original",
       "source": {
         "type": "repo",
         "repo": "DracieVajko/Dracievajko-SkillsSet",
@@ -447,6 +473,7 @@
     {
       "name": "using-superpowers",
       "root": "opencode",
+      "authorship": "third-party",
       "source": {
         "type": "github",
         "repo": "obra/superpowers",
@@ -460,6 +487,7 @@
     {
       "name": "wordpress-pro",
       "root": "opencode",
+      "authorship": "third-party",
       "source": {
         "type": "github",
         "repo": "Jeffallan/claude-skills",
@@ -473,6 +501,7 @@
     {
       "name": "write-research-projects",
       "root": "opencode",
+      "authorship": "original",
       "source": {
         "type": "repo",
         "repo": "DracieVajko/Dracievajko-SkillsSet",
@@ -486,6 +515,7 @@
     {
       "name": "deep-agents-memory",
       "root": "agents",
+      "authorship": "third-party",
       "source": {
         "type": "github",
         "repo": "langchain-ai/design-agent",
@@ -499,6 +529,7 @@
     {
       "name": "gsap-core",
       "root": "agents",
+      "authorship": "third-party",
       "source": {
         "type": "github",
         "repo": "greensock/gsap-skills",
@@ -512,6 +543,7 @@
     {
       "name": "gsap-frameworks",
       "root": "agents",
+      "authorship": "third-party",
       "source": {
         "type": "github",
         "repo": "greensock/gsap-skills",
@@ -525,6 +557,7 @@
     {
       "name": "gsap-performance",
       "root": "agents",
+      "authorship": "third-party",
       "source": {
         "type": "github",
         "repo": "greensock/gsap-skills",
@@ -538,6 +571,7 @@
     {
       "name": "gsap-plugins",
       "root": "agents",
+      "authorship": "third-party",
       "source": {
         "type": "github",
         "repo": "greensock/gsap-skills",
@@ -551,6 +585,7 @@
     {
       "name": "gsap-react",
       "root": "agents",
+      "authorship": "third-party",
       "source": {
         "type": "github",
         "repo": "greensock/gsap-skills",
@@ -564,6 +599,7 @@
     {
       "name": "gsap-scrolltrigger",
       "root": "agents",
+      "authorship": "third-party",
       "source": {
         "type": "github",
         "repo": "greensock/gsap-skills",
@@ -577,6 +613,7 @@
     {
       "name": "gsap-timeline",
       "root": "agents",
+      "authorship": "third-party",
       "source": {
         "type": "github",
         "repo": "greensock/gsap-skills",
@@ -590,6 +627,7 @@
     {
       "name": "gsap-utils",
       "root": "agents",
+      "authorship": "third-party",
       "source": {
         "type": "github",
         "repo": "greensock/gsap-skills",
@@ -603,6 +641,7 @@
     {
       "name": "impeccable",
       "root": "agents",
+      "authorship": "third-party",
       "source": {
         "type": "github",
         "repo": "pbakaus/impeccable",
@@ -616,6 +655,7 @@
     {
       "name": "make-interfaces-feel-better",
       "root": "agents",
+      "authorship": "third-party",
       "source": {
         "type": "github",
         "repo": "jakubkrehel/make-interfaces-feel-better",
@@ -629,6 +669,7 @@
     {
       "name": "skill-creator",
       "root": "agents",
+      "authorship": "third-party",
       "source": {
         "type": "github",
         "repo": "anthropics/skills",
@@ -642,6 +683,7 @@
     {
       "name": "transitions-dev",
       "root": "agents",
+      "authorship": "third-party",
       "source": {
         "type": "github",
         "repo": "Jakubantalik/transitions.dev",
@@ -655,6 +697,7 @@
     {
       "name": "transitions-polish",
       "root": "agents",
+      "authorship": "third-party",
       "source": {
         "type": "github",
         "repo": "Jakubantalik/transitions.dev",
