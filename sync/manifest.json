@@ -9,8 +9,8 @@
   "notes": [
     "Each skill is installed once, under roots[<root>].",
     "mirrors[] lists Windows directory junctions that expose those folders under other agents' skill directories; create them, never copy.",
-    "source.type=repo installs from this repository, source.type=github uses git sparse-checkout, source.type=unresolved has no identified upstream and must be copied by hand.",
-    "authorship=original only for the owner's own skills (installed from skills/original/); authorship=third-party and unknown skills are never promoted into skills/original/ and keep their upstream author.",
+    "source.type=repo installs from this repository (skills/original or the approved bundled copies in skills/third-party), source.type=github uses git sparse-checkout, source.type=unresolved has no identified upstream and must be copied by hand.",
+    "authorship=original only for the owner's own skills (installed from skills/original/); bundled third-party skills stay third-party even though they install from this repository, and unknown skills are never promoted into skills/original/ and keep their upstream author.",
     "node_modules is never copied; run npm install in skills with needsNodeModules=true.",
     "cindyManagedSkills ship inside Cindy itself and are never copied between machines."
   ],
@@ -24,98 +24,57 @@
     {
       "dir": "~\\.claude\\skills",
       "only": [
-        "agent-operating-rules",
-        "applying-themes",
-        "blender-geometry-nodes",
-        "blender-hard-surface-modeling",
-        "blender-python-integration",
-        "blender-rigging-animation",
-        "brainstorming",
-        "building-mcp-servers",
-        "code-documenter",
-        "code-reviewer",
-        "context-engineering",
-        "creating-skills",
-        "debugging-wizard",
+        "ai-vibe-slides",
+        "android-adb-control",
+        "android-development",
+        "api-and-interface-design",
+        "avoid-ai-design",
+        "book-to-skill",
+        "browser-automation",
+        "code-review",
+        "dcf-valuation",
         "deep-agents-memory",
-        "fine-tuning-expert",
-        "frontend-design-systems",
-        "gsap-core",
-        "gsap-frameworks",
-        "gsap-performance",
-        "gsap-plugins",
-        "gsap-react",
-        "gsap-scrolltrigger",
-        "gsap-timeline",
-        "gsap-utils",
-        "idea-to-plan",
-        "impeccable",
-        "make-interfaces-feel-better",
-        "pen-testing",
-        "playwright-skill",
-        "rea-analysis-optimization",
-        "rea-changelog-update",
-        "rea-ci-tests-audit",
-        "rea-tool-design",
-        "repository-hygiene",
+        "deep-research",
+        "dependency-scan",
+        "design-catalogue",
+        "design-taste-frontend",
+        "doc",
+        "frontend-design",
+        "gws-gmail",
+        "higgsfield",
+        "home-assistant",
+        "humanizer",
+        "knowledge-base",
+        "learn-codebase",
+        "meal-plan",
+        "meeting-notes",
+        "minimax-docx",
+        "multi-agent-orchestration",
+        "orchestrate",
+        "pdf",
+        "proactive-self-improving-agent",
+        "project-butler",
         "reverse-engineer-anything",
         "skill-creator",
-        "ticktick-tasks",
-        "transitions-dev",
-        "transitions-polish",
-        "using-superpowers",
-        "wordpress-pro",
-        "write-research-projects"
-      ]
-    },
-    {
-      "dir": "~\\.pi\\agent\\skills",
-      "only": [
-        "gsap-core",
-        "gsap-frameworks",
-        "gsap-performance",
-        "gsap-plugins",
-        "gsap-react",
-        "gsap-scrolltrigger",
-        "gsap-timeline",
-        "gsap-utils",
-        "impeccable",
-        "make-interfaces-feel-better",
-        "transitions-dev",
-        "transitions-polish"
-      ]
-    },
-    {
-      "dir": "~\\.agents\\skills",
-      "only": [
-        "agent-operating-rules",
-        "applying-themes",
-        "blender-geometry-nodes",
-        "blender-hard-surface-modeling",
-        "blender-python-integration",
-        "blender-rigging-animation",
-        "brainstorming",
-        "building-mcp-servers",
-        "code-documenter",
-        "code-reviewer",
-        "context-engineering",
-        "creating-skills",
-        "debugging-wizard",
-        "fine-tuning-expert",
-        "frontend-design-systems",
-        "idea-to-plan",
-        "pen-testing",
-        "playwright-skill",
-        "rea-analysis-optimization",
-        "rea-changelog-update",
-        "rea-ci-tests-audit",
-        "rea-tool-design",
-        "repository-hygiene",
-        "reverse-engineer-anything",
-        "ticktick-tasks",
-        "using-superpowers",
-        "wordpress-pro",
-        "write-research-projects"
+        "spreadsheet",
+        "summarize-meeting",
+        "systematic-debugging",
+        "trader-alerts",
+        "trader-analyst",
+        "trader-broker",
+        "trader-budget",
+        "trader-entry",
+        "trader-exit",
+        "trader-news",
+        "trader-pelosi",
+        "trader-risk",
+        "trader-scanner",
+        "trader-timemachine",
+        "ui-styling",
+        "web-artifacts-builder",
+        "web-research",
+        "webapp-testing",
+        "writing-plans"
       ]
     }
   ],
@@ -135,6 +94,20 @@
       "sha256": "d87f97d08e3e3a45ec992c2f5e86e7ea801c545300daa918d78b87fc0c0b5c2c"
     },
     {
+      "name": "apk-reverse",
+      "root": "opencode",
+      "authorship": "third-party",
+      "source": {
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/third-party/apk-reverse"
+      },
+      "sizeKB": 11,
+      "needsNodeModules": false,
+      "sha256": "eac6fa7ad136b539f0e31140258e65f4544ef93b37558655320817fbd8062dda"
+    },
+    {
       "name": "applying-themes",
       "root": "opencode",
       "authorship": "unknown",
@@ -147,6 +120,34 @@
       "sizeKB": 9,
       "needsNodeModules": false,
       "sha256": "11cb6b69704faaaffb0e680bd1111b8a26150153aa842daa254d2df4edacadc3"
+    },
+    {
+      "name": "beyond-vibe-coding-autonomous-development",
+      "root": "opencode",
+      "authorship": "original",
+      "source": {
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/original/beyond-vibe-coding-autonomous-development"
+      },
+      "sizeKB": 5,
+      "needsNodeModules": false,
+      "sha256": "c5e7c791d57872dccaaa9d3fee7faa0123579bb0e752b4085fa35d63de810e6f"
+    },
+    {
+      "name": "binary-diff",
+      "root": "opencode",
+      "authorship": "third-party",
+      "source": {
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/third-party/binary-diff"
+      },
+      "sizeKB": 11,
+      "needsNodeModules": false,
+      "sha256": "62254d63c40bfb15f00d3a30821714657f6742e4e787d8e6ef8a7e98e2a950f6"
     },
     {
       "name": "blender-geometry-nodes",
@@ -203,6 +204,20 @@
       "sizeKB": 4,
       "needsNodeModules": false,
       "sha256": "2c5205691d5819890d6e208c331c39bc202fc6c1300a7a7599d2c78b66f89bcc"
+    },
+    {
+      "name": "book-to-skill",
+      "root": "opencode",
+      "authorship": "original",
+      "source": {
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/original/book-to-skill"
+      },
+      "sizeKB": 2,
+      "needsNodeModules": false,
+      "sha256": "75807d51ace1a189b207e5ce3a6decf92820d344acf4051937c607c525e73fdc"
     },
     {
       "name": "brainstorming",
@@ -275,6 +290,20 @@
       "sha256": "e20d990fb6f2f4a45ea3f75f9ed2fa64d40f5940940977ec8aca90a28a876836"
     },
     {
+      "name": "create-individual-calendar-events-from-earnings-dates-list",
+      "root": "opencode",
+      "authorship": "original",
+      "source": {
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/original/create-individual-calendar-events-from-earnings-dates-list"
+      },
+      "sizeKB": 2,
+      "needsNodeModules": false,
+      "sha256": "190a460c75c8065dd851b98ac1f409294e653dd8b08c767cb003a500b401c44a"
+    },
+    {
       "name": "creating-skills",
       "root": "opencode",
       "authorship": "unknown",
@@ -303,6 +332,104 @@
       "sha256": "9bd8dbe72b51ab73c2907ceb6700e040867000acf2a42f610db114cd46891914"
     },
     {
+      "name": "deep-research",
+      "root": "opencode",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "imbad0202/academic-research-skills",
+        "ref": "c67a7be53f23d9dbba4030bbcd6f5ccfeda3afa9",
+        "path": "deep-research"
+      },
+      "sizeKB": 55035,
+      "needsNodeModules": true,
+      "sha256": "d4b056eab3bb520bf7a45aeb3cf16260b532e0d99cec414d9ed9085b1f470948"
+    },
+    {
+      "name": "desloppify",
+      "root": "opencode",
+      "authorship": "unknown",
+      "source": {
+        "type": "unresolved",
+        "repo": null,
+        "ref": null,
+        "path": null
+      },
+      "sizeKB": 16,
+      "needsNodeModules": false,
+      "sha256": "3f0e1e8437a0ba929347ec7106d5f39f8893ae319e57b91a5028b9cb1d001c2d"
+    },
+    {
+      "name": "detailed-source-rewrite-guide",
+      "root": "opencode",
+      "authorship": "original",
+      "source": {
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/original/detailed-source-rewrite-guide"
+      },
+      "sizeKB": 2,
+      "needsNodeModules": false,
+      "sha256": "aded2e94722e29c589806cc7f777696b3de2a7f4028e8e37140c2edc7198c5e1"
+    },
+    {
+      "name": "document-editing-general",
+      "root": "opencode",
+      "authorship": "original",
+      "source": {
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/original/document-editing-general"
+      },
+      "sizeKB": 2,
+      "needsNodeModules": false,
+      "sha256": "0ed41a46595044683ca0e7fd6061a80ff16c665aa34577d39119ee718c9f06be"
+    },
+    {
+      "name": "ds-note-formatter",
+      "root": "opencode",
+      "authorship": "original",
+      "source": {
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/original/ds-note-formatter"
+      },
+      "sizeKB": 2,
+      "needsNodeModules": false,
+      "sha256": "16f3c54765d65ac0d1660ea881bf10e7c85bf8455a3f59da7de56cb7bad3f813"
+    },
+    {
+      "name": "editor-v1",
+      "root": "opencode",
+      "authorship": "unknown",
+      "source": {
+        "type": "unresolved",
+        "repo": null,
+        "ref": null,
+        "path": null
+      },
+      "sizeKB": 3856,
+      "needsNodeModules": false,
+      "sha256": "72bb0c3102edb98d7f8ecedd492f8c9b4cc216a91360c6bf0061e588220a81a8"
+    },
+    {
+      "name": "enable-wake-on-lan-and-auto-shutdown-on-network-loss-for-ras",
+      "root": "opencode",
+      "authorship": "original",
+      "source": {
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/original/enable-wake-on-lan-and-auto-shutdown-on-network-loss-for-ras"
+      },
+      "sizeKB": 2,
+      "needsNodeModules": false,
+      "sha256": "3c245247475b31e2f586ed09e5d79055426e61b5137dfcffbcc9a1324f6f06bc"
+    },
+    {
       "name": "fine-tuning-expert",
       "root": "opencode",
       "authorship": "third-party",
@@ -315,6 +442,34 @@
       "sizeKB": 6,
       "needsNodeModules": false,
       "sha256": "f686c7106b522f900980c1fb03cc474e0d3aad88c5944b1023cbdcd2d94a5b18"
+    },
+    {
+      "name": "fix-inconclusive-skills",
+      "root": "opencode",
+      "authorship": "original",
+      "source": {
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/original/fix-inconclusive-skills"
+      },
+      "sizeKB": 1,
+      "needsNodeModules": false,
+      "sha256": "ac5aea74554c91b2b5ff5ed7a1be48d117d11a063bc32f9af99b8dc569440ad2"
+    },
+    {
+      "name": "focus-my-energy",
+      "root": "opencode",
+      "authorship": "original",
+      "source": {
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/original/focus-my-energy"
+      },
+      "sizeKB": 15,
+      "needsNodeModules": false,
+      "sha256": "b06faa4ebced560eb3c29da9d3b6c30ce68e2f3e96fafd7b3646e6fa523e1c85"
     },
     {
       "name": "frontend-design-systems",
@@ -331,6 +486,90 @@
       "sha256": "397fb10beffe6d4e835496c375cb6d43c20ca01ce902af22064fce6b3b6040ec"
     },
     {
+      "name": "generate-findings-report-from-pipeline-logs",
+      "root": "opencode",
+      "authorship": "original",
+      "source": {
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/original/generate-findings-report-from-pipeline-logs"
+      },
+      "sizeKB": 2,
+      "needsNodeModules": false,
+      "sha256": "b5b03c99e3eb61a3299172e65b32401363d5499113aa04cd0584491244785c43"
+    },
+    {
+      "name": "generate-fresh-ideas",
+      "root": "opencode",
+      "authorship": "original",
+      "source": {
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/original/generate-fresh-ideas"
+      },
+      "sizeKB": 15,
+      "needsNodeModules": false,
+      "sha256": "efe3ad5de56f11a015d56c85c1de5bb295eef18e5e33e6d0964ce037b144ab9a"
+    },
+    {
+      "name": "generate-markdown-and-docx-documents",
+      "root": "opencode",
+      "authorship": "original",
+      "source": {
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/original/generate-markdown-and-docx-documents"
+      },
+      "sizeKB": 2,
+      "needsNodeModules": false,
+      "sha256": "e43e2f058fe58cf7afb20edfc93cf01f4502028b8816d50c4c6382a14d75aa19"
+    },
+    {
+      "name": "get-more-perspectives",
+      "root": "opencode",
+      "authorship": "original",
+      "source": {
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/original/get-more-perspectives"
+      },
+      "sizeKB": 14,
+      "needsNodeModules": false,
+      "sha256": "089db2cadc653a8dba88f3b699e03f57f6de21d1f63be908457f8a5b215f4178"
+    },
+    {
+      "name": "ghidra-reverse",
+      "root": "opencode",
+      "authorship": "third-party",
+      "source": {
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/third-party/ghidra-reverse"
+      },
+      "sizeKB": 3,
+      "needsNodeModules": false,
+      "sha256": "c2be0e5b30b609094e93430ae2529269d62ce04173bc76baa1ea1e6a851ba6f0"
+    },
+    {
+      "name": "github-code-documentation",
+      "root": "opencode",
+      "authorship": "original",
+      "source": {
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/original/github-code-documentation"
+      },
+      "sizeKB": 2,
+      "needsNodeModules": false,
+      "sha256": "1cb9120ea575ea3b03019156fc5362110f30fecde09fda7397980123661d64d9"
+    },
+    {
       "name": "idea-to-plan",
       "root": "opencode",
       "authorship": "third-party",
@@ -343,6 +582,48 @@
       "sizeKB": 3,
       "needsNodeModules": false,
       "sha256": "75c5f8b762f3370f37f6164d3b5bfbe21c09c4a259715bd2d3227275b0b5cb8e"
+    },
+    {
+      "name": "js-reverse",
+      "root": "opencode",
+      "authorship": "third-party",
+      "source": {
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/third-party/js-reverse"
+      },
+      "sizeKB": 9,
+      "needsNodeModules": false,
+      "sha256": "ba6379bb85d2f9d80c9b418867d9c4be810f8681db1f74098264fbd04d118dc8"
+    },
+    {
+      "name": "match-my-writing-style",
+      "root": "opencode",
+      "authorship": "original",
+      "source": {
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/original/match-my-writing-style"
+      },
+      "sizeKB": 13,
+      "needsNodeModules": false,
+      "sha256": "0201bd6272ef07c5797499e8f58d64a57801c7475250476c4b791834a517443f"
+    },
+    {
+      "name": "mobile-reverse",
+      "root": "opencode",
+      "authorship": "third-party",
+      "source": {
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/third-party/mobile-reverse"
+      },
+      "sizeKB": 6,
+      "needsNodeModules": false,
+      "sha256": "ff4727fc65acb2d98508ca6a68ae2df57239c2c755b2f0fa476571a12f5e2158"
     },
     {
       "name": "pen-testing",
@@ -359,74 +640,32 @@
       "sha256": "53689aec8067435f7615463f325c3b44ac9cc75d7e23fced7d7c247de386d386"
     },
     {
-      "name": "playwright-skill",
+      "name": "penetration-testing-guide",
       "root": "opencode",
-      "authorship": "third-party",
+      "authorship": "original",
       "source": {
-        "type": "github",
-        "repo": "lackeyjb/playwright-skill",
-        "ref": "main",
-        "path": "skills/playwright-skill"
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/original/penetration-testing-guide"
       },
-      "sizeKB": 35,
-      "needsNodeModules": true,
-      "sha256": "6dc254f552392e1f5b8704434e982cd26375d04ebe815084d1b47af1ee2a971f"
+      "sizeKB": 1,
+      "needsNodeModules": false,
+      "sha256": "7675eb1b377fcccacc0a1de381f96743ec298b979255883c8d1733a348040d99"
     },
     {
-      "name": "rea-analysis-optimization",
+      "name": "prep-for-meetings",
       "root": "opencode",
-      "authorship": "third-party",
+      "authorship": "original",
       "source": {
-        "type": "github",
-        "repo": "morluto/rea",
-        "ref": "main",
-        "path": ".agents/skills/rea-analysis-optimization"
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/original/prep-for-meetings"
       },
-      "sizeKB": 14,
+      "sizeKB": 13,
       "needsNodeModules": false,
-      "sha256": "e3d25af74fc3d8d0961569e5c4579ec67d683d49ccb81b45cb5de9e8561c349b"
-    },
-    {
-      "name": "rea-changelog-update",
-      "root": "opencode",
-      "authorship": "third-party",
-      "source": {
-        "type": "github",
-        "repo": "morluto/rea",
-        "ref": "main",
-        "path": ".agents/skills/rea-changelog-update"
-      },
-      "sizeKB": 7,
-      "needsNodeModules": false,
-      "sha256": "8e96ab7ae894201b80a1b36aca2f6baab4ded023bd4e5ae4828c3da12bf2163b"
-    },
-    {
-      "name": "rea-ci-tests-audit",
-      "root": "opencode",
-      "authorship": "third-party",
-      "source": {
-        "type": "github",
-        "repo": "morluto/rea",
-        "ref": "main",
-        "path": ".agents/skills/rea-ci-tests-audit"
-      },
-      "sizeKB": 11,
-      "needsNodeModules": false,
-      "sha256": "5a7d5a4306d94538c371c936bc4f543a7158d99ed1d7cc1d892a4050da2b7372"
-    },
-    {
-      "name": "rea-tool-design",
-      "root": "opencode",
-      "authorship": "third-party",
-      "source": {
-        "type": "github",
-        "repo": "morluto/rea",
-        "ref": "main",
-        "path": ".agents/skills/rea-tool-design"
-      },
-      "sizeKB": 2,
-      "needsNodeModules": false,
-      "sha256": "5a4d53468dcd126e68ece2bdcb81d5e2e355becbc3678301b1fd0573de1f5e07"
+      "sha256": "36bcf3ad942c214a65fd0d4b12d938f51ffc33a560dc99555d6240022025f3e3"
     },
     {
       "name": "repository-hygiene",
@@ -447,14 +686,42 @@
       "root": "opencode",
       "authorship": "third-party",
       "source": {
-        "type": "github",
-        "repo": "morluto/rea",
-        "ref": "main",
-        "path": ".agents/skills/reverse-engineer-anything"
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/third-party/reverse-engineer-anything"
       },
-      "sizeKB": 236,
+      "sizeKB": 38,
       "needsNodeModules": false,
-      "sha256": "bca2b4594eb3279db14578b9437741ebc6733f72fd1231bd33db77514034c1f9"
+      "sha256": "8fdfbc899521299f38980dae3c4e09f1f12eb442c821bd9cda0beb04648986dd"
+    },
+    {
+      "name": "reverse-engineering",
+      "root": "opencode",
+      "authorship": "third-party",
+      "source": {
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/third-party/reverse-engineering"
+      },
+      "sizeKB": 14,
+      "needsNodeModules": false,
+      "sha256": "7128b8445c61d41917eb28eb56c24c8ca2a3518b8b5b46c83137bf5e0b4935af"
+    },
+    {
+      "name": "testing-skills",
+      "root": "opencode",
+      "authorship": "original",
+      "source": {
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/original/testing-skills"
+      },
+      "sizeKB": 4,
+      "needsNodeModules": false,
+      "sha256": "17bdcf6571c68530b78dc847cb34be719c98144fca15cd7ca37e6b4ec1b01712"
     },
     {
       "name": "ticktick-tasks",
@@ -469,6 +736,20 @@
       "sizeKB": 10,
       "needsNodeModules": false,
       "sha256": "8342403073ff07bed7e66c42e4d8b7eeb72628bb250b34d06c48a3d72e433b40"
+    },
+    {
+      "name": "universal-listing-template",
+      "root": "opencode",
+      "authorship": "original",
+      "source": {
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/original/universal-listing-template"
+      },
+      "sizeKB": 1,
+      "needsNodeModules": false,
+      "sha256": "c35678c4b3c5f9c727e337ea2e8c7153440b73b0f74bc516bba9820cd18afd60"
     },
     {
       "name": "using-superpowers",
@@ -508,9 +789,135 @@
         "ref": "master",
         "path": "skills/original/write-research-projects"
       },
-      "sizeKB": 41,
+      "sizeKB": 42,
       "needsNodeModules": false,
       "sha256": "0003c2683483591bffd59863de02dd56c8a8bf95bdd77143608272d3aafb5961"
+    },
+    {
+      "name": "yfinance-ai",
+      "root": "opencode",
+      "authorship": "original",
+      "source": {
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/original/yfinance-ai"
+      },
+      "sizeKB": 2,
+      "needsNodeModules": false,
+      "sha256": "1153d914abe8d637fb4942a4bc4498a33372bae77d7b2bec49c47454a737d1a8"
+    },
+    {
+      "name": "ai-vibe-slides",
+      "root": "agents",
+      "authorship": "unknown",
+      "source": {
+        "type": "unresolved",
+        "repo": null,
+        "ref": null,
+        "path": null
+      },
+      "sizeKB": 14,
+      "needsNodeModules": false,
+      "sha256": "010019c3464c96c563d73aafba81fd569a9a70cf8adc8e81df6eb14204cd5d1f"
+    },
+    {
+      "name": "android-adb-control",
+      "root": "agents",
+      "authorship": "unknown",
+      "source": {
+        "type": "unresolved",
+        "repo": null,
+        "ref": null,
+        "path": null
+      },
+      "sizeKB": 59,
+      "needsNodeModules": false,
+      "sha256": "83654d64401cc21490cf25a1c8a0b27997dd48551e0efe2e34dd4fec68d16470"
+    },
+    {
+      "name": "android-development",
+      "root": "agents",
+      "authorship": "unknown",
+      "source": {
+        "type": "unresolved",
+        "repo": null,
+        "ref": null,
+        "path": null
+      },
+      "sizeKB": 93,
+      "needsNodeModules": false,
+      "sha256": "beb251137c931969bedc81a9748dcfd90381a3cf0e2f61ae15533e526cfb640a"
+    },
+    {
+      "name": "api-and-interface-design",
+      "root": "agents",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "addyosmani/agent-skills",
+        "ref": "main",
+        "path": "skills/api-and-interface-design"
+      },
+      "sizeKB": 15,
+      "needsNodeModules": false,
+      "sha256": "5dafd0c44a3aabf11cae5bcb34f6fcc24dfa5c01ba6e0d3176bce997f4d68bc8"
+    },
+    {
+      "name": "avoid-ai-design",
+      "root": "agents",
+      "authorship": "unknown",
+      "source": {
+        "type": "unresolved",
+        "repo": null,
+        "ref": null,
+        "path": null
+      },
+      "sizeKB": 2868,
+      "needsNodeModules": false,
+      "sha256": "8261a426b62a08bef43069e47ad7ffbad1aa86cd3f51b76a84217d14ce9b92f4"
+    },
+    {
+      "name": "browser-automation",
+      "root": "agents",
+      "authorship": "unknown",
+      "source": {
+        "type": "unresolved",
+        "repo": null,
+        "ref": null,
+        "path": null
+      },
+      "sizeKB": 24,
+      "needsNodeModules": false,
+      "sha256": "9aa7c602a7004e53beb99c4399ec61773395d328b0faf64b968086d44b4c59b5"
+    },
+    {
+      "name": "code-review",
+      "root": "agents",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "mattpocock/skills",
+        "ref": "main",
+        "path": "skills/engineering/code-review"
+      },
+      "sizeKB": 7,
+      "needsNodeModules": false,
+      "sha256": "47f4e52c21694def9c7c11cbfbf891ca35eac7a93e395797515be3c8a409ae50"
+    },
+    {
+      "name": "dcf-valuation",
+      "root": "agents",
+      "authorship": "unknown",
+      "source": {
+        "type": "unresolved",
+        "repo": null,
+        "ref": null,
+        "path": null
+      },
+      "sizeKB": 8,
+      "needsNodeModules": false,
+      "sha256": "207ae6f7ea53515ddfad2dbe79346af90e778262fd173ae0a9ff12f257c758c6"
     },
     {
       "name": "deep-agents-memory",
@@ -527,144 +934,270 @@
       "sha256": "3549b750ca9625dc73e0c4bee87133f57fab374ba0202daa74a2d28c91cb3bf4"
     },
     {
-      "name": "gsap-core",
+      "name": "dependency-scan",
       "root": "agents",
-      "authorship": "third-party",
+      "authorship": "unknown",
       "source": {
-        "type": "github",
-        "repo": "greensock/gsap-skills",
-        "ref": "main",
-        "path": "skills/gsap-core"
-      },
-      "sizeKB": 15,
-      "needsNodeModules": false,
-      "sha256": "3887b47e050ab5afbe2a9a820f23d39fa02ab785e06a343be44c6f91d84d12b3"
-    },
-    {
-      "name": "gsap-frameworks",
-      "root": "agents",
-      "authorship": "third-party",
-      "source": {
-        "type": "github",
-        "repo": "greensock/gsap-skills",
-        "ref": "main",
-        "path": "skills/gsap-frameworks"
-      },
-      "sizeKB": 11,
-      "needsNodeModules": false,
-      "sha256": "842d9d3659ec3ddc8abbdc524708f8facf81f468ac25d0577f48c759c4fa31e6"
-    },
-    {
-      "name": "gsap-performance",
-      "root": "agents",
-      "authorship": "third-party",
-      "source": {
-        "type": "github",
-        "repo": "greensock/gsap-skills",
-        "ref": "main",
-        "path": "skills/gsap-performance"
-      },
-      "sizeKB": 4,
-      "needsNodeModules": false,
-      "sha256": "cb5408d6fba707aabcbfe3320317a14c1f8fca6070074e5261047930f50d441e"
-    },
-    {
-      "name": "gsap-plugins",
-      "root": "agents",
-      "authorship": "third-party",
-      "source": {
-        "type": "github",
-        "repo": "greensock/gsap-skills",
-        "ref": "main",
-        "path": "skills/gsap-plugins"
-      },
-      "sizeKB": 21,
-      "needsNodeModules": false,
-      "sha256": "5838b856c74c07fbc9fa99b6dfd1eee34ea554c3e530c30e0d58014b707d70a4"
-    },
-    {
-      "name": "gsap-react",
-      "root": "agents",
-      "authorship": "third-party",
-      "source": {
-        "type": "github",
-        "repo": "greensock/gsap-skills",
-        "ref": "main",
-        "path": "skills/gsap-react"
+        "type": "unresolved",
+        "repo": null,
+        "ref": null,
+        "path": null
       },
       "sizeKB": 7,
       "needsNodeModules": false,
-      "sha256": "88e2a5312b45e8cc7b3c496637ff5bc9af2ae9c925b555c8b235b34cbc989d74"
+      "sha256": "4076824ca35e590c19524a51b28fa1c67ffc13e466d8a5d7549d5f6b9cbf0c95"
     },
     {
-      "name": "gsap-scrolltrigger",
+      "name": "design-catalogue",
       "root": "agents",
-      "authorship": "third-party",
+      "authorship": "unknown",
       "source": {
-        "type": "github",
-        "repo": "greensock/gsap-skills",
-        "ref": "main",
-        "path": "skills/gsap-scrolltrigger"
+        "type": "unresolved",
+        "repo": null,
+        "ref": null,
+        "path": null
       },
-      "sizeKB": 18,
+      "sizeKB": 30,
       "needsNodeModules": false,
-      "sha256": "9351b6666a4749c0740406ea363aaccb99a087ff45cc5e8b99a0f367facf3ef4"
+      "sha256": "d3827b3abd243dbb72ebb1dccc3aa51da6aaf30b71c891cfdee1ee50dfe2bde3"
     },
     {
-      "name": "gsap-timeline",
+      "name": "design-taste-frontend",
+      "root": "agents",
+      "authorship": "unknown",
+      "source": {
+        "type": "unresolved",
+        "repo": null,
+        "ref": null,
+        "path": null
+      },
+      "sizeKB": 85,
+      "needsNodeModules": false,
+      "sha256": "aa194351b246b8b4799099d4ed7b033d29eab6e6e3d58d8d2172978be7b3ec89"
+    },
+    {
+      "name": "doc",
+      "root": "agents",
+      "authorship": "unknown",
+      "source": {
+        "type": "unresolved",
+        "repo": null,
+        "ref": null,
+        "path": null
+      },
+      "sizeKB": 26,
+      "needsNodeModules": false,
+      "sha256": "0a635585817d1ac96e8e512114d08258b70f9e54ce0052078a258291ac13a8ed"
+    },
+    {
+      "name": "frontend-design",
       "root": "agents",
       "authorship": "third-party",
       "source": {
         "type": "github",
-        "repo": "greensock/gsap-skills",
+        "repo": "anthropics/skills",
         "ref": "main",
-        "path": "skills/gsap-timeline"
+        "path": "skills/frontend-design"
+      },
+      "sizeKB": 19,
+      "needsNodeModules": false,
+      "sha256": "d91970639e9f5c37682ac7ab60094d35f1c7c1f38d731bd56396563aee10c1d3"
+    },
+    {
+      "name": "gws-gmail",
+      "root": "agents",
+      "authorship": "unknown",
+      "source": {
+        "type": "unresolved",
+        "repo": null,
+        "ref": null,
+        "path": null
+      },
+      "sizeKB": 2,
+      "needsNodeModules": false,
+      "sha256": "d37f41ad13fd3467d430e60dfb985d7818ef6976bae40182f8e46a410b8caa16"
+    },
+    {
+      "name": "higgsfield",
+      "root": "agents",
+      "authorship": "unknown",
+      "source": {
+        "type": "unresolved",
+        "repo": null,
+        "ref": null,
+        "path": null
+      },
+      "sizeKB": 6645,
+      "needsNodeModules": false,
+      "sha256": "94c087914325afc760b95cb4b77747c2fd15f7eb37a72ecebf0149b938067510"
+    },
+    {
+      "name": "home-assistant",
+      "root": "agents",
+      "authorship": "unknown",
+      "source": {
+        "type": "unresolved",
+        "repo": null,
+        "ref": null,
+        "path": null
+      },
+      "sizeKB": 40,
+      "needsNodeModules": false,
+      "sha256": "196163eceeca18eaac42c3a66b05117f09ef3d76d6e5b6a00dc5450d867d2aa0"
+    },
+    {
+      "name": "humanizer",
+      "root": "agents",
+      "authorship": "unknown",
+      "source": {
+        "type": "unresolved",
+        "repo": null,
+        "ref": null,
+        "path": null
+      },
+      "sizeKB": 64,
+      "needsNodeModules": false,
+      "sha256": "0612f1dfb1672b0ea9b97e139bf1f06cabe98d8b27424fe8ff01e1fb4cc99cad"
+    },
+    {
+      "name": "knowledge-base",
+      "root": "agents",
+      "authorship": "unknown",
+      "source": {
+        "type": "unresolved",
+        "repo": null,
+        "ref": null,
+        "path": null
+      },
+      "sizeKB": 8,
+      "needsNodeModules": false,
+      "sha256": "a0641152b0dc5dd204200aa3c282d609b7fc03d86eb701f804df18a859b675bc"
+    },
+    {
+      "name": "learn-codebase",
+      "root": "agents",
+      "authorship": "unknown",
+      "source": {
+        "type": "unresolved",
+        "repo": null,
+        "ref": null,
+        "path": null
+      },
+      "sizeKB": 58,
+      "needsNodeModules": false,
+      "sha256": "94c5d9667ba8ae4a2a4c22d9a74b2bd36e89cb9f4167489816cb5799edf19554"
+    },
+    {
+      "name": "meal-plan",
+      "root": "agents",
+      "authorship": "unknown",
+      "source": {
+        "type": "unresolved",
+        "repo": null,
+        "ref": null,
+        "path": null
       },
       "sizeKB": 4,
       "needsNodeModules": false,
-      "sha256": "1a8b0f39cc4be3ed3d834b89672e4ae2f151b901dc3450bebf10bbc45379fe02"
+      "sha256": "5ab179beb45b5339fb45413b0f0c81a77a4f406e74cf36888552128d1a494b40"
     },
     {
-      "name": "gsap-utils",
+      "name": "meeting-notes",
+      "root": "agents",
+      "authorship": "unknown",
+      "source": {
+        "type": "unresolved",
+        "repo": null,
+        "ref": null,
+        "path": null
+      },
+      "sizeKB": 7,
+      "needsNodeModules": false,
+      "sha256": "3a23090aa07a7ce102eae2b389efd71a73eef6d9f052a85b32b7f5f8202fbf9b"
+    },
+    {
+      "name": "minimax-docx",
+      "root": "agents",
+      "authorship": "unknown",
+      "source": {
+        "type": "unresolved",
+        "repo": null,
+        "ref": null,
+        "path": null
+      },
+      "sizeKB": 1485,
+      "needsNodeModules": false,
+      "sha256": "45c169630f30b8f034bc7d53edf73d592fbd82e82188beec7da3ca1996a97fb5"
+    },
+    {
+      "name": "multi-agent-orchestration",
+      "root": "agents",
+      "authorship": "unknown",
+      "source": {
+        "type": "unresolved",
+        "repo": null,
+        "ref": null,
+        "path": null
+      },
+      "sizeKB": 75,
+      "needsNodeModules": false,
+      "sha256": "95de66280782b45552e3709b7892db822b3d6a23e0eb343bd8fc1e8289dc543d"
+    },
+    {
+      "name": "orchestrate",
+      "root": "agents",
+      "authorship": "unknown",
+      "source": {
+        "type": "unresolved",
+        "repo": null,
+        "ref": null,
+        "path": null
+      },
+      "sizeKB": 37,
+      "needsNodeModules": false,
+      "sha256": "9469ad7432d6cdb165e3a5095fd972046ce39046dcc4f39907477e64d67e32c9"
+    },
+    {
+      "name": "pdf",
       "root": "agents",
       "authorship": "third-party",
       "source": {
         "type": "github",
-        "repo": "greensock/gsap-skills",
+        "repo": "anthropics/skills",
         "ref": "main",
-        "path": "skills/gsap-utils"
+        "path": "skills/pdf"
       },
-      "sizeKB": 12,
+      "sizeKB": 14,
       "needsNodeModules": false,
-      "sha256": "1927bcc4ea95b38203404ad5ea1d060b15c4a886c65ae53e885ff1793aabe0ba"
+      "sha256": "d108cf2b36355ab37eb5962933f4d09785ec002f3105c506129320209306b9d2"
     },
     {
-      "name": "impeccable",
+      "name": "proactive-self-improving-agent",
       "root": "agents",
-      "authorship": "third-party",
+      "authorship": "unknown",
       "source": {
-        "type": "github",
-        "repo": "pbakaus/impeccable",
-        "ref": "main",
-        "path": ".agents/skills/impeccable"
+        "type": "unresolved",
+        "repo": null,
+        "ref": null,
+        "path": null
       },
-      "sizeKB": 2173,
+      "sizeKB": 15,
       "needsNodeModules": false,
-      "sha256": "37680abf9a8e446619fcd33862718f483d197bf2652f966adca8dc54d2909b9d"
+      "sha256": "8502c14ed668baaddc0e58fd2d0b9f1e944deb7d546732fea37e603cb53366c3"
     },
     {
-      "name": "make-interfaces-feel-better",
+      "name": "project-butler",
       "root": "agents",
-      "authorship": "third-party",
+      "authorship": "unknown",
       "source": {
-        "type": "github",
-        "repo": "jakubkrehel/make-interfaces-feel-better",
-        "ref": "main",
-        "path": "skills/make-interfaces-feel-better"
+        "type": "unresolved",
+        "repo": null,
+        "ref": null,
+        "path": null
       },
-      "sizeKB": 42,
+      "sizeKB": 346,
       "needsNodeModules": false,
-      "sha256": "c1d508fa7bef8e47ee682b4f214c7a4ed1416b91d05a97285e555bad1c41a23e"
+      "sha256": "86ec318c8e329fff399225f148d0ce3b0e4c8247501c5ad23ac42293bc05d52a"
     },
     {
       "name": "skill-creator",
@@ -681,32 +1214,270 @@
       "sha256": "a17383bfb1448637ac1f757ad891ddb9676fa30b0eff620200f0e1cbc0cc0d50"
     },
     {
-      "name": "transitions-dev",
+      "name": "spreadsheet",
       "root": "agents",
-      "authorship": "third-party",
+      "authorship": "unknown",
       "source": {
-        "type": "github",
-        "repo": "Jakubantalik/transitions.dev",
-        "ref": "main",
-        "path": "skills/transitions-dev"
+        "type": "unresolved",
+        "repo": null,
+        "ref": null,
+        "path": null
       },
-      "sizeKB": 183,
+      "sizeKB": 30,
       "needsNodeModules": false,
-      "sha256": "449428dcc2cc374c238358bf9efb7e8bfc6938e90819cf0c4a2d2df45b1a96d9"
+      "sha256": "36baea99e96c77c13d15d24f9d53cd072ccbc120e810bf4e68049edb5b0f1d65"
     },
     {
-      "name": "transitions-polish",
+      "name": "summarize-meeting",
+      "root": "agents",
+      "authorship": "unknown",
+      "source": {
+        "type": "unresolved",
+        "repo": null,
+        "ref": null,
+        "path": null
+      },
+      "sizeKB": 3,
+      "needsNodeModules": false,
+      "sha256": "4deabdd7f99c692ee800a80a4eaf6a688fb8873cdaaaea44b7f472499205f8e7"
+    },
+    {
+      "name": "systematic-debugging",
       "root": "agents",
       "authorship": "third-party",
       "source": {
         "type": "github",
-        "repo": "Jakubantalik/transitions.dev",
+        "repo": "obra/superpowers",
         "ref": "main",
-        "path": "skills/transitions-polish"
+        "path": "skills/systematic-debugging"
       },
-      "sizeKB": 18,
+      "sizeKB": 40,
       "needsNodeModules": false,
-      "sha256": "cd7ca4bb79acb72fa1951bb79f5251570e2ef9d290c0ddf9a83a097067226cfa"
+      "sha256": "808fc5717aa88ad65efff312b11c186294d3e6ee301afb584e2f86599b137787"
+    },
+    {
+      "name": "trader-alerts",
+      "root": "agents",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "Jakeschincariol/day-trader-skill",
+        "ref": "main",
+        "path": "trader-alerts"
+      },
+      "sizeKB": 42,
+      "needsNodeModules": false,
+      "sha256": "48ba7c580fc64b48ee03b83a6206288641a97495c71dd78205c7f1c6e8b87d11"
+    },
+    {
+      "name": "trader-analyst",
+      "root": "agents",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "Jakeschincariol/day-trader-skill",
+        "ref": "main",
+        "path": "trader-analyst"
+      },
+      "sizeKB": 32,
+      "needsNodeModules": false,
+      "sha256": "884edfcfcfe0c8c3392093e5eb25da5f37a3fed89ec15f8a968e3c782c8eb8d3"
+    },
+    {
+      "name": "trader-broker",
+      "root": "agents",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "Jakeschincariol/day-trader-skill",
+        "ref": "main",
+        "path": "trader-broker"
+      },
+      "sizeKB": 44,
+      "needsNodeModules": false,
+      "sha256": "d1a34683814cce09c8074a978ac817c1e9f4e4790ad6804ad395c227d50b91b8"
+    },
+    {
+      "name": "trader-budget",
+      "root": "agents",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "Jakeschincariol/day-trader-skill",
+        "ref": "main",
+        "path": "trader-budget"
+      },
+      "sizeKB": 49,
+      "needsNodeModules": false,
+      "sha256": "ce404e7877013eccbcc757c9db6926a4974d40ed3471696b929e253a27b81112"
+    },
+    {
+      "name": "trader-entry",
+      "root": "agents",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "Jakeschincariol/day-trader-skill",
+        "ref": "main",
+        "path": "trader-entry"
+      },
+      "sizeKB": 50,
+      "needsNodeModules": false,
+      "sha256": "e61e10c703915a7dad118b38d0a61fd6457d34e320e36f48abcac5f6ede1a5af"
+    },
+    {
+      "name": "trader-exit",
+      "root": "agents",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "Jakeschincariol/day-trader-skill",
+        "ref": "main",
+        "path": "trader-exit"
+      },
+      "sizeKB": 38,
+      "needsNodeModules": false,
+      "sha256": "4bccdfff09c8414eee3a486e239bff9602b219d8439e9b0f8bce4743a5999841"
+    },
+    {
+      "name": "trader-news",
+      "root": "agents",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "Jakeschincariol/day-trader-skill",
+        "ref": "main",
+        "path": "trader-news"
+      },
+      "sizeKB": 28,
+      "needsNodeModules": false,
+      "sha256": "6a26283452c15ac9001c8f41633cab829abd2e6d6c7ccc95d7d26af39ec6319b"
+    },
+    {
+      "name": "trader-pelosi",
+      "root": "agents",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "Jakeschincariol/day-trader-skill",
+        "ref": "main",
+        "path": "trader-pelosi"
+      },
+      "sizeKB": 30,
+      "needsNodeModules": false,
+      "sha256": "960f2fb1c2a1921c3cbb70f837fd942a05b74a345e3ef05d0c90c7b2341f67bb"
+    },
+    {
+      "name": "trader-risk",
+      "root": "agents",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "Jakeschincariol/day-trader-skill",
+        "ref": "main",
+        "path": "trader-risk"
+      },
+      "sizeKB": 49,
+      "needsNodeModules": false,
+      "sha256": "e3671889e6b658ed769f3ccc2f117436ff54080c1378d5bfbbe29463da6c16d5"
+    },
+    {
+      "name": "trader-scanner",
+      "root": "agents",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "Jakeschincariol/day-trader-skill",
+        "ref": "main",
+        "path": "trader-scanner"
+      },
+      "sizeKB": 59,
+      "needsNodeModules": false,
+      "sha256": "8db022339f3ddd3a5f0574152040d154c484ef4c56f5dbc4a4d6c5768b8c92f7"
+    },
+    {
+      "name": "trader-timemachine",
+      "root": "agents",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "Jakeschincariol/day-trader-skill",
+        "ref": "main",
+        "path": "trader-timemachine"
+      },
+      "sizeKB": 53,
+      "needsNodeModules": false,
+      "sha256": "394e025b2584fee9e485c1c3ff5255ff8efefc816cad72c2a1b97e30107701dc"
+    },
+    {
+      "name": "ui-styling",
+      "root": "agents",
+      "authorship": "unknown",
+      "source": {
+        "type": "unresolved",
+        "repo": null,
+        "ref": null,
+        "path": null
+      },
+      "sizeKB": 173,
+      "needsNodeModules": false,
+      "sha256": "625e302c60ee8f2e22d56cbe638c4a739e2657f566dae42689503ad517c30f1e"
+    },
+    {
+      "name": "web-artifacts-builder",
+      "root": "agents",
+      "authorship": "unknown",
+      "source": {
+        "type": "unresolved",
+        "repo": null,
+        "ref": null,
+        "path": null
+      },
+      "sizeKB": 45,
+      "needsNodeModules": false,
+      "sha256": "81c5002c6643b0de7b8710b00e7a9038daa6fb9b68d59870ee6adb12da8d10f8"
+    },
+    {
+      "name": "web-research",
+      "root": "agents",
+      "authorship": "unknown",
+      "source": {
+        "type": "unresolved",
+        "repo": null,
+        "ref": null,
+        "path": null
+      },
+      "sizeKB": 3,
+      "needsNodeModules": false,
+      "sha256": "7c2b1f1990370f7ce176fe3608a67028c72db11e337b4ba83b8fce6d927dfde3"
+    },
+    {
+      "name": "webapp-testing",
+      "root": "agents",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "anthropics/skills",
+        "ref": "main",
+        "path": "skills/webapp-testing"
+      },
+      "sizeKB": 22,
+      "needsNodeModules": false,
+      "sha256": "51b7349e77ec63b7744a6f63647e7566a0b4d2e301121cc10e8c2113af6556a2"
+    },
+    {
+      "name": "writing-plans",
+      "root": "agents",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "obra/superpowers",
+        "ref": "main",
+        "path": "skills/writing-plans"
+      },
+      "sizeKB": 9,
+      "needsNodeModules": false,
+      "sha256": "48508f44bbfd7d24b029fbf3a314f3cd14c9615599059366e922f47b8dc08cf2"
     }
   ]
 }

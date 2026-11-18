@@ -83,9 +83,13 @@ external content.
 
 | Platform | How it consumes this collection |
 |----------|--------------------------------|
-| OpenCode | Copy an original skill folder to `.agents/skills/` (project) or `~/.config/opencode/skills/` (user) |
+| OpenCode | `scripts/install-skills.ps1` installs into `~/.config/opencode/skills/`; a project can use `.agents/skills/` |
+| Cindy | Reads `~/.agents/skills/`; `scripts/sync-skills.ps1` recreates the junctions from the manifest |
 | Odysseus | Read `catalog/links/skill-links.txt` and `catalog/links/pinned-links.txt` directly |
-| VS Code / other agents | Use `prompts/system/*.md` as custom instructions and `instructions/modules/*.md` as domain rules |
+| OpenDesign | Install the `opendesign-trial` plugin and use `prompts/system/opendesign-ui-code-audit.md` |
+
+Not tested on Hermes, Claude Code, Claude, OpenAI/GPT, Codex or VS Code -
+treat those as unsupported until tested.
 
 The machine-readable catalog for every skill (original and link-only) is
 [`catalog/items.json`](../catalog/items.json).

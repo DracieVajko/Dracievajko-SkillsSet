@@ -140,17 +140,26 @@ These are plain Markdown files - there is nothing to install.
 Do not use `AGENTS.md` and `AGENTS-combined.md` in the same project - they are
 two formats of the same rules.
 
-## Using the collection with other agent frameworks
+## Using the collection on the other tested platforms
 
-The skills use the `SKILL.md` frontmatter convention, so they load in any
-agent that reads that format. Copy the skill folders into the directory your
-agent expects (commonly `.agents/skills/`, `.claude/skills/` or
-`~/.config/opencode/skills/`) and make sure the frontmatter keeps `name`,
-`description`, `version`, `author` and `category`.
+This collection is tested on Odysseus, Cindy, OpenCode and OpenDesign only.
+Copy the skill folders into the directory the platform reads and make sure the
+frontmatter keeps `name`, `description`, `version`, `author`, `authorship` and
+`category`.
+
+| Platform | Where the files go |
+|----------|--------------------|
+| OpenCode | `~/.config/opencode/skills/` (installer) or `.agents/skills/` in a project |
+| Cindy | `~/.agents/skills/`; recreate the layout from `sync/manifest.json` |
+| Odysseus | Point it at `catalog/links/skill-links.txt` and `catalog/links/pinned-links.txt` |
+| OpenDesign | Install the `opendesign-trial` plugin and add `prompts/system/opendesign-ui-code-audit.md` |
+
+Not tested on Hermes, Claude Code, Claude, OpenAI/GPT, Codex or VS Code -
+treat those as unsupported until tested.
 
 External skills are URL references: open the link, read the upstream file and
-place it wherever your agent expects it. Compatibility of an external skill
-with a specific agent is not guaranteed by this repository.
+place it wherever the platform expects it. Compatibility of an external skill
+with a specific platform is not guaranteed by this repository.
 
 ## Verifying the installation
 

@@ -6,7 +6,7 @@ metadata:
 ---
 
 > **Bundled third-party copy.** Upstream: [morluto/rea](https://github.com/morluto/rea) - MIT, Copyright (c) 2026 morluto.
-> Vendored unchanged apart from this notice; the full license text is in
+> Vendored unchanged apart from this notice and the companion links, which point at the upstream files; the full license text is in
 > [docs/THIRD-PARTY-LICENSES.md](../../../docs/THIRD-PARTY-LICENSES.md).
 
 # REA
@@ -33,7 +33,7 @@ an older npm release. Keep complete inline Evidence when that server does not
 advertise retained references.
 
 If tools are absent, a call is blocked by the client, or a required provider is
-unavailable, read [connection and recovery](references/connection-and-recovery.md).
+unavailable, read [connection and recovery](https://github.com/morluto/rea/blob/main/.agents/skills/reverse-engineer-anything/references/connection-and-recovery.md).
 Diagnose the observed blocker, continue useful supported work, and resume the
 original task after repair. Client approval, shell PATH, registration and engine
 availability have different remedies; avoid repeating setup for all of them.
@@ -45,16 +45,16 @@ target, or it fails again, tell the user and ask them to restart the MCP client.
 If REA could not start its connection, retry once, then tell the user and ask
 them to restart the MCP client. Do not retry a startup failure that returns the
 same unchanged result. For plugin installs, follow
-[plugin recovery](references/connection-and-recovery.md#rea-installed-as-a-client-plugin).
+[plugin recovery](https://github.com/morluto/rea/blob/main/.agents/skills/reverse-engineer-anything/references/connection-and-recovery.md#rea-installed-as-a-client-plugin).
 For setup-owned registrations, run `rea doctor` when REA could not start
 or tools stay missing after that restart. For `cleanup_incomplete`, a retryable
 capacity limit, or `configuration_invalid`, follow the recovery guide's ladder
 before asking for a restart. Read that guide before a second repair attempt.
 
 Choose the installation owner before repairing registration. Plugin installs use
-[plugin recovery](references/connection-and-recovery.md#rea-installed-as-a-client-plugin);
+[plugin recovery](https://github.com/morluto/rea/blob/main/.agents/skills/reverse-engineer-anything/references/connection-and-recovery.md#rea-installed-as-a-client-plugin);
 only setup-owned registrations use the guide's
-[registration repair plan](references/connection-and-recovery.md#repair-registration-when-needed).
+[registration repair plan](https://github.com/morluto/rea/blob/main/.agents/skills/reverse-engineer-anything/references/connection-and-recovery.md#repair-registration-when-needed).
 A plugin-only doctor result of `missing` does not call for `rea setup`.
 
 REA setup never installs or upgrades Node.js, npm, Homebrew, Java, Ghidra, IDA,
@@ -121,7 +121,7 @@ explicit path or endpoint and do not need it.
   consult the NativeAOT workflow in `references/native-and-artifacts.md` for
   optional metadata recovery and its supported host/layout boundary.
 - Native program behavior, live calls, instrumentation, or command-run effects:
-  choose the matching [native runtime workflow](references/runtime-observation.md#native-runtime-questions).
+  choose the matching [native runtime workflow](https://github.com/morluto/rea/blob/main/.agents/skills/reverse-engineer-anything/references/runtime-observation.md#native-runtime-questions).
   `open_binary` and `trace_native_values` establish static facts; they do not
   observe execution. Runtime tools have distinct launch, attach, mutation and
   cleanup effects, and do not require a preliminary static session unless their
@@ -138,20 +138,20 @@ explicit path or endpoint and do not need it.
   `export_evidence_bundle` instead of expecting an inline result.
 - Browser action the agent must perform (click, type, navigate):
   `capture_browser_scenario` with declared actions. See
-  [runtime observation](references/runtime-observation.md) for connect/launch
+  [runtime observation](https://github.com/morluto/rea/blob/main/.agents/skills/reverse-engineer-anything/references/runtime-observation.md) for connect/launch
   and the focused follow-up browser tools.
 - Agent environment (AgentEnv bundle) of a web application: read
-  [environments](references/environments.md) before recording; it records with
+  [environments](https://github.com/morluto/rea/blob/main/.agents/skills/reverse-engineer-anything/references/environments.md) before recording; it records with
   `capture_browser_scenario` and writes the bundle with `export_environment_bundle`.
 - Task for a desktop application's exported environment, from a
   `capture-desktop-application` folder: read
-  [desktop application tasks](references/environments.md#tasks-for-a-desktop-application-environment).
+  [desktop application tasks](https://github.com/morluto/rea/blob/main/.agents/skills/reverse-engineer-anything/references/environments.md#tasks-for-a-desktop-application-environment).
 - Environment of a Linux desktop app with a task, from a request such as
   "build me an Inkscape environment where the agent changes a poster's
-  headline": read [desktop builds](references/desktop-build.md). You drive the
+  headline": read [desktop builds](https://github.com/morluto/rea/blob/main/.agents/skills/reverse-engineer-anything/references/desktop-build.md). You drive the
   app on a build computer from `start_build_computer`, then export and witness.
 - Fiddler Everywhere traffic or a native `.saz` capture: read the
-  [Fiddler workflow](references/runtime-observation.md#fiddler-everywhere-traffic-debugging).
+  [Fiddler workflow](https://github.com/morluto/rea/blob/main/.agents/skills/reverse-engineer-anything/references/runtime-observation.md#fiddler-everywhere-traffic-debugging).
   Inspect saved SAZ with `inspect_web_network_capture` and `format: "saz"`;
   connect Everywhere's separate MCP server for live traffic.
 - Retained HAR/SAZ/native mitmproxy/aioquic qlog capture: `inspect_web_network_capture`. Select
@@ -419,11 +419,11 @@ current route and `analysis_provider_binding` names the selected provider. Do
 not treat those scopes as interchangeable.
 
 For editable Ghidra analysis that must survive a later agent process, select
-the [owned Program checkpoint workflow](references/native-and-artifacts.md#continue-editable-ghidra-analysis-across-processes)
+the [owned Program checkpoint workflow](https://github.com/morluto/rea/blob/main/.agents/skills/reverse-engineer-anything/references/native-and-artifacts.md#continue-editable-ghidra-analysis-across-processes)
 before making metadata edits. It is separate from Evidence/Unknown persistence.
 
 For a Ghidra startup timeout on a large native target, follow
-[deadline recovery](references/native-and-artifacts.md#ghidra-startup-deadline-recovery)
+[deadline recovery](https://github.com/morluto/rea/blob/main/.agents/skills/reverse-engineer-anything/references/native-and-artifacts.md#ghidra-startup-deadline-recovery)
 before abandoning deep analysis or repeating the same cold import. The default
 330 seconds can be changed for new startup attempts through
 `update_analysis_settings` using `ghidra.startup_timeout_ms`. Changing the
@@ -449,7 +449,7 @@ coverage, partial facts and unknowns. A summary or inspection page has its own
 Evidence ID: use `normalized_result.parent_evidence_id` when the consumer needs
 the complete source. For portable CLI follow-ups, commands advertising
 `--evidence-bundle` resolve references from that selected exported bundle.
-See [Evidence composition](references/evidence-workflows.md) for scope and
+See [Evidence composition](https://github.com/morluto/rea/blob/main/.agents/skills/reverse-engineer-anything/references/evidence-workflows.md) for scope and
 recovery; file selectors are supported only where explicitly advertised.
 Page module identities and select the returned `node_id` before requesting an
 item; a single file path can represent several graph roles. Do not repeat an
@@ -475,7 +475,7 @@ A client can also truncate a successful tool result without a REA transport
 error. Treat that preview as incomplete; use the retained parent ID for smaller
 views or export when the full record is needed. Do not parse the preview as
 canonical JSON or repeat the producer. For JavaScript, read the
-[module-view and trace recipes](references/javascript-applications.md) before
+[module-view and trace recipes](https://github.com/morluto/rea/blob/main/.agents/skills/reverse-engineer-anything/references/javascript-applications.md) before
 drilling into a large graph; a broad bidirectional trace can expand unrelated
 containment relationships even after summary analysis.
 
@@ -528,23 +528,23 @@ as complete while required questions remain open.
 ## Read only the relevant guide
 
 - Native binaries, managed assemblies, archives, and extraction:
-  [references/native-and-artifacts.md](references/native-and-artifacts.md)
+  [references/native-and-artifacts.md](https://github.com/morluto/rea/blob/main/.agents/skills/reverse-engineer-anything/references/native-and-artifacts.md)
 - ASARs, extracted JavaScript, feature tracing, and version comparison:
-  [references/javascript-applications.md](references/javascript-applications.md)
+  [references/javascript-applications.md](https://github.com/morluto/rea/blob/main/.agents/skills/reverse-engineer-anything/references/javascript-applications.md)
 - Android APK declarations, classes, methods, and static references:
-  [references/android-applications.md](references/android-applications.md)
+  [references/android-applications.md](https://github.com/morluto/rea/blob/main/.agents/skills/reverse-engineer-anything/references/android-applications.md)
 - Native instrumentation, debugger and process capture; browser/Electron
   observation; static/runtime comparison:
-  [references/runtime-observation.md](references/runtime-observation.md)
+  [references/runtime-observation.md](https://github.com/morluto/rea/blob/main/.agents/skills/reverse-engineer-anything/references/runtime-observation.md)
 - Evidence paging, comparisons, residual unknowns, and verification:
-  [references/evidence-workflows.md](references/evidence-workflows.md)
+  [references/evidence-workflows.md](https://github.com/morluto/rea/blob/main/.agents/skills/reverse-engineer-anything/references/evidence-workflows.md)
 - Agent environments (AgentEnv bundles) of a web application, recorded from
   a live instance or a HAR:
-  [references/environments.md](references/environments.md)
+  [references/environments.md](https://github.com/morluto/rea/blob/main/.agents/skills/reverse-engineer-anything/references/environments.md)
 - Tasks for a desktop application's exported environment:
-  [references/environments.md](references/environments.md#tasks-for-a-desktop-application-environment)
+  [references/environments.md](https://github.com/morluto/rea/blob/main/.agents/skills/reverse-engineer-anything/references/environments.md#tasks-for-a-desktop-application-environment)
 - A desktop app environment from a request, built and witnessed on build
-  computers: [references/desktop-build.md](references/desktop-build.md)
+  computers: [references/desktop-build.md](https://github.com/morluto/rea/blob/main/.agents/skills/reverse-engineer-anything/references/desktop-build.md)
 
 ## Finish the task
 
