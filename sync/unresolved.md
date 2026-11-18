@@ -8,7 +8,7 @@ Do not move an entry into `skills/original/`. Resolve it by finding the exact
 upstream repository, branch/commit and `SKILL.md` path, then add a link-only
 catalog record. Until then it stays unresolved.
 
-Snapshot: 33 skills, generated from `sync/manifest.json`.
+Snapshot: 30 skills, generated from `sync/manifest.json`.
 
 | Skill | Install root | SHA-256 of SKILL.md | Why unresolved |
 |-------|--------------|---------------------|----------------|
@@ -40,9 +40,6 @@ Snapshot: 33 skills, generated from `sync/manifest.json`.
 | `ui-styling` | `~/.agents/skills/ui-styling` | `625e302c60ee8f2e22d56cbe638c4a739e2657f566dae42689503ad517c30f1e` | frontmatter author `claudekit`; no upstream repository/path verified (license: MIT) |
 | `web-artifacts-builder` | `~/.agents/skills/web-artifacts-builder` | `81c5002c6643b0de7b8710b00e7a9038daa6fb9b68d59870ee6adb12da8d10f8` | no upstream repository/path in frontmatter; hash match not verified (license: Complete terms in LICENSE.txt) |
 | `web-research` | `~/.agents/skills/web-research` | `7c2b1f1990370f7ce176fe3608a67028c72db11e337b4ba83b8fce6d927dfde3` | no upstream repository/path in frontmatter; hash match not verified |
-| `applying-themes` | `~/.config/opencode/skills/applying-themes` | `11cb6b69704faaaffb0e680bd1111b8a26150153aa842daa254d2df4edacadc3` | no upstream repository/path in frontmatter; hash match not verified (license: Complete terms in LICENSE.txt) |
-| `building-mcp-servers` | `~/.config/opencode/skills/building-mcp-servers` | `a4d715bfb7d018bbee063e84336c00e3eed03e2eb25dcc6f78da130aac29e5a4` | no upstream repository/path in frontmatter; hash match not verified (license: Complete terms in LICENSE.txt) |
-| `creating-skills` | `~/.config/opencode/skills/creating-skills` | `71872dcdbe5269bcadffc7b631c3e2fbe8946f29b433140afe251ee48958152c` | no upstream repository/path in frontmatter; hash match not verified |
 | `desloppify` | `~/.config/opencode/skills/desloppify` | `3f0e1e8437a0ba929347ec7106d5f39f8893ae319e57b91a5028b9cb1d001c2d` | no upstream repository/path in frontmatter; hash match not verified |
 | `editor-v1` | `~/.config/opencode/skills/editor-v1` | `72bb0c3102edb98d7f8ecedd492f8c9b4cc216a91360c6bf0061e588220a81a8` | no upstream repository/path in frontmatter; hash match not verified |
 

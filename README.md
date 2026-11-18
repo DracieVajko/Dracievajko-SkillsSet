@@ -81,10 +81,10 @@ by `scripts/update-category-index.py` - they are never maintained by hand.
 |------|------:|-------|
 | Original skills | 25 | `skills/original/` - authored and maintained here |
 | Bundled third-party skills | 7 | `skills/third-party/` - local copies of upstream `SKILL.md` files |
-| External link-only skills | 204 | referenced by URL; no content copied |
-| Stable-branch links | 157 | `catalog/links/skill-links.txt` |
+| External link-only skills | 212 | referenced by URL; no content copied |
+| Stable-branch links | 165 | `catalog/links/skill-links.txt` |
 | Pinned links | 47 | `catalog/links/pinned-links.txt` |
-| Catalog records | 229 | `catalog/items.json` |
+| Catalog records | 237 | `catalog/items.json` |
 | System prompts | 9 | `prompts/system/` |
 | Personas | 10 | `prompts/personas/` |
 | Image prompts | 4 | `prompts/image/` |
@@ -111,11 +111,15 @@ reproduce it without duplicating skill content:
 
 | File | Purpose |
 |------|---------|
-| `sync/manifest.json` | Every installed skill, its source, install root, SHA-256 and authorship (`original`, `third-party`, `unknown`). |
+| `sync/manifest.json` | Every installed skill, every harness root, app-managed skills, source, install root, SHA-256, authorship (`original`, `third-party`, `unknown`) and hash drift. |
 | `sync/cindy-plugins.json` | Optional Cindy plugins and what each needs to be authorized again. |
 | `sync/unresolved.md` | Installed skills whose upstream is not verified; they stay out of the catalog until it is. |
 | `sync/generate-manifest.py` | Rebuilds `manifest.json` from the local machine and `catalog/items.json`. |
 | `scripts/sync-skills.ps1` | Installs missing skills and recreates directory junctions on another Windows PC. |
+
+The manifest also inventories roots this repository does not manage, including
+skills that ship inside an app, so nothing installed on the machine silently
+falls out of scope. Those entries are listed, never copied.
 
 ```powershell
 .\scripts\sync-skills.ps1 -DryRun   # report only, touch nothing

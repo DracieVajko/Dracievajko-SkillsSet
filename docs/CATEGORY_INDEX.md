@@ -54,7 +54,7 @@ Third-party skills referenced by upstream URL only; no local copy is bundled. So
 
 Entries with a short description have curated metadata in `catalog/items.json`; entries without one are link-only.
 
-Total: **204** references.
+Total: **212** references.
 
 ### Agents365-ai/drawio-skill (1)
 
@@ -63,6 +63,12 @@ Total: **204** references.
 ### DietrichGebert/ponytail (1)
 
 - [`ponytail`](https://raw.githubusercontent.com/DietrichGebert/ponytail/main/skills/ponytail/SKILL.md)
+
+### GenAI-Community-VITB/master-prompters (3)
+
+- [`applying-themes`](https://raw.githubusercontent.com/GenAI-Community-VITB/master-prompters/main/.agents/skills/applying-themes/SKILL.md)
+- [`building-mcp-servers`](https://raw.githubusercontent.com/GenAI-Community-VITB/master-prompters/main/.agents/skills/building-mcp-servers/SKILL.md)
+- [`creating-skills`](https://raw.githubusercontent.com/GenAI-Community-VITB/master-prompters/main/.agents/skills/creating-skills/SKILL.md)
 
 ### Graphify-Labs/graphify (1)
 
@@ -223,6 +229,10 @@ Total: **204** references.
 
 - [`playwright-skill`](https://raw.githubusercontent.com/lackeyjb/playwright-skill/main/skills/playwright-skill/SKILL.md)
 
+### langchain-ai/design-agent (1)
+
+- [`deep-agents-memory`](https://raw.githubusercontent.com/langchain-ai/design-agent/main/.agents/skills/deep-agents-memory/SKILL.md)
+
 ### larksuite/cli (1)
 
 - [`lark-markdown`](https://raw.githubusercontent.com/larksuite/cli/main/skills/lark-markdown/SKILL.md) — 飞书 Markdown：查看、创建、上传、编辑和比较飞书中的原生 Markdown 文件。当用户要操作飞书 Markdown 文件，或比较其远端版本及本地草稿时使用。纯本地 Markdown 文件操作不触发本 skill。不负责将 Markdown 导入为飞书在线文档，也不负责文件搜索、权限、评论、移动、删除等云空间管理操作。
@@ -247,8 +257,12 @@ Total: **204** references.
 - [`writing-for-agents`](https://raw.githubusercontent.com/mattpocock/skills/main/skills/productivity/writing-for-agents/SKILL.md)
 - [`writing-great-skills`](https://raw.githubusercontent.com/mattpocock/skills/bc4cf903ff4855ce23199a8dd3bf98b3dbd7ad71/skills/productivity/writing-great-skills/SKILL.md) — Reference for writing and editing skills well — the vocabulary and principles that make a skill predictable.
 
-### morluto/rea (1)
+### morluto/rea (5)
 
+- [`rea-analysis-optimization`](https://raw.githubusercontent.com/morluto/rea/main/.agents/skills/rea-analysis-optimization/SKILL.md)
+- [`rea-changelog-update`](https://raw.githubusercontent.com/morluto/rea/main/.agents/skills/rea-changelog-update/SKILL.md)
+- [`rea-ci-tests-audit`](https://raw.githubusercontent.com/morluto/rea/main/.agents/skills/rea-ci-tests-audit/SKILL.md)
+- [`rea-tool-design`](https://raw.githubusercontent.com/morluto/rea/main/.agents/skills/rea-tool-design/SKILL.md)
 - [`reverse-engineer-anything`](https://raw.githubusercontent.com/morluto/rea/main/.agents/skills/reverse-engineer-anything/SKILL.md)
 
 ### multica-ai/andrej-karpathy-skills (1)

@@ -7,10 +7,31 @@ junction.
 
 | File | Purpose |
 |------|---------|
-| `manifest.json` | Snapshot: every installed skill, its upstream source, its install root, the junctions that mirror it. |
+| `manifest.json` | Snapshot: every installed skill, every harness root, app-managed skills, upstream source, install root, hashes, junctions and drift. |
 | `cindy-plugins.json` | Cindy plugins installed on the reference machine, with what each one needs to be authorized again. |
 | `unresolved.md` | Per-machine snapshot: installed skills whose upstream is not verified. They stay out of the catalog and out of `skills/original/` until the upstream is found. |
 | `generate-manifest.py` | Rebuilds `manifest.json` from the local machine plus `catalog/items.json`. |
+
+## Every skill root on the machine
+
+`manifest.json` does not only list what the installer manages. `harnessRoots[]`
+records every skill root found on the reference machine, so a skill installed by
+another agent is visible instead of silently missing:
+
+| Role | What it means |
+|------|---------------|
+| `install` | Canonical copy installed by this repository (`~/.config/opencode/skills`, `~/.agents/skills`). |
+| `mirror` | Junction that exposes an install root to another tool (`~/.claude/skills`, `~/.pi/agent/skills`). |
+| `harness` | Independent root owned by another agent (`~/.qwen/skills`). |
+| `managed` | Skills that ship inside an app and are never copied (`CindyGlobal/managed-agent-skills`, `~/.codex/skills/.system`). |
+
+`drift[]` lists same-named copies whose hash differs from the canonical
+install: `link=true` is a junction into another root, `link=false` is a
+separate real copy. A drift entry is a question, not an error - compare the two
+files before deciding which one to keep.
+
+`cindyManagedSkills` and `codexManagedSkills` name the app-managed skills.
+They are listed for completeness and never copied between machines.
 
 The installer is `scripts/sync-skills.ps1`; it lives with the other scripts.
 

@@ -8,11 +8,13 @@
   },
   "notes": [
     "Each skill is installed once, under roots[<root>].",
+    "harnessRoots[] inventories every skill root on this machine: role=install roots hold the canonical copy, role=mirror roots are junctions, role=harness roots belong to another agent and role=managed roots ship inside an app.",
     "mirrors[] lists Windows directory junctions that expose those folders under other agents' skill directories; create them, never copy.",
+    "drift[] lists same-named copies whose SKILL.md hash differs from the canonical install; link=true means a junction into another root, link=false means a separate copy, so compare before trusting one.",
     "source.type=repo installs from this repository (skills/original or the approved bundled copies in skills/third-party), source.type=github uses git sparse-checkout, source.type=unresolved has no identified upstream and must be copied by hand.",
     "authorship=original only for the owner's own skills (installed from skills/original/); bundled third-party skills stay third-party even though they install from this repository, and unknown skills are never promoted into skills/original/ and keep their upstream author.",
     "node_modules is never copied; run npm install in skills with needsNodeModules=true.",
-    "cindyManagedSkills ship inside Cindy itself and are never copied between machines."
+    "cindyManagedSkills and codexManagedSkills ship inside their app and are never copied between machines."
   ],
   "cindyManagedSkills": [
     "cindy-plugin-creator",
@@ -20,6 +22,58 @@
     "cindy-theme-creator",
     "learn"
   ],
+  "codexManagedSkills": [
+    "imagegen",
+    "openai-docs",
+    "review-agent",
+    "skill-creator",
+    "skill-installer"
+  ],
+  "harnessRoots": [
+    {
+      "id": "opencode",
+      "dir": "~\\.config\\opencode\\skills",
+      "role": "install",
+      "skills": 28
+    },
+    {
+      "id": "agents",
+      "dir": "~\\.agents\\skills",
+      "role": "install",
+      "skills": 42
+    },
+    {
+      "id": "claude",
+      "dir": "~\\.claude\\skills",
+      "role": "mirror",
+      "skills": 42
+    },
+    {
+      "id": "pi",
+      "dir": "~\\.pi\\agent\\skills",
+      "role": "mirror",
+      "skills": 12
+    },
+    {
+      "id": "qwen",
+      "dir": "~\\.qwen\\skills",
+      "role": "harness",
+      "skills": 12
+    },
+    {
+      "id": "cindy-managed",
+      "dir": "~\\AppData\\Roaming\\CindyGlobal\\managed-agent-skills\\cindy\\skills",
+      "role": "managed",
+      "skills": 4
+    },
+    {
+      "id": "codex-managed",
+      "dir": "~\\.codex\\skills\\.system",
+      "role": "managed",
+      "skills": 5
+    }
+  ],
+  "drift": [],
   "mirrors": [
     {
       "dir": "~\\.claude\\skills",
@@ -110,12 +164,12 @@
     {
       "name": "applying-themes",
       "root": "opencode",
-      "authorship": "unknown",
+      "authorship": "third-party",
       "source": {
-        "type": "unresolved",
-        "repo": null,
-        "ref": null,
-        "path": null
+        "type": "github",
+        "repo": "GenAI-Community-VITB/master-prompters",
+        "ref": "main",
+        "path": ".agents/skills/applying-themes"
       },
       "sizeKB": 9,
       "needsNodeModules": false,
@@ -236,12 +290,12 @@
     {
       "name": "building-mcp-servers",
       "root": "opencode",
-      "authorship": "unknown",
+      "authorship": "third-party",
       "source": {
-        "type": "unresolved",
-        "repo": null,
-        "ref": null,
-        "path": null
+        "type": "github",
+        "repo": "GenAI-Community-VITB/master-prompters",
+        "ref": "main",
+        "path": ".agents/skills/building-mcp-servers"
       },
       "sizeKB": 9,
       "needsNodeModules": false,
@@ -306,12 +360,12 @@
     {
       "name": "creating-skills",
       "root": "opencode",
-      "authorship": "unknown",
+      "authorship": "third-party",
       "source": {
-        "type": "unresolved",
-        "repo": null,
-        "ref": null,
-        "path": null
+        "type": "github",
+        "repo": "GenAI-Community-VITB/master-prompters",
+        "ref": "main",
+        "path": ".agents/skills/creating-skills"
       },
       "sizeKB": 41,
       "needsNodeModules": false,

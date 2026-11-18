@@ -155,3 +155,11 @@ https://raw.githubusercontent.com/shadcn/improve/main/skills/improve/SKILL.md
 https://raw.githubusercontent.com/simbajigege/book2skills/main/skills/common-sense-index-investing-bogle/SKILL.md
 https://raw.githubusercontent.com/simbajigege/book2skills/main/skills/investing-from-darwin/SKILL.md
 https://raw.githubusercontent.com/simbajigege/book2skills/main/skills/stock-picking-by-common-stocks-uncommon-profits/SKILL.md
+https://raw.githubusercontent.com/morluto/rea/main/.agents/skills/rea-analysis-optimization/SKILL.md
+https://raw.githubusercontent.com/morluto/rea/main/.agents/skills/rea-changelog-update/SKILL.md
+https://raw.githubusercontent.com/morluto/rea/main/.agents/skills/rea-ci-tests-audit/SKILL.md
+https://raw.githubusercontent.com/morluto/rea/main/.agents/skills/rea-tool-design/SKILL.md
+https://raw.githubusercontent.com/langchain-ai/design-agent/main/.agents/skills/deep-agents-memory/SKILL.md
+https://raw.githubusercontent.com/GenAI-Community-VITB/master-prompters/main/.agents/skills/applying-themes/SKILL.md
+https://raw.githubusercontent.com/GenAI-Community-VITB/master-prompters/main/.agents/skills/creating-skills/SKILL.md
+https://raw.githubusercontent.com/GenAI-Community-VITB/master-prompters/main/.agents/skills/building-mcp-servers/SKILL.md

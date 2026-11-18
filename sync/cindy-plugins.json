@@ -19,6 +19,13 @@
       "credentials": "none"
     },
     {
+      "id": "cindy-art",
+      "namespace": null,
+      "purpose": "Image and art generation plugin; installed here but currently disabled.",
+      "setup": "installed, disabled",
+      "credentials": "unknown while disabled"
+    },
+    {
       "id": "cindy-github",
       "namespace": null,
       "purpose": "GitHub issues, PRs, reviews, repositories, Actions, releases, search.",
@@ -108,6 +115,13 @@
       "purpose": "Lazy-senior code review and anti-over-engineering rules.",
       "setup": "none",
       "credentials": "none"
+    },
+    {
+      "id": "prompt-optimizer",
+      "namespace": null,
+      "purpose": "Rewrites prompts before they are sent; installed here but currently disabled.",
+      "setup": "installed, disabled",
+      "credentials": "unknown while disabled"
     },
     {
       "id": "tuya-home",
