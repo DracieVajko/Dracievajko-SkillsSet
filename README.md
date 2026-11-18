@@ -28,7 +28,7 @@ pin a commit hash in your own fork.
 | Install into OpenCode | [Quick Start](#quick-start) |
 | The other tested platforms | [Platforms](#the-other-tested-platforms) |
 | Machine sync and manifest | [Machine sync](#machine-sync) |
-| Optional Cindy plugins | [Cindy plugins](#optional-cindy-plugins-i-use) |
+| Cindy plugins | [Cindy plugins](#cindy-plugins-i-track) |
 | Authorship rules | [Authorship](#authorship-and-provenance) |
 | The skills themselves | [Original skills](#original-skills) |
 | Which skill for which task | [Skills by Task](#skills-by-task) |
@@ -116,8 +116,8 @@ evidence file; the shared files are built from all of them.
 | `sync/collection.json` | **The collection**: every skill and plugin, how it installs, which agents see it, where it was seen, plus coverage gaps and hash drift. |
 | `sync/manifest.json` | The same collection in the schema the installer reads. This is the only install manifest, never a per-computer snapshot. |
 | `sync/cindy-plugins.json` | Plugins for Cindy, OpenCode and OpenDesign, with what each needs to be authorized again. |
-| `sync/optional.json` | Skills kept in the catalog but not installed; each entry says why and how to re-enable it. |
-| `sync/prune-optional.py` | Moves disabled skills out of every agent root into `~/.config/opencode/skills-disabled/`; nothing is deleted. |
+| `sync/optional.json` | Disabled skills (not installed) and removed-skill tombstones; each entry says why. |
+| `sync/prune-optional.py` | Moves disabled skills out of every agent root into `~/.config/opencode/skills-disabled/`; removed skills are already gone. |
 | `sync/CINDY-INSTALL.md` | Ready-to-paste prompt: installs the skills, then the plugins, then reports what still needs me. |
 | `sync/UPDATE.md` | Ready-to-paste prompt: updates a computer to the versions recorded in the collection. |
 | `sync/verify-installed.py` | Checks every installed skill against the recorded hash; `0 differ` is the success line. |
@@ -148,7 +148,7 @@ silently falls out of scope. Those entries are listed, never copied.
 Run git operations on one PC at a time: commit and push there, then `git pull`
 on the other.
 
-## Optional: Cindy plugins I use
+## Cindy plugins I track
 
 These plugins are optional and installed per device from the Cindy
 marketplace. Their files, tokens and OAuth grants are **not** stored in this
@@ -158,6 +158,7 @@ machine-readable list is `sync/cindy-plugins.json`.
 | Plugin | What it does | What it needs |
 |--------|--------------|---------------|
 | `agent-desktop` | Read and drive the desktop GUI: click, type, snapshot windows, clipboard, notifications | nothing |
+| `cindy-art` | Image and art generation; installed but disabled | nothing while disabled |
 | `cindy-github` | GitHub issues, PRs, reviews, repositories, Actions, releases, search | the machine's GitHub login or a fallback PAT |
 | `cindy-mermaid` | Normalize Mermaid diagram source | nothing |
 | `cindy-web-search` | Web search and page fetch | optional Brave/Tavily/DeepSeek keys |
@@ -171,6 +172,8 @@ machine-readable list is `sync/cindy-plugins.json`.
 | `ntfy` | Push notifications through a personal ntfy server | ntfy server URL and access token |
 | `opendesign-trial` | Create and revise HTML drafts with a local editor | nothing |
 | `ponytail` | Lazy-senior code review and anti-over-engineering rules | nothing |
+| `prompt-optimizer` | Rewrites prompts before they are sent; installed but disabled | nothing while disabled |
+| `ticktick-connector` | TickTick tasks, projects and habits through a Cindy plugin plus an OAuth MCP server; not installed here | TickTick OAuth; install from its GitHub release |
 | `tuya-home` | Tuya / Smart Life devices: lights, plugs, air conditioners, sensors | local development copy, not a marketplace plugin; Tuya API key starting with `sk-` |
 
 The separate OpenCode plugin `superpowers@git+https://github.com/obra/superpowers`
