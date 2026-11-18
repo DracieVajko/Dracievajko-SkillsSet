@@ -4,7 +4,7 @@ description: "Skill for creating detailed descriptions and high-quality README.m
 version: 1.0.0
 author: DracieVajko
 tags: [github, documentation, readme, coding, rules]
-category: dev
+category: development
 source_repository: https://github.com/DracieVajko/Dracievajko-SkillsSet
 source_file: skills/original/github-code-documentation/SKILL.md
 license: MIT

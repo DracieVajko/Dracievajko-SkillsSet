@@ -8,6 +8,10 @@ metadata:
   user-invocable: "false"
 ---
 
+> **Bundled third-party copy.** Upstream: [zhaoxuya520/reverse-skill](https://github.com/zhaoxuya520/reverse-skill) - MIT, Copyright (c) 2026 zhaoxuya520.
+> Vendored unchanged apart from this notice; the full license text is in
+> [docs/THIRD-PARTY-LICENSES.md](../../../docs/THIRD-PARTY-LICENSES.md).
+
 # Reverse Engineering
 
 ## ACTION REQUIRED（读完后立刻执行）

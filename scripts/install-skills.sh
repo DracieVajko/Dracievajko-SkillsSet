@@ -1,11 +1,18 @@
 #!/usr/bin/env bash
 #
-# Install every original skill into an OpenCode skills directory.
-# Existing skill folders are moved to a timestamped backup first.
+# Install or remove the original skills in an OpenCode skills directory.
+#
+# Existing skill folders are moved to a timestamped backup before being
+# replaced, so an existing installation is never overwritten in place.
+#
+# With --uninstall the installed skill folders are moved into the backup
+# directory instead: nothing is deleted, and folders that do not belong to
+# this collection are left untouched.
 #
 # Usage:
 #   ./scripts/install-skills.sh
 #   ./scripts/install-skills.sh --target .agents/skills
+#   ./scripts/install-skills.sh --uninstall
 #   ./scripts/install-skills.sh --dry-run
 
 set -euo pipefail
@@ -13,29 +20,34 @@ set -euo pipefail
 target="${HOME}/.config/opencode/skills"
 backup_root="${HOME}/.config/opencode/skill-backups"
 dry_run=0
+uninstall=0
 
 while [[ $# -gt 0 ]]; do
     case "$1" in
         --target)
-            target="$2"
-            shift 2
-            ;;
+        target="$2"
+        shift 2
+        ;;
         --backup-root)
-            backup_root="$2"
-            shift 2
-            ;;
+        backup_root="$2"
+        shift 2
+        ;;
         --dry-run)
-            dry_run=1
-            shift
-            ;;
+        dry_run=1
+        shift
+        ;;
+        --uninstall)
+        uninstall=1
+        shift
+        ;;
         -h|--help)
-            sed -n '2,10p' "$0"
-            exit 0
-            ;;
+        sed -n '2,20p' "$0"
+        exit 0
+        ;;
         *)
-            echo "Unknown argument: $1" >&2
-            exit 2
-            ;;
+        echo "Unknown argument: $1" >&2
+        exit 2
+        ;;
     esac
 done
 
@@ -56,12 +68,17 @@ fi
 
 timestamp="$(date +%Y%m%d-%H%M%S)"
 installed=0
+removed=0
 
 if [[ ${dry_run} -eq 1 ]]; then
     echo "DRY RUN: target=${target}"
 fi
 
 if [[ ! -d "${target}" ]]; then
+    if [[ ${uninstall} -eq 1 ]]; then
+        echo "Nothing to remove: target directory does not exist: ${target}"
+        exit 0
+    fi
     if [[ ${dry_run} -eq 1 ]]; then
         echo "Would create: ${target}"
     else
@@ -72,6 +89,21 @@ fi
 for skill_dir in "${skills[@]}"; do
     name="$(basename "${skill_dir}")"
     destination="${target}/${name}"
+
+    if [[ ${uninstall} -eq 1 ]]; then
+        if [[ -e "${destination}" ]]; then
+            backup="${backup_root}/${timestamp}/${name}"
+            if [[ ${dry_run} -eq 1 ]]; then
+                echo "Would remove: ${destination} -> ${backup}"
+            else
+                mkdir -p "$(dirname "${backup}")"
+                mv "${destination}" "${backup}"
+                echo "Removed ${name} -> ${backup}"
+            fi
+            removed=$((removed + 1))
+        fi
+        continue
+    fi
 
     if [[ -e "${destination}" ]]; then
         backup="${backup_root}/${timestamp}/${name}"
@@ -94,6 +126,8 @@ done
 
 if [[ ${dry_run} -eq 1 ]]; then
     echo "DRY RUN complete: ${installed} skill(s) would be installed"
+elif [[ ${uninstall} -eq 1 ]]; then
+    echo "Done: ${removed} skill(s) removed from ${target} (moved to ${backup_root})"
 else
     echo "Done: ${installed} skill(s) installed in ${target}"
 fi

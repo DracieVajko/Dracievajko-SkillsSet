@@ -14,6 +14,7 @@ Describe what changed and why.
 
 - [ ] `python scripts/validate-frontmatter.py`
 - [ ] `python scripts/update-category-index.py --check`
+- [ ] `python scripts/check-markdown-links.py`
 - [ ] `python -m unittest discover -s scripts -p "test_*.py"`
 
 ## License and provenance

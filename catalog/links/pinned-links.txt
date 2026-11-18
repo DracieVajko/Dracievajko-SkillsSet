@@ -40,3 +40,8 @@ https://raw.githubusercontent.com/Jakeschincariol/day-trader-skill/3d0f4ef6986f4
 https://raw.githubusercontent.com/Jakeschincariol/day-trader-skill/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-alerts/SKILL.md
 https://raw.githubusercontent.com/Jakeschincariol/day-trader-skill/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-analyst/SKILL.md
 https://raw.githubusercontent.com/Jakeschincariol/day-trader-skill/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-pelosi/SKILL.md
+https://raw.githubusercontent.com/imbad0202/academic-research-skills/c67a7be53f23d9dbba4030bbcd6f5ccfeda3afa9/deep-research/SKILL.md
+https://raw.githubusercontent.com/imbad0202/academic-research-skills/c67a7be53f23d9dbba4030bbcd6f5ccfeda3afa9/academic-paper/SKILL.md
+https://raw.githubusercontent.com/imbad0202/academic-research-skills/c67a7be53f23d9dbba4030bbcd6f5ccfeda3afa9/academic-paper-reviewer/SKILL.md
+https://raw.githubusercontent.com/imbad0202/academic-research-skills/c67a7be53f23d9dbba4030bbcd6f5ccfeda3afa9/academic-pipeline/SKILL.md
+https://raw.githubusercontent.com/imbad0202/academic-research-skills/c67a7be53f23d9dbba4030bbcd6f5ccfeda3afa9/sr-screener/SKILL.md

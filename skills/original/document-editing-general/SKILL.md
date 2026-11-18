@@ -4,7 +4,7 @@ description: "General-purpose skill for creating, reading, editing and managing 
 version: 1.0.0
 author: DracieVajko
 tags: [document, editing, markdown, editor, create, update, general]
-category: dev
+category: development
 source_repository: https://github.com/DracieVajko/Dracievajko-SkillsSet
 source_file: skills/original/document-editing-general/SKILL.md
 license: MIT

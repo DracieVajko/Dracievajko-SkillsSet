@@ -1,0 +1,1 @@
+Perform a complete restoration of this black-and-white photo. Remove all damage including stains, cracks, and fading. Enhance the clarity and resolution, and add subtle, historically accurate natural daylight colors while strictly keeping the original faces, clothing, and background authentic.

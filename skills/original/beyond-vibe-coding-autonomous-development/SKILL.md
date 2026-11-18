@@ -4,7 +4,7 @@ description: "Practical skill for AI-era software development based on Addy Osma
 version: 1.0.0
 author: DracieVajko
 tags: [ai-assisted-development, vibe-coding, autonomous-agents, prompt-engineering, software-engineering, github-copilot, cursor, claude-code]
-category: dev
+category: development
 source_repository: https://github.com/DracieVajko/Dracievajko-SkillsSet
 source_file: skills/original/beyond-vibe-coding-autonomous-development/SKILL.md
 license: MIT

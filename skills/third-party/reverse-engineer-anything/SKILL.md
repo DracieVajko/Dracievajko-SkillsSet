@@ -5,6 +5,10 @@ metadata:
   version: "61"
 ---
 
+> **Bundled third-party copy.** Upstream: [morluto/rea](https://github.com/morluto/rea) - MIT, Copyright (c) 2026 morluto.
+> Vendored unchanged apart from this notice; the full license text is in
+> [docs/THIRD-PARTY-LICENSES.md](../../../docs/THIRD-PARTY-LICENSES.md).
+
 # REA
 
 Use REA when a claim depends on a shipped binary or package, decompilation,

@@ -3,6 +3,10 @@ name: apk-reverse
 description: 在 CLI 环境下做 Android APK 逆向时使用。适用于 APK 解包、Java 反编译、smali 修改、重打包、Frida 動態 Hook，以及按需切換到 so/native 分析。優先使用本機已安裝的 jadx、apktool、frida、adb、ida-reverse、radare2。
 ---
 
+> **Bundled third-party copy.** Upstream: [zhaoxuya520/reverse-skill](https://github.com/zhaoxuya520/reverse-skill) - MIT, Copyright (c) 2026 zhaoxuya520.
+> Vendored unchanged apart from this notice; the full license text is in
+> [docs/THIRD-PARTY-LICENSES.md](../../../docs/THIRD-PARTY-LICENSES.md).
+
 ## ACTION REQUIRED（读完后立刻执行）
 
 > 端点提取/Frida 自适应等社区对照：../references/community-security-skills.md；动态分析须 scope 授权设备。

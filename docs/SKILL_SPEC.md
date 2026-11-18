@@ -22,7 +22,8 @@ in `catalog/links/`, `catalog/items.json` and `skills/third-party/README.md`.
 
 ## SKILL.md Format
 
-The `SKILL.md` file is the canonical definition. It uses frontmatter + Markdown:
+The `SKILL.md` file is the canonical definition. It uses frontmatter + Markdown.
+A ready-to-copy skeleton lives in [`templates/SKILL-TEMPLATE.md`](templates/SKILL-TEMPLATE.md).
 
 ```markdown
 ---
@@ -168,11 +169,20 @@ directory names; all original skills live directly under `skills/original/`.
 | `design` | UI/UX, visual, frontend |
 | `ai-ml` | Model training, data, inference |
 | `3d-blender` | Blender-specific workflows |
+| `engineering-3d` | Electronics, hardware, energy, CAD and 3D printing domains |
 | `productivity` | Personal task management |
 | `custom` | User-specific or cross-domain workflows |
 | `web-automation` | Browser, testing, scraping |
 | `thinking-frameworks` | Mental models, decision tools |
 | `writing-docs` | Content, documentation, publishing |
+| `documents` | Document creation, conversion and editing |
+| `security` | Security testing and hardening |
+| `testing` | Test design and skill testing |
+| `knowledge` | Converting source material into reusable knowledge |
+| `research` | Research workflows |
+| `investing` | Securities, portfolios, earnings analysis |
+| `local-ai-infra` | Local models, Docker, networking, services |
+| `third-party` | Bundled third-party content |
 
 ## Naming Conventions
 
