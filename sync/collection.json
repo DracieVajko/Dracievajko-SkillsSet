@@ -295,17 +295,23 @@
       "book-to-skill",
       "browser-automation",
       "code-review",
+      "create-individual-calendar-events-from-earnings-dates-list",
       "dcf-valuation",
       "deep-research",
       "dependency-scan",
+      "design-catalogue",
       "design-taste-frontend",
       "desloppify",
       "detailed-source-rewrite-guide",
       "doc",
+      "document-editing-general",
       "ds-note-formatter",
       "editor-v1",
+      "enable-wake-on-lan-and-auto-shutdown-on-network-loss-for-ras",
+      "fix-inconclusive-skills",
       "focus-my-energy",
       "frontend-design",
+      "generate-findings-report-from-pipeline-logs",
       "generate-fresh-ideas",
       "get-more-perspectives",
       "ghidra-reverse",
@@ -342,6 +348,7 @@
       "trader-scanner",
       "trader-timemachine",
       "ui-styling",
+      "universal-listing-template",
       "web-artifacts-builder",
       "webapp-testing",
       "writing-plans",
@@ -1114,8 +1121,8 @@
     },
     {
       "name": "context-engineering",
-      "enabled": false,
-      "disabledReason": "Overlaps project-butler and agent-operating-rules.",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -1151,8 +1158,8 @@
     },
     {
       "name": "create-individual-calendar-events-from-earnings-dates-list",
-      "enabled": false,
-      "disabledReason": "Niche earnings-calendar utility; available again by removing it from this list.",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "original",
       "source": {
         "type": "repo",
@@ -1405,8 +1412,8 @@
     },
     {
       "name": "design-catalogue",
-      "enabled": false,
-      "disabledReason": "Navigator for design skills that are already installed; it adds no design guidance of its own.",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "third-party",
       "source": {
         "type": "github",
@@ -1583,8 +1590,8 @@
     },
     {
       "name": "document-editing-general",
-      "enabled": false,
-      "disabledReason": "Generic document editor; doc and minimax-docx cover the formats that are used.",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "original",
       "source": {
         "type": "repo",
@@ -1691,8 +1698,8 @@
     },
     {
       "name": "enable-wake-on-lan-and-auto-shutdown-on-network-loss-for-ras",
-      "enabled": false,
-      "disabledReason": "Niche Raspberry Pi utility, kept in the catalog for later.",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "original",
       "source": {
         "type": "repo",
@@ -1763,8 +1770,8 @@
     },
     {
       "name": "fix-inconclusive-skills",
-      "enabled": false,
-      "disabledReason": "Niche maintenance utility, not used in normal work.",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "original",
       "source": {
         "type": "repo",
@@ -1906,8 +1913,8 @@
     },
     {
       "name": "generate-findings-report-from-pipeline-logs",
-      "enabled": false,
-      "disabledReason": "Niche pipeline-log report utility.",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "original",
       "source": {
         "type": "repo",
@@ -4270,8 +4277,8 @@
     },
     {
       "name": "universal-listing-template",
-      "enabled": false,
-      "disabledReason": "Generic list template; the model already handles ordinary lists and tables.",
+      "enabled": true,
+      "disabledReason": "",
       "authorship": "original",
       "source": {
         "type": "repo",

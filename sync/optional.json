@@ -2,6 +2,7 @@
   "version": 1,
   "notes": [
     "Skills listed here stay in catalog/items.json and in sync/collection.json, but they are not installed on either computer.",
+    "Only skills that do the same job as a kept, better version are listed here.",
     "A disabled skill is moved to ~/.config/opencode/skills-disabled/<name> by sync/prune-optional.py, so it can be restored without downloading it again.",
     "Remove a name from this list, run sync-skills.ps1, and the skill is installed again."
   ],
@@ -31,16 +32,8 @@
       "reason": "Overlaps deep-research; deep-research is the full multi-agent pipeline."
     },
     {
-      "name": "design-catalogue",
-      "reason": "Navigator for design skills that are already installed; it adds no design guidance of its own."
-    },
-    {
       "name": "multi-agent-orchestration",
       "reason": "Overlaps orchestrate; orchestrate is the operational coordinator."
-    },
-    {
-      "name": "context-engineering",
-      "reason": "Overlaps project-butler and agent-operating-rules."
     },
     {
       "name": "reverse-engineering",
@@ -49,30 +42,6 @@
     {
       "name": "generate-markdown-and-docx-documents",
       "reason": "Thin wrapper; doc and minimax-docx already cover Markdown and DOCX output."
-    },
-    {
-      "name": "document-editing-general",
-      "reason": "Generic document editor; doc and minimax-docx cover the formats that are used."
-    },
-    {
-      "name": "fix-inconclusive-skills",
-      "reason": "Niche maintenance utility, not used in normal work."
-    },
-    {
-      "name": "universal-listing-template",
-      "reason": "Generic list template; the model already handles ordinary lists and tables."
-    },
-    {
-      "name": "generate-findings-report-from-pipeline-logs",
-      "reason": "Niche pipeline-log report utility."
-    },
-    {
-      "name": "enable-wake-on-lan-and-auto-shutdown-on-network-loss-for-ras",
-      "reason": "Niche Raspberry Pi utility, kept in the catalog for later."
-    },
-    {
-      "name": "create-individual-calendar-events-from-earnings-dates-list",
-      "reason": "Niche earnings-calendar utility; available again by removing it from this list."
     }
   ]
 }

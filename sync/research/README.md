@@ -29,9 +29,12 @@ matched exactly and recorded as link-only. Raw search evidence is in
 
 ## Final state
 
-- 117 skills in the collection: **100 enabled and installed**, 17 disabled by
-  `sync/optional.json` (overlaps or niche utilities; each entry has its reason).
-- `sync/verify-installed.py` reports `100 match, 0 differ, 0 missing`.
+- 117 skills in the collection: **108 enabled and installed**, 9 disabled by
+  `sync/optional.json` because they do the same job as a kept, better version:
+  `creating-skills`, `summarize-meeting`, `code-reviewer`, `debugging-wizard`,
+  `penetration-testing-guide`, `web-research`, `multi-agent-orchestration`,
+  `reverse-engineering`, `generate-markdown-and-docx-documents`.
+- `sync/verify-installed.py` reports `108 match, 0 differ, 0 missing`.
 - No unresolved skills and no local or cross-computer `drift`.
 - Disabled skills are moved to `~/.config/opencode/skills-disabled/` by
   `sync/prune-optional.py`; remove a name from `sync/optional.json` and run the

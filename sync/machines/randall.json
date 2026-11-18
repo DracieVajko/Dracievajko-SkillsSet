@@ -35,25 +35,25 @@
       "id": "opencode",
       "dir": "~\\.config\\opencode\\skills",
       "role": "install",
-      "skills": 100
+      "skills": 108
     },
     {
       "id": "agents",
       "dir": "~\\.agents\\skills",
       "role": "install",
-      "skills": 100
+      "skills": 108
     },
     {
       "id": "claude",
       "dir": "~\\.claude\\skills",
       "role": "mirror",
-      "skills": 100
+      "skills": 108
     },
     {
       "id": "qwen",
       "dir": "~\\.qwen\\skills",
       "role": "harness",
-      "skills": 100
+      "skills": 108
     },
     {
       "id": "cindy-managed",
@@ -93,20 +93,27 @@
         "building-mcp-servers",
         "code-documenter",
         "code-review",
+        "context-engineering",
+        "create-individual-calendar-events-from-earnings-dates-list",
         "dcf-valuation",
         "deep-agents-memory",
         "deep-research",
         "dependency-scan",
+        "design-catalogue",
         "design-taste-frontend",
         "desloppify",
         "detailed-source-rewrite-guide",
         "doc",
+        "document-editing-general",
         "ds-note-formatter",
         "editor-v1",
+        "enable-wake-on-lan-and-auto-shutdown-on-network-loss-for-ras",
         "fine-tuning-expert",
+        "fix-inconclusive-skills",
         "focus-my-energy",
         "frontend-design",
         "frontend-design-systems",
+        "generate-findings-report-from-pipeline-logs",
         "generate-fresh-ideas",
         "get-more-perspectives",
         "ghidra-reverse",
@@ -166,6 +173,7 @@
         "transitions-dev",
         "transitions-polish",
         "ui-styling",
+        "universal-listing-template",
         "using-superpowers",
         "web-artifacts-builder",
         "webapp-testing",
@@ -188,6 +196,7 @@
         "dcf-valuation",
         "deep-agents-memory",
         "dependency-scan",
+        "design-catalogue",
         "design-taste-frontend",
         "doc",
         "editor-v1",
@@ -253,13 +262,19 @@
         "brainstorming",
         "building-mcp-servers",
         "code-documenter",
+        "context-engineering",
+        "create-individual-calendar-events-from-earnings-dates-list",
         "deep-research",
         "desloppify",
         "detailed-source-rewrite-guide",
+        "document-editing-general",
         "ds-note-formatter",
+        "enable-wake-on-lan-and-auto-shutdown-on-network-loss-for-ras",
         "fine-tuning-expert",
+        "fix-inconclusive-skills",
         "focus-my-energy",
         "frontend-design-systems",
+        "generate-findings-report-from-pipeline-logs",
         "generate-fresh-ideas",
         "get-more-perspectives",
         "ghidra-reverse",
@@ -279,6 +294,7 @@
         "reverse-engineer-anything",
         "testing-skills",
         "ticktick-tasks",
+        "universal-listing-template",
         "using-superpowers",
         "wordpress-pro",
         "write-research-projects",
@@ -496,6 +512,38 @@
       "sha256": "c317493f9b94df59ccb48a6783492bcb48e7f1c3d5299ed44718bd568eb8cdb0"
     },
     {
+      "name": "context-engineering",
+      "root": "opencode",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "addyosmani/agent-skills",
+        "ref": "aeac41d4d005999432bb7312f7ff06383a91d59d",
+        "path": "skills/context-engineering"
+      },
+      "author": "",
+      "license": "",
+      "sizeKB": 15,
+      "needsNodeModules": false,
+      "sha256": "8b736cb9e55b82b265ab6ff78349c0e826e8a6df550deddf665b7fb3ff858b63"
+    },
+    {
+      "name": "create-individual-calendar-events-from-earnings-dates-list",
+      "root": "opencode",
+      "authorship": "original",
+      "source": {
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/original/create-individual-calendar-events-from-earnings-dates-list"
+      },
+      "author": "DracieVajko",
+      "license": "MIT",
+      "sizeKB": 2,
+      "needsNodeModules": false,
+      "sha256": "190a460c75c8065dd851b98ac1f409294e653dd8b08c767cb003a500b401c44a"
+    },
+    {
       "name": "deep-research",
       "root": "opencode",
       "authorship": "third-party",
@@ -544,6 +592,22 @@
       "sha256": "aded2e94722e29c589806cc7f777696b3de2a7f4028e8e37140c2edc7198c5e1"
     },
     {
+      "name": "document-editing-general",
+      "root": "opencode",
+      "authorship": "original",
+      "source": {
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/original/document-editing-general"
+      },
+      "author": "DracieVajko",
+      "license": "MIT",
+      "sizeKB": 2,
+      "needsNodeModules": false,
+      "sha256": "0ed41a46595044683ca0e7fd6061a80ff16c665aa34577d39119ee718c9f06be"
+    },
+    {
       "name": "ds-note-formatter",
       "root": "opencode",
       "authorship": "original",
@@ -560,6 +624,22 @@
       "sha256": "16f3c54765d65ac0d1660ea881bf10e7c85bf8455a3f59da7de56cb7bad3f813"
     },
     {
+      "name": "enable-wake-on-lan-and-auto-shutdown-on-network-loss-for-ras",
+      "root": "opencode",
+      "authorship": "original",
+      "source": {
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/original/enable-wake-on-lan-and-auto-shutdown-on-network-loss-for-ras"
+      },
+      "author": "DracieVajko",
+      "license": "MIT",
+      "sizeKB": 2,
+      "needsNodeModules": false,
+      "sha256": "3c245247475b31e2f586ed09e5d79055426e61b5137dfcffbcc9a1324f6f06bc"
+    },
+    {
       "name": "fine-tuning-expert",
       "root": "opencode",
       "authorship": "third-party",
@@ -574,6 +654,22 @@
       "sizeKB": 87,
       "needsNodeModules": false,
       "sha256": "87ad37743797487cd1c37c23229357fc98fadf1e07a13c57b81e0c133e9cf4c3"
+    },
+    {
+      "name": "fix-inconclusive-skills",
+      "root": "opencode",
+      "authorship": "original",
+      "source": {
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/original/fix-inconclusive-skills"
+      },
+      "author": "DracieVajko",
+      "license": "MIT",
+      "sizeKB": 1,
+      "needsNodeModules": false,
+      "sha256": "ac5aea74554c91b2b5ff5ed7a1be48d117d11a063bc32f9af99b8dc569440ad2"
     },
     {
       "name": "focus-my-energy",
@@ -606,6 +702,22 @@
       "sizeKB": 8,
       "needsNodeModules": false,
       "sha256": "397fb10beffe6d4e835496c375cb6d43c20ca01ce902af22064fce6b3b6040ec"
+    },
+    {
+      "name": "generate-findings-report-from-pipeline-logs",
+      "root": "opencode",
+      "authorship": "original",
+      "source": {
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/original/generate-findings-report-from-pipeline-logs"
+      },
+      "author": "DracieVajko",
+      "license": "MIT",
+      "sizeKB": 2,
+      "needsNodeModules": false,
+      "sha256": "b5b03c99e3eb61a3299172e65b32401363d5499113aa04cd0584491244785c43"
     },
     {
       "name": "generate-fresh-ideas",
@@ -912,6 +1024,22 @@
       "sha256": "8342403073ff07bed7e66c42e4d8b7eeb72628bb250b34d06c48a3d72e433b40"
     },
     {
+      "name": "universal-listing-template",
+      "root": "opencode",
+      "authorship": "original",
+      "source": {
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/original/universal-listing-template"
+      },
+      "author": "DracieVajko",
+      "license": "MIT",
+      "sizeKB": 1,
+      "needsNodeModules": false,
+      "sha256": "c35678c4b3c5f9c727e337ea2e8c7153440b73b0f74bc516bba9820cd18afd60"
+    },
+    {
       "name": "using-superpowers",
       "root": "opencode",
       "authorship": "third-party",
@@ -1134,6 +1262,22 @@
       "sizeKB": 7,
       "needsNodeModules": false,
       "sha256": "4076824ca35e590c19524a51b28fa1c67ffc13e466d8a5d7549d5f6b9cbf0c95"
+    },
+    {
+      "name": "design-catalogue",
+      "root": "agents",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "highlow12/Beaura",
+        "ref": "main",
+        "path": ".agents/skills/design-catalogue"
+      },
+      "author": "",
+      "license": "",
+      "sizeKB": 30,
+      "needsNodeModules": false,
+      "sha256": "d3827b3abd243dbb72ebb1dccc3aa51da6aaf30b71c891cfdee1ee50dfe2bde3"
     },
     {
       "name": "design-taste-frontend",
