@@ -11,6 +11,11 @@ Everything is plain Markdown and Python. There is no runtime, no service and
 no dependency you have to trust: you copy what you need, read it, and adapt
 it.
 
+**No releases - `master` is the source of truth.** There are no release tags and
+no versioned downloads on purpose: every push to `master` is the current state,
+and the install scripts always read from `master`. If you need a fixed snapshot,
+pin a commit hash in your own fork.
+
 ## Quick Navigation
 
 | Looking for | Go to |
