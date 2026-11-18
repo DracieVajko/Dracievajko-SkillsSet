@@ -68,48 +68,7 @@
       "skills": 5
     }
   ],
-  "drift": [
-    {
-      "name": "book-to-skill",
-      "root": "~\\.claude\\skills",
-      "link": true,
-      "sha256": "6a3d7ce3d3689020cd4089f8cad9c0a9f8237abfaf896ff20677031dac4592b1",
-      "canonicalRoot": "~\\.config\\opencode\\skills",
-      "canonicalSha256": "75807d51ace1a189b207e5ce3a6decf92820d344acf4051937c607c525e73fdc"
-    },
-    {
-      "name": "deep-research",
-      "root": "~\\.claude\\skills",
-      "link": true,
-      "sha256": "04712f4daa7937cc1f8dabc1a086a9549e670eb3fa3f1a8d30abdc3ea8b31a79",
-      "canonicalRoot": "~\\.config\\opencode\\skills",
-      "canonicalSha256": "d4b056eab3bb520bf7a45aeb3cf16260b532e0d99cec414d9ed9085b1f470948"
-    },
-    {
-      "name": "desloppify",
-      "root": "~\\.claude\\skills",
-      "link": false,
-      "sha256": "c481221a7b7dde073ac42c0603ba44d9b59c0868f4c70e960ab6974fc7a11902",
-      "canonicalRoot": "~\\.config\\opencode\\skills",
-      "canonicalSha256": "3f0e1e8437a0ba929347ec7106d5f39f8893ae319e57b91a5028b9cb1d001c2d"
-    },
-    {
-      "name": "reverse-engineer-anything",
-      "root": "~\\.claude\\skills",
-      "link": true,
-      "sha256": "3fe42431ac75831bdfa88b9b88d4571051726586b0180feb8bb3ad403a8040de",
-      "canonicalRoot": "~\\.config\\opencode\\skills",
-      "canonicalSha256": "8fdfbc899521299f38980dae3c4e09f1f12eb442c821bd9cda0beb04648986dd"
-    },
-    {
-      "name": "desloppify",
-      "root": "~\\.qwen\\skills",
-      "link": false,
-      "sha256": "b68b5abb1048ef7ccba9386f44e0f516bdd6da8629b2801f7a7c9fa34f453550",
-      "canonicalRoot": "~\\.config\\opencode\\skills",
-      "canonicalSha256": "3f0e1e8437a0ba929347ec7106d5f39f8893ae319e57b91a5028b9cb1d001c2d"
-    }
-  ],
+  "drift": [],
   "mirrors": [
     {
       "dir": "~\\.claude\\skills",
@@ -145,6 +104,7 @@
         "dependency-scan",
         "design-catalogue",
         "design-taste-frontend",
+        "desloppify",
         "detailed-source-rewrite-guide",
         "doc",
         "document-editing-general",
@@ -309,6 +269,7 @@
         "blender-hard-surface-modeling",
         "blender-python-integration",
         "blender-rigging-animation",
+        "book-to-skill",
         "brainstorming",
         "building-mcp-servers",
         "code-documenter",
@@ -317,6 +278,7 @@
         "create-individual-calendar-events-from-earnings-dates-list",
         "creating-skills",
         "debugging-wizard",
+        "deep-research",
         "desloppify",
         "detailed-source-rewrite-guide",
         "document-editing-general",
@@ -346,6 +308,7 @@
         "rea-ci-tests-audit",
         "rea-tool-design",
         "repository-hygiene",
+        "reverse-engineer-anything",
         "reverse-engineering",
         "testing-skills",
         "ticktick-tasks",
@@ -530,9 +493,9 @@
       },
       "author": "",
       "license": "",
-      "sizeKB": 11,
+      "sizeKB": 13,
       "needsNodeModules": false,
-      "sha256": "355bc853d3a8db157c6415c9197bef4ffc36d75bf17b1f3db4e8b6d32386e6f2"
+      "sha256": "61a7ef918652108c76a3fd01e02dd92d39996c6b46d4cb2819cbd03f6c45e46a"
     },
     {
       "name": "building-mcp-servers",
@@ -562,9 +525,9 @@
       },
       "author": "",
       "license": "MIT",
-      "sizeKB": 5,
+      "sizeKB": 6,
       "needsNodeModules": false,
-      "sha256": "db585719a890418d10d7764c7e8a36b9e1c3a28d6d6e1c2790d6de2753218cf8"
+      "sha256": "c317493f9b94df59ccb48a6783492bcb48e7f1c3d5299ed44718bd568eb8cdb0"
     },
     {
       "name": "code-reviewer",
@@ -580,7 +543,7 @@
       "license": "MIT",
       "sizeKB": 5,
       "needsNodeModules": false,
-      "sha256": "7ac164f0f22db9affdbd902da6fe4fe2af48eb637d41e646869fb8907094067a"
+      "sha256": "f65c4468751bb509f4ff78b791dfbc664dfe6191d36d04626c92ed8c2174293b"
     },
     {
       "name": "context-engineering",
@@ -594,9 +557,9 @@
       },
       "author": "",
       "license": "",
-      "sizeKB": 8,
+      "sizeKB": 15,
       "needsNodeModules": false,
-      "sha256": "e20d990fb6f2f4a45ea3f75f9ed2fa64d40f5940940977ec8aca90a28a876836"
+      "sha256": "8b736cb9e55b82b265ab6ff78349c0e826e8a6df550deddf665b7fb3ff858b63"
     },
     {
       "name": "create-individual-calendar-events-from-earnings-dates-list",
@@ -644,7 +607,7 @@
       "license": "MIT",
       "sizeKB": 4,
       "needsNodeModules": false,
-      "sha256": "9bd8dbe72b51ab73c2907ceb6700e040867000acf2a42f610db114cd46891914"
+      "sha256": "9dc712996f743d1b48e6f57aec344872fd81f6af547d753e5348d91c5b60c56c"
     },
     {
       "name": "deep-research",
@@ -665,12 +628,12 @@
     {
       "name": "desloppify",
       "root": "opencode",
-      "authorship": "unknown",
+      "authorship": "third-party",
       "source": {
-        "type": "unresolved",
-        "repo": null,
-        "ref": null,
-        "path": null
+        "type": "github",
+        "repo": "peteromallet/desloppify",
+        "ref": "main",
+        "path": "desloppify/data/global"
       },
       "author": "",
       "license": "",
@@ -770,9 +733,9 @@
       },
       "author": "",
       "license": "MIT",
-      "sizeKB": 6,
+      "sizeKB": 7,
       "needsNodeModules": false,
-      "sha256": "f686c7106b522f900980c1fb03cc474e0d3aad88c5944b1023cbdcd2d94a5b18"
+      "sha256": "87ad37743797487cd1c37c23229357fc98fadf1e07a13c57b81e0c133e9cf4c3"
     },
     {
       "name": "fix-inconclusive-skills",
@@ -1138,9 +1101,9 @@
       },
       "author": "",
       "license": "",
-      "sizeKB": 38,
+      "sizeKB": 48,
       "needsNodeModules": false,
-      "sha256": "8fdfbc899521299f38980dae3c4e09f1f12eb442c821bd9cda0beb04648986dd"
+      "sha256": "90608de63f2650a57437e037c1afa7afb6ebf4c8b9fd976fdb72caff6df443dc"
     },
     {
       "name": "reverse-engineering",
@@ -1218,9 +1181,9 @@
       },
       "author": "",
       "license": "",
-      "sizeKB": 5,
+      "sizeKB": 3,
       "needsNodeModules": false,
-      "sha256": "9c50c6d4cb4ade6103ad06d8f03ee49229d108df7046f9ae88ed510572acc6b9"
+      "sha256": "82c5c8866ad7f5dd4440ce66bd7806ba48a2f13771beae5cf112e53f08fe36ba"
     },
     {
       "name": "wordpress-pro",
@@ -1236,7 +1199,7 @@
       "license": "MIT",
       "sizeKB": 6,
       "needsNodeModules": false,
-      "sha256": "a351f1b36a91b4e671a0151125bba2136264efe995ed2fa5d9e02618aafb0aaf"
+      "sha256": "27348882ea7a551426ec9a871306710ba16069abf53204afdbb5df6f0acc71a3"
     },
     {
       "name": "write-research-projects",
@@ -1294,7 +1257,7 @@
         "type": "github",
         "repo": "robbin/android-adb-control",
         "ref": "main",
-        "path": ""
+        "path": "."
       },
       "author": "",
       "license": "MIT",
@@ -1310,7 +1273,7 @@
         "type": "github",
         "repo": "dpconde/claude-android-skill",
         "ref": "main",
-        "path": ""
+        "path": "."
       },
       "author": "",
       "license": "",
@@ -1353,12 +1316,12 @@
     {
       "name": "browser-automation",
       "root": "agents",
-      "authorship": "unknown",
+      "authorship": "third-party",
       "source": {
-        "type": "unresolved",
-        "repo": null,
-        "ref": null,
-        "path": null
+        "type": "github",
+        "repo": "FNOSP/fnos-dsh",
+        "ref": "main",
+        "path": "plugins/dsh-midscene-plugin/skills/browser-automation"
       },
       "author": "",
       "license": "",
@@ -1449,12 +1412,12 @@
     {
       "name": "design-taste-frontend",
       "root": "agents",
-      "authorship": "unknown",
+      "authorship": "third-party",
       "source": {
-        "type": "unresolved",
-        "repo": null,
-        "ref": null,
-        "path": null
+        "type": "github",
+        "repo": "compozy/compozy",
+        "ref": "main",
+        "path": "docs/design/opendesign/.agents/skills/design-taste-frontend"
       },
       "author": "",
       "license": "",
@@ -1465,12 +1428,12 @@
     {
       "name": "doc",
       "root": "agents",
-      "authorship": "unknown",
+      "authorship": "third-party",
       "source": {
-        "type": "unresolved",
-        "repo": null,
-        "ref": null,
-        "path": null
+        "type": "github",
+        "repo": "letta-ai/skills",
+        "ref": "main",
+        "path": "tools/doc"
       },
       "author": "",
       "license": "",
@@ -1625,28 +1588,28 @@
     {
       "name": "gws-gmail",
       "root": "agents",
-      "authorship": "unknown",
+      "authorship": "third-party",
       "source": {
-        "type": "unresolved",
-        "repo": null,
-        "ref": null,
-        "path": null
+        "type": "github",
+        "repo": "JetBrains/skills",
+        "ref": "main",
+        "path": "gws-gmail"
       },
       "author": "",
       "license": "",
       "sizeKB": 2,
       "needsNodeModules": false,
-      "sha256": "d37f41ad13fd3467d430e60dfb985d7818ef6976bae40182f8e46a410b8caa16"
+      "sha256": "18f676bb7b0bfa26a4ea841e83512cdaefe5128a56cd20fb4980641c5f2d5d34"
     },
     {
       "name": "higgsfield",
       "root": "agents",
-      "authorship": "unknown",
+      "authorship": "third-party",
       "source": {
-        "type": "unresolved",
-        "repo": null,
-        "ref": null,
-        "path": null
+        "type": "github",
+        "repo": "OSideMedia/higgsfield-ai-prompt-skill",
+        "ref": "main",
+        "path": "."
       },
       "author": "",
       "license": "",
@@ -1657,12 +1620,12 @@
     {
       "name": "home-assistant",
       "root": "agents",
-      "authorship": "unknown",
+      "authorship": "third-party",
       "source": {
-        "type": "unresolved",
-        "repo": null,
-        "ref": null,
-        "path": null
+        "type": "github",
+        "repo": "balloob/llm-skills",
+        "ref": "main",
+        "path": "home-assistant"
       },
       "author": "",
       "license": "",
@@ -1673,18 +1636,18 @@
     {
       "name": "humanizer",
       "root": "agents",
-      "authorship": "unknown",
+      "authorship": "third-party",
       "source": {
-        "type": "unresolved",
-        "repo": null,
-        "ref": null,
-        "path": null
+        "type": "github",
+        "repo": "blader/humanizer",
+        "ref": "main",
+        "path": "."
       },
       "author": "",
       "license": "MIT",
       "sizeKB": 64,
       "needsNodeModules": false,
-      "sha256": "0612f1dfb1672b0ea9b97e139bf1f06cabe98d8b27424fe8ff01e1fb4cc99cad"
+      "sha256": "804a119e924ac30295b298213e0b71b3e38b2667b8ef4fb7b69e9246369b9045"
     },
     {
       "name": "impeccable",
@@ -1705,18 +1668,18 @@
     {
       "name": "knowledge-base",
       "root": "agents",
-      "authorship": "unknown",
+      "authorship": "third-party",
       "source": {
-        "type": "unresolved",
-        "repo": null,
-        "ref": null,
-        "path": null
+        "type": "github",
+        "repo": "inkeep/open-knowledge-skills",
+        "ref": "main",
+        "path": "skills/starter-packs/knowledge-base/knowledge-base"
       },
       "author": "",
       "license": "",
-      "sizeKB": 8,
+      "sizeKB": 9,
       "needsNodeModules": false,
-      "sha256": "a0641152b0dc5dd204200aa3c282d609b7fc03d86eb701f804df18a859b675bc"
+      "sha256": "63d47bc21d48da4d9a1f1b9146106ab01230fb3480718ad3a8c20d547f1718ba"
     },
     {
       "name": "learn-codebase",
@@ -1726,7 +1689,7 @@
         "type": "github",
         "repo": "ktaletsk/learn-codebase",
         "ref": "main",
-        "path": ""
+        "path": "."
       },
       "author": "",
       "license": "",
@@ -1753,12 +1716,12 @@
     {
       "name": "meal-plan",
       "root": "agents",
-      "authorship": "unknown",
+      "authorship": "third-party",
       "source": {
-        "type": "unresolved",
-        "repo": null,
-        "ref": null,
-        "path": null
+        "type": "github",
+        "repo": "ianseddon/cookbook",
+        "ref": "main",
+        "path": ".agents/skills/meal-plan"
       },
       "author": "",
       "license": "",
@@ -1769,12 +1732,12 @@
     {
       "name": "meeting-notes",
       "root": "agents",
-      "authorship": "unknown",
+      "authorship": "third-party",
       "source": {
-        "type": "unresolved",
-        "repo": null,
-        "ref": null,
-        "path": null
+        "type": "github",
+        "repo": "claude-office-skills/skills",
+        "ref": "main",
+        "path": "meeting-notes"
       },
       "author": "Claude Office Skills Contributors",
       "license": "MIT",
@@ -1801,12 +1764,12 @@
     {
       "name": "multi-agent-orchestration",
       "root": "agents",
-      "authorship": "unknown",
+      "authorship": "third-party",
       "source": {
-        "type": "unresolved",
-        "repo": null,
-        "ref": null,
-        "path": null
+        "type": "github",
+        "repo": "qodex-ai/ai-agent-skills",
+        "ref": "main",
+        "path": "skills/multi-agent-orchestration"
       },
       "author": "",
       "license": "",
@@ -1854,7 +1817,7 @@
         "type": "github",
         "repo": "claw-opus/proactive-self-improving-agent",
         "ref": "main",
-        "path": ""
+        "path": "."
       },
       "author": "yanhongxi-openclaw",
       "license": "",
@@ -1870,7 +1833,7 @@
         "type": "github",
         "repo": "JamesShi96/project-butler",
         "ref": "main",
-        "path": ""
+        "path": "."
       },
       "author": "",
       "license": "",
@@ -1890,19 +1853,19 @@
       },
       "author": "",
       "license": "",
-      "sizeKB": 55,
+      "sizeKB": 70,
       "needsNodeModules": false,
-      "sha256": "a17383bfb1448637ac1f757ad891ddb9676fa30b0eff620200f0e1cbc0cc0d50"
+      "sha256": "dcd4803e61e913e6fc27294184cd3a71f09f5e924ff20c8a9a20173e7b3c2bcf"
     },
     {
       "name": "spreadsheet",
       "root": "agents",
-      "authorship": "unknown",
+      "authorship": "third-party",
       "source": {
-        "type": "unresolved",
-        "repo": null,
-        "ref": null,
-        "path": null
+        "type": "github",
+        "repo": "jasonkneen/openclicky",
+        "ref": "main",
+        "path": "AppResources/OpenClicky/OpenClickyBundledSkills/spreadsheet"
       },
       "author": "",
       "license": "",

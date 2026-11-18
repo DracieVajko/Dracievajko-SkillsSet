@@ -133,24 +133,34 @@ foreach ($skill in $data.skills) {
         else {
             $repoName = ($skill.source.repo -replace '/', '__')
             $cloneDir = Join-Path $Cache $repoName
+            $isRootSkill = ($skill.source.path -eq '.' -or [string]::IsNullOrWhiteSpace($skill.source.path))
             if (-not (Test-Path -LiteralPath (Join-Path $cloneDir '.git'))) {
                 New-Item -ItemType Directory -Path $Cache -Force | Out-Null
                 Write-Host "  cloning $($skill.source.repo) (blobless)"
                 & git clone --quiet --depth 1 --filter=blob:none --no-checkout "https://github.com/$($skill.source.repo).git" $cloneDir
                 if ($LASTEXITCODE -ne 0) { throw "git clone failed for $($skill.source.repo)" }
             }
-            & git -C $cloneDir sparse-checkout init --cone 2>$null | Out-Null
-            & git -C $cloneDir sparse-checkout set $skill.source.path 2>$null | Out-Null
+            if (-not $isRootSkill) {
+                & git -C $cloneDir sparse-checkout init --cone 2>$null | Out-Null
+                & git -C $cloneDir sparse-checkout set $skill.source.path 2>$null | Out-Null
+            }
             & git -C $cloneDir checkout --quiet $skill.source.ref 2>$null | Out-Null
             if ($LASTEXITCODE -ne 0) {
                 & git -C $cloneDir checkout --quiet 2>$null | Out-Null
             }
-            $sourceDir = Join-Path $cloneDir ($skill.source.path -replace '/', '\')
+            $sourceDir = if ($isRootSkill) { $cloneDir } else { Join-Path $cloneDir ($skill.source.path -replace '/', '\') }
             if (-not (Test-Path -LiteralPath $sourceDir -PathType Container)) {
                 throw "upstream folder not found after checkout: $($skill.source.repo)/$($skill.source.path)"
             }
             if ($exists) { Remove-Item -LiteralPath $dest -Recurse -Force }
-            Copy-Item -LiteralPath $sourceDir -Destination $dest -Recurse -Force -Exclude 'node_modules'
+            if ($isRootSkill) {
+                New-Item -ItemType Directory -Path $dest -Force | Out-Null
+                Get-ChildItem -LiteralPath $sourceDir -Force |
+                    Where-Object { $_.Name -notin @('.git', 'node_modules') } |
+                    Copy-Item -Destination $dest -Recurse -Force
+            } else {
+                Copy-Item -LiteralPath $sourceDir -Destination $dest -Recurse -Force -Exclude 'node_modules'
+            }
         }
 
         $hash = Get-FileHashSafe (Join-Path $dest 'SKILL.md')

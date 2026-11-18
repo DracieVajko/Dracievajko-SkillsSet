@@ -597,7 +597,7 @@
         "type": "github",
         "repo": "robbin/android-adb-control",
         "ref": "main",
-        "path": "SKILL.md"
+        "path": "."
       },
       "author": "",
       "license": "MIT",
@@ -616,7 +616,7 @@
         "type": "github",
         "repo": "dpconde/claude-android-skill",
         "ref": "main",
-        "path": "SKILL.md"
+        "path": "."
       },
       "author": "",
       "license": "",
@@ -641,7 +641,7 @@
       "license": "",
       "sizeKB": 0,
       "needsNodeModules": false,
-      "sha256": "5dafd0c44a3aabf11cae5bcb34f6fcc24dfa5c01ba6e0d3176bce997f4d68bc8",
+      "sha256": "cc5e2166c484b2c297e8253f56e7525e5031f81d66101ca4e760ef378ea6bad0",
       "machines": [
         "randall"
       ]
@@ -855,7 +855,7 @@
       "license": "",
       "sizeKB": 0,
       "needsNodeModules": false,
-      "sha256": "355bc853d3a8db157c6415c9197bef4ffc36d75bf17b1f3db4e8b6d32386e6f2",
+      "sha256": "61a7ef918652108c76a3fd01e02dd92d39996c6b46d4cb2819cbd03f6c45e46a",
       "machines": [
         "dracievajko",
         "randall"
@@ -864,12 +864,12 @@
     {
       "name": "browser-automation",
       "root": "agents",
-      "authorship": "unknown",
+      "authorship": "third-party",
       "source": {
-        "type": "unresolved",
-        "repo": null,
-        "ref": null,
-        "path": null
+        "type": "github",
+        "repo": "FNOSP/fnos-dsh",
+        "ref": "main",
+        "path": "plugins/dsh-midscene-plugin/skills/browser-automation"
       },
       "author": "",
       "license": "",
@@ -934,7 +934,7 @@
       "license": "",
       "sizeKB": 0,
       "needsNodeModules": false,
-      "sha256": "47f4e52c21694def9c7c11cbfbf891ca35eac7a93e395797515be3c8a409ae50",
+      "sha256": "9c921a8d88138a41401d8897ca1bb852088ab1b7b605cdd04edc13e3e8aab6dd",
       "machines": [
         "randall"
       ]
@@ -953,7 +953,7 @@
       "license": "MIT",
       "sizeKB": 0,
       "needsNodeModules": false,
-      "sha256": "7ac164f0f22db9affdbd902da6fe4fe2af48eb637d41e646869fb8907094067a",
+      "sha256": "f65c4468751bb509f4ff78b791dfbc664dfe6191d36d04626c92ed8c2174293b",
       "machines": [
         "dracievajko",
         "randall"
@@ -1051,7 +1051,7 @@
       "license": "MIT",
       "sizeKB": 0,
       "needsNodeModules": false,
-      "sha256": "9bd8dbe72b51ab73c2907ceb6700e040867000acf2a42f610db114cd46891914",
+      "sha256": "9dc712996f743d1b48e6f57aec344872fd81f6af547d753e5348d91c5b60c56c",
       "machines": [
         "dracievajko",
         "randall"
@@ -1137,12 +1137,12 @@
     {
       "name": "design-taste-frontend",
       "root": "agents",
-      "authorship": "unknown",
+      "authorship": "third-party",
       "source": {
-        "type": "unresolved",
-        "repo": null,
-        "ref": null,
-        "path": null
+        "type": "github",
+        "repo": "compozy/compozy",
+        "ref": "main",
+        "path": "docs/design/opendesign/.agents/skills/design-taste-frontend"
       },
       "author": "",
       "license": "",
@@ -1156,18 +1156,18 @@
     {
       "name": "desloppify",
       "root": "opencode",
-      "authorship": "unknown",
+      "authorship": "third-party",
       "source": {
-        "type": "unresolved",
-        "repo": null,
-        "ref": null,
-        "path": null
+        "type": "github",
+        "repo": "peteromallet/desloppify",
+        "ref": "main",
+        "path": "desloppify/data/global"
       },
       "author": "",
       "license": "",
       "sizeKB": 0,
       "needsNodeModules": false,
-      "sha256": "3f0e1e8437a0ba929347ec7106d5f39f8893ae319e57b91a5028b9cb1d001c2d",
+      "sha256": "8a8ad97d4299f476205d68c84368235722007c3f76f336f9ec021efa96f4cacb",
       "machines": [
         "randall"
       ]
@@ -1194,12 +1194,12 @@
     {
       "name": "doc",
       "root": "agents",
-      "authorship": "unknown",
+      "authorship": "third-party",
       "source": {
-        "type": "unresolved",
-        "repo": null,
-        "ref": null,
-        "path": null
+        "type": "github",
+        "repo": "letta-ai/skills",
+        "ref": "main",
+        "path": "tools/doc"
       },
       "author": "",
       "license": "",
@@ -1660,18 +1660,18 @@
     {
       "name": "gws-gmail",
       "root": "agents",
-      "authorship": "unknown",
+      "authorship": "third-party",
       "source": {
-        "type": "unresolved",
-        "repo": null,
-        "ref": null,
-        "path": null
+        "type": "github",
+        "repo": "JetBrains/skills",
+        "ref": "main",
+        "path": "gws-gmail"
       },
       "author": "",
       "license": "",
       "sizeKB": 0,
       "needsNodeModules": false,
-      "sha256": "d37f41ad13fd3467d430e60dfb985d7818ef6976bae40182f8e46a410b8caa16",
+      "sha256": "18f676bb7b0bfa26a4ea841e83512cdaefe5128a56cd20fb4980641c5f2d5d34",
       "machines": [
         "randall"
       ]
@@ -1684,7 +1684,7 @@
         "type": "github",
         "repo": "OSideMedia/higgsfield-ai-prompt-skill",
         "ref": "main",
-        "path": "SKILL.md"
+        "path": "."
       },
       "author": "",
       "license": "",
@@ -1698,12 +1698,12 @@
     {
       "name": "home-assistant",
       "root": "agents",
-      "authorship": "unknown",
+      "authorship": "third-party",
       "source": {
-        "type": "unresolved",
-        "repo": null,
-        "ref": null,
-        "path": null
+        "type": "github",
+        "repo": "balloob/llm-skills",
+        "ref": "main",
+        "path": "home-assistant"
       },
       "author": "",
       "license": "",
@@ -1717,18 +1717,18 @@
     {
       "name": "humanizer",
       "root": "agents",
-      "authorship": "unknown",
+      "authorship": "third-party",
       "source": {
-        "type": "unresolved",
-        "repo": null,
-        "ref": null,
-        "path": null
+        "type": "github",
+        "repo": "blader/humanizer",
+        "ref": "main",
+        "path": "."
       },
       "author": "",
       "license": "MIT",
       "sizeKB": 0,
       "needsNodeModules": false,
-      "sha256": "0612f1dfb1672b0ea9b97e139bf1f06cabe98d8b27424fe8ff01e1fb4cc99cad",
+      "sha256": "804a119e924ac30295b298213e0b71b3e38b2667b8ef4fb7b69e9246369b9045",
       "machines": [
         "randall"
       ]
@@ -1795,18 +1795,18 @@
     {
       "name": "knowledge-base",
       "root": "agents",
-      "authorship": "unknown",
+      "authorship": "third-party",
       "source": {
-        "type": "unresolved",
-        "repo": null,
-        "ref": null,
-        "path": null
+        "type": "github",
+        "repo": "inkeep/open-knowledge-skills",
+        "ref": "main",
+        "path": "skills/starter-packs/knowledge-base/knowledge-base"
       },
       "author": "",
       "license": "",
       "sizeKB": 0,
       "needsNodeModules": false,
-      "sha256": "a0641152b0dc5dd204200aa3c282d609b7fc03d86eb701f804df18a859b675bc",
+      "sha256": "63d47bc21d48da4d9a1f1b9146106ab01230fb3480718ad3a8c20d547f1718ba",
       "machines": [
         "randall"
       ]
@@ -1819,7 +1819,7 @@
         "type": "github",
         "repo": "ktaletsk/learn-codebase",
         "ref": "main",
-        "path": "SKILL.md"
+        "path": "."
       },
       "author": "",
       "license": "",
@@ -1872,12 +1872,12 @@
     {
       "name": "meal-plan",
       "root": "agents",
-      "authorship": "unknown",
+      "authorship": "third-party",
       "source": {
-        "type": "unresolved",
-        "repo": null,
-        "ref": null,
-        "path": null
+        "type": "github",
+        "repo": "ianseddon/cookbook",
+        "ref": "main",
+        "path": ".agents/skills/meal-plan"
       },
       "author": "",
       "license": "",
@@ -1948,12 +1948,12 @@
     {
       "name": "multi-agent-orchestration",
       "root": "agents",
-      "authorship": "unknown",
+      "authorship": "third-party",
       "source": {
-        "type": "unresolved",
-        "repo": null,
-        "ref": null,
-        "path": null
+        "type": "github",
+        "repo": "qodex-ai/ai-agent-skills",
+        "ref": "main",
+        "path": "skills/multi-agent-orchestration"
       },
       "author": "",
       "license": "",
@@ -1997,7 +1997,7 @@
       "license": "",
       "sizeKB": 0,
       "needsNodeModules": false,
-      "sha256": "d108cf2b36355ab37eb5962933f4d09785ec002f3105c506129320209306b9d2",
+      "sha256": "d1c7caf5f35eb7d37877dd7fc33a095037be2b34fb5d2f7f4d43bde3165bb4ee",
       "machines": [
         "randall"
       ]
@@ -2088,7 +2088,7 @@
         "type": "github",
         "repo": "claw-opus/proactive-self-improving-agent",
         "ref": "main",
-        "path": "SKILL.md"
+        "path": "."
       },
       "author": "yanhongxi-openclaw",
       "license": "",
@@ -2107,7 +2107,7 @@
         "type": "github",
         "repo": "JamesShi96/project-butler",
         "ref": "main",
-        "path": "SKILL.md"
+        "path": "."
       },
       "author": "",
       "license": "",
@@ -2271,7 +2271,7 @@
       "license": "",
       "sizeKB": 0,
       "needsNodeModules": false,
-      "sha256": "a17383bfb1448637ac1f757ad891ddb9676fa30b0eff620200f0e1cbc0cc0d50",
+      "sha256": "dcd4803e61e913e6fc27294184cd3a71f09f5e924ff20c8a9a20173e7b3c2bcf",
       "machines": [
         "dracievajko",
         "randall"
@@ -2280,12 +2280,12 @@
     {
       "name": "spreadsheet",
       "root": "agents",
-      "authorship": "unknown",
+      "authorship": "third-party",
       "source": {
-        "type": "unresolved",
-        "repo": null,
-        "ref": null,
-        "path": null
+        "type": "github",
+        "repo": "jasonkneen/openclicky",
+        "ref": "main",
+        "path": "AppResources/OpenClicky/OpenClickyBundledSkills/spreadsheet"
       },
       "author": "",
       "license": "",
@@ -2329,7 +2329,7 @@
       "license": "",
       "sizeKB": 0,
       "needsNodeModules": false,
-      "sha256": "808fc5717aa88ad65efff312b11c186294d3e6ee301afb584e2f86599b137787",
+      "sha256": "51c6435d98c83c42c96ba7c35725a0b2c376cd487fb1a4e6bd0ddbe7e33ef202",
       "machines": [
         "randall"
       ]
@@ -2791,7 +2791,7 @@
       "license": "",
       "sizeKB": 0,
       "needsNodeModules": false,
-      "sha256": "48508f44bbfd7d24b029fbf3a314f3cd14c9615599059366e922f47b8dc08cf2",
+      "sha256": "a6c67c1900064347c2a329990dd3c555657c51c3ec53b259a08aa01a2c26139a",
       "machines": [
         "randall"
       ]

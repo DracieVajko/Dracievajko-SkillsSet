@@ -378,8 +378,8 @@ class CatalogDataTests(unittest.TestCase):
     def test_items_authorship_partition(self):
         items = self.load('items.json')
         counts = Counter(i['authorship'] for i in items)
-        self.assertEqual(len(items), 254)
-        self.assertEqual(counts['link-only'], 229)
+        self.assertEqual(len(items), 265)
+        self.assertEqual(counts['link-only'], 240)
         self.assertEqual(counts['original'], 25)
         self.assertEqual(set(counts), {'link-only', 'original'})
 
@@ -388,9 +388,9 @@ class CatalogDataTests(unittest.TestCase):
                   if u.strip() and not u.strip().startswith('#')]
         pinned = [u for u in (self.links / 'pinned-links.txt').read_text(encoding='utf-8').splitlines()
                   if u.strip() and not u.strip().startswith('#')]
-        self.assertEqual(len(stable), 182)
+        self.assertEqual(len(stable), 193)
         self.assertEqual(len(pinned), 47)
-        self.assertEqual(len(stable) + len(pinned), 229)
+        self.assertEqual(len(stable) + len(pinned), 240)
 
     def test_catalog_link_urls_match_link_files(self):
         items = self.load('items.json')
@@ -472,7 +472,7 @@ class CatalogDataTests(unittest.TestCase):
 
     def test_docs_index_has_expected_total(self):
         index = (self.repo / 'docs' / 'CATEGORY_INDEX.md').read_text(encoding='utf-8')
-        self.assertIn('Total: **229** references.', index)
+        self.assertIn('Total: **240** references.', index)
         self.assertIn('## Original Local Skills', index)
         self.assertIn('## External Skills (Links Only)', index)
 
@@ -513,7 +513,9 @@ class SyncCollectionTests(unittest.TestCase):
                 continue
             repo_name = item['repository'].rstrip('/').split('github.com/')[-1]
             path = item.get('path') or ''
-            if path.endswith('/SKILL.md'):
+            if path == 'SKILL.md':
+                path = '.'
+            elif path.endswith('/SKILL.md'):
                 path = path[: -len('/SKILL.md')]
             cls.catalog_sources.setdefault(
                 item['name'],

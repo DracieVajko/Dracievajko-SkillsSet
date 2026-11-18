@@ -149,7 +149,12 @@ def load_catalog() -> dict[str, dict]:
         if not m:
             continue
         path = item.get("path") or ""
-        folder = path[: -len("/SKILL.md")] if path.endswith("/SKILL.md") else ""
+        if path == "SKILL.md":
+            folder = "."
+        elif path.endswith("/SKILL.md"):
+            folder = path[: -len("/SKILL.md")]
+        else:
+            folder = ""
         by_name.setdefault(
             name,
             {
