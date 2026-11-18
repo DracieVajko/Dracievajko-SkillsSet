@@ -36,10 +36,10 @@ error. It never falls back to an empty collection.
 
 | What | Count | Where |
 |------|------:|-------|
-| Catalog records | 237 | `catalog/items.json` |
+| Catalog records | 252 | `catalog/items.json` |
 | Catalog records with `authorship: original` | 25 |  |
-| Catalog records with `authorship: link-only` | 212 |  |
-| Stable-branch links | 165 | `catalog/links/skill-links.txt` |
+| Catalog records with `authorship: link-only` | 227 |  |
+| Stable-branch links | 180 | `catalog/links/skill-links.txt` |
 | Pinned links | 47 | `catalog/links/pinned-links.txt` |
 | Bundled third-party skills | 7 | `skills/third-party/` - local copies of upstream `SKILL.md` files |
 

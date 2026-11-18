@@ -129,11 +129,25 @@
       "credentials": "unknown while disabled"
     },
     {
+      "id": "ticktick-connector",
+      "namespace": null,
+      "purpose": "TickTick tasks, projects and habits through a Cindy plugin plus an OAuth MCP server.",
+      "setup": "install from the GitHub release",
+      "credentials": "TickTick OAuth authorization",
+      "repo": "https://github.com/DracieVajko/ticktick-connector",
+      "ownership": "own",
+      "installed": false,
+      "note": "Our own plugin; not installed on this computer, listed so another computer can pick it up."
+    },
+    {
       "id": "tuya-home",
       "namespace": "local",
       "purpose": "Tuya / Smart Life devices: lights, plugs, air conditioners, sensors.",
       "setup": "local development copy; install from its source folder on the target machine",
-      "credentials": "Tuya API key starting with sk-"
+      "credentials": "Tuya API key starting with sk-",
+      "repo": "https://github.com/DracieVajko/tuya-home-connector",
+      "ownership": "own",
+      "note": "Our own plugin. Install from the GitHub release or build from source; the local dev copy is optional."
     }
   ]
 }

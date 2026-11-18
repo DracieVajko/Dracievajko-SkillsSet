@@ -95,6 +95,31 @@ def repo_hash(source: dict) -> str:
     return hashlib.sha256(raw).hexdigest()
 
 
+def load_catalog_sources() -> dict[str, dict]:
+    """name -> upstream source for every link-only catalog record."""
+    path = SYNC_DIR.parent / "catalog" / "items.json"
+    if not path.is_file():
+        return {}
+    sources = {}
+    for item in json.loads(path.read_text(encoding="utf-8")):
+        if item.get("authorship") != "link-only" or not item.get("repository"):
+            continue
+        repo = item["repository"].rstrip("/").split("github.com/")[-1]
+        folder = item.get("path") or ""
+        if folder.endswith("/SKILL.md"):
+            folder = folder[: -len("/SKILL.md")]
+        sources.setdefault(
+            item["name"],
+            {
+                "type": "github",
+                "repo": repo,
+                "ref": item.get("branch") or "main",
+                "path": folder,
+            },
+        )
+    return sources
+
+
 def merge() -> tuple[dict[str, dict], set[str], dict[str, set[str]]]:
     """Merge existing collection and every snapshot without losing anything."""
     machines = load_machines()
@@ -175,6 +200,15 @@ def build() -> dict:
     skills, known_machines, app_managed = merge()
     if not skills:
         raise SystemExit("no collection and no machine snapshots in sync/machines/")
+
+    # A skill recorded as unresolved may have gained a catalog record since the
+    # snapshot was taken; the catalog is the authority, so reclassify from it.
+    catalog_sources = load_catalog_sources()
+    for name, item in skills.items():
+        if item["source"].get("type") == "unresolved" and name in catalog_sources:
+            item["source"] = catalog_sources[name]
+            if item.get("authorship") != "original":
+                item["authorship"] = "third-party"
 
     out_skills = []
     for name in sorted(skills):

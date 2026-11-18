@@ -54,7 +54,7 @@ Third-party skills referenced by upstream URL only; no local copy is bundled. So
 
 Entries with a short description have curated metadata in `catalog/items.json`; entries without one are link-only.
 
-Total: **212** references.
+Total: **227** references.
 
 ### Agents365-ai/drawio-skill (1)
 
@@ -94,6 +94,10 @@ Total: **212** references.
 - [`transitions-polish`](https://raw.githubusercontent.com/Jakubantalik/transitions.dev/main/skills/transitions-polish/SKILL.md)
 - [`transitions-ui-generation`](https://raw.githubusercontent.com/Jakubantalik/transitions.dev/main/skills/transitions-ui-generation/SKILL.md)
 
+### JamesShi96/project-butler (1)
+
+- [`main`](https://raw.githubusercontent.com/JamesShi96/project-butler/main/SKILL.md)
+
 ### Jeffallan/claude-skills (14)
 
 - [`code-documenter`](https://raw.githubusercontent.com/Jeffallan/claude-skills/02b05028ba6c93f7aed45314b15c0dd5abead9d6/skills/code-documenter/SKILL.md) — Generates, formats, and validates technical documentation — including docstrings, OpenAPI/Swagger specs, JSDoc annotations, doc portals, and user guides. Use when adding docstrings to functions or classes, creating API documentation, building documentation sites, or writing tutorials and user guides. Invoke for OpenAPI/Swagger specs, JSDoc, doc portals, getting started guides.
@@ -110,6 +114,10 @@ Total: **212** references.
 - [`test-master`](https://raw.githubusercontent.com/Jeffallan/claude-skills/main/skills/test-master/SKILL.md)
 - [`typescript-pro`](https://raw.githubusercontent.com/Jeffallan/claude-skills/main/skills/typescript-pro/SKILL.md)
 - [`wordpress-pro`](https://raw.githubusercontent.com/Jeffallan/claude-skills/02b05028ba6c93f7aed45314b15c0dd5abead9d6/skills/wordpress-pro/SKILL.md) — Develops custom WordPress themes and plugins, creates and registers Gutenberg blocks and block patterns, configures WooCommerce stores, implements WordPress REST API endpoints, applies security hardening (nonces, sanitization, escaping, capability checks), and optimizes performance through caching and query tuning. Use when building WordPress themes, writing plugins, customizing Gutenberg blocks, extending WooCommerce, working with ACF, using the WordPress REST API, applying hooks and filters, or improving WordPress performance and security.
+
+### NVlabs/Skill2Env (1)
+
+- [`summarize-meeting`](https://raw.githubusercontent.com/NVlabs/Skill2Env/main/SkillHub/skills/pawel-huryn/summarize-meeting/SKILL.md)
 
 ### addyosmani/agent-skills (25)
 
@@ -154,6 +162,14 @@ Total: **212** references.
 - [`webapp-testing`](https://raw.githubusercontent.com/anthropics/skills/main/skills/webapp-testing/SKILL.md)
 - [`xlsx`](https://raw.githubusercontent.com/anthropics/skills/main/skills/xlsx/SKILL.md)
 
+### claude-office-skills/skills (1)
+
+- [`dcf-valuation`](https://raw.githubusercontent.com/claude-office-skills/skills/main/dcf-valuation/SKILL.md)
+
+### claw-opus/proactive-self-improving-agent (1)
+
+- [`main`](https://raw.githubusercontent.com/claw-opus/proactive-self-improving-agent/main/SKILL.md)
+
 ### composio-community/opencode-skills (13)
 
 - [`blender-geometry-nodes`](https://raw.githubusercontent.com/composio-community/opencode-skills/5076f6673e5bf8b1f46dc5e934d1e3dd37250e10/skills/blender-geometry-nodes/SKILL.md) — Workflow for creating procedural systems in Blender using Geometry Nodes, procedural materials, node-based modeling, and non-destructive generation techniques.
@@ -177,6 +193,10 @@ Total: **212** references.
 - [`analytics`](https://raw.githubusercontent.com/coreyhaines31/marketingskills/main/skills/analytics/SKILL.md) — When the user wants to set up, improve, or audit analytics tracking and measurement. Also use when the user mentions "set up tracking," "GA4," "Google Analytics," "event tracking," "UTM parameters," "tag manager," "GTM," "analytics implementation," "tracking plan," "how do I measure this," "Mixpanel," "Segment," "are my events firing," or "analytics isn't working." Use this whenever someone asks how to know if something is working or wants to measure marketing results. For getting conversions into ad platforms (pixels, conversion tags, CAPI, server-side) and verifying they arrived, see conversion-tracking. For choosing attribution models, comparing multi-touch/MMM/incrementality, or reconciling conflicting numbers across tools, see attribution. For A/B test measurement, see ab-testing. Rate metrics divide matching closed windows — never full-period spend by partial-period results.
 - [`copywriting`](https://raw.githubusercontent.com/coreyhaines31/marketingskills/main/skills/copywriting/SKILL.md) — When the user wants to write, rewrite, or improve marketing copy for any page, including homepage, landing pages, pricing pages, feature pages, about pages, or product pages. Also use when the user says "write copy for," "improve this copy," "rewrite this page," "marketing copy," "headline help," "CTA copy," "value proposition," "tagline," "hero section copy," "this copy is weak," "this sounds like AI," "AI slop," "make it sound human," or "help me describe my product." Drafts never use AI tells like "it's not X, it's Y" reveals, "no X, no Y, no Z" lists, or sentences that trail into extra comma clauses. For email copy, see emails. For popup copy, see popups. For editing existing copy, see copy-editing. For the offer underneath the copy (bonuses, guarantees, value framing), see offers. Claims must be supportable, and a declined claim names the evidence that would unlock it. Diagnoses the input first (blank brief, real voice, or point edit) and changes only what it calls for.
 
+### davila7/claude-code-templates (1)
+
+- [`web-artifacts-builder`](https://raw.githubusercontent.com/davila7/claude-code-templates/main/cli-tool/components/skills/utilities/web-artifacts-builder/SKILL.md)
+
 ### diegosouzapw/OmniRoute (12)
 
 - [`cli-eval`](https://raw.githubusercontent.com/diegosouzapw/OmniRoute/release/v3.8.52/skills/cli-eval/SKILL.md)
@@ -191,6 +211,10 @@ Total: **212** references.
 - [`omni-providers`](https://raw.githubusercontent.com/diegosouzapw/OmniRoute/release/v3.8.52/skills/omni-providers/SKILL.md)
 - [`omni-resilience`](https://raw.githubusercontent.com/diegosouzapw/OmniRoute/release/v3.8.52/skills/omni-resilience/SKILL.md)
 - [`omni-usage-logs`](https://raw.githubusercontent.com/diegosouzapw/OmniRoute/release/v3.8.52/skills/omni-usage-logs/SKILL.md)
+
+### dpconde/claude-android-skill (1)
+
+- [`main`](https://raw.githubusercontent.com/dpconde/claude-android-skill/main/SKILL.md)
 
 ### firecrawl/firecrawl-workflows (3)
 
@@ -213,6 +237,10 @@ Total: **212** references.
 - [`gsap-timeline`](https://raw.githubusercontent.com/greensock/gsap-skills/main/skills/gsap-timeline/SKILL.md)
 - [`gsap-utils`](https://raw.githubusercontent.com/greensock/gsap-skills/main/skills/gsap-utils/SKILL.md)
 
+### highlow12/Beaura (1)
+
+- [`design-catalogue`](https://raw.githubusercontent.com/highlow12/Beaura/main/.agents/skills/design-catalogue/SKILL.md)
+
 ### imbad0202/academic-research-skills (5)
 
 - [`academic-paper`](https://raw.githubusercontent.com/imbad0202/academic-research-skills/c67a7be53f23d9dbba4030bbcd6f5ccfeda3afa9/academic-paper/SKILL.md) — 12-agent academic paper writing pipeline. 11 modes (full/plan/outline/revision/revision-coach/abstract/lit-review/format-convert/citation-check/disclosure/rebuttal-audit). 6 paper types, 5 citation formats, bilingual abstracts, LaTeX/DOCX-via-Pandoc/PDF output. Style Calibration + Writing Quality Check + Anti-Patterns with IRON RULE markers. Triggers: write paper, academic paper, guide my paper, parse reviews, I got reviewer comments, revision roadmap, should we push back, conference rebuttal, grant panel response, audit my rebuttal, check my response draft, AI disclosure, check citations, citation check, check my references, verify references, look over the refs, 寫論文, 學術論文, 引導我寫論文, 審查意見, 我收到審查意見, 修訂路線圖, 評估回覆, 檢查引用, 引用檢查, 檢查參考文獻, 核對文獻, 논문 작성, 초록 작성, 논문 수정, 논문 계획을 도와줘, 심사 의견을 받았어, 심사 의견 반영, 답변서 점검, AI 사용 고지, 인용 확인, 인용 형식 검사, enmendar mi artículo, redactar artículo, guía mi artículo, analizar reseñas, auditar mi respuesta, verificar borrador de respuesta, verificar citas, divulgación de IA.
@@ -225,9 +253,21 @@ Total: **212** references.
 
 - [`make-interfaces-feel-better`](https://raw.githubusercontent.com/jakubkrehel/make-interfaces-feel-better/main/skills/make-interfaces-feel-better/SKILL.md)
 
+### jwynia/agent-skills (1)
+
+- [`dependency-scan`](https://raw.githubusercontent.com/jwynia/agent-skills/main/skills/tech/security/dependency-scan/SKILL.md)
+
+### ktaletsk/learn-codebase (1)
+
+- [`main`](https://raw.githubusercontent.com/ktaletsk/learn-codebase/main/SKILL.md)
+
 ### lackeyjb/playwright-skill (1)
 
 - [`playwright-skill`](https://raw.githubusercontent.com/lackeyjb/playwright-skill/main/skills/playwright-skill/SKILL.md)
+
+### langchain-ai/deepagents (1)
+
+- [`web-research`](https://raw.githubusercontent.com/langchain-ai/deepagents/main/libs/code/examples/skills/web-research/SKILL.md)
 
 ### langchain-ai/design-agent (1)
 
@@ -236,6 +276,10 @@ Total: **212** references.
 ### larksuite/cli (1)
 
 - [`lark-markdown`](https://raw.githubusercontent.com/larksuite/cli/main/skills/lark-markdown/SKILL.md) — 飞书 Markdown：查看、创建、上传、编辑和比较飞书中的原生 Markdown 文件。当用户要操作飞书 Markdown 文件，或比较其远端版本及本地草稿时使用。纯本地 Markdown 文件操作不触发本 skill。不负责将 Markdown 导入为飞书在线文档，也不负责文件搜索、权限、评论、移动、删除等云空间管理操作。
+
+### lioensky/VCPToolBox (1)
+
+- [`minimax-docx`](https://raw.githubusercontent.com/lioensky/VCPToolBox/main/Plugin/SkillBridge/SKILL/minimax-docx/SKILL.md)
 
 ### mattpocock/skills (17)
 
@@ -269,13 +313,18 @@ Total: **212** references.
 
 - [`karpathy-guidelines`](https://raw.githubusercontent.com/multica-ai/andrej-karpathy-skills/main/skills/karpathy-guidelines/SKILL.md)
 
-### nextlevelbuilder/ui-ux-pro-max-skill (5)
+### nextlevelbuilder/ui-ux-pro-max-skill (6)
 
 - [`banner-design`](https://raw.githubusercontent.com/nextlevelbuilder/ui-ux-pro-max-skill/main/.claude/skills/banner-design/SKILL.md)
 - [`brand`](https://raw.githubusercontent.com/nextlevelbuilder/ui-ux-pro-max-skill/main/.claude/skills/brand/SKILL.md) — Brand voice, visual identity, messaging frameworks, asset management, brand consistency. Activate for branded content, tone of voice, marketing assets, brand compliance, style guides.
 - [`design`](https://raw.githubusercontent.com/nextlevelbuilder/ui-ux-pro-max-skill/main/.claude/skills/design/SKILL.md) — Comprehensive design skill: brand identity, design tokens, UI styling, logo generation (55 styles, Gemini, Atlas Cloud, or MuAPI AI), corporate identity program (50 deliverables, CIP mockups), HTML presentations (Chart.js), banner design (22 styles, social/ads/web/print), icon design (15 styles, SVG, Gemini 3.1 Pro), social photos (HTML→screenshot, multi-platform). Actions: design logo, create CIP, generate mockups, build slides, design banner, generate icon, create social photos, social media images, brand identity, design system. Platforms: Facebook, Twitter, LinkedIn, YouTube, Instagram, Pinterest, TikTok, Threads, Google Ads.
 - [`design-system`](https://raw.githubusercontent.com/nextlevelbuilder/ui-ux-pro-max-skill/main/.claude/skills/design-system/SKILL.md) — Token architecture, component specifications, and slide generation. Three-layer tokens (primitive→semantic→component), CSS variables, spacing/typography scales, component specs, strategic slide creation. Use for design tokens, systematic design, brand-compliant presentations.
 - [`slides`](https://raw.githubusercontent.com/nextlevelbuilder/ui-ux-pro-max-skill/main/.claude/skills/slides/SKILL.md) — Create strategic HTML presentations with Chart.js, design tokens, responsive layouts, copywriting formulas, and contextual slide strategies.
+- [`ui-styling`](https://raw.githubusercontent.com/nextlevelbuilder/ui-ux-pro-max-skill/main/cli/assets/skills/ui-styling/SKILL.md)
+
+### ngduy-dev/odoo-coding-agent-playbook (1)
+
+- [`slide`](https://raw.githubusercontent.com/ngduy-dev/odoo-coding-agent-playbook/main/.agents/skills/slide/SKILL.md)
 
 ### obra/superpowers (15)
 
@@ -315,6 +364,10 @@ Total: **212** references.
 
 - [`impeccable`](https://raw.githubusercontent.com/pbakaus/impeccable/main/.agents/skills/impeccable/SKILL.md)
 
+### robbin/android-adb-control (1)
+
+- [`main`](https://raw.githubusercontent.com/robbin/android-adb-control/main/SKILL.md)
+
 ### shadcn/improve (1)
 
 - [`improve`](https://raw.githubusercontent.com/shadcn/improve/main/skills/improve/SKILL.md) — Survey any codebase as a senior advisor and produce prioritized, self-contained implementation plans for OTHER models/agents to execute. Strictly read-only on source code — never implements, fixes, or refactors anything itself. Use when asked to audit a codebase, find improvement opportunities (bugs, security, performance, test coverage, tech debt, migrations, DX), suggest features or where to take the project next (roadmap, product direction), or generate handoff plans for another agent to implement.
@@ -324,6 +377,10 @@ Total: **212** references.
 - [`common-sense-index-investing-bogle`](https://raw.githubusercontent.com/simbajigege/book2skills/main/skills/common-sense-index-investing-bogle/SKILL.md) — Apply John Bogle index investing rules for low-cost funds, asset allocation, fees, taxes, ETFs, advisers, and buy-hold discipline.
 - [`investing-from-darwin`](https://raw.githubusercontent.com/simbajigege/book2skills/main/skills/investing-from-darwin/SKILL.md) — Apply Pulak Prasad evolutionary investing rules for avoiding big losses, buying resilient quality, rejecting fragile forecasts, and being very lazy.
 - [`stock-picking-by-common-stocks-uncommon-profits`](https://raw.githubusercontent.com/simbajigege/book2skills/main/skills/stock-picking-by-common-stocks-uncommon-profits/SKILL.md) — Apply Philip Fisher's growth stock investment framework from Common Stocks and Uncommon Profits. Use this skill whenever a user wants to evaluate whether a company is a worthy long-term growth investment, assess management quality, gather competitive intelligence via scuttlebutt, decide when to buy an outstanding stock at the right moment, or decide whether to hold or sell a current position. Covers the 15 Points checklist, management depth analysis, scuttlebutt intelligence gathering, entry timing, and hold/sell decision logic. Trigger phrases: "is X a growth stock", "Fisher framework", "15 points", "scuttlebutt", "should I buy X", "should I sell X", "management quality of X", "growth stock analysis".
+
+### sunkaifei/FlyCms (1)
+
+- [`avoid-ai-design`](https://raw.githubusercontent.com/sunkaifei/FlyCms/master/.agents/skills/avoid-ai-design/SKILL.md)
 
 ### tjboudreaux/cc-thinking-skills (28)
 

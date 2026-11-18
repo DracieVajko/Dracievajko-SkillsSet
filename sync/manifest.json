@@ -540,6 +540,7 @@
     "opendesign-trial",
     "ponytail",
     "prompt-optimizer",
+    "ticktick-connector",
     "tuya-home"
   ],
   "opencodePlugins": [
@@ -572,12 +573,12 @@
     {
       "name": "ai-vibe-slides",
       "root": "agents",
-      "authorship": "unknown",
+      "authorship": "third-party",
       "source": {
-        "type": "unresolved",
-        "repo": null,
-        "ref": null,
-        "path": null
+        "type": "github",
+        "repo": "ngduy-dev/odoo-coding-agent-playbook",
+        "ref": "main",
+        "path": ".agents/skills/slide"
       },
       "author": "",
       "license": "",
@@ -591,12 +592,12 @@
     {
       "name": "android-adb-control",
       "root": "agents",
-      "authorship": "unknown",
+      "authorship": "third-party",
       "source": {
-        "type": "unresolved",
-        "repo": null,
-        "ref": null,
-        "path": null
+        "type": "github",
+        "repo": "robbin/android-adb-control",
+        "ref": "main",
+        "path": "SKILL.md"
       },
       "author": "",
       "license": "MIT",
@@ -610,12 +611,12 @@
     {
       "name": "android-development",
       "root": "agents",
-      "authorship": "unknown",
+      "authorship": "third-party",
       "source": {
-        "type": "unresolved",
-        "repo": null,
-        "ref": null,
-        "path": null
+        "type": "github",
+        "repo": "dpconde/claude-android-skill",
+        "ref": "main",
+        "path": "SKILL.md"
       },
       "author": "",
       "license": "",
@@ -687,12 +688,12 @@
     {
       "name": "avoid-ai-design",
       "root": "agents",
-      "authorship": "unknown",
+      "authorship": "third-party",
       "source": {
-        "type": "unresolved",
-        "repo": null,
-        "ref": null,
-        "path": null
+        "type": "github",
+        "repo": "sunkaifei/FlyCms",
+        "ref": "main",
+        "path": ".agents/skills/avoid-ai-design"
       },
       "author": "",
       "license": "MIT",
@@ -1020,12 +1021,12 @@
     {
       "name": "dcf-valuation",
       "root": "agents",
-      "authorship": "unknown",
+      "authorship": "third-party",
       "source": {
-        "type": "unresolved",
-        "repo": null,
-        "ref": null,
-        "path": null
+        "type": "github",
+        "repo": "claude-office-skills/skills",
+        "ref": "main",
+        "path": "dcf-valuation"
       },
       "author": "claude-office-skills",
       "license": "MIT",
@@ -1098,12 +1099,12 @@
     {
       "name": "dependency-scan",
       "root": "agents",
-      "authorship": "unknown",
+      "authorship": "third-party",
       "source": {
-        "type": "unresolved",
-        "repo": null,
-        "ref": null,
-        "path": null
+        "type": "github",
+        "repo": "jwynia/agent-skills",
+        "ref": "main",
+        "path": "skills/tech/security/dependency-scan"
       },
       "author": "",
       "license": "MIT",
@@ -1117,12 +1118,12 @@
     {
       "name": "design-catalogue",
       "root": "agents",
-      "authorship": "unknown",
+      "authorship": "third-party",
       "source": {
-        "type": "unresolved",
-        "repo": null,
-        "ref": null,
-        "path": null
+        "type": "github",
+        "repo": "highlow12/Beaura",
+        "ref": "main",
+        "path": ".agents/skills/design-catalogue"
       },
       "author": "",
       "license": "",
@@ -1813,12 +1814,12 @@
     {
       "name": "learn-codebase",
       "root": "agents",
-      "authorship": "unknown",
+      "authorship": "third-party",
       "source": {
-        "type": "unresolved",
-        "repo": null,
-        "ref": null,
-        "path": null
+        "type": "github",
+        "repo": "ktaletsk/learn-codebase",
+        "ref": "main",
+        "path": "SKILL.md"
       },
       "author": "",
       "license": "",
@@ -1909,12 +1910,12 @@
     {
       "name": "minimax-docx",
       "root": "agents",
-      "authorship": "unknown",
+      "authorship": "third-party",
       "source": {
-        "type": "unresolved",
-        "repo": null,
-        "ref": null,
-        "path": null
+        "type": "github",
+        "repo": "lioensky/VCPToolBox",
+        "ref": "main",
+        "path": "Plugin/SkillBridge/SKILL/minimax-docx"
       },
       "author": "",
       "license": "MIT",
@@ -2082,12 +2083,12 @@
     {
       "name": "proactive-self-improving-agent",
       "root": "agents",
-      "authorship": "unknown",
+      "authorship": "third-party",
       "source": {
-        "type": "unresolved",
-        "repo": null,
-        "ref": null,
-        "path": null
+        "type": "github",
+        "repo": "claw-opus/proactive-self-improving-agent",
+        "ref": "main",
+        "path": "SKILL.md"
       },
       "author": "yanhongxi-openclaw",
       "license": "",
@@ -2101,12 +2102,12 @@
     {
       "name": "project-butler",
       "root": "agents",
-      "authorship": "unknown",
+      "authorship": "third-party",
       "source": {
-        "type": "unresolved",
-        "repo": null,
-        "ref": null,
-        "path": null
+        "type": "github",
+        "repo": "JamesShi96/project-butler",
+        "ref": "main",
+        "path": "SKILL.md"
       },
       "author": "",
       "license": "",
@@ -2298,12 +2299,12 @@
     {
       "name": "summarize-meeting",
       "root": "agents",
-      "authorship": "unknown",
+      "authorship": "third-party",
       "source": {
-        "type": "unresolved",
-        "repo": null,
-        "ref": null,
-        "path": null
+        "type": "github",
+        "repo": "NVlabs/Skill2Env",
+        "ref": "main",
+        "path": "SkillHub/skills/pawel-huryn/summarize-meeting"
       },
       "author": "",
       "license": "",
@@ -2624,12 +2625,12 @@
     {
       "name": "ui-styling",
       "root": "agents",
-      "authorship": "unknown",
+      "authorship": "third-party",
       "source": {
-        "type": "unresolved",
-        "repo": null,
-        "ref": null,
-        "path": null
+        "type": "github",
+        "repo": "nextlevelbuilder/ui-ux-pro-max-skill",
+        "ref": "main",
+        "path": "cli/assets/skills/ui-styling"
       },
       "author": "",
       "license": "MIT",
@@ -2682,12 +2683,12 @@
     {
       "name": "web-artifacts-builder",
       "root": "agents",
-      "authorship": "unknown",
+      "authorship": "third-party",
       "source": {
-        "type": "unresolved",
-        "repo": null,
-        "ref": null,
-        "path": null
+        "type": "github",
+        "repo": "davila7/claude-code-templates",
+        "ref": "main",
+        "path": "cli-tool/components/skills/utilities/web-artifacts-builder"
       },
       "author": "",
       "license": "Complete terms in LICENSE.txt",
@@ -2701,12 +2702,12 @@
     {
       "name": "web-research",
       "root": "agents",
-      "authorship": "unknown",
+      "authorship": "third-party",
       "source": {
-        "type": "unresolved",
-        "repo": null,
-        "ref": null,
-        "path": null
+        "type": "github",
+        "repo": "langchain-ai/deepagents",
+        "ref": "main",
+        "path": "libs/code/examples/skills/web-research"
       },
       "author": "",
       "license": "",
