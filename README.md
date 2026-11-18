@@ -118,8 +118,8 @@ truth.
 | `sync/collection.json` | **The collection**: every skill and plugin, how it installs, which agents see it, where it was seen, plus coverage gaps and hash drift. |
 | `sync/manifest.json` | The same collection in the schema the installer reads. This is the only install manifest, never a per-computer snapshot. |
 | `sync/cindy-plugins.json` | Plugins for Cindy, OpenCode and OpenDesign, with what each needs to be authorized again. |
-| `sync/optional.json` | Disabled skills (not installed) and removed-skill tombstones; each entry says why. |
-| `sync/prune-optional.py` | Moves disabled skills out of every agent root into `~/.config/opencode/skills-disabled/`; removed skills are already gone. |
+| `sync/optional.json` | Disabled skills (not installed); empty when everything is enabled. |
+| `sync/prune-optional.py` | Moves disabled skills out of every agent root into `~/.config/opencode/skills-disabled/`. |
 | `sync/CINDY-INSTALL.md` | Ready-to-paste prompt: installs the skills, then the plugins, then reports what still needs me. |
 | `sync/UPDATE.md` | Ready-to-paste prompt: updates a computer to the versions recorded in the collection. |
 | `sync/verify-installed.py` | Checks every installed skill against the recorded hash; `0 differ` is the success line. |

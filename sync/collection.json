@@ -21,7 +21,6 @@
     "harnesses lists every agent that sees the skill once it is installed in install.root.",
     "machines and gaps are coverage evidence: what was seen where and what a computer still needs. They are not separate collections.",
     "enabled=false means the skill stays in the catalog and this collection but is not installed; sync/optional.json records why and can re-enable it.",
-    "Names in optional.json removed[] are tombstones: they are gone from the repository and are never re-added from a machine snapshot.",
     "cindyPlugins install from the Cindy marketplace on each computer and are authorized there; sync/cindy-plugins.json lists what each one needs.",
     "opendesign-trial is the OpenDesign plugin; OpenDesign also uses prompts/system/opendesign-ui-code-audit.md.",
     "appManaged entries ship inside Cindy or Codex and are never copied."

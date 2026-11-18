@@ -30,11 +30,11 @@ matched exactly and recorded as link-only. Raw search evidence is in
 ## Final state
 
 - **108 skills in the collection**, all enabled and installed.
-- Nine duplicates were removed completely; their tombstones are in
-  `sync/optional.json` `removed[]`, so a machine snapshot cannot re-add them:
-  `creating-skills`, `summarize-meeting`, `code-reviewer`, `debugging-wizard`,
-  `penetration-testing-guide`, `web-research`, `multi-agent-orchestration`,
-  `reverse-engineering`, `generate-markdown-and-docx-documents`.
+- Nine duplicates were removed completely; they are not in the catalog, the
+  repository or any install root: `creating-skills`, `summarize-meeting`,
+  `code-reviewer`, `debugging-wizard`, `penetration-testing-guide`,
+  `web-research`, `multi-agent-orchestration`, `reverse-engineering`,
+  `generate-markdown-and-docx-documents`.
 - `sync/verify-installed.py` reports `108 match, 0 differ, 0 missing`.
 - No unresolved skills, no disabled skills and no local or cross-computer
   `drift`.

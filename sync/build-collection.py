@@ -100,21 +100,6 @@ def load_optional() -> dict[str, str]:
     }
 
 
-def load_removed() -> set[str]:
-    """Names deleted from the repository; never re-add them from a snapshot."""
-    if not OPTIONAL.is_file():
-        return set()
-    try:
-        data = json.loads(OPTIONAL.read_text(encoding="utf-8"))
-    except (OSError, json.JSONDecodeError):
-        return set()
-    return {
-        entry["name"]
-        for entry in data.get("removed", [])
-        if entry.get("name")
-    }
-
-
 def repo_hash(source: dict) -> str:
     """Hash a repository copy, so repo skills never report false upstream drift."""
     path = source.get("path")
@@ -234,8 +219,6 @@ def merge() -> tuple[dict[str, dict], set[str], dict[str, set[str]]]:
 
 def build() -> dict:
     skills, known_machines, app_managed = merge()
-    removed = load_removed()
-    skills = {name: item for name, item in skills.items() if name not in removed}
     if not skills:
         raise SystemExit("no collection and no machine snapshots in sync/machines/")
 
@@ -337,8 +320,6 @@ def build() -> dict:
             "computer still needs. They are not separate collections.",
             "enabled=false means the skill stays in the catalog and this collection but "
             "is not installed; sync/optional.json records why and can re-enable it.",
-            "Names in optional.json removed[] are tombstones: they are gone from the "
-            "repository and are never re-added from a machine snapshot.",
             "cindyPlugins install from the Cindy marketplace on each computer and are "
             "authorized there; sync/cindy-plugins.json lists what each one needs.",
             "opendesign-trial is the OpenDesign plugin; OpenDesign also uses "

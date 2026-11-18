@@ -20,8 +20,8 @@ python sync\build-collection.py     # all evidence -> collection.json, manifest.
 | `manifest.json` | The same collection in the schema `scripts/sync-skills.ps1` installs from. This is the only install manifest. |
 | `machines/<machineId>.json` | Raw evidence from one computer: installed skills, harness roots, app-managed skills, junctions, drift. Never edited by hand. |
 | `cindy-plugins.json` | Plugins for Cindy, OpenCode and OpenDesign, with what each one needs to be authorized again. |
-| `optional.json` | Disabled skills (not installed) and removed-skill tombstones; each entry says why. |
-| `prune-optional.py` | Moves disabled skills out of every agent root into `~/.config/opencode/skills-disabled/`; removed skills are already gone. |
+| `optional.json` | Disabled skills (not installed); empty when everything is enabled. |
+| `prune-optional.py` | Moves disabled skills out of every agent root into `~/.config/opencode/skills-disabled/`. |
 | `CINDY-INSTALL.md` | Ready-to-paste prompt that installs the skills, then the plugins, then reports what still needs the owner. |
 | `UPDATE.md` | Ready-to-paste prompt that updates a computer to the newest versions in the collection. |
 | `verify-installed.py` | Checks every installed skill against the recorded hash; `0 differ` is the success line. |

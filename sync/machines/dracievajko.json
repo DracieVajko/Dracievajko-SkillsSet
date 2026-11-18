@@ -88,10 +88,7 @@
         "brainstorming",
         "building-mcp-servers",
         "code-documenter",
-        "code-reviewer",
         "context-engineering",
-        "creating-skills",
-        "debugging-wizard",
         "deep-agents-memory",
         "fine-tuning-expert",
         "frontend-design-systems",
@@ -152,10 +149,7 @@
         "brainstorming",
         "building-mcp-servers",
         "code-documenter",
-        "code-reviewer",
         "context-engineering",
-        "creating-skills",
-        "debugging-wizard",
         "fine-tuning-expert",
         "frontend-design-systems",
         "idea-to-plan",
@@ -320,22 +314,6 @@
       "sha256": "c317493f9b94df59ccb48a6783492bcb48e7f1c3d5299ed44718bd568eb8cdb0"
     },
     {
-      "name": "code-reviewer",
-      "root": "opencode",
-      "authorship": "third-party",
-      "source": {
-        "type": "github",
-        "repo": "Jeffallan/claude-skills",
-        "ref": "02b05028ba6c93f7aed45314b15c0dd5abead9d6",
-        "path": "skills/code-reviewer"
-      },
-      "author": "",
-      "license": "MIT",
-      "sizeKB": 5,
-      "needsNodeModules": false,
-      "sha256": "f65c4468751bb509f4ff78b791dfbc664dfe6191d36d04626c92ed8c2174293b"
-    },
-    {
       "name": "context-engineering",
       "root": "opencode",
       "authorship": "third-party",
@@ -350,38 +328,6 @@
       "sizeKB": 15,
       "needsNodeModules": false,
       "sha256": "8b736cb9e55b82b265ab6ff78349c0e826e8a6df550deddf665b7fb3ff858b63"
-    },
-    {
-      "name": "creating-skills",
-      "root": "opencode",
-      "authorship": "third-party",
-      "source": {
-        "type": "github",
-        "repo": "GenAI-Community-VITB/master-prompters",
-        "ref": "main",
-        "path": ".agents/skills/creating-skills"
-      },
-      "author": "",
-      "license": "",
-      "sizeKB": 41,
-      "needsNodeModules": false,
-      "sha256": "71872dcdbe5269bcadffc7b631c3e2fbe8946f29b433140afe251ee48958152c"
-    },
-    {
-      "name": "debugging-wizard",
-      "root": "opencode",
-      "authorship": "third-party",
-      "source": {
-        "type": "github",
-        "repo": "Jeffallan/claude-skills",
-        "ref": "02b05028ba6c93f7aed45314b15c0dd5abead9d6",
-        "path": "skills/debugging-wizard"
-      },
-      "author": "",
-      "license": "MIT",
-      "sizeKB": 4,
-      "needsNodeModules": false,
-      "sha256": "9dc712996f743d1b48e6f57aec344872fd81f6af547d753e5348d91c5b60c56c"
     },
     {
       "name": "fine-tuning-expert",
