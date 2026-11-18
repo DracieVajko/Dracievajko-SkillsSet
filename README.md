@@ -109,7 +109,9 @@ by `scripts/update-category-index.py` - they are never maintained by hand.
 `sync/` holds one shared collection: every skill and plugin any of my
 computers has, described once, so any computer can be brought to the same
 state without duplicating skill content. A computer only writes its own
-evidence file; the shared files are built from all of them.
+evidence file; the shared files are built from all of them. The current
+collection has **108 enabled skills**; `sync/collection.json` is the source of
+truth.
 
 | File | Purpose |
 |------|---------|
