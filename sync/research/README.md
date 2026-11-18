@@ -37,3 +37,17 @@ Matched exactly and recorded as link-only: `meeting-notes`
 (`claude-office-skills/skills`) and `higgsfield`
 (`OSideMedia/higgsfield-ai-prompt-skill`). Earlier passes resolved 15 more; see
 `unresolved-matches*.json` in this directory for the raw evidence.
+
+## Version alignment (2026-11-18)
+
+Every skill installed on this computer was compared against its recorded source
+and the twelve that had drifted were reinstalled from it: `brainstorming`,
+`code-documenter`, `code-reviewer`, `context-engineering`, `debugging-wizard`,
+`fine-tuning-expert`, `impeccable`, `reverse-engineer-anything`,
+`skill-creator`, `transitions-dev`, `using-superpowers`, `wordpress-pro`.
+
+All 42 installed skills now match their source byte for byte. The previous
+copies are in `~/.config/opencode/skill-backups/20261118-align/`. The ten
+remaining differences are between computers, not against upstream: they are
+listed as `drift` in `sync/collection.json` and disappear once the other
+computer reinstalls from the same manifest.

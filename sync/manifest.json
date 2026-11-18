@@ -914,7 +914,7 @@
       "license": "MIT",
       "sizeKB": 0,
       "needsNodeModules": false,
-      "sha256": "db585719a890418d10d7764c7e8a36b9e1c3a28d6d6e1c2790d6de2753218cf8",
+      "sha256": "c317493f9b94df59ccb48a6783492bcb48e7f1c3d5299ed44718bd568eb8cdb0",
       "machines": [
         "dracievajko",
         "randall"
@@ -973,7 +973,7 @@
       "license": "",
       "sizeKB": 0,
       "needsNodeModules": false,
-      "sha256": "e20d990fb6f2f4a45ea3f75f9ed2fa64d40f5940940977ec8aca90a28a876836",
+      "sha256": "8b736cb9e55b82b265ab6ff78349c0e826e8a6df550deddf665b7fb3ff858b63",
       "machines": [
         "dracievajko",
         "randall"
@@ -1300,7 +1300,7 @@
       "license": "MIT",
       "sizeKB": 0,
       "needsNodeModules": false,
-      "sha256": "f686c7106b522f900980c1fb03cc474e0d3aad88c5944b1023cbdcd2d94a5b18",
+      "sha256": "87ad37743797487cd1c37c23229357fc98fadf1e07a13c57b81e0c133e9cf4c3",
       "machines": [
         "dracievajko",
         "randall"
@@ -2596,7 +2596,7 @@
       "license": "Free for personal and commercial use; see LICENSE.txt (no redistribution of the library itself)",
       "sizeKB": 0,
       "needsNodeModules": false,
-      "sha256": "449428dcc2cc374c238358bf9efb7e8bfc6938e90819cf0c4a2d2df45b1a96d9",
+      "sha256": "8e7ee74377ce03d73fdc1de00c178f63f7a9d2993fd537ce46fd651402d593a5",
       "machines": [
         "dracievajko",
         "randall"
@@ -2674,7 +2674,7 @@
       "license": "",
       "sizeKB": 0,
       "needsNodeModules": false,
-      "sha256": "9c50c6d4cb4ade6103ad06d8f03ee49229d108df7046f9ae88ed510572acc6b9",
+      "sha256": "82c5c8866ad7f5dd4440ce66bd7806ba48a2f13771beae5cf112e53f08fe36ba",
       "machines": [
         "dracievajko",
         "randall"
@@ -2751,7 +2751,7 @@
       "license": "MIT",
       "sizeKB": 0,
       "needsNodeModules": false,
-      "sha256": "a351f1b36a91b4e671a0151125bba2136264efe995ed2fa5d9e02618aafb0aaf",
+      "sha256": "27348882ea7a551426ec9a871306710ba16069abf53204afdbb5df6f0acc71a3",
       "machines": [
         "dracievajko",
         "randall"
