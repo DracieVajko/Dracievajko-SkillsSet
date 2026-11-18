@@ -1,23 +1,25 @@
 #Requires -Version 5.1
 <#
 .SYNOPSIS
-Reproduce this machine's agent-skill layout on another Windows PC.
+Apply the shared skill collection to this Windows PC.
 
 .DESCRIPTION
-Reads sync/manifest.json and, for every skill it lists:
+Reads sync/manifest.json (built from every computer's evidence snapshot) and,
+for every skill it lists:
   * installs the folder once under its install root
       - source.type=repo   -> copied from this repository's skills/original
       - source.type=github -> fetched with git sparse-checkout from upstream
       - source.type=unresolved -> reported, never guessed
-  * recreates the directory junctions listed in mirrors[] so OpenCode, Claude
-    Code, Pi and Cindy all see the same folders without duplicate copies.
+  * recreates the directory junctions listed in mirrors[] so OpenCode, Cindy,
+    OpenDesign and the other installed agents see the same folders without
+    duplicate copies.
 
 Existing skill folders are left alone unless -Force is given. node_modules is
 never copied; pass -InstallNodeModules to run npm install afterwards.
 
-Cindy plugins are not files: the script prints the checklist from
+Cindy and OpenDesign plugins are not files: the script prints the checklist from
 sync/cindy-plugins.json so each one can be installed from the marketplace and
-re-authorized on the new machine.
+re-authorized on this machine.
 
 .PARAMETER DryRun
 Show what would happen without touching the disk.
@@ -171,6 +173,11 @@ if (-not $NoMirrors) {
     $linked = 0
     foreach ($rule in $data.mirrors) {
         $dir = Expand-ManifestPath $rule.dir
+        $parent = Split-Path -Parent $dir
+        if (-not (Test-Path -LiteralPath $parent)) {
+            Write-Host ("  skipped {0} (app not installed: {1})" -f $dir, $parent)
+            continue
+        }
         if (-not $DryRun -and -not (Test-Path -LiteralPath $dir)) {
             New-Item -ItemType Directory -Path $dir -Force | Out-Null
         }
@@ -232,6 +239,10 @@ if ((Test-Path -LiteralPath $pluginsPath -PathType Leaf)) {
     if ($plugins.opencodePlugins.Count -gt 0) {
         Write-Host "OpenCode plugins to keep in opencode.jsonc:"
         $plugins.opencodePlugins | ForEach-Object { Write-Host "  - $_" }
+    }
+    if ($data.opendesignPlugins -and $data.opendesignPlugins.Count -gt 0) {
+        Write-Host "OpenDesign plugin (from the Cindy marketplace, per device):"
+        $data.opendesignPlugins | ForEach-Object { Write-Host "  - $_" }
     }
 }
 

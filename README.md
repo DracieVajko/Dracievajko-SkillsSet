@@ -62,7 +62,7 @@ copying anything from this repository into your own project.
 
 | Platform | How it consumes this collection |
 |----------|---------------------------------|
-| **OpenCode** | `scripts/install-skills.ps1` copies `skills/original/` into `~/.config/opencode/skills/`; `scripts/sync-skills.ps1` restores the layout recorded in `sync/manifest.json`. |
+| **OpenCode** | `scripts/install-skills.ps1` copies `skills/original/` into `~/.config/opencode/skills/`; `scripts/sync-skills.ps1` applies the shared collection from `sync/manifest.json`. |
 | **Cindy** | Reads `~/.agents/skills/`. The repository keeps one installed copy there and mirrors it with directory junctions; Cindy's four built-in skills are managed by the app and never copied. |
 | **Odysseus** | Consumes the plain URL lists in `catalog/links/` directly. |
 | **OpenDesign** | Uses the `opendesign-trial` plugin from its marketplace plus `prompts/system/opendesign-ui-code-audit.md`; plugin files are per device and are not stored here. |
@@ -81,10 +81,10 @@ by `scripts/update-category-index.py` - they are never maintained by hand.
 |------|------:|-------|
 | Original skills | 25 | `skills/original/` - authored and maintained here |
 | Bundled third-party skills | 7 | `skills/third-party/` - local copies of upstream `SKILL.md` files |
-| External link-only skills | 204 | referenced by URL; no content copied |
-| Stable-branch links | 157 | `catalog/links/skill-links.txt` |
+| External link-only skills | 212 | referenced by URL; no content copied |
+| Stable-branch links | 165 | `catalog/links/skill-links.txt` |
 | Pinned links | 47 | `catalog/links/pinned-links.txt` |
-| Catalog records | 229 | `catalog/items.json` |
+| Catalog records | 237 | `catalog/items.json` |
 | System prompts | 9 | `prompts/system/` |
 | Personas | 10 | `prompts/personas/` |
 | Image prompts | 4 | `prompts/image/` |
@@ -106,24 +106,40 @@ by `scripts/update-category-index.py` - they are never maintained by hand.
 
 ## Machine sync
 
-`sync/` records one machine's real installed layout so a second Windows PC can
-reproduce it without duplicating skill content:
+`sync/` holds one shared collection: every skill and plugin any of my
+computers has, described once, so any computer can be brought to the same
+state without duplicating skill content. A computer only writes its own
+evidence file; the shared files are built from all of them.
 
 | File | Purpose |
 |------|---------|
-| `sync/manifest.json` | Every installed skill, its source, install root, SHA-256 and authorship (`original`, `third-party`, `unknown`). |
-| `sync/cindy-plugins.json` | Optional Cindy plugins and what each needs to be authorized again. |
-| `sync/unresolved.md` | Installed skills whose upstream is not verified; they stay out of the catalog until it is. |
-| `sync/generate-manifest.py` | Rebuilds `manifest.json` from the local machine and `catalog/items.json`. |
-| `scripts/sync-skills.ps1` | Installs missing skills and recreates directory junctions on another Windows PC. |
+| `sync/collection.json` | **The collection**: every skill and plugin, how it installs, which agents see it, where it was seen, plus coverage gaps and hash drift. |
+| `sync/manifest.json` | The same collection in the schema the installer reads. This is the only install manifest, never a per-computer snapshot. |
+| `sync/cindy-plugins.json` | Plugins for Cindy, OpenCode and OpenDesign, with what each needs to be authorized again. |
+| `sync/CINDY-INSTALL.md` | Ready-to-paste prompt: installs the skills, then the plugins, then reports what still needs me. |
+| `sync/machines/<machineId>.json` | Raw evidence from one computer. Not a separate collection. |
+| `sync/unresolved.md` | Skills with no verified upstream; they stay out of `skills/original/` until one is found. |
+| `sync/generate-manifest.py` | Records this computer as `machines/<machineId>.json`. |
+| `sync/build-collection.py` | Merges every evidence file into `collection.json`, `manifest.json` and `unresolved.md`. |
+| `scripts/sync-skills.ps1` | Installs missing skills and recreates directory junctions. |
 
 ```powershell
-.\scripts\sync-skills.ps1 -DryRun   # report only, touch nothing
+.\scripts\sync-skills.ps1 -DryRun   # preview: what installs, what stays unresolved
 .\scripts\sync-skills.ps1           # install and link
+python sync\generate-manifest.py    # record this computer as evidence
+python sync\build-collection.py     # refresh the shared collection
 ```
 
 The script never overwrites an existing skill folder without `-Force`, and it
 reports upstream drift, unresolved skills and failures instead of guessing.
+Cindy, OpenCode and OpenDesign plugins are installed from their marketplace or
+config (see `sync/CINDY-INSTALL.md`) and authorized per device; nothing
+per-device is stored here.
+
+The evidence files also inventory roots this repository does not manage,
+including skills that ship inside an app, so nothing installed on a computer
+silently falls out of scope. Those entries are listed, never copied.
+
 Run git operations on one PC at a time: commit and push there, then `git pull`
 on the other.
 
@@ -191,11 +207,15 @@ is configured in the OpenCode config on each machine
 │   └── image/                   # 4 image prompts
 ├── scripts/                     # validators, index generator, link checkers, installers, sync, tests
 ├── sync/
-│   ├── manifest.json            # installed skills: source, root, hash, authorship
-│   ├── cindy-plugins.json       # optional Cindy plugins and what each needs to be authorized
-│   ├── unresolved.md            # installed skills with no verified upstream
-│   ├── generate-manifest.py     # rebuilds manifest.json from the local machine
-│   └── README.md                # reproduce this layout on another Windows PC
+│   ├── collection.json          # one collection of every skill and plugin
+│   ├── manifest.json            # the collection in the installer's schema
+│   ├── machines/                # raw evidence from each computer
+│   ├── cindy-plugins.json       # Cindy, OpenCode and OpenDesign plugins
+│   ├── CINDY-INSTALL.md         # paste-into-Cindy prompt to install everything
+│   ├── unresolved.md            # skills with no verified upstream
+│   ├── generate-manifest.py     # records this computer as evidence
+│   ├── build-collection.py      # merges evidence into collection.json + manifest.json
+│   └── README.md                # apply the collection to a computer
 ├── skills/
 │   ├── README.md
 │   ├── original/                # 25 original skills, one folder each
@@ -376,9 +396,10 @@ My work and other people's work are never mixed:
 - **Every other foreign skill is a link only.** `catalog/items.json` records the
   repository, branch or commit, the path inside the repository, the direct raw
   `SKILL.md` URL and the license when known. No content is copied.
-- **`sync/manifest.json`** records authorship per installed skill. A skill is
-  never promoted to `original` just because it sits on my disk; an unresolved
-  upstream stays `unknown` in `sync/unresolved.md`.
+- **`sync/collection.json`** records authorship per skill, and `sync/manifest.json`
+  is generated from it. A skill is never promoted to `original` just because it
+  sits on my disk; an unresolved upstream stays `unknown` in
+  `sync/unresolved.md`.
 
 The full license texts are in
 [docs/THIRD-PARTY-LICENSES.md](docs/THIRD-PARTY-LICENSES.md), and

@@ -3,6 +3,7 @@
 # Jobs (also the expected status-check names for branch protection):
 #   test            - focused regression tests for the scripts
 #   sync            - module/template/profile/combined-copy synchronization
+#   collection      - collection.json, manifest.json and unresolved.md freshness
 #   validate        - SKILL.md frontmatter validation
 #   category-index  - docs/CATEGORY_INDEX.md freshness check
 #   markdown-links  - relative Markdown link targets
@@ -42,6 +43,17 @@ jobs:
           python-version: '3.x'
       - name: Check duplicated rule copies
         run: python scripts/check-sync.py
+
+  collection:
+    name: collection
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Check the shared collection is up to date
+        run: python sync/build-collection.py --check
 
   validate:
     name: validate

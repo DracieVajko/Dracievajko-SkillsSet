@@ -150,7 +150,7 @@ frontmatter keeps `name`, `description`, `version`, `author`, `authorship` and
 | Platform | Where the files go |
 |----------|--------------------|
 | OpenCode | `~/.config/opencode/skills/` (installer) or `.agents/skills/` in a project |
-| Cindy | `~/.agents/skills/`; recreate the layout from `sync/manifest.json` |
+| Cindy | `~/.agents/skills/`; apply the shared collection from `sync/manifest.json` |
 | Odysseus | Point it at `catalog/links/skill-links.txt` and `catalog/links/pinned-links.txt` |
 | OpenDesign | Install the `opendesign-trial` plugin and add `prompts/system/opendesign-ui-code-audit.md` |
 

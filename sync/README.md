@@ -1,74 +1,92 @@
-# Machine sync
+# Shared skill and plugin collection
 
-`sync/` describes one machine's installed agent-skill layout so another Windows
-PC can reproduce it. It does not duplicate skill content: every skill is
-installed once and the other agents see it through a Windows directory
-junction.
+`sync/` is one collection for every computer, not one collection per machine.
+A skill is installed once from its source on each computer, and the other
+agents see it through a Windows directory junction. No third-party content is
+copied into this repository.
+
+A computer only writes its own evidence file, `machines/<machineId>.json`.
+The shared files are built from all evidence files, so two computers cannot
+overwrite each other's inventory:
+
+```powershell
+python sync\generate-manifest.py    # this computer -> machines\<machineId>.json
+python sync\build-collection.py     # all evidence -> collection.json, manifest.json, unresolved.md
+```
 
 | File | Purpose |
 |------|---------|
-| `manifest.json` | Snapshot: every installed skill, its upstream source, its install root, the junctions that mirror it. |
-| `cindy-plugins.json` | Cindy plugins installed on the reference machine, with what each one needs to be authorized again. |
-| `unresolved.md` | Per-machine snapshot: installed skills whose upstream is not verified. They stay out of the catalog and out of `skills/original/` until the upstream is found. |
-| `generate-manifest.py` | Rebuilds `manifest.json` from the local machine plus `catalog/items.json`. |
+| `collection.json` | **The collection**: every skill and plugin, how it installs, which agents see it, where it was seen, coverage gaps and hash drift. |
+| `manifest.json` | The same collection in the schema `scripts/sync-skills.ps1` installs from. This is the only install manifest. |
+| `machines/<machineId>.json` | Raw evidence from one computer: installed skills, harness roots, app-managed skills, junctions, drift. Never edited by hand. |
+| `cindy-plugins.json` | Plugins for Cindy, OpenCode and OpenDesign, with what each one needs to be authorized again. |
+| `CINDY-INSTALL.md` | Ready-to-paste prompt that installs the skills, then the plugins, then reports what still needs the owner. |
+| `unresolved.md` | Skills with no verified upstream. They stay out of the catalog and out of `skills/original/`. |
+| `generate-manifest.py` | Writes this computer's evidence file. |
+| `build-collection.py` | Merges every evidence file into the shared collection. The merge is monotonic: a skill is never dropped because one snapshot is missing. |
 
-The installer is `scripts/sync-skills.ps1`; it lives with the other scripts.
-
-## Reproduce on a new machine
+## Apply the collection to a computer
 
 ```powershell
-git clone https://github.com/DracieVajko/Dracievajko-SkillsSet.git
-cd Dracievajko-SkillsSet
-
-# see what would happen, touch nothing
-.\scripts\sync-skills.ps1 -DryRun
-
-# install missing skills, then create the junctions
-.\scripts\sync-skills.ps1
-
-# also reinstall runtime dependencies (playwright-skill)
-.\scripts\sync-skills.ps1 -InstallNodeModules
+git pull
+.\scripts\sync-skills.ps1 -DryRun    # preview: what installs, what is unresolved
+.\scripts\sync-skills.ps1            # install missing skills and create junctions
+python sync\generate-manifest.py     # record this computer as evidence
+python sync\build-collection.py      # refresh the shared collection
 ```
 
-The script never overwrites an existing skill folder without `-Force`, and it
-reports three things instead of guessing:
+`sync-skills.ps1` never overwrites an existing skill folder without `-Force`.
+It reports upstream drift, unresolved skills and failures instead of guessing.
+`-InstallNodeModules` also runs `npm install` for skills that declare
+`needsNodeModules`.
 
-* **upstream drift** — the installed `SKILL.md` no longer matches the hash in
-  the manifest, usually because upstream moved on or the copy was edited;
-* **unresolved** — no upstream was identified, so the folder has to be copied
-  by hand;
-* **failures** — the clone or copy did not finish, run again.
+A skill that exists in a mirror location as a real folder is left alone and
+reported. Deleting user data is never automatic.
 
 ## What is installed where
 
 | Root | Owner | Mirrored into |
 |------|-------|---------------|
-| `~/.config/opencode/skills` | OpenCode, the OpenCode superpowers plugin, `scripts/install-skills.ps1` | `~/.agents/skills` |
-| `~/.agents/skills` | Agent Skills installers (gsap, transitions, impeccable, skill-creator, deep-agents-memory) | `~/.claude/skills`, `~/.pi/agent/skills` |
+| `~/.config/opencode/skills` | OpenCode, the OpenCode superpowers plugin, `scripts/install-skills.ps1` | `~/.agents/skills`, `~/.claude/skills`, `~/.qwen/skills` |
+| `~/.agents/skills` | Agent Skills installers, Cindy | `~/.config/opencode/skills`, `~/.claude/skills`, `~/.qwen/skills` |
 
-Pi reads `~/.agents/skills` on its own, so a junction there is enough for Pi
-and Cindy to see the same folder. If another tool has already created a plain
-folder in a mirror location, the script leaves it alone and reports it rather
-than deleting user data. The paths above describe the filesystem layout only;
-the platforms this repository is tested on are Odysseus, Cindy, OpenCode and
-OpenDesign.
+`~/.pi/agent/skills` is in the mirror list only when Pi is installed; the
+installer skips the rule when the parent directory does not exist. The same
+applies to any other agent root that is not present.
+
+These paths describe the filesystem layout only. The platforms this repository
+is tested on are Odysseus, Cindy, OpenCode and OpenDesign. Other agent folders
+are mirrored for convenience when they exist; that is not a support claim.
 
 Cindy's own skills (`cindy-plugin-creator`, `cindy-skill-creator`,
-`cindy-theme-creator`, `learn`) ship inside the Cindy app. They are listed in
-the manifest for completeness and are never copied between machines.
+`cindy-theme-creator`, `learn`) ship inside the Cindy app. Codex's five system
+skills ship inside Codex. Both groups are listed in the evidence files for
+completeness and are never copied between computers.
+
+## Plugins
+
+`cindy-plugins.json` is the single plugin inventory:
+
+* `plugins[]` — Cindy plugins, installed from the marketplace and authorized
+  per device. `opendesign-trial` is the OpenDesign plugin.
+* `opencodePlugins[]` — plugins kept in `opencode.jsonc`.
+* `platforms` — which platform each group belongs to.
+
+Plugin folders, tokens and OAuth grants are per device and are never stored
+here. Each computer installs the ids again and authorizes them there.
 
 ## What is never synced
 
-* **Cindy plugins** — installed per device from the marketplace, with secrets
-  in the per-device safe storage. Install the ids from `cindy-plugins.json`
-  again and re-authorize them.
+* **Cindy, OpenDesign and OpenCode plugins** — installed per device, with
+  secrets in the per-device safe storage. Install the ids from
+  `cindy-plugins.json` again and re-authorize them.
 * **`node_modules`** — never copied; use `-InstallNodeModules`.
 * **Secrets and account authorizations** — GitHub login, Google OAuth, ntfy
   token and the Tuya API key are per machine.
 
 ## Authorship
 
-Nothing here relabels skill ownership. The manifest records one of three
+Nothing here relabels skill ownership. The collection records one of three
 values per skill:
 
 | `authorship` | Meaning | Where the content lives |
@@ -77,22 +95,26 @@ values per skill:
 | `third-party` | Someone else's work, installed from upstream | Upstream repository; only a link/path in this repo |
 | `unknown` | Upstream not identified | Not in this repo at all |
 
-`third-party` and `unknown` skills are installed on a machine but are never
+`third-party` and `unknown` skills are installed on a computer but are never
 promoted into `skills/original/`, and their frontmatter keeps the upstream
 author. `scripts/validate-frontmatter.py` enforces this in CI: a skill in
 `skills/original/` must have `author: DracieVajko` and `authorship: original`,
 and a skill in `skills/third-party/` may not claim either.
 
 When a skill's upstream is resolved later, add it to `catalog/items.json` as an
-external entry - that updates the manifest's `third-party` classification
+external entry. That updates the collection's `third-party` classification
 without copying anyone's content.
 
-## Keeping the manifest honest
+## Keeping the shared files honest
 
 ```powershell
-python sync/generate-manifest.py           # rewrite after adding or removing a skill
-python sync/generate-manifest.py --check    # fail when manifest.json is stale
+python sync\generate-manifest.py --check   # this computer's evidence is current
+python sync\build-collection.py --check    # collection.json, manifest.json, unresolved.md are current
 ```
 
-Add the new skill to `catalog/items.json` first so the manifest records where it
-came from; otherwise it shows up as `unresolved`.
+`build-collection.py --check` runs in CI. It is deterministic: the same
+evidence files always produce the same collection.
+
+The merge is monotonic. If a computer's evidence file is missing, its skills
+stay in `collection.json`; the correct fix is to restore the evidence, not to
+delete the skill. `gaps` is a coverage checklist, not a separate collection.
