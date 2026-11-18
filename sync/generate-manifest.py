@@ -23,7 +23,9 @@ import argparse
 import hashlib
 import json
 import os
+import platform
 import re
+import socket
 import sys
 from pathlib import Path
 
@@ -48,7 +50,20 @@ EXTRA_ROOTS = {
     "qwen": HOME / ".qwen/skills",
 }
 REPO_ROOT = Path(__file__).resolve().parent.parent
-OUT = Path(__file__).resolve().parent / "manifest.json"
+MANIFEST_DIR = Path(__file__).resolve().parent
+OUT = MANIFEST_DIR / "manifest.json"
+MACHINES = MANIFEST_DIR / "machines"
+
+
+def machine_slug() -> str:
+    """Stable, filesystem-safe id for this computer."""
+    host = re.sub(r"[^a-z0-9]+", "-", socket.gethostname().lower()).strip("-")
+    return host or "unknown-machine"
+
+
+def machine_label() -> str:
+    host = socket.gethostname()
+    return f"{host} ({platform.system()} {platform.release()}, user {os.environ.get('USERNAME', '?')})"
 
 # Upstreams verified by hashing SKILL.md against the upstream file on 2026-11-18.
 OVERRIDES = {
@@ -312,7 +327,8 @@ def main() -> int:
     manifest = {
         "version": 1,
         "generatedAt": "2026-11-18",
-        "sourceMachine": "DracieVajko (Windows, Cindy 0.1.139, Pi 1.5.2)",
+        "machineId": machine_slug(),
+        "sourceMachine": machine_label(),
         "roots": manifest_roots,
         "notes": [
             "Each skill is installed once, under roots[<root>].",
@@ -345,21 +361,54 @@ def main() -> int:
         "skills": skills,
     }
     text = json.dumps(manifest, indent=2, ensure_ascii=False) + "\n"
+    machine_out = MACHINES / f"{manifest['machineId']}.json"
 
     if args.check:
         current = OUT.read_text(encoding="utf-8") if OUT.is_file() else ""
-        if current != text:
+        machine_current = machine_out.read_text(encoding="utf-8") if machine_out.is_file() else ""
+        if current != text or machine_current != text:
             print("manifest.json is stale; run python sync/generate-manifest.py")
             return 1
         print("manifest.json is up to date")
         return 0
 
     OUT.write_text(text, encoding="utf-8")
+    MACHINES.mkdir(exist_ok=True)
+    machine_out.write_text(text, encoding="utf-8")
+
+    unresolved = [s for s in skills if s["source"]["type"] == "unresolved"]
+    lines = [
+        "# Unresolved skills",
+        "",
+        "Skills installed on this machine whose upstream could not be verified, so they",
+        "are **not** in `catalog/items.json` and no content is copied into this",
+        "repository. Resolve one by finding the exact upstream repository, branch and",
+        "`SKILL.md` path, then add a link-only catalog record.",
+        "",
+        "Never move an unresolved skill into `skills/original/`.",
+        "",
+        f"Snapshot of `{manifest['machineId']}` ({len(unresolved)} skills), generated from "
+        "`sync/manifest.json` by `sync/generate-manifest.py`.",
+        "",
+    ]
+    if unresolved:
+        lines += [
+            "| Skill | Install root | SHA-256 of SKILL.md |",
+            "|-------|--------------|---------------------|",
+        ]
+        for s in unresolved:
+            lines.append(
+                f"| `{s['name']}` | `{manifest_roots[s['root']]}/{s['name']}` | `{s['sha256']}` |"
+            )
+    else:
+        lines.append("Every installed skill has a verified upstream. Nothing is unresolved.")
+    (MANIFEST_DIR / "unresolved.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
     counts: dict[str, int] = {}
     for s in skills:
         key = s["source"]["type"]
         counts[key] = counts.get(key, 0) + 1
     print(f"wrote {OUT}")
+    print(f"wrote {machine_out}")
     print(f"  {len(skills)} skills {counts}")
     print(f"  {len(mirrors)} mirror rules, {len(managed)} cindy-managed skills")
     print(

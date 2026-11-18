@@ -7,10 +7,23 @@ junction.
 
 | File | Purpose |
 |------|---------|
-| `manifest.json` | Snapshot: every installed skill, every harness root, app-managed skills, upstream source, install root, hashes, junctions and drift. |
+| `manifest.json` | Snapshot of the machine that generated it: every installed skill, every harness root, app-managed skills, upstream source, install root, hashes, junctions and drift. |
+| `machines/<machineId>.json` | The same snapshot kept per computer, so two machines never overwrite each other's inventory. |
 | `cindy-plugins.json` | Cindy plugins installed on the reference machine, with what each one needs to be authorized again. |
 | `unresolved.md` | Per-machine snapshot: installed skills whose upstream is not verified. They stay out of the catalog and out of `skills/original/` until the upstream is found. |
-| `generate-manifest.py` | Rebuilds `manifest.json` from the local machine plus `catalog/items.json`. |
+| `generate-manifest.py` | Rebuilds `manifest.json`, `machines/<machineId>.json` and `unresolved.md` from the local machine plus `catalog/items.json`. |
+
+## One snapshot per computer
+
+`manifest.json` and `unresolved.md` always describe the machine that ran the
+generator last; `sourceMachine` and `machineId` say which one that was. The same
+content is also written to `machines/<machineId>.json`, so both computers keep
+their inventory in the repository and neither overwrites the other. Install from
+a specific machine's snapshot with:
+
+```powershell
+.\scripts\sync-skills.ps1 -Manifest sync\machines\<machineId>.json -DryRun
+```
 
 ## Every skill root on the machine
 
