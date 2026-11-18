@@ -201,14 +201,20 @@ def build() -> dict:
     if not skills:
         raise SystemExit("no collection and no machine snapshots in sync/machines/")
 
-    # A skill recorded as unresolved may have gained a catalog record since the
-    # snapshot was taken; the catalog is the authority, so reclassify from it.
+    # The catalog is the authority for github sources. A skill recorded as
+    # unresolved may have gained a catalog record since the snapshot was taken;
+    # an already-resolved github skill may have had its branch or path corrected.
     catalog_sources = load_catalog_sources()
     for name, item in skills.items():
-        if item["source"].get("type") == "unresolved" and name in catalog_sources:
-            item["source"] = catalog_sources[name]
+        catalog_source = catalog_sources.get(name)
+        if catalog_source is None:
+            continue
+        if item["source"].get("type") == "unresolved":
+            item["source"] = catalog_source
             if item.get("authorship") != "original":
                 item["authorship"] = "third-party"
+        elif item["source"].get("type") == "github":
+            item["source"] = catalog_source
 
     out_skills = []
     for name in sorted(skills):

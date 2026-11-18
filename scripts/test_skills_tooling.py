@@ -498,5 +498,58 @@ class SyncScriptTests(unittest.TestCase):
             self.assertIn('Template copy differs', result.stdout)
 
 
+class SyncCollectionTests(unittest.TestCase):
+    """The generated collection must agree with the catalog and the manifest."""
+
+    @classmethod
+    def setUpClass(cls):
+        repo = Path(__file__).resolve().parent.parent
+        cls.collection = json.loads((repo / 'sync' / 'collection.json').read_text(encoding='utf-8'))
+        cls.manifest = json.loads((repo / 'sync' / 'manifest.json').read_text(encoding='utf-8'))
+        items = json.loads((repo / 'catalog' / 'items.json').read_text(encoding='utf-8'))
+        cls.catalog_sources = {}
+        for item in items:
+            if item.get('authorship') != 'link-only' or not item.get('repository'):
+                continue
+            repo_name = item['repository'].rstrip('/').split('github.com/')[-1]
+            path = item.get('path') or ''
+            if path.endswith('/SKILL.md'):
+                path = path[: -len('/SKILL.md')]
+            cls.catalog_sources.setdefault(
+                item['name'],
+                {
+                    'type': 'github',
+                    'repo': repo_name,
+                    'ref': item.get('branch') or 'main',
+                    'path': path,
+                },
+            )
+
+    def test_manifest_and_collection_list_the_same_skills(self):
+        names = [skill['name'] for skill in self.collection['skills']]
+        self.assertEqual(names, [skill['name'] for skill in self.manifest['skills']])
+        self.assertEqual(len(names), len(set(names)), 'duplicate skill name in the collection')
+
+    def test_every_github_source_matches_the_catalog(self):
+        for skill in self.collection['skills']:
+            if skill['source']['type'] != 'github':
+                continue
+            self.assertEqual(
+                skill['source'],
+                self.catalog_sources.get(skill['name']),
+                f"{skill['name']} is github-sourced but its catalog record differs",
+            )
+
+    def test_unresolved_skills_are_not_in_the_catalog(self):
+        for skill in self.collection['skills']:
+            if skill['source']['type'] != 'unresolved':
+                continue
+            self.assertNotIn(
+                skill['name'],
+                self.catalog_sources,
+                f"{skill['name']} has a catalog record and must not stay unresolved",
+            )
+
+
 if __name__ == '__main__':
     unittest.main(verbosity=2)

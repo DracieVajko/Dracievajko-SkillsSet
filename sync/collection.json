@@ -607,7 +607,7 @@
       "source": {
         "type": "github",
         "repo": "sunkaifei/FlyCms",
-        "ref": "main",
+        "ref": "master",
         "path": ".agents/skills/avoid-ai-design"
       },
       "author": "",
