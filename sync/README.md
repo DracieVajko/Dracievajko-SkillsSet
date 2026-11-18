@@ -9,6 +9,7 @@ junction.
 |------|---------|
 | `manifest.json` | Snapshot: every installed skill, its upstream source, its install root, the junctions that mirror it. |
 | `cindy-plugins.json` | Cindy plugins installed on the reference machine, with what each one needs to be authorized again. |
+| `unresolved.md` | Per-machine snapshot: installed skills whose upstream is not verified. They stay out of the catalog and out of `skills/original/` until the upstream is found. |
 | `generate-manifest.py` | Rebuilds `manifest.json` from the local machine plus `catalog/items.json`. |
 
 The installer is `scripts/sync-skills.ps1`; it lives with the other scripts.
@@ -45,10 +46,12 @@ reports three things instead of guessing:
 | `~/.config/opencode/skills` | OpenCode, the OpenCode superpowers plugin, `scripts/install-skills.ps1` | `~/.agents/skills` |
 | `~/.agents/skills` | Agent Skills installers (gsap, transitions, impeccable, skill-creator, deep-agents-memory) | `~/.claude/skills`, `~/.pi/agent/skills` |
 
-Pi reads `~/.agents/skills` on its own, so a junction there is enough for Pi,
-Cindy and Claude Code to see the same folder. Cindy copies it into Claude Code
-and Pi itself in some versions; when that happens a plain folder wins over a
-junction, and the script leaves it alone.
+Pi reads `~/.agents/skills` on its own, so a junction there is enough for Pi
+and Cindy to see the same folder. If another tool has already created a plain
+folder in a mirror location, the script leaves it alone and reports it rather
+than deleting user data. The paths above describe the filesystem layout only;
+the platforms this repository is tested on are Odysseus, Cindy, OpenCode and
+OpenDesign.
 
 Cindy's own skills (`cindy-plugin-creator`, `cindy-skill-creator`,
 `cindy-theme-creator`, `learn`) ship inside the Cindy app. They are listed in

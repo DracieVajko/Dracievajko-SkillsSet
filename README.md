@@ -5,11 +5,13 @@
 [![Sponsors](https://img.shields.io/github/sponsors/DracieVajko?style=for-the-badge&logo=github-sponsors&color=ea4aaa)](https://github.com/sponsors/DracieVajko)
 
 A curated collection of reusable **AI agent skills, system prompts, personas,
-agent rules and workflows** for OpenCode and compatible agent frameworks.
+agent rules and workflows**, maintained and tested on four platforms:
+**Odysseus, Cindy, OpenCode and OpenDesign**.
 
 Everything is plain Markdown and Python. There is no runtime, no service and
 no dependency you have to trust: you copy what you need, read it, and adapt
-it.
+it. My own work and other people's work are kept in separate categories and
+are never mixed.
 
 **No releases - `master` is the source of truth.** There are no release tags and
 no versioned downloads on purpose: every push to `master` is the current state,
@@ -21,9 +23,13 @@ pin a commit hash in your own fork.
 | Looking for | Go to |
 |-------------|-------|
 | What this repository is | [Introduction](#what-this-repository-is) |
+| Platforms used and tested | [Platforms](#platforms-i-use-and-test) |
 | Exact contents and counts | [Repository contents](#repository-contents) |
 | Install into OpenCode | [Quick Start](#quick-start) |
-| Install somewhere else | [Other agent platforms](#other-agent-platforms) |
+| The other tested platforms | [Platforms](#the-other-tested-platforms) |
+| Machine sync and manifest | [Machine sync](#machine-sync) |
+| Optional Cindy plugins | [Cindy plugins](#optional-cindy-plugins-i-use) |
+| Authorship rules | [Authorship](#authorship-and-provenance) |
 | The skills themselves | [Original skills](#original-skills) |
 | Which skill for which task | [Skills by Task](#skills-by-task) |
 | External and bundled skills | [Third-party skills](#third-party-skills) |
@@ -51,6 +57,18 @@ Three kinds of content live here, and they are **never** the same category:
 
 Read [docs/THIRD-PARTY-LICENSES.md](docs/THIRD-PARTY-LICENSES.md) before
 copying anything from this repository into your own project.
+
+## Platforms I use and test
+
+| Platform | How it consumes this collection |
+|----------|---------------------------------|
+| **OpenCode** | `scripts/install-skills.ps1` copies `skills/original/` into `~/.config/opencode/skills/`; `scripts/sync-skills.ps1` restores the layout recorded in `sync/manifest.json`. |
+| **Cindy** | Reads `~/.agents/skills/`. The repository keeps one installed copy there and mirrors it with directory junctions; Cindy's four built-in skills are managed by the app and never copied. |
+| **Odysseus** | Consumes the plain URL lists in `catalog/links/` directly. |
+| **OpenDesign** | Uses the `opendesign-trial` plugin from its marketplace plus `prompts/system/opendesign-ui-code-audit.md`; plugin files are per device and are not stored here. |
+
+Not tested on Hermes, Claude Code, Claude, OpenAI/GPT, Codex or VS Code -
+treat those as unsupported until tested.
 
 ## Repository contents
 
@@ -86,55 +104,107 @@ by `scripts/update-category-index.py` - they are never maintained by hand.
 | Agent rules and profiles | Yes | Copy `AGENTS.md` + `instructions/`, or `AGENTS-combined.md` |
 | Catalog and tooling | Yes | Read `catalog/`, run `scripts/` |
 
+## Machine sync
+
+`sync/` records one machine's real installed layout so a second Windows PC can
+reproduce it without duplicating skill content:
+
+| File | Purpose |
+|------|---------|
+| `sync/manifest.json` | Every installed skill, its source, install root, SHA-256 and authorship (`original`, `third-party`, `unknown`). |
+| `sync/cindy-plugins.json` | Optional Cindy plugins and what each needs to be authorized again. |
+| `sync/unresolved.md` | Installed skills whose upstream is not verified; they stay out of the catalog until it is. |
+| `sync/generate-manifest.py` | Rebuilds `manifest.json` from the local machine and `catalog/items.json`. |
+| `scripts/sync-skills.ps1` | Installs missing skills and recreates directory junctions on another Windows PC. |
+
+```powershell
+.\scripts\sync-skills.ps1 -DryRun   # report only, touch nothing
+.\scripts\sync-skills.ps1           # install and link
+```
+
+The script never overwrites an existing skill folder without `-Force`, and it
+reports upstream drift, unresolved skills and failures instead of guessing.
+Run git operations on one PC at a time: commit and push there, then `git pull`
+on the other.
+
+## Optional: Cindy plugins I use
+
+These plugins are optional and installed per device from the Cindy
+marketplace. Their files, tokens and OAuth grants are **not** stored in this
+repository; each machine has to install and authorize them again. The
+machine-readable list is `sync/cindy-plugins.json`.
+
+| Plugin | What it does | What it needs |
+|--------|--------------|---------------|
+| `agent-desktop` | Read and drive the desktop GUI: click, type, snapshot windows, clipboard, notifications | nothing |
+| `cindy-github` | GitHub issues, PRs, reviews, repositories, Actions, releases, search | the machine's GitHub login or a fallback PAT |
+| `cindy-mermaid` | Normalize Mermaid diagram source | nothing |
+| `cindy-web-search` | Web search and page fetch | optional Brave/Tavily/DeepSeek keys |
+| `compact-file-browser` | Left-panel project file browser | nothing |
+| `gh-market` | Search GitHub for Cindy plugins and skills | optional GitHub PAT for rate limits |
+| `git-flow` | Local repository and branch panel, GitHub account switching | nothing |
+| `google-calendar` | Read and change calendar events | Google OAuth, per device |
+| `google-drive` | Search and manage Drive files, Docs and Slides | Google OAuth, per device |
+| `google-gmail` | Read mail, drafts and send through the draft card | Google OAuth, per device |
+| `my-browser` | Cindy Chrome: page translation and in-player subtitles | the Cindy Chrome extension on that machine |
+| `ntfy` | Push notifications through a personal ntfy server | ntfy server URL and access token |
+| `opendesign-trial` | Create and revise HTML drafts with a local editor | nothing |
+| `ponytail` | Lazy-senior code review and anti-over-engineering rules | nothing |
+| `tuya-home` | Tuya / Smart Life devices: lights, plugs, air conditioners, sensors | local development copy, not a marketplace plugin; Tuya API key starting with `sk-` |
+
+The separate OpenCode plugin `superpowers@git+https://github.com/obra/superpowers`
+is configured in the OpenCode config on each machine
+(`~/.config/opencode/opencode.jsonc`); it is not a Cindy plugin.
+
 ## Repository structure
 
 ```text
 .
-.
-??? .github/
-?   ??? FUNDING.yml              # GitHub Sponsors
-?   ??? ISSUE_TEMPLATE/          # bug report, feature request, skill submission
-?   ??? PULL_REQUEST_TEMPLATE.md
-?   ??? workflows/               # skills-tooling.yml, link-check.yml
-??? catalog/
-?   ??? README.md
-?   ??? items.json               # 229 records: 25 original + 204 link-only
-?   ??? links/
-?       ??? README.md
-?       ??? skill-links.txt      # 157 stable-branch links
-?       ??? pinned-links.txt     # 47 pinned commit/release links
-??? docs/
-?   ??? CATEGORY_INDEX.md        # generated index of every skill
-?   ??? CONTRIBUTING.md          # how to add or update content
-?   ??? INSTALL.md               # installation, updating, uninstalling, troubleshooting
-?   ??? SAFETY-AND-LICENSES.md   # safety notes and license boundaries
-?   ??? SKILL_SPEC.md            # the skill format specification
-?   ??? SKILL-QUALITY-REVIEW.md  # prioritized improvement backlog
-?   ??? THIRD-PARTY-LICENSES.md  # upstream licenses of bundled content
-?   ??? templates/               # project, plan, decisions, handoff, sources
-??? instructions/
-?   ??? modules/                 # 11 domain rule modules
-?   ??? profiles/                # 9 specialized agent profiles
-?   ??? opencode/                # OpenCode integration + project template
-??? prompts/
-?   ??? system/                  # 9 system prompts
-?   ??? personas/                # 10 chat personas
-?   ??? image/                   # 4 image prompts
-??? scripts/                     # validators, index generator, link checkers, installers, sync, tests
-??? sync/
-?   ??? manifest.json            # this machine's installed skills, sources, junctions, authorship
-?   ??? cindy-plugins.json       # optional Cindy plugins and what each needs to be authorized
-?   ??? generate-manifest.py     # rebuilds manifest.json from the local machine
-?   ??? README.md                # reproduce the layout on another Windows PC
-??? skills/
-?   ??? README.md
-?   ??? original/                # 25 original skills, one folder each
-?   ??? third-party/             # bundled upstream copies + provenance
-??? AGENTS.md                    # modular rules entry point
-??? AGENTS-combined.md           # the same rules in one file
-??? ATTRIBUTION.md               # authorship and license summary
-??? LICENSE                      # MIT
-??? README.md
+├── .github/
+│   ├── FUNDING.yml              # GitHub Sponsors
+│   ├── ISSUE_TEMPLATE/          # bug report, feature request, skill submission
+│   ├── PULL_REQUEST_TEMPLATE.md
+│   └── workflows/               # skills-tooling.yml, link-check.yml
+├── catalog/
+│   ├── README.md
+│   ├── items.json               # 229 records: 25 original + 204 link-only
+│   └── links/
+│       ├── README.md
+│       ├── skill-links.txt      # 157 stable-branch links
+│       └── pinned-links.txt     # 47 pinned commit links
+├── docs/
+│   ├── CATEGORY_INDEX.md        # generated index of every skill
+│   ├── CONTRIBUTING.md          # how to add or update content
+│   ├── INSTALL.md               # installation, updating, uninstalling, troubleshooting
+│   ├── SAFETY-AND-LICENSES.md   # safety notes and license boundaries
+│   ├── SKILL_SPEC.md            # the skill format specification
+│   ├── SKILL-QUALITY-REVIEW.md  # prioritized improvement backlog
+│   ├── THIRD-PARTY-LICENSES.md  # upstream licenses of bundled content
+│   └── templates/               # project, plan, decisions, handoff, sources
+├── instructions/
+│   ├── modules/                 # 11 domain rule modules
+│   ├── profiles/                # 9 specialized agent profiles
+│   └── opencode/                # OpenCode integration + project template
+├── prompts/
+│   ├── system/                  # 9 system prompts
+│   ├── personas/                # 10 chat personas
+│   └── image/                   # 4 image prompts
+├── scripts/                     # validators, index generator, link checkers, installers, sync, tests
+├── sync/
+│   ├── manifest.json            # installed skills: source, root, hash, authorship
+│   ├── cindy-plugins.json       # optional Cindy plugins and what each needs to be authorized
+│   ├── unresolved.md            # installed skills with no verified upstream
+│   ├── generate-manifest.py     # rebuilds manifest.json from the local machine
+│   └── README.md                # reproduce this layout on another Windows PC
+├── skills/
+│   ├── README.md
+│   ├── original/                # 25 original skills, one folder each
+│   └── third-party/             # 7 bundled SKILL.md bodies + provenance, everything else linked
+├── AGENTS.md                    # modular rules entry point
+├── AGENTS-combined.md           # the same rules in one file
+├── ATTRIBUTION.md               # authorship and license summary
+├── LICENSE                      # MIT
+└── README.md
 ```
 
 ## Quick Start
@@ -172,16 +242,17 @@ existing skill in place.
 Full guide, including project-local installs, agent rules, updating,
 uninstalling and troubleshooting: **[docs/INSTALL.md](docs/INSTALL.md)**.
 
-### Other agent platforms
+### The other tested platforms
 
-The skills use the `SKILL.md` frontmatter convention, so they load in any agent
-that reads that format. Copy the folders you want into the directory your
-agent expects:
+OpenCode is the only platform with an installer in this repository. On Cindy,
+Odysseus and OpenDesign, use the routes below; nothing else is claimed as
+supported.
 
-```bash
-# project-local, works for most agents
-cp -r skills/original/* .agents/skills/
-```
+| Platform | Practical route |
+|----------|-----------------|
+| Cindy | Put skills in `~/.agents/skills/`; `scripts/sync-skills.ps1` recreates the junctions from the manifest. |
+| Odysseus | Feed it `catalog/links/skill-links.txt` and `catalog/links/pinned-links.txt`. |
+| OpenDesign | Install the `opendesign-trial` plugin from the marketplace and use `prompts/system/opendesign-ui-code-audit.md`. |
 
 For agent rules, use the modular `AGENTS.md` plus `instructions/modules/`, or
 the single-file `AGENTS-combined.md` - not both in the same project.
@@ -243,19 +314,22 @@ External link-only skills extend these areas - the `deep-research` and
 work, or the day-trader suite for trading workflows. The complete external
 list is in [docs/CATEGORY_INDEX.md](docs/CATEGORY_INDEX.md).
 
-### Compatibility
+### What the files are
 
-- **Original skills** use the `SKILL.md` frontmatter convention
-  (`name`, `description`, `version`, `author`, `category`) and load in OpenCode
-  and in any agent that reads that format.
+- **Original skills** use the `SKILL.md` frontmatter convention (`name`,
+  `description`, `version`, `author`, `authorship`, `category`). OpenCode reads
+  this format directly; the other tested platforms use the routes above.
 - **Bundled third-party skills** are local copies of upstream `SKILL.md` files
-  with provenance recorded; they load like original files.
-- **External skills** are URL references. They are platform-neutral but are not
-  tested by this repository and may target a specific harness.
-- **Personas, system prompts and rule modules** are plain Markdown and work as
-  chat modes, custom instructions or rule files in most agent tools.
+  with their notices preserved; authorship stays with the upstream author, and
+  their companion notes are linked to the upstream repository rather than
+  vendored here.
+- **External skills** are URL references only. They are not tested here and may
+  target a specific harness.
+- **Personas, system prompts and rule modules** are plain Markdown, consumed as
+  chat modes, custom instructions or rule files on the platforms listed above.
 - **Installation scripts** target OpenCode's user-level skills directory
-  (`~/.config/opencode/skills/`). Other agents need a manual copy step.
+  (`~/.config/opencode/skills/`). Cindy, Odysseus and OpenDesign use the routes
+  in the table above.
 
 ## Third-party skills
 
@@ -269,9 +343,10 @@ Two clearly separated groups. They are never counted as the same thing.
 
 **Bundled** - seven reverse-engineering skills copied into
 `skills/third-party/` from `zhaoxuya520/reverse-skill` and `morluto/rea`.
-Each file carries an upstream copyright notice, and the companion files a
-skill links to inside its own directory are bundled with it; the full license
-texts are in [docs/THIRD-PARTY-LICENSES.md](docs/THIRD-PARTY-LICENSES.md).
+Each file carries an upstream copyright notice. Only the seven `SKILL.md`
+bodies are redistributed; the companion notes they link to stay in the
+upstream repository, and the full license texts are in
+[docs/THIRD-PARTY-LICENSES.md](docs/THIRD-PARTY-LICENSES.md).
 
 | Bundled skill | Upstream |
 |---------------|----------|
@@ -286,6 +361,28 @@ texts are in [docs/THIRD-PARTY-LICENSES.md](docs/THIRD-PARTY-LICENSES.md).
 A URL returning HTTP 200 proves availability only. It says nothing about the
 linked content, its license, its security posture or whether it works in your
 harness. Review an external skill before you install it.
+
+## Authorship and provenance
+
+My work and other people's work are never mixed:
+
+- **`skills/original/` may only contain my own work.** Every skill there must
+  have `author: DracieVajko` and `authorship: original`.
+  `scripts/validate-frontmatter.py` fails the build when that is not true, and
+  CI runs it on every push.
+- **Bundled third-party skills** live in `skills/third-party/`, keep their
+  upstream copyright and license notices, and are limited to the seven
+  reverse-engineering skills listed above.
+- **Every other foreign skill is a link only.** `catalog/items.json` records the
+  repository, branch or commit, the path inside the repository, the direct raw
+  `SKILL.md` URL and the license when known. No content is copied.
+- **`sync/manifest.json`** records authorship per installed skill. A skill is
+  never promoted to `original` just because it sits on my disk; an unresolved
+  upstream stays `unknown` in `sync/unresolved.md`.
+
+The full license texts are in
+[docs/THIRD-PARTY-LICENSES.md](docs/THIRD-PARTY-LICENSES.md), and
+[ATTRIBUTION.md](ATTRIBUTION.md) summarizes provenance.
 
 ## Prompts and personas
 
@@ -354,10 +451,14 @@ python scripts/check-sync.py                      # rule copies are in sync
 python scripts/update-category-index.py --check   # generated files are current
 python scripts/check-markdown-links.py           # relative Markdown links resolve
 python -m unittest discover -s scripts -p "test_*.py"  # tooling tests
+
+# On a machine with the skills installed:
+python sync/generate-manifest.py --check         # manifest matches this machine
 ```
 
-CI runs the same checks on every push and pull request. A monthly workflow
-checks external link availability.
+CI runs the repository checks on every push and pull request; the manifest
+check needs a machine with installed skills, so it is not a CI job. A monthly
+workflow checks external link availability.
 
 The current improvement backlog for existing skills is tracked in
 [docs/SKILL-QUALITY-REVIEW.md](docs/SKILL-QUALITY-REVIEW.md).
@@ -369,8 +470,8 @@ If it saves you time, support the work through
 [GitHub Sponsors](https://github.com/sponsors/DracieVajko).
 
 Contributions fund new original skills, maintenance of the existing skills and
-the catalog, documentation, testing and CI, compatibility work with current AI
-coding agents, research methods, and help for community contributions.
+the catalog, documentation, testing and CI, work on Odysseus, Cindy, OpenCode
+and OpenDesign, research methods, and help for community contributions.
 
 The tier amounts are configured on the
 [Sponsors page](https://github.com/sponsors/DracieVajko); the levels below
@@ -397,7 +498,7 @@ A living list, not a promise of dates. Inputs come from
 - **Near term** - trim over-length skill descriptions for picker display, align
   the skill heading vocabulary with `docs/SKILL_SPEC.md`, add version history
   sections to older skills.
-- **Mid term** - installation examples for agents other than OpenCode, more
+- **Mid term** - installation examples for Cindy, Odysseus and OpenDesign, more
   worked examples in the younger skills, expanded domain rule modules.
 - **Long term** - a smoother contribution flow for outside authors, per-area
   skill bundles, and a steady maintenance cadence as funding allows.
@@ -406,7 +507,7 @@ A living list, not a promise of dates. Inputs come from
 
 | Content | License |
 |---------|---------|
-| Original skills, prompts, personas, rules, docs and scripts | MIT (Â© 2026 DracieVajko) - [LICENSE](LICENSE) |
+| Original skills, prompts, personas, rules, docs and scripts | MIT (© 2026 DracieVajko) - [LICENSE](LICENSE) |
 | External skills (link-only) | Upstream licenses; no content copied here |
 | Bundled third-party skills | Upstream MIT licenses - [docs/THIRD-PARTY-LICENSES.md](docs/THIRD-PARTY-LICENSES.md) |
 

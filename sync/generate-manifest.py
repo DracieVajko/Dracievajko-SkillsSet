@@ -6,7 +6,8 @@ Windows machine can reproduce it: each skill's upstream source, its install
 root, and the directory junctions that mirror it into other agents' folders.
 
 Sources of truth
-    skills/original/<name>            -> source.type "repo"
+    skills/original/<name>            -> source.type "repo", authorship "original"
+    skills/third-party/<name>         -> source.type "repo", authorship "third-party"
     catalog/items.json                -> source.type "github"
     OVERRIDES below                   -> source.type "github" (not in the catalog)
     anything else installed locally   -> source.type "unresolved"
@@ -153,6 +154,11 @@ def main() -> int:
 
     catalog = load_catalog()
     originals = {p.name for p in (REPO_ROOT / "skills" / "original").iterdir() if p.is_dir()}
+    bundled = {
+        p.name
+        for p in (REPO_ROOT / "skills" / "third-party").iterdir()
+        if p.is_dir() and (p / "SKILL.md").is_file()
+    }
 
     skills = []
     root_of: dict[str, str] = {}
@@ -170,12 +176,15 @@ def main() -> int:
             elif name in originals:
                 source = {"type": "repo", "repo": REPO_NAME,
                           "ref": "master", "path": f"skills/original/{name}"}
+            elif name in bundled:
+                source = {"type": "repo", "repo": REPO_NAME,
+                          "ref": "master", "path": f"skills/third-party/{name}"}
             elif name in catalog:
                 source = dict(catalog[name])
             else:
                 source = {"type": "unresolved", "repo": None, "ref": None, "path": None}
             if source["type"] == "repo":
-                authorship = "original"
+                authorship = "original" if name in originals else "third-party"
             elif source["type"] == "github":
                 authorship = "third-party"
             else:
@@ -242,11 +251,13 @@ def main() -> int:
             "Each skill is installed once, under roots[<root>].",
             "mirrors[] lists Windows directory junctions that expose those folders "
             "under other agents' skill directories; create them, never copy.",
-            "source.type=repo installs from this repository, source.type=github uses "
+            "source.type=repo installs from this repository (skills/original or the "
+            "approved bundled copies in skills/third-party), source.type=github uses "
             "git sparse-checkout, source.type=unresolved has no identified upstream "
             "and must be copied by hand.",
             "authorship=original only for the owner's own skills (installed from "
-            "skills/original/); authorship=third-party and unknown skills are never "
+            "skills/original/); bundled third-party skills stay third-party even "
+            "though they install from this repository, and unknown skills are never "
             "promoted into skills/original/ and keep their upstream author.",
             "node_modules is never copied; run npm install in skills with "
             "needsNodeModules=true.",

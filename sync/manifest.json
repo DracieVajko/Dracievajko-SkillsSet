@@ -9,8 +9,8 @@
   "notes": [
     "Each skill is installed once, under roots[<root>].",
     "mirrors[] lists Windows directory junctions that expose those folders under other agents' skill directories; create them, never copy.",
-    "source.type=repo installs from this repository, source.type=github uses git sparse-checkout, source.type=unresolved has no identified upstream and must be copied by hand.",
-    "authorship=original only for the owner's own skills (installed from skills/original/); authorship=third-party and unknown skills are never promoted into skills/original/ and keep their upstream author.",
+    "source.type=repo installs from this repository (skills/original or the approved bundled copies in skills/third-party), source.type=github uses git sparse-checkout, source.type=unresolved has no identified upstream and must be copied by hand.",
+    "authorship=original only for the owner's own skills (installed from skills/original/); bundled third-party skills stay third-party even though they install from this repository, and unknown skills are never promoted into skills/original/ and keep their upstream author.",
     "node_modules is never copied; run npm install in skills with needsNodeModules=true.",
     "cindyManagedSkills ship inside Cindy itself and are never copied between machines."
   ],
@@ -447,10 +447,10 @@
       "root": "opencode",
       "authorship": "third-party",
       "source": {
-        "type": "github",
-        "repo": "morluto/rea",
-        "ref": "main",
-        "path": ".agents/skills/reverse-engineer-anything"
+        "type": "repo",
+        "repo": "DracieVajko/Dracievajko-SkillsSet",
+        "ref": "master",
+        "path": "skills/third-party/reverse-engineer-anything"
       },
       "sizeKB": 236,
       "needsNodeModules": false,
