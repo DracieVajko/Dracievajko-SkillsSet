@@ -1,47 +1,56 @@
 {
   "version": 1,
   "notes": [
-    "Skills listed here stay in catalog/items.json and in sync/collection.json, but they are not installed on either computer.",
-    "Only skills that do the same job as a kept, better version are listed here.",
-    "A disabled skill is moved to ~/.config/opencode/skills-disabled/<name> by sync/prune-optional.py, so it can be restored without downloading it again.",
-    "Remove a name from this list, run sync-skills.ps1, and the skill is installed again."
+    "disabled: skills kept in the catalog and collection but not installed; sync/prune-optional.py moves them to ~/.config/opencode/skills-disabled/.",
+    "removed: skills deleted from the repository and the collection; the tombstone stops a machine snapshot from adding them back.",
+    "Remove a name from disabled, run sync-skills.ps1, and the skill is installed again."
   ],
-  "disabled": [
+  "disabled": [],
+  "removed": [
     {
       "name": "creating-skills",
-      "reason": "Overlaps skill-creator; skill-creator is the platform-neutral one kept for Cindy, OpenCode and OpenDesign."
+      "reason": "Duplicate of skill-creator; the platform-neutral skill-creator was kept.",
+      "removedAt": "2026-11-18"
     },
     {
       "name": "summarize-meeting",
-      "reason": "Overlaps meeting-notes; meeting-notes is more detailed."
+      "reason": "Duplicate of meeting-notes; the more detailed meeting-notes was kept.",
+      "removedAt": "2026-11-18"
     },
     {
       "name": "code-reviewer",
-      "reason": "Overlaps code-review; code-review covers standards and spec."
+      "reason": "Duplicate of code-review; the two-axis code-review was kept.",
+      "removedAt": "2026-11-18"
     },
     {
       "name": "debugging-wizard",
-      "reason": "Overlaps systematic-debugging; systematic-debugging is the process skill."
+      "reason": "Duplicate of systematic-debugging; the process skill was kept.",
+      "removedAt": "2026-11-18"
     },
     {
       "name": "penetration-testing-guide",
-      "reason": "Overlaps pen-testing; pen-testing is the complete methodology."
+      "reason": "Duplicate of pen-testing; the complete methodology was kept.",
+      "removedAt": "2026-11-18"
     },
     {
       "name": "web-research",
-      "reason": "Overlaps deep-research; deep-research is the full multi-agent pipeline."
+      "reason": "Duplicate of deep-research; the full multi-agent pipeline was kept.",
+      "removedAt": "2026-11-18"
     },
     {
       "name": "multi-agent-orchestration",
-      "reason": "Overlaps orchestrate; orchestrate is the operational coordinator."
+      "reason": "Overlaps orchestrate; the operational coordinator was kept.",
+      "removedAt": "2026-11-18"
     },
     {
       "name": "reverse-engineering",
-      "reason": "Overlaps reverse-engineer-anything; the specialised RE skills stay enabled."
+      "reason": "Overlaps reverse-engineer-anything; the REA workflow and the specialised RE skills were kept.",
+      "removedAt": "2026-11-18"
     },
     {
       "name": "generate-markdown-and-docx-documents",
-      "reason": "Thin wrapper; doc and minimax-docx already cover Markdown and DOCX output."
+      "reason": "Thin wrapper; doc and minimax-docx already cover the formats.",
+      "removedAt": "2026-11-18"
     }
   ]
 }

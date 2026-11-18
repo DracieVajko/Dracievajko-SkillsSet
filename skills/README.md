@@ -3,9 +3,9 @@
 This directory separates what this repository authors from what it
 references. Two kinds live here, always clearly labeled:
 
-- `original/` - skills authored and maintained in this repository (**25**)
-- `third-party/` - upstream skills referenced by link only (**206**). No
-  upstream code is bundled except the seven reverse-engineering skills copied
+- `original/` - skills authored and maintained in this repository (**23**)
+- `third-party/` - upstream skills referenced by link only (**236**). No
+  upstream code is bundled except the six reverse-engineering skills copied
   from `zhaoxuya520/reverse-skill` and `morluto/rea` at your request; see
   [`third-party/README.md`](third-party/README.md).
 
@@ -24,8 +24,6 @@ copy its folder into your agent's skill directory.
 | `beyond-vibe-coding-autonomous-development` | Practical skill for AI-era software development based on Addy Osmani's 'Beyond Vibe Coding' — intent-driven workflows, prompt engineering, the 70% problem, code review/refinement, AI prototyping, autonomous agents, and production-ready AI-assisted engineering. | [`SKILL.md`](original/beyond-vibe-coding-autonomous-development/SKILL.md) |
 | `document-editing-general` | General-purpose skill for creating, reading, editing and managing documents (markdown, text, code, etc.) in an editor panel. | [`SKILL.md`](original/document-editing-general/SKILL.md) |
 | `github-code-documentation` | Skill for creating detailed descriptions and high-quality README.md files for scripts and programs intended for GitHub upload, push and commit. Includes coding and 'vibe-coding' rules to maximize efficiency and minimize errors. | [`SKILL.md`](original/github-code-documentation/SKILL.md) |
-| `penetration-testing-guide` | Penetration testing guide and methodology covering 5 phases: Recon, Scan, Gain Access, Escalate and Report. | [`SKILL.md`](original/penetration-testing-guide/SKILL.md) |
-| `generate-markdown-and-docx-documents` | Create a new document from a user-provided outline and content, output both a Markdown file and a Word (DOCX) file for download. | [`SKILL.md`](original/generate-markdown-and-docx-documents/SKILL.md) |
 | `create-individual-calendar-events-from-earnings-dates-list` | Create individual calendar events from an earnings dates list, one event per ticker with company name and reminder. | [`SKILL.md`](original/create-individual-calendar-events-from-earnings-dates-list/SKILL.md) |
 | `ds-note-formatter` | Format content for Synology DS Note / Note Station so it pastes cleanly and preserves structure, readability and checklist usability. | [`SKILL.md`](original/ds-note-formatter/SKILL.md) |
 | `fix-inconclusive-skills` | Identify and fix skills marked as inconclusive due to missing tools or other issues. | [`SKILL.md`](original/fix-inconclusive-skills/SKILL.md) |
@@ -59,21 +57,20 @@ cp -r skills/original/repository-hygiene ~/.config/opencode/skills/
 
 ## Third-Party Skills (links only)
 
-199 upstream skills are referenced by URL only. Their content is never
+236 upstream skills are referenced by URL only. Their content is never
 copied here, so licenses and provenance stay with the upstream owners.
 
 - Curated list with purpose and license: [`third-party/README.md`](third-party/README.md)
 - Complete generated list: [`docs/CATEGORY_INDEX.md`](../docs/CATEGORY_INDEX.md)
 - Raw URL lists: [`catalog/links/`](../catalog/links/)
 - Safety notes before installing external skills: [`docs/SAFETY-AND-LICENSES.md`](../docs/SAFETY-AND-LICENSES.md)
-- Seven reverse-engineering skills copied from `zhaoxuya520/reverse-skill` and
+- Six reverse-engineering skills copied from `zhaoxuya520/reverse-skill` and
   `morluto/rea` at your request (content bundled, not link-only):
   [`apk-reverse`](third-party/apk-reverse/SKILL.md),
   [`binary-diff`](third-party/binary-diff/SKILL.md),
   [`ghidra-reverse`](third-party/ghidra-reverse/SKILL.md),
   [`js-reverse`](third-party/js-reverse/SKILL.md),
   [`mobile-reverse`](third-party/mobile-reverse/SKILL.md),
-  [`reverse-engineering`](third-party/reverse-engineering/SKILL.md),
   [`reverse-engineer-anything`](third-party/reverse-engineer-anything/SKILL.md).
 
 A link is not a license grant; check the upstream license before reusing

@@ -210,7 +210,7 @@ Before submitting a skill, verify:
 ## External Skills
 
 External skills are references only and are not copied into this repository,
-except for seven reverse-engineering skills deliberately bundled under
+except for six reverse-engineering skills deliberately bundled under
 `skills/third-party/` (from `zhaoxuya520/reverse-skill` and `morluto/rea`).
 To add a regular external reference:
 

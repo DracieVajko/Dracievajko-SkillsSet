@@ -79,12 +79,12 @@ by `scripts/update-category-index.py` - they are never maintained by hand.
 
 | What | Count | Where |
 |------|------:|-------|
-| Original skills | 25 | `skills/original/` - authored and maintained here |
-| Bundled third-party skills | 7 | `skills/third-party/` - local copies of upstream `SKILL.md` files |
-| External link-only skills | 242 | referenced by URL; no content copied |
-| Stable-branch links | 195 | `catalog/links/skill-links.txt` |
-| Pinned links | 47 | `catalog/links/pinned-links.txt` |
-| Catalog records | 267 | `catalog/items.json` |
+| Original skills | 23 | `skills/original/` - authored and maintained here |
+| Bundled third-party skills | 6 | `skills/third-party/` - local copies of upstream `SKILL.md` files |
+| External link-only skills | 236 | referenced by URL; no content copied |
+| Stable-branch links | 191 | `catalog/links/skill-links.txt` |
+| Pinned links | 45 | `catalog/links/pinned-links.txt` |
+| Catalog records | 259 | `catalog/items.json` |
 | System prompts | 9 | `prompts/system/` |
 | Personas | 10 | `prompts/personas/` |
 | Image prompts | 4 | `prompts/image/` |
@@ -188,11 +188,11 @@ is configured in the OpenCode config on each machine
 │   └── workflows/               # skills-tooling.yml, link-check.yml
 ├── catalog/
 │   ├── README.md
-│   ├── items.json               # 229 records: 25 original + 204 link-only
+│   ├── items.json               # 259 records: 23 original + 236 link-only
 │   └── links/
 │       ├── README.md
-│       ├── skill-links.txt      # 157 stable-branch links
-│       └── pinned-links.txt     # 47 pinned commit links
+│       ├── skill-links.txt      # 191 stable-branch links
+│       └── pinned-links.txt     # 45 pinned commit links
 ├── docs/
 │   ├── CATEGORY_INDEX.md        # generated index of every skill
 │   ├── CONTRIBUTING.md          # how to add or update content
@@ -223,8 +223,8 @@ is configured in the OpenCode config on each machine
 │   └── README.md                # apply the collection to a computer
 ├── skills/
 │   ├── README.md
-│   ├── original/                # 25 original skills, one folder each
-│   └── third-party/             # 7 bundled SKILL.md bodies + provenance, everything else linked
+│   ├── original/                # 23 original skills, one folder each
+│   └── third-party/             # 6 bundled SKILL.md bodies + provenance, everything else linked
 ├── AGENTS.md                    # modular rules entry point
 ├── AGENTS-combined.md           # the same rules in one file
 ├── ATTRIBUTION.md               # authorship and license summary
@@ -296,13 +296,11 @@ the single-file `AGENTS-combined.md` - not both in the same project.
 | [`ticktick-tasks`](skills/original/ticktick-tasks/SKILL.md) | Manage TickTick tasks, projects, tags, habits and focus via MCP |
 | [`write-research-projects`](skills/original/write-research-projects/SKILL.md) | Deep research, academic writing, source verification and complex projects |
 | [`pen-testing`](skills/original/pen-testing/SKILL.md) | Authorized penetration testing methodology: scope, recon, scan, controlled testing, blast radius, report |
-| [`penetration-testing-guide`](skills/original/penetration-testing-guide/SKILL.md) | Penetration testing guide and methodology covering 5 phases |
 | [`agent-operating-rules`](skills/original/agent-operating-rules/SKILL.md) | Evidence-first project workflow: consent-gated git, verification, coverage checklists, test discipline |
 | [`repository-hygiene`](skills/original/repository-hygiene/SKILL.md) | Repository cleanup: classification, temporary files, generated artifacts, secrets, commit preparation |
 | [`beyond-vibe-coding-autonomous-development`](skills/original/beyond-vibe-coding-autonomous-development/SKILL.md) | Intent-driven AI-era software development: prompt engineering, the 70% problem, code review, autonomous agents |
 | [`document-editing-general`](skills/original/document-editing-general/SKILL.md) | Create, read, edit and manage documents (markdown, text, code) in an editor panel |
 | [`github-code-documentation`](skills/original/github-code-documentation/SKILL.md) | Detailed descriptions and high-quality READMEs for scripts and programs published to GitHub |
-| [`generate-markdown-and-docx-documents`](skills/original/generate-markdown-and-docx-documents/SKILL.md) | Produce a Markdown file and a Word (DOCX) file from an outline |
 | [`detailed-source-rewrite-guide`](skills/original/detailed-source-rewrite-guide/SKILL.md) | Rewrite an article or paper into a structured, step-by-step guide |
 | [`book-to-skill`](skills/original/book-to-skill/SKILL.md) | Convert a book or article into a reusable skill |
 | [`ds-note-formatter`](skills/original/ds-note-formatter/SKILL.md) | Format content for Synology DS Note / Note Station |
@@ -324,20 +322,20 @@ the single-file `AGENTS-combined.md` - not both in the same project.
 | Area | Original skills | Personas, prompts and rules |
 |------|-----------------|----------------------------|
 | **Research** | `write-research-projects`, `detailed-source-rewrite-guide`, `book-to-skill`, `generate-findings-report-from-pipeline-logs` | `orion-researcher` persona; `deep-research-writing-long.md` / `-short.md` prompts; `research-learning` module; `research-agent` profile |
-| **Software engineering** | `beyond-vibe-coding-autonomous-development`, `github-code-documentation`, `document-editing-general`, `generate-markdown-and-docx-documents`, `enable-wake-on-lan-and-auto-shutdown-on-network-loss-for-ras`, `fix-inconclusive-skills` | `bruno-coder` persona; `coding`, `debugging`, `testing` modules; `coding-agent`, `debugging-agent` profiles |
+| **Software engineering** | `beyond-vibe-coding-autonomous-development`, `github-code-documentation`, `document-editing-general`, `enable-wake-on-lan-and-auto-shutdown-on-network-loss-for-ras`, `fix-inconclusive-skills` | `bruno-coder` persona; `coding`, `debugging`, `testing` modules; `coding-agent`, `debugging-agent` profiles |
 | **Architecture** | `get-more-perspectives` (trade-off stress tests) | `atlas-architect` persona; `planning` module; `planning-agent` profile |
 | **Critical thinking** | `get-more-perspectives`, `generate-fresh-ideas` | `victor-thinker` persona; `thinking-frameworks` external skill category |
-| **Writing** | `match-my-writing-style`, `detailed-source-rewrite-guide`, `ds-note-formatter`, `generate-markdown-and-docx-documents` | `elias-writer` persona |
+| **Writing** | `match-my-writing-style`, `detailed-source-rewrite-guide`, `ds-note-formatter` | `elias-writer` persona |
 | **Decision-making** | `get-more-perspectives`, `focus-my-energy` | `marcus-advisor` persona |
 | **Financial analysis** | `yfinance-ai`, `create-individual-calendar-events-from-earnings-dates-list` | `adrian-investor` persona; `investing` module; `investing-agent` profile; day-trader external skills (link-only) |
-| **Security and penetration testing** | `pen-testing`, `penetration-testing-guide` | `security` module |
+| **Security and penetration testing** | `pen-testing` | `security` module |
 | **Task management and productivity** | `ticktick-tasks`, `universal-listing-template`, `focus-my-energy`, `prep-for-meetings`, `match-my-writing-style`, `ds-note-formatter`, `create-individual-calendar-events-from-earnings-dates-list` | `jericho-chef` persona for cooking and meal planning |
 | **Repository upkeep** | `repository-hygiene`, `agent-operating-rules`, `testing-skills`, `fix-inconclusive-skills`, `generate-findings-report-from-pipeline-logs` | `repository-hygiene.md` system prompt |
 
-External link-only skills extend these areas - the `deep-research` and
-`web-research` links for research, `frontend-design-systems` for frontend
-work, or the day-trader suite for trading workflows. The complete external
-list is in [docs/CATEGORY_INDEX.md](docs/CATEGORY_INDEX.md).
+External link-only skills extend these areas - the `deep-research` link for
+research, `frontend-design-systems` for frontend work, or the day-trader suite
+for trading workflows. The complete external list is in
+[docs/CATEGORY_INDEX.md](docs/CATEGORY_INDEX.md).
 
 ### What the files are
 
@@ -366,9 +364,9 @@ Two clearly separated groups. They are never counted as the same thing.
 - Raw URL lists: [catalog/links/](catalog/links/)
 - Generated index of every entry: [docs/CATEGORY_INDEX.md](docs/CATEGORY_INDEX.md)
 
-**Bundled** - seven reverse-engineering skills copied into
+**Bundled** - six reverse-engineering skills copied into
 `skills/third-party/` from `zhaoxuya520/reverse-skill` and `morluto/rea`.
-Each file carries an upstream copyright notice. Only the seven `SKILL.md`
+Each file carries an upstream copyright notice. Only the six `SKILL.md`
 bodies are redistributed; the companion notes they link to stay in the
 upstream repository, and the full license texts are in
 [docs/THIRD-PARTY-LICENSES.md](docs/THIRD-PARTY-LICENSES.md).
@@ -380,7 +378,6 @@ upstream repository, and the full license texts are in
 | `ghidra-reverse` | `zhaoxuya520/reverse-skill` |
 | `js-reverse` | `zhaoxuya520/reverse-skill` |
 | `mobile-reverse` | `zhaoxuya520/reverse-skill` |
-| `reverse-engineering` | `zhaoxuya520/reverse-skill` |
 | `reverse-engineer-anything` | `morluto/rea` |
 
 A URL returning HTTP 200 proves availability only. It says nothing about the
@@ -396,7 +393,7 @@ My work and other people's work are never mixed:
   `scripts/validate-frontmatter.py` fails the build when that is not true, and
   CI runs it on every push.
 - **Bundled third-party skills** live in `skills/third-party/`, keep their
-  upstream copyright and license notices, and are limited to the seven
+  upstream copyright and license notices, and are limited to the six
   reverse-engineering skills listed above.
 - **Every other foreign skill is a link only.** `catalog/items.json` records the
   repository, branch or commit, the path inside the repository, the direct raw

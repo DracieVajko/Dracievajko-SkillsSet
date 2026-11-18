@@ -1,7 +1,7 @@
 # Attribution and Licensing
 
 This is a personal curated collection of AI-agent resources. It contains
-original work, links to third-party work, and seven bundled third-party
+original work, links to third-party work, and six bundled third-party
 reverse-engineering skill copies kept under `skills/third-party/`.
 
 ## Authorship
@@ -12,14 +12,14 @@ The machine-readable catalog (`catalog/items.json`) tracks:
 
 | What | Count | Where |
 |------|------:|-------|
-| Catalog records with `authorship: original` | 25 |  |
-| Catalog records with `authorship: link-only` | 242 |  |
-| Catalog records | 267 | `catalog/items.json` |
-| Bundled third-party skills | 7 | `skills/third-party/` - local copies of upstream `SKILL.md` files |
+| Catalog records with `authorship: original` | 23 |  |
+| Catalog records with `authorship: link-only` | 236 |  |
+| Catalog records | 259 | `catalog/items.json` |
+| Bundled third-party skills | 6 | `skills/third-party/` - local copies of upstream `SKILL.md` files |
 
 <!-- counts:end -->
 
-In addition to the catalog records, **7 reverse-engineering skills are bundled**
+In addition to the catalog records, **6 reverse-engineering skills are bundled**
 as local copies under `skills/third-party/` (from `zhaoxuya520/reverse-skill`
 and `morluto/rea`). They are tracked by the skills tooling test and documented
 in `skills/third-party/README.md`, but are not link-only catalog records.
@@ -38,8 +38,6 @@ Their upstream MIT notices are reproduced in
 | `beyond-vibe-coding-autonomous-development` | Practical skill for AI-era software development based on Addy Osmani's 'Beyond Vibe Coding' — intent-driven workflows, prompt engineering, the 70% problem, code review/refinement, AI prototyping, autonomous agents, and production-ready AI-assisted engineering. | DracieVajko | MIT |
 | `document-editing-general` | General-purpose skill for creating, reading, editing and managing documents (markdown, text, code, etc.) in an editor panel. | DracieVajko | MIT |
 | `github-code-documentation` | Skill for creating detailed descriptions and high-quality README.md files for scripts and programs intended for GitHub upload, push and commit. Includes coding and 'vibe-coding' rules to maximize efficiency and minimize errors. | DracieVajko | MIT |
-| `penetration-testing-guide` | Penetration testing guide and methodology covering 5 phases: Recon, Scan, Gain Access, Escalate and Report. | DracieVajko | MIT |
-| `generate-markdown-and-docx-documents` | Create a new document from a user-provided outline and content, output both a Markdown file and a Word (DOCX) file for download. | DracieVajko | MIT |
 | `create-individual-calendar-events-from-earnings-dates-list` | Create individual calendar events from an earnings dates list, one event per ticker with company name and reminder. | DracieVajko | MIT |
 | `ds-note-formatter` | Format content for Synology DS Note / Note Station so it pastes cleanly and preserves structure, readability and checklist usability. | DracieVajko | MIT |
 | `fix-inconclusive-skills` | Identify and fix skills marked as inconclusive due to missing tools or other issues. | DracieVajko | MIT |
@@ -58,11 +56,11 @@ Their upstream MIT notices are reproduced in
 
 ## External Skills
 
-The 199 external skills in the catalog are link-only (referenced by URL; no
+The 236 external skills in the catalog are link-only (referenced by URL; no
 content copied). The URL lists live in [`catalog/links/`](catalog/links/), and
 the full human-readable index is [`docs/CATEGORY_INDEX.md`](docs/CATEGORY_INDEX.md).
 
-Seven reverse-engineering skills are additionally bundled as local copies under
+Six reverse-engineering skills are additionally bundled as local copies under
 `skills/third-party/` (from `zhaoxuya520/reverse-skill` and `morluto/rea`).
 The catalog keeps one record per upstream URL; `context-engineering` has two
 upstream records because it exists in two repositories.
@@ -76,9 +74,7 @@ upstream records because it exists in two repositories.
 | `theme-factory` | Apache-2.0 | [link](https://github.com/anthropics/skills/blob/dbd4588f9e1033efb41dad4bef2f7947c8993d44/skills/theme-factory/SKILL.md) |
 | `mcp-builder` | Apache-2.0 | [link](https://github.com/anthropics/skills/blob/dbd4588f9e1033efb41dad4bef2f7947c8993d44/skills/mcp-builder/SKILL.md) |
 | `skill-creator` | Apache-2.0 | [link](https://github.com/anthropics/skills/blob/dbd4588f9e1033efb41dad4bef2f7947c8993d44/skills/skill-creator/SKILL.md) |
-| `code-reviewer` | MIT | [link](https://github.com/Jeffallan/claude-skills/blob/02b05028ba6c93f7aed45314b15c0dd5abead9d6/skills/code-reviewer/SKILL.md) |
 | `code-documenter` | MIT | [link](https://github.com/Jeffallan/claude-skills/blob/02b05028ba6c93f7aed45314b15c0dd5abead9d6/skills/code-documenter/SKILL.md) |
-| `debugging-wizard` | MIT | [link](https://github.com/Jeffallan/claude-skills/blob/02b05028ba6c93f7aed45314b15c0dd5abead9d6/skills/debugging-wizard/SKILL.md) |
 | `fine-tuning-expert` | MIT | [link](https://github.com/Jeffallan/claude-skills/blob/02b05028ba6c93f7aed45314b15c0dd5abead9d6/skills/fine-tuning-expert/SKILL.md) |
 | `wordpress-pro` | MIT | [link](https://github.com/Jeffallan/claude-skills/blob/02b05028ba6c93f7aed45314b15c0dd5abead9d6/skills/wordpress-pro/SKILL.md) |
 | `frontend-design-systems` | MIT | [link](https://github.com/composio-community/opencode-skills/blob/5076f6673e5bf8b1f46dc5e934d1e3dd37250e10/skills/frontend-design-systems/SKILL.md) |
@@ -100,7 +96,7 @@ upstream records because it exists in two repositories.
 
 ## Link Verification
 
-All 199 external URLs returned HTTP 200 when checked on 2026-11-12.
+All 236 external URLs returned HTTP 200 when checked on 2026-11-12.
 Verification covers URL availability only. It does not verify upstream
 content, license, security or runtime compatibility.
 
@@ -112,8 +108,8 @@ category and never share a license.
 | Content | License | Applies To |
 |---------|---------|------------|
 | Original skills, system prompts, personas, rules, documentation and scripts | MIT (© 2026 DracieVajko) | Material authored by DracieVajko |
-| External skills | Upstream licenses | 199 link-only records; referenced by URL, no content copied |
-| Bundled third-party skills | Upstream MIT licenses (© 2026 zhaoxuya520, © 2026 morluto) | 7 local copies under `skills/third-party/`; full text in [docs/THIRD-PARTY-LICENSES.md](docs/THIRD-PARTY-LICENSES.md) |
+| External skills | Upstream licenses | 236 link-only records; referenced by URL, no content copied |
+| Bundled third-party skills | Upstream MIT licenses (© 2026 zhaoxuya520, © 2026 morluto) | 6 local copies under `skills/third-party/`; full text in [docs/THIRD-PARTY-LICENSES.md](docs/THIRD-PARTY-LICENSES.md) |
 
 The root [MIT license](LICENSE) applies only to original content. No blanket
 license is applied to external content. A link does not grant a license or
@@ -126,7 +122,7 @@ it - see [docs/THIRD-PARTY-LICENSES.md](docs/THIRD-PARTY-LICENSES.md).
 > This is a personal curated collection of AI-agent resources. Original work is
 > MIT licensed. Most external third-party skills remain the property of their
 > original authors and are referenced by URL only - no content is copied for
-> those. Separately, seven reverse-engineering skills are bundled as local
+> those. Separately, six reverse-engineering skills are bundled as local
 > copies under `skills/third-party/`; their upstream MIT copyright notices and
 > license texts are reproduced in
 > [docs/THIRD-PARTY-LICENSES.md](docs/THIRD-PARTY-LICENSES.md), and their

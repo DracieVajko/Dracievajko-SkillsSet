@@ -21,6 +21,7 @@
     "harnesses lists every agent that sees the skill once it is installed in install.root.",
     "machines and gaps are coverage evidence: what was seen where and what a computer still needs. They are not separate collections.",
     "enabled=false means the skill stays in the catalog and this collection but is not installed; sync/optional.json records why and can re-enable it.",
+    "Names in optional.json removed[] are tombstones: they are gone from the repository and are never re-added from a machine snapshot.",
     "cindyPlugins install from the Cindy marketplace on each computer and are authorized there; sync/cindy-plugins.json lists what each one needs.",
     "opendesign-trial is the OpenDesign plugin; OpenDesign also uses prompts/system/opendesign-ui-code-audit.md.",
     "appManaged entries ship inside Cindy or Codex and are never copied."
@@ -1083,43 +1084,6 @@
       "needsNodeModules": false
     },
     {
-      "name": "code-reviewer",
-      "enabled": false,
-      "disabledReason": "Overlaps code-review; code-review covers standards and spec.",
-      "authorship": "third-party",
-      "source": {
-        "type": "github",
-        "repo": "Jeffallan/claude-skills",
-        "ref": "02b05028ba6c93f7aed45314b15c0dd5abead9d6",
-        "path": "skills/code-reviewer"
-      },
-      "author": "",
-      "license": "MIT",
-      "install": {
-        "method": "git-sparse-checkout",
-        "root": "opencode",
-        "target": "~/.config/opencode/skills"
-      },
-      "harnesses": [
-        "opencode",
-        "agents",
-        "cindy",
-        "claude",
-        "pi",
-        "qwen"
-      ],
-      "machines": [
-        "dracievajko",
-        "randall"
-      ],
-      "sha256": {
-        "dracievajko": "f65c4468751bb509f4ff78b791dfbc664dfe6191d36d04626c92ed8c2174293b",
-        "randall": "f65c4468751bb509f4ff78b791dfbc664dfe6191d36d04626c92ed8c2174293b"
-      },
-      "drift": false,
-      "needsNodeModules": false
-    },
-    {
       "name": "context-engineering",
       "enabled": true,
       "disabledReason": "",
@@ -1192,43 +1156,6 @@
       "needsNodeModules": false
     },
     {
-      "name": "creating-skills",
-      "enabled": false,
-      "disabledReason": "Overlaps skill-creator; skill-creator is the platform-neutral one kept for Cindy, OpenCode and OpenDesign.",
-      "authorship": "third-party",
-      "source": {
-        "type": "github",
-        "repo": "GenAI-Community-VITB/master-prompters",
-        "ref": "main",
-        "path": ".agents/skills/creating-skills"
-      },
-      "author": "",
-      "license": "",
-      "install": {
-        "method": "git-sparse-checkout",
-        "root": "opencode",
-        "target": "~/.config/opencode/skills"
-      },
-      "harnesses": [
-        "opencode",
-        "agents",
-        "cindy",
-        "claude",
-        "pi",
-        "qwen"
-      ],
-      "machines": [
-        "dracievajko",
-        "randall"
-      ],
-      "sha256": {
-        "dracievajko": "71872dcdbe5269bcadffc7b631c3e2fbe8946f29b433140afe251ee48958152c",
-        "randall": "71872dcdbe5269bcadffc7b631c3e2fbe8946f29b433140afe251ee48958152c"
-      },
-      "drift": false,
-      "needsNodeModules": false
-    },
-    {
       "name": "dcf-valuation",
       "enabled": true,
       "disabledReason": "",
@@ -1260,43 +1187,6 @@
       ],
       "sha256": {
         "randall": "207ae6f7ea53515ddfad2dbe79346af90e778262fd173ae0a9ff12f257c758c6"
-      },
-      "drift": false,
-      "needsNodeModules": false
-    },
-    {
-      "name": "debugging-wizard",
-      "enabled": false,
-      "disabledReason": "Overlaps systematic-debugging; systematic-debugging is the process skill.",
-      "authorship": "third-party",
-      "source": {
-        "type": "github",
-        "repo": "Jeffallan/claude-skills",
-        "ref": "02b05028ba6c93f7aed45314b15c0dd5abead9d6",
-        "path": "skills/debugging-wizard"
-      },
-      "author": "",
-      "license": "MIT",
-      "install": {
-        "method": "git-sparse-checkout",
-        "root": "opencode",
-        "target": "~/.config/opencode/skills"
-      },
-      "harnesses": [
-        "opencode",
-        "agents",
-        "cindy",
-        "claude",
-        "pi",
-        "qwen"
-      ],
-      "machines": [
-        "dracievajko",
-        "randall"
-      ],
-      "sha256": {
-        "dracievajko": "9dc712996f743d1b48e6f57aec344872fd81f6af547d753e5348d91c5b60c56c",
-        "randall": "9dc712996f743d1b48e6f57aec344872fd81f6af547d753e5348d91c5b60c56c"
       },
       "drift": false,
       "needsNodeModules": false
@@ -1977,41 +1867,6 @@
       ],
       "sha256": {
         "randall": "efe3ad5de56f11a015d56c85c1de5bb295eef18e5e33e6d0964ce037b144ab9a"
-      },
-      "drift": false,
-      "needsNodeModules": false
-    },
-    {
-      "name": "generate-markdown-and-docx-documents",
-      "enabled": false,
-      "disabledReason": "Thin wrapper; doc and minimax-docx already cover Markdown and DOCX output.",
-      "authorship": "original",
-      "source": {
-        "type": "repo",
-        "repo": "DracieVajko/Dracievajko-SkillsSet",
-        "ref": "master",
-        "path": "skills/original/generate-markdown-and-docx-documents"
-      },
-      "author": "DracieVajko",
-      "license": "MIT",
-      "install": {
-        "method": "repository-copy",
-        "root": "opencode",
-        "target": "~/.config/opencode/skills"
-      },
-      "harnesses": [
-        "opencode",
-        "agents",
-        "cindy",
-        "claude",
-        "pi",
-        "qwen"
-      ],
-      "machines": [
-        "randall"
-      ],
-      "sha256": {
-        "randall": "e43e2f058fe58cf7afb20edfc93cf01f4502028b8816d50c4c6382a14d75aa19"
       },
       "drift": false,
       "needsNodeModules": false
@@ -2968,42 +2823,6 @@
       "needsNodeModules": false
     },
     {
-      "name": "multi-agent-orchestration",
-      "enabled": false,
-      "disabledReason": "Overlaps orchestrate; orchestrate is the operational coordinator.",
-      "authorship": "third-party",
-      "source": {
-        "type": "github",
-        "repo": "qodex-ai/ai-agent-skills",
-        "ref": "main",
-        "path": "skills/multi-agent-orchestration"
-      },
-      "author": "",
-      "license": "",
-      "install": {
-        "method": "git-sparse-checkout",
-        "root": "agents",
-        "target": "~/.agents/skills"
-      },
-      "harnesses": [
-        "agents",
-        "cindy",
-        "claude",
-        "pi",
-        "qwen",
-        "continue",
-        "roo"
-      ],
-      "machines": [
-        "randall"
-      ],
-      "sha256": {
-        "randall": "95de66280782b45552e3709b7892db822b3d6a23e0eb343bd8fc1e8289dc543d"
-      },
-      "drift": false,
-      "needsNodeModules": false
-    },
-    {
       "name": "orchestrate",
       "enabled": true,
       "disabledReason": "",
@@ -3109,41 +2928,6 @@
       "sha256": {
         "dracievajko": "53689aec8067435f7615463f325c3b44ac9cc75d7e23fced7d7c247de386d386",
         "randall": "53689aec8067435f7615463f325c3b44ac9cc75d7e23fced7d7c247de386d386"
-      },
-      "drift": false,
-      "needsNodeModules": false
-    },
-    {
-      "name": "penetration-testing-guide",
-      "enabled": false,
-      "disabledReason": "Overlaps pen-testing; pen-testing is the complete methodology.",
-      "authorship": "original",
-      "source": {
-        "type": "repo",
-        "repo": "DracieVajko/Dracievajko-SkillsSet",
-        "ref": "master",
-        "path": "skills/original/penetration-testing-guide"
-      },
-      "author": "DracieVajko",
-      "license": "MIT",
-      "install": {
-        "method": "repository-copy",
-        "root": "opencode",
-        "target": "~/.config/opencode/skills"
-      },
-      "harnesses": [
-        "opencode",
-        "agents",
-        "cindy",
-        "claude",
-        "pi",
-        "qwen"
-      ],
-      "machines": [
-        "randall"
-      ],
-      "sha256": {
-        "randall": "7675eb1b377fcccacc0a1de381f96743ec298b979255883c8d1733a348040d99"
       },
       "drift": false,
       "needsNodeModules": false
@@ -3515,41 +3299,6 @@
       "needsNodeModules": false
     },
     {
-      "name": "reverse-engineering",
-      "enabled": false,
-      "disabledReason": "Overlaps reverse-engineer-anything; the specialised RE skills stay enabled.",
-      "authorship": "third-party",
-      "source": {
-        "type": "repo",
-        "repo": "DracieVajko/Dracievajko-SkillsSet",
-        "ref": "master",
-        "path": "skills/third-party/reverse-engineering"
-      },
-      "author": "",
-      "license": "MIT",
-      "install": {
-        "method": "repository-copy",
-        "root": "opencode",
-        "target": "~/.config/opencode/skills"
-      },
-      "harnesses": [
-        "opencode",
-        "agents",
-        "cindy",
-        "claude",
-        "pi",
-        "qwen"
-      ],
-      "machines": [
-        "randall"
-      ],
-      "sha256": {
-        "randall": "b7d6ce641620a2e3a62f422cb9d1c36428aff5dcc07f623b44f0e0d18f585450"
-      },
-      "drift": false,
-      "needsNodeModules": false
-    },
-    {
       "name": "skill-creator",
       "enabled": true,
       "disabledReason": "",
@@ -3619,42 +3368,6 @@
       ],
       "sha256": {
         "randall": "36baea99e96c77c13d15d24f9d53cd072ccbc120e810bf4e68049edb5b0f1d65"
-      },
-      "drift": false,
-      "needsNodeModules": false
-    },
-    {
-      "name": "summarize-meeting",
-      "enabled": false,
-      "disabledReason": "Overlaps meeting-notes; meeting-notes is more detailed.",
-      "authorship": "third-party",
-      "source": {
-        "type": "github",
-        "repo": "NVlabs/Skill2Env",
-        "ref": "main",
-        "path": "SkillHub/skills/pawel-huryn/summarize-meeting"
-      },
-      "author": "",
-      "license": "",
-      "install": {
-        "method": "git-sparse-checkout",
-        "root": "agents",
-        "target": "~/.agents/skills"
-      },
-      "harnesses": [
-        "agents",
-        "cindy",
-        "claude",
-        "pi",
-        "qwen",
-        "continue",
-        "roo"
-      ],
-      "machines": [
-        "randall"
-      ],
-      "sha256": {
-        "randall": "4deabdd7f99c692ee800a80a4eaf6a688fb8873cdaaaea44b7f472499205f8e7"
       },
       "drift": false,
       "needsNodeModules": false
@@ -4379,42 +4092,6 @@
       ],
       "sha256": {
         "randall": "81c5002c6643b0de7b8710b00e7a9038daa6fb9b68d59870ee6adb12da8d10f8"
-      },
-      "drift": false,
-      "needsNodeModules": false
-    },
-    {
-      "name": "web-research",
-      "enabled": false,
-      "disabledReason": "Overlaps deep-research; deep-research is the full multi-agent pipeline.",
-      "authorship": "third-party",
-      "source": {
-        "type": "github",
-        "repo": "langchain-ai/deepagents",
-        "ref": "main",
-        "path": "libs/code/examples/skills/web-research"
-      },
-      "author": "",
-      "license": "",
-      "install": {
-        "method": "git-sparse-checkout",
-        "root": "agents",
-        "target": "~/.agents/skills"
-      },
-      "harnesses": [
-        "agents",
-        "cindy",
-        "claude",
-        "pi",
-        "qwen",
-        "continue",
-        "roo"
-      ],
-      "machines": [
-        "randall"
-      ],
-      "sha256": {
-        "randall": "7c2b1f1990370f7ce176fe3608a67028c72db11e337b4ba83b8fce6d927dfde3"
       },
       "drift": false,
       "needsNodeModules": false

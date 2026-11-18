@@ -34,12 +34,10 @@ Discovered under `skills/original/`.
 | `focus-my-energy` | productivity | 1.0.0 | Use when the user asks what to work on next, wants to prioritize or sequence tasks by energy or mental bandwidth, feels tired, fried, or overwhelmed, or wants to set up an energy profile. Classifies tasks from their prompt or connected Workspace apps by cognitive demand and recommends one clear action matched to their state. Do NOT trigger for calendar booking, medical advice, meeting briefs (use prep-for-meetings), decision panels (use get-more-perspectives), or drafting (use match-my-writing-style). | [SKILL.md](../skills/original/focus-my-energy/SKILL.md) |
 | `generate-findings-report-from-pipeline-logs` | development | 1.0.0 | Verify that all expected sections and data are present in generated files by comparing logs and output artifacts, and summarize discrepancies. | [SKILL.md](../skills/original/generate-findings-report-from-pipeline-logs/SKILL.md) |
 | `generate-fresh-ideas` | thinking-frameworks | 1.0.0 | Use when the user wants fresh content ideas, creative concepts, or new angles by remixing or repurposing articles, posts, briefs, transcripts, notes, or Google Docs. Generates 5 distinct angles (Contrarian, Personal Story, Data/Evidence, Playbook, What They Missed) rather than summarizing or rephrasing. Do NOT trigger for plain summaries, drafting in the user's voice (use match-my-writing-style), decision panels (use get-more-perspectives), or meeting briefs (use prep-for-meetings). | [SKILL.md](../skills/original/generate-fresh-ideas/SKILL.md) |
-| `generate-markdown-and-docx-documents` | documents | 1.1.0 | Create a new document from a user-provided outline and content, output both a Markdown file and a Word (DOCX) file for download. | [SKILL.md](../skills/original/generate-markdown-and-docx-documents/SKILL.md) |
 | `get-more-perspectives` | thinking-frameworks | 1.0.0 | Use when the user wants multiple expert perspectives on a decision, strategy, or dilemma, is stuck between options, or wants to customize an advisory panel. Stress-tests choices across 5 lenses (Operator, Skeptic, Visionary, Customer, Finance) with a vote split and synthesized verdict rather than generic pros and cons. Do NOT trigger for factual Q&A, content remixes (use generate-fresh-ideas), meeting briefs (use prep-for-meetings), or task triage (use focus-my-energy). | [SKILL.md](../skills/original/get-more-perspectives/SKILL.md) |
 | `github-code-documentation` | development | 1.0.0 | Skill for creating detailed descriptions and high-quality README.md files for scripts and programs intended for GitHub upload, push and commit. Includes coding and 'vibe-coding' rules to maximize efficiency and minimize errors. | [SKILL.md](../skills/original/github-code-documentation/SKILL.md) |
 | `match-my-writing-style` | writing-docs | 1.0.0 | Use when the user asks to draft, reply to, or rewrite emails, messages, posts, memos, or docs in their voice, or to build or update their writing style profile. Infers tone, greetings, sign-offs, and channel registers from sent Gmail and Google Docs so drafts sound like them rather than generic AI prose, even without a style prompt. Do NOT trigger for factual Q&A, code, translation, other personas, content remixes (use generate-fresh-ideas), or meeting briefs (use prep-for-meetings). | [SKILL.md](../skills/original/match-my-writing-style/SKILL.md) |
 | `pen-testing` | custom | 1.0.0 | Guide authorized penetration testing from scoping through recon, scanning, controlled testing and reporting. Refuses targets without written approval. | [SKILL.md](../skills/original/pen-testing/SKILL.md) |
-| `penetration-testing-guide` | security | 1.0.0 | Penetration testing guide and methodology covering 5 phases: Recon, Scan, Gain Access, Escalate and Report. | [SKILL.md](../skills/original/penetration-testing-guide/SKILL.md) |
 | `prep-for-meetings` | productivity | 1.0.0 | Use when the user asks to prep for an upcoming meeting, call, or 1:1, or wants to know what they owe or need to know before walking in. Scans connected Calendar, Gmail, Docs, and Tasks for mentions of the user to build a 30-second glance card and TL;DR brief (Must Do, Must Know, Watch Out). Do NOT trigger when an active plugin meeting skill is available in the turn (use plugin:prepare-for-meetings, plugin:meeting-context-builder, or plugin:meeting-prep instead), or for booking calendar events, energy-based task triage (use focus-my-energy), voice-matched drafting (use match-my-writing-style), or decision panels (use get-more-perspectives). | [SKILL.md](../skills/original/prep-for-meetings/SKILL.md) |
 | `repository-hygiene` | development | 1.0.0 | Use when cleaning a repository, preparing a commit, or removing temporary files, generated artifacts or ad-hoc fix scripts. | [SKILL.md](../skills/original/repository-hygiene/SKILL.md) |
 | `testing-skills` | testing | 1.0.0 | Test skills that enforce discipline, compliance and verification using pressure scenarios and rationalization tables. | [SKILL.md](../skills/original/testing-skills/SKILL.md) |
@@ -54,7 +52,7 @@ Third-party skills referenced by upstream URL only; no local copy is bundled. So
 
 Entries with a short description have curated metadata in `catalog/items.json`; entries without one are link-only.
 
-Total: **242** references.
+Total: **236** references.
 
 ### Agents365-ai/drawio-skill (1)
 
@@ -68,11 +66,10 @@ Total: **242** references.
 
 - [`browser-automation`](https://raw.githubusercontent.com/FNOSP/fnos-dsh/main/plugins/dsh-midscene-plugin/skills/browser-automation/SKILL.md)
 
-### GenAI-Community-VITB/master-prompters (3)
+### GenAI-Community-VITB/master-prompters (2)
 
 - [`applying-themes`](https://raw.githubusercontent.com/GenAI-Community-VITB/master-prompters/main/.agents/skills/applying-themes/SKILL.md)
 - [`building-mcp-servers`](https://raw.githubusercontent.com/GenAI-Community-VITB/master-prompters/main/.agents/skills/building-mcp-servers/SKILL.md)
-- [`creating-skills`](https://raw.githubusercontent.com/GenAI-Community-VITB/master-prompters/main/.agents/skills/creating-skills/SKILL.md)
 
 ### Graphify-Labs/graphify (1)
 
@@ -106,11 +103,9 @@ Total: **242** references.
 
 - [`main`](https://raw.githubusercontent.com/JamesShi96/project-butler/main/SKILL.md)
 
-### Jeffallan/claude-skills (14)
+### Jeffallan/claude-skills (12)
 
 - [`code-documenter`](https://raw.githubusercontent.com/Jeffallan/claude-skills/02b05028ba6c93f7aed45314b15c0dd5abead9d6/skills/code-documenter/SKILL.md) — Generates, formats, and validates technical documentation — including docstrings, OpenAPI/Swagger specs, JSDoc annotations, doc portals, and user guides. Use when adding docstrings to functions or classes, creating API documentation, building documentation sites, or writing tutorials and user guides. Invoke for OpenAPI/Swagger specs, JSDoc, doc portals, getting started guides.
-- [`code-reviewer`](https://raw.githubusercontent.com/Jeffallan/claude-skills/02b05028ba6c93f7aed45314b15c0dd5abead9d6/skills/code-reviewer/SKILL.md) — Analyzes code diffs and files to identify bugs, security vulnerabilities (SQL injection, XSS, insecure deserialization), code smells, N+1 queries, naming issues, and architectural concerns, then produces a structured review report with prioritized, actionable feedback. Use when reviewing pull requests, conducting code quality audits, identifying refactoring opportunities, or checking for security issues. Invoke for PR reviews, code quality checks, refactoring suggestions, review code, code quality. Complements specialized skills (security-reviewer, test-master) by providing broad-scope review across correctness, performance, maintainability, and test coverage in a single pass.
-- [`debugging-wizard`](https://raw.githubusercontent.com/Jeffallan/claude-skills/02b05028ba6c93f7aed45314b15c0dd5abead9d6/skills/debugging-wizard/SKILL.md) — Parses error messages, traces execution flow through stack traces, correlates log entries to identify failure points, and applies systematic hypothesis-driven methodology to isolate and resolve bugs. Use when investigating errors, analyzing stack traces, finding root causes of unexpected behavior, troubleshooting crashes, or performing log analysis, error investigation, or root cause analysis.
 - [`embedded-systems`](https://raw.githubusercontent.com/Jeffallan/claude-skills/main/skills/embedded-systems/SKILL.md)
 - [`fastapi-expert`](https://raw.githubusercontent.com/Jeffallan/claude-skills/main/skills/fastapi-expert/SKILL.md)
 - [`fine-tuning-expert`](https://raw.githubusercontent.com/Jeffallan/claude-skills/02b05028ba6c93f7aed45314b15c0dd5abead9d6/skills/fine-tuning-expert/SKILL.md) — Use when fine-tuning LLMs, training custom models, or adapting foundation models for specific tasks. Invoke for configuring LoRA/QLoRA adapters, preparing JSONL training datasets, setting hyperparameters for fine-tuning runs, adapter training, transfer learning, finetuning with Hugging Face PEFT, OpenAI fine-tuning, instruction tuning, RLHF, DPO, or quantizing and deploying fine-tuned models. Trigger terms include: LoRA, QLoRA, PEFT, finetuning, fine-tuning, adapter tuning, LLM training, model training, custom model.
@@ -126,10 +121,6 @@ Total: **242** references.
 ### JetBrains/skills (1)
 
 - [`gws-gmail`](https://raw.githubusercontent.com/JetBrains/skills/main/gws-gmail/SKILL.md)
-
-### NVlabs/Skill2Env (1)
-
-- [`summarize-meeting`](https://raw.githubusercontent.com/NVlabs/Skill2Env/main/SkillHub/skills/pawel-huryn/summarize-meeting/SKILL.md)
 
 ### OSideMedia/higgsfield-ai-prompt-skill (1)
 
@@ -310,10 +301,6 @@ Total: **242** references.
 
 - [`playwright-skill`](https://raw.githubusercontent.com/lackeyjb/playwright-skill/main/skills/playwright-skill/SKILL.md)
 
-### langchain-ai/deepagents (1)
-
-- [`web-research`](https://raw.githubusercontent.com/langchain-ai/deepagents/main/libs/code/examples/skills/web-research/SKILL.md)
-
 ### langchain-ai/design-agent (1)
 
 - [`deep-agents-memory`](https://raw.githubusercontent.com/langchain-ai/design-agent/main/.agents/skills/deep-agents-memory/SKILL.md)
@@ -416,10 +403,6 @@ Total: **242** references.
 ### peteromallet/desloppify (1)
 
 - [`global`](https://raw.githubusercontent.com/peteromallet/desloppify/main/desloppify/data/global/SKILL.md)
-
-### qodex-ai/ai-agent-skills (1)
-
-- [`multi-agent-orchestration`](https://raw.githubusercontent.com/qodex-ai/ai-agent-skills/main/skills/multi-agent-orchestration/SKILL.md)
 
 ### robbin/android-adb-control (1)
 

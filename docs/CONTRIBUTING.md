@@ -1,6 +1,6 @@
 # Contributing Guide
 
-This repository contains original skills and links to external skills. Seven
+This repository contains original skills and links to external skills. Six
 reverse-engineering skills are additionally bundled as local copies under
 `skills/third-party/` (from `zhaoxuya520/reverse-skill` and `morluto/rea`).
 

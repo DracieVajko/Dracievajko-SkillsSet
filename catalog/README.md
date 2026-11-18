@@ -4,16 +4,16 @@ Canonical structured catalog of this collection.
 
 ## Contents
 
-- `items.json` - 224 records: 25 original skills and 199 external skills.
+- `items.json` - 259 records: 23 original skills and 236 external skills.
   Each record includes name, category, repository, upstream URL, authorship,
   license and verification status.
 - `links/` - authoritative plain URL lists for external skills.
-  - `skill-links.txt` - 157 stable-branch links.
-  - `pinned-links.txt` - 42 pinned commit/release links.
+  - `skill-links.txt` - 191 stable-branch links.
+  - `pinned-links.txt` - 45 pinned commit/release links.
   - `README.md` - provenance and verification note.
 
 External skills are listed by name and link only; their code is not stored
-here. Seven reverse-engineering skills are additionally bundled as local copies
+here. Six reverse-engineering skills are additionally bundled as local copies
 under `skills/third-party/` (from `zhaoxuya520/reverse-skill` and `morluto/rea`)
 and are tracked separately from the link catalog.
 
@@ -36,12 +36,12 @@ error. It never falls back to an empty collection.
 
 | What | Count | Where |
 |------|------:|-------|
-| Catalog records | 267 | `catalog/items.json` |
-| Catalog records with `authorship: original` | 25 |  |
-| Catalog records with `authorship: link-only` | 242 |  |
-| Stable-branch links | 195 | `catalog/links/skill-links.txt` |
-| Pinned links | 47 | `catalog/links/pinned-links.txt` |
-| Bundled third-party skills | 7 | `skills/third-party/` - local copies of upstream `SKILL.md` files |
+| Catalog records | 259 | `catalog/items.json` |
+| Catalog records with `authorship: original` | 23 |  |
+| Catalog records with `authorship: link-only` | 236 |  |
+| Stable-branch links | 191 | `catalog/links/skill-links.txt` |
+| Pinned links | 45 | `catalog/links/pinned-links.txt` |
+| Bundled third-party skills | 6 | `skills/third-party/` - local copies of upstream `SKILL.md` files |
 
 <!-- counts:end -->
 
@@ -52,7 +52,7 @@ part of the link-only count.
 
 ## Link Verification
 
-All 199 external URLs returned HTTP 200 when checked on 2026-11-12. The check
+All 236 external URLs returned HTTP 200 when checked on 2026-11-12. The check
 covers URL availability only. It does not verify upstream content, license,
 security or runtime compatibility.
 

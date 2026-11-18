@@ -1,6 +1,6 @@
 # Skill Quality Review — Prioritized Improvements
 
-*Review date: 2026-11-12. Scope: all 25 original skills under `skills/original/`, plus the skill tooling.*
+*Review date: 2026-11-12. Scope: all 23 original skills under `skills/original/`, plus the skill tooling.*
 
 ## Method
 
@@ -13,7 +13,7 @@ What was actually run and observed:
 | Index freshness | `python scripts/update-category-index.py --check` | OK: up to date (index and generated count blocks) |
 | Tooling tests | `python -m unittest discover -s scripts -p "test_*.py"` | 69 tests, OK (34 before the tooling work, 35 added) |
 | Markdown links | `python scripts/check-markdown-links.py` | OK: 0 broken relative links, 6 vendored upstream links not bundled |
-| External URLs | `python scripts/check-links.py` | 199 ok, 0 warnings, 0 failures on 2026-11-12 |
+| External URLs | `python scripts/check-links.py` | 236 records; 199 checked OK on 2026-11-12 |
 | Code health | `desloppify scan --path .` | objective score 51.4 → **55.4**; all T1 and T2 items cleared; the strict score (13.5) reflects only the mechanical detectors, because the 20 subjective dimensions are still unassessed |
 
 In addition, a section-coverage scan of all 25 `SKILL.md` files (heading census,
@@ -69,8 +69,8 @@ the affected files so follow-ups can be small and deliberate.
 | 3 | P2 | Section vocabulary in most skills diverges from the `SKILL_SPEC.md` template | 20 skills | Open (decision needed) |
 | 4 | P3 | `Version History` section missing in most skills | 20 skills | Open, incremental |
 | 5 | P3 | `write-research-projects/SKILL.md` exceeds the 500-line guidance (731 lines) | 1 skill | Open, low urgency |
-| 6 | P3 | Two penetration-testing skills overlap in scope | `pen-testing`, `penetration-testing-guide` | Open, keep both or consolidate |
-| 7 | P3 | Bundled third-party `SKILL.md` files are outside frontmatter validation | 7 skills | Documented as intentional |
+| 6 | P3 | Two penetration-testing skills overlapped in scope | `pen-testing` | **Resolved**: `penetration-testing-guide` removed |
+| 7 | P3 | Bundled third-party `SKILL.md` files are outside frontmatter validation | 6 skills | Documented as intentional |
 
 ## Details
 
@@ -83,10 +83,10 @@ are used in frontmatter but were missing from both the validator's
 | In-use label | Skills | Notes |
 |--------------|--------|-------|
 | `dev` | `beyond-vibe-coding-autonomous-development`, `document-editing-general`, `fix-inconclusive-skills`, `generate-findings-report-from-pipeline-logs`, `github-code-documentation` | Legacy shorthand for the documented `development` |
-| `documents` | `detailed-source-rewrite-guide`, `generate-markdown-and-docx-documents` | Mirrors `instructions/modules/documents.md` |
+| `documents` | `detailed-source-rewrite-guide` | Mirrors `instructions/modules/documents.md` |
 | `knowledge` | `book-to-skill` | No module equivalent |
 | `engineering-3d` | `enable-wake-on-lan-and-auto-shutdown-on-network-loss-for-ras` | Mirrors `instructions/modules/engineering-3d.md` |
-| `security` | `penetration-testing-guide` | Mirrors `instructions/modules/security.md` |
+| `security` | `pen-testing` | Mirrors `instructions/modules/security.md` |
 | `testing` | `testing-skills` | Mirrors `instructions/modules/testing.md` |
 
 Resolution applied in this branch:
@@ -158,17 +158,16 @@ guidance. It is the collection's flagship research workflow; splitting it (for
 example, a core workflow plus a separate source-verification companion) is a
 candidate, but nothing depends on it today.
 
-### 6. Overlap between the two pentest skills (P3)
+### 6. Overlap between the two pentest skills (P3) - resolved
 
-`pen-testing` (authorized-testing methodology with a scope gate) and
-`penetration-testing-guide` (five-phase guide) cover overlapping ground.
-Options: keep both with clearer trigger wording, or merge into one. No action
-taken in this branch.
+`pen-testing` (authorized-testing methodology with a scope gate) and the
+former `penetration-testing-guide` (five-phase guide) covered overlapping
+ground. `penetration-testing-guide` was removed; `pen-testing` remains.
 
 ### 7. Bundled third-party skills and validation (P3)
 
 `validate-frontmatter.py` discovers skills under `skills/original/` only; the
-seven bundled third-party copies under `skills/third-party/` are checked for
+six bundled third-party copies under `skills/third-party/` are checked for
 existence and policy by the tooling tests, but their upstream frontmatter is
 not re-validated. This is intentional — their content belongs to upstream
 authors and is preserved as-is. Documented here so the decision is visible.

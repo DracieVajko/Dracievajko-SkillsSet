@@ -7,7 +7,7 @@ live here, always clearly labeled:
   copied here. Their licenses and provenance stay with the upstream owners.
   The curated table below (purpose and license) and the direct upstream link
   list cover these link-only references.
-- **Bundled third-party skills** - seven reverse-engineering skills copied into
+- **Bundled third-party skills** - six reverse-engineering skills copied into
   this repository at your request from `zhaoxuya520/reverse-skill` and
   `morluto/rea`. Content is bundled, not link-only; see "Bundled third-party
   skills (local copies)" below for names, locations and provenance.
@@ -19,8 +19,8 @@ The catalog's complete list of external link-only skills is generated at
 
 | What | Count | Where |
 |------|------:|-------|
-| External link-only skills | 242 | referenced by URL; no content copied |
-| Bundled third-party skills | 7 | `skills/third-party/` - local copies of upstream `SKILL.md` files |
+| External link-only skills | 236 | referenced by URL; no content copied |
+| Bundled third-party skills | 6 | `skills/third-party/` - local copies of upstream `SKILL.md` files |
 
 <!-- counts:end -->
 
@@ -30,7 +30,7 @@ supplied for this collection.
 
 ## Bundled third-party skills (local copies)
 
-The following seven reverse-engineering skills are copied into this repository
+The following six reverse-engineering skills are copied into this repository
 (content bundled, not link-only) under `skills/third-party/`:
 
 | Skill | Source | Path |
@@ -40,7 +40,6 @@ The following seven reverse-engineering skills are copied into this repository
 | `ghidra-reverse` | `zhaoxuya520/reverse-skill` | [`ghidra-reverse/SKILL.md`](ghidra-reverse/SKILL.md) |
 | `js-reverse` | `zhaoxuya520/reverse-skill` | [`js-reverse/SKILL.md`](js-reverse/SKILL.md) |
 | `mobile-reverse` | `zhaoxuya520/reverse-skill` | [`mobile-reverse/SKILL.md`](mobile-reverse/SKILL.md) |
-| `reverse-engineering` | `zhaoxuya520/reverse-skill` | [`reverse-engineering/SKILL.md`](reverse-engineering/SKILL.md) |
 | `reverse-engineer-anything` | `morluto/rea` | [`reverse-engineer-anything/SKILL.md`](reverse-engineer-anything/SKILL.md) |
 
 These bundled skills are tracked in [`skills/README.md`](../../README.md) and are
@@ -64,10 +63,8 @@ projects are reproduced in
 |`context-engineering`|-|Structure, compress and orchestrate context for agents|MIT|[Addy Osmani](https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/context-engineering/SKILL.md), [Composio](https://github.com/composio-community/opencode-skills/blob/5076f6673e5bf8b1f46dc5e934d1e3dd37250e10/skills/context-engineering/SKILL.md)|
 |`theme-factory`|`applying-themes`|Consistent color and type systems for visual artifacts|Apache-2.0|[link](https://github.com/anthropics/skills/blob/dbd4588f9e1033efb41dad4bef2f7947c8993d44/skills/theme-factory/SKILL.md)|
 |`mcp-builder`|`building-mcp-servers`|Build MCP servers with well-designed tools|Apache-2.0|[link](https://github.com/anthropics/skills/blob/dbd4588f9e1033efb41dad4bef2f7947c8993d44/skills/mcp-builder/SKILL.md)|
-|`skill-creator`|`creating-skills`|Create, edit and evaluate skills|Apache-2.0|[link](https://github.com/anthropics/skills/blob/dbd4588f9e1033efb41dad4bef2f7947c8993d44/skills/skill-creator/SKILL.md)|
-|`code-reviewer`|-|Review diffs for bugs, security and architecture issues|MIT|[link](https://github.com/Jeffallan/claude-skills/blob/02b05028ba6c93f7aed45314b15c0dd5abead9d6/skills/code-reviewer/SKILL.md)|
+|`skill-creator`|`skill-creator`|Create, edit and evaluate skills|Apache-2.0|[link](https://github.com/anthropics/skills/blob/dbd4588f9e1033efb41dad4bef2f7947c8993d44/skills/skill-creator/SKILL.md)|
 |`code-documenter`|-|Docstrings, OpenAPI, JSDoc and documentation portals|MIT|[link](https://github.com/Jeffallan/claude-skills/blob/02b05028ba6c93f7aed45314b15c0dd5abead9d6/skills/code-documenter/SKILL.md)|
-|`debugging-wizard`|-|Hypothesis-driven debugging and root-cause analysis|MIT|[link](https://github.com/Jeffallan/claude-skills/blob/02b05028ba6c93f7aed45314b15c0dd5abead9d6/skills/debugging-wizard/SKILL.md)|
 |`fine-tuning-expert`|-|LoRA/QLoRA, PEFT, dataset preparation and deployment|MIT|[link](https://github.com/Jeffallan/claude-skills/blob/02b05028ba6c93f7aed45314b15c0dd5abead9d6/skills/fine-tuning-expert/SKILL.md)|
 |`wordpress-pro`|-|WordPress themes, plugins, Gutenberg and WooCommerce|MIT|[link](https://github.com/Jeffallan/claude-skills/blob/02b05028ba6c93f7aed45314b15c0dd5abead9d6/skills/wordpress-pro/SKILL.md)|
 |`frontend-design-systems`|-|React, Tailwind and shadcn/ui interfaces|MIT|[link](https://github.com/composio-community/opencode-skills/blob/5076f6673e5bf8b1f46dc5e934d1e3dd37250e10/skills/frontend-design-systems/SKILL.md)|
@@ -164,13 +161,11 @@ confirmed through the raw URLs.
 |`analytics`|[link](https://github.com/coreyhaines31/marketingskills/blob/HEAD/skills/analytics/SKILL.md)|
 |`copywriting`|[link](https://github.com/coreyhaines31/marketingskills/blob/HEAD/skills/copywriting/SKILL.md)|
 
-### Jeffallan/claude-skills (5)
+### Jeffallan/claude-skills (3)
 
 |Skill|Original|
 |-|-|
-|`code-reviewer`|[link](https://github.com/Jeffallan/claude-skills/blob/HEAD/skills/code-reviewer/SKILL.md)|
 |`code-documenter`|[link](https://github.com/Jeffallan/claude-skills/blob/HEAD/skills/code-documenter/SKILL.md)|
-|`debugging-wizard`|[link](https://github.com/Jeffallan/claude-skills/blob/HEAD/skills/debugging-wizard/SKILL.md)|
 |`fine-tuning-expert`|[link](https://github.com/Jeffallan/claude-skills/blob/HEAD/skills/fine-tuning-expert/SKILL.md)|
 |`wordpress-pro`|[link](https://github.com/Jeffallan/claude-skills/blob/HEAD/skills/wordpress-pro/SKILL.md)|
 

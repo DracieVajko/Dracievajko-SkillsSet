@@ -337,7 +337,6 @@ APPROVED_THIRD_PARTY_SKILLS = [
     'ghidra-reverse/SKILL.md',
     'js-reverse/SKILL.md',
     'mobile-reverse/SKILL.md',
-    'reverse-engineering/SKILL.md',
     'reverse-engineer-anything/SKILL.md',
 ]
 
@@ -378,9 +377,9 @@ class CatalogDataTests(unittest.TestCase):
     def test_items_authorship_partition(self):
         items = self.load('items.json')
         counts = Counter(i['authorship'] for i in items)
-        self.assertEqual(len(items), 267)
-        self.assertEqual(counts['link-only'], 242)
-        self.assertEqual(counts['original'], 25)
+        self.assertEqual(len(items), 259)
+        self.assertEqual(counts['link-only'], 236)
+        self.assertEqual(counts['original'], 23)
         self.assertEqual(set(counts), {'link-only', 'original'})
 
     def test_link_file_counts(self):
@@ -388,9 +387,9 @@ class CatalogDataTests(unittest.TestCase):
                   if u.strip() and not u.strip().startswith('#')]
         pinned = [u for u in (self.links / 'pinned-links.txt').read_text(encoding='utf-8').splitlines()
                   if u.strip() and not u.strip().startswith('#')]
-        self.assertEqual(len(stable), 195)
-        self.assertEqual(len(pinned), 47)
-        self.assertEqual(len(stable) + len(pinned), 242)
+        self.assertEqual(len(stable), 191)
+        self.assertEqual(len(pinned), 45)
+        self.assertEqual(len(stable) + len(pinned), 236)
 
     def test_catalog_link_urls_match_link_files(self):
         items = self.load('items.json')
@@ -405,7 +404,7 @@ class CatalogDataTests(unittest.TestCase):
     def test_original_catalog_paths_exist(self):
         items = self.load('items.json')
         originals = [i for i in items if i['authorship'] == 'original']
-        self.assertEqual(len(originals), 25)
+        self.assertEqual(len(originals), 23)
         for item in originals:
             path = self.repo / item['local_skill_path']
             self.assertTrue(path.is_file(), item['local_skill_path'])
@@ -414,7 +413,7 @@ class CatalogDataTests(unittest.TestCase):
         """The catalog must not drift from the skills it describes."""
         items = self.load('items.json')
         originals = [i for i in items if i['authorship'] == 'original']
-        self.assertEqual(len(originals), 25)
+        self.assertEqual(len(originals), 23)
         for item in originals:
             path = self.repo / item['local_skill_path']
             frontmatter = self.read_frontmatter(path)
@@ -455,7 +454,7 @@ class CatalogDataTests(unittest.TestCase):
         expected = sorted(APPROVED_THIRD_PARTY_SKILLS)
         self.assertEqual(
             found, expected,
-            'skills/third-party/ must contain exactly the seven approved bundled '
+            'skills/third-party/ must contain exactly the six approved bundled '
             'SKILL.md bodies and no others: %r' % expected,
         )
 
@@ -472,7 +471,7 @@ class CatalogDataTests(unittest.TestCase):
 
     def test_docs_index_has_expected_total(self):
         index = (self.repo / 'docs' / 'CATEGORY_INDEX.md').read_text(encoding='utf-8')
-        self.assertIn('Total: **242** references.', index)
+        self.assertIn('Total: **236** references.', index)
         self.assertIn('## Original Local Skills', index)
         self.assertIn('## External Skills (Links Only)', index)
 

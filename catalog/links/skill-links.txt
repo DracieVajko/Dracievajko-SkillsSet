@@ -161,7 +161,6 @@ https://raw.githubusercontent.com/morluto/rea/main/.agents/skills/rea-ci-tests-a
 https://raw.githubusercontent.com/morluto/rea/main/.agents/skills/rea-tool-design/SKILL.md
 https://raw.githubusercontent.com/langchain-ai/design-agent/main/.agents/skills/deep-agents-memory/SKILL.md
 https://raw.githubusercontent.com/GenAI-Community-VITB/master-prompters/main/.agents/skills/applying-themes/SKILL.md
-https://raw.githubusercontent.com/GenAI-Community-VITB/master-prompters/main/.agents/skills/creating-skills/SKILL.md
 https://raw.githubusercontent.com/GenAI-Community-VITB/master-prompters/main/.agents/skills/building-mcp-servers/SKILL.md
 https://raw.githubusercontent.com/ngduy-dev/odoo-coding-agent-playbook/main/.agents/skills/slide/SKILL.md
 https://raw.githubusercontent.com/robbin/android-adb-control/main/SKILL.md
@@ -174,10 +173,8 @@ https://raw.githubusercontent.com/ktaletsk/learn-codebase/main/SKILL.md
 https://raw.githubusercontent.com/lioensky/VCPToolBox/main/Plugin/SkillBridge/SKILL/minimax-docx/SKILL.md
 https://raw.githubusercontent.com/claw-opus/proactive-self-improving-agent/main/SKILL.md
 https://raw.githubusercontent.com/JamesShi96/project-butler/main/SKILL.md
-https://raw.githubusercontent.com/NVlabs/Skill2Env/main/SkillHub/skills/pawel-huryn/summarize-meeting/SKILL.md
 https://raw.githubusercontent.com/nextlevelbuilder/ui-ux-pro-max-skill/main/cli/assets/skills/ui-styling/SKILL.md
 https://raw.githubusercontent.com/davila7/claude-code-templates/main/cli-tool/components/skills/utilities/web-artifacts-builder/SKILL.md
-https://raw.githubusercontent.com/langchain-ai/deepagents/main/libs/code/examples/skills/web-research/SKILL.md
 https://raw.githubusercontent.com/claude-office-skills/skills/main/meeting-notes/SKILL.md
 https://raw.githubusercontent.com/OSideMedia/higgsfield-ai-prompt-skill/main/SKILL.md
 https://raw.githubusercontent.com/FNOSP/fnos-dsh/main/plugins/dsh-midscene-plugin/skills/browser-automation/SKILL.md
@@ -187,7 +184,6 @@ https://raw.githubusercontent.com/JetBrains/skills/main/gws-gmail/SKILL.md
 https://raw.githubusercontent.com/balloob/llm-skills/main/home-assistant/SKILL.md
 https://raw.githubusercontent.com/inkeep/open-knowledge-skills/main/skills/starter-packs/knowledge-base/knowledge-base/SKILL.md
 https://raw.githubusercontent.com/ianseddon/cookbook/main/.agents/skills/meal-plan/SKILL.md
-https://raw.githubusercontent.com/qodex-ai/ai-agent-skills/main/skills/multi-agent-orchestration/SKILL.md
 https://raw.githubusercontent.com/jasonkneen/openclicky/main/AppResources/OpenClicky/OpenClickyBundledSkills/spreadsheet/SKILL.md
 https://raw.githubusercontent.com/peteromallet/desloppify/main/desloppify/data/global/SKILL.md
 https://raw.githubusercontent.com/blader/humanizer/main/SKILL.md

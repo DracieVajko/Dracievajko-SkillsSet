@@ -22,7 +22,7 @@ Please include:
 ## Scope
 
 This repository contains original documentation, prompts, rules, catalogs and
-validation scripts. Seven reverse-engineering skills are bundled as local copies
+validation scripts. Six reverse-engineering skills are bundled as local copies
 under `skills/third-party/` (from `zhaoxuya520/reverse-skill` and `morluto/rea`);
 all other external skills are links only. Report vulnerabilities in external
 projects to their maintainers.

@@ -1,6 +1,4 @@
 https://raw.githubusercontent.com/Jeffallan/claude-skills/02b05028ba6c93f7aed45314b15c0dd5abead9d6/skills/code-documenter/SKILL.md
-https://raw.githubusercontent.com/Jeffallan/claude-skills/02b05028ba6c93f7aed45314b15c0dd5abead9d6/skills/code-reviewer/SKILL.md
-https://raw.githubusercontent.com/Jeffallan/claude-skills/02b05028ba6c93f7aed45314b15c0dd5abead9d6/skills/debugging-wizard/SKILL.md
 https://raw.githubusercontent.com/Jeffallan/claude-skills/02b05028ba6c93f7aed45314b15c0dd5abead9d6/skills/fine-tuning-expert/SKILL.md
 https://raw.githubusercontent.com/Jeffallan/claude-skills/02b05028ba6c93f7aed45314b15c0dd5abead9d6/skills/wordpress-pro/SKILL.md
 https://raw.githubusercontent.com/addyosmani/agent-skills/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/context-engineering/SKILL.md
