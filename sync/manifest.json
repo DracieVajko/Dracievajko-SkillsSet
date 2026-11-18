@@ -42,7 +42,6 @@
         "detailed-source-rewrite-guide",
         "document-editing-general",
         "ds-note-formatter",
-        "editor-v1",
         "enable-wake-on-lan-and-auto-shutdown-on-network-loss-for-ras",
         "fine-tuning-expert",
         "fix-inconclusive-skills",
@@ -94,6 +93,7 @@
         "design-catalogue",
         "design-taste-frontend",
         "doc",
+        "editor-v1",
         "frontend-design",
         "gsap-core",
         "gsap-frameworks",
@@ -1250,19 +1250,21 @@
     },
     {
       "name": "editor-v1",
-      "root": "opencode",
-      "authorship": "unknown",
+      "root": "agents",
+      "authorship": "third-party",
       "source": {
-        "type": "unresolved",
-        "repo": null,
-        "ref": null,
-        "path": null
+        "type": "github",
+        "repo": "HenokCodez/Motion-Studio",
+        "ref": "main",
+        "path": ".agents/skills/workflow4-editor-v1",
+        "renameTo": "editor-v1",
+        "sha256": "6776d425dbb625b432c08fcc3768d974c415b91442d852626736861047e2dbcb"
       },
       "author": "",
       "license": "",
       "sizeKB": 0,
       "needsNodeModules": false,
-      "sha256": "72bb0c3102edb98d7f8ecedd492f8c9b4cc216a91360c6bf0061e588220a81a8",
+      "sha256": "6776d425dbb625b432c08fcc3768d974c415b91442d852626736861047e2dbcb",
       "machines": [
         "randall"
       ]
@@ -1967,18 +1969,19 @@
     {
       "name": "orchestrate",
       "root": "agents",
-      "authorship": "unknown",
+      "authorship": "third-party",
       "source": {
-        "type": "unresolved",
-        "repo": null,
-        "ref": null,
-        "path": null
+        "type": "github",
+        "repo": "hyperb1iss/hyperskills",
+        "ref": "main",
+        "path": "skills/orchestrate",
+        "sha256": "0f9bee80237d991ff173dca498a6efa9d942b05659013a1211df55bd620d2faa"
       },
       "author": "",
       "license": "",
       "sizeKB": 0,
       "needsNodeModules": false,
-      "sha256": "9469ad7432d6cdb165e3a5095fd972046ce39046dcc4f39907477e64d67e32c9",
+      "sha256": "0f9bee80237d991ff173dca498a6efa9d942b05659013a1211df55bd620d2faa",
       "machines": [
         "randall"
       ]

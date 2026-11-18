@@ -191,3 +191,5 @@ https://raw.githubusercontent.com/qodex-ai/ai-agent-skills/main/skills/multi-age
 https://raw.githubusercontent.com/jasonkneen/openclicky/main/AppResources/OpenClicky/OpenClickyBundledSkills/spreadsheet/SKILL.md
 https://raw.githubusercontent.com/peteromallet/desloppify/main/desloppify/data/global/SKILL.md
 https://raw.githubusercontent.com/blader/humanizer/main/SKILL.md
+https://raw.githubusercontent.com/HenokCodez/Motion-Studio/main/.agents/skills/workflow4-editor-v1/SKILL.md
+https://raw.githubusercontent.com/hyperb1iss/hyperskills/main/skills/orchestrate/SKILL.md

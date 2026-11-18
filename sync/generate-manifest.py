@@ -155,15 +155,17 @@ def load_catalog() -> dict[str, dict]:
             folder = path[: -len("/SKILL.md")]
         else:
             folder = ""
-        by_name.setdefault(
-            name,
-            {
-                "type": "github",
-                "repo": m.group(1),
-                "ref": item.get("branch") or "main",
-                "path": folder,
-            },
-        )
+        source = {
+            "type": "github",
+            "repo": m.group(1),
+            "ref": item.get("branch") or "main",
+            "path": folder,
+        }
+        if item.get("rename_to"):
+            source["renameTo"] = item["rename_to"]
+        if item.get("sha256"):
+            source["sha256"] = item["sha256"]
+        by_name.setdefault(name, source)
     return by_name
 
 

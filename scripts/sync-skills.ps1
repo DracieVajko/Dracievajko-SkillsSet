@@ -182,6 +182,14 @@ foreach ($skill in $data.skills) {
             }
         }
 
+        if ($skill.source.renameTo) {
+            $skillMd = Join-Path $dest 'SKILL.md'
+            $text = [IO.File]::ReadAllText($skillMd, [Text.Encoding]::UTF8)
+            $nameRegex = [regex]'(?m)^name:\s*.*$'
+            $text = $nameRegex.Replace($text, "name: $($skill.source.renameTo)", 1)
+            [IO.File]::WriteAllText($skillMd, $text, (New-Object System.Text.UTF8Encoding($false)))
+        }
+
         $hash = Get-FileHashSafe (Join-Path $dest 'SKILL.md')
         if ($hash -and $hash -ne $skill.sha256) {
             $drifted += $name

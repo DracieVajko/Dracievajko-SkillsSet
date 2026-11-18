@@ -111,15 +111,17 @@ def load_catalog_sources() -> dict[str, dict]:
             folder = "."
         elif folder.endswith("/SKILL.md"):
             folder = folder[: -len("/SKILL.md")]
-        sources.setdefault(
-            item["name"],
-            {
-                "type": "github",
-                "repo": repo,
-                "ref": item.get("branch") or "main",
-                "path": folder,
-            },
-        )
+        source = {
+            "type": "github",
+            "repo": repo,
+            "ref": item.get("branch") or "main",
+            "path": folder,
+        }
+        if item.get("rename_to"):
+            source["renameTo"] = item["rename_to"]
+        if item.get("sha256"):
+            source["sha256"] = item["sha256"]
+        sources.setdefault(item["name"], source)
     return sources
 
 
@@ -356,8 +358,9 @@ def install_manifest(collection: dict) -> dict:
     hash_cache = load_hash_cache()
     for skill in collection["skills"]:
         hashes = skill.get("sha256") or {}
-        canonical = repo_hash(skill["source"])
-        if not canonical and skill["source"].get("type") == "github":
+        source = skill["source"]
+        canonical = source.get("sha256") or repo_hash(source)
+        if not canonical and source.get("type") == "github":
             canonical = upstream_skill_hash(skill["source"], hash_cache)
         if not canonical and hashes:
             counts = Counter(hashes.values())
@@ -436,9 +439,14 @@ def unresolved_markdown(collection: dict) -> str:
         f"Collection snapshot: {len(unresolved)} skills. Generated from",
         "`sync/collection.json` by `sync/build-collection.py`.",
         "",
-        "| Skill | Install root | SHA-256 of SKILL.md | Why unresolved |",
-        "|-------|--------------|---------------------|----------------|",
     ]
+    if unresolved:
+        lines += [
+            "| Skill | Install root | SHA-256 of SKILL.md | Why unresolved |",
+            "|-------|--------------|---------------------|----------------|",
+        ]
+    else:
+        lines.append("Every installed skill has a verified upstream. Nothing is unresolved.")
     for skill in unresolved:
         hashes = sorted(set((skill.get("sha256") or {}).values()))
         digest = hashes[0] if hashes else ""

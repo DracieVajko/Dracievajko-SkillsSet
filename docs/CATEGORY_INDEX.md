@@ -54,7 +54,7 @@ Third-party skills referenced by upstream URL only; no local copy is bundled. So
 
 Entries with a short description have curated metadata in `catalog/items.json`; entries without one are link-only.
 
-Total: **240** references.
+Total: **242** references.
 
 ### Agents365-ai/drawio-skill (1)
 
@@ -77,6 +77,10 @@ Total: **240** references.
 ### Graphify-Labs/graphify (1)
 
 - [`graphify`](https://raw.githubusercontent.com/Graphify-Labs/graphify/v8/graphify/skill.md)
+
+### HenokCodez/Motion-Studio (1)
+
+- [`workflow4-editor-v1`](https://raw.githubusercontent.com/HenokCodez/Motion-Studio/main/.agents/skills/workflow4-editor-v1/SKILL.md)
 
 ### Jakeschincariol/day-trader-skill (11)
 
@@ -265,6 +269,10 @@ Total: **240** references.
 ### highlow12/Beaura (1)
 
 - [`design-catalogue`](https://raw.githubusercontent.com/highlow12/Beaura/main/.agents/skills/design-catalogue/SKILL.md)
+
+### hyperb1iss/hyperskills (1)
+
+- [`orchestrate`](https://raw.githubusercontent.com/hyperb1iss/hyperskills/main/skills/orchestrate/SKILL.md)
 
 ### ianseddon/cookbook (1)
 
