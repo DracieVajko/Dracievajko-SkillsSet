@@ -54,7 +54,7 @@ Third-party skills referenced by upstream URL only; no local copy is bundled. So
 
 Entries with a short description have curated metadata in `catalog/items.json`; entries without one are link-only.
 
-Total: **227** references.
+Total: **240** references.
 
 ### Agents365-ai/drawio-skill (1)
 
@@ -63,6 +63,10 @@ Total: **227** references.
 ### DietrichGebert/ponytail (1)
 
 - [`ponytail`](https://raw.githubusercontent.com/DietrichGebert/ponytail/main/skills/ponytail/SKILL.md)
+
+### FNOSP/fnos-dsh (1)
+
+- [`browser-automation`](https://raw.githubusercontent.com/FNOSP/fnos-dsh/main/plugins/dsh-midscene-plugin/skills/browser-automation/SKILL.md)
 
 ### GenAI-Community-VITB/master-prompters (3)
 
@@ -115,9 +119,17 @@ Total: **227** references.
 - [`typescript-pro`](https://raw.githubusercontent.com/Jeffallan/claude-skills/main/skills/typescript-pro/SKILL.md)
 - [`wordpress-pro`](https://raw.githubusercontent.com/Jeffallan/claude-skills/02b05028ba6c93f7aed45314b15c0dd5abead9d6/skills/wordpress-pro/SKILL.md) — Develops custom WordPress themes and plugins, creates and registers Gutenberg blocks and block patterns, configures WooCommerce stores, implements WordPress REST API endpoints, applies security hardening (nonces, sanitization, escaping, capability checks), and optimizes performance through caching and query tuning. Use when building WordPress themes, writing plugins, customizing Gutenberg blocks, extending WooCommerce, working with ACF, using the WordPress REST API, applying hooks and filters, or improving WordPress performance and security.
 
+### JetBrains/skills (1)
+
+- [`gws-gmail`](https://raw.githubusercontent.com/JetBrains/skills/main/gws-gmail/SKILL.md)
+
 ### NVlabs/Skill2Env (1)
 
 - [`summarize-meeting`](https://raw.githubusercontent.com/NVlabs/Skill2Env/main/SkillHub/skills/pawel-huryn/summarize-meeting/SKILL.md)
+
+### OSideMedia/higgsfield-ai-prompt-skill (1)
+
+- [`main`](https://raw.githubusercontent.com/OSideMedia/higgsfield-ai-prompt-skill/main/SKILL.md)
 
 ### addyosmani/agent-skills (25)
 
@@ -162,9 +174,18 @@ Total: **227** references.
 - [`webapp-testing`](https://raw.githubusercontent.com/anthropics/skills/main/skills/webapp-testing/SKILL.md)
 - [`xlsx`](https://raw.githubusercontent.com/anthropics/skills/main/skills/xlsx/SKILL.md)
 
-### claude-office-skills/skills (1)
+### balloob/llm-skills (1)
+
+- [`home-assistant`](https://raw.githubusercontent.com/balloob/llm-skills/main/home-assistant/SKILL.md)
+
+### blader/humanizer (1)
+
+- [`main`](https://raw.githubusercontent.com/blader/humanizer/main/SKILL.md)
+
+### claude-office-skills/skills (2)
 
 - [`dcf-valuation`](https://raw.githubusercontent.com/claude-office-skills/skills/main/dcf-valuation/SKILL.md)
+- [`meeting-notes`](https://raw.githubusercontent.com/claude-office-skills/skills/main/meeting-notes/SKILL.md)
 
 ### claw-opus/proactive-self-improving-agent (1)
 
@@ -185,6 +206,10 @@ Total: **227** references.
 - [`skill-doc-authoring`](https://raw.githubusercontent.com/composio-community/opencode-skills/master/skills/skill-doc-authoring/SKILL.md)
 - [`skill-improvement-opportunity-logger`](https://raw.githubusercontent.com/composio-community/opencode-skills/master/skills/skill-improvement-opportunity-logger/SKILL.md)
 - [`structured-project-execution`](https://raw.githubusercontent.com/composio-community/opencode-skills/master/skills/structured-project-execution/SKILL.md)
+
+### compozy/compozy (1)
+
+- [`design-taste-frontend`](https://raw.githubusercontent.com/compozy/compozy/main/docs/design/opendesign/.agents/skills/design-taste-frontend/SKILL.md)
 
 ### coreyhaines31/marketingskills (4)
 
@@ -241,6 +266,10 @@ Total: **227** references.
 
 - [`design-catalogue`](https://raw.githubusercontent.com/highlow12/Beaura/main/.agents/skills/design-catalogue/SKILL.md)
 
+### ianseddon/cookbook (1)
+
+- [`meal-plan`](https://raw.githubusercontent.com/ianseddon/cookbook/main/.agents/skills/meal-plan/SKILL.md)
+
 ### imbad0202/academic-research-skills (5)
 
 - [`academic-paper`](https://raw.githubusercontent.com/imbad0202/academic-research-skills/c67a7be53f23d9dbba4030bbcd6f5ccfeda3afa9/academic-paper/SKILL.md) — 12-agent academic paper writing pipeline. 11 modes (full/plan/outline/revision/revision-coach/abstract/lit-review/format-convert/citation-check/disclosure/rebuttal-audit). 6 paper types, 5 citation formats, bilingual abstracts, LaTeX/DOCX-via-Pandoc/PDF output. Style Calibration + Writing Quality Check + Anti-Patterns with IRON RULE markers. Triggers: write paper, academic paper, guide my paper, parse reviews, I got reviewer comments, revision roadmap, should we push back, conference rebuttal, grant panel response, audit my rebuttal, check my response draft, AI disclosure, check citations, citation check, check my references, verify references, look over the refs, 寫論文, 學術論文, 引導我寫論文, 審查意見, 我收到審查意見, 修訂路線圖, 評估回覆, 檢查引用, 引用檢查, 檢查參考文獻, 核對文獻, 논문 작성, 초록 작성, 논문 수정, 논문 계획을 도와줘, 심사 의견을 받았어, 심사 의견 반영, 답변서 점검, AI 사용 고지, 인용 확인, 인용 형식 검사, enmendar mi artículo, redactar artículo, guía mi artículo, analizar reseñas, auditar mi respuesta, verificar borrador de respuesta, verificar citas, divulgación de IA.
@@ -249,9 +278,17 @@ Total: **227** references.
 - [`deep-research`](https://raw.githubusercontent.com/imbad0202/academic-research-skills/c67a7be53f23d9dbba4030bbcd6f5ccfeda3afa9/deep-research/SKILL.md) — Universal deep research agent team. 13-agent pipeline for rigorous academic research on any topic. 8 modes: full research, quick brief, paper review, lit-review, fact-check, three-way literature scan, Socratic guided research dialogue, and systematic review with optional meta-analysis. Covers research question formulation, Socratic mentoring, methodology design, systematic literature search, source verification, cross-source synthesis, risk of bias assessment, meta-analysis, APA 7.0 report compilation, editorial review, devil's advocate challenges, ethics review, and post-research literature monitoring. Triggers on: research, deep research, literature review, systematic review, meta-analysis, PRISMA, evidence synthesis, fact-check, WHY HOW WHAT papers, 3W literature scan, guide my research, help me think through, 研究, 深度研究, 文獻回顧, 文獻探討, 系統性回顧, 後設分析, 事實查核, 三段式文獻掃描, 引導我的研究, 幫我釐清, 幫我想想, 我不確定要研究什麼, 研究方向, 研究主題, 심층 연구, 문헌 조사, 체계적 문헌고찰, 메타분석, 사실 확인, 연구 방향을 잡아줘, 연구 주제 정하는 것을 도와줘, revisión de literatura, metaanálisis
 - [`sr-screener`](https://raw.githubusercontent.com/imbad0202/academic-research-skills/c67a7be53f23d9dbba4030bbcd6f5ccfeda3afa9/sr-screener/SKILL.md) — Protocol-driven study screening for systematic, scoping and rapid reviews. Turns a proposal or PROSPERO protocol into confirmed eligibility rules, then screens titles/abstracts and full texts with two blinded AI reviewers and a third-reviewer adjudicator: ordered exclusion codes, no silent defaults, resumable batch runs, QC (seed studies, near-miss rechecks, kappa and PABAK), PRISMA 2020 counts, EndNote/Zotero RIS groups, an Excel log, a methods draft and a literature_corpus handoff to academic-paper. Reads RIS, PubMed .nbib, Web of Science and CSV exports; removes duplicates. 8 modes: protocol, quick, pilot, ta-screen, ft-screen, adjudicate, audit, report. Use it to screen records against eligibility criteria, pilot screening, resolve screening conflicts, audit exclusions or report the selection process. Triggers on: screen these papers, title/abstract screening, full-text screening, screening conflicts, inclusion criteria, PRISMA flow, غربالگری مقالات, اسکرینینگ عنوان و چکیده, معیارهای ورود و خروج.
 
+### inkeep/open-knowledge-skills (1)
+
+- [`knowledge-base`](https://raw.githubusercontent.com/inkeep/open-knowledge-skills/main/skills/starter-packs/knowledge-base/knowledge-base/SKILL.md)
+
 ### jakubkrehel/make-interfaces-feel-better (1)
 
 - [`make-interfaces-feel-better`](https://raw.githubusercontent.com/jakubkrehel/make-interfaces-feel-better/main/skills/make-interfaces-feel-better/SKILL.md)
+
+### jasonkneen/openclicky (1)
+
+- [`spreadsheet`](https://raw.githubusercontent.com/jasonkneen/openclicky/main/AppResources/OpenClicky/OpenClickyBundledSkills/spreadsheet/SKILL.md)
 
 ### jwynia/agent-skills (1)
 
@@ -276,6 +313,10 @@ Total: **227** references.
 ### larksuite/cli (1)
 
 - [`lark-markdown`](https://raw.githubusercontent.com/larksuite/cli/main/skills/lark-markdown/SKILL.md) — 飞书 Markdown：查看、创建、上传、编辑和比较飞书中的原生 Markdown 文件。当用户要操作飞书 Markdown 文件，或比较其远端版本及本地草稿时使用。纯本地 Markdown 文件操作不触发本 skill。不负责将 Markdown 导入为飞书在线文档，也不负责文件搜索、权限、评论、移动、删除等云空间管理操作。
+
+### letta-ai/skills (1)
+
+- [`doc`](https://raw.githubusercontent.com/letta-ai/skills/main/tools/doc/SKILL.md)
 
 ### lioensky/VCPToolBox (1)
 
@@ -363,6 +404,14 @@ Total: **227** references.
 ### pbakaus/impeccable (1)
 
 - [`impeccable`](https://raw.githubusercontent.com/pbakaus/impeccable/main/.agents/skills/impeccable/SKILL.md)
+
+### peteromallet/desloppify (1)
+
+- [`global`](https://raw.githubusercontent.com/peteromallet/desloppify/main/desloppify/data/global/SKILL.md)
+
+### qodex-ai/ai-agent-skills (1)
+
+- [`multi-agent-orchestration`](https://raw.githubusercontent.com/qodex-ai/ai-agent-skills/main/skills/multi-agent-orchestration/SKILL.md)
 
 ### robbin/android-adb-control (1)
 

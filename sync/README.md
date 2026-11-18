@@ -21,6 +21,8 @@ python sync\build-collection.py     # all evidence -> collection.json, manifest.
 | `machines/<machineId>.json` | Raw evidence from one computer: installed skills, harness roots, app-managed skills, junctions, drift. Never edited by hand. |
 | `cindy-plugins.json` | Plugins for Cindy, OpenCode and OpenDesign, with what each one needs to be authorized again. |
 | `CINDY-INSTALL.md` | Ready-to-paste prompt that installs the skills, then the plugins, then reports what still needs the owner. |
+| `UPDATE.md` | Ready-to-paste prompt that updates a computer to the newest versions in the collection. |
+| `verify-installed.py` | Checks every installed skill against the recorded hash; `0 differ` is the success line. |
 | `unresolved.md` | Skills with no verified upstream. They stay out of the catalog and out of `skills/original/`. |
 | `generate-manifest.py` | Writes this computer's evidence file. |
 | `build-collection.py` | Merges every evidence file into the shared collection. The merge is monotonic: a skill is never dropped because one snapshot is missing. |

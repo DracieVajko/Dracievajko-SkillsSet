@@ -25,6 +25,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import subprocess
 import sys
 from collections import Counter
 from pathlib import Path
@@ -106,7 +107,9 @@ def load_catalog_sources() -> dict[str, dict]:
             continue
         repo = item["repository"].rstrip("/").split("github.com/")[-1]
         folder = item.get("path") or ""
-        if folder.endswith("/SKILL.md"):
+        if folder == "SKILL.md":
+            folder = "."
+        elif folder.endswith("/SKILL.md"):
             folder = folder[: -len("/SKILL.md")]
         sources.setdefault(
             item["name"],
@@ -308,13 +311,54 @@ def build() -> dict:
     }
 
 
+HASH_CACHE = SYNC_DIR / "source-hashes.json"
+
+
+def load_hash_cache() -> dict[str, str]:
+    if HASH_CACHE.is_file():
+        try:
+            return json.loads(HASH_CACHE.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            return {}
+    return {}
+
+
+def upstream_skill_hash(source: dict, cache: dict[str, str]) -> str:
+    """Hash of the upstream SKILL.md at the recorded ref, cached on disk."""
+    repo = source.get("repo") or ""
+    ref = source.get("ref") or "main"
+    path = source.get("path") or ""
+    if not repo:
+        return ""
+    file_path = "SKILL.md" if path in ("", ".") else f"{path}/SKILL.md"
+    key = f"{repo}@{ref}:{file_path}"
+    if key in cache:
+        return cache[key]
+    raw = subprocess.run(
+        ["gh", "api", "-H", "Accept: application/vnd.github.raw",
+         f"repos/{repo}/contents/{file_path}?ref={ref}"],
+        capture_output=True,
+    )
+    if raw.returncode != 0:
+        return ""
+    digest = hashlib.sha256(raw.stdout.replace(b"\r\n", b"\n")).hexdigest()
+    cache[key] = digest
+    HASH_CACHE.write_text(
+        json.dumps(cache, indent=2, sort_keys=True) + chr(10), encoding="utf-8"
+    )
+    return digest
+
+
 def install_manifest(collection: dict) -> dict:
     """The collection in the schema scripts/sync-skills.ps1 already understands."""
     names_by_root: dict[str, list[str]] = {}
     union_skills = []
+    hash_cache = load_hash_cache()
     for skill in collection["skills"]:
         hashes = skill.get("sha256") or {}
         canonical = repo_hash(skill["source"])
+        if not canonical and skill["source"].get("type") == "github":
+            canonical = upstream_skill_hash(skill["source"], hash_cache)
         if not canonical and hashes:
             counts = Counter(hashes.values())
             canonical = sorted(counts, key=lambda h: (-counts[h], h))[0]

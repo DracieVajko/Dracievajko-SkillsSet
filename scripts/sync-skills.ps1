@@ -68,6 +68,25 @@ function Test-Mirror([string]$path) {
     return [bool]($item.Attributes -band [IO.FileAttributes]::ReparsePoint)
 }
 
+$backupRoot = Join-Path $env:LOCALAPPDATA ('skills-sync\backups\' + (Get-Date -Format 'yyyyMMdd-HHmmss'))
+
+function Backup-Skill([string]$path, [string]$name) {
+    if (-not (Test-Path -LiteralPath $path)) { return }
+    New-Item -ItemType Directory -Path $backupRoot -Force | Out-Null
+    Copy-Item -LiteralPath $path -Destination (Join-Path $backupRoot $name) -Recurse -Force
+}
+
+function Remove-SkillPath([string]$path) {
+    # A junction must be deleted as a link, never recursively: deleting through
+    # it would remove the canonical copy in the other install root.
+    $item = Get-Item -LiteralPath $path -Force
+    if ($item.Attributes -band [IO.FileAttributes]::ReparsePoint) {
+        [IO.Directory]::Delete($path, $false)
+    } else {
+        Remove-Item -LiteralPath $path -Recurse -Force
+    }
+}
+
 if (-not (Test-Path -LiteralPath $Manifest -PathType Leaf)) {
     throw "Manifest not found: $Manifest"
 }
@@ -127,30 +146,40 @@ foreach ($skill in $data.skills) {
             if (-not (Test-Path -LiteralPath $sourceDir -PathType Container)) {
                 throw "repository folder missing: $sourceDir"
             }
-            if ($exists) { Remove-Item -LiteralPath $dest -Recurse -Force }
+            if ($exists) { Backup-Skill $dest $name; Remove-SkillPath $dest }
             Copy-Item -LiteralPath $sourceDir -Destination $dest -Recurse -Force
         }
         else {
             $repoName = ($skill.source.repo -replace '/', '__')
             $cloneDir = Join-Path $Cache $repoName
+            $isRootSkill = ($skill.source.path -eq '.' -or [string]::IsNullOrWhiteSpace($skill.source.path))
             if (-not (Test-Path -LiteralPath (Join-Path $cloneDir '.git'))) {
                 New-Item -ItemType Directory -Path $Cache -Force | Out-Null
                 Write-Host "  cloning $($skill.source.repo) (blobless)"
                 & git clone --quiet --depth 1 --filter=blob:none --no-checkout "https://github.com/$($skill.source.repo).git" $cloneDir
                 if ($LASTEXITCODE -ne 0) { throw "git clone failed for $($skill.source.repo)" }
             }
-            & git -C $cloneDir sparse-checkout init --cone 2>$null | Out-Null
-            & git -C $cloneDir sparse-checkout set $skill.source.path 2>$null | Out-Null
+            if (-not $isRootSkill) {
+                & git -C $cloneDir sparse-checkout init --cone 2>$null | Out-Null
+                & git -C $cloneDir sparse-checkout set $skill.source.path 2>$null | Out-Null
+            }
             & git -C $cloneDir checkout --quiet $skill.source.ref 2>$null | Out-Null
             if ($LASTEXITCODE -ne 0) {
                 & git -C $cloneDir checkout --quiet 2>$null | Out-Null
             }
-            $sourceDir = Join-Path $cloneDir ($skill.source.path -replace '/', '\')
+            $sourceDir = if ($isRootSkill) { $cloneDir } else { Join-Path $cloneDir ($skill.source.path -replace '/', '\') }
             if (-not (Test-Path -LiteralPath $sourceDir -PathType Container)) {
                 throw "upstream folder not found after checkout: $($skill.source.repo)/$($skill.source.path)"
             }
-            if ($exists) { Remove-Item -LiteralPath $dest -Recurse -Force }
-            Copy-Item -LiteralPath $sourceDir -Destination $dest -Recurse -Force -Exclude 'node_modules'
+            if ($exists) { Backup-Skill $dest $name; Remove-SkillPath $dest }
+            if ($isRootSkill) {
+                New-Item -ItemType Directory -Path $dest -Force | Out-Null
+                Get-ChildItem -LiteralPath $sourceDir -Force |
+                    Where-Object { $_.Name -notin @('.git', 'node_modules') } |
+                    Copy-Item -Destination $dest -Recurse -Force
+            } else {
+                Copy-Item -LiteralPath $sourceDir -Destination $dest -Recurse -Force -Exclude 'node_modules'
+            }
         }
 
         $hash = Get-FileHashSafe (Join-Path $dest 'SKILL.md')
@@ -226,6 +255,9 @@ if ($unresolved.Count -gt 0) {
 if ($failed.Count -gt 0) {
     Write-Host "Failures:"
     $failed | ForEach-Object { Write-Host "  $_" }
+}
+if (Test-Path -LiteralPath $backupRoot) {
+    Write-Host "Replaced folders were backed up to: $backupRoot"
 }
 
 if ((Test-Path -LiteralPath $pluginsPath -PathType Leaf)) {

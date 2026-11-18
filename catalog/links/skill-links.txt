@@ -178,3 +178,16 @@ https://raw.githubusercontent.com/NVlabs/Skill2Env/main/SkillHub/skills/pawel-hu
 https://raw.githubusercontent.com/nextlevelbuilder/ui-ux-pro-max-skill/main/cli/assets/skills/ui-styling/SKILL.md
 https://raw.githubusercontent.com/davila7/claude-code-templates/main/cli-tool/components/skills/utilities/web-artifacts-builder/SKILL.md
 https://raw.githubusercontent.com/langchain-ai/deepagents/main/libs/code/examples/skills/web-research/SKILL.md
+https://raw.githubusercontent.com/claude-office-skills/skills/main/meeting-notes/SKILL.md
+https://raw.githubusercontent.com/OSideMedia/higgsfield-ai-prompt-skill/main/SKILL.md
+https://raw.githubusercontent.com/FNOSP/fnos-dsh/main/plugins/dsh-midscene-plugin/skills/browser-automation/SKILL.md
+https://raw.githubusercontent.com/compozy/compozy/main/docs/design/opendesign/.agents/skills/design-taste-frontend/SKILL.md
+https://raw.githubusercontent.com/letta-ai/skills/main/tools/doc/SKILL.md
+https://raw.githubusercontent.com/JetBrains/skills/main/gws-gmail/SKILL.md
+https://raw.githubusercontent.com/balloob/llm-skills/main/home-assistant/SKILL.md
+https://raw.githubusercontent.com/inkeep/open-knowledge-skills/main/skills/starter-packs/knowledge-base/knowledge-base/SKILL.md
+https://raw.githubusercontent.com/ianseddon/cookbook/main/.agents/skills/meal-plan/SKILL.md
+https://raw.githubusercontent.com/qodex-ai/ai-agent-skills/main/skills/multi-agent-orchestration/SKILL.md
+https://raw.githubusercontent.com/jasonkneen/openclicky/main/AppResources/OpenClicky/OpenClickyBundledSkills/spreadsheet/SKILL.md
+https://raw.githubusercontent.com/peteromallet/desloppify/main/desloppify/data/global/SKILL.md
+https://raw.githubusercontent.com/blader/humanizer/main/SKILL.md

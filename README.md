@@ -81,10 +81,10 @@ by `scripts/update-category-index.py` - they are never maintained by hand.
 |------|------:|-------|
 | Original skills | 25 | `skills/original/` - authored and maintained here |
 | Bundled third-party skills | 7 | `skills/third-party/` - local copies of upstream `SKILL.md` files |
-| External link-only skills | 227 | referenced by URL; no content copied |
-| Stable-branch links | 180 | `catalog/links/skill-links.txt` |
+| External link-only skills | 240 | referenced by URL; no content copied |
+| Stable-branch links | 193 | `catalog/links/skill-links.txt` |
 | Pinned links | 47 | `catalog/links/pinned-links.txt` |
-| Catalog records | 252 | `catalog/items.json` |
+| Catalog records | 265 | `catalog/items.json` |
 | System prompts | 9 | `prompts/system/` |
 | Personas | 10 | `prompts/personas/` |
 | Image prompts | 4 | `prompts/image/` |
@@ -117,6 +117,8 @@ evidence file; the shared files are built from all of them.
 | `sync/manifest.json` | The same collection in the schema the installer reads. This is the only install manifest, never a per-computer snapshot. |
 | `sync/cindy-plugins.json` | Plugins for Cindy, OpenCode and OpenDesign, with what each needs to be authorized again. |
 | `sync/CINDY-INSTALL.md` | Ready-to-paste prompt: installs the skills, then the plugins, then reports what still needs me. |
+| `sync/UPDATE.md` | Ready-to-paste prompt: updates a computer to the versions recorded in the collection. |
+| `sync/verify-installed.py` | Checks every installed skill against the recorded hash; `0 differ` is the success line. |
 | `sync/machines/<machineId>.json` | Raw evidence from one computer. Not a separate collection. |
 | `sync/unresolved.md` | Skills with no verified upstream; they stay out of `skills/original/` until one is found. |
 | `sync/generate-manifest.py` | Records this computer as `machines/<machineId>.json`. |
