@@ -52,7 +52,7 @@ Third-party skills referenced by upstream URL only; no local copy is bundled. So
 
 Entries with a short description have curated metadata in `catalog/items.json`; entries without one are link-only.
 
-Total: **236** references.
+Total: **245** references.
 
 ### Agents365-ai/drawio-skill (1)
 
@@ -235,6 +235,21 @@ Total: **236** references.
 ### dpconde/claude-android-skill (1)
 
 - [`main`](https://raw.githubusercontent.com/dpconde/claude-android-skill/main/SKILL.md)
+
+### earthtojake/text-to-cad (8)
+
+- [`cad`](https://raw.githubusercontent.com/earthtojake/text-to-cad/main/skills/cad/SKILL.md) — Design and edit parametric parts, assemblies and 2D cut profiles as build123d Python, exported as STEP, STL, 3MF, GLB or DXF, with manufacturability checks.
+- [`engineering-drawing`](https://raw.githubusercontent.com/earthtojake/text-to-cad/main/skills/engineering-drawing/SKILL.md) — Dimensioned PDF drawing sheets projected from a part's geometry: orthographic views, hole callouts, notes and a title block.
+- [`fea`](https://raw.githubusercontent.com/earthtojake/text-to-cad/main/skills/fea/SKILL.md) — Linear static stress study with CalculiX: peak stress, safety factor against yield and deflection for a part or a bonded assembly.
+- [`pcb`](https://raw.githubusercontent.com/earthtojake/text-to-cad/main/skills/pcb/SKILL.md) — Design, edit and review KiCad boards and schematics: parts and nets, placement, routing, ERC and DRC, fabrication files.
+- [`print3d`](https://raw.githubusercontent.com/earthtojake/text-to-cad/main/skills/print3d/SKILL.md) — Slice STL, 3MF or OBJ into G-code with OrcaSlicer and hand the result to Bambu Studio or Bambu Connect.
+- [`render`](https://raw.githubusercontent.com/earthtojake/text-to-cad/main/skills/render/SKILL.md) — Photoreal Blender renders of a CAD model: hero stills, README pictures, turntables and films of a mechanism's motion.
+- [`robot-simulation`](https://raw.githubusercontent.com/earthtojake/text-to-cad/main/skills/robot-simulation/SKILL.md) — Write and review robot and world descriptions - URDF, SRDF and MJCF - for ROS, MoveIt and MuJoCo.
+- [`sendcutsend`](https://raw.githubusercontent.com/earthtojake/text-to-cad/main/skills/sendcutsend/SKILL.md) — Preflight DXF and STEP files against SendCutSend's ordering guide, catalog and specs before an order.
+
+### erkamyaman/safe-anything (1)
+
+- [`safe-anything`](https://raw.githubusercontent.com/erkamyaman/safe-anything/main/skills/safe-anything/SKILL.md) — One Rust command that finds XSS, SQL injection, leaked secrets, risky mobile and cloud config, vulnerable dependencies and unsafe AI agent setups, with the line, reason and fix for every finding.
 
 ### firecrawl/firecrawl-workflows (3)
 

@@ -4,11 +4,11 @@ Canonical structured catalog of this collection.
 
 ## Contents
 
-- `items.json` - 259 records: 23 original skills and 236 external skills.
+- `items.json` - 268 records: 23 original skills and 245 external skills.
   Each record includes name, category, repository, upstream URL, authorship,
   license and verification status.
 - `links/` - authoritative plain URL lists for external skills.
-  - `skill-links.txt` - 191 stable-branch links.
+  - `skill-links.txt` - 200 stable-branch links.
   - `pinned-links.txt` - 45 pinned commit/release links.
   - `README.md` - provenance and verification note.
 
@@ -36,10 +36,10 @@ error. It never falls back to an empty collection.
 
 | What | Count | Where |
 |------|------:|-------|
-| Catalog records | 259 | `catalog/items.json` |
+| Catalog records | 268 | `catalog/items.json` |
 | Catalog records with `authorship: original` | 23 |  |
-| Catalog records with `authorship: link-only` | 236 |  |
-| Stable-branch links | 191 | `catalog/links/skill-links.txt` |
+| Catalog records with `authorship: link-only` | 245 |  |
+| Stable-branch links | 200 | `catalog/links/skill-links.txt` |
 | Pinned links | 45 | `catalog/links/pinned-links.txt` |
 | Bundled third-party skills | 6 | `skills/third-party/` - local copies of upstream `SKILL.md` files |
 
@@ -52,7 +52,8 @@ part of the link-only count.
 
 ## Link Verification
 
-All 236 external URLs returned HTTP 200 when checked on 2026-11-12. The check
+All 245 external URLs returned HTTP 200 when checked on 2026-11-12; the nine
+text-to-cad and safe-anything links were checked again on 2026-11-23. The check
 covers URL availability only. It does not verify upstream content, license,
 security or runtime compatibility.
 

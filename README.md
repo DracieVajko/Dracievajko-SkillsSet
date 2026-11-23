@@ -81,10 +81,10 @@ by `scripts/update-category-index.py` - they are never maintained by hand.
 |------|------:|-------|
 | Original skills | 23 | `skills/original/` - authored and maintained here |
 | Bundled third-party skills | 6 | `skills/third-party/` - local copies of upstream `SKILL.md` files |
-| External link-only skills | 236 | referenced by URL; no content copied |
-| Stable-branch links | 191 | `catalog/links/skill-links.txt` |
+| External link-only skills | 245 | referenced by URL; no content copied |
+| Stable-branch links | 200 | `catalog/links/skill-links.txt` |
 | Pinned links | 45 | `catalog/links/pinned-links.txt` |
-| Catalog records | 259 | `catalog/items.json` |
+| Catalog records | 268 | `catalog/items.json` |
 | System prompts | 9 | `prompts/system/` |
 | Personas | 10 | `prompts/personas/` |
 | Image prompts | 4 | `prompts/image/` |
@@ -110,7 +110,7 @@ by `scripts/update-category-index.py` - they are never maintained by hand.
 computers has, described once, so any computer can be brought to the same
 state without duplicating skill content. A computer only writes its own
 evidence file; the shared files are built from all of them. The current
-collection has **108 enabled skills**; `sync/collection.json` is the source of
+collection has **118 enabled skills**; `sync/collection.json` is the source of
 truth.
 
 | File | Purpose |
@@ -193,10 +193,10 @@ is configured in the OpenCode config on each machine
 │   └── workflows/               # skills-tooling.yml, link-check.yml
 ├── catalog/
 │   ├── README.md
-│   ├── items.json               # 259 records: 23 original + 236 link-only
+│   ├── items.json               # 268 records: 23 original + 245 link-only
 │   └── links/
 │       ├── README.md
-│       ├── skill-links.txt      # 191 stable-branch links
+│       ├── skill-links.txt      # 200 stable-branch links
 │       └── pinned-links.txt     # 45 pinned commit links
 ├── docs/
 │   ├── CATEGORY_INDEX.md        # generated index of every skill

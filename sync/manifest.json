@@ -57,6 +57,7 @@
         "pen-testing",
         "playwright-skill",
         "prep-for-meetings",
+        "prism-local",
         "rea-analysis-optimization",
         "rea-changelog-update",
         "rea-ci-tests-audit",
@@ -81,6 +82,7 @@
         "api-and-interface-design",
         "avoid-ai-design",
         "browser-automation",
+        "cad",
         "code-review",
         "dcf-valuation",
         "deep-agents-memory",
@@ -89,6 +91,8 @@
         "design-taste-frontend",
         "doc",
         "editor-v1",
+        "engineering-drawing",
+        "fea",
         "frontend-design",
         "gsap-core",
         "gsap-frameworks",
@@ -110,9 +114,15 @@
         "meeting-notes",
         "minimax-docx",
         "orchestrate",
+        "pcb",
         "pdf",
+        "print3d",
         "proactive-self-improving-agent",
         "project-butler",
+        "render",
+        "robot-simulation",
+        "safe-anything",
+        "sendcutsend",
         "skill-creator",
         "spreadsheet",
         "systematic-debugging",
@@ -156,6 +166,7 @@
         "brainstorming",
         "browser-automation",
         "building-mcp-servers",
+        "cad",
         "code-documenter",
         "code-review",
         "context-engineering",
@@ -173,6 +184,8 @@
         "ds-note-formatter",
         "editor-v1",
         "enable-wake-on-lan-and-auto-shutdown-on-network-loss-for-ras",
+        "engineering-drawing",
+        "fea",
         "fine-tuning-expert",
         "fix-inconclusive-skills",
         "focus-my-energy",
@@ -207,18 +220,25 @@
         "minimax-docx",
         "mobile-reverse",
         "orchestrate",
+        "pcb",
         "pdf",
         "pen-testing",
         "playwright-skill",
         "prep-for-meetings",
+        "print3d",
+        "prism-local",
         "proactive-self-improving-agent",
         "project-butler",
         "rea-analysis-optimization",
         "rea-changelog-update",
         "rea-ci-tests-audit",
         "rea-tool-design",
+        "render",
         "repository-hygiene",
         "reverse-engineer-anything",
+        "robot-simulation",
+        "safe-anything",
+        "sendcutsend",
         "skill-creator",
         "spreadsheet",
         "systematic-debugging",
@@ -269,6 +289,7 @@
         "brainstorming",
         "browser-automation",
         "building-mcp-servers",
+        "cad",
         "code-documenter",
         "code-review",
         "context-engineering",
@@ -286,6 +307,8 @@
         "ds-note-formatter",
         "editor-v1",
         "enable-wake-on-lan-and-auto-shutdown-on-network-loss-for-ras",
+        "engineering-drawing",
+        "fea",
         "fine-tuning-expert",
         "fix-inconclusive-skills",
         "focus-my-energy",
@@ -320,18 +343,25 @@
         "minimax-docx",
         "mobile-reverse",
         "orchestrate",
+        "pcb",
         "pdf",
         "pen-testing",
         "playwright-skill",
         "prep-for-meetings",
+        "print3d",
+        "prism-local",
         "proactive-self-improving-agent",
         "project-butler",
         "rea-analysis-optimization",
         "rea-changelog-update",
         "rea-ci-tests-audit",
         "rea-tool-design",
+        "render",
         "repository-hygiene",
         "reverse-engineer-anything",
+        "robot-simulation",
+        "safe-anything",
+        "sendcutsend",
         "skill-creator",
         "spreadsheet",
         "systematic-debugging",
@@ -382,6 +412,7 @@
         "brainstorming",
         "browser-automation",
         "building-mcp-servers",
+        "cad",
         "code-documenter",
         "code-review",
         "context-engineering",
@@ -399,6 +430,8 @@
         "ds-note-formatter",
         "editor-v1",
         "enable-wake-on-lan-and-auto-shutdown-on-network-loss-for-ras",
+        "engineering-drawing",
+        "fea",
         "fine-tuning-expert",
         "fix-inconclusive-skills",
         "focus-my-energy",
@@ -433,18 +466,25 @@
         "minimax-docx",
         "mobile-reverse",
         "orchestrate",
+        "pcb",
         "pdf",
         "pen-testing",
         "playwright-skill",
         "prep-for-meetings",
+        "print3d",
+        "prism-local",
         "proactive-self-improving-agent",
         "project-butler",
         "rea-analysis-optimization",
         "rea-changelog-update",
         "rea-ci-tests-audit",
         "rea-tool-design",
+        "render",
         "repository-hygiene",
         "reverse-engineer-anything",
+        "robot-simulation",
+        "safe-anything",
+        "sendcutsend",
         "skill-creator",
         "spreadsheet",
         "systematic-debugging",
@@ -866,6 +906,26 @@
       ]
     },
     {
+      "name": "cad",
+      "root": "agents",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "earthtojake/text-to-cad",
+        "ref": "main",
+        "path": "skills/cad",
+        "sha256": "2f165c8a749a150cbf044a5ac4d78b74d3fa00ef813990fab490de4a1a87456e"
+      },
+      "author": "",
+      "license": "MIT",
+      "sizeKB": 0,
+      "needsNodeModules": false,
+      "sha256": "2f165c8a749a150cbf044a5ac4d78b74d3fa00ef813990fab490de4a1a87456e",
+      "machines": [
+        "randall"
+      ]
+    },
+    {
       "name": "code-documenter",
       "root": "opencode",
       "authorship": "third-party",
@@ -1189,6 +1249,46 @@
       "sizeKB": 0,
       "needsNodeModules": false,
       "sha256": "3c245247475b31e2f586ed09e5d79055426e61b5137dfcffbcc9a1324f6f06bc",
+      "machines": [
+        "randall"
+      ]
+    },
+    {
+      "name": "engineering-drawing",
+      "root": "agents",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "earthtojake/text-to-cad",
+        "ref": "main",
+        "path": "skills/engineering-drawing",
+        "sha256": "a1160c6c73c6636e7f99f9c8efbb814295a5ae2d486cd138743caaf01acdb864"
+      },
+      "author": "",
+      "license": "MIT",
+      "sizeKB": 0,
+      "needsNodeModules": false,
+      "sha256": "a1160c6c73c6636e7f99f9c8efbb814295a5ae2d486cd138743caaf01acdb864",
+      "machines": [
+        "randall"
+      ]
+    },
+    {
+      "name": "fea",
+      "root": "agents",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "earthtojake/text-to-cad",
+        "ref": "main",
+        "path": "skills/fea",
+        "sha256": "1ec08694fe6ed6623f154c8316cebe0563c3b879952ae9b3c6f86e136c9c42b4"
+      },
+      "author": "",
+      "license": "MIT",
+      "sizeKB": 0,
+      "needsNodeModules": false,
+      "sha256": "1ec08694fe6ed6623f154c8316cebe0563c3b879952ae9b3c6f86e136c9c42b4",
       "machines": [
         "randall"
       ]
@@ -1615,7 +1715,7 @@
       "author": "",
       "license": "MIT",
       "sizeKB": 0,
-      "needsNodeModules": false,
+      "needsNodeModules": true,
       "sha256": "804a119e924ac30295b298213e0b71b3e38b2667b8ef4fb7b69e9246369b9045",
       "machines": [
         "randall"
@@ -1854,6 +1954,26 @@
       ]
     },
     {
+      "name": "pcb",
+      "root": "agents",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "earthtojake/text-to-cad",
+        "ref": "main",
+        "path": "skills/pcb",
+        "sha256": "e6497d2b936c4411d05de9e7b61438ed3385de6dd2275206293bcb4fcd065f30"
+      },
+      "author": "",
+      "license": "MIT",
+      "sizeKB": 0,
+      "needsNodeModules": false,
+      "sha256": "e6497d2b936c4411d05de9e7b61438ed3385de6dd2275206293bcb4fcd065f30",
+      "machines": [
+        "randall"
+      ]
+    },
+    {
       "name": "pdf",
       "root": "agents",
       "authorship": "third-party",
@@ -1927,6 +2047,45 @@
       "sizeKB": 0,
       "needsNodeModules": false,
       "sha256": "36bcf3ad942c214a65fd0d4b12d938f51ffc33a560dc99555d6240022025f3e3",
+      "machines": [
+        "randall"
+      ]
+    },
+    {
+      "name": "print3d",
+      "root": "agents",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "earthtojake/text-to-cad",
+        "ref": "main",
+        "path": "skills/print3d",
+        "sha256": "9c6f0fafac1384ec7335421ee11c506b39ea215b9c30892655ccf80b2022e923"
+      },
+      "author": "",
+      "license": "MIT",
+      "sizeKB": 0,
+      "needsNodeModules": false,
+      "sha256": "9c6f0fafac1384ec7335421ee11c506b39ea215b9c30892655ccf80b2022e923",
+      "machines": [
+        "randall"
+      ]
+    },
+    {
+      "name": "prism-local",
+      "root": "opencode",
+      "authorship": "unknown",
+      "source": {
+        "type": "unresolved",
+        "repo": null,
+        "ref": null,
+        "path": null
+      },
+      "author": "DracieVajko",
+      "license": "MIT",
+      "sizeKB": 0,
+      "needsNodeModules": false,
+      "sha256": "1c3fca7a169370f5ba40022b7aedf6f264b5efcefea578ed124c6ba71cae293c",
       "machines": [
         "randall"
       ]
@@ -2050,6 +2209,26 @@
       ]
     },
     {
+      "name": "render",
+      "root": "agents",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "earthtojake/text-to-cad",
+        "ref": "main",
+        "path": "skills/render",
+        "sha256": "b480f3ccfe8581903f3f3c1be239e98842d808c0c99276dac4ef6c3ddc89b1bc"
+      },
+      "author": "",
+      "license": "MIT",
+      "sizeKB": 0,
+      "needsNodeModules": false,
+      "sha256": "b480f3ccfe8581903f3f3c1be239e98842d808c0c99276dac4ef6c3ddc89b1bc",
+      "machines": [
+        "randall"
+      ]
+    },
+    {
       "name": "repository-hygiene",
       "root": "opencode",
       "authorship": "original",
@@ -2086,6 +2265,66 @@
       "sha256": "90608de63f2650a57437e037c1afa7afb6ebf4c8b9fd976fdb72caff6df443dc",
       "machines": [
         "dracievajko",
+        "randall"
+      ]
+    },
+    {
+      "name": "robot-simulation",
+      "root": "agents",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "earthtojake/text-to-cad",
+        "ref": "main",
+        "path": "skills/robot-simulation",
+        "sha256": "5deed8bd7a27fb296b4fdca07c1b70f62238a50d293b000c58f61a4c231c641c"
+      },
+      "author": "",
+      "license": "MIT",
+      "sizeKB": 0,
+      "needsNodeModules": false,
+      "sha256": "5deed8bd7a27fb296b4fdca07c1b70f62238a50d293b000c58f61a4c231c641c",
+      "machines": [
+        "randall"
+      ]
+    },
+    {
+      "name": "safe-anything",
+      "root": "agents",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "erkamyaman/safe-anything",
+        "ref": "main",
+        "path": "skills/safe-anything",
+        "sha256": "073df3b6823100cb2e8f184812b6080c7e4c40148f924a04f42f143b49ab8298"
+      },
+      "author": "",
+      "license": "",
+      "sizeKB": 0,
+      "needsNodeModules": false,
+      "sha256": "073df3b6823100cb2e8f184812b6080c7e4c40148f924a04f42f143b49ab8298",
+      "machines": [
+        "randall"
+      ]
+    },
+    {
+      "name": "sendcutsend",
+      "root": "agents",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "earthtojake/text-to-cad",
+        "ref": "main",
+        "path": "skills/sendcutsend",
+        "sha256": "6be176dcee81cca6c92507e5a6bb1508e33aef102bd7324b8f0eef6c54983f0c"
+      },
+      "author": "",
+      "license": "MIT",
+      "sizeKB": 0,
+      "needsNodeModules": false,
+      "sha256": "6be176dcee81cca6c92507e5a6bb1508e33aef102bd7324b8f0eef6c54983f0c",
+      "machines": [
         "randall"
       ]
     },

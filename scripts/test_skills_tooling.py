@@ -377,8 +377,8 @@ class CatalogDataTests(unittest.TestCase):
     def test_items_authorship_partition(self):
         items = self.load('items.json')
         counts = Counter(i['authorship'] for i in items)
-        self.assertEqual(len(items), 259)
-        self.assertEqual(counts['link-only'], 236)
+        self.assertEqual(len(items), 268)
+        self.assertEqual(counts['link-only'], 245)
         self.assertEqual(counts['original'], 23)
         self.assertEqual(set(counts), {'link-only', 'original'})
 
@@ -387,9 +387,9 @@ class CatalogDataTests(unittest.TestCase):
                   if u.strip() and not u.strip().startswith('#')]
         pinned = [u for u in (self.links / 'pinned-links.txt').read_text(encoding='utf-8').splitlines()
                   if u.strip() and not u.strip().startswith('#')]
-        self.assertEqual(len(stable), 191)
+        self.assertEqual(len(stable), 200)
         self.assertEqual(len(pinned), 45)
-        self.assertEqual(len(stable) + len(pinned), 236)
+        self.assertEqual(len(stable) + len(pinned), 245)
 
     def test_catalog_link_urls_match_link_files(self):
         items = self.load('items.json')
@@ -471,7 +471,7 @@ class CatalogDataTests(unittest.TestCase):
 
     def test_docs_index_has_expected_total(self):
         index = (self.repo / 'docs' / 'CATEGORY_INDEX.md').read_text(encoding='utf-8')
-        self.assertIn('Total: **236** references.', index)
+        self.assertIn('Total: **245** references.', index)
         self.assertIn('## Original Local Skills', index)
         self.assertIn('## External Skills (Links Only)', index)
 

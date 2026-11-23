@@ -294,6 +294,7 @@
       "binary-diff",
       "book-to-skill",
       "browser-automation",
+      "cad",
       "code-review",
       "create-individual-calendar-events-from-earnings-dates-list",
       "dcf-valuation",
@@ -308,6 +309,8 @@
       "ds-note-formatter",
       "editor-v1",
       "enable-wake-on-lan-and-auto-shutdown-on-network-loss-for-ras",
+      "engineering-drawing",
+      "fea",
       "fix-inconclusive-skills",
       "focus-my-energy",
       "frontend-design",
@@ -329,10 +332,17 @@
       "minimax-docx",
       "mobile-reverse",
       "orchestrate",
+      "pcb",
       "pdf",
       "prep-for-meetings",
+      "print3d",
+      "prism-local",
       "proactive-self-improving-agent",
       "project-butler",
+      "render",
+      "robot-simulation",
+      "safe-anything",
+      "sendcutsend",
       "spreadsheet",
       "systematic-debugging",
       "testing-skills",
@@ -1010,6 +1020,43 @@
       "needsNodeModules": false
     },
     {
+      "name": "cad",
+      "enabled": true,
+      "disabledReason": "",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "earthtojake/text-to-cad",
+        "ref": "main",
+        "path": "skills/cad",
+        "sha256": "2f165c8a749a150cbf044a5ac4d78b74d3fa00ef813990fab490de4a1a87456e"
+      },
+      "author": "",
+      "license": "MIT",
+      "install": {
+        "method": "git-sparse-checkout",
+        "root": "agents",
+        "target": "~/.agents/skills"
+      },
+      "harnesses": [
+        "agents",
+        "cindy",
+        "claude",
+        "pi",
+        "qwen",
+        "continue",
+        "roo"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "2f165c8a749a150cbf044a5ac4d78b74d3fa00ef813990fab490de4a1a87456e"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
       "name": "code-documenter",
       "enabled": true,
       "disabledReason": "",
@@ -1401,7 +1448,7 @@
         "randall"
       ],
       "sha256": {
-        "randall": "8a8ad97d4299f476205d68c84368235722007c3f76f336f9ec021efa96f4cacb"
+        "randall": "c481221a7b7dde073ac42c0603ba44d9b59c0868f4c70e960ab6974fc7a11902"
       },
       "drift": false,
       "needsNodeModules": false
@@ -1616,6 +1663,80 @@
       ],
       "sha256": {
         "randall": "3c245247475b31e2f586ed09e5d79055426e61b5137dfcffbcc9a1324f6f06bc"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "engineering-drawing",
+      "enabled": true,
+      "disabledReason": "",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "earthtojake/text-to-cad",
+        "ref": "main",
+        "path": "skills/engineering-drawing",
+        "sha256": "a1160c6c73c6636e7f99f9c8efbb814295a5ae2d486cd138743caaf01acdb864"
+      },
+      "author": "",
+      "license": "MIT",
+      "install": {
+        "method": "git-sparse-checkout",
+        "root": "agents",
+        "target": "~/.agents/skills"
+      },
+      "harnesses": [
+        "agents",
+        "cindy",
+        "claude",
+        "pi",
+        "qwen",
+        "continue",
+        "roo"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "a1160c6c73c6636e7f99f9c8efbb814295a5ae2d486cd138743caaf01acdb864"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "fea",
+      "enabled": true,
+      "disabledReason": "",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "earthtojake/text-to-cad",
+        "ref": "main",
+        "path": "skills/fea",
+        "sha256": "1ec08694fe6ed6623f154c8316cebe0563c3b879952ae9b3c6f86e136c9c42b4"
+      },
+      "author": "",
+      "license": "MIT",
+      "install": {
+        "method": "git-sparse-checkout",
+        "root": "agents",
+        "target": "~/.agents/skills"
+      },
+      "harnesses": [
+        "agents",
+        "cindy",
+        "claude",
+        "pi",
+        "qwen",
+        "continue",
+        "roo"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "1ec08694fe6ed6623f154c8316cebe0563c3b879952ae9b3c6f86e136c9c42b4"
       },
       "drift": false,
       "needsNodeModules": false
@@ -2421,7 +2542,7 @@
         "randall": "804a119e924ac30295b298213e0b71b3e38b2667b8ef4fb7b69e9246369b9045"
       },
       "drift": false,
-      "needsNodeModules": false
+      "needsNodeModules": true
     },
     {
       "name": "idea-to-plan",
@@ -2859,6 +2980,43 @@
       "needsNodeModules": false
     },
     {
+      "name": "pcb",
+      "enabled": true,
+      "disabledReason": "",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "earthtojake/text-to-cad",
+        "ref": "main",
+        "path": "skills/pcb",
+        "sha256": "e6497d2b936c4411d05de9e7b61438ed3385de6dd2275206293bcb4fcd065f30"
+      },
+      "author": "",
+      "license": "MIT",
+      "install": {
+        "method": "git-sparse-checkout",
+        "root": "agents",
+        "target": "~/.agents/skills"
+      },
+      "harnesses": [
+        "agents",
+        "cindy",
+        "claude",
+        "pi",
+        "qwen",
+        "continue",
+        "roo"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "e6497d2b936c4411d05de9e7b61438ed3385de6dd2275206293bcb4fcd065f30"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
       "name": "pdf",
       "enabled": true,
       "disabledReason": "",
@@ -2999,6 +3157,78 @@
       ],
       "sha256": {
         "randall": "36bcf3ad942c214a65fd0d4b12d938f51ffc33a560dc99555d6240022025f3e3"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "print3d",
+      "enabled": true,
+      "disabledReason": "",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "earthtojake/text-to-cad",
+        "ref": "main",
+        "path": "skills/print3d",
+        "sha256": "9c6f0fafac1384ec7335421ee11c506b39ea215b9c30892655ccf80b2022e923"
+      },
+      "author": "",
+      "license": "MIT",
+      "install": {
+        "method": "git-sparse-checkout",
+        "root": "agents",
+        "target": "~/.agents/skills"
+      },
+      "harnesses": [
+        "agents",
+        "cindy",
+        "claude",
+        "pi",
+        "qwen",
+        "continue",
+        "roo"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "9c6f0fafac1384ec7335421ee11c506b39ea215b9c30892655ccf80b2022e923"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "prism-local",
+      "enabled": true,
+      "disabledReason": "",
+      "authorship": "unknown",
+      "source": {
+        "type": "unresolved",
+        "repo": null,
+        "ref": null,
+        "path": null
+      },
+      "author": "DracieVajko",
+      "license": "MIT",
+      "install": {
+        "method": "manual",
+        "root": "opencode",
+        "target": "~/.config/opencode/skills"
+      },
+      "harnesses": [
+        "opencode",
+        "agents",
+        "cindy",
+        "claude",
+        "pi",
+        "qwen"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "1c3fca7a169370f5ba40022b7aedf6f264b5efcefea578ed124c6ba71cae293c"
       },
       "drift": false,
       "needsNodeModules": false
@@ -3224,6 +3454,43 @@
       "needsNodeModules": false
     },
     {
+      "name": "render",
+      "enabled": true,
+      "disabledReason": "",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "earthtojake/text-to-cad",
+        "ref": "main",
+        "path": "skills/render",
+        "sha256": "b480f3ccfe8581903f3f3c1be239e98842d808c0c99276dac4ef6c3ddc89b1bc"
+      },
+      "author": "",
+      "license": "MIT",
+      "install": {
+        "method": "git-sparse-checkout",
+        "root": "agents",
+        "target": "~/.agents/skills"
+      },
+      "harnesses": [
+        "agents",
+        "cindy",
+        "claude",
+        "pi",
+        "qwen",
+        "continue",
+        "roo"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "b480f3ccfe8581903f3f3c1be239e98842d808c0c99276dac4ef6c3ddc89b1bc"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
       "name": "repository-hygiene",
       "enabled": true,
       "disabledReason": "",
@@ -3293,6 +3560,117 @@
       "sha256": {
         "dracievajko": "90608de63f2650a57437e037c1afa7afb6ebf4c8b9fd976fdb72caff6df443dc",
         "randall": "90608de63f2650a57437e037c1afa7afb6ebf4c8b9fd976fdb72caff6df443dc"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "robot-simulation",
+      "enabled": true,
+      "disabledReason": "",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "earthtojake/text-to-cad",
+        "ref": "main",
+        "path": "skills/robot-simulation",
+        "sha256": "5deed8bd7a27fb296b4fdca07c1b70f62238a50d293b000c58f61a4c231c641c"
+      },
+      "author": "",
+      "license": "MIT",
+      "install": {
+        "method": "git-sparse-checkout",
+        "root": "agents",
+        "target": "~/.agents/skills"
+      },
+      "harnesses": [
+        "agents",
+        "cindy",
+        "claude",
+        "pi",
+        "qwen",
+        "continue",
+        "roo"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "5deed8bd7a27fb296b4fdca07c1b70f62238a50d293b000c58f61a4c231c641c"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "safe-anything",
+      "enabled": true,
+      "disabledReason": "",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "erkamyaman/safe-anything",
+        "ref": "main",
+        "path": "skills/safe-anything",
+        "sha256": "073df3b6823100cb2e8f184812b6080c7e4c40148f924a04f42f143b49ab8298"
+      },
+      "author": "",
+      "license": "",
+      "install": {
+        "method": "git-sparse-checkout",
+        "root": "agents",
+        "target": "~/.agents/skills"
+      },
+      "harnesses": [
+        "agents",
+        "cindy",
+        "claude",
+        "pi",
+        "qwen",
+        "continue",
+        "roo"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "073df3b6823100cb2e8f184812b6080c7e4c40148f924a04f42f143b49ab8298"
+      },
+      "drift": false,
+      "needsNodeModules": false
+    },
+    {
+      "name": "sendcutsend",
+      "enabled": true,
+      "disabledReason": "",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "earthtojake/text-to-cad",
+        "ref": "main",
+        "path": "skills/sendcutsend",
+        "sha256": "6be176dcee81cca6c92507e5a6bb1508e33aef102bd7324b8f0eef6c54983f0c"
+      },
+      "author": "",
+      "license": "MIT",
+      "install": {
+        "method": "git-sparse-checkout",
+        "root": "agents",
+        "target": "~/.agents/skills"
+      },
+      "harnesses": [
+        "agents",
+        "cindy",
+        "claude",
+        "pi",
+        "qwen",
+        "continue",
+        "roo"
+      ],
+      "machines": [
+        "randall"
+      ],
+      "sha256": {
+        "randall": "6be176dcee81cca6c92507e5a6bb1508e33aef102bd7324b8f0eef6c54983f0c"
       },
       "drift": false,
       "needsNodeModules": false

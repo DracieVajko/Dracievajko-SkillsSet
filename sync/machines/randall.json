@@ -35,25 +35,19 @@
       "id": "opencode",
       "dir": "~\\.config\\opencode\\skills",
       "role": "install",
-      "skills": 108
+      "skills": 117
     },
     {
       "id": "agents",
       "dir": "~\\.agents\\skills",
       "role": "install",
-      "skills": 108
+      "skills": 118
     },
     {
       "id": "claude",
       "dir": "~\\.claude\\skills",
       "role": "mirror",
-      "skills": 108
-    },
-    {
-      "id": "qwen",
-      "dir": "~\\.qwen\\skills",
-      "role": "harness",
-      "skills": 108
+      "skills": 118
     },
     {
       "id": "cindy-managed",
@@ -91,6 +85,7 @@
         "brainstorming",
         "browser-automation",
         "building-mcp-servers",
+        "cad",
         "code-documenter",
         "code-review",
         "context-engineering",
@@ -108,6 +103,8 @@
         "ds-note-formatter",
         "editor-v1",
         "enable-wake-on-lan-and-auto-shutdown-on-network-loss-for-ras",
+        "engineering-drawing",
+        "fea",
         "fine-tuning-expert",
         "fix-inconclusive-skills",
         "focus-my-energy",
@@ -142,18 +139,25 @@
         "minimax-docx",
         "mobile-reverse",
         "orchestrate",
+        "pcb",
         "pdf",
         "pen-testing",
         "playwright-skill",
         "prep-for-meetings",
+        "print3d",
+        "prism-local",
         "proactive-self-improving-agent",
         "project-butler",
         "rea-analysis-optimization",
         "rea-changelog-update",
         "rea-ci-tests-audit",
         "rea-tool-design",
+        "render",
         "repository-hygiene",
         "reverse-engineer-anything",
+        "robot-simulation",
+        "safe-anything",
+        "sendcutsend",
         "skill-creator",
         "spreadsheet",
         "systematic-debugging",
@@ -192,6 +196,7 @@
         "api-and-interface-design",
         "avoid-ai-design",
         "browser-automation",
+        "cad",
         "code-review",
         "dcf-valuation",
         "deep-agents-memory",
@@ -200,6 +205,8 @@
         "design-taste-frontend",
         "doc",
         "editor-v1",
+        "engineering-drawing",
+        "fea",
         "frontend-design",
         "gsap-core",
         "gsap-frameworks",
@@ -221,9 +228,15 @@
         "meeting-notes",
         "minimax-docx",
         "orchestrate",
+        "pcb",
         "pdf",
+        "print3d",
         "proactive-self-improving-agent",
         "project-butler",
+        "render",
+        "robot-simulation",
+        "safe-anything",
+        "sendcutsend",
         "skill-creator",
         "spreadsheet",
         "systematic-debugging",
@@ -571,9 +584,9 @@
       },
       "author": "",
       "license": "",
-      "sizeKB": 42,
+      "sizeKB": 45,
       "needsNodeModules": false,
-      "sha256": "8a8ad97d4299f476205d68c84368235722007c3f76f336f9ec021efa96f4cacb"
+      "sha256": "c481221a7b7dde073ac42c0603ba44d9b59c0868f4c70e960ab6974fc7a11902"
     },
     {
       "name": "detailed-source-rewrite-guide",
@@ -987,7 +1000,7 @@
       },
       "author": "",
       "license": "",
-      "sizeKB": 48,
+      "sizeKB": 49,
       "needsNodeModules": false,
       "sha256": "90608de63f2650a57437e037c1afa7afb6ebf4c8b9fd976fdb72caff6df443dc"
     },
@@ -1051,7 +1064,7 @@
       },
       "author": "",
       "license": "",
-      "sizeKB": 3,
+      "sizeKB": 20,
       "needsNodeModules": false,
       "sha256": "82c5c8866ad7f5dd4440ce66bd7806ba48a2f13771beae5cf112e53f08fe36ba"
     },
@@ -1067,7 +1080,7 @@
       },
       "author": "",
       "license": "MIT",
-      "sizeKB": 6,
+      "sizeKB": 142,
       "needsNodeModules": false,
       "sha256": "27348882ea7a551426ec9a871306710ba16069abf53204afdbb5df6f0acc71a3"
     },
@@ -1200,6 +1213,23 @@
       "sha256": "9aa7c602a7004e53beb99c4399ec61773395d328b0faf64b968086d44b4c59b5"
     },
     {
+      "name": "cad",
+      "root": "agents",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "earthtojake/text-to-cad",
+        "ref": "main",
+        "path": "skills/cad",
+        "sha256": "2f165c8a749a150cbf044a5ac4d78b74d3fa00ef813990fab490de4a1a87456e"
+      },
+      "author": "",
+      "license": "MIT",
+      "sizeKB": 192,
+      "needsNodeModules": false,
+      "sha256": "2f165c8a749a150cbf044a5ac4d78b74d3fa00ef813990fab490de4a1a87456e"
+    },
+    {
       "name": "code-review",
       "root": "agents",
       "authorship": "third-party",
@@ -1328,6 +1358,40 @@
       "sizeKB": 746,
       "needsNodeModules": false,
       "sha256": "6776d425dbb625b432c08fcc3768d974c415b91442d852626736861047e2dbcb"
+    },
+    {
+      "name": "engineering-drawing",
+      "root": "agents",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "earthtojake/text-to-cad",
+        "ref": "main",
+        "path": "skills/engineering-drawing",
+        "sha256": "a1160c6c73c6636e7f99f9c8efbb814295a5ae2d486cd138743caaf01acdb864"
+      },
+      "author": "",
+      "license": "MIT",
+      "sizeKB": 12,
+      "needsNodeModules": false,
+      "sha256": "a1160c6c73c6636e7f99f9c8efbb814295a5ae2d486cd138743caaf01acdb864"
+    },
+    {
+      "name": "fea",
+      "root": "agents",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "earthtojake/text-to-cad",
+        "ref": "main",
+        "path": "skills/fea",
+        "sha256": "1ec08694fe6ed6623f154c8316cebe0563c3b879952ae9b3c6f86e136c9c42b4"
+      },
+      "author": "",
+      "license": "MIT",
+      "sizeKB": 33,
+      "needsNodeModules": false,
+      "sha256": "1ec08694fe6ed6623f154c8316cebe0563c3b879952ae9b3c6f86e136c9c42b4"
     },
     {
       "name": "frontend-design",
@@ -1517,7 +1581,7 @@
       },
       "author": "",
       "license": "",
-      "sizeKB": 40,
+      "sizeKB": 41,
       "needsNodeModules": false,
       "sha256": "196163eceeca18eaac42c3a66b05117f09ef3d76d6e5b6a00dc5450d867d2aa0"
     },
@@ -1533,8 +1597,8 @@
       },
       "author": "",
       "license": "MIT",
-      "sizeKB": 64,
-      "needsNodeModules": false,
+      "sizeKB": 68,
+      "needsNodeModules": true,
       "sha256": "804a119e924ac30295b298213e0b71b3e38b2667b8ef4fb7b69e9246369b9045"
     },
     {
@@ -1581,7 +1645,7 @@
       },
       "author": "",
       "license": "",
-      "sizeKB": 58,
+      "sizeKB": 59,
       "needsNodeModules": false,
       "sha256": "94c5d9667ba8ae4a2a4c22d9a74b2bd36e89cb9f4167489816cb5799edf19554"
     },
@@ -1629,7 +1693,7 @@
       },
       "author": "Claude Office Skills Contributors",
       "license": "MIT",
-      "sizeKB": 7,
+      "sizeKB": 8,
       "needsNodeModules": false,
       "sha256": "3a23090aa07a7ce102eae2b389efd71a73eef6d9f052a85b32b7f5f8202fbf9b"
     },
@@ -1645,7 +1709,7 @@
       },
       "author": "",
       "license": "MIT",
-      "sizeKB": 1485,
+      "sizeKB": 12043,
       "needsNodeModules": false,
       "sha256": "45c169630f30b8f034bc7d53edf73d592fbd82e82188beec7da3ca1996a97fb5"
     },
@@ -1667,6 +1731,23 @@
       "sha256": "0f9bee80237d991ff173dca498a6efa9d942b05659013a1211df55bd620d2faa"
     },
     {
+      "name": "pcb",
+      "root": "agents",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "earthtojake/text-to-cad",
+        "ref": "main",
+        "path": "skills/pcb",
+        "sha256": "e6497d2b936c4411d05de9e7b61438ed3385de6dd2275206293bcb4fcd065f30"
+      },
+      "author": "",
+      "license": "MIT",
+      "sizeKB": 88,
+      "needsNodeModules": false,
+      "sha256": "e6497d2b936c4411d05de9e7b61438ed3385de6dd2275206293bcb4fcd065f30"
+    },
+    {
       "name": "pdf",
       "root": "agents",
       "authorship": "third-party",
@@ -1678,9 +1759,42 @@
       },
       "author": "",
       "license": "Complete terms in LICENSE.txt",
-      "sizeKB": 20,
+      "sizeKB": 69,
       "needsNodeModules": false,
       "sha256": "d1c7caf5f35eb7d37877dd7fc33a095037be2b34fb5d2f7f4d43bde3165bb4ee"
+    },
+    {
+      "name": "print3d",
+      "root": "agents",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "earthtojake/text-to-cad",
+        "ref": "main",
+        "path": "skills/print3d",
+        "sha256": "9c6f0fafac1384ec7335421ee11c506b39ea215b9c30892655ccf80b2022e923"
+      },
+      "author": "",
+      "license": "MIT",
+      "sizeKB": 9,
+      "needsNodeModules": false,
+      "sha256": "9c6f0fafac1384ec7335421ee11c506b39ea215b9c30892655ccf80b2022e923"
+    },
+    {
+      "name": "prism-local",
+      "root": "agents",
+      "authorship": "unknown",
+      "source": {
+        "type": "unresolved",
+        "repo": null,
+        "ref": null,
+        "path": null
+      },
+      "author": "DracieVajko",
+      "license": "MIT",
+      "sizeKB": 9,
+      "needsNodeModules": false,
+      "sha256": "1c3fca7a169370f5ba40022b7aedf6f264b5efcefea578ed124c6ba71cae293c"
     },
     {
       "name": "proactive-self-improving-agent",
@@ -1694,7 +1808,7 @@
       },
       "author": "yanhongxi-openclaw",
       "license": "",
-      "sizeKB": 15,
+      "sizeKB": 16,
       "needsNodeModules": false,
       "sha256": "8502c14ed668baaddc0e58fd2d0b9f1e944deb7d546732fea37e603cb53366c3"
     },
@@ -1710,9 +1824,77 @@
       },
       "author": "",
       "license": "",
-      "sizeKB": 346,
+      "sizeKB": 355,
       "needsNodeModules": false,
       "sha256": "86ec318c8e329fff399225f148d0ce3b0e4c8247501c5ad23ac42293bc05d52a"
+    },
+    {
+      "name": "render",
+      "root": "agents",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "earthtojake/text-to-cad",
+        "ref": "main",
+        "path": "skills/render",
+        "sha256": "b480f3ccfe8581903f3f3c1be239e98842d808c0c99276dac4ef6c3ddc89b1bc"
+      },
+      "author": "",
+      "license": "MIT",
+      "sizeKB": 22,
+      "needsNodeModules": false,
+      "sha256": "b480f3ccfe8581903f3f3c1be239e98842d808c0c99276dac4ef6c3ddc89b1bc"
+    },
+    {
+      "name": "robot-simulation",
+      "root": "agents",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "earthtojake/text-to-cad",
+        "ref": "main",
+        "path": "skills/robot-simulation",
+        "sha256": "5deed8bd7a27fb296b4fdca07c1b70f62238a50d293b000c58f61a4c231c641c"
+      },
+      "author": "",
+      "license": "MIT",
+      "sizeKB": 138,
+      "needsNodeModules": false,
+      "sha256": "5deed8bd7a27fb296b4fdca07c1b70f62238a50d293b000c58f61a4c231c641c"
+    },
+    {
+      "name": "safe-anything",
+      "root": "agents",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "erkamyaman/safe-anything",
+        "ref": "main",
+        "path": "skills/safe-anything",
+        "sha256": "073df3b6823100cb2e8f184812b6080c7e4c40148f924a04f42f143b49ab8298"
+      },
+      "author": "",
+      "license": "",
+      "sizeKB": 2,
+      "needsNodeModules": false,
+      "sha256": "073df3b6823100cb2e8f184812b6080c7e4c40148f924a04f42f143b49ab8298"
+    },
+    {
+      "name": "sendcutsend",
+      "root": "agents",
+      "authorship": "third-party",
+      "source": {
+        "type": "github",
+        "repo": "earthtojake/text-to-cad",
+        "ref": "main",
+        "path": "skills/sendcutsend",
+        "sha256": "6be176dcee81cca6c92507e5a6bb1508e33aef102bd7324b8f0eef6c54983f0c"
+      },
+      "author": "",
+      "license": "MIT",
+      "sizeKB": 13,
+      "needsNodeModules": false,
+      "sha256": "6be176dcee81cca6c92507e5a6bb1508e33aef102bd7324b8f0eef6c54983f0c"
     },
     {
       "name": "skill-creator",
@@ -1726,7 +1908,7 @@
       },
       "author": "",
       "license": "",
-      "sizeKB": 70,
+      "sizeKB": 225,
       "needsNodeModules": false,
       "sha256": "dcd4803e61e913e6fc27294184cd3a71f09f5e924ff20c8a9a20173e7b3c2bcf"
     },
@@ -1758,7 +1940,7 @@
       },
       "author": "",
       "license": "",
-      "sizeKB": 40,
+      "sizeKB": 28,
       "needsNodeModules": false,
       "sha256": "51c6435d98c83c42c96ba7c35725a0b2c376cd487fb1a4e6bd0ddbe7e33ef202"
     },
@@ -1982,7 +2164,7 @@
       },
       "author": "",
       "license": "MIT",
-      "sizeKB": 173,
+      "sizeKB": 179,
       "needsNodeModules": false,
       "sha256": "625e302c60ee8f2e22d56cbe638c4a739e2657f566dae42689503ad517c30f1e"
     },
@@ -2030,7 +2212,7 @@
       },
       "author": "",
       "license": "",
-      "sizeKB": 12,
+      "sizeKB": 10,
       "needsNodeModules": false,
       "sha256": "a6c67c1900064347c2a329990dd3c555657c51c3ec53b259a08aa01a2c26139a"
     }
