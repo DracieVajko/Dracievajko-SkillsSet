@@ -79,7 +79,7 @@ by `scripts/update-category-index.py` - they are never maintained by hand.
 
 | What | Count | Where |
 |------|------:|-------|
-| Original skills | 23 | `skills/original/` - authored and maintained here |
+| Original skills | 24 | `skills/original/` - authored and maintained here |
 | Bundled third-party skills | 6 | `skills/third-party/` - local copies of upstream `SKILL.md` files |
 | External link-only skills | 245 | referenced by URL; no content copied |
 | Stable-branch links | 200 | `catalog/links/skill-links.txt` |

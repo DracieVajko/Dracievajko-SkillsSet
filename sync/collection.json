@@ -284,85 +284,16 @@
   },
   "gaps": {
     "dracievajko": [
-      "ai-vibe-slides",
-      "android-adb-control",
-      "android-development",
-      "api-and-interface-design",
-      "apk-reverse",
-      "avoid-ai-design",
-      "beyond-vibe-coding-autonomous-development",
-      "binary-diff",
-      "book-to-skill",
-      "browser-automation",
       "cad",
-      "code-review",
-      "create-individual-calendar-events-from-earnings-dates-list",
-      "dcf-valuation",
-      "deep-research",
-      "dependency-scan",
-      "design-catalogue",
-      "design-taste-frontend",
-      "desloppify",
-      "detailed-source-rewrite-guide",
-      "doc",
-      "document-editing-general",
-      "ds-note-formatter",
-      "editor-v1",
-      "enable-wake-on-lan-and-auto-shutdown-on-network-loss-for-ras",
       "engineering-drawing",
       "fea",
-      "fix-inconclusive-skills",
-      "focus-my-energy",
-      "frontend-design",
-      "generate-findings-report-from-pipeline-logs",
-      "generate-fresh-ideas",
-      "get-more-perspectives",
-      "ghidra-reverse",
-      "github-code-documentation",
-      "gws-gmail",
-      "higgsfield",
-      "home-assistant",
-      "humanizer",
-      "js-reverse",
-      "knowledge-base",
-      "learn-codebase",
-      "match-my-writing-style",
-      "meal-plan",
-      "meeting-notes",
-      "minimax-docx",
-      "mobile-reverse",
-      "orchestrate",
       "pcb",
-      "pdf",
-      "prep-for-meetings",
       "print3d",
       "prism-local",
-      "proactive-self-improving-agent",
-      "project-butler",
       "render",
       "robot-simulation",
       "safe-anything",
-      "sendcutsend",
-      "spreadsheet",
-      "systematic-debugging",
-      "testing-skills",
-      "trader-alerts",
-      "trader-analyst",
-      "trader-broker",
-      "trader-budget",
-      "trader-entry",
-      "trader-exit",
-      "trader-news",
-      "trader-pelosi",
-      "trader-risk",
-      "trader-scanner",
-      "trader-timemachine",
-      "ui-styling",
-      "universal-listing-template",
-      "web-artifacts-builder",
-      "webapp-testing",
-      "writing-plans",
-      "yfinance-ai"
+      "sendcutsend"
     ],
     "randall": []
   },
@@ -432,9 +363,11 @@
         "roo"
       ],
       "machines": [
+        "dracievajko",
         "randall"
       ],
       "sha256": {
+        "dracievajko": "010019c3464c96c563d73aafba81fd569a9a70cf8adc8e81df6eb14204cd5d1f",
         "randall": "010019c3464c96c563d73aafba81fd569a9a70cf8adc8e81df6eb14204cd5d1f"
       },
       "drift": false,
@@ -468,9 +401,11 @@
         "roo"
       ],
       "machines": [
+        "dracievajko",
         "randall"
       ],
       "sha256": {
+        "dracievajko": "83654d64401cc21490cf25a1c8a0b27997dd48551e0efe2e34dd4fec68d16470",
         "randall": "83654d64401cc21490cf25a1c8a0b27997dd48551e0efe2e34dd4fec68d16470"
       },
       "drift": false,
@@ -504,9 +439,11 @@
         "roo"
       ],
       "machines": [
+        "dracievajko",
         "randall"
       ],
       "sha256": {
+        "dracievajko": "beb251137c931969bedc81a9748dcfd90381a3cf0e2f61ae15533e526cfb640a",
         "randall": "beb251137c931969bedc81a9748dcfd90381a3cf0e2f61ae15533e526cfb640a"
       },
       "drift": false,
@@ -540,9 +477,11 @@
         "roo"
       ],
       "machines": [
+        "dracievajko",
         "randall"
       ],
       "sha256": {
+        "dracievajko": "cc5e2166c484b2c297e8253f56e7525e5031f81d66101ca4e760ef378ea6bad0",
         "randall": "cc5e2166c484b2c297e8253f56e7525e5031f81d66101ca4e760ef378ea6bad0"
       },
       "drift": false,
@@ -575,9 +514,11 @@
         "qwen"
       ],
       "machines": [
+        "dracievajko",
         "randall"
       ],
       "sha256": {
+        "dracievajko": "7c35b5e786f23b8441df15f834778021430b65102e9b8baded672dfa5ab7d65b",
         "randall": "7c35b5e786f23b8441df15f834778021430b65102e9b8baded672dfa5ab7d65b"
       },
       "drift": false,
@@ -648,9 +589,11 @@
         "roo"
       ],
       "machines": [
+        "dracievajko",
         "randall"
       ],
       "sha256": {
+        "dracievajko": "8261a426b62a08bef43069e47ad7ffbad1aa86cd3f51b76a84217d14ce9b92f4",
         "randall": "8261a426b62a08bef43069e47ad7ffbad1aa86cd3f51b76a84217d14ce9b92f4"
       },
       "drift": false,
@@ -683,9 +626,11 @@
         "qwen"
       ],
       "machines": [
+        "dracievajko",
         "randall"
       ],
       "sha256": {
+        "dracievajko": "c5e7c791d57872dccaaa9d3fee7faa0123579bb0e752b4085fa35d63de810e6f",
         "randall": "c5e7c791d57872dccaaa9d3fee7faa0123579bb0e752b4085fa35d63de810e6f"
       },
       "drift": false,
@@ -718,9 +663,11 @@
         "qwen"
       ],
       "machines": [
+        "dracievajko",
         "randall"
       ],
       "sha256": {
+        "dracievajko": "2c00de6d63dd44df0467c86b98baf4f18faa8da5bf004588a448c58f5c110db7",
         "randall": "2c00de6d63dd44df0467c86b98baf4f18faa8da5bf004588a448c58f5c110db7"
       },
       "drift": false,
@@ -901,9 +848,11 @@
         "qwen"
       ],
       "machines": [
+        "dracievajko",
         "randall"
       ],
       "sha256": {
+        "dracievajko": "75807d51ace1a189b207e5ce3a6decf92820d344acf4051937c607c525e73fdc",
         "randall": "75807d51ace1a189b207e5ce3a6decf92820d344acf4051937c607c525e73fdc"
       },
       "drift": false,
@@ -974,9 +923,11 @@
         "roo"
       ],
       "machines": [
+        "dracievajko",
         "randall"
       ],
       "sha256": {
+        "dracievajko": "9aa7c602a7004e53beb99c4399ec61773395d328b0faf64b968086d44b4c59b5",
         "randall": "9aa7c602a7004e53beb99c4399ec61773395d328b0faf64b968086d44b4c59b5"
       },
       "drift": false,
@@ -1121,9 +1072,11 @@
         "roo"
       ],
       "machines": [
+        "dracievajko",
         "randall"
       ],
       "sha256": {
+        "dracievajko": "9c921a8d88138a41401d8897ca1bb852088ab1b7b605cdd04edc13e3e8aab6dd",
         "randall": "9c921a8d88138a41401d8897ca1bb852088ab1b7b605cdd04edc13e3e8aab6dd"
       },
       "drift": false,
@@ -1193,9 +1146,11 @@
         "qwen"
       ],
       "machines": [
+        "dracievajko",
         "randall"
       ],
       "sha256": {
+        "dracievajko": "190a460c75c8065dd851b98ac1f409294e653dd8b08c767cb003a500b401c44a",
         "randall": "190a460c75c8065dd851b98ac1f409294e653dd8b08c767cb003a500b401c44a"
       },
       "drift": false,
@@ -1229,9 +1184,11 @@
         "roo"
       ],
       "machines": [
+        "dracievajko",
         "randall"
       ],
       "sha256": {
+        "dracievajko": "207ae6f7ea53515ddfad2dbe79346af90e778262fd173ae0a9ff12f257c758c6",
         "randall": "207ae6f7ea53515ddfad2dbe79346af90e778262fd173ae0a9ff12f257c758c6"
       },
       "drift": false,
@@ -1302,13 +1259,15 @@
         "qwen"
       ],
       "machines": [
+        "dracievajko",
         "randall"
       ],
       "sha256": {
+        "dracievajko": "d4b056eab3bb520bf7a45aeb3cf16260b532e0d99cec414d9ed9085b1f470948",
         "randall": "d4b056eab3bb520bf7a45aeb3cf16260b532e0d99cec414d9ed9085b1f470948"
       },
       "drift": false,
-      "needsNodeModules": true
+      "needsNodeModules": false
     },
     {
       "name": "dependency-scan",
@@ -1338,9 +1297,11 @@
         "roo"
       ],
       "machines": [
+        "dracievajko",
         "randall"
       ],
       "sha256": {
+        "dracievajko": "4076824ca35e590c19524a51b28fa1c67ffc13e466d8a5d7549d5f6b9cbf0c95",
         "randall": "4076824ca35e590c19524a51b28fa1c67ffc13e466d8a5d7549d5f6b9cbf0c95"
       },
       "drift": false,
@@ -1374,9 +1335,11 @@
         "roo"
       ],
       "machines": [
+        "dracievajko",
         "randall"
       ],
       "sha256": {
+        "dracievajko": "d3827b3abd243dbb72ebb1dccc3aa51da6aaf30b71c891cfdee1ee50dfe2bde3",
         "randall": "d3827b3abd243dbb72ebb1dccc3aa51da6aaf30b71c891cfdee1ee50dfe2bde3"
       },
       "drift": false,
@@ -1410,9 +1373,11 @@
         "roo"
       ],
       "machines": [
+        "dracievajko",
         "randall"
       ],
       "sha256": {
+        "dracievajko": "aa194351b246b8b4799099d4ed7b033d29eab6e6e3d58d8d2172978be7b3ec89",
         "randall": "aa194351b246b8b4799099d4ed7b033d29eab6e6e3d58d8d2172978be7b3ec89"
       },
       "drift": false,
@@ -1445,12 +1410,14 @@
         "qwen"
       ],
       "machines": [
+        "dracievajko",
         "randall"
       ],
       "sha256": {
+        "dracievajko": "8a8ad97d4299f476205d68c84368235722007c3f76f336f9ec021efa96f4cacb",
         "randall": "c481221a7b7dde073ac42c0603ba44d9b59c0868f4c70e960ab6974fc7a11902"
       },
-      "drift": false,
+      "drift": true,
       "needsNodeModules": false
     },
     {
@@ -1480,9 +1447,11 @@
         "qwen"
       ],
       "machines": [
+        "dracievajko",
         "randall"
       ],
       "sha256": {
+        "dracievajko": "aded2e94722e29c589806cc7f777696b3de2a7f4028e8e37140c2edc7198c5e1",
         "randall": "aded2e94722e29c589806cc7f777696b3de2a7f4028e8e37140c2edc7198c5e1"
       },
       "drift": false,
@@ -1516,9 +1485,11 @@
         "roo"
       ],
       "machines": [
+        "dracievajko",
         "randall"
       ],
       "sha256": {
+        "dracievajko": "0a635585817d1ac96e8e512114d08258b70f9e54ce0052078a258291ac13a8ed",
         "randall": "0a635585817d1ac96e8e512114d08258b70f9e54ce0052078a258291ac13a8ed"
       },
       "drift": false,
@@ -1551,9 +1522,11 @@
         "qwen"
       ],
       "machines": [
+        "dracievajko",
         "randall"
       ],
       "sha256": {
+        "dracievajko": "0ed41a46595044683ca0e7fd6061a80ff16c665aa34577d39119ee718c9f06be",
         "randall": "0ed41a46595044683ca0e7fd6061a80ff16c665aa34577d39119ee718c9f06be"
       },
       "drift": false,
@@ -1586,9 +1559,11 @@
         "qwen"
       ],
       "machines": [
+        "dracievajko",
         "randall"
       ],
       "sha256": {
+        "dracievajko": "16f3c54765d65ac0d1660ea881bf10e7c85bf8455a3f59da7de56cb7bad3f813",
         "randall": "16f3c54765d65ac0d1660ea881bf10e7c85bf8455a3f59da7de56cb7bad3f813"
       },
       "drift": false,
@@ -1624,9 +1599,11 @@
         "roo"
       ],
       "machines": [
+        "dracievajko",
         "randall"
       ],
       "sha256": {
+        "dracievajko": "6776d425dbb625b432c08fcc3768d974c415b91442d852626736861047e2dbcb",
         "randall": "6776d425dbb625b432c08fcc3768d974c415b91442d852626736861047e2dbcb"
       },
       "drift": false,
@@ -1659,9 +1636,11 @@
         "qwen"
       ],
       "machines": [
+        "dracievajko",
         "randall"
       ],
       "sha256": {
+        "dracievajko": "3c245247475b31e2f586ed09e5d79055426e61b5137dfcffbcc9a1324f6f06bc",
         "randall": "3c245247475b31e2f586ed09e5d79055426e61b5137dfcffbcc9a1324f6f06bc"
       },
       "drift": false,
@@ -1805,9 +1784,11 @@
         "qwen"
       ],
       "machines": [
+        "dracievajko",
         "randall"
       ],
       "sha256": {
+        "dracievajko": "ac5aea74554c91b2b5ff5ed7a1be48d117d11a063bc32f9af99b8dc569440ad2",
         "randall": "ac5aea74554c91b2b5ff5ed7a1be48d117d11a063bc32f9af99b8dc569440ad2"
       },
       "drift": false,
@@ -1840,9 +1821,11 @@
         "qwen"
       ],
       "machines": [
+        "dracievajko",
         "randall"
       ],
       "sha256": {
+        "dracievajko": "b06faa4ebced560eb3c29da9d3b6c30ce68e2f3e96fafd7b3646e6fa523e1c85",
         "randall": "b06faa4ebced560eb3c29da9d3b6c30ce68e2f3e96fafd7b3646e6fa523e1c85"
       },
       "drift": false,
@@ -1876,9 +1859,11 @@
         "roo"
       ],
       "machines": [
+        "dracievajko",
         "randall"
       ],
       "sha256": {
+        "dracievajko": "d91970639e9f5c37682ac7ab60094d35f1c7c1f38d731bd56396563aee10c1d3",
         "randall": "d91970639e9f5c37682ac7ab60094d35f1c7c1f38d731bd56396563aee10c1d3"
       },
       "drift": false,
@@ -1948,9 +1933,11 @@
         "qwen"
       ],
       "machines": [
+        "dracievajko",
         "randall"
       ],
       "sha256": {
+        "dracievajko": "b5b03c99e3eb61a3299172e65b32401363d5499113aa04cd0584491244785c43",
         "randall": "b5b03c99e3eb61a3299172e65b32401363d5499113aa04cd0584491244785c43"
       },
       "drift": false,
@@ -1983,9 +1970,11 @@
         "qwen"
       ],
       "machines": [
+        "dracievajko",
         "randall"
       ],
       "sha256": {
+        "dracievajko": "efe3ad5de56f11a015d56c85c1de5bb295eef18e5e33e6d0964ce037b144ab9a",
         "randall": "efe3ad5de56f11a015d56c85c1de5bb295eef18e5e33e6d0964ce037b144ab9a"
       },
       "drift": false,
@@ -2018,9 +2007,11 @@
         "qwen"
       ],
       "machines": [
+        "dracievajko",
         "randall"
       ],
       "sha256": {
+        "dracievajko": "089db2cadc653a8dba88f3b699e03f57f6de21d1f63be908457f8a5b215f4178",
         "randall": "089db2cadc653a8dba88f3b699e03f57f6de21d1f63be908457f8a5b215f4178"
       },
       "drift": false,
@@ -2053,9 +2044,11 @@
         "qwen"
       ],
       "machines": [
+        "dracievajko",
         "randall"
       ],
       "sha256": {
+        "dracievajko": "2b3a1ce14a53fa15fcb2eb2b1f6f9bd887705151791ed12ec41cb7c831a0696c",
         "randall": "2b3a1ce14a53fa15fcb2eb2b1f6f9bd887705151791ed12ec41cb7c831a0696c"
       },
       "drift": false,
@@ -2088,9 +2081,11 @@
         "qwen"
       ],
       "machines": [
+        "dracievajko",
         "randall"
       ],
       "sha256": {
+        "dracievajko": "1cb9120ea575ea3b03019156fc5362110f30fecde09fda7397980123661d64d9",
         "randall": "1cb9120ea575ea3b03019156fc5362110f30fecde09fda7397980123661d64d9"
       },
       "drift": false,
@@ -2428,9 +2423,11 @@
         "roo"
       ],
       "machines": [
+        "dracievajko",
         "randall"
       ],
       "sha256": {
+        "dracievajko": "18f676bb7b0bfa26a4ea841e83512cdaefe5128a56cd20fb4980641c5f2d5d34",
         "randall": "18f676bb7b0bfa26a4ea841e83512cdaefe5128a56cd20fb4980641c5f2d5d34"
       },
       "drift": false,
@@ -2464,12 +2461,14 @@
         "roo"
       ],
       "machines": [
+        "dracievajko",
         "randall"
       ],
       "sha256": {
+        "dracievajko": "fc595c4ef2576b6cc07020709423e5628002bb01b0ae201eb7f9dc9a3a5e7180",
         "randall": "94c087914325afc760b95cb4b77747c2fd15f7eb37a72ecebf0149b938067510"
       },
-      "drift": false,
+      "drift": true,
       "needsNodeModules": false
     },
     {
@@ -2500,9 +2499,11 @@
         "roo"
       ],
       "machines": [
+        "dracievajko",
         "randall"
       ],
       "sha256": {
+        "dracievajko": "196163eceeca18eaac42c3a66b05117f09ef3d76d6e5b6a00dc5450d867d2aa0",
         "randall": "196163eceeca18eaac42c3a66b05117f09ef3d76d6e5b6a00dc5450d867d2aa0"
       },
       "drift": false,
@@ -2536,9 +2537,11 @@
         "roo"
       ],
       "machines": [
+        "dracievajko",
         "randall"
       ],
       "sha256": {
+        "dracievajko": "804a119e924ac30295b298213e0b71b3e38b2667b8ef4fb7b69e9246369b9045",
         "randall": "804a119e924ac30295b298213e0b71b3e38b2667b8ef4fb7b69e9246369b9045"
       },
       "drift": false,
@@ -2646,9 +2649,11 @@
         "qwen"
       ],
       "machines": [
+        "dracievajko",
         "randall"
       ],
       "sha256": {
+        "dracievajko": "d4d18f2b8ed343e8dd89384bc935722b3dca6a6e69a64a9c8d43087e508e6723",
         "randall": "d4d18f2b8ed343e8dd89384bc935722b3dca6a6e69a64a9c8d43087e508e6723"
       },
       "drift": false,
@@ -2682,9 +2687,11 @@
         "roo"
       ],
       "machines": [
+        "dracievajko",
         "randall"
       ],
       "sha256": {
+        "dracievajko": "63d47bc21d48da4d9a1f1b9146106ab01230fb3480718ad3a8c20d547f1718ba",
         "randall": "63d47bc21d48da4d9a1f1b9146106ab01230fb3480718ad3a8c20d547f1718ba"
       },
       "drift": false,
@@ -2718,9 +2725,11 @@
         "roo"
       ],
       "machines": [
+        "dracievajko",
         "randall"
       ],
       "sha256": {
+        "dracievajko": "94c5d9667ba8ae4a2a4c22d9a74b2bd36e89cb9f4167489816cb5799edf19554",
         "randall": "94c5d9667ba8ae4a2a4c22d9a74b2bd36e89cb9f4167489816cb5799edf19554"
       },
       "drift": false,
@@ -2791,9 +2800,11 @@
         "qwen"
       ],
       "machines": [
+        "dracievajko",
         "randall"
       ],
       "sha256": {
+        "dracievajko": "0201bd6272ef07c5797499e8f58d64a57801c7475250476c4b791834a517443f",
         "randall": "0201bd6272ef07c5797499e8f58d64a57801c7475250476c4b791834a517443f"
       },
       "drift": false,
@@ -2827,9 +2838,11 @@
         "roo"
       ],
       "machines": [
+        "dracievajko",
         "randall"
       ],
       "sha256": {
+        "dracievajko": "5ab179beb45b5339fb45413b0f0c81a77a4f406e74cf36888552128d1a494b40",
         "randall": "5ab179beb45b5339fb45413b0f0c81a77a4f406e74cf36888552128d1a494b40"
       },
       "drift": false,
@@ -2863,9 +2876,11 @@
         "roo"
       ],
       "machines": [
+        "dracievajko",
         "randall"
       ],
       "sha256": {
+        "dracievajko": "3a23090aa07a7ce102eae2b389efd71a73eef6d9f052a85b32b7f5f8202fbf9b",
         "randall": "3a23090aa07a7ce102eae2b389efd71a73eef6d9f052a85b32b7f5f8202fbf9b"
       },
       "drift": false,
@@ -2899,9 +2914,11 @@
         "roo"
       ],
       "machines": [
+        "dracievajko",
         "randall"
       ],
       "sha256": {
+        "dracievajko": "45c169630f30b8f034bc7d53edf73d592fbd82e82188beec7da3ca1996a97fb5",
         "randall": "45c169630f30b8f034bc7d53edf73d592fbd82e82188beec7da3ca1996a97fb5"
       },
       "drift": false,
@@ -2934,9 +2951,11 @@
         "qwen"
       ],
       "machines": [
+        "dracievajko",
         "randall"
       ],
       "sha256": {
+        "dracievajko": "d5be29b6ff44ed684d0f5cb9f9efbb7d721b2bf6020387e9205ebc9eef343214",
         "randall": "d5be29b6ff44ed684d0f5cb9f9efbb7d721b2bf6020387e9205ebc9eef343214"
       },
       "drift": false,
@@ -2971,9 +2990,11 @@
         "roo"
       ],
       "machines": [
+        "dracievajko",
         "randall"
       ],
       "sha256": {
+        "dracievajko": "0f9bee80237d991ff173dca498a6efa9d942b05659013a1211df55bd620d2faa",
         "randall": "0f9bee80237d991ff173dca498a6efa9d942b05659013a1211df55bd620d2faa"
       },
       "drift": false,
@@ -3044,9 +3065,11 @@
         "roo"
       ],
       "machines": [
+        "dracievajko",
         "randall"
       ],
       "sha256": {
+        "dracievajko": "d1c7caf5f35eb7d37877dd7fc33a095037be2b34fb5d2f7f4d43bde3165bb4ee",
         "randall": "d1c7caf5f35eb7d37877dd7fc33a095037be2b34fb5d2f7f4d43bde3165bb4ee"
       },
       "drift": false,
@@ -3153,9 +3176,11 @@
         "qwen"
       ],
       "machines": [
+        "dracievajko",
         "randall"
       ],
       "sha256": {
+        "dracievajko": "36bcf3ad942c214a65fd0d4b12d938f51ffc33a560dc99555d6240022025f3e3",
         "randall": "36bcf3ad942c214a65fd0d4b12d938f51ffc33a560dc99555d6240022025f3e3"
       },
       "drift": false,
@@ -3261,9 +3286,11 @@
         "roo"
       ],
       "machines": [
+        "dracievajko",
         "randall"
       ],
       "sha256": {
+        "dracievajko": "8502c14ed668baaddc0e58fd2d0b9f1e944deb7d546732fea37e603cb53366c3",
         "randall": "8502c14ed668baaddc0e58fd2d0b9f1e944deb7d546732fea37e603cb53366c3"
       },
       "drift": false,
@@ -3297,9 +3324,11 @@
         "roo"
       ],
       "machines": [
+        "dracievajko",
         "randall"
       ],
       "sha256": {
+        "dracievajko": "86ec318c8e329fff399225f148d0ce3b0e4c8247501c5ad23ac42293bc05d52a",
         "randall": "86ec318c8e329fff399225f148d0ce3b0e4c8247501c5ad23ac42293bc05d52a"
       },
       "drift": false,
@@ -3741,9 +3770,11 @@
         "roo"
       ],
       "machines": [
+        "dracievajko",
         "randall"
       ],
       "sha256": {
+        "dracievajko": "36baea99e96c77c13d15d24f9d53cd072ccbc120e810bf4e68049edb5b0f1d65",
         "randall": "36baea99e96c77c13d15d24f9d53cd072ccbc120e810bf4e68049edb5b0f1d65"
       },
       "drift": false,
@@ -3777,9 +3808,11 @@
         "roo"
       ],
       "machines": [
+        "dracievajko",
         "randall"
       ],
       "sha256": {
+        "dracievajko": "51c6435d98c83c42c96ba7c35725a0b2c376cd487fb1a4e6bd0ddbe7e33ef202",
         "randall": "51c6435d98c83c42c96ba7c35725a0b2c376cd487fb1a4e6bd0ddbe7e33ef202"
       },
       "drift": false,
@@ -3812,9 +3845,11 @@
         "qwen"
       ],
       "machines": [
+        "dracievajko",
         "randall"
       ],
       "sha256": {
+        "dracievajko": "17bdcf6571c68530b78dc847cb34be719c98144fca15cd7ca37e6b4ec1b01712",
         "randall": "17bdcf6571c68530b78dc847cb34be719c98144fca15cd7ca37e6b4ec1b01712"
       },
       "drift": false,
@@ -3885,9 +3920,11 @@
         "roo"
       ],
       "machines": [
+        "dracievajko",
         "randall"
       ],
       "sha256": {
+        "dracievajko": "48ba7c580fc64b48ee03b83a6206288641a97495c71dd78205c7f1c6e8b87d11",
         "randall": "48ba7c580fc64b48ee03b83a6206288641a97495c71dd78205c7f1c6e8b87d11"
       },
       "drift": false,
@@ -3921,9 +3958,11 @@
         "roo"
       ],
       "machines": [
+        "dracievajko",
         "randall"
       ],
       "sha256": {
+        "dracievajko": "884edfcfcfe0c8c3392093e5eb25da5f37a3fed89ec15f8a968e3c782c8eb8d3",
         "randall": "884edfcfcfe0c8c3392093e5eb25da5f37a3fed89ec15f8a968e3c782c8eb8d3"
       },
       "drift": false,
@@ -3957,9 +3996,11 @@
         "roo"
       ],
       "machines": [
+        "dracievajko",
         "randall"
       ],
       "sha256": {
+        "dracievajko": "d1a34683814cce09c8074a978ac817c1e9f4e4790ad6804ad395c227d50b91b8",
         "randall": "d1a34683814cce09c8074a978ac817c1e9f4e4790ad6804ad395c227d50b91b8"
       },
       "drift": false,
@@ -3993,9 +4034,11 @@
         "roo"
       ],
       "machines": [
+        "dracievajko",
         "randall"
       ],
       "sha256": {
+        "dracievajko": "ce404e7877013eccbcc757c9db6926a4974d40ed3471696b929e253a27b81112",
         "randall": "ce404e7877013eccbcc757c9db6926a4974d40ed3471696b929e253a27b81112"
       },
       "drift": false,
@@ -4029,9 +4072,11 @@
         "roo"
       ],
       "machines": [
+        "dracievajko",
         "randall"
       ],
       "sha256": {
+        "dracievajko": "e61e10c703915a7dad118b38d0a61fd6457d34e320e36f48abcac5f6ede1a5af",
         "randall": "e61e10c703915a7dad118b38d0a61fd6457d34e320e36f48abcac5f6ede1a5af"
       },
       "drift": false,
@@ -4065,9 +4110,11 @@
         "roo"
       ],
       "machines": [
+        "dracievajko",
         "randall"
       ],
       "sha256": {
+        "dracievajko": "4bccdfff09c8414eee3a486e239bff9602b219d8439e9b0f8bce4743a5999841",
         "randall": "4bccdfff09c8414eee3a486e239bff9602b219d8439e9b0f8bce4743a5999841"
       },
       "drift": false,
@@ -4101,9 +4148,11 @@
         "roo"
       ],
       "machines": [
+        "dracievajko",
         "randall"
       ],
       "sha256": {
+        "dracievajko": "6a26283452c15ac9001c8f41633cab829abd2e6d6c7ccc95d7d26af39ec6319b",
         "randall": "6a26283452c15ac9001c8f41633cab829abd2e6d6c7ccc95d7d26af39ec6319b"
       },
       "drift": false,
@@ -4137,9 +4186,11 @@
         "roo"
       ],
       "machines": [
+        "dracievajko",
         "randall"
       ],
       "sha256": {
+        "dracievajko": "960f2fb1c2a1921c3cbb70f837fd942a05b74a345e3ef05d0c90c7b2341f67bb",
         "randall": "960f2fb1c2a1921c3cbb70f837fd942a05b74a345e3ef05d0c90c7b2341f67bb"
       },
       "drift": false,
@@ -4173,9 +4224,11 @@
         "roo"
       ],
       "machines": [
+        "dracievajko",
         "randall"
       ],
       "sha256": {
+        "dracievajko": "e3671889e6b658ed769f3ccc2f117436ff54080c1378d5bfbbe29463da6c16d5",
         "randall": "e3671889e6b658ed769f3ccc2f117436ff54080c1378d5bfbbe29463da6c16d5"
       },
       "drift": false,
@@ -4209,9 +4262,11 @@
         "roo"
       ],
       "machines": [
+        "dracievajko",
         "randall"
       ],
       "sha256": {
+        "dracievajko": "8db022339f3ddd3a5f0574152040d154c484ef4c56f5dbc4a4d6c5768b8c92f7",
         "randall": "8db022339f3ddd3a5f0574152040d154c484ef4c56f5dbc4a4d6c5768b8c92f7"
       },
       "drift": false,
@@ -4245,9 +4300,11 @@
         "roo"
       ],
       "machines": [
+        "dracievajko",
         "randall"
       ],
       "sha256": {
+        "dracievajko": "394e025b2584fee9e485c1c3ff5255ff8efefc816cad72c2a1b97e30107701dc",
         "randall": "394e025b2584fee9e485c1c3ff5255ff8efefc816cad72c2a1b97e30107701dc"
       },
       "drift": false,
@@ -4357,9 +4414,11 @@
         "roo"
       ],
       "machines": [
+        "dracievajko",
         "randall"
       ],
       "sha256": {
+        "dracievajko": "625e302c60ee8f2e22d56cbe638c4a739e2657f566dae42689503ad517c30f1e",
         "randall": "625e302c60ee8f2e22d56cbe638c4a739e2657f566dae42689503ad517c30f1e"
       },
       "drift": false,
@@ -4392,9 +4451,11 @@
         "qwen"
       ],
       "machines": [
+        "dracievajko",
         "randall"
       ],
       "sha256": {
+        "dracievajko": "c35678c4b3c5f9c727e337ea2e8c7153440b73b0f74bc516bba9820cd18afd60",
         "randall": "c35678c4b3c5f9c727e337ea2e8c7153440b73b0f74bc516bba9820cd18afd60"
       },
       "drift": false,
@@ -4465,9 +4526,11 @@
         "roo"
       ],
       "machines": [
+        "dracievajko",
         "randall"
       ],
       "sha256": {
+        "dracievajko": "81c5002c6643b0de7b8710b00e7a9038daa6fb9b68d59870ee6adb12da8d10f8",
         "randall": "81c5002c6643b0de7b8710b00e7a9038daa6fb9b68d59870ee6adb12da8d10f8"
       },
       "drift": false,
@@ -4501,9 +4564,11 @@
         "roo"
       ],
       "machines": [
+        "dracievajko",
         "randall"
       ],
       "sha256": {
+        "dracievajko": "51b7349e77ec63b7744a6f63647e7566a0b4d2e301121cc10e8c2113af6556a2",
         "randall": "51b7349e77ec63b7744a6f63647e7566a0b4d2e301121cc10e8c2113af6556a2"
       },
       "drift": false,
@@ -4611,9 +4676,11 @@
         "roo"
       ],
       "machines": [
+        "dracievajko",
         "randall"
       ],
       "sha256": {
+        "dracievajko": "a6c67c1900064347c2a329990dd3c555657c51c3ec53b259a08aa01a2c26139a",
         "randall": "a6c67c1900064347c2a329990dd3c555657c51c3ec53b259a08aa01a2c26139a"
       },
       "drift": false,
@@ -4646,9 +4713,11 @@
         "qwen"
       ],
       "machines": [
+        "dracievajko",
         "randall"
       ],
       "sha256": {
+        "dracievajko": "1153d914abe8d637fb4942a4bc4498a33372bae77d7b2bec49c47454a737d1a8",
         "randall": "1153d914abe8d637fb4942a4bc4498a33372bae77d7b2bec49c47454a737d1a8"
       },
       "drift": false,
