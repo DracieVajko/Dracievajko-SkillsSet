@@ -32,6 +32,7 @@ Discovered under `skills/original/`.
 | `enable-wake-on-lan-and-auto-shutdown-on-network-loss-for-ras` | engineering-3d | 1.0.0 | Enable Wake-on-LAN and auto-shutdown on network loss for Raspberry Pi. | [SKILL.md](../skills/original/enable-wake-on-lan-and-auto-shutdown-on-network-loss-for-ras/SKILL.md) |
 | `fix-inconclusive-skills` | development | 1.0.0 | Identify and fix skills marked as inconclusive due to missing tools or other issues. | [SKILL.md](../skills/original/fix-inconclusive-skills/SKILL.md) |
 | `focus-my-energy` | productivity | 1.0.0 | Use when the user asks what to work on next, wants to prioritize or sequence tasks by energy or mental bandwidth, feels tired, fried, or overwhelmed, or wants to set up an energy profile. Classifies tasks from their prompt or connected Workspace apps by cognitive demand and recommends one clear action matched to their state. Do NOT trigger for calendar booking, medical advice, meeting briefs (use prep-for-meetings), decision panels (use get-more-perspectives), or drafting (use match-my-writing-style). | [SKILL.md](../skills/original/focus-my-energy/SKILL.md) |
+| `frontend-design-resources` | design | 1.0.0 | Use when building or refining React UI: animated components/backgrounds from React Bits, or 12k+ shadcn/Tailwind components, templates and themes from 21st.dev. | [SKILL.md](../skills/original/frontend-design-resources/SKILL.md) |
 | `generate-findings-report-from-pipeline-logs` | development | 1.0.0 | Verify that all expected sections and data are present in generated files by comparing logs and output artifacts, and summarize discrepancies. | [SKILL.md](../skills/original/generate-findings-report-from-pipeline-logs/SKILL.md) |
 | `generate-fresh-ideas` | thinking-frameworks | 1.0.0 | Use when the user wants fresh content ideas, creative concepts, or new angles by remixing or repurposing articles, posts, briefs, transcripts, notes, or Google Docs. Generates 5 distinct angles (Contrarian, Personal Story, Data/Evidence, Playbook, What They Missed) rather than summarizing or rephrasing. Do NOT trigger for plain summaries, drafting in the user's voice (use match-my-writing-style), decision panels (use get-more-perspectives), or meeting briefs (use prep-for-meetings). | [SKILL.md](../skills/original/generate-fresh-ideas/SKILL.md) |
 | `get-more-perspectives` | thinking-frameworks | 1.0.0 | Use when the user wants multiple expert perspectives on a decision, strategy, or dilemma, is stuck between options, or wants to customize an advisory panel. Stress-tests choices across 5 lenses (Operator, Skeptic, Visionary, Customer, Finance) with a vote split and synthesized verdict rather than generic pros and cons. Do NOT trigger for factual Q&A, content remixes (use generate-fresh-ideas), meeting briefs (use prep-for-meetings), or task triage (use focus-my-energy). | [SKILL.md](../skills/original/get-more-perspectives/SKILL.md) |
@@ -39,6 +40,7 @@ Discovered under `skills/original/`.
 | `match-my-writing-style` | writing-docs | 1.0.0 | Use when the user asks to draft, reply to, or rewrite emails, messages, posts, memos, or docs in their voice, or to build or update their writing style profile. Infers tone, greetings, sign-offs, and channel registers from sent Gmail and Google Docs so drafts sound like them rather than generic AI prose, even without a style prompt. Do NOT trigger for factual Q&A, code, translation, other personas, content remixes (use generate-fresh-ideas), or meeting briefs (use prep-for-meetings). | [SKILL.md](../skills/original/match-my-writing-style/SKILL.md) |
 | `pen-testing` | custom | 1.0.0 | Guide authorized penetration testing from scoping through recon, scanning, controlled testing and reporting. Refuses targets without written approval. | [SKILL.md](../skills/original/pen-testing/SKILL.md) |
 | `prep-for-meetings` | productivity | 1.0.0 | Use when the user asks to prep for an upcoming meeting, call, or 1:1, or wants to know what they owe or need to know before walking in. Scans connected Calendar, Gmail, Docs, and Tasks for mentions of the user to build a 30-second glance card and TL;DR brief (Must Do, Must Know, Watch Out). Do NOT trigger when an active plugin meeting skill is available in the turn (use plugin:prepare-for-meetings, plugin:meeting-context-builder, or plugin:meeting-prep instead), or for booking calendar events, energy-based task triage (use focus-my-energy), voice-matched drafting (use match-my-writing-style), or decision panels (use get-more-perspectives). | [SKILL.md](../skills/original/prep-for-meetings/SKILL.md) |
+| `prism` | custom | 1.0.0 | Operate Prism, a local offline OpenAI-compatible AI server on PC (pc/) and Android (android/). Use for starting/stopping/verifying the server, image generation, edits, inpaint, outpaint, colorize, restore, upscale, OCR, caption, VLM chat, transcription, TTS, realtime ASR, FFmpeg, batch jobs, model downloads, secrets and client setup. Covers endpoints, model IDs, env vars, honest-503 fallbacks and ADB testing. Trigger on Prism, port 8101 or 'is the server running'. | [SKILL.md](../skills/original/prism/SKILL.md) |
 | `repository-hygiene` | development | 1.0.0 | Use when cleaning a repository, preparing a commit, or removing temporary files, generated artifacts or ad-hoc fix scripts. | [SKILL.md](../skills/original/repository-hygiene/SKILL.md) |
 | `testing-skills` | testing | 1.0.0 | Test skills that enforce discipline, compliance and verification using pressure scenarios and rationalization tables. | [SKILL.md](../skills/original/testing-skills/SKILL.md) |
 | `ticktick-tasks` | productivity | 1.1.0 | Manage TickTick tasks, projects, tags, habits, comments and focus through a connected MCP server. | [SKILL.md](../skills/original/ticktick-tasks/SKILL.md) |
@@ -52,7 +54,7 @@ Third-party skills referenced by upstream URL only; no local copy is bundled. So
 
 Entries with a short description have curated metadata in `catalog/items.json`; entries without one are link-only.
 
-Total: **236** references.
+Total: **245** references.
 
 ### Agents365-ai/drawio-skill (1)
 
@@ -235,6 +237,21 @@ Total: **236** references.
 ### dpconde/claude-android-skill (1)
 
 - [`main`](https://raw.githubusercontent.com/dpconde/claude-android-skill/main/SKILL.md)
+
+### earthtojake/text-to-cad (8)
+
+- [`cad`](https://raw.githubusercontent.com/earthtojake/text-to-cad/main/skills/cad/SKILL.md) — Design and edit parametric parts, assemblies and 2D cut profiles as build123d Python, exported as STEP, STL, 3MF, GLB or DXF, with manufacturability checks.
+- [`engineering-drawing`](https://raw.githubusercontent.com/earthtojake/text-to-cad/main/skills/engineering-drawing/SKILL.md) — Dimensioned PDF drawing sheets projected from a part's geometry: orthographic views, hole callouts, notes and a title block.
+- [`fea`](https://raw.githubusercontent.com/earthtojake/text-to-cad/main/skills/fea/SKILL.md) — Linear static stress study with CalculiX: peak stress, safety factor against yield and deflection for a part or a bonded assembly.
+- [`pcb`](https://raw.githubusercontent.com/earthtojake/text-to-cad/main/skills/pcb/SKILL.md) — Design, edit and review KiCad boards and schematics: parts and nets, placement, routing, ERC and DRC, fabrication files.
+- [`print3d`](https://raw.githubusercontent.com/earthtojake/text-to-cad/main/skills/print3d/SKILL.md) — Slice STL, 3MF or OBJ into G-code with OrcaSlicer and hand the result to Bambu Studio or Bambu Connect.
+- [`render`](https://raw.githubusercontent.com/earthtojake/text-to-cad/main/skills/render/SKILL.md) — Photoreal Blender renders of a CAD model: hero stills, README pictures, turntables and films of a mechanism's motion.
+- [`robot-simulation`](https://raw.githubusercontent.com/earthtojake/text-to-cad/main/skills/robot-simulation/SKILL.md) — Write and review robot and world descriptions - URDF, SRDF and MJCF - for ROS, MoveIt and MuJoCo.
+- [`sendcutsend`](https://raw.githubusercontent.com/earthtojake/text-to-cad/main/skills/sendcutsend/SKILL.md) — Preflight DXF and STEP files against SendCutSend's ordering guide, catalog and specs before an order.
+
+### erkamyaman/safe-anything (1)
+
+- [`safe-anything`](https://raw.githubusercontent.com/erkamyaman/safe-anything/main/skills/safe-anything/SKILL.md) — One Rust command that finds XSS, SQL injection, leaked secrets, risky mobile and cloud config, vulnerable dependencies and unsafe AI agent setups, with the line, reason and fix for every finding.
 
 ### firecrawl/firecrawl-workflows (3)
 

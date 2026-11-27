@@ -3,7 +3,7 @@
 This directory separates what this repository authors from what it
 references. Two kinds live here, always clearly labeled:
 
-- `original/` - skills authored and maintained in this repository (**23**)
+- `original/` - skills authored and maintained in this repository (**24**)
 - `third-party/` - upstream skills referenced by link only (**236**). No
   upstream code is bundled except the six reverse-engineering skills copied
   from `zhaoxuya520/reverse-skill` and `morluto/rea` at your request; see
@@ -39,6 +39,7 @@ copy its folder into your agent's skill directory.
 | `get-more-perspectives` | Stress-test decisions across a five-advisor panel | [`SKILL.md`](original/get-more-perspectives/SKILL.md) |
 | `match-my-writing-style` | Draft, reply or rewrite in the user's authentic voice from Gmail/Docs samples | [`SKILL.md`](original/match-my-writing-style/SKILL.md) |
 | `prep-for-meetings` | Pre-meeting brief and 30-second glance card from Workspace sources | [`SKILL.md`](original/prep-for-meetings/SKILL.md) |
+| `frontend-design-resources` | Curated React UI reference sites: React Bits (animated components/backgrounds) and 21st.dev (12k+ shadcn/Tailwind components, templates, themes) | [`SKILL.md`](original/frontend-design-resources/SKILL.md) |
 
 Install all original skills (OpenCode):
 
