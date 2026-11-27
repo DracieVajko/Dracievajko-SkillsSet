@@ -13,8 +13,8 @@ The machine-readable catalog (`catalog/items.json`) tracks:
 | What | Count | Where |
 |------|------:|-------|
 | Catalog records with `authorship: original` | 23 |  |
-| Catalog records with `authorship: link-only` | 236 |  |
-| Catalog records | 259 | `catalog/items.json` |
+| Catalog records with `authorship: link-only` | 245 |  |
+| Catalog records | 268 | `catalog/items.json` |
 | Bundled third-party skills | 6 | `skills/third-party/` - local copies of upstream `SKILL.md` files |
 
 <!-- counts:end -->
@@ -56,7 +56,7 @@ Their upstream MIT notices are reproduced in
 
 ## External Skills
 
-The 236 external skills in the catalog are link-only (referenced by URL; no
+The 245 external skills in the catalog are link-only (referenced by URL; no
 content copied). The URL lists live in [`catalog/links/`](catalog/links/), and
 the full human-readable index is [`docs/CATEGORY_INDEX.md`](docs/CATEGORY_INDEX.md).
 
@@ -96,7 +96,8 @@ upstream records because it exists in two repositories.
 
 ## Link Verification
 
-All 236 external URLs returned HTTP 200 when checked on 2026-11-12.
+All 245 external URLs returned HTTP 200 when checked on 2026-11-12, with the
+nine text-to-cad and safe-anything links re-checked on 2026-11-23.
 Verification covers URL availability only. It does not verify upstream
 content, license, security or runtime compatibility.
 
@@ -108,7 +109,7 @@ category and never share a license.
 | Content | License | Applies To |
 |---------|---------|------------|
 | Original skills, system prompts, personas, rules, documentation and scripts | MIT (© 2026 DracieVajko) | Material authored by DracieVajko |
-| External skills | Upstream licenses | 236 link-only records; referenced by URL, no content copied |
+| External skills | Upstream licenses | 245 link-only records; referenced by URL, no content copied |
 | Bundled third-party skills | Upstream MIT licenses (© 2026 zhaoxuya520, © 2026 morluto) | 6 local copies under `skills/third-party/`; full text in [docs/THIRD-PARTY-LICENSES.md](docs/THIRD-PARTY-LICENSES.md) |
 
 The root [MIT license](LICENSE) applies only to original content. No blanket

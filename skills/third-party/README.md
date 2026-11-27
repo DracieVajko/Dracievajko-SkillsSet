@@ -19,12 +19,12 @@ The catalog's complete list of external link-only skills is generated at
 
 | What | Count | Where |
 |------|------:|-------|
-| External link-only skills | 236 | referenced by URL; no content copied |
+| External link-only skills | 245 | referenced by URL; no content copied |
 | Bundled third-party skills | 6 | `skills/third-party/` - local copies of upstream `SKILL.md` files |
 
 <!-- counts:end -->
 
-All catalog URLs returned HTTP 200 when checked on 2026-11-12. The
+All catalog URLs returned HTTP 200 when checked on 2026-11-12; the nine added on 2026-11-23 (text-to-cad and safe-anything) were checked the same day. The
 [direct upstream link list](#direct-upstream-link-list) below adds the links
 supplied for this collection.
 
@@ -83,6 +83,15 @@ projects are reproduced in
 |`trader-alerts`|-|Ring on a price, stop, target or the opening bell|MIT|[link](https://github.com/Jakeschincariol/day-trader-skill/blob/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-alerts/SKILL.md)|
 |`trader-analyst`|-|Read SEC earnings facts and 8-K releases|MIT|[link](https://github.com/Jakeschincariol/day-trader-skill/blob/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-analyst/SKILL.md)|
 |`trader-pelosi`|-|Read House Clerk PTR congressional trade disclosures|MIT|[link](https://github.com/Jakeschincariol/day-trader-skill/blob/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-pelosi/SKILL.md)|
+|`cad`|-|Parametric parts, assemblies and 2D cut profiles as build123d Python, exported as STEP, STL, 3MF, GLB or DXF|MIT|[link](https://github.com/earthtojake/text-to-cad/blob/main/skills/cad/SKILL.md)|
+|`engineering-drawing`|-|Dimensioned PDF drawing sheets projected from the part's geometry|MIT|[link](https://github.com/earthtojake/text-to-cad/blob/main/skills/engineering-drawing/SKILL.md)|
+|`fea`|-|Linear static stress study with CalculiX: peak stress, safety factor and deflection|MIT|[link](https://github.com/earthtojake/text-to-cad/blob/main/skills/fea/SKILL.md)|
+|`pcb`|-|KiCad boards and schematics: placement, routing, ERC, DRC and fabrication files|MIT|[link](https://github.com/earthtojake/text-to-cad/blob/main/skills/pcb/SKILL.md)|
+|`print3d`|-|Slice STL, 3MF or OBJ with OrcaSlicer and hand it to Bambu Studio or Bambu Connect|MIT|[link](https://github.com/earthtojake/text-to-cad/blob/main/skills/print3d/SKILL.md)|
+|`render`|-|Photoreal Blender stills, turntables and motion films of a CAD model|MIT|[link](https://github.com/earthtojake/text-to-cad/blob/main/skills/render/SKILL.md)|
+|`robot-simulation`|-|Robot and world descriptions - URDF, SRDF and MJCF - for ROS, MoveIt and MuJoCo|MIT|[link](https://github.com/earthtojake/text-to-cad/blob/main/skills/robot-simulation/SKILL.md)|
+|`sendcutsend`|-|Preflight DXF and STEP files against SendCutSend's ordering guide|MIT|[link](https://github.com/earthtojake/text-to-cad/blob/main/skills/sendcutsend/SKILL.md)|
+|`safe-anything`|-|Vulnerability, leaked-secret, config, dependency and AI agent setup scan with a fix per finding|MIT|[link](https://github.com/erkamyaman/safe-anything/blob/main/skills/safe-anything/SKILL.md)|
 
 
 The alias column preserves the names used by earlier catalog references; the
@@ -95,7 +104,7 @@ collection, grouped by repository. It includes entries that also appear in the
 curated table above. Local-only skills without a public `SKILL.md` are
 intentionally omitted.
 
-All 95 links were verified on 2026-11-12. Every target returned HTTP 200 from
+All 95 links were verified on 2026-11-12, and the nine text-to-cad and safe-anything links added on 2026-11-23 the same day. Every target returned HTTP 200 from
 `raw.githubusercontent.com` and contains `SKILL.md` front matter. GitHub's web
 interface rate-limited some bulk checks with HTTP 429; the underlying files were
 confirmed through the raw URLs.
@@ -329,3 +338,26 @@ confirmed through the raw URLs.
 |sr-screener|[link](https://github.com/imbad0202/academic-research-skills/blob/c67a7be53f23d9dbba4030bbcd6f5ccfeda3afa9/sr-screener/SKILL.md)|
 
 > Claude Code plugin (not OpenCode-native). Covers deep research, source verification, literature review, systematic review/meta-analysis, paper writing and peer review. Installed globally into OpenCode as a single deep-research skill folder bundling the repo so relative shared/ references resolve; other sub-skills remain reachable via that folder.
+
+### earthtojake/text-to-cad (8)
+
+|Skill|Original|
+|-|-|
+|`cad`|[link](https://github.com/earthtojake/text-to-cad/blob/main/skills/cad/SKILL.md)|
+|`engineering-drawing`|[link](https://github.com/earthtojake/text-to-cad/blob/main/skills/engineering-drawing/SKILL.md)|
+|`fea`|[link](https://github.com/earthtojake/text-to-cad/blob/main/skills/fea/SKILL.md)|
+|`pcb`|[link](https://github.com/earthtojake/text-to-cad/blob/main/skills/pcb/SKILL.md)|
+|`print3d`|[link](https://github.com/earthtojake/text-to-cad/blob/main/skills/print3d/SKILL.md)|
+|`render`|[link](https://github.com/earthtojake/text-to-cad/blob/main/skills/render/SKILL.md)|
+|`robot-simulation`|[link](https://github.com/earthtojake/text-to-cad/blob/main/skills/robot-simulation/SKILL.md)|
+|`sendcutsend`|[link](https://github.com/earthtojake/text-to-cad/blob/main/skills/sendcutsend/SKILL.md)|
+
+> CAD plugins for agents. The skills call the `cad` command, installed from PyPI with `uv tool install cad` (or the upstream install script); every skill folder also carries its `references/` and `agents/openai.yaml` sidecars.
+
+### erkamyaman/safe-anything (1)
+
+|Skill|Original|
+|-|-|
+|`safe-anything`|[link](https://github.com/erkamyaman/safe-anything/blob/main/skills/safe-anything/SKILL.md)|
+
+> Security skill for the `safe-anything` CLI, installed from crates.io, the GitHub release binary or `npx`. It is also an MCP server (`safe-anything mcp`) with the `scan` and `list_rules` tools.

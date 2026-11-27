@@ -189,3 +189,12 @@ https://raw.githubusercontent.com/peteromallet/desloppify/main/desloppify/data/g
 https://raw.githubusercontent.com/blader/humanizer/main/SKILL.md
 https://raw.githubusercontent.com/HenokCodez/Motion-Studio/main/.agents/skills/workflow4-editor-v1/SKILL.md
 https://raw.githubusercontent.com/hyperb1iss/hyperskills/main/skills/orchestrate/SKILL.md
+https://raw.githubusercontent.com/earthtojake/text-to-cad/main/skills/cad/SKILL.md
+https://raw.githubusercontent.com/earthtojake/text-to-cad/main/skills/engineering-drawing/SKILL.md
+https://raw.githubusercontent.com/earthtojake/text-to-cad/main/skills/fea/SKILL.md
+https://raw.githubusercontent.com/earthtojake/text-to-cad/main/skills/pcb/SKILL.md
+https://raw.githubusercontent.com/earthtojake/text-to-cad/main/skills/print3d/SKILL.md
+https://raw.githubusercontent.com/earthtojake/text-to-cad/main/skills/render/SKILL.md
+https://raw.githubusercontent.com/earthtojake/text-to-cad/main/skills/robot-simulation/SKILL.md
+https://raw.githubusercontent.com/earthtojake/text-to-cad/main/skills/sendcutsend/SKILL.md
+https://raw.githubusercontent.com/erkamyaman/safe-anything/main/skills/safe-anything/SKILL.md
